@@ -526,11 +526,10 @@ script = ExtResource( 3 )
 weapon = "res://assets/Bullet.tscn"
 speed = 400
 timer = 0.5
-damage = 5
+damage = 7
 mag = 20
 lifespan = 0.15
 infinite = true
-pierce = true
 have = true
 
 [node name="bow and arrow" type="Node2D" parent="Weapons"]

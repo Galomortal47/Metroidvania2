@@ -7,10 +7,21 @@ var bolt_number = 7
 var ramdom_pos = 30
 var motion = Vector2(0,0)
 var spawn = false
+export var object = "bolt"
+
 func _process(delta):
 	if $Health.health <= 0:
-		boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_position())
-		queue_free()
+		match object:
+			"bolt": 
+				boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_position())
+				queue_free()
+			"health":
+				boltspawner.health_spawn(get_tree().get_root(),get_position())
+				queue_free()
+			"ammo":
+				boltspawner.ammo_spawn(get_tree().get_root(),get_position())
+				queue_free()
+
 
 func stun():
 	pass

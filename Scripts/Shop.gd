@@ -35,8 +35,12 @@ func _process(delta):
 					if  weapon_checker_money_checker():
 						get_collider().get_node("Coins/Number").set_text(str(int(get_collider().get_node("Coins/Number").get_text())-price[select]))
 						get_collider().get_node("Weapons").get_child(select).have = true
+	elif is_colliding():
+		get_node("Label").show()
 	else:
 		get_node("Shop_Select/Icons").hide()
+		get_node("Label").hide()
+
 
 func weapon_checker_money_checker():
 		if int(get_collider().get_node("Coins/Number").get_text()) >= price[select] and not get_collider().get_node("Weapons").get_child(select).have:

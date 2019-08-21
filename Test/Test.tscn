@@ -259,7 +259,13 @@ position = Vector2( -1040.79, 648.127 )
 
 [node name="Bolts" parent="." instance=ExtResource( 7 )]
 
-[node name="Box" parent="." instance=ExtResource( 8 )]
+[node name="Box_bolts" parent="." instance=ExtResource( 8 )]
+
+[node name="Box_health" parent="." instance=ExtResource( 8 )]
+object = "ammo"
+
+[node name="Box_ammo" parent="." instance=ExtResource( 8 )]
+object = "health"
 
 [node name="Boxes" type="Node2D" parent="."]
 editor/display_folded = true
@@ -330,6 +336,7 @@ region_rect = Rect2( 0, 130, 1024, 500 )
 [node name="Water" parent="." instance=ExtResource( 11 )]
 
 [node name="Ammo Pick Up" parent="." instance=ExtResource( 12 )]
+position = Vector2( -195.398, 533.937 )
 
 [node name="Health Pick Up" parent="." instance=ExtResource( 12 )]
 position = Vector2( -242.092, 533.121 )

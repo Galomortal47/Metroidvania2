@@ -9,9 +9,18 @@ enabled = true
 cast_to = Vector2( 100, 0 )
 script = ExtResource( 1 )
 
+[node name="Label" type="Label" parent="."]
+margin_left = -21.0
+margin_top = -58.0
+margin_right = 49.0
+margin_bottom = -27.0
+text = "Open Shop
+"
+
 [node name="Shop_Select" type="CanvasLayer" parent="."]
 
 [node name="Icons" type="Node2D" parent="Shop_Select"]
+visible = false
 
 [node name="icon8" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 159.491, 544.549 )
