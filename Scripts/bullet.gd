@@ -1,13 +1,15 @@
 extends KinematicBody2D
 
-var damage = 10
+var damage = 5
 var motion = Vector2(0,0)
 var speed = 500
 var gravity = 0
-var curve = 500
+var curve = 0
 var lifespan = 1.0
 var particle_size = 15
 var pierce = false
+var ignore = "player"
+var target = "enemy"
 
 func _ready():
 	motion.y += curve
@@ -26,9 +28,9 @@ func _process(delta):
 
 func attack():
 	if $bullet.is_colliding():
-		if not $bullet.get_collider().is_in_group("player"):
+		if not $bullet.get_collider().is_in_group(ignore):
 			$CPUParticles2D2.emitting = true
-		if $bullet.get_collider().is_in_group("enemy"):
+		if $bullet.get_collider().is_in_group(target):
 			if $bullet.get_collider().has_node("Health"):
 				$bullet.get_collider().get_node("Health").health -= damage
 				if not pierce:

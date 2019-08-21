@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Bullet.tres" type="Curve" id=2]
 [ext_resource path="res://assets/Bullet2.tres" type="Gradient" id=3]
 
-[sub_resource type="Curve" id=2]
+[sub_resource type="Curve" id=1]
 min_value = -360.0
 max_value = 360.0
 _data = [ Vector2( 0.00872233, 360 ), 0.0, 0.0, 0, 0, Vector2( 1, -360 ), 0.0, 0.0, 0, 0 ]
@@ -27,7 +27,7 @@ local_coords = false
 draw_order = 1
 gravity = Vector2( 0, 0 )
 angle = -720.0
-angle_curve = SubResource( 2 )
+angle_curve = SubResource( 1 )
 scale_amount = 15.0
 scale_amount_curve = ExtResource( 2 )
 color_ramp = ExtResource( 3 )

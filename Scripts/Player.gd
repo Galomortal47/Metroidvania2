@@ -15,25 +15,51 @@ var roll = 400
 var roll_height = 150
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
+var state = "walk"
+var swin_speed = 10
+var swin_speed_max = 350
+var swin_drag = 0.95
 
 func _ready():
 	$Health.health = health
 	$Health.health_max = health
 
 func _process(delta):
-	move()
-	jump()
-	roll()
-	if not ground_detect() and not ledge_detect():
-		motion.y += gravity
-		jump_aux -= delta
-	elif ledge_detect():
-		ledge_grab()
-	else:
-		jump_aux = jump_timer
+	match state:
+		"walk":
+			move()
+			jump()
+			roll()
+			if not ground_detect() and not ledge_detect():
+				motion.y += gravity
+				jump_aux -= delta
+			elif ledge_detect():
+				ledge_grab()
+			else:
+				jump_aux = jump_timer
+		"swin":
+			swin()
 	motion = move_and_slide(motion)
 	die()
 #	pass
+
+func swin():
+	$CollisionShape2D/Colision.set_current_animation("swin")
+	if Input.is_action_pressed("ui_up"):
+		if motion.y > -swin_speed_max:
+			motion.y -= swin_speed
+	elif Input.is_action_pressed("ui_down"):
+		if motion.y < swin_speed_max:
+			motion.y += swin_speed
+	elif Input.is_action_pressed("ui_left"):
+		if motion.x > -swin_speed_max:
+			motion.x -= swin_speed
+	elif Input.is_action_pressed("ui_right"):
+		if motion.x < swin_speed_max:
+			motion.x += swin_speed
+	else:
+		motion.x *= swin_drag
+		motion.y *= swin_drag
 
 func die():
 	if get_node("Health").health <= 0:

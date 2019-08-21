@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/Platform2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Platform Sticker 2.gd" type="Script" id=2]
@@ -6,13 +6,12 @@
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Mouse.gd" type="Script" id=5]
 [ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/Bolts.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Test/screenshot.png" type="Texture" id=9]
-[ext_resource path="res://Scripts/Mirror.gd" type="Script" id=10]
-[ext_resource path="res://assets/Water.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Pick Up.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Shop.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scripts/Enemy_class.gd" type="Script" id=7]
+[ext_resource path="res://assets/Bolts.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/Water.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/Pick Up.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/Shop.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 946.495, 10 )
@@ -91,87 +90,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
 }
-
-[sub_resource type="Shader" id=10]
-code = "shader_type canvas_item;
-
-// Gonkee's water shader for Godot 3 - full tutorial https://youtu.be/uhMAHpV_cDg
-// If you use this shader, I would prefer if you gave credit to me and my channel
-
-uniform vec4 blue_tint : hint_color;
-
-uniform vec2 sprite_scale;
-uniform float scale_x = 0.67;
-
-float rand(vec2 coord){
-	return fract(sin(dot(coord, vec2(12.9898, 78.233)))* 43758.5453123);
-}
-
-float noise(vec2 coord){
-	vec2 i = floor(coord);
-	vec2 f = fract(coord);
-
-	// 4 corners of a rectangle surrounding our point
-	float a = rand(i);
-	float b = rand(i + vec2(1.0, 0.0));
-	float c = rand(i + vec2(0.0, 1.0));
-	float d = rand(i + vec2(1.0, 1.0));
-
-	vec2 cubic = f * f * (3.0 - 2.0 * f);
-
-	return mix(a, b, cubic.x) + (c - a) * cubic.y * (1.0 - cubic.x) + (d - b) * cubic.x * cubic.y;
-}
-
-void fragment(){
-	
-	vec2 noisecoord1 = UV * sprite_scale * scale_x;
-	vec2 noisecoord2 = UV * sprite_scale * scale_x + 4.0;
-	
-	vec2 motion1 = vec2(TIME * 0.3, TIME * -0.4);
-	vec2 motion2 = vec2(TIME * 0.1, TIME * 0.5);
-	
-	vec2 distort1 = vec2(noise(noisecoord1 + motion1), noise(noisecoord2 + motion1)) - vec2(0.5);
-	vec2 distort2 = vec2(noise(noisecoord1 + motion2), noise(noisecoord2 + motion2)) - vec2(0.5);
-	
-	vec2 distort_sum = (distort1 + distort2) / 60.0;
-	
-	vec4 color = textureLod(SCREEN_TEXTURE, SCREEN_UV + distort_sum, 0.0);
-	
-	color = mix(color, blue_tint, 0.3);
-	color.rgb = mix(vec3(0.5), color.rgb, 1.4);
-	
-	float near_top = (UV.y + distort_sum.y) / (0.2 / sprite_scale.y);
-	near_top = clamp(near_top, 0.0, 1.0);
-	near_top = 1.0 - near_top;
-	
-	color = mix(color, vec4(1.0), near_top);
-	
-	float edge_lower = 0.6;
-	float edge_upper = edge_lower + 0.1;
-	
-	if(near_top > edge_lower){
-		color.a = 0.0;
-		
-		if(near_top < edge_upper){
-			color.a = (edge_upper - near_top) / (edge_upper - edge_lower);
-		}
-	}
-	
-	COLOR = color;
-}"
-
-[sub_resource type="ShaderMaterial" id=11]
-shader = SubResource( 10 )
-shader_param/blue_tint = Color( 0.478431, 0.705882, 0.721569, 1 )
-shader_param/sprite_scale = Vector2( 1, 0.233 )
-shader_param/scale_x = 0.5
-
-[sub_resource type="Gradient" id=12]
-offsets = PoolRealArray( 1 )
-colors = PoolColorArray( 0.648438, 0.975281, 1, 1 )
-
-[sub_resource type="GradientTexture" id=13]
-gradient = SubResource( 12 )
 
 [node name="Test" type="Node2D"]
 
@@ -256,92 +174,88 @@ script = ExtResource( 5 )
 
 [node name="Enemy" parent="." instance=ExtResource( 6 )]
 position = Vector2( -1040.79, 648.127 )
+script = ExtResource( 7 )
 
-[node name="Bolts" parent="." instance=ExtResource( 7 )]
+[node name="Enemy2" parent="." instance=ExtResource( 6 )]
+position = Vector2( -388.667, 532.3 )
+script = ExtResource( 7 )
+type = "shooter"
 
-[node name="Box_bolts" parent="." instance=ExtResource( 8 )]
+[node name="Bolts" parent="." instance=ExtResource( 8 )]
 
-[node name="Box_health" parent="." instance=ExtResource( 8 )]
+[node name="Box_bolts" parent="." instance=ExtResource( 9 )]
+
+[node name="Box_health" parent="." instance=ExtResource( 9 )]
+position = Vector2( 300.798, 556.307 )
 object = "ammo"
 
-[node name="Box_ammo" parent="." instance=ExtResource( 8 )]
+[node name="Box_ammo" parent="." instance=ExtResource( 9 )]
+position = Vector2( 193.494, 556.307 )
 object = "health"
 
 [node name="Boxes" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Box2" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box2" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box9" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box16" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box3" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box10" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box15" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box4" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box7" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box13" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box5" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box8" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box12" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box6" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box11" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes" instance=ExtResource( 8 )]
+[node name="Box14" parent="Boxes" instance=ExtResource( 9 )]
 position = Vector2( 1288.2, 437.656 )
 
-[node name="Water2" type="Sprite" parent="."]
-editor/display_folded = true
-self_modulate = Color( 1, 1, 1, 0.501961 )
-position = Vector2( 150, 660 )
-scale = Vector2( 1, 0.232664 )
-z_index = 4095
-texture = ExtResource( 9 )
-region_enabled = true
-region_rect = Rect2( 0, 130, 1024, 500 )
-script = ExtResource( 10 )
+[node name="Water" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1174, 658.834 )
+scale = Vector2( 1, 0.233 )
 
-[node name="Mirror4" type="Sprite" parent="Water2"]
-material = SubResource( 11 )
-z_index = 4096
-texture = SubResource( 13 )
-region_enabled = true
-region_rect = Rect2( 0, 130, 1024, 500 )
+[node name="Water2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 150.393, 658.834 )
+scale = Vector2( 1, 0.233 )
 
-[node name="Water" parent="." instance=ExtResource( 11 )]
-
-[node name="Ammo Pick Up" parent="." instance=ExtResource( 12 )]
+[node name="Ammo Pick Up" parent="." instance=ExtResource( 11 )]
 position = Vector2( -195.398, 533.937 )
 
-[node name="Health Pick Up" parent="." instance=ExtResource( 12 )]
+[node name="Health Pick Up" parent="." instance=ExtResource( 11 )]
 position = Vector2( -242.092, 533.121 )
 health = 10
 ammo = 0
 
-[node name="Shop" parent="." instance=ExtResource( 13 )]
+[node name="Shop" parent="." instance=ExtResource( 12 )]
 
