@@ -15,6 +15,7 @@ export var infinite = false
 export var shot = 1
 export var pierce = false
 export var particle_size = 15
+export var screen_shake = 5
 var mag_aux = mag
 export var ammo = 100
 var timer_aux = 0.0 
@@ -47,6 +48,7 @@ func shoot():
 			mag_aux-= shot
 		update_text()
 		for i in range(0,bullet_n):
+			get_parent().get_parent().get_node("Camera2D").shake += screen_shake
 			var bullet =  load(weapon)
 			var bullet_instance = bullet.instance()
 			bullet_instance.set_position(get_global_position())

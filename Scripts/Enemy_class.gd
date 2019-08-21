@@ -25,7 +25,7 @@ func _process(delta):
 		motion.y += gravity
 	match type:
 		"melee":
-			hunt_player(0)
+			hunt_player(30)
 			damage()
 		"shooter":
 			timer -= delta

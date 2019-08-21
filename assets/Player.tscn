@@ -1,17 +1,18 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/Shotgun.gd" type="Script" id=3]
-[ext_resource path="res://assets/Gun_engine.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scripts/Reload.gd" type="Script" id=5]
-[ext_resource path="res://Scripts/Menu Items.gd" type="Script" id=6]
-[ext_resource path="res://icon.png" type="Texture" id=7]
-[ext_resource path="res://Scripts/Load_Minigame.gd" type="Script" id=8]
-[ext_resource path="res://Scripts/Block.gd" type="Script" id=9]
-[ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scripts/Coins.gd" type="Script" id=11]
-[ext_resource path="res://Scripts/Save.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/CamShake.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Shotgun.gd" type="Script" id=4]
+[ext_resource path="res://assets/Gun_engine.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Reload.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Menu Items.gd" type="Script" id=7]
+[ext_resource path="res://icon.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Load_Minigame.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/Block.gd" type="Script" id=10]
+[ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/Coins.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/Save.gd" type="Script" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25, 15 )
@@ -131,7 +132,7 @@ tracks/2/keys = {
 "values": [ Vector2( 25, 15 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=5]
 resource_name = "swin"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:shape:extents")
@@ -146,7 +147,7 @@ tracks/0/keys = {
 "values": [ Vector2( 25, 15 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 2600.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Menu:scale")
@@ -173,7 +174,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Menu:scale")
 tracks/0/interp = 1
@@ -199,7 +200,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 99999.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Menu:scale")
@@ -226,7 +227,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Menu:scale")
 tracks/0/interp = 1
@@ -252,7 +253,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Line2D3:position")
@@ -316,7 +317,7 @@ tracks/4/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Line2D3:position")
 tracks/0/interp = 1
@@ -397,7 +398,7 @@ tracks/5/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Line2D3:position")
 tracks/0/interp = 1
@@ -457,10 +458,10 @@ tracks/4/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 4, 2 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 10, 25.3596 )
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=14]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("CollisionShape2D:disabled")
@@ -518,8 +519,10 @@ enabled = true
 cast_to = Vector2( -20, 0 )
 
 [node name="Health" parent="." instance=ExtResource( 2 )]
+invicility = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+editor/display_folded = true
 position = Vector2( 0, 15 )
 shape = SubResource( 1 )
 
@@ -527,18 +530,19 @@ shape = SubResource( 1 )
 anims/crouch = SubResource( 2 )
 anims/normal = SubResource( 3 )
 anims/roll = SubResource( 4 )
-anims/swin = SubResource( 14 )
+anims/swin = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -135 )
 current = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
+script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
 
 [node name="Sword" type="Node2D" parent="Weapons"]
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 weapon = "res://assets/Bullet.tscn"
 speed = 400
 timer = 0.5
@@ -546,10 +550,11 @@ damage = 7
 mag = 20
 lifespan = 0.15
 infinite = true
+screen_shake = 0
 have = true
 
 [node name="bow and arrow" type="Node2D" parent="Weapons"]
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 weapon = "res://assets/Bullet.tscn"
 speed = 500
 spreed = 3
@@ -558,9 +563,10 @@ gravity = 2
 damage = 7
 curve = -100
 lifespan = 5.0
+screen_shake = 0
 ammo = 40
 
-[node name="Revolver" parent="Weapons" instance=ExtResource( 4 )]
+[node name="Revolver" parent="Weapons" instance=ExtResource( 5 )]
 speed = 400
 timer = 1.0
 damage = 5
@@ -569,7 +575,7 @@ lifespan = 5.0
 ammo = 30
 
 [node name="Double Barrel Shotgun" type="Node2D" parent="Weapons"]
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 weapon = "res://assets/Bullet.tscn"
 speed = 400
 bullet_n = 15
@@ -581,7 +587,7 @@ shot = 2
 ammo = 40
 
 [node name="Bomb" type="Node2D" parent="Weapons"]
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 weapon = "res://assets/Bullet.tscn"
 speed = 400
 timer = 0.5
@@ -594,7 +600,7 @@ particle_size = 45
 ammo = 10
 
 [node name="Sniper" type="Node2D" parent="Weapons"]
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 weapon = "res://assets/Bullet.tscn"
 speed = 800
 timer = 0.5
@@ -602,16 +608,17 @@ damage = 2
 mag = 5
 lifespan = 5.0
 pierce = true
+screen_shake = 10
 ammo = 10
 
-[node name="Machine Gun" parent="Weapons" instance=ExtResource( 4 )]
+[node name="Machine Gun" parent="Weapons" instance=ExtResource( 5 )]
 speed = 400
 mag = 30
 lifespan = 5.0
 ammo = 60
 
 [node name="FireTrowher" type="Node2D" parent="Weapons"]
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 weapon = "res://assets/Bullet.tscn"
 speed = 150
 spreed = 10
@@ -621,6 +628,7 @@ curve = 50
 mag = 100
 lifespan = 2.0
 particle_size = 30
+screen_shake = 0
 
 [node name="Label" type="Label" parent="Weapons"]
 margin_left = 43.0737
@@ -628,11 +636,11 @@ margin_top = -27.2958
 margin_right = 83.0737
 margin_bottom = -13.2958
 text = "00/00"
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
 editor/display_folded = true
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 
 [node name="Menu" type="Node2D" parent="Menu Items"]
 editor/display_folded = true
@@ -645,35 +653,35 @@ polygon = PoolVector2Array( -120, 0, -80, -80, 0, -120, 80, -80, 120, 0, 80, 80,
 
 [node name="icon0" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -120, 0 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="icon1" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -80, -80 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="icon2" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 0, -120 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="icon3" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, -80 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="icon4" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 120, 0 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="icon5" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, 80 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="icon6" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 0, 120 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="icon7" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -80, 80 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="Menu Items/Menu"]
 margin_left = -20.4633
@@ -685,17 +693,17 @@ align = 1
 autowrap = true
 
 [node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
-anims/close = SubResource( 5 )
-anims/closed = SubResource( 6 )
-anims/open = SubResource( 7 )
-anims/opened = SubResource( 8 )
+anims/close = SubResource( 6 )
+anims/closed = SubResource( 7 )
+anims/open = SubResource( 8 )
+anims/opened = SubResource( 9 )
 next/close = "closed"
 next/open = "opened"
 
 [node name="Load_Minigame" type="Node2D" parent="."]
 editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 
 [node name="Line2D" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 2.64075, -51.4948 )
@@ -718,27 +726,27 @@ default_color = Color( 1, 1, 1, 1 )
 texture_mode = 612703316
 
 [node name="Minigame" type="AnimationPlayer" parent="Load_Minigame"]
-anims/Failure = SubResource( 9 )
-anims/Load = SubResource( 10 )
-anims/Succes = SubResource( 11 )
+anims/Failure = SubResource( 10 )
+anims/Load = SubResource( 11 )
+anims/Succes = SubResource( 12 )
 
 [node name="Block" type="StaticBody2D" parent="."]
 editor/display_folded = true
 collision_layer = 4
 collision_mask = 4
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Block"]
 position = Vector2( -35, 0 )
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 disabled = true
 
 [node name="block" type="AnimationPlayer" parent="Block"]
-anims/block = SubResource( 13 )
+anims/block = SubResource( 14 )
 
-[node name="Coins" parent="." instance=ExtResource( 10 )]
-script = ExtResource( 11 )
+[node name="Coins" parent="." instance=ExtResource( 11 )]
+script = ExtResource( 12 )
 
 [node name="Save" type="Node" parent="."]
-script = ExtResource( 12 )
+script = ExtResource( 13 )
 
