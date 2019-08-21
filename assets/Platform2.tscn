@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Platform Sticker 2.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 37.9856, 10 )
+
+[node name="Platform2" type="KinematicBody2D"]
+position = Vector2( -243.32, 355.398 )
+motion/sync_to_physics = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 5 )
+
+[node name="Platform Sticker 2" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Platform Sticker 2"]
+position = Vector2( -50, -20 )
+enabled = true
+cast_to = Vector2( 100, 0 )
+

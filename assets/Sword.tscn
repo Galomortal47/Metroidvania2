@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/damage.gd" type="Script" id=1]
+
+[node name="Sword" type="RayCast2D"]
+enabled = true
+cast_to = Vector2( 60, 0 )
+collision_mask = 4
+script = ExtResource( 1 )
+damage = 0
+

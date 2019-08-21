@@ -1,0 +1,26 @@
+[gd_scene format=2]
+
+[node name="Coins" type="CanvasLayer"]
+
+[node name="Bolts" type="Label" parent="."]
+margin_left = 46.8655
+margin_top = 54.0756
+margin_right = 129.865
+margin_bottom = 68.0756
+text = "Bolts:"
+
+[node name="Number" type="Label" parent="."]
+margin_left = 85.4913
+margin_top = 53.5819
+margin_right = 143.491
+margin_bottom = 77.5819
+text = "0"
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 91.9864
+margin_top = 82.3697
+margin_right = 131.986
+margin_bottom = 96.3697
+text = "+1"
+

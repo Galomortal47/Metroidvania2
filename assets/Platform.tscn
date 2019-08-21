@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Platform Sticker.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 37.9856, 10 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "movment"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 59.9088, 85.4477 )
+
+[node name="Platform" type="KinematicBody2D"]
+position = Vector2( 699.164, 355.398 )
+motion/sync_to_physics = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "movment"
+anims/movment = SubResource( 2 )
+
+[node name="Platform Sticker" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="Sticker" type="CollisionShape2D" parent="Platform Sticker"]
+position = Vector2( 0, -76 )
+shape = SubResource( 3 )
+
+[connection signal="body_shape_entered" from="Platform Sticker" to="Platform Sticker" method="_on_Platform_Sticker_body_shape_entered"]
+[connection signal="body_shape_exited" from="Platform Sticker" to="Platform Sticker" method="_on_Platform_Sticker_body_shape_exited"]
