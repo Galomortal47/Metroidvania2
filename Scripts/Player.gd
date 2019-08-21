@@ -63,7 +63,7 @@ func swin():
 
 func die():
 	if get_node("Health").health <= 0:
-		$Save.data.money = int(int($Coins/Number.get_text()) * 0.75)
+		$Save.data.money = int(int($Coins/Number.get_text()))
 		$Save.save()
 		get_tree().change_scene("res://assets/game over.tscn")
 

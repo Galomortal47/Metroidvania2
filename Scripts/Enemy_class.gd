@@ -15,9 +15,10 @@ var attack = Vector2(60,0)
 var timer = 2
 var time_aux= 2
 export var type = "melee"
+export var bolts_spwned_upon_death = 25
 
 func _ready():
-	$Health.health = health
+	$Health.health_max = health
 
 func _process(delta):
 	if not $Ground_Detect.is_colliding():
@@ -94,7 +95,7 @@ func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
 # verifica a vida do inimigo e o destruir caso ela seja igual ou menor que 0
 func die():
 	if get_node("Health").health <= 0:
-		boltspawner.bolt_spawn(50,get_tree().get_root(),get_position())
+		boltspawner.bolt_spawn(bolts_spwned_upon_death,get_tree().get_root(),get_position())
 		queue_free()
 		
 

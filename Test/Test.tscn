@@ -175,10 +175,23 @@ script = ExtResource( 5 )
 [node name="Enemy" parent="." instance=ExtResource( 6 )]
 position = Vector2( -1040.79, 648.127 )
 script = ExtResource( 7 )
+health = 10
+
+[node name="Enemy4" parent="." instance=ExtResource( 6 )]
+position = Vector2( -875.776, 646.54 )
+script = ExtResource( 7 )
+health = 10
 
 [node name="Enemy2" parent="." instance=ExtResource( 6 )]
-position = Vector2( -388.667, 532.3 )
+position = Vector2( -958.283, 657.647 )
 script = ExtResource( 7 )
+health = 10
+type = "shooter"
+
+[node name="Enemy3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -326.787, 527.54 )
+script = ExtResource( 7 )
+health = 10
 type = "shooter"
 
 [node name="Bolts" parent="." instance=ExtResource( 8 )]
