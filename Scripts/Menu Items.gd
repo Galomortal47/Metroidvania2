@@ -17,9 +17,9 @@ func _process(delta):
 		Engine.set_time_scale(0.1) 
 		$"Menu Anim".set_current_animation("open")
 		menu_select()
-		if Input.is_action_just_pressed("ui_left"):
+		if Input.is_action_just_pressed("trigger_l"):
 			a -= 1
-		if Input.is_action_just_pressed("ui_right"):
+		if Input.is_action_just_pressed("trigger_r"):
 			a += 1
 		if a < 0:
 			a =  menu_size-1

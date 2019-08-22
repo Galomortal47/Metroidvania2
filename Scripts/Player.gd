@@ -11,13 +11,13 @@ var jump_aux = 0.0
 var jump_timer = 0.15
 var air_speed = 8
 export var health = 20
-var roll = 400
+var roll = 150
 var roll_height = 150
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
 var state = "walk"
 var swin_speed = 10
-var swin_speed_max = 350
+var swin_speed_max = 250
 var swin_drag = 0.95
 
 func _ready():
@@ -68,7 +68,7 @@ func die():
 		get_tree().change_scene("res://assets/game over.tscn")
 
 func roll():
-	if Input.is_action_just_pressed("ui_roll") and not ledge_detect() and not Input.is_action_pressed("ui_block"):
+	if Input.is_action_just_pressed("ui_roll") and not ledge_detect():
 		if Input.is_action_pressed("ui_right"):
 			if ground_detect():
 				$Health.invici()

@@ -620,7 +620,6 @@ text = "00/00"
 script = ExtResource( 6 )
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
-editor/display_folded = true
 script = ExtResource( 7 )
 
 [node name="Menu" type="Node2D" parent="Menu Items"]
@@ -682,7 +681,6 @@ next/close = "closed"
 next/open = "opened"
 
 [node name="Load_Minigame" type="Node2D" parent="."]
-editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
 script = ExtResource( 9 )
 

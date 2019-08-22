@@ -7,9 +7,9 @@ var items_n = 7
 
 func _process(delta):
 	if is_colliding() and Input.is_action_pressed("ui_select"): 
-		if Input.is_action_just_pressed("ui_right"):
+		if Input.is_action_just_pressed("trigger_r"):
 			select += 1
-		if Input.is_action_just_pressed("ui_left"):
+		if Input.is_action_just_pressed("trigger_l"):
 			select -= 1
 		if select > items_n:
 			select = 0
@@ -25,7 +25,6 @@ func _process(delta):
 				get_node("Shop_Select/Icons").get_child(i).set_modulate(Color(0.5,0.5,0.5))
 			if get_collider().is_in_group("player"):
 				get_node("Shop_Select/Icons").show()
-				get_collider().motion.x = 0
 				get_node("Shop_Select/Icons/Label2").set_text(get_collider().get_node("Weapons").get_child(select).get_name())
 				if   not get_collider().get_node("Weapons").get_child(select).have:
 					get_node("Shop_Select/Icons/Label").set_text("X:Buy for a " +str(price[select]) +  " Bolts")
