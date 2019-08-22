@@ -729,6 +729,7 @@ default_color = Color( 0, 0, 0, 0.501961 )
 position = Vector2( 51.392, -56.7652 )
 points = PoolVector2Array( 0, 0, 0, 10 )
 default_color = Color( 1, 1, 1, 0.501961 )
+texture_mode = 1021447008
 
 [node name="Line2D3" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 3.95837, -61.2451 )
