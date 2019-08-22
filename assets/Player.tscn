@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
@@ -13,9 +13,10 @@
 [ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/Coins.gd" type="Script" id=12]
 [ext_resource path="res://Scripts/Save.gd" type="Script" id=13]
+[ext_resource path="res://sprites/char.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 25, 15 )
+extents = Vector2( 15, 30 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "crouch"
@@ -520,8 +521,6 @@ cast_to = Vector2( -20, 0 )
 invicility = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-editor/display_folded = true
-position = Vector2( 0, 15 )
 shape = SubResource( 1 )
 
 [node name="Colision" type="AnimationPlayer" parent="CollisionShape2D"]
@@ -712,6 +711,7 @@ anims/timer = SubResource( 10 )
 [node name="Line2D2" type="Line2D" parent="Menu Items/Menu/Bullet Time"]
 points = PoolVector2Array( -50, 40, 50, 40 )
 default_color = Color( 1, 1, 1, 0.25098 )
+texture_mode = 1021447008
 begin_cap_mode = 2
 end_cap_mode = 2
 
@@ -747,5 +747,9 @@ script = ExtResource( 12 )
 
 [node name="Save" type="Node" parent="."]
 script = ExtResource( 13 )
+
+[node name="char" type="Sprite" parent="."]
+position = Vector2( 5.23666, -26.3542 )
+texture = ExtResource( 14 )
 
 [connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]
