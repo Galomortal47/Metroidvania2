@@ -25,12 +25,12 @@ func _process(delta):
 		motion.y += gravity
 	match type:
 		"melee":
-			hunt_player(30)
+			hunt_player(50)
 			damage()
 		"shooter":
 			timer -= delta
 			shot_player()
-			hunt_player(300)
+			hunt_player(500)
 	die()
 	motion = move_and_slide(motion)
 
@@ -39,7 +39,8 @@ func damage():
 	if $Damage.is_colliding():
 		stun()
 		if $Damage.get_collider().has_node("Health"):
-			$Damage.get_collider().get_node("Health").damage(damage) 
+			if $Damage.get_collider().is_in_group("player"):
+				$Damage.get_collider().get_node("Health").damage(damage) 
 
 func shot_player():
 	if $Vision.is_colliding():
@@ -61,24 +62,25 @@ func hunt_player(var distance):
 	$Damage.set_cast_to(attack)
 	if $Vision.is_colliding():
 		if $Vision.get_collider().is_in_group("player"):
-			$Vision.rotate(get_angle_to($Vision.get_collider().get_position()) - $Vision.get_rotation() - 1.57)
-			if $Vision.get_collider().get_position().x - get_position().x > distance:
-				if motion.x < max_speed:
-					motion.x += speed
-				attack.x = 60
-			elif $Vision.get_collider().get_position().x - get_position().x < distance:
-				if motion.x > -max_speed:
-					motion.x -= speed
-				attack.x = -60
-			if $Vision.get_collider().get_position().y - get_position().y < -distance:
-				attack.y = -60
-				motion.y = -jump
-			elif $Vision.get_collider().get_position().y - get_position().y < distance:
-				attack.y = 60
-			else:
-				attack.y = 0
-	else:
-		motion.x *= drag
+			if get_position().distance_to($Vision.get_collider().get_position()) > distance:
+				$Vision.rotate(get_angle_to($Vision.get_collider().get_position()) - $Vision.get_rotation() - 1.57)
+				if $Vision.get_collider().get_position().x - get_position().x > 0:
+					if motion.x < max_speed:
+						motion.x += speed
+					attack.x = 60
+				elif $Vision.get_collider().get_position().x - get_position().x < 0:
+					if motion.x > -max_speed:
+						motion.x -= speed
+					attack.x = -60
+				if $Vision.get_collider().get_position().y - get_position().y < 0:
+					attack.y = -60
+					motion.y = -jump
+				elif $Vision.get_collider().get_position().y - get_position().y < 0:
+					attack.y = 60
+				else:
+					attack.y = 0
+		else:
+			motion.x *= drag
 
 #mudar a direçao do raycasyt na direçao do jogador
 

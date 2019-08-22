@@ -9,5 +9,5 @@ func _process(delta):
 
 func shake():
 	randomize()
-	set_position(Vector2(rand_range(-shake,shake),(rand_range(-shake,shake))))
+	set_position(Vector2(rand_range(-shake,shake),(rand_range(-shake,shake)-135)))
 	shake *= falloff

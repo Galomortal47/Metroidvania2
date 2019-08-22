@@ -25,6 +25,9 @@ func damage(var damage):
 #		$Health.advance(damage*100)
 #		$Polygon2D.set_scale(Vector2(health/health_max,1))
 		$Label2.set_text(str(-damage))
+	invici()
+	
+func invici():
 	if invicility:
 		invicible = true
 	get_node("Invicibility timer").set_current_animation("invicible")
