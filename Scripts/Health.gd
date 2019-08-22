@@ -22,8 +22,8 @@ func damage(var damage):
 			get_parent().get_node("Camera2D").shake += 50
 		get_parent().stun()
 		health -= damage
-#		$Health.advance(damage*100)
-#		$Polygon2D.set_scale(Vector2(health/health_max,1))
+		print(float(health)/float(health_max))
+		$Line2D3.set_scale(Vector2(float(health)/float(health_max),1))
 		$Label2.set_text(str(-damage))
 	invici()
 	
