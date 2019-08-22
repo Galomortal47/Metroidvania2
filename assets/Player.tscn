@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
@@ -250,6 +250,22 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "timer"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:points")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( -50, 40, 50, 40 ), PoolVector2Array( -50, 40, -50, 40 ), PoolVector2Array( -50, 40, 50, 40 ) ]
 }
 
 [sub_resource type="Animation" id=10]
@@ -622,8 +638,15 @@ script = ExtResource( 6 )
 [node name="Menu Items" type="CanvasLayer" parent="."]
 script = ExtResource( 7 )
 
+[node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
+anims/close = SubResource( 6 )
+anims/closed = SubResource( 7 )
+anims/open = SubResource( 8 )
+anims/opened = SubResource( 9 )
+next/close = "closed"
+next/open = "opened"
+
 [node name="Menu" type="Node2D" parent="Menu Items"]
-editor/display_folded = true
 position = Vector2( 512, 165 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Menu Items/Menu"]
@@ -672,13 +695,22 @@ rect_pivot_offset = Vector2( -0.51178, -0.0862732 )
 align = 1
 autowrap = true
 
-[node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
-anims/close = SubResource( 6 )
-anims/closed = SubResource( 7 )
-anims/open = SubResource( 8 )
-anims/opened = SubResource( 9 )
-next/close = "closed"
-next/open = "opened"
+[node name="Bullet Time" type="Line2D" parent="Menu Items/Menu"]
+points = PoolVector2Array( -50, 40, 50, 40 )
+default_color = Color( 1, 1, 1, 1 )
+texture_mode = 612703316
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Bullet Time" type="AnimationPlayer" parent="Menu Items/Menu/Bullet Time"]
+anims/timer = SubResource( 13 )
+
+[node name="Line2D2" type="Line2D" parent="Menu Items/Menu/Bullet Time"]
+points = PoolVector2Array( -50, 40, 50, 40 )
+default_color = Color( 1, 1, 1, 0.25098 )
+texture_mode = 612703316
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [node name="Load_Minigame" type="Node2D" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -715,3 +747,4 @@ script = ExtResource( 11 )
 [node name="Save" type="Node" parent="."]
 script = ExtResource( 12 )
 
+[connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]

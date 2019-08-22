@@ -5,7 +5,11 @@ var select_aux = select
 var menu_size = 8
 var a = 0
 var guns = [false,false,false,false,false,false,false,false]
+var timer = 0.5
+var time_aux
+
 func _ready():
+	time_aux = timer
 	get_parent().get_node("Weapons/Label").menu_size = menu_size
 	get_parent().get_node("Save").loader()
 	for i in range(0,menu_size):
@@ -14,7 +18,12 @@ func _ready():
 func _process(delta):
 	guns_have()
 	if Input.is_action_pressed("ui_select"):
-		Engine.set_time_scale(0.1) 
+		timer -= delta
+		$"Menu/Bullet Time/Bullet Time".play("timer")
+		if timer > 0:
+			Engine.set_time_scale(0.1) 
+		else:
+			Engine.set_time_scale(1) 
 		$"Menu Anim".set_current_animation("open")
 		menu_select()
 		if Input.is_action_just_pressed("trigger_l"):
@@ -56,3 +65,7 @@ func select(var x = 0):
 		else:
 			get_node("Menu/icon" + str(i)).set_scale(Vector2(1,1))
 			select[i] = false
+
+func _on_Bullet_Time_animation_finished(anim_name):
+	timer = time_aux
+	pass # Replace with function body.
