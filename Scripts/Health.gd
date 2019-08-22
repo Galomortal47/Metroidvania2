@@ -7,10 +7,6 @@ var size = 20
 var knockback = Vector2(0,-200)
 export var invicility = false
 
-#func _ready():
-#	$Health.play("health")
-#	$Health.set_speed_scale(0.0001) 
-
 func _process(delta):
 	if health > health_max:
 		health = health_max
@@ -22,8 +18,8 @@ func damage(var damage):
 			get_parent().get_node("Camera2D").shake += 50
 		get_parent().stun()
 		health -= damage
-		print(float(health)/float(health_max))
 		$Line2D3.set_scale(Vector2(float(health)/float(health_max),1))
+		$"Damage Number".play("Damage")
 		$Label2.set_text(str(-damage))
 	invici()
 	

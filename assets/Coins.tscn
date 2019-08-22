@@ -1,19 +1,31 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=1]
 
 [node name="Coins" type="CanvasLayer"]
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 150, 60, 40, 60 )
+width = 20.0
+default_color = Color( 0, 0, 0, 0.25098 )
+texture_mode = 612703316
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [node name="Bolts" type="Label" parent="."]
 margin_left = 46.8655
 margin_top = 54.0756
 margin_right = 129.865
 margin_bottom = 68.0756
+custom_fonts/font = ExtResource( 1 )
 text = "Bolts:"
 
 [node name="Number" type="Label" parent="."]
-margin_left = 85.4913
-margin_top = 53.5819
-margin_right = 143.491
-margin_bottom = 77.5819
+margin_left = 89.3737
+margin_top = 54.229
+margin_right = 147.373
+margin_bottom = 78.229
+custom_fonts/font = ExtResource( 1 )
 text = "0"
 
 [node name="Label" type="Label" parent="."]

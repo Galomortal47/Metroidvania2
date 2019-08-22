@@ -103,7 +103,7 @@ func die():
 
 func stun():
 	if motion.x > 0:
-		motion += Vector2(-500,0)
+		motion += Vector2(50,0)
 	else:
-		motion += Vector2(500,0)
+		motion += Vector2(-50,0)
 

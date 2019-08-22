@@ -32,7 +32,8 @@ func attack():
 			$CPUParticles2D2.emitting = true
 		if $bullet.get_collider().is_in_group(target):
 			if not $bullet.get_collider().get_node("Health").invicible:
-				if $bullet.get_collider().has_node("Health"):
-					$bullet.get_collider().get_node("Health").damage(5)
-					if not pierce:
-						queue_free()
+					$bullet.get_collider().get_node("Health").damage(damage)
+			else:
+				$bullet.get_collider().get_node("Health").damage(0)
+			if not pierce:
+				queue_free()

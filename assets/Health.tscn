@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Health.gd" type="Script" id=1]
-[ext_resource path="res://assets/Invicibility timer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/Invicibility timer.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "health"
@@ -18,11 +19,55 @@ tracks/0/keys = {
 "values": [ PoolVector2Array( 20, -35, 105, -35 ), PoolVector2Array( 20, -35, 20, -35 ) ]
 }
 
+[sub_resource type="Animation" id=2]
+resource_name = "Damage"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -37.1414, -41.3728 ), Vector2( -37.1414, -55.7122 ), Vector2( -37.1414, -55.7122 ), Vector2( -37.1414, -72.5611 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "invicible"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="Health" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Line2D2" type="Line2D" parent="."]
-position = Vector2( 20, 0 )
+position = Vector2( 25, 0 )
 points = PoolVector2Array( 0, -35, 85, -35 )
 width = 12.0
 default_color = Color( 0.243137, 0.243137, 0.243137, 0.501961 )
@@ -31,19 +76,21 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Line2D3" type="Line2D" parent="."]
-position = Vector2( 20, 0 )
-points = PoolVector2Array( 0, -35, 85, -35 )
+position = Vector2( 5, 0 )
+points = PoolVector2Array( 20, -35, 105, -35 )
 width = 12.0
-default_color = Color( 0.509804, 0.509804, 0.509804, 1 )
+default_color = Color( 1, 1, 1, 1 )
 texture_mode = 612703316
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Label" type="Label" parent="."]
-margin_left = 43.947
-margin_top = -41.3974
-margin_right = 104.947
-margin_bottom = -27.3974
+self_modulate = Color( 0.247059, 0.247059, 0.247059, 1 )
+margin_left = 50.0
+margin_top = -41.0
+margin_right = 111.0
+margin_bottom = -27.0
+custom_fonts/font = ExtResource( 2 )
 text = "20/20"
 
 [node name="Health" type="AnimationPlayer" parent="."]
@@ -55,8 +102,14 @@ margin_left = -37.1414
 margin_top = -41.3728
 margin_right = 2.85858
 margin_bottom = -27.3728
+custom_fonts/font = ExtResource( 2 )
 text = "9999"
 
-[node name="Invicibility timer" parent="." instance=ExtResource( 2 )]
+[node name="Invicibility timer" parent="." instance=ExtResource( 3 )]
+
+[node name="Damage Number" parent="." instance=ExtResource( 3 )]
+anims/Damage = SubResource( 2 )
+anims/invicible = SubResource( 3 )
 
 [connection signal="animation_finished" from="Invicibility timer" to="." method="_on_Invicibility_timer_animation_finished"]
+[connection signal="animation_finished" from="Damage Number" to="." method="_on_Invicibility_timer_animation_finished"]
