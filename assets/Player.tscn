@@ -253,7 +253,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=10]
 resource_name = "timer"
 length = 2.5
 tracks/0/type = "value"
@@ -269,7 +269,7 @@ tracks/0/keys = {
 "values": [ PoolVector2Array( -50, 40, 50, 40 ), PoolVector2Array( -50, 40, -50, 40 ), PoolVector2Array( -50, 40, 50, 40 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=11]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Line2D3:position")
@@ -333,7 +333,7 @@ tracks/4/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Line2D3:position")
 tracks/0/interp = 1
@@ -414,7 +414,7 @@ tracks/5/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Line2D3:position")
 tracks/0/interp = 1
@@ -694,6 +694,7 @@ margin_top = -7.0
 margin_right = 19.537
 margin_bottom = 7.0
 rect_pivot_offset = Vector2( -0.51178, -0.0862732 )
+custom_fonts/font = ExtResource( 6 )
 align = 1
 autowrap = true
 
@@ -702,17 +703,15 @@ position = Vector2( 0, 29.9285 )
 scale = Vector2( 0.71, 1 )
 points = PoolVector2Array( -50, 40, 50, 40 )
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 612703316
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Bullet Time" type="AnimationPlayer" parent="Menu Items/Menu/Bullet Time"]
-anims/timer = SubResource( 13 )
+anims/timer = SubResource( 10 )
 
 [node name="Line2D2" type="Line2D" parent="Menu Items/Menu/Bullet Time"]
 points = PoolVector2Array( -50, 40, 50, 40 )
 default_color = Color( 1, 1, 1, 0.25098 )
-texture_mode = 612703316
 begin_cap_mode = 2
 end_cap_mode = 2
 
@@ -725,25 +724,22 @@ position = Vector2( 2.64075, -51.4948 )
 points = PoolVector2Array( 0, 0, 100, 0 )
 width = 5.0
 default_color = Color( 0, 0, 0, 0.501961 )
-texture_mode = 612703316
 
 [node name="Line2D2" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 51.392, -56.7652 )
 points = PoolVector2Array( 0, 0, 0, 10 )
 default_color = Color( 1, 1, 1, 0.501961 )
-texture_mode = 612703316
 
 [node name="Line2D3" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 3.95837, -61.2451 )
 points = PoolVector2Array( 0, 0, 0, 20 )
 width = 3.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 612703316
 
 [node name="Minigame" type="AnimationPlayer" parent="Load_Minigame"]
-anims/Failure = SubResource( 10 )
-anims/Load = SubResource( 11 )
-anims/Succes = SubResource( 12 )
+anims/Failure = SubResource( 11 )
+anims/Load = SubResource( 12 )
+anims/Succes = SubResource( 13 )
 
 [node name="Coins" parent="." instance=ExtResource( 11 )]
 script = ExtResource( 12 )

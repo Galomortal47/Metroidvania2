@@ -2,6 +2,8 @@
 
 [ext_resource path="res://Scripts/Platform Sticker 2.gd" type="Script" id=1]
 
+
+
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 37.9856, 10 )
 

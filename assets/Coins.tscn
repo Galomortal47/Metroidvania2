@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=1]
+[ext_resource path="res://enemy/enemy.tscn" type="PackedScene" id=2]
 
 [node name="Coins" type="CanvasLayer"]
 
@@ -8,7 +9,7 @@
 points = PoolVector2Array( 150, 60, 40, 60 )
 width = 20.0
 default_color = Color( 0, 0, 0, 0.25098 )
-texture_mode = 612703316
+texture_mode = 1021447008
 begin_cap_mode = 2
 end_cap_mode = 2
 
@@ -35,4 +36,7 @@ margin_top = 82.3697
 margin_right = 131.986
 margin_bottom = 96.3697
 text = "+1"
+
+[node name="enemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 31.3589, 60.6272 )
 

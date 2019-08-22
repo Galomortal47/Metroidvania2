@@ -92,6 +92,7 @@ tracks/0/keys = {
 }
 
 [node name="Test" type="Node2D"]
+position = Vector2( -0.429321, 1.7171 )
 
 [node name="Ground" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -140,9 +141,11 @@ anims/movment = SubResource( 6 )
 [node name="Platform2" parent="Platform" instance=ExtResource( 1 )]
 
 [node name="Platform2" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 149.584, 1.432 )
 
 [node name="Platform2" type="KinematicBody2D" parent="Platform2"]
+editor/display_folded = true
 position = Vector2( 286.903, 355.398 )
 motion/sync_to_physics = true
 
@@ -269,4 +272,7 @@ health = 10
 ammo = 0
 
 [node name="Shop" parent="." instance=ExtResource( 12 )]
+
+[node name="Bolts2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 86.887, 555.155 )
 

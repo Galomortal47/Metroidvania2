@@ -2,6 +2,8 @@
 
 [ext_resource path="res://Scripts/damage.gd" type="Script" id=1]
 
+
+
 [node name="Sword" type="RayCast2D"]
 enabled = true
 cast_to = Vector2( 60, 0 )

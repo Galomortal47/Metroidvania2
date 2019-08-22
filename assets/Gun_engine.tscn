@@ -2,6 +2,8 @@
 
 [ext_resource path="res://Scripts/Shotgun.gd" type="Script" id=1]
 
+
+
 [node name="Gun" type="Node2D"]
 script = ExtResource( 1 )
 weapon = "res://assets/Bullet.tscn"

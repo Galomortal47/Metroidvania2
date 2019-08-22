@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Shop.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [node name="Shop" type="RayCast2D"]
 position = Vector2( 360, 550 )
@@ -14,6 +15,7 @@ margin_left = -21.0
 margin_top = -58.0
 margin_right = 49.0
 margin_bottom = -27.0
+custom_fonts/font = ExtResource( 2 )
 text = "Open Shop
 "
 
@@ -24,41 +26,42 @@ visible = false
 
 [node name="icon8" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 159.491, 544.549 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="icon7" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 259.491, 544.549 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="icon6" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 359.491, 544.549 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="icon1" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 459.491, 544.549 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="icon2" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 559.491, 544.549 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="icon3" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 659.491, 544.549 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="icon4" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 759.491, 544.549 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="icon5" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 859.491, 544.549 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="Shop_Select/Icons"]
 margin_left = 450.0
 margin_top = 480.0
 margin_right = 590.0
 margin_bottom = 494.0
+custom_fonts/font = ExtResource( 2 )
 text = "X:Buy for a Bolts"
 
 [node name="Label2" type="Label" parent="Shop_Select/Icons"]
@@ -66,4 +69,5 @@ margin_left = 450.0
 margin_top = 493.369
 margin_right = 590.0
 margin_bottom = 507.369
+custom_fonts/font = ExtResource( 2 )
 
