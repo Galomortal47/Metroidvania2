@@ -11,6 +11,7 @@ func _process(delta):
 	if health > health_max:
 		health = health_max
 	$Label.set_text(str(health) + "/" + str(health_max))
+	$Line2D3.set_scale(Vector2(float(health)/float(health_max),1))
 
 func damage(var damage):
 	if invicible == false:
@@ -18,7 +19,6 @@ func damage(var damage):
 			get_parent().get_node("Camera2D").shake += 50
 		get_parent().stun()
 		health -= damage
-		$Line2D3.set_scale(Vector2(float(health)/float(health_max),1))
 		$"Damage Number".play("Damage")
 		$Label2.set_text(str(-damage))
 	invici()
