@@ -9,6 +9,8 @@ func _process(delta):
 		get_parent().get_node("Shooting").play("shoot down")
 	else:
 		get_parent().get_node("Shooting").play("hide")
+	if Input.is_action_pressed("ui_roll"):
+		get_parent().get_node("AnimationPlayer").set_current_animation("roll")
 	if Input.is_action_pressed("ui_accept"):
 		get_parent().get_node("Squash Jump").play("Squash")
 		get_parent().get_node("AnimationPlayer").set_current_animation("Jump")

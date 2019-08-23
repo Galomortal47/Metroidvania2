@@ -11,7 +11,7 @@ var jump_aux = 0.0
 var jump_timer = 0.15
 var air_speed = 8
 export var health = 20
-var roll = 150
+var roll = 400
 var roll_height = 150
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
@@ -81,7 +81,6 @@ func roll():
 				if motion.x > -max_speed - roll:
 					motion.x -= roll
 				motion.y -= roll_height
-	if Input.is_action_pressed("ui_roll"):
 		$CollisionShape2D/Colision.set_current_animation("roll")
 	else:
 		$CollisionShape2D/Colision.set_current_animation("normal")
