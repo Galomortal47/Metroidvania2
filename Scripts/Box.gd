@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends KinematicBody2D
 
 var boltspawner = preload("bolt_spawner.gd").new()
 var bolt_path = "res://assets/Bolts.tscn"
@@ -7,9 +7,18 @@ var bolt_number = 7
 var ramdom_pos = 30
 var motion = Vector2(0,0)
 var spawn = false
+var grav = 10
 export var object = "bolt"
 
+
 func _process(delta):
+	if not $RayCast2D.is_colliding():
+		motion.y += grav
+	if $RayCast2D2.is_colliding():
+		motion.x -= 200
+	if $RayCast2D3.is_colliding():
+		motion.x += 200
+	motion = move_and_slide(motion)
 	if $Health.health <= 0:
 		match object:
 			"bolt": 

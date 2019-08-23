@@ -22,7 +22,7 @@ text = "Open Shop
 [node name="Shop_Select" type="CanvasLayer" parent="."]
 
 [node name="Icons" type="Node2D" parent="Shop_Select"]
-visible = false
+position = Vector2( -36.694, -58.2787 )
 
 [node name="icon8" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 159.491, 544.549 )

@@ -5,7 +5,7 @@ var select_aux = select
 var menu_size = 8
 var a = 0
 var guns = [false,false,false,false,false,false,false,false]
-var timer = 2
+var timer = 0.5
 var time_aux
 
 func _ready():

@@ -767,7 +767,7 @@ position = Vector2( 5.23666, -26.3542 )
 texture = ExtResource( 15 )
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2( -8.21547, -5.35549 )
+position = Vector2( -8.21547, -19.8211 )
 z_index = 1
 
 [node name="Hips" type="Sprite" parent="Node2D"]
@@ -784,7 +784,7 @@ region_enabled = true
 region_rect = Rect2( 6.625, 93.5, 15.125, 9.125 )
 
 [node name="body" type="Sprite" parent="Node2D/Hips/Belt"]
-position = Vector2( 1.26223, -8.36227 )
+position = Vector2( 1.26223, -7.86402 )
 z_index = -1
 texture = ExtResource( 16 )
 region_enabled = true
@@ -835,32 +835,45 @@ texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 
-[node name="Head" type="Sprite" parent="Node2D/Hips/Belt/body"]
-position = Vector2( -0.400078, -15.5443 )
+[node name="Neck" type="Sprite" parent="Node2D/Hips/Belt/body"]
+position = Vector2( 1.19008, -6.09009 )
+texture = ExtResource( 16 )
+region_enabled = true
+region_rect = Rect2( 53.375, 20.25, 14, 8.125 )
+
+[node name="Bone" type="Sprite" parent="Node2D/Hips/Belt/body/Neck"]
+position = Vector2( -2.4927, 1.27788 )
+texture = ExtResource( 16 )
+region_enabled = true
+region_rect = Rect2( 54.25, 10.375, 8.625, 6.875 )
+
+[node name="Head" type="Sprite" parent="Node2D/Hips/Belt/body/Neck"]
+editor/display_folded = true
+position = Vector2( 0, -11.2936 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 6.375, 17.8125, 20.25, 19.875 )
 
-[node name="Hair Side2" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Hair Side2" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( -5.48219, 5.76211 )
 z_index = -1
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
 
-[node name="Ear" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Ear" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( 13.1384, 2.14571 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 
-[node name="mouth" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="mouth" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( -4, 8.42777 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 41.75, 21.3125, 4.5, 3.5 )
 
-[node name="Ear2" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Ear2" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( -11.7917, 2.37654 )
 scale = Vector2( -1, 1 )
 z_index = -1
@@ -868,65 +881,64 @@ texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 
-[node name="HairBack" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="HairBack" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( 1.42395, -2.42072 )
 z_index = -1
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 4, 38.25, 31, 27.25 )
 
-[node name="Hair Front" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Hair Front" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( -2.13495, -4.82822 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 14.75, 1.8125, 15.375, 14.75 )
 
-[node name="Hair Side" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Hair Side" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( 6.98758, 5.57318 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
 
-[node name="Eyebrown" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Eyebrown" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( 2.63562, -1.90432 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
-[node name="Eyebrown2" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Eyebrown2" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( -8.25591, -1.83122 )
 scale = Vector2( -0.5, 1 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
-[node name="Eyewhite" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Eyewhite" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( 1.69356, 3.20801 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 37.625, 5.9375, 11.25, 7.5 )
 
-[node name="Eyewhite2" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Eyewhite2" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( -9.19797, 3.28111 )
 scale = Vector2( -0.66, 1 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 37.625, 5.9375, 11.25, 7.5 )
 
-[node name="Eye" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Eye" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( -0.449823, 2.61262 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 41.875, 14.9375, 3.875, 5.125 )
 
-[node name="Eye2" type="Sprite" parent="Node2D/Hips/Belt/body/Head"]
+[node name="Eye2" type="Sprite" parent="Node2D/Hips/Belt/body/Neck/Head"]
 position = Vector2( -8.17108, 2.36332 )
 texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 41.875, 14.9375, 3.875, 5.125 )
 
 [node name="Leg Up" type="Sprite" parent="Node2D/Hips"]
-editor/display_folded = true
 position = Vector2( 2.58815, 9.6758 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
@@ -936,7 +948,7 @@ region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
 [node name="Leg Down" type="Sprite" parent="Node2D/Hips/Leg Up"]
-position = Vector2( -1.2988, 7.43783 )
+position = Vector2( -0.729217, 5.15951 )
 scale = Vector2( -1, 1 )
 z_index = -1
 texture = ExtResource( 16 )
@@ -945,7 +957,6 @@ region_enabled = true
 region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 
 [node name="Leg Up2" type="Sprite" parent="Node2D/Hips"]
-editor/display_folded = true
 position = Vector2( -5.71371, 9.55371 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
@@ -955,7 +966,7 @@ region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
 [node name="Leg Down" type="Sprite" parent="Node2D/Hips/Leg Up2"]
-position = Vector2( -0.476325, 7.17438 )
+position = Vector2( 0.093255, 4.89606 )
 scale = Vector2( -1, 1 )
 z_index = -1
 texture = ExtResource( 16 )
