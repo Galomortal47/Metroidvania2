@@ -1,5 +1,9 @@
 extends Node2D
 
+
+var wall_dead_zone = 100
+var stop_dead_zone = 1
+
 func _process(delta):
 	animations()
 
@@ -15,22 +19,23 @@ func animations():
 			get_parent().get_node("Shooting").play("hide")
 		if Input.is_action_pressed("ui_roll"):
 			get_parent().get_node("AnimationPlayer").set_current_animation("roll")
-		if Input.is_action_pressed("ui_accept"):
+		if not get_parent().get_parent().ground_detect() and not get_parent().get_parent().ledge_detect():
 			get_parent().get_node("Squash Jump").play("Squash")
 			get_parent().get_node("AnimationPlayer").set_current_animation("Jump")
-		elif int(get_parent().get_parent().motion.x) > 100 and get_parent().get_parent().ground_detect():
-						get_parent().get_node("AnimationPlayer").set_current_animation("Walk")
-		elif int(get_parent().get_parent().motion.x) < -100 and get_parent().get_parent().ground_detect():
+		elif get_parent().get_parent().motion.x > wall_dead_zone or get_parent().get_parent().motion.x < -wall_dead_zone and get_parent().get_parent().ground_detect():
 			get_parent().get_node("AnimationPlayer").set_current_animation("Walk")
+		elif get_parent().get_parent().motion.x > stop_dead_zone or get_parent().get_parent().motion.x < -stop_dead_zone and get_parent().get_parent().ground_detect():
+			get_parent().get_node("AnimationPlayer").set_current_animation("slide2")
+			print("slide")
 		elif int(get_parent().get_parent().motion.x) == 0 and not Input.is_action_pressed("ui_roll"):
 			get_parent().get_node("AnimationPlayer").set_current_animation("Idle")
 		if get_parent().get_parent().ledge_detect() and not get_parent().get_parent().ground_detect():
 			get_parent().get_node("AnimationPlayer").set_current_animation("ledge grab")
 	elif get_parent().get_parent().state == "swin":
 		get_parent().get_node("AnimationPlayer").set_current_animation("swin")
-	if int(get_parent().get_parent().motion.x) > 100:
+	if int(get_parent().get_parent().motion.x) > 0:
 		get_parent().set_scale(Vector2(-1,get_parent().get_scale().y))
-	if int(get_parent().get_parent().motion.x) < -100:
+	if int(get_parent().get_parent().motion.x) < -0:
 		get_parent().set_scale(Vector2(1,get_parent().get_scale().y))
 	get_parent().get_node("AnimationPlayer").set_speed_scale(get_parent().get_parent().motion.x/500) 
 #	pass
