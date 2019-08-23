@@ -1,7 +1,6 @@
 extends Sprite
 # var a = 2
 # var b = "text"
-export var swin = true
 export var offset2 = 135
 export var size = Vector2( 960, 540)
 var player
@@ -10,7 +9,6 @@ var player
 func _ready():
 	size = Vector2( 960, 540)
 	player = "/root/Test/Player"
-	$Swimming.swin = swin
 	var image = get_viewport().get_texture()
 	set_texture(image) 
 
