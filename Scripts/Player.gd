@@ -68,7 +68,7 @@ func die():
 		get_tree().change_scene("res://assets/game over.tscn")
 
 func roll():
-	if Input.is_action_just_pressed("ui_roll") and not ledge_detect():
+	if Input.is_action_pressed("ui_roll") and not ledge_detect():
 		if Input.is_action_pressed("ui_right"):
 			if ground_detect():
 				$Health.invici()
@@ -81,6 +81,7 @@ func roll():
 				if motion.x > -max_speed - roll:
 					motion.x -= roll
 				motion.y -= roll_height
+	if Input.is_action_pressed("ui_roll"):
 		$CollisionShape2D/Colision.set_current_animation("roll")
 	else:
 		$CollisionShape2D/Colision.set_current_animation("normal")
