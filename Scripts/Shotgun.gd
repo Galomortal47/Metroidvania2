@@ -75,7 +75,7 @@ func shoot():
 func update_text():
 	if have:
 		if infinite:
-			get_parent().get_node("Label").set_text("infinite/infinite")
+			get_parent().get_node("Label").set_text("infi/infi")
 		else:
 			get_parent().get_node("Label").set_text(str(mag_aux) + "/" + str(ammo)+"/"+str(ammo_max))
 

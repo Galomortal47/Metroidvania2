@@ -634,9 +634,9 @@ particle_size = 30
 screen_shake = 0
 
 [node name="Label" type="Label" parent="Weapons"]
-margin_left = 52.599
+margin_left = 43.2335
 margin_top = -15.677
-margin_right = 97.599
+margin_right = 88.2335
 margin_bottom = -1.67703
 custom_fonts/font = ExtResource( 6 )
 text = "00/00"
@@ -647,8 +647,9 @@ position = Vector2( -9.95112, 6.13795 )
 texture = ExtResource( 8 )
 
 [node name="Line2D" type="Line2D" parent="Weapons/Label"]
+position = Vector2( 8.70443, 0 )
 z_index = -1
-points = PoolVector2Array( -18.413, 7, 46.431, 7 )
+points = PoolVector2Array( -25, 7, 60, 7 )
 width = 13.0
 default_color = Color( 0, 0, 0, 0.501961 )
 texture_mode = 1021447008

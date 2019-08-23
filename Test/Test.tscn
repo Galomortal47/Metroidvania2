@@ -97,8 +97,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Gradient" id=10]
-offsets = PoolRealArray( 0, 0.365269 )
-colors = PoolColorArray( 1, 1, 1, 1, 0.449219, 0.935455, 1, 1 )
+offsets = PoolRealArray( 0.101796, 0.413174 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.399902, 0.853809, 0.914063, 1 )
 
 [sub_resource type="GradientTexture" id=11]
 gradient = SubResource( 10 )
@@ -409,7 +409,6 @@ ammo = 0
 position = Vector2( 86.887, 555.155 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )
@@ -421,6 +420,7 @@ scale = Vector2( 0.3878, 1154.45 )
 texture = SubResource( 11 )
 
 [node name="plant" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -167.287, 566.193 )
 rotation = 0.034481
 texture = ExtResource( 15 )

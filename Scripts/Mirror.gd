@@ -9,5 +9,5 @@ func _ready():
 
 func _process(delta):
 	if get_parent().has_node("Player"):
-		set_region_rect(Rect2(-get_parent().get_node("Player").get_global_position().x+get_global_position().x  ,get_parent().get_node("Player").get_global_position().y-get_global_position().y+235,1024,500))
+		set_region_rect(Rect2(-get_parent().get_node("Player").get_global_position().x+get_global_position().x  ,get_parent().get_node("Player").get_global_position().y-get_global_position().y+135,960,500))
 #	pass
