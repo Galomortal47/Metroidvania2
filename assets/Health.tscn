@@ -64,6 +64,7 @@ tracks/0/keys = {
 }
 
 [node name="Health" type="Node2D"]
+z_index = 4000
 script = ExtResource( 1 )
 
 [node name="Line2D2" type="Line2D" parent="."]
