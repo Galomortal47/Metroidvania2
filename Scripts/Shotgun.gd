@@ -42,7 +42,7 @@ func shoot():
 		dir = 3
 	elif Input.is_action_just_pressed("ui_down"):
 		dir = 4
-	if Input.is_action_pressed("ui_cancel") and timer_aux < 0 and mag_aux > 0:
+	if Input.is_action_pressed("ui_cancel") and timer_aux < 0 and mag_aux > 0 and not get_parent().get_parent().ledge_detect():
 		timer_aux = timer
 		if not infinite:
 			mag_aux-= shot

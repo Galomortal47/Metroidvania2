@@ -5,11 +5,11 @@ func _process(delta):
 
 func animations():
 	if get_parent().get_parent().state == "walk":
-		if Input.is_action_pressed("ui_cancel") and not Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down"):
+		if Input.is_action_pressed("ui_cancel") and not Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down") and not get_parent().get_parent().ledge_detect():
 			get_parent().get_node("Shooting").play("shoot")
-		elif Input.is_action_pressed("ui_up"):
+		elif Input.is_action_pressed("ui_up") and not get_parent().get_parent().ledge_detect():
 			get_parent().get_node("Shooting").play("shoot up")
-		elif Input.is_action_pressed("ui_down"):
+		elif Input.is_action_pressed("ui_down") and not get_parent().get_parent().ledge_detect():
 			get_parent().get_node("Shooting").play("shoot down")
 		else:
 			get_parent().get_node("Shooting").play("hide")
