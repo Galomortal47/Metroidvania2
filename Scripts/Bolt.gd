@@ -35,6 +35,7 @@ func _process(delta):
 		if speed < max_speed:
 			speed *= accel
 
+
 func _on_magnetic_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
 		collect = true

@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Scripts/Bolt.gd" type="Script" id=1]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 100.0
-
 [sub_resource type="CircleShape2D" id=2]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 158.206
 
 [node name="Bolts" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,18 +14,17 @@ script = ExtResource( 1 )
 enabled = true
 cast_to = Vector2( 0, 10 )
 
-[node name="magnetic" type="Area2D" parent="."]
-visible = false
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="magnetic"]
-shape = SubResource( 1 )
-
 [node name="destroy" type="Area2D" parent="."]
 collision_mask = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="destroy"]
 shape = SubResource( 2 )
 
-[connection signal="body_shape_entered" from="magnetic" to="." method="_on_magnetic_body_shape_entered"]
+[node name="magnetic" type="Area2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="magnetic"]
+shape = SubResource( 3 )
+
 [connection signal="body_shape_entered" from="destroy" to="." method="_on_destroy_body_shape_entered"]
+[connection signal="body_shape_entered" from="magnetic" to="." method="_on_magnetic_body_shape_entered"]

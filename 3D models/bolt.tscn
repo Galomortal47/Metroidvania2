@@ -77,6 +77,6 @@ mesh = SubResource( 5 )
 emission_shape = 2
 emission_box_extents = Vector3( 1, 1, 1 )
 gravity = Vector3( 0, -1, 0 )
-scale_amount = 0.2
+scale_amount = 0.5
 scale_amount_curve = ExtResource( 4 )
 
