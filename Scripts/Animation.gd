@@ -19,14 +19,15 @@ func animations():
 			get_parent().get_node("Shooting").play("hide")
 		if Input.is_action_pressed("ui_roll"):
 			get_parent().get_node("AnimationPlayer").set_current_animation("roll")
-		if not get_parent().get_parent().ground_detect() and not get_parent().get_parent().ledge_detect():
+		if not get_parent().get_parent().ground_detect() and not get_parent().get_parent().ledge_detect() and not Input.is_action_pressed("ui_roll"):
 			get_parent().get_node("Squash Jump").play("Squash")
 			get_parent().get_node("AnimationPlayer").set_current_animation("Jump")
-		elif get_parent().get_parent().motion.x > wall_dead_zone or get_parent().get_parent().motion.x < -wall_dead_zone and get_parent().get_parent().ground_detect():
-			get_parent().get_node("AnimationPlayer").set_current_animation("Walk")
-		elif get_parent().get_parent().motion.x > stop_dead_zone or get_parent().get_parent().motion.x < -stop_dead_zone and get_parent().get_parent().ground_detect():
-			get_parent().get_node("AnimationPlayer").set_current_animation("slide2")
-			print("slide")
+		elif get_parent().get_parent().motion.x > wall_dead_zone or get_parent().get_parent().motion.x < -wall_dead_zone:
+			if get_parent().get_parent().ground_detect() and not Input.is_action_pressed("ui_roll"):
+				get_parent().get_node("AnimationPlayer").set_current_animation("Walk")
+		elif get_parent().get_parent().motion.x > stop_dead_zone or get_parent().get_parent().motion.x < -stop_dead_zone: 
+			if get_parent().get_parent().ground_detect() and not Input.is_action_pressed("ui_roll"):
+				get_parent().get_node("AnimationPlayer").set_current_animation("slide")
 		elif int(get_parent().get_parent().motion.x) == 0 and not Input.is_action_pressed("ui_roll"):
 			get_parent().get_node("AnimationPlayer").set_current_animation("Idle")
 		if get_parent().get_parent().ledge_detect() and not get_parent().get_parent().ground_detect():
