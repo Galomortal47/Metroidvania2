@@ -3,7 +3,8 @@ extends KinematicBody2D
 var boltspawner = preload("bolt_spawner.gd").new()
 var bolt_path = "res://assets/Bolts.tscn"
 var ammo_health = "res://assets/Pick Up.tscn"
-var bolt_number = 7
+var health_path = "res://assets/health pick up.tscn"
+export var bolt_number = 3
 var ramdom_pos = 30
 var motion = Vector2(0,0)
 var spawn = false

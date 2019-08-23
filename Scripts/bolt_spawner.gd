@@ -1,8 +1,7 @@
 extends Node2D
 
-var health_path = "res://assets/Pick Up.tscn"
 var ammo_path = "res://assets/Pick Up.tscn"
-
+var health_path = "res://assets/health pick up.tscn"
 var bolt_path = "res://assets/Bolts.tscn"
 var bolt_number = 7
 var ramdom_pos = 30

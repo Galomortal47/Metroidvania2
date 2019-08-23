@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://3D models/new_arraymesh.tres" type="ArrayMesh" id=1]
 [ext_resource path="res://3D models/bolt.tres" type="Material" id=2]
-[ext_resource path="res://sprites/sparkle.png" type="Texture" id=3]
-[ext_resource path="res://assets/Bullet.tres" type="Curve" id=4]
+[ext_resource path="res://3D models/CPUParticles.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "rotating"
@@ -21,15 +20,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector3( 40.996, 360, 0 ), Vector3( 40.9962, 0, 0 ) ]
 }
-
-[sub_resource type="SpatialMaterial" id=2]
-flags_transparent = true
-flags_unshaded = true
-albedo_texture = ExtResource( 3 )
-
-[sub_resource type="QuadMesh" id=3]
-material = SubResource( 2 )
-size = Vector2( 3, 3 )
 
 [node name="Scene Root" type="Spatial"]
 
@@ -54,13 +44,6 @@ anims/rotating = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.753614, 1.03698, 1.79959 )
 omni_range = 4096.0
 
-[node name="CPUParticles" type="CPUParticles" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.324301, 0.239275 )
-amount = 5
-mesh = SubResource( 3 )
-emission_shape = 2
-emission_box_extents = Vector3( 1, 1, 1 )
-gravity = Vector3( 0, -1, 0 )
-scale_amount = 0.5
-scale_amount_curve = ExtResource( 4 )
+[node name="CPUParticles" parent="." instance=ExtResource( 3 )]
+angular_velocity = 4.49998e-039
 

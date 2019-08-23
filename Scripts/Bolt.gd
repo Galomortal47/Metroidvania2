@@ -9,6 +9,7 @@ var collect = false
 var ramdom_pos = 120
 var life_time = 1
 var falloff = 0.95
+var value = 2
 
 func _ready():
 	randomize()
@@ -45,6 +46,6 @@ func _on_magnetic_body_shape_entered(body_id, body, body_shape, area_shape):
 
 func _on_destroy_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
-		body.get_node("Coins/Number").set_text(str(int(body.get_node("Coins/Number").get_text())+1))
+		body.get_node("Coins/Number").set_text(str(int(body.get_node("Coins/Number").get_text())+value))
 		queue_free()
 	pass # Replace with function body.
