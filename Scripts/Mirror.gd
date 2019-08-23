@@ -3,12 +3,12 @@ extends Sprite
 # var b = "text"
 export var swin = true
 export var offset2 = 135
-export var size = Vector2(1024,600)
+export var size = Vector2( 960, 540)
 var player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	size = Vector2(get_scale().x * 960,get_scale().y * 540)
+	size = Vector2( 960, 540)
 	player = "/root/Test/Player"
 	$Swimming.swin = swin
 	var image = get_viewport().get_texture()
