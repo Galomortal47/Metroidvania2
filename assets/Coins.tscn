@@ -39,4 +39,5 @@ text = "+1"
 
 [node name="enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 31.3589, 60.6272 )
+scale = Vector2( 2, 2 )
 

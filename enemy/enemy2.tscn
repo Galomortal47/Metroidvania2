@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://enemy/Monster2D-3D.gd" type="Script" id=1]
-[ext_resource path="res://3D models/bolt.tscn" type="PackedScene" id=2]
+[ext_resource path="res://3D models/bolt2.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 1

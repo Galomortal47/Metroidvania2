@@ -10,6 +10,18 @@ var ramdom_pos = 120
 var life_time = 1
 var falloff = 0.95
 
+func _ready():
+	randomize()
+	var random = rand_range(0,1)
+	if random > 0.5:
+		var three_d_model = load("res://enemy/enemy.tscn")
+		var model = three_d_model.instance()
+		self.add_child(model)
+	else:
+		var three_d_model2 = load("res://enemy/enemy2.tscn")
+		var model = three_d_model2.instance()
+		self.add_child(model)
+
 func _process(delta):
 	if not $ground_detect.is_colliding():
 		set_position(get_position() + Vector2(0,gravity))
