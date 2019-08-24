@@ -1,24 +1,25 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/CamShake.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Shotgun.gd" type="Script" id=4]
 [ext_resource path="res://assets/Gun_engine.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scripts/Hook.gd" type="Script" id=6]
-[ext_resource path="res://sprites/box.png" type="Texture" id=7]
-[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=8]
-[ext_resource path="res://Scripts/Reload.gd" type="Script" id=9]
-[ext_resource path="res://sprites/ammo.png" type="Texture" id=10]
-[ext_resource path="res://Scripts/Menu Items.gd" type="Script" id=11]
-[ext_resource path="res://icon.png" type="Texture" id=12]
-[ext_resource path="res://Scripts/Load_Minigame.gd" type="Script" id=13]
-[ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scripts/Coins.gd" type="Script" id=15]
-[ext_resource path="res://Scripts/Save.gd" type="Script" id=16]
-[ext_resource path="res://sprites/char.png" type="Texture" id=17]
-[ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=19]
+[ext_resource path="res://assets/Unlock Minigame.gd" type="Script" id=6]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Scripts/Hook.gd" type="Script" id=8]
+[ext_resource path="res://sprites/box.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/Reload.gd" type="Script" id=10]
+[ext_resource path="res://sprites/ammo.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/Menu Items.gd" type="Script" id=12]
+[ext_resource path="res://icon.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/Load_Minigame.gd" type="Script" id=14]
+[ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scripts/Coins.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/Save.gd" type="Script" id=17]
+[ext_resource path="res://sprites/char.png" type="Texture" id=18]
+[ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
@@ -558,19 +559,6 @@ infinite = true
 screen_shake = 0
 have = true
 
-[node name="bow and arrow" type="Node2D" parent="Weapons"]
-script = ExtResource( 4 )
-weapon = "res://assets/Bullet.tscn"
-speed = 500
-spreed = 3
-timer = 0.0
-gravity = 2
-damage = 7
-curve = -100
-lifespan = 5.0
-screen_shake = 0
-ammo = 40
-
 [node name="Double Barrel Shotgun" type="Node2D" parent="Weapons"]
 script = ExtResource( 4 )
 weapon = "res://assets/Bullet.tscn"
@@ -627,30 +615,73 @@ lifespan = 2.0
 particle_size = 30
 screen_shake = 0
 
+[node name="Unlock Minigame" type="Node2D" parent="Weapons"]
+position = Vector2( -512, -370 )
+script = ExtResource( 6 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Weapons/Unlock Minigame"]
+editor/display_folded = true
+position = Vector2( 512, 165 )
+scale = Vector2( 1.2, 1.2 )
+color = Color( 0, 0, 0, 0.498039 )
+polygon = PoolVector2Array( -120, 0, -80, -80, 0, -120, 80, -80, 120, 0, 80, 80, 0, 120, -80, 80 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="Weapons/Unlock Minigame/Polygon2D2"]
+scale = Vector2( 0.833333, 0.833333 )
+color = Color( 0, 0, 0, 0.498039 )
+polygon = PoolVector2Array( -120, 0, -80, -80, 0, -120, 80, -80, 120, 0, 80, 80, 0, 120, -80, 80 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="Weapons/Unlock Minigame/Polygon2D2"]
+scale = Vector2( 0.666667, 0.666667 )
+color = Color( 0, 0, 0, 0.498039 )
+polygon = PoolVector2Array( -120, 0, -80, -80, 0, -120, 80, -80, 120, 0, 80, 80, 0, 120, -80, 80 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="Weapons/Unlock Minigame/Polygon2D2"]
+scale = Vector2( 0.5, 0.5 )
+color = Color( 0, 0, 0, 0.498039 )
+polygon = PoolVector2Array( -120, 0, -80, -80, 0, -120, 80, -80, 120, 0, 80, 80, 0, 120, -80, 80 )
+
+[node name="Line2D" type="Line2D" parent="Weapons/Unlock Minigame"]
+position = Vector2( 512, 165 )
+rotation = -1.74846e-007
+points = PoolVector2Array( -150, 0, 150, 0 )
+default_color = Color( 1, 0.796078, 0, 1 )
+texture_mode = 1021447008
+
+[node name="Label" type="Label" parent="Weapons/Unlock Minigame"]
+margin_left = 491.537
+margin_top = 159.073
+margin_right = 531.537
+margin_bottom = 188.073
+custom_fonts/font = ExtResource( 7 )
+text = "0/100"
+autowrap = true
+
 [node name="Hook" type="Node2D" parent="Weapons"]
 editor/display_folded = true
-script = ExtResource( 6 )
+script = ExtResource( 8 )
 
 [node name="Line2D" type="Line2D" parent="Weapons/Hook"]
 position = Vector2( 2.71121, -3.16309 )
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 3.0
 default_color = Color( 1, 1, 1, 1 )
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 texture_mode = 1021447008
 
 [node name="Label" type="Label" parent="Weapons"]
+editor/display_folded = true
 margin_left = 43.2335
 margin_top = -15.677
 margin_right = 88.2335
 margin_bottom = -1.67703
-custom_fonts/font = ExtResource( 8 )
+custom_fonts/font = ExtResource( 7 )
 text = "00/00"
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 
 [node name="ammo" type="Sprite" parent="Weapons/Label"]
 position = Vector2( -9.95112, 6.13795 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Line2D" type="Line2D" parent="Weapons/Label"]
 position = Vector2( 8.70443, 0 )
@@ -664,7 +695,7 @@ end_cap_mode = 2
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
 editor/display_folded = true
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 
 [node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
 anims/close = SubResource( 6 )
@@ -675,6 +706,7 @@ next/close = "closed"
 next/open = "opened"
 
 [node name="Menu" type="Node2D" parent="Menu Items"]
+editor/display_folded = true
 position = Vector2( 512, 165 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Menu Items/Menu"]
@@ -684,35 +716,35 @@ polygon = PoolVector2Array( -120, 0, -80, -80, 0, -120, 80, -80, 120, 0, 80, 80,
 
 [node name="icon0" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -120, 0 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="icon1" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -80, -80 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="icon2" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 0, -120 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="icon3" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, -80 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="icon4" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 120, 0 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="icon5" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, 80 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="icon6" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 0, 120 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="icon7" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -80, 80 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="Label" type="Label" parent="Menu Items/Menu"]
 margin_left = -20.4633
@@ -720,7 +752,7 @@ margin_top = -7.0
 margin_right = 19.537
 margin_bottom = 7.0
 rect_pivot_offset = Vector2( -0.51178, -0.0862732 )
-custom_fonts/font = ExtResource( 8 )
+custom_fonts/font = ExtResource( 7 )
 align = 1
 autowrap = true
 
@@ -747,7 +779,7 @@ end_cap_mode = 2
 editor/display_folded = true
 modulate = Color( 1, 0, 0, 0 )
 position = Vector2( 15.1387, -12.4528 )
-script = ExtResource( 13 )
+script = ExtResource( 14 )
 
 [node name="Line2D" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 2.64075, -51.4948 )
@@ -774,23 +806,23 @@ anims/Failure = SubResource( 11 )
 anims/Load = SubResource( 12 )
 anims/Succes = SubResource( 13 )
 
-[node name="Coins" parent="." instance=ExtResource( 14 )]
-script = ExtResource( 15 )
+[node name="Coins" parent="." instance=ExtResource( 15 )]
+script = ExtResource( 16 )
 
 [node name="Save" type="Node" parent="."]
-script = ExtResource( 16 )
+script = ExtResource( 17 )
 
 [node name="char" type="Sprite" parent="."]
 visible = false
 position = Vector2( 5.23666, -26.3542 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
-[node name="Scale" parent="." instance=ExtResource( 18 )]
+[node name="Scale" parent="." instance=ExtResource( 19 )]
 
-[node name="Shadow" parent="." instance=ExtResource( 18 )]
+[node name="Shadow" parent="." instance=ExtResource( 19 )]
 modulate = Color( 0, 0, 0, 0.25098 )
 position = Vector2( 0, 36.0592 )
 scale = Vector2( 1, -0.3 )
-script = ExtResource( 19 )
+script = ExtResource( 20 )
 
 [connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]

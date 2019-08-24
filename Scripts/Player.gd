@@ -3,7 +3,7 @@ extends KinematicBody2D
 var motion = Vector2(0,0)
 var speed = 30
 var max_speed = 500
-var drag = 0.7
+var drag = 0.9
 var gravity = 10
 var jump = 40
 var jump_ledge = 300
@@ -39,6 +39,10 @@ func _process(delta):
 				jump_aux = jump_timer
 		"swin":
 			swin()
+		"pick_lock":
+			if not ground_detect():
+				motion.y += gravity
+			motion.x *= drag
 	motion = move_and_slide(motion)
 	die()
 #	pass

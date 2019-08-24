@@ -24,7 +24,7 @@ func animations():
 		elif get_parent().get_parent().motion.x > wall_dead_zone or get_parent().get_parent().motion.x < -wall_dead_zone:
 			if get_parent().get_parent().ground_detect() and not Input.is_action_pressed("ui_roll"):
 				get_parent().get_node("AnimationPlayer").set_current_animation("Walk")
-		elif get_parent().get_parent().motion.x > stop_dead_zone or get_parent().get_parent().motion.x < -stop_dead_zone: 
+		if get_parent().get_parent().motion.x > stop_dead_zone and Input.is_action_pressed("ui_left") or get_parent().get_parent().motion.x < -stop_dead_zone and Input.is_action_pressed("ui_right"): 
 			if get_parent().get_parent().ground_detect() and not Input.is_action_pressed("ui_roll"):
 				get_parent().get_node("AnimationPlayer").set_current_animation("slide")
 		elif int(get_parent().get_parent().motion.x) == 0 and not Input.is_action_pressed("ui_roll"):
