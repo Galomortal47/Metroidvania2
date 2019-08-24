@@ -7,7 +7,7 @@ var code = [0,0,0,0]
 var current = 0
 
 func _process(delta):
-	if have and enable:
+	if have and enable and Input.is_action_pressed("ui_cancel"):
 		for i in range(0,code.size()):
 			randomize()
 			code[i] = rand_range(-179,179)
@@ -36,6 +36,8 @@ func _process(delta):
 			hide()
 			progress = 0
 		$Line2D.default_color = (Color(-rot,rot,0))
+	elif enable:
+		get_parent().get_parent().state = "walk"
 	else:
 		hide()
 		
