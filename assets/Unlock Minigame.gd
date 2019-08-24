@@ -36,12 +36,6 @@ func _process(delta):
 			hide()
 			progress = 0
 		$Line2D.default_color = (Color(-rot,rot,0))
-	elif enable:
-		get_parent().get_parent().state = "walk"
-	else:
-		hide()
-		
-	
 #	pass
 func update_text():
 	if have:

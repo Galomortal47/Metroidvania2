@@ -616,6 +616,7 @@ particle_size = 30
 screen_shake = 0
 
 [node name="Unlock MiniGame" type="Node2D" parent="Weapons"]
+visible = false
 position = Vector2( -512, -370 )
 script = ExtResource( 6 )
 
