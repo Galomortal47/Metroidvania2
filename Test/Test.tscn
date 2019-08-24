@@ -107,7 +107,7 @@ colors = PoolColorArray( 1, 1, 1, 1, 0.399902, 0.853809, 0.914063, 1 )
 [sub_resource type="GradientTexture" id=11]
 gradient = SubResource( 10 )
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=12]
 resource_name = "New Anim"
 length = 10.0
 loop = true
@@ -124,11 +124,10 @@ tracks/0/keys = {
 "values": [ -3.39986, 1.20196, -3.39986 ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=12]
+[sub_resource type="CanvasItemMaterial" id=13]
 blend_mode = 1
 
-[sub_resource type="Animation" id=13]
-resource_name = "wind"
+[sub_resource type="Animation" id=14]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -168,8 +167,7 @@ tracks/2/keys = {
 "values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
 }
 
-[sub_resource type="Animation" id=14]
-resource_name = "wind"
+[sub_resource type="Animation" id=15]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -489,7 +487,7 @@ offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer3/pyrate ship"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 15 )
+"anims/New Anim" = SubResource( 12 )
 
 [node name="Water2" parent="ParallaxBackground/ParallaxLayer3" instance=ExtResource( 12 )]
 position = Vector2( 512, 540 )
@@ -531,7 +529,7 @@ offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="plant"]
 modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 12 )
+material = SubResource( 13 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
@@ -544,8 +542,8 @@ texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plant"]
-anims/wind = SubResource( 13 )
-"anims/wind (copy)" = SubResource( 14 )
+anims/wind = SubResource( 14 )
+"anims/wind (copy)" = SubResource( 15 )
 
 [node name="RayCast2D" type="RayCast2D" parent="plant"]
 rotation = 3.49066

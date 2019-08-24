@@ -11,6 +11,12 @@ var spawn = false
 var grav = 10
 export var object = "bolt"
 
+func _ready():
+	match object:
+		"ammo":
+			$box.set_texture(load("res://sprites/box - Ammo.png"))
+		"health":
+			$box.set_texture(load("res://sprites/box - health.png"))
 
 func _process(delta):
 	if not $RayCast2D.is_colliding():

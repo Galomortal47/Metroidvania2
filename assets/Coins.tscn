@@ -6,6 +6,7 @@
 [node name="Coins" type="CanvasLayer"]
 
 [node name="Line2D" type="Line2D" parent="."]
+position = Vector2( 0, -32.1952 )
 points = PoolVector2Array( 150, 60, 40, 60 )
 width = 20.0
 default_color = Color( 0, 0, 0, 0.25098 )
@@ -15,29 +16,29 @@ end_cap_mode = 2
 
 [node name="Bolts" type="Label" parent="."]
 margin_left = 46.8655
-margin_top = 54.0756
+margin_top = 21.8804
 margin_right = 129.865
-margin_bottom = 68.0756
+margin_bottom = 35.8804
 custom_fonts/font = ExtResource( 1 )
 text = "Bolts:"
 
 [node name="Number" type="Label" parent="."]
 margin_left = 89.3737
-margin_top = 54.229
+margin_top = 22.0338
 margin_right = 147.373
-margin_bottom = 78.229
+margin_bottom = 46.0338
 custom_fonts/font = ExtResource( 1 )
 text = "0"
 
 [node name="Label" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 91.9864
-margin_top = 82.3697
+margin_top = 50.1745
 margin_right = 131.986
-margin_bottom = 96.3697
+margin_bottom = 64.1745
 text = "+1"
 
 [node name="enemy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 31.3589, 60.6272 )
+position = Vector2( 31.3589, 28.432 )
 scale = Vector2( 2, 2 )
 

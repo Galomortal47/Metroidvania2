@@ -29,6 +29,7 @@ texture = ExtResource( 2 )
 [node name="light" type="Sprite" parent="enemy"]
 modulate = Color( 1, 0.960784, 0, 0.501961 )
 material = SubResource( 2 )
+position = Vector2( 3.24304, -7.87596 )
 z_index = 400
 texture = ExtResource( 4 )
 
