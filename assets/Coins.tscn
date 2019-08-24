@@ -15,6 +15,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Bolts" type="Label" parent="."]
+visible = false
 margin_left = 46.8655
 margin_top = 21.8804
 margin_right = 129.865
@@ -23,10 +24,10 @@ custom_fonts/font = ExtResource( 1 )
 text = "Bolts:"
 
 [node name="Number" type="Label" parent="."]
-margin_left = 89.3737
-margin_top = 22.0338
-margin_right = 147.373
-margin_bottom = 46.0338
+margin_left = 55.506
+margin_top = 20.7794
+margin_right = 113.505
+margin_bottom = 44.7794
 custom_fonts/font = ExtResource( 1 )
 text = "0"
 

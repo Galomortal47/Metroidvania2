@@ -7,9 +7,12 @@ var code = [0,0,0,0]
 var current = 0
 var ammo = 0
 var ammo_max = 0
+var lock = false
 
 func _process(delta):
-	if have and enable and Input.is_action_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("ui_cancel"):
+		progress = 0
+	if have and enable and Input.is_action_pressed("ui_cancel") and lock:
 		for i in range(0,code.size()):
 			randomize()
 			code[i] = rand_range(-179,179)
@@ -26,14 +29,13 @@ func _process(delta):
 			$Line2D.set_rotation_degrees(-180)
 		if current < code.size():
 			if int($Line2D.get_rotation_degrees() *0.5) == int(code[current]*0.5):
-				print(progress)
+
 				current += 1
 				progress += 100 / (code.size()-1)
 				if progress > 100:
 					progress = 100
 				$Label.set_text(str(progress)+"/100")
 		else:
-			print("unlock")
 			get_parent().get_parent().state = "walk"
 			hide()
 			progress = 0
