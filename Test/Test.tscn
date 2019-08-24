@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://assets/Platform2.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://sprites/plant.png" type="Texture" id=18]
 [ext_resource path="res://Scripts/plant.gd" type="Script" id=19]
 [ext_resource path="res://sprites/light.png" type="Texture" id=20]
+[ext_resource path="res://sprites/hook.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 946.495, 10 )
@@ -238,8 +239,7 @@ position = Vector2( 1489.65, 900.506 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 1651.02, 291.181 )
-rotation = 0.469456
+position = Vector2( 1576.45, 291.181 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Ground"]
@@ -266,6 +266,14 @@ margin_left = -415.918
 margin_top = 488.67
 margin_right = 1541.08
 margin_bottom = 616.67
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="grass2" type="TextureRect" parent="Ground"]
+margin_left = -2081.0
+margin_top = 625.0
+margin_right = 1622.0
+margin_bottom = 753.0
 texture = ExtResource( 1 )
 stretch_mode = 2
 
@@ -413,6 +421,7 @@ scale = Vector2( 1, 0.233 )
 offset2 = 170
 
 [node name="Ammo Pick Up" parent="." instance=ExtResource( 13 )]
+editor/display_folded = true
 position = Vector2( -195.398, 533.937 )
 
 [node name="Pick Up2" parent="Ammo Pick Up" instance=ExtResource( 14 )]
@@ -424,6 +433,7 @@ position = Vector2( -71.5734, 3.12897 )
 position = Vector2( 86.887, 555.155 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )
@@ -440,6 +450,11 @@ motion_mirroring = Vector2( 960, 0 )
 
 [node name="mountains" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 479.837, 294.725 )
+texture = ExtResource( 16 )
+
+[node name="mountains2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 479.837, 693.746 )
+scale = Vector2( 1, -0.718795 )
 texture = ExtResource( 16 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -461,8 +476,16 @@ autoplay = "New Anim"
 position = Vector2( 512, 540 )
 scale = Vector2( 1, 0.233 )
 
+[node name="Water5" parent="ParallaxBackground/ParallaxLayer3" instance=ExtResource( 12 )]
+position = Vector2( 512, 646.307 )
+scale = Vector2( 1, 0.233 )
+
 [node name="Water3" parent="ParallaxBackground/ParallaxLayer3" instance=ExtResource( 12 )]
 position = Vector2( 1536, 540 )
+scale = Vector2( 1, 0.233 )
+
+[node name="Water4" parent="ParallaxBackground/ParallaxLayer3" instance=ExtResource( 12 )]
+position = Vector2( 1536, 646.307 )
 scale = Vector2( 1, 0.233 )
 
 [node name="plant" type="Sprite" parent="."]
@@ -508,4 +531,14 @@ anims/wind = SubResource( 13 )
 [node name="RayCast2D" type="RayCast2D" parent="plant"]
 rotation = 3.49066
 enabled = true
+
+[node name="Hooks" type="Node2D" parent="."]
+
+[node name="Hook1" type="Sprite" parent="Hooks"]
+position = Vector2( -117.531, 475.146 )
+texture = ExtResource( 21 )
+
+[node name="Hook2" type="Sprite" parent="Hooks"]
+position = Vector2( 418.765, 411.679 )
+texture = ExtResource( 21 )
 
