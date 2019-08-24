@@ -1,11 +1,11 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/CamShake.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Shotgun.gd" type="Script" id=4]
 [ext_resource path="res://assets/Gun_engine.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/Unlock Minigame.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Unlock Minigame.gd" type="Script" id=6]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Scripts/Hook.gd" type="Script" id=8]
 [ext_resource path="res://sprites/box.png" type="Texture" id=9]
@@ -20,6 +20,7 @@
 [ext_resource path="res://sprites/char.png" type="Texture" id=18]
 [ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=20]
+[ext_resource path="res://Scripts/Air Meter.gd" type="Script" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
@@ -545,6 +546,7 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
 [node name="Sword" type="Node2D" parent="Weapons"]
@@ -825,5 +827,29 @@ modulate = Color( 0, 0, 0, 0.25098 )
 position = Vector2( 0, 36.0592 )
 scale = Vector2( 1, -0.3 )
 script = ExtResource( 20 )
+
+[node name="air meter" type="CanvasLayer" parent="."]
+script = ExtResource( 21 )
+
+[node name="Line2D" type="Line2D" parent="air meter"]
+position = Vector2( 566.926, 236.65 )
+scale = Vector2( 0.4, 0.2 )
+points = PoolVector2Array( 900, 95, 900, 310 )
+width = 50.0
+default_color = Color( 1, 1, 1, 1 )
+texture_mode = 1021447008
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Label" type="Label" parent="air meter"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 923.018
+margin_top = 256.434
+margin_right = 963.018
+margin_bottom = 301.434
+custom_fonts/font = ExtResource( 7 )
+text = "A
+I
+R"
 
 [connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]

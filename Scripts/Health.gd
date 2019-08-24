@@ -8,6 +8,10 @@ var knockback = Vector2(0,-200)
 export var invicility = false
 
 func _process(delta):
+	if health <= health_max * 0.25:
+		$Line2D3.default_color = (Color(1,0,0))
+	else:
+		$Line2D3.default_color = (Color(1,1,1))
 	if health > health_max:
 		health = health_max
 	$Label.set_text(str(health) + "/" + str(health_max))
