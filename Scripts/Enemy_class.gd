@@ -5,7 +5,7 @@ var motion = Vector2(0,0)
 var speed = 20
 var max_speed = 200
 var gravity = 10
-var jump = 200
+var jump = 0
 var drag = 0.9
 export var damage = 5
 export var health = 20
@@ -53,6 +53,7 @@ func shot_player():
 			bullet_instance.target = "player"
 			bullet_instance.speed = 200
 			bullet_instance.lifespan = 5
+			bullet_instance.get_node("CPUParticles2D").set_color(Color(1,0,0))
 			bullet_instance.set_position(get_global_position())
 			get_tree().get_root().add_child(bullet_instance)
 			timer = time_aux

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://assets/Platform2.tscn" type="PackedScene" id=2]
@@ -206,6 +206,25 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
 }
+
+[sub_resource type="Animation" id=16]
+resource_name = "New Anim"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 134.75, 359.318 ), Vector2( -314.279, 187.957 ), Vector2( 134.75, 359.318 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=17]
 
 [node name="Test" type="Node2D"]
 modulate = Color( 0.929412, 0.956863, 0.956863, 1 )
@@ -533,12 +552,29 @@ rotation = 3.49066
 enabled = true
 
 [node name="Hooks" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Hook1" type="Sprite" parent="Hooks"]
-position = Vector2( -117.531, 475.146 )
+position = Vector2( -756.962, 411.679 )
 texture = ExtResource( 21 )
 
 [node name="Hook2" type="Sprite" parent="Hooks"]
 position = Vector2( 418.765, 411.679 )
 texture = ExtResource( 21 )
+
+[node name="Hook3" type="Sprite" parent="Hooks"]
+position = Vector2( -314.279, 187.957 )
+texture = ExtResource( 21 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hooks/Hook3"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 16 )
+
+[node name="Area2D" type="Area2D" parent="." groups=[
+"lock",
+]]
+position = Vector2( 533.268, 552.313 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 17 )
 
