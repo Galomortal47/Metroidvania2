@@ -6,7 +6,7 @@ var price = [500,2000,3000,4000,8000,9000,1500,2500]
 var items_n = 7
 
 func _process(delta):
-	if is_colliding() and Input.is_action_pressed("ui_select"): 
+	if Input.is_action_pressed("ui_select"): 
 		if Input.is_action_just_pressed("trigger_r"):
 			select += 1
 		if Input.is_action_just_pressed("trigger_l"):
@@ -15,7 +15,7 @@ func _process(delta):
 			select = 0
 		if select < 0:
 			select = 7
-			
+	if is_colliding():
 		for i in range(0,items_n+1):
 			if select == i:
 				get_node("Shop_Select/Icons").get_child(i).set_scale(Vector2(1.5,1.5))

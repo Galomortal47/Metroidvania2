@@ -343,12 +343,10 @@ stretch_mode = 2
 
 [node name="end" type="Sprite" parent="Ground"]
 position = Vector2( -405.497, 549.765 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
 [node name="end3" type="Sprite" parent="Ground"]
 position = Vector2( 954.506, 549.765 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
 [node name="end2" type="Sprite" parent="Ground"]
@@ -507,6 +505,7 @@ position = Vector2( -245.126, 520.219 )
 position = Vector2( 86.887, 555.155 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )
@@ -653,6 +652,7 @@ position = Vector2( 646.815, 652.945 )
 shape = SubResource( 18 )
 
 [node name="lock" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 471.057, 536.757 )
 texture = ExtResource( 24 )
 region_enabled = true

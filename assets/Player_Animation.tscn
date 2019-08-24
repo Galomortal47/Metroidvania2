@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Animation.gd" type="Script" id=1]
 [ext_resource path="res://sprites/char2.png" type="Texture" id=2]
-[ext_resource path="res://sprites/weapons.png" type="Texture" id=3]
+[ext_resource path="res://enemy/guns.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Idle"
@@ -6155,7 +6155,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 172.612 ]
+"values": [ 197.611 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Animation/Hips/Belt/body/arm up2:rotation_degrees")
@@ -6167,7 +6167,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 98.1768 ]
+"values": [ 123.028 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Animation/Hips/Belt/body/arm up2/arm down:rotation_degrees")
@@ -6227,7 +6227,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0.69183, -2.76843 ) ]
+"values": [ Vector2( 1.6385, -4.34621 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("Animation/Hips/Belt/body/arm up2/arm down/hand/weapons:visible")
@@ -6289,8 +6289,7 @@ z_index = 4
 script = ExtResource( 1 )
 
 [node name="Hips" type="Sprite" parent="Animation"]
-position = Vector2( 3.23774, 24.9515 )
-rotation = 0.976297
+position = Vector2( 9.31056, 16.3023 )
 z_index = -1
 texture = ExtResource( 2 )
 region_enabled = true
@@ -6310,8 +6309,9 @@ region_enabled = true
 region_rect = Rect2( 5.5, 66, 17.5, 20.75 )
 
 [node name="arm up" type="Sprite" parent="Animation/Hips/Belt/body"]
-position = Vector2( 4.56733, -4.43989 )
-rotation = -0.545258
+position = Vector2( 3.23866, -4.93814 )
+rotation = 3.44896
+scale = Vector2( 1, 1.19 )
 z_index = 1
 texture = ExtResource( 2 )
 offset = Vector2( 4.87874, 3.99989 )
@@ -6320,6 +6320,7 @@ region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 
 [node name="arm down" type="Sprite" parent="Animation/Hips/Belt/body/arm up"]
 position = Vector2( 6.04005, 7.58219 )
+rotation = -0.216236
 texture = ExtResource( 2 )
 offset = Vector2( 1.20303, 4.5292 )
 region_enabled = true
@@ -6333,9 +6334,9 @@ region_enabled = true
 region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 
 [node name="arm up2" type="Sprite" parent="Animation/Hips/Belt/body"]
-editor/display_folded = true
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
 position = Vector2( -5.45658, -5.08245 )
+rotation = 2.14725
 scale = Vector2( -1, 1 )
 z_index = -1
 texture = ExtResource( 2 )
@@ -6345,6 +6346,7 @@ region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 
 [node name="arm down" type="Sprite" parent="Animation/Hips/Belt/body/arm up2"]
 position = Vector2( 3.59833, 6.68261 )
+rotation = -1.13622
 z_index = -1
 texture = ExtResource( 2 )
 offset = Vector2( 1.20303, 4.78622 )
@@ -6361,13 +6363,15 @@ region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 position = Vector2( 1.08023, 11.6544 )
 rotation = -1.14319
 scale = Vector2( 1, -1 )
-texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 2, 1, 34, 28 )
 
+[node name="enemy" parent="Animation/Hips/Belt/body/arm up2/arm down/hand/weapons" instance=ExtResource( 3 )]
+scale = Vector2( 0.2, 0.2 )
+
 [node name="Neck" type="Sprite" parent="Animation/Hips/Belt/body"]
-position = Vector2( -1.05594, -6.05364 )
-rotation = -0.678418
+position = Vector2( 1.6385, -4.34621 )
+rotation = 0.754996
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 53.375, 20.25, 14, 8.125 )
@@ -6492,8 +6496,8 @@ region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 
 [node name="Leg Up2" type="Sprite" parent="Animation/Hips"]
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
-position = Vector2( -7.66776, 7.32063 )
-rotation = -2.53242
+position = Vector2( -5.71371, 9.55371 )
+rotation = -3.14159
 scale = Vector2( 1, -1 )
 z_index = -3
 texture = ExtResource( 2 )
@@ -6502,7 +6506,6 @@ region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
 [node name="Leg Down" type="Sprite" parent="Animation/Hips/Leg Up2"]
 position = Vector2( 0.093255, 4.89606 )
-rotation = 1.48414
 scale = Vector2( -1, 1 )
 z_index = -1
 texture = ExtResource( 2 )

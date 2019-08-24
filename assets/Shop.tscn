@@ -25,34 +25,42 @@ text = "Open Shop
 position = Vector2( -36.694, -58.2787 )
 
 [node name="icon8" type="Sprite" parent="Shop_Select/Icons"]
+visible = false
 position = Vector2( 159.491, 544.549 )
 texture = ExtResource( 3 )
 
 [node name="icon7" type="Sprite" parent="Shop_Select/Icons"]
+visible = false
 position = Vector2( 259.491, 544.549 )
 texture = ExtResource( 3 )
 
 [node name="icon6" type="Sprite" parent="Shop_Select/Icons"]
+visible = false
 position = Vector2( 359.491, 544.549 )
 texture = ExtResource( 3 )
 
 [node name="icon1" type="Sprite" parent="Shop_Select/Icons"]
+visible = false
 position = Vector2( 459.491, 544.549 )
 texture = ExtResource( 3 )
 
 [node name="icon2" type="Sprite" parent="Shop_Select/Icons"]
+visible = false
 position = Vector2( 559.491, 544.549 )
 texture = ExtResource( 3 )
 
 [node name="icon3" type="Sprite" parent="Shop_Select/Icons"]
+visible = false
 position = Vector2( 659.491, 544.549 )
 texture = ExtResource( 3 )
 
 [node name="icon4" type="Sprite" parent="Shop_Select/Icons"]
+visible = false
 position = Vector2( 759.491, 544.549 )
 texture = ExtResource( 3 )
 
 [node name="icon5" type="Sprite" parent="Shop_Select/Icons"]
+visible = false
 position = Vector2( 859.491, 544.549 )
 texture = ExtResource( 3 )
 

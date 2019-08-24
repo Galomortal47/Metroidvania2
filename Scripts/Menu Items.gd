@@ -7,13 +7,22 @@ var a = 0
 var guns = [false,false,false,false,false,false,false,false]
 var timer = 0.5
 var time_aux
+var size_selected = Vector2(0.4,-0.4)
+var size_unselected = Vector2(0.2,-0.2)
 
 func _ready():
+	icon_generate()
 	time_aux = timer
 	get_parent().get_node("Weapons/Label").menu_size = menu_size
 	get_parent().get_node("Save").loader()
 	for i in range(0,menu_size):
 		get_parent().get_node("Weapons").get_child(i).have = get_parent().get_node("Save").data.gun[i]
+
+func icon_generate():
+	for i in range(0,menu_size):
+		get_parent().get_node("Menu Items/Menu").get_child(i).texture = get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Viewport"+str(i)).get_texture()
+func weapon_sprite(var select):
+		get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Viewport"+str(select)).get_texture()
 
 func _process(delta):
 	guns_have()
@@ -34,6 +43,7 @@ func _process(delta):
 			a =  menu_size-1
 		if a >  menu_size-1:
 			a = 0
+		weapon_sprite(a)
 		select(a)
 	else:
 		$"Menu Anim".set_current_animation("close")
@@ -60,10 +70,10 @@ func guns_have():
 func select(var x = 0):
 	for i in range(0,menu_size):
 		if i == x:
-			get_node("Menu/icon" + str(i)).set_scale(Vector2(2,2))
+			get_node("Menu/icon" + str(i)).set_scale(size_selected )
 			select[i] = true
 		else:
-			get_node("Menu/icon" + str(i)).set_scale(Vector2(1,1))
+			get_node("Menu/icon" + str(i)).set_scale(size_unselected )
 			select[i] = false
 
 func _on_Bullet_Time_animation_finished(anim_name):

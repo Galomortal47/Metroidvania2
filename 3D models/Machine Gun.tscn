@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://3D models/Machinegun.dae" type="PackedScene" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.513726, 0.513726, 0.513726, 1 )
+
+[node name="Scene Root" instance=ExtResource( 1 )]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform( 0.0701011, 0.0588885, 0, -0.0195292, 0.211383, 0, 0, 0, 0.767896, 0, 0, 0 )
+material/0 = SubResource( 1 )
+
+[node name="Light" parent="." index="2"]
+transform = Transform( -0.290865, -0.771101, 0.566393, -0.0551891, 0.604525, 0.794672, -0.955171, 0.199883, -0.218391, 0.62821, 1.36392, 2.33282 )
+
+[node name="ARVRCamera" type="ARVRCamera" parent="." index="4"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 2.78793, -0.0927582, -0.0328407 )
+projection = 1
+current = true
+size = 2.04962
+
