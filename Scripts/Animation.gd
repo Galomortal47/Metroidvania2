@@ -27,7 +27,7 @@ func animations():
 		if get_parent().get_parent().motion.x > stop_dead_zone and Input.is_action_pressed("ui_left") or get_parent().get_parent().motion.x < -stop_dead_zone and Input.is_action_pressed("ui_right"): 
 			if get_parent().get_parent().ground_detect() and not Input.is_action_pressed("ui_roll"):
 				get_parent().get_node("AnimationPlayer").set_current_animation("slide")
-		elif int(get_parent().get_parent().motion.x) == 0 and not Input.is_action_pressed("ui_roll"):
+		elif int(get_parent().get_parent().motion.x) == 0 and not Input.is_action_pressed("ui_roll") and get_parent().get_parent().ground_detect():
 			get_parent().get_node("AnimationPlayer").set_current_animation("Idle")
 		if get_parent().get_parent().ledge_detect() and not get_parent().get_parent().ground_detect():
 			get_parent().get_node("AnimationPlayer").set_current_animation("ledge grab")

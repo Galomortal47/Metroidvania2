@@ -505,7 +505,6 @@ position = Vector2( -245.126, 520.219 )
 position = Vector2( 86.887, 555.155 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )
@@ -544,7 +543,7 @@ motion_mirroring = Vector2( 1024, 0 )
 
 [node name="pyrate ship" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
 position = Vector2( 936.446, 468.843 )
-rotation = -0.0500531
+rotation = -0.0593387
 scale = Vector2( 1, 0.932 )
 texture = ExtResource( 18 )
 offset = Vector2( -19.1546, -67.5755 )
@@ -552,6 +551,13 @@ offset = Vector2( -19.1546, -67.5755 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer3/pyrate ship"]
 autoplay = "New Anim"
 "anims/New Anim" = SubResource( 12 )
+
+[node name="pyrate ship2" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 920.97, 529.931 )
+rotation = -0.0500531
+scale = Vector2( 1, -0.932 )
+texture = ExtResource( 18 )
+offset = Vector2( -19.1546, -67.5755 )
 
 [node name="Water3" parent="ParallaxBackground/ParallaxLayer3" instance=ExtResource( 12 )]
 position = Vector2( 512, 540 )
