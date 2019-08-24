@@ -820,7 +820,7 @@ texture = ExtResource( 18 )
 [node name="Scale" parent="." instance=ExtResource( 19 )]
 
 [node name="Shadow" parent="." instance=ExtResource( 19 )]
-modulate = Color( 0, 0, 0, 0.784314 )
+modulate = Color( 0, 0, 0, 0.588235 )
 position = Vector2( 0, 36.0592 )
 scale = Vector2( 1, -0.3 )
 script = ExtResource( 20 )

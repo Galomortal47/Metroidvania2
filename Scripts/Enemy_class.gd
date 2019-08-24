@@ -51,8 +51,8 @@ func shot_player():
 			bullet_instance.set_rotation(get_angle_to($Vision.get_collider().get_position()) )
 			bullet_instance.ignore = "enemy"
 			bullet_instance.target = "player"
-			bullet_instance.speed = 100
-			bullet_instance.lifespan = 5
+			bullet_instance.speed = 150
+			bullet_instance.lifespan = 10
 			bullet_instance.get_node("CPUParticles2D").set_color(Color(1,0,0))
 			bullet_instance.set_position(get_global_position())
 			get_tree().get_root().add_child(bullet_instance)

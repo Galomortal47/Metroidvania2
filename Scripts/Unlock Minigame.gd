@@ -8,8 +8,10 @@ var current = 0
 var ammo = 0
 var ammo_max = 0
 var lock = false
+var rot = 0
 
 func _process(delta):
+	$Line2D.default_color = (Color(-rot,rot,0))
 	if Input.is_action_just_pressed("ui_cancel"):
 		progress = 0
 	if have and enable and Input.is_action_pressed("ui_cancel") and lock:
@@ -22,7 +24,7 @@ func _process(delta):
 			$Line2D.rotate(delta*2)
 		if Input.is_action_pressed("trigger_r"):
 			$Line2D.rotate(-delta*2)
-		var rot = $Line2D.get_rotation_degrees() / 18
+		rot = $Line2D.get_rotation_degrees() / 18
 		if $Line2D.get_rotation_degrees() > 180:
 			$Line2D.set_rotation_degrees(180)
 		if $Line2D.get_rotation_degrees() < -180:
@@ -35,11 +37,11 @@ func _process(delta):
 				if progress > 100:
 					progress = 100
 				$Label.set_text(str(progress)+"/100")
-		else:
-			get_parent().get_parent().state = "walk"
-			hide()
-			progress = 0
-		$Line2D.default_color = (Color(-rot,rot,0))
+	else:
+		get_parent().get_parent().state = "walk"
+		hide()
+		progress = 0
+
 #	pass
 func update_text():
 	if have:
