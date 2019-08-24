@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://3D models/Shotgun.tscn" type="PackedScene" id=1]
-[ext_resource path="res://3D models/Machine Gun.tscn" type="PackedScene" id=2]
-[ext_resource path="res://3D models/FlameThrower.tscn" type="PackedScene" id=3]
+[ext_resource path="res://3D models/sniper.tscn" type="PackedScene" id=2]
+[ext_resource path="res://3D models/Machine Gun.tscn" type="PackedScene" id=3]
+[ext_resource path="res://3D models/FlameThrower.tscn" type="PackedScene" id=4]
+[ext_resource path="res://3D models/hook.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 1
@@ -47,7 +49,7 @@ own_world = true
 transparent_bg = true
 handle_input_locally = false
 
-[node name="Scene Root2" parent="Monster2D-3D/Viewport3" instance=ExtResource( 1 )]
+[node name="Scene Root3" parent="Monster2D-3D/Viewport3" instance=ExtResource( 2 )]
 
 [node name="Viewport4" type="Viewport" parent="Monster2D-3D"]
 size = Vector2( 300, 300 )
@@ -55,7 +57,7 @@ own_world = true
 transparent_bg = true
 handle_input_locally = false
 
-[node name="Scene Root" parent="Monster2D-3D/Viewport4" instance=ExtResource( 2 )]
+[node name="Scene Root" parent="Monster2D-3D/Viewport4" instance=ExtResource( 3 )]
 
 [node name="Viewport5" type="Viewport" parent="Monster2D-3D"]
 size = Vector2( 300, 300 )
@@ -63,7 +65,7 @@ own_world = true
 transparent_bg = true
 handle_input_locally = false
 
-[node name="Scene Root" parent="Monster2D-3D/Viewport5" instance=ExtResource( 3 )]
+[node name="Scene Root" parent="Monster2D-3D/Viewport5" instance=ExtResource( 4 )]
 
 [node name="Viewport6" type="Viewport" parent="Monster2D-3D"]
 size = Vector2( 300, 300 )
@@ -79,7 +81,7 @@ own_world = true
 transparent_bg = true
 handle_input_locally = false
 
-[node name="Scene Root2" parent="Monster2D-3D/Viewport7" instance=ExtResource( 1 )]
+[node name="Scene Root" parent="Monster2D-3D/Viewport7" instance=ExtResource( 5 )]
 
 [node name="Viewport8" type="Viewport" parent="Monster2D-3D"]
 size = Vector2( 300, 300 )
@@ -87,5 +89,5 @@ own_world = true
 transparent_bg = true
 handle_input_locally = false
 
-[node name="Scene Root2" parent="Monster2D-3D/Viewport8" instance=ExtResource( 1 )]
+[node name="Scene Root" parent="Monster2D-3D/Viewport8" instance=ExtResource( 5 )]
 
