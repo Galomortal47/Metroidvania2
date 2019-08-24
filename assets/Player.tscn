@@ -546,7 +546,6 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
 [node name="Sword" type="Node2D" parent="Weapons"]
@@ -697,7 +696,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
-editor/display_folded = true
 script = ExtResource( 12 )
 
 [node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
@@ -779,7 +777,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Load_Minigame" type="Node2D" parent="."]
-editor/display_folded = true
 modulate = Color( 1, 0, 0, 0 )
 position = Vector2( 15.1387, -12.4528 )
 script = ExtResource( 14 )
@@ -823,7 +820,7 @@ texture = ExtResource( 18 )
 [node name="Scale" parent="." instance=ExtResource( 19 )]
 
 [node name="Shadow" parent="." instance=ExtResource( 19 )]
-modulate = Color( 0, 0, 0, 0.25098 )
+modulate = Color( 0, 0, 0, 0.784314 )
 position = Vector2( 0, 36.0592 )
 scale = Vector2( 1, -0.3 )
 script = ExtResource( 20 )

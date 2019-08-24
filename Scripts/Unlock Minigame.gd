@@ -5,6 +5,8 @@ var enable = false
 var progress = 0
 var code = [0,0,0,0]
 var current = 0
+var ammo = 0
+var ammo_max = 0
 
 func _process(delta):
 	if have and enable and Input.is_action_pressed("ui_cancel"):

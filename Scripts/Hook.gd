@@ -6,6 +6,8 @@ var hook = false
 var area = Vector2(0,0)
 var have = true
 var enable = false
+var ammo = 0
+var ammo_max = 0
 
 func _process(delta):
 	if have and enable:

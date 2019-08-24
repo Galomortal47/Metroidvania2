@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Box.gd" type="Script" id=1]
 [ext_resource path="res://sprites/box.png" type="Texture" id=2]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/light.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 20 )
@@ -11,6 +12,7 @@ extents = Vector2( 20, 20 )
 "enemy",
 ]]
 position = Vector2( 245.98, 556.307 )
+z_index = 2
 collision_layer = 5
 collision_mask = 5
 script = ExtResource( 1 )
@@ -34,4 +36,11 @@ cast_to = Vector2( 21, 0 )
 
 [node name="RayCast2D3" type="RayCast2D" parent="."]
 cast_to = Vector2( -21, 0 )
+
+[node name="light" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 1.98816, 21.7808 )
+scale = Vector2( 0.495743, 0.142764 )
+z_index = -1
+texture = ExtResource( 4 )
 

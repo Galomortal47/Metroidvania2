@@ -11,8 +11,8 @@
 [ext_resource path="res://assets/Bolts.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/Box.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Water.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Pick Up.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/health pick up.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/health pick up.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Pick Up.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/Shop.tscn" type="PackedScene" id=14]
 [ext_resource path="res://sprites/mountains.png" type="Texture" id=15]
 [ext_resource path="res://sprites/pyrate ship.png" type="Texture" id=16]
@@ -447,12 +447,11 @@ position = Vector2( 99.302, 650 )
 scale = Vector2( 1, 0.233 )
 offset2 = 170
 
-[node name="Ammo Pick Up" parent="." instance=ExtResource( 12 )]
-editor/display_folded = true
-position = Vector2( -195.398, 533.937 )
+[node name="Pick Up2" parent="." instance=ExtResource( 12 )]
+position = Vector2( -346.707, 519.061 )
 
-[node name="Pick Up2" parent="Ammo Pick Up" instance=ExtResource( 13 )]
-position = Vector2( -71.5734, 3.12897 )
+[node name="Ammo Pick Up" parent="." instance=ExtResource( 13 )]
+position = Vector2( -245.126, 520.219 )
 
 [node name="Shop" parent="." instance=ExtResource( 14 )]
 
@@ -517,7 +516,7 @@ scale = Vector2( 1, 0.233 )
 
 [node name="plant" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( -167.287, 566.193 )
+position = Vector2( -168.144, 553.332 )
 rotation = 0.034481
 texture = ExtResource( 17 )
 offset = Vector2( 5.51535, -48.2062 )
