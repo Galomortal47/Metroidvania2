@@ -927,6 +927,7 @@ scale = Vector2( 1, -0.3 )
 script = ExtResource( 20 )
 
 [node name="air meter" type="CanvasLayer" parent="."]
+editor/display_folded = true
 scale = Vector2( 0.6, 0.6 )
 transform = Transform2D( 0.6, 0, 0, 0.6, 0, 0 )
 script = ExtResource( 21 )

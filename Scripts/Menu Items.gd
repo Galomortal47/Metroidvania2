@@ -21,8 +21,10 @@ func _ready():
 func icon_generate():
 	for i in range(0,menu_size):
 		get_parent().get_node("Menu Items/Menu").get_child(i).texture = get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Viewport"+str(i)).get_texture()
+
 func weapon_sprite(var select):
 		get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Viewport"+str(select)).get_texture()
+		get_parent().get_node("Shadow/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Viewport"+str(select)).get_texture()
 
 func _process(delta):
 	guns_have()

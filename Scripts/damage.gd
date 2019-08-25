@@ -12,5 +12,5 @@ func _process(delta):
 		if is_colliding():
 			if get_collider().is_in_group("enemy"):
 				if get_collider().has_node("Health"):
-					get_parent().motion += get_parent().motion * Vector2(-1,0.1)
+					get_parent().motion += get_parent().motion * Vector2(-1,0.05)
 					get_collider().get_node("Health").health -= damage
