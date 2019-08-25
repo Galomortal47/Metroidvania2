@@ -2,7 +2,7 @@ extends RayCast2D
 
 export var damage = 3
 export var attack_range = 100
-export var  screen_shake = 25
+export var  screen_shake = 15
 export var jump = 400
 
 func _process(delta):
