@@ -99,6 +99,7 @@ func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
 func die():
 	if get_node("Health").health <= 0:
 		boltspawner.bolt_spawn(bolts_spwned_upon_death,get_tree().get_root(),get_position())
+		boltspawner.particle_spawn(get_tree().get_root(),get_position())
 		queue_free()
 		
 

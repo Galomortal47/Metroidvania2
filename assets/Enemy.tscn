@@ -11,7 +11,7 @@ extents = Vector2( 15, 30 )
 [sub_resource type="CircleShape2D" id=2]
 radius = 350.0
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 resource_name = "attack"
 length = 2.0
 loop = true
@@ -582,7 +582,7 @@ tracks/46/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=4]
 resource_name = "idle"
 length = 2.0
 loop = true
@@ -1127,7 +1127,7 @@ tracks/44/keys = {
 "values": [ Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.45 ), Vector2( 0.5, 0.5 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=5]
 resource_name = "walk"
 length = 0.5
 loop = true
@@ -1836,9 +1836,9 @@ region_rect = Rect2( 117, 117, 46, 72 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Scale/Body"]
 autoplay = "idle"
-anims/attack = SubResource( 6 )
-anims/idle = SubResource( 7 )
-anims/walk = SubResource( 8 )
+anims/attack = SubResource( 3 )
+anims/idle = SubResource( 4 )
+anims/walk = SubResource( 5 )
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="Area2D" to="." method="_on_Area2D_body_shape_exited"]

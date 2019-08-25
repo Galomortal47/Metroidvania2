@@ -2,6 +2,7 @@ extends RayCast2D
 
 export var damage = 3
 export var attack_range = 100
+export var  screen_shake = 25
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_left"):
@@ -12,5 +13,6 @@ func _process(delta):
 		if is_colliding():
 			if get_collider().is_in_group("enemy"):
 				if get_collider().has_node("Health"):
+					get_parent().get_node("Camera2D").shake += screen_shake
 					get_parent().motion += get_parent().motion * Vector2(-1,0.05)
 					get_collider().get_node("Health").health -= damage

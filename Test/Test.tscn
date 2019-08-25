@@ -40,10 +40,10 @@ extents = Vector2( 1846.42, 10 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 41.6683, 314.736 )
 
-[sub_resource type="RectangleShape2D" id=21]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 10, 79.1086 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -59,7 +59,7 @@ tracks/0/keys = {
 "values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -75,10 +75,10 @@ tracks/0/keys = {
 "values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 37.9856, 10 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -94,7 +94,7 @@ tracks/0/keys = {
 "values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 134.309, 355.398 ), Vector2( 134.309, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -110,10 +110,10 @@ tracks/0/keys = {
 "values": [ Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( -192.547, 355.398 ), Vector2( -192.547, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ) ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=13]
+[sub_resource type="CanvasItemMaterial" id=11]
 blend_mode = 1
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=12]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -153,7 +153,7 @@ tracks/2/keys = {
 "values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -191,7 +191,7 @@ tracks/2/keys = {
 "values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=14]
 resource_name = "New Anim"
 length = 5.0
 loop = true
@@ -208,14 +208,14 @@ tracks/0/keys = {
 "values": [ Vector2( 134.75, 359.318 ), Vector2( -314.279, 187.957 ), Vector2( 134.75, 359.318 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=15]
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 1046.99, 54.889 )
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=17]
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=18]
 resource_name = "open"
 tracks/0/type = "value"
 tracks/0/path = NodePath("lock2:position")
@@ -242,18 +242,17 @@ tracks/1/keys = {
 "values": [ 0.0, 52.0 ]
 }
 
-[sub_resource type="Gradient" id=10]
+[sub_resource type="Gradient" id=19]
 offsets = PoolRealArray( 0.269461, 0.45509 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.565918, 0.907749, 0.953125, 1 )
 
-[sub_resource type="GradientTexture" id=11]
-gradient = SubResource( 10 )
+[sub_resource type="GradientTexture" id=20]
+gradient = SubResource( 19 )
 
-[sub_resource type="CanvasItemMaterial" id=23]
+[sub_resource type="CanvasItemMaterial" id=21]
 blend_mode = 1
 
-[sub_resource type="Animation" id=12]
-resource_name = "New Anim"
+[sub_resource type="Animation" id=22]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -269,8 +268,7 @@ tracks/0/keys = {
 "values": [ -3.39986, 1.20196, -3.39986 ]
 }
 
-[sub_resource type="Animation" id=22]
-resource_name = "New Anim"
+[sub_resource type="Animation" id=23]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -290,6 +288,7 @@ tracks/0/keys = {
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="Ground" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="grass3" type="Sprite" parent="Ground"]
 position = Vector2( 618.643, 519.821 )
@@ -417,7 +416,7 @@ shape = SubResource( 4 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -409.514, 650.704 )
-shape = SubResource( 21 )
+shape = SubResource( 5 )
 
 [node name="Platform" type="Node2D" parent="."]
 editor/display_folded = true
@@ -425,8 +424,8 @@ position = Vector2( 840.566, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]
 autoplay = "Movment2"
-anims/Movment2 = SubResource( 5 )
-anims/movment = SubResource( 6 )
+anims/Movment2 = SubResource( 6 )
+anims/movment = SubResource( 7 )
 
 [node name="Platform2" parent="Platform" instance=ExtResource( 5 )]
 
@@ -444,12 +443,12 @@ position = Vector2( 286.903, 355.398 )
 motion/sync_to_physics = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Platform2"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2/Platform2"]
 autoplay = "movment"
-anims/Movment2 = SubResource( 8 )
-anims/movment = SubResource( 9 )
+anims/Movment2 = SubResource( 9 )
+anims/movment = SubResource( 10 )
 
 [node name="Platform Sticker 2" type="Node2D" parent="Platform2/Platform2"]
 script = ExtResource( 6 )
@@ -581,7 +580,7 @@ offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="plant"]
 modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 13 )
+material = SubResource( 11 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
@@ -594,14 +593,15 @@ texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plant"]
-anims/wind = SubResource( 14 )
-"anims/wind (copy)" = SubResource( 15 )
+anims/wind = SubResource( 12 )
+"anims/wind (copy)" = SubResource( 13 )
 
 [node name="RayCast2D" type="RayCast2D" parent="plant"]
 rotation = 3.49066
 enabled = true
 
 [node name="Hooks" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Hook1" type="Sprite" parent="Hooks"]
 position = Vector2( -756.962, 411.679 )
@@ -627,7 +627,7 @@ texture = ExtResource( 19 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Hooks/Hook3"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 16 )
+"anims/New Anim" = SubResource( 14 )
 
 [node name="floatr2" type="Sprite" parent="Hooks/Hook3"]
 position = Vector2( 2.44348, -34.2095 )
@@ -641,7 +641,7 @@ editor/display_folded = true
 position = Vector2( 533.268, 552.313 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 17 )
+shape = SubResource( 15 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.92549, 0.964706, 0.968627, 1 )
@@ -651,7 +651,7 @@ editor/display_folded = true
 position = Vector2( 646.815, 661.809 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Swimming"]
-shape = SubResource( 18 )
+shape = SubResource( 16 )
 
 [node name="lock" type="Sprite" parent="."]
 editor/display_folded = true
@@ -673,10 +673,10 @@ region_rect = Rect2( 7.25, 2.375, 24.125, 12.875 )
 editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lock/Area2D"]
-shape = SubResource( 19 )
+shape = SubResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="lock"]
-anims/open = SubResource( 20 )
+anims/open = SubResource( 18 )
 
 [node name="Node2D" type="Node2D" parent="."]
 editor/display_folded = true
@@ -702,7 +702,6 @@ scale = Vector2( 1, 0.233 )
 offset2 = 170
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )
@@ -711,7 +710,7 @@ motion_scale = Vector2( 0, 0 )
 position = Vector2( 606.582, -89.1467 )
 rotation = -1.5708
 scale = Vector2( 0.3878, 1154.45 )
-texture = SubResource( 11 )
+texture = SubResource( 20 )
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -8.12115, 27.9898 )
@@ -725,7 +724,7 @@ texture = ExtResource( 24 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
 modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
-material = SubResource( 23 )
+material = SubResource( 21 )
 position = Vector2( 368.58, 414.416 )
 rotation = -1.5708
 texture = ExtResource( 24 )
@@ -766,7 +765,7 @@ offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer3/pyrate ship"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 12 )
+"anims/New Anim" = SubResource( 22 )
 
 [node name="pyrate ship2" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
 position = Vector2( 934.546, 529.643 )
@@ -777,19 +776,19 @@ offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer3/pyrate ship2"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 22 )
+"anims/New Anim" = SubResource( 23 )
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.75, 1 )
 motion_mirroring = Vector2( 1024, 0 )
 
 [node name="Water3" parent="ParallaxBackground/ParallaxLayer5" instance=ExtResource( 23 )]
-position = Vector2( 510.552, 620.319 )
+position = Vector2( 480.544, 620.319 )
 scale = Vector2( 1, 0.473 )
 offset2 = 300
 
 [node name="Water4" parent="ParallaxBackground/ParallaxLayer5" instance=ExtResource( 23 )]
-position = Vector2( 1467.85, 620.32 )
+position = Vector2( 1437.84, 620.32 )
 scale = Vector2( 1, 0.473 )
 offset2 = 350
 
