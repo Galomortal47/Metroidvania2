@@ -30,7 +30,9 @@ func damage():
 	if $Damage.is_colliding():
 		stun()
 		if $Damage.get_collider().has_node("Health"):
-			$Damage.get_collider().get_node("Health").damage(damage) 
+			$Timer.start()
+			print($Timer.time_left)
+
 
 #virar raycast em direçao ao jogador se mover ate ele
 func hunt_player():

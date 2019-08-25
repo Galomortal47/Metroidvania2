@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=20]
 [ext_resource path="res://Scripts/Air Meter.gd" type="Script" id=21]
+[ext_resource path="res://assets/Sword.tscn" type="PackedScene" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
@@ -698,6 +699,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
+editor/display_folded = true
 script = ExtResource( 12 )
 
 [node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
@@ -875,6 +877,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Load_Minigame" type="Node2D" parent="."]
+editor/display_folded = true
 modulate = Color( 1, 0, 0, 0 )
 position = Vector2( 15.1387, -12.4528 )
 script = ExtResource( 14 )
@@ -924,6 +927,7 @@ scale = Vector2( 1, -0.3 )
 script = ExtResource( 20 )
 
 [node name="air meter" type="CanvasLayer" parent="."]
+editor/display_folded = true
 script = ExtResource( 21 )
 
 [node name="Line2D" type="Line2D" parent="air meter"]
@@ -946,5 +950,8 @@ custom_fonts/font = ExtResource( 7 )
 text = "A
 I
 R"
+
+[node name="Roll" parent="." instance=ExtResource( 22 )]
+damage = 5
 
 [connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]

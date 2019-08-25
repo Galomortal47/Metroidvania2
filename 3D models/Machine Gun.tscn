@@ -5,10 +5,10 @@
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.513726, 0.513726, 0.513726, 1 )
 
-[node name="Scene Root" instance=ExtResource( 1 )]
+[node name="Scene Root" index="0" instance=ExtResource( 1 )]
 
 [node name="Cube" parent="." index="0"]
-transform = Transform( 0.0701011, 0.0588885, 0, -0.0195292, 0.211383, 0, 0, 0, 0.767896, 0, 0, 0 )
+transform = Transform( 0.0701011, 0.0464166, 0, -0.0195292, 0.166614, 0, 0, 0, 0.463144, 0, 0, 0 )
 material/0 = SubResource( 1 )
 
 [node name="Light" parent="." index="2"]

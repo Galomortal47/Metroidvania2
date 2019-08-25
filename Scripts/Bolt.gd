@@ -39,8 +39,8 @@ func _process(delta):
 
 func _on_magnetic_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
-		collect = true
 		body2 = body
+		collect = true
 		gravity = 0
 	pass # Replace with function body.
 

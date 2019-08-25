@@ -15,7 +15,9 @@ var attack = Vector2(60,0)
 var timer = 2
 var time_aux= 2
 export var type = "melee"
-export var bolts_spwned_upon_death = 25
+export var bolts_spwned_upon_death = 15
+var start = true
+var first = false
 
 func _ready():
 	$Health.health_max = health
@@ -25,7 +27,7 @@ func _process(delta):
 		motion.y += gravity
 	match type:
 		"melee":
-			hunt_player(50)
+			hunt_player(60)
 			damage()
 		"shooter":
 			timer -= delta
@@ -37,10 +39,8 @@ func _process(delta):
 #ar dano ao encostar no jgador
 func damage():
 	if $Damage.is_colliding():
-		stun()
-		if $Damage.get_collider().has_node("Health"):
-			if $Damage.get_collider().is_in_group("player"):
-				$Damage.get_collider().get_node("Health").damage(damage) 
+		if $Damage.get_collider().is_in_group("player"):
+		 $Scale/Body/AnimationPlayer2.play("attack")
 
 func shot_player():
 	if $Vision.is_colliding():
@@ -108,3 +108,7 @@ func stun():
 	else:
 		motion += Vector2(500,0)
 
+func attack():
+	if $Damage.is_colliding():
+		if $Damage.get_collider().has_node("Health"):
+			$Damage.get_collider().get_node("Health").damage(damage)
