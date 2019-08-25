@@ -15,7 +15,7 @@ var attack = Vector2(60,0)
 var timer = 2
 var time_aux= 2
 export var type = "melee"
-export var bolts_spwned_upon_death = 15
+export var bolts_spwned_upon_death = 5
 var start = true
 var first = false
 
