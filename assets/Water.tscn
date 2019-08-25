@@ -91,7 +91,7 @@ position = Vector2( 1174, 660 )
 z_index = 4095
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 0, 130, 1024, 500 )
+region_rect = Rect2( 0, 130, 960, 540 )
 script = ExtResource( 2 )
 
 [node name="Mirror5" type="Sprite" parent="."]
@@ -100,14 +100,14 @@ position = Vector2( -0.00012207, 0 )
 z_index = 4096
 texture = SubResource( 4 )
 region_enabled = true
-region_rect = Rect2( 0, 130, 1024, 500 )
+region_rect = Rect2( 0, 130, 960, 540 )
 
 [node name="water" type="TextureRect" parent="."]
 modulate = Color( 1, 1, 1, 0.25098 )
-margin_left = -508.0
-margin_top = -248.0
-margin_right = 514.0
-margin_bottom = 247.0
+margin_left = -479.12
+margin_top = -267.855
+margin_right = 480.88
+margin_bottom = 272.145
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 2

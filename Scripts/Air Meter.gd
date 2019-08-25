@@ -2,6 +2,7 @@ extends CanvasLayer
 
 var air = 0.0
 var mod = 0.1
+var mod2 = 2
 
 func _process(delta):
 	if get_parent().state == "swin":
@@ -11,6 +12,6 @@ func _process(delta):
 			get_parent().get_node("Health").damage(5)
 	elif get_parent().state == "walk":
 		if air > 0.0:
-			air -= delta * mod
+			air -= delta * mod2
 	$Line2D.set_points([Vector2(900,95 + (air * 215)),Vector2(900,310)])
 #	pass

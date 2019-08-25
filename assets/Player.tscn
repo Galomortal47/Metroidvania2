@@ -927,11 +927,12 @@ scale = Vector2( 1, -0.3 )
 script = ExtResource( 20 )
 
 [node name="air meter" type="CanvasLayer" parent="."]
-editor/display_folded = true
+scale = Vector2( 0.6, 0.6 )
+transform = Transform2D( 0.6, 0, 0, 0.6, 0, 0 )
 script = ExtResource( 21 )
 
 [node name="Line2D" type="Line2D" parent="air meter"]
-position = Vector2( 566.926, 236.65 )
+position = Vector2( 1184.2, 441.559 )
 scale = Vector2( 0.4, 0.2 )
 points = PoolVector2Array( 900, 95, 900, 310 )
 width = 50.0
@@ -942,16 +943,16 @@ end_cap_mode = 2
 
 [node name="Label" type="Label" parent="air meter"]
 modulate = Color( 0, 0, 0, 1 )
-margin_left = 923.018
-margin_top = 256.434
-margin_right = 963.018
-margin_bottom = 301.434
+margin_left = 1540.29
+margin_top = 461.343
+margin_right = 1580.29
+margin_bottom = 509.343
 custom_fonts/font = ExtResource( 7 )
 text = "A
 I
 R"
 
 [node name="Roll" parent="." instance=ExtResource( 22 )]
-damage = 5
+damage = 3
 
 [connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]
