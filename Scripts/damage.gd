@@ -11,7 +11,7 @@ func _process(delta):
 	elif Input.is_action_just_pressed("ui_right"):
 		set_cast_to(Vector2(attack_range ,30))
 	if Input.is_action_pressed("ui_roll"):
-		if is_colliding():
+		if is_colliding() and not get_parent().motion.x == 0:
 			if get_collider().is_in_group("enemy"):
 				if get_collider().has_node("Health"):
 					get_parent().get_node("Camera2D").shake += screen_shake

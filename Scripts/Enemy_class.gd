@@ -30,6 +30,7 @@ func _process(delta):
 			hunt_player(60)
 			damage()
 		"shooter":
+			set_modulate(Color(1,0,0))
 			timer -= delta
 			shot_player()
 			hunt_player(500)

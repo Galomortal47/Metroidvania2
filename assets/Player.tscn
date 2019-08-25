@@ -547,6 +547,7 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
 [node name="nothing" type="Node2D" parent="Weapons"]
@@ -927,13 +928,12 @@ scale = Vector2( 1, -0.3 )
 script = ExtResource( 20 )
 
 [node name="air meter" type="CanvasLayer" parent="."]
-editor/display_folded = true
 scale = Vector2( 0.6, 0.6 )
 transform = Transform2D( 0.6, 0, 0, 0.6, 0, 0 )
 script = ExtResource( 21 )
 
 [node name="Line2D" type="Line2D" parent="air meter"]
-position = Vector2( 1184.2, 441.559 )
+position = Vector2( 669.064, 571.801 )
 scale = Vector2( 0.4, 0.2 )
 points = PoolVector2Array( 900, 95, 900, 310 )
 width = 50.0
@@ -944,10 +944,10 @@ end_cap_mode = 2
 
 [node name="Label" type="Label" parent="air meter"]
 modulate = Color( 0, 0, 0, 1 )
-margin_left = 1540.29
-margin_top = 461.343
-margin_right = 1580.29
-margin_bottom = 509.343
+margin_left = 1025.15
+margin_top = 591.585
+margin_right = 1065.15
+margin_bottom = 639.585
 custom_fonts/font = ExtResource( 7 )
 text = "A
 I

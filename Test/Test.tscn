@@ -481,7 +481,7 @@ position = Vector2( -875.776, 646.54 )
 health = 10
 
 [node name="Enemy2" parent="." instance=ExtResource( 10 )]
-position = Vector2( -958.283, 657.647 )
+position = Vector2( -961.13, 658.754 )
 health = 10
 type = "shooter"
 
@@ -702,6 +702,7 @@ scale = Vector2( 1, 0.233 )
 offset2 = 170
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )

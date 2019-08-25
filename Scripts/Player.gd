@@ -12,7 +12,7 @@ var jump_timer = 0.15
 var air_speed = 8
 export var health = 20
 var roll = 400
-var roll_height = 150
+var roll_height = 50
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
 var state = "walk"
@@ -95,8 +95,9 @@ func ledge_grab():
 		motion.y = 0
 
 func jump():
-	if Input.is_action_pressed("ui_accept") and jump_aux > 0 and not Input.is_action_just_pressed("ui_roll"):
-		motion.y -= jump * Engine.get_time_scale()
+	if Input.is_action_pressed("ui_accept") and jump_aux > 0:
+		if not Input.is_action_pressed("ui_roll"):
+			motion.y -= jump * Engine.get_time_scale()
 
 func move():
 	if Input.is_action_pressed("ui_right"):
