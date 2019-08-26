@@ -15,7 +15,7 @@ var roll = 400
 var roll_height = 50
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
-var state = "walk"
+var state = "chocobo"
 var swin_speed = 10
 var swin_speed_max = 250
 var swin_drag = 0.95
@@ -27,6 +27,9 @@ func _ready():
 func _process(delta):
 	match state:
 		"walk":
+			max_speed = 500
+			jump = 40
+			jump_timer = 0.15
 			move()
 			jump()
 			roll()
@@ -42,7 +45,20 @@ func _process(delta):
 		"pick_lock":
 			if not ground_detect():
 				motion.y += gravity
-			motion.x = 0
+				motion.x = 0
+		"chocobo":
+			max_speed = 1000
+			jump = 20
+			jump_timer = 0.5
+			move()
+			jump()
+			if Input.is_action_just_pressed("ui_cancel"):
+				state = "walk"
+			if not ground_detect():
+				motion.y += gravity
+				jump_aux -= delta
+			else:
+				jump_aux = jump_timer
 	motion = move_and_slide(motion)
 	die()
 #	pass

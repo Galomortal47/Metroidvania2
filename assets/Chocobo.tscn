@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprites/chocobo.png" type="Texture" id=1]
+
+[node name="Chocobo" type="Node2D"]
+
+[node name="chocobo3" type="Sprite" parent="."]
+position = Vector2( 20.5028, -5.73519 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 61, 22, 65, 48 )
+
+[node name="chocobo4" type="Sprite" parent="chocobo3"]
+position = Vector2( 0.00193834, 17.7384 )
+rotation = -0.508802
+texture = ExtResource( 1 )
+offset = Vector2( -0.556483, 6.77265 )
+region_enabled = true
+region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
+
+[node name="chocobo5" type="Sprite" parent="chocobo3/chocobo4"]
+position = Vector2( 2.68076, 18.9964 )
+z_index = -1
+texture = ExtResource( 1 )
+offset = Vector2( -6.9669, 6.72212 )
+region_enabled = true
+region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
+
+[node name="chocobo6" type="Sprite" parent="chocobo3/chocobo4/chocobo5"]
+position = Vector2( -8.53208, 13.9103 )
+scale = Vector2( 0.512454, 0.512454 )
+texture = ExtResource( 1 )
+offset = Vector2( -9.5188, 2.11838 )
+region_enabled = true
+region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
+
+[node name="chocobo5" type="Sprite" parent="chocobo3"]
+modulate = Color( 0.592157, 0.592157, 0.592157, 1 )
+position = Vector2( -9.4848, 15.3667 )
+rotation = 0.492979
+z_index = -1
+texture = ExtResource( 1 )
+offset = Vector2( 2.53878, 4.65595 )
+region_enabled = true
+region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
+
+[node name="chocobo5" type="Sprite" parent="chocobo3/chocobo5"]
+position = Vector2( 5.9997, 15.6227 )
+z_index = -1
+texture = ExtResource( 1 )
+offset = Vector2( -7.48377, 6.33683 )
+region_enabled = true
+region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
+
+[node name="chocobo6" type="Sprite" parent="chocobo3/chocobo5/chocobo5"]
+position = Vector2( -10.5996, 15.3603 )
+rotation = -0.579006
+scale = Vector2( 0.512454, 0.512454 )
+texture = ExtResource( 1 )
+offset = Vector2( -8.60987, 0.281715 )
+region_enabled = true
+region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
+
+[node name="chocobo2" type="Sprite" parent="chocobo3"]
+position = Vector2( -16.4933, -8.58557 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 18, 26, 33, 46 )
+
+[node name="chocobo" type="Sprite" parent="chocobo3/chocobo2"]
+position = Vector2( -4.51872, -18.0749 )
+z_index = 4
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 20, -3, 48, 28 )
+
