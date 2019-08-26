@@ -551,6 +551,7 @@ position = Vector2( -346.707, 519.061 )
 position = Vector2( -245.126, 520.219 )
 
 [node name="Shop" parent="." instance=ExtResource( 14 )]
+position = Vector2( 386.552, 524.783 )
 
 [node name="Bolts2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 86.887, 555.155 )
@@ -786,6 +787,7 @@ scale = Vector2( 1.07508, 0.473 )
 offset2 = 350
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 layer = 1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
@@ -822,6 +824,7 @@ enabled = true
 cast_to = Vector2( 300, 0 )
 
 [node name="Node2D2" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy" parent="Node2D2" instance=ExtResource( 28 )]
 position = Vector2( -1104.15, 660.039 )

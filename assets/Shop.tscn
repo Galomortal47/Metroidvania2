@@ -22,50 +22,97 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.45 ), Vector2( 0.5, 0.5 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 4.12598, -36.5326 ), Vector2( 4.12598, -25.6346 ), Vector2( 4.12598, -36.5326 ) ]
-}
 
 [node name="Shop" type="RayCast2D"]
-position = Vector2( 360, 550 )
+position = Vector2( 4.12598, -36.5326 )
+scale = Vector2( 0.5, 0.5 )
 enabled = true
 cast_to = Vector2( 100, 0 )
 script = ExtResource( 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -21.0
-margin_top = -58.0
-margin_right = 52.0
-margin_bottom = -27.0
+margin_left = 75.3707
+margin_top = -55.2066
+margin_right = 148.371
+margin_bottom = -24.2066
 custom_fonts/font = ExtResource( 2 )
 text = "Open Shop
 "
 
-[node name="shop" type="Sprite" parent="."]
-position = Vector2( 4.12598, -36.5326 )
-scale = Vector2( 0.5, 0.5 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/idle = SubResource( 1 )
+
+[node name="shop2" type="Sprite" parent="."]
+position = Vector2( -6.00766, -44.6021 )
+scale = Vector2( 2, 2 )
 z_index = 2
 texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 11, 3, 69, 67 )
 
-[node name="light" type="Sprite" parent="shop"]
+[node name="light" type="Sprite" parent="shop2"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 4.84796, 117.305 )
-scale = Vector2( 2.63437, 0.718673 )
+position = Vector2( 12.5576, 66.722 )
+scale = Vector2( 1.31719, 0.359336 )
 z_index = -1
 texture = ExtResource( 4 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="shop"]
-autoplay = "idle"
-anims/idle = SubResource( 1 )
+[node name="shop8" type="Sprite" parent="shop2"]
+position = Vector2( 8.19421, 28.893 )
+scale = Vector2( 1.25, 1.5 )
+z_index = -1
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 51, 73, 56, 53 )
+
+[node name="shop" type="Sprite" parent="shop2"]
+z_index = 2
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( -5, 62, 51, 37 )
+
+[node name="shop2" type="Sprite" parent="shop2"]
+position = Vector2( -1.22351, -16.8995 )
+z_index = 2
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 90, 44, 36, 32 )
+
+[node name="shop4" type="Sprite" parent="shop2"]
+position = Vector2( 20.1083, 30.9532 )
+z_index = 2
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 85, 23, 23, 21 )
+
+[node name="shop5" type="Sprite" parent="shop2"]
+position = Vector2( -17.623, 32.5349 )
+z_index = 2
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 85, 23, 23, 21 )
+
+[node name="shop6" type="Sprite" parent="shop2"]
+position = Vector2( 21.8844, 65.3695 )
+z_index = -1
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 85, 23, 23, 21 )
+
+[node name="shop7" type="Sprite" parent="shop2"]
+position = Vector2( -12.006, 62.8842 )
+z_index = -1
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 85, 23, 23, 21 )
+
+[node name="shop3" type="Sprite" parent="shop2"]
+position = Vector2( -6.47726, 13.4528 )
+z_index = 2
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 8, 96, 35, 19 )
 
 [node name="Shop_Select" type="CanvasLayer" parent="."]
 
@@ -113,17 +160,17 @@ position = Vector2( 859.491, 544.549 )
 texture = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="Shop_Select/Icons"]
-margin_left = 450.0
-margin_top = 480.0
-margin_right = 590.0
-margin_bottom = 494.0
+margin_left = 394.831
+margin_top = 475.81
+margin_right = 534.831
+margin_bottom = 489.81
 custom_fonts/font = ExtResource( 2 )
 text = "X:Buy for a Bolts"
 
 [node name="Label2" type="Label" parent="Shop_Select/Icons"]
-margin_left = 450.0
-margin_top = 493.369
-margin_right = 590.0
-margin_bottom = 507.369
+margin_left = 436.033
+margin_top = 485.687
+margin_right = 576.033
+margin_bottom = 499.687
 custom_fonts/font = ExtResource( 2 )
 
