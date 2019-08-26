@@ -786,18 +786,18 @@ scale = Vector2( 1.07508, 0.473 )
 offset2 = 350
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 layer = 1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
 modulate = Color( 0.556863, 0.556863, 0.556863, 1 )
 position = Vector2( -51.3721, -924.697 )
 scale = Vector2( 1, 2 )
+motion_scale = Vector2( 1.25, 1 )
 motion_mirroring = Vector2( 960, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
-position = Vector2( 518.27, 825.189 )
-scale = Vector2( 1.04251, 1 )
+position = Vector2( 553.693, 825.189 )
+scale = Vector2( 1.11631, 1 )
 texture = ExtResource( 26 )
 
 [node name="grass" type="TextureRect" parent="ParallaxBackground2/ParallaxLayer/Sprite"]

@@ -12,13 +12,13 @@ export var health = 20
 var stun = false
 var boltspawner = preload("bolt_spawner.gd").new()
 var attack = Vector2(60,0)
-var timer = 3
-var time_aux= 3
+var timer = 4
+var time_aux= 4
 export var type = "melee"
 export var bolts_spwned_upon_death = 5
 var start = true
 var first = false
-var followtrough = 1
+var followtrough = 2
 
 func _ready():
 	$Health.health_max = health
