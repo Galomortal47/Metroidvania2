@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://sprites/floatr.png" type="Texture" id=1]
 [ext_resource path="res://sprites/grass.png" type="Texture" id=2]
@@ -21,14 +21,17 @@
 [ext_resource path="res://sprites/lock.png" type="Texture" id=19]
 [ext_resource path="res://Scripts/lock.gd" type="Script" id=20]
 [ext_resource path="res://assets/Water.tscn" type="PackedScene" id=21]
-[ext_resource path="res://sprites/sun.png" type="Texture" id=22]
-[ext_resource path="res://sprites/cloud.png" type="Texture" id=23]
-[ext_resource path="res://sprites/mountains.png" type="Texture" id=24]
-[ext_resource path="res://sprites/pyrate ship.png" type="Texture" id=25]
-[ext_resource path="res://sprites/grass2.png" type="Texture" id=26]
-[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=27]
-[ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=28]
-[ext_resource path="res://assets/Enemy Shooter.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=22]
+[ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=23]
+[ext_resource path="res://assets/Enemy Shooter.tscn" type="PackedScene" id=24]
+[ext_resource path="res://sprites/sun.png" type="Texture" id=25]
+[ext_resource path="res://sprites/moon.png" type="Texture" id=26]
+[ext_resource path="res://sprites/cloud.png" type="Texture" id=27]
+[ext_resource path="res://sprites/mountains.png" type="Texture" id=28]
+[ext_resource path="res://sprites/pyrate ship.png" type="Texture" id=29]
+[ext_resource path="res://sprites/grass2.png" type="Texture" id=30]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=31]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 541.865, 19.2802 )
@@ -240,6 +243,60 @@ tracks/1/keys = {
 "values": [ 0.0, 52.0 ]
 }
 
+[sub_resource type="Animation" id=23]
+resource_name = "day night"
+length = 1440.0
+loop = true
+step = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Day Night cycle/ParallaxBackground/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 170, 420, 980, 1230, 1420 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.92549, 0.964706, 0.968627, 1 ), Color( 0.917647, 0.772549, 0.647059, 1 ), Color( 0.203922, 0.184314, 0.282353, 1 ), Color( 0.203922, 0.184314, 0.282353, 1 ), Color( 0.917647, 0.772549, 0.647059, 1 ), Color( 0.92549, 0.964706, 0.968627, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 430, 1000, 1440 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -423.161 ), Vector2( 0, 257.896 ), Vector2( 0, 257.896 ), Vector2( 0, -423.161 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Day Night cycle/CanvasModulate2:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 170, 420, 980, 1230, 1440 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.764706, 0.611765, 0.396078, 1 ), Color( 0.345098, 0.345098, 0.517647, 1 ), Color( 0.345098, 0.345098, 0.517647, 1 ), Color( 0.764706, 0.611765, 0.396078, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 430, 700, 1000 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 18.0935, 409.686 ), Vector2( -10.7155, -77.8516 ), Vector2( 18.0935, 409.686 ) ]
+}
+
 [sub_resource type="Gradient" id=18]
 offsets = PoolRealArray( 0.269461, 0.45509 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.565918, 0.907749, 0.953125, 1 )
@@ -248,6 +305,9 @@ colors = PoolColorArray( 1, 1, 1, 1, 0.565918, 0.907749, 0.953125, 1 )
 gradient = SubResource( 18 )
 
 [sub_resource type="CanvasItemMaterial" id=20]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=24]
 blend_mode = 1
 
 [sub_resource type="Animation" id=21]
@@ -486,16 +546,6 @@ script = ExtResource( 9 )
 
 [node name="Bolts" parent="." instance=ExtResource( 10 )]
 
-[node name="Box_bolts" parent="." instance=ExtResource( 11 )]
-
-[node name="Box_health" parent="." instance=ExtResource( 11 )]
-position = Vector2( 300.798, 556.307 )
-object = "ammo"
-
-[node name="Box_ammo" parent="." instance=ExtResource( 11 )]
-position = Vector2( 193.494, 556.307 )
-object = "health"
-
 [node name="Boxes" type="Node2D" parent="."]
 editor/display_folded = true
 
@@ -543,6 +593,16 @@ position = Vector2( 1288.2, 493.369 )
 
 [node name="Box14" parent="Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 437.656 )
+
+[node name="Box_bolts" parent="Boxes" instance=ExtResource( 11 )]
+
+[node name="Box_health" parent="Boxes" instance=ExtResource( 11 )]
+position = Vector2( 300.798, 556.307 )
+object = "ammo"
+
+[node name="Box_ammo" parent="Boxes" instance=ExtResource( 11 )]
+position = Vector2( 193.494, 556.307 )
+object = "health"
 
 [node name="Pick Up2" parent="." instance=ExtResource( 12 )]
 position = Vector2( -346.707, 519.061 )
@@ -643,9 +703,6 @@ position = Vector2( 533.268, 552.313 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 15 )
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.92549, 0.964706, 0.968627, 1 )
-
 [node name="lock" type="Sprite" parent="."]
 editor/display_folded = true
 position = Vector2( 471.057, 536.757 )
@@ -694,129 +751,12 @@ position = Vector2( -1840.43, 822.367 )
 scale = Vector2( 1, 0.324087 )
 offset2 = 170
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 606.582, -89.1467 )
-rotation = -1.5708
-scale = Vector2( 0.3878, 1154.45 )
-texture = SubResource( 19 )
-
-[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( -8.12115, 27.9898 )
-motion_scale = Vector2( 0.05, 1 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
-modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
-position = Vector2( 368.58, 414.416 )
-rotation = -1.5708
-texture = ExtResource( 22 )
-
-[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
-modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
-material = SubResource( 20 )
-position = Vector2( 368.58, 414.416 )
-rotation = -1.5708
-texture = ExtResource( 22 )
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( -13.2964, 359.004 )
-motion_scale = Vector2( 0.25, 1 )
-motion_mirroring = Vector2( 960, 0 )
-
-[node name="cloud" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2( 484.972, -56.5522 )
-texture = ExtResource( 23 )
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-modulate = Color( 0.878431, 0.780392, 0.486275, 1 )
-motion_scale = Vector2( 0.5, 1 )
-motion_mirroring = Vector2( 960, 0 )
-
-[node name="mountains" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 479.837, 294.725 )
-texture = ExtResource( 24 )
-
-[node name="mountains2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 479.837, 693.746 )
-scale = Vector2( 1, -0.718795 )
-texture = ExtResource( 24 )
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( -983.743, 3.34045 )
-motion_scale = Vector2( 0.6, 1 )
-
-[node name="pyrate ship" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2( 936.446, 468.843 )
-rotation = -0.0593387
-scale = Vector2( 1, 0.932 )
-texture = ExtResource( 25 )
-offset = Vector2( -19.1546, -67.5755 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer3/pyrate ship"]
-autoplay = "New Anim"
-"anims/New Anim" = SubResource( 21 )
-
-[node name="pyrate ship2" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2( 934.546, 529.643 )
-rotation = -0.0593387
-scale = Vector2( 1, -0.932 )
-texture = ExtResource( 25 )
-offset = Vector2( -19.1546, -67.5755 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer3/pyrate ship2"]
-autoplay = "New Anim"
-"anims/New Anim" = SubResource( 22 )
-
-[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.75, 1 )
-motion_mirroring = Vector2( 1024, 0 )
-
-[node name="Water3" parent="ParallaxBackground/ParallaxLayer5" instance=ExtResource( 21 )]
-position = Vector2( 480.544, 620.319 )
-scale = Vector2( 1, 0.473 )
-offset2 = 300
-
-[node name="Water4" parent="ParallaxBackground/ParallaxLayer5" instance=ExtResource( 21 )]
-position = Vector2( 1473.88, 620.32 )
-scale = Vector2( 1.07508, 0.473 )
-offset2 = 350
-
-[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
-editor/display_folded = true
-layer = 1
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
-modulate = Color( 0.556863, 0.556863, 0.556863, 1 )
-position = Vector2( -51.3721, -924.697 )
-scale = Vector2( 1, 2 )
-motion_scale = Vector2( 1.25, 1 )
-motion_mirroring = Vector2( 960, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
-position = Vector2( 553.693, 825.189 )
-scale = Vector2( 1.11631, 1 )
-texture = ExtResource( 26 )
-
-[node name="grass" type="TextureRect" parent="ParallaxBackground2/ParallaxLayer/Sprite"]
-margin_left = -487.0
-margin_top = -16.0
-margin_right = 474.0
-margin_bottom = 129.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
 [node name="Swwing" type="RayCast2D" parent="."]
 editor/display_folded = true
 position = Vector2( 669.711, 618.652 )
 enabled = true
 cast_to = Vector2( 300, 0 )
-script = ExtResource( 27 )
+script = ExtResource( 22 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swwing"]
 position = Vector2( 0, -28.7293 )
@@ -826,12 +766,178 @@ cast_to = Vector2( 300, 0 )
 [node name="Node2D2" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Enemy" parent="Node2D2" instance=ExtResource( 28 )]
+[node name="Enemy" parent="Node2D2" instance=ExtResource( 23 )]
 position = Vector2( -1104.15, 660.039 )
 health = 10
 
-[node name="Enemy2" parent="Node2D2" instance=ExtResource( 29 )]
+[node name="Enemy2" parent="Node2D2" instance=ExtResource( 24 )]
 position = Vector2( -1209.85, 640.055 )
+
+[node name="Day Night cycle" type="AnimationPlayer" parent="."]
+autoplay = "day night"
+"anims/day night" = SubResource( 23 )
+
+[node name="CanvasModulate2" type="CanvasModulate" parent="Day Night cycle"]
+position = Vector2( -0.429321, 1.7171 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Day Night cycle"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
+motion_scale = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 606.582, -89.1467 )
+rotation = -1.5708
+scale = Vector2( 0.3878, 1154.45 )
+texture = SubResource( 19 )
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
+position = Vector2( -8.12115, 27.9898 )
+motion_scale = Vector2( 0.05, 1 )
+
+[node name="Node2D" type="Node2D" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6"]
+editor/display_folded = true
+position = Vector2( 0, -423.161 )
+
+[node name="Sprite" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D"]
+modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
+position = Vector2( 368.58, 414.416 )
+rotation = -1.5708
+texture = ExtResource( 25 )
+
+[node name="Sprite2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D"]
+modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
+material = SubResource( 20 )
+position = Vector2( 368.58, 414.416 )
+rotation = -1.5708
+texture = ExtResource( 25 )
+
+[node name="Node2D2" type="Node2D" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6"]
+position = Vector2( 18.0935, 409.686 )
+
+[node name="moon" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
+position = Vector2( 315.087, 256.956 )
+texture = ExtResource( 26 )
+
+[node name="moon2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
+material = SubResource( 24 )
+position = Vector2( 315.087, 256.956 )
+texture = ExtResource( 26 )
+
+[node name="moon3" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
+self_modulate = Color( 1, 1, 1, 0.235294 )
+material = SubResource( 24 )
+position = Vector2( 319.803, 217.516 )
+scale = Vector2( 3.81998, 3.88026 )
+texture = ExtResource( 17 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
+editor/display_folded = true
+position = Vector2( -13.2964, 359.004 )
+motion_scale = Vector2( 0.25, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="cloud" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 484.972, -56.5522 )
+texture = ExtResource( 27 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
+editor/display_folded = true
+modulate = Color( 0.878431, 0.780392, 0.486275, 1 )
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="mountains" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 479.837, 294.725 )
+texture = ExtResource( 28 )
+
+[node name="mountains2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 479.837, 693.746 )
+scale = Vector2( 1, -0.718795 )
+texture = ExtResource( 28 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
+editor/display_folded = true
+position = Vector2( -983.743, 3.34045 )
+motion_scale = Vector2( 0.6, 1 )
+
+[node name="pyrate ship" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 936.446, 468.843 )
+rotation = -0.0593387
+scale = Vector2( 1, 0.932 )
+texture = ExtResource( 29 )
+offset = Vector2( -19.1546, -67.5755 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3/pyrate ship"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 21 )
+
+[node name="pyrate ship2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 934.546, 529.643 )
+rotation = -0.0593387
+scale = Vector2( 1, -0.932 )
+texture = ExtResource( 29 )
+offset = Vector2( -19.1546, -67.5755 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3/pyrate ship2"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 22 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
+editor/display_folded = true
+motion_scale = Vector2( 0.75, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Water3" parent="Day Night cycle/ParallaxBackground/ParallaxLayer5" instance=ExtResource( 21 )]
+position = Vector2( 480.544, 620.319 )
+scale = Vector2( 1, 0.473 )
+offset2 = 300
+
+[node name="Water4" parent="Day Night cycle/ParallaxBackground/ParallaxLayer5" instance=ExtResource( 21 )]
+position = Vector2( 1473.88, 620.32 )
+scale = Vector2( 1.07508, 0.473 )
+offset2 = 350
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Day Night cycle/ParallaxBackground"]
+position = Vector2( -0.429321, 1.7171 )
+color = Color( 0.92549, 0.964706, 0.968627, 1 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="Day Night cycle"]
+editor/display_folded = true
+layer = 1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground2"]
+editor/display_folded = true
+modulate = Color( 0.556863, 0.556863, 0.556863, 1 )
+position = Vector2( -51.3721, -924.697 )
+scale = Vector2( 1, 2 )
+motion_scale = Vector2( 1.25, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="Sprite" type="Sprite" parent="Day Night cycle/ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 553.693, 825.189 )
+scale = Vector2( 1.11631, 1 )
+texture = ExtResource( 30 )
+
+[node name="grass" type="TextureRect" parent="Day Night cycle/ParallaxBackground2/ParallaxLayer/Sprite"]
+margin_left = -487.0
+margin_top = -16.0
+margin_right = 474.0
+margin_bottom = 129.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Day Night cycle"]
+
+[node name="Timer" type="Label" parent="Day Night cycle/CanvasLayer"]
+margin_left = 37.3235
+margin_top = 52.4861
+margin_right = 77.3235
+margin_bottom = 66.4861
+custom_fonts/font = ExtResource( 31 )
+text = "00:00"
+script = ExtResource( 32 )
 
 [connection signal="body_shape_entered" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_exited"]
