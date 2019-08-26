@@ -5,13 +5,13 @@
 [ext_resource path="res://Scripts/CPUParticles2D.gd" type="Script" id=3]
 
 [node name="CPUParticles2D" type="CPUParticles2D"]
-amount = 80
+amount = 50
 explosiveness = 0.58
 spread = 180.0
-initial_velocity = 150.0
+initial_velocity = 100.0
 angle = 360.0
 angle_curve = ExtResource( 1 )
-scale_amount = 30.0
+scale_amount = 15.0
 scale_amount_curve = ExtResource( 1 )
 color_ramp = ExtResource( 2 )
 script = ExtResource( 3 )

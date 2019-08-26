@@ -39,7 +39,7 @@ shape = SubResource( 2 )
 [node name="Vision" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 0, 1000 )
-collision_mask = 4
+collision_mask = 8
 
 [node name="Ground_Detect" type="RayCast2D" parent="."]
 position = Vector2( -1.05264, 0 )

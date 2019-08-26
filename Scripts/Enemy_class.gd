@@ -48,14 +48,13 @@ func shot_player():
 			$Timer.start()
 		if $Vision.get_collider().is_in_group("player") and timer < 0:
 			$Polygon2D2.show()
-			$Scale/Body/AnimationPlayer2.play("attack")
 			$Vision.rotate(get_angle_to($Vision.get_collider().get_position()) - $Vision.get_rotation() -1.57)
 			var bullet = load("res://assets/Bullet.tscn")
 			var bullet_instance = bullet.instance()
 			bullet_instance.set_rotation(get_angle_to($Vision.get_collider().get_position()) )
 			bullet_instance.ignore = "enemy"
 			bullet_instance.target = "player"
-			bullet_instance.speed = 150
+			bullet_instance.speed = 175
 			bullet_instance.lifespan = 10
 			bullet_instance.get_node("CPUParticles2D").set_color(Color(1,0,0))
 			bullet_instance.set_position(get_global_position())

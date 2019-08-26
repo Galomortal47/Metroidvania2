@@ -20,6 +20,7 @@ func _process(delta):
 					$Line2D.set_points([get_position(),get_node("/root/Test/Hooks/Hook"+str(i)).get_global_position()-get_global_position()])
 			else:
 				$Line2D.set_points([Vector2(0,0),Vector2(0,0)])
+				
 			
 func update_text():
 	if have:
