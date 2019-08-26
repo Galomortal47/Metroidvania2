@@ -50,7 +50,7 @@ func _process(delta):
 		"chocobo":
 			max_speed = 1000
 			jump = 20
-			jump_timer = 0.5
+			jump_timer = 0.75
 			move()
 			jump()
 			if Input.is_action_just_pressed("ui_roll"):
@@ -58,7 +58,8 @@ func _process(delta):
 				boltspawner.spawn_choco(get_tree().get_root(),get_global_position())
 			if not ground_detect():
 				motion.y += gravity
-				jump_aux -= delta
+				if Input.is_action_pressed("ui_accept"):
+					jump_aux -= delta
 			else:
 				jump_aux = jump_timer
 	motion = move_and_slide(motion)

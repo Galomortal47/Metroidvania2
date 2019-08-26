@@ -1,12 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/Chocobo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Mont.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Chocobo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.94, 1.07 ), Vector2( 1, 1 ) ]
+}
 
 [node name="Mont" type="Node2D"]
 
 [node name="Chocobo" parent="." instance=ExtResource( 1 )]
 position = Vector2( -11.0496, -24.5546 )
+scale = Vector2( 0.94, 1.07 )
 z_index = 2
 
 [node name="RayCast2D" type="RayCast2D" parent="Chocobo"]
@@ -18,4 +35,8 @@ script = ExtResource( 2 )
 [node name="ground" type="RayCast2D" parent="Chocobo/RayCast2D"]
 enabled = true
 cast_to = Vector2( 0, 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/idle = SubResource( 1 )
 
