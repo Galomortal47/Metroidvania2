@@ -551,6 +551,8 @@ position = Vector2( -0.66433, -19.7639 )
 
 [node name="Nothing" type="Node2D" parent="Weapons"]
 visible = false
+script = ExtResource( 4 )
+bullet_n = 0
 
 [node name="Shotgun" type="Node2D" parent="Weapons"]
 script = ExtResource( 4 )
@@ -928,15 +930,13 @@ points = PoolVector2Array( 900, 95, 900, 310 )
 width = 50.0
 default_color = Color( 1, 1, 1, 1 )
 texture_mode = 1021447008
-begin_cap_mode = 2
-end_cap_mode = 2
 
 [node name="Label" type="Label" parent="air meter"]
 modulate = Color( 0, 0, 0, 1 )
 margin_left = 1025.15
-margin_top = 591.585
+margin_top = 590.154
 margin_right = 1065.15
-margin_bottom = 639.585
+margin_bottom = 638.154
 custom_fonts/font = ExtResource( 7 )
 text = "A
 I

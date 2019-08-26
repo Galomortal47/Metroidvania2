@@ -9,7 +9,7 @@ func _process(delta):
 		if air < 1.0:
 			air += delta * mod
 		else:
-			get_parent().get_node("Health").damage(5)
+			get_parent().get_node("Health").damage(3)
 	elif get_parent().state == "walk":
 		if air > 0.0:
 			air -= delta * mod2
