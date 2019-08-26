@@ -6975,8 +6975,7 @@ script = ExtResource( 1 )
 
 [node name="Hips" type="Sprite" parent="Animation"]
 editor/display_folded = true
-position = Vector2( 19.3985, -24.0496 )
-rotation = -0.171732
+position = Vector2( 9.31056, 16.3023 )
 z_index = -1
 texture = ExtResource( 2 )
 region_enabled = true
@@ -6997,7 +6996,6 @@ region_rect = Rect2( 5.5, 66, 17.5, 20.75 )
 
 [node name="arm up" type="Sprite" parent="Animation/Hips/Belt/body"]
 position = Vector2( 4.56733, -4.43989 )
-rotation = 1.16137
 z_index = 3
 texture = ExtResource( 2 )
 offset = Vector2( 4.87874, 3.99989 )
@@ -7199,6 +7197,7 @@ region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 
 [node name="Chocobo" type="Node2D" parent="Animation"]
 editor/display_folded = true
+visible = false
 z_index = -4
 
 [node name="chocobo3" type="Sprite" parent="Animation/Chocobo"]

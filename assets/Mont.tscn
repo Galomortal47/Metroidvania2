@@ -27,14 +27,16 @@ scale = Vector2( 0.94, 1.07 )
 z_index = 2
 
 [node name="RayCast2D" type="RayCast2D" parent="Chocobo"]
-position = Vector2( 11.7327, 41.5153 )
+position = Vector2( 11.7327, 26.4793 )
 enabled = true
 cast_to = Vector2( 0, -50 )
 script = ExtResource( 2 )
 
 [node name="ground" type="RayCast2D" parent="Chocobo/RayCast2D"]
+position = Vector2( 0.295095, 16.3322 )
 enabled = true
 cast_to = Vector2( 0, 10 )
+collision_mask = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle"

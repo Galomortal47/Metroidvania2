@@ -771,6 +771,10 @@ editor/display_folded = true
 position = Vector2( -1104.15, 660.039 )
 health = 10
 
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 23 )]
+position = Vector2( -1274.38, 667.37 )
+health = 10
+
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 24 )]
 position = Vector2( -1209.85, 640.055 )
 
@@ -942,7 +946,7 @@ text = "00:00"
 script = ExtResource( 32 )
 
 [node name="Mont" parent="." instance=ExtResource( 33 )]
-position = Vector2( -121.429, 535.181 )
+position = Vector2( -142.482, 469.918 )
 
 [connection signal="body_shape_entered" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_exited"]
