@@ -28,7 +28,7 @@ func _ready():
 	mag_aux = mag
 
 func _process(delta):
-	if enable and have:
+	if enable and have and get_parent().get_parent().state == "walk":
 		shoot()
 	timer_aux -= delta
 #	pass

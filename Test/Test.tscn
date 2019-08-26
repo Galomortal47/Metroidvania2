@@ -19,18 +19,19 @@
 [ext_resource path="res://Scripts/plant.gd" type="Script" id=17]
 [ext_resource path="res://sprites/light.png" type="Texture" id=18]
 [ext_resource path="res://sprites/hook.png" type="Texture" id=19]
-[ext_resource path="res://assets/Swimming.tscn" type="PackedScene" id=20]
-[ext_resource path="res://sprites/lock.png" type="Texture" id=21]
-[ext_resource path="res://Scripts/lock.gd" type="Script" id=22]
-[ext_resource path="res://assets/Water.tscn" type="PackedScene" id=23]
-[ext_resource path="res://sprites/sun.png" type="Texture" id=24]
-[ext_resource path="res://sprites/cloud.png" type="Texture" id=25]
-[ext_resource path="res://sprites/mountains.png" type="Texture" id=26]
-[ext_resource path="res://sprites/pyrate ship.png" type="Texture" id=27]
-[ext_resource path="res://sprites/grass2.png" type="Texture" id=28]
+[ext_resource path="res://sprites/lock.png" type="Texture" id=20]
+[ext_resource path="res://Scripts/lock.gd" type="Script" id=21]
+[ext_resource path="res://assets/Water.tscn" type="PackedScene" id=22]
+[ext_resource path="res://sprites/sun.png" type="Texture" id=23]
+[ext_resource path="res://sprites/cloud.png" type="Texture" id=24]
+[ext_resource path="res://sprites/mountains.png" type="Texture" id=25]
+[ext_resource path="res://sprites/pyrate ship.png" type="Texture" id=26]
+[ext_resource path="res://sprites/grass2.png" type="Texture" id=27]
+[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=28]
+[ext_resource path="res://assets/Enemy Shooter.tscn" type="PackedScene" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 541.865, 10 )
+extents = Vector2( 541.865, 19.2802 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1846.42, 10 )
@@ -210,9 +211,6 @@ tracks/0/keys = {
 
 [sub_resource type="RectangleShape2D" id=15]
 
-[sub_resource type="RectangleShape2D" id=16]
-extents = Vector2( 1046.99, 54.889 )
-
 [sub_resource type="RectangleShape2D" id=17]
 
 [sub_resource type="Animation" id=18]
@@ -331,9 +329,18 @@ stretch_mode = 2
 
 [node name="dirt" type="TextureRect" parent="Ground"]
 margin_left = -407.0
-margin_top = 607.0
+margin_top = 720.0
 margin_right = 2026.0
 margin_bottom = 844.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 2
+
+[node name="dirt2" type="TextureRect" parent="Ground"]
+margin_left = 1441.76
+margin_top = 609.809
+margin_right = 3874.76
+margin_bottom = 733.809
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 2
@@ -379,11 +386,11 @@ z_index = 4096
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 1483.09, 573.837 )
+position = Vector2( 1483.09, 583.337 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 120.301, 575.065 )
+position = Vector2( 120.301, 586.465 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Ground"]
@@ -473,17 +480,12 @@ texture = ExtResource( 8 )
 script = ExtResource( 9 )
 
 [node name="Enemy" parent="." instance=ExtResource( 10 )]
-position = Vector2( -1040.79, 648.127 )
+position = Vector2( -1104.15, 660.039 )
 health = 10
 
 [node name="Enemy4" parent="." instance=ExtResource( 10 )]
-position = Vector2( -875.776, 646.54 )
+position = Vector2( -939.136, 658.452 )
 health = 10
-
-[node name="Enemy2" parent="." instance=ExtResource( 10 )]
-position = Vector2( -961.13, 658.754 )
-health = 10
-type = "shooter"
 
 [node name="Bolts" parent="." instance=ExtResource( 11 )]
 
@@ -646,26 +648,19 @@ shape = SubResource( 15 )
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.92549, 0.964706, 0.968627, 1 )
 
-[node name="Swimming" parent="." instance=ExtResource( 20 )]
-editor/display_folded = true
-position = Vector2( 646.815, 661.809 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Swimming"]
-shape = SubResource( 16 )
-
 [node name="lock" type="Sprite" parent="."]
 editor/display_folded = true
 position = Vector2( 471.057, 536.757 )
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 region_enabled = true
 region_rect = Rect2( 5.5, 15.25, 28.75, 26 )
-script = ExtResource( 22 )
+script = ExtResource( 21 )
 
 [node name="lock2" type="Sprite" parent="lock"]
 position = Vector2( -0.647125, -13.912 )
 scale = Vector2( 0.83, 1 )
 z_index = -1
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 region_enabled = true
 region_rect = Rect2( 7.25, 2.375, 24.125, 12.875 )
 
@@ -681,28 +676,27 @@ anims/open = SubResource( 18 )
 [node name="Node2D" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Water2" parent="Node2D" instance=ExtResource( 23 )]
+[node name="Water2" parent="Node2D" instance=ExtResource( 22 )]
 position = Vector2( 1026.8, 732.582 )
 scale = Vector2( 1, 0.464971 )
 offset2 = 300
 
-[node name="Water3" parent="Node2D" instance=ExtResource( 23 )]
+[node name="Water3" parent="Node2D" instance=ExtResource( 22 )]
 position = Vector2( -881.524, 795.055 )
 scale = Vector2( 1, 0.233 )
 offset2 = 170
 
-[node name="Water" parent="Node2D" instance=ExtResource( 23 )]
+[node name="Water" parent="Node2D" instance=ExtResource( 22 )]
 position = Vector2( 67.4975, 735.923 )
 scale = Vector2( 1, 0.477343 )
 offset2 = 300
 
-[node name="Water4" parent="Node2D" instance=ExtResource( 23 )]
+[node name="Water4" parent="Node2D" instance=ExtResource( 22 )]
 position = Vector2( -1840.43, 796.187 )
 scale = Vector2( 1, 0.233 )
 offset2 = 170
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )
@@ -721,14 +715,14 @@ motion_scale = Vector2( 0.05, 1 )
 modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
 position = Vector2( 368.58, 414.416 )
 rotation = -1.5708
-texture = ExtResource( 24 )
+texture = ExtResource( 23 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
 modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
 material = SubResource( 21 )
 position = Vector2( 368.58, 414.416 )
 rotation = -1.5708
-texture = ExtResource( 24 )
+texture = ExtResource( 23 )
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -13.2964, 359.004 )
@@ -737,7 +731,7 @@ motion_mirroring = Vector2( 960, 0 )
 
 [node name="cloud" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
 position = Vector2( 484.972, -56.5522 )
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 modulate = Color( 0.878431, 0.780392, 0.486275, 1 )
@@ -746,12 +740,12 @@ motion_mirroring = Vector2( 960, 0 )
 
 [node name="mountains" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 479.837, 294.725 )
-texture = ExtResource( 26 )
+texture = ExtResource( 25 )
 
 [node name="mountains2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 479.837, 693.746 )
 scale = Vector2( 1, -0.718795 )
-texture = ExtResource( 26 )
+texture = ExtResource( 25 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -983.743, 3.34045 )
@@ -761,7 +755,7 @@ motion_scale = Vector2( 0.6, 1 )
 position = Vector2( 936.446, 468.843 )
 rotation = -0.0593387
 scale = Vector2( 1, 0.932 )
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer3/pyrate ship"]
@@ -772,7 +766,7 @@ autoplay = "New Anim"
 position = Vector2( 934.546, 529.643 )
 rotation = -0.0593387
 scale = Vector2( 1, -0.932 )
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer3/pyrate ship2"]
@@ -783,18 +777,17 @@ autoplay = "New Anim"
 motion_scale = Vector2( 0.75, 1 )
 motion_mirroring = Vector2( 1024, 0 )
 
-[node name="Water3" parent="ParallaxBackground/ParallaxLayer5" instance=ExtResource( 23 )]
+[node name="Water3" parent="ParallaxBackground/ParallaxLayer5" instance=ExtResource( 22 )]
 position = Vector2( 480.544, 620.319 )
 scale = Vector2( 1, 0.473 )
 offset2 = 300
 
-[node name="Water4" parent="ParallaxBackground/ParallaxLayer5" instance=ExtResource( 23 )]
+[node name="Water4" parent="ParallaxBackground/ParallaxLayer5" instance=ExtResource( 22 )]
 position = Vector2( 1437.84, 620.32 )
 scale = Vector2( 1, 0.473 )
 offset2 = 350
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 layer = 1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
@@ -804,8 +797,9 @@ scale = Vector2( 1, 2 )
 motion_mirroring = Vector2( 960, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
-position = Vector2( 538.676, 825.189 )
-texture = ExtResource( 28 )
+position = Vector2( 518.27, 825.189 )
+scale = Vector2( 1.04251, 1 )
+texture = ExtResource( 27 )
 
 [node name="grass" type="TextureRect" parent="ParallaxBackground2/ParallaxLayer/Sprite"]
 margin_left = -487.0
@@ -815,6 +809,20 @@ margin_bottom = 129.0
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 2
+
+[node name="Swwing" type="RayCast2D" parent="."]
+position = Vector2( 669.711, 618.652 )
+enabled = true
+cast_to = Vector2( 300, 0 )
+script = ExtResource( 28 )
+
+[node name="Swwing2" type="RayCast2D" parent="Swwing"]
+position = Vector2( 0, -28.7293 )
+enabled = true
+cast_to = Vector2( 300, 0 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 29 )]
+position = Vector2( -1003.58, 627.362 )
 
 [connection signal="body_shape_entered" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_exited"]

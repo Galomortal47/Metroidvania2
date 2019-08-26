@@ -1,10 +1,38 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Shop.gd" type="Script" id=1]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
 [ext_resource path="res://sprites/shop.png" type="Texture" id=3]
 [ext_resource path="res://sprites/light.png" type="Texture" id=4]
 [ext_resource path="res://icon.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.45 ), Vector2( 0.5, 0.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.12598, -36.5326 ), Vector2( 4.12598, -25.6346 ), Vector2( 4.12598, -36.5326 ) ]
+}
 
 [node name="Shop" type="RayCast2D"]
 position = Vector2( 360, 550 )
@@ -33,6 +61,9 @@ position = Vector2( 4.84796, 117.305 )
 scale = Vector2( 2.63437, 0.718673 )
 z_index = -1
 texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="shop"]
+anims/idle = SubResource( 1 )
 
 [node name="Shop_Select" type="CanvasLayer" parent="."]
 

@@ -1,0 +1,331 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sprites/enemy2.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/enemy anim 2.gd" type="Script" id=2]
+[ext_resource path="res://sprites/weapons.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=2]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body/arm4/enemy8:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.7, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -71.8383, -145.245, -145.245, -46.7216, -71.8383 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Body/arm4/enemy8/enemy5:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 30.5435, 30.5435, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Body/arm4/enemy8/enemy5/weapons:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body/Leg:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Body/Leg/enemy8:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -123.943 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Body/Leg/enemy8/enemy5:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -234.4 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Body/arm2/enemy8/enemy5:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Body/arm2:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "walk"
+length = 0.5
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Leg:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 54.0935, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Leg2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 62.7407, 4.55963, 62.7407 ]
+}
+
+[node name="Scale" type="Node2D"]
+position = Vector2( -0.475655, -6.18353 )
+
+[node name="Body" type="Sprite" parent="."]
+position = Vector2( 14.7849, 61.3075 )
+texture = ExtResource( 1 )
+offset = Vector2( 2.01756, -32.9089 )
+region_enabled = true
+region_rect = Rect2( 79, 4, 47.5, 103.5 )
+script = ExtResource( 2 )
+scale2 = 0.5
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Body"]
+autoplay = "idle"
+anims/attack = SubResource( 2 )
+anims/idle = SubResource( 1 )
+anims/walk = SubResource( 3 )
+
+[node name="head" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( -5.23222, -65.165 )
+texture = ExtResource( 1 )
+offset = Vector2( -13.6791, -5.08295 )
+region_enabled = true
+region_rect = Rect2( 10, 0, 43.25, 39.75 )
+
+[node name="enemy3" type="Sprite" parent="Body/head"]
+position = Vector2( -31.3933, 13.5562 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1.25, 39.25, 23.5, 25 )
+
+[node name="enemy4" type="Sprite" parent="Body/head"]
+position = Vector2( -14.7454, -24.2585 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 4, 70, 23.5, 29.25 )
+
+[node name="enemy6" type="Sprite" parent="Body/head"]
+position = Vector2( -24.7342, -22.5937 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 4, 70, 23.5, 29.25 )
+
+[node name="arm4" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( -4.04308, -50.8953 )
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/arm4"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -1.25382
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/arm4/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+z_index = 1
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 82, 109.5, 16.5, 16.25 )
+
+[node name="weapons" type="Sprite" parent="Body/arm4/enemy8/enemy5"]
+position = Vector2( -8.15451, -6.13685 )
+z_index = -1
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 4, 0, 39, 28 )
+
+[node name="arm3" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( 1.90263, -18.075 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/arm3"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -1.25382
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/arm3/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 82, 109.5, 16.5, 16.25 )
+
+[node name="arm2" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( -18.075, -49.7061 )
+z_index = -1
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/arm2"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -1.25382
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/arm2/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 82, 109.5, 16.5, 16.25 )
+
+[node name="arm" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( -12.1292, -16.8858 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -1
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/arm"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -1.25382
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/arm/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 82, 109.5, 16.5, 16.25 )
+
+[node name="Leg" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( -11.1779, 8.56182 )
+z_index = -1
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/Leg"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -2.16322
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/Leg/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+rotation = -4.09105
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 88, 18.5, 10.5 )
+
+[node name="Leg2" type="Sprite" parent="Body"]
+position = Vector2( 2.85394, 7.37267 )
+rotation = 1.09503
+scale = Vector2( 1, 1 )
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/Leg2"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -2.90832
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/Leg2/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+rotation = -4.45452
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 46.5, 87.5, 21.75, 9.25 )
+

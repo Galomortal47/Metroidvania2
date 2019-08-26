@@ -4,7 +4,7 @@
 [ext_resource path="res://3D models/shotgun.tres" type="ArrayMesh" id=2]
 [ext_resource path="res://3D models/Machine Gun.tres" type="Material" id=3]
 
-[node name="Scene Root" index="0" instance=ExtResource( 1 )]
+[node name="Scene Root" instance=ExtResource( 1 )]
 
 [node name="Cylinder" parent="." index="0"]
 transform = Transform( 0.173024, 4.28102e-008, -0.092141, -0.092141, 8.03897e-008, -0.173024, 0, 1.20637, 1.47997e-008, 0, 0, 0 )

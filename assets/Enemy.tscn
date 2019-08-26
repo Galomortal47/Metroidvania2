@@ -2279,7 +2279,6 @@ cast_to = Vector2( 0, 31 )
 wait_time = 2.0
 
 [node name="Scale" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Body" type="Sprite" parent="Scale"]
 position = Vector2( 0.276131, -23.0354 )

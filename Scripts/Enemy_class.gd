@@ -12,12 +12,13 @@ export var health = 20
 var stun = false
 var boltspawner = preload("bolt_spawner.gd").new()
 var attack = Vector2(60,0)
-var timer = 2
-var time_aux= 2
+var timer = 3
+var time_aux= 3
 export var type = "melee"
 export var bolts_spwned_upon_death = 5
 var start = true
 var first = false
+var followtrough = 1
 
 func _ready():
 	$Health.health_max = health
@@ -30,10 +31,8 @@ func _process(delta):
 			hunt_player(60)
 			damage()
 		"shooter":
-			set_modulate(Color(1,0,0))
 			timer -= delta
 			shot_player()
-			hunt_player(500)
 	die()
 	motion = move_and_slide(motion)
 
@@ -45,7 +44,11 @@ func damage():
 
 func shot_player():
 	if $Vision.is_colliding():
+		if $Vision.get_collider().is_in_group("player") and timer-followtrough < 0:
+			$Timer.start()
 		if $Vision.get_collider().is_in_group("player") and timer < 0:
+			$Polygon2D2.show()
+			$Scale/Body/AnimationPlayer2.play("attack")
 			$Vision.rotate(get_angle_to($Vision.get_collider().get_position()) - $Vision.get_rotation() -1.57)
 			var bullet = load("res://assets/Bullet.tscn")
 			var bullet_instance = bullet.instance()
@@ -81,8 +84,8 @@ func hunt_player(var distance):
 					attack.y = 60
 				else:
 					attack.y = 0
-		else:
-			motion.x *= drag
+	else:
+		motion.x *= drag
 
 #mudar a direçao do raycasyt na direçao do jogador
 
@@ -114,3 +117,7 @@ func attack():
 	if $Damage.is_colliding():
 		if $Damage.get_collider().has_node("Health"):
 			$Damage.get_collider().get_node("Health").damage(damage)
+
+func _on_Timer_timeout():
+	$Polygon2D2.hide()
+	pass # Replace with function body.
