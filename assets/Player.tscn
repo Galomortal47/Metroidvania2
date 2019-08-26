@@ -549,18 +549,8 @@ script = ExtResource( 3 )
 [node name="Weapons" type="Node2D" parent="."]
 position = Vector2( -0.66433, -19.7639 )
 
-[node name="nothing" type="Node2D" parent="Weapons"]
-script = ExtResource( 4 )
-weapon = "res://assets/Bullet.tscn"
-speed = 400
-bullet_n = 0
-timer = 0.5
-damage = 7
-mag = 20
-lifespan = 0.15
-infinite = true
-screen_shake = 0
-have = true
+[node name="Nothing" type="Node2D" parent="Weapons"]
+visible = false
 
 [node name="Shotgun" type="Node2D" parent="Weapons"]
 script = ExtResource( 4 )

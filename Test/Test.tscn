@@ -478,6 +478,7 @@ texture = ExtResource( 1 )
 [node name="Player" parent="." instance=ExtResource( 7 )]
 editor/display_folded = true
 position = Vector2( -40.5156, 454.266 )
+scale = Vector2( 0.2, 0.2 )
 
 [node name="mouse" type="Sprite" parent="Player"]
 visible = false
