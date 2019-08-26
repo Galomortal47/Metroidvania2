@@ -1,6 +1,6 @@
 extends Label
 
-var time = 360
+var time = 720
 
 func _process(delta):
 	var hour = int(time/60)
