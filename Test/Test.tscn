@@ -244,7 +244,7 @@ tracks/1/keys = {
 "values": [ 0.0, 52.0 ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=18]
 resource_name = "day night"
 length = 1440.0
 loop = true
@@ -298,20 +298,20 @@ tracks/3/keys = {
 "values": [ Vector2( 18.0935, 409.686 ), Vector2( -10.7155, -77.8516 ), Vector2( 18.0935, 409.686 ) ]
 }
 
-[sub_resource type="Gradient" id=18]
+[sub_resource type="Gradient" id=19]
 offsets = PoolRealArray( 0.269461, 0.45509 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.565918, 0.907749, 0.953125, 1 )
 
-[sub_resource type="GradientTexture" id=19]
-gradient = SubResource( 18 )
+[sub_resource type="GradientTexture" id=20]
+gradient = SubResource( 19 )
 
-[sub_resource type="CanvasItemMaterial" id=20]
+[sub_resource type="CanvasItemMaterial" id=21]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id=24]
+[sub_resource type="CanvasItemMaterial" id=22]
 blend_mode = 1
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=23]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -327,7 +327,7 @@ tracks/0/keys = {
 "values": [ -3.39986, 1.20196, -3.39986 ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=24]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -781,7 +781,7 @@ position = Vector2( -1209.85, 640.055 )
 [node name="Day Night cycle" type="AnimationPlayer" parent="."]
 editor/display_folded = true
 autoplay = "day night"
-"anims/day night" = SubResource( 23 )
+"anims/day night" = SubResource( 18 )
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="Day Night cycle"]
 position = Vector2( -0.429321, 1.7171 )
@@ -795,7 +795,7 @@ motion_scale = Vector2( 0, 0 )
 position = Vector2( 606.582, -89.1467 )
 rotation = -1.5708
 scale = Vector2( 0.3878, 1154.45 )
-texture = SubResource( 19 )
+texture = SubResource( 20 )
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
 position = Vector2( -8.12115, 27.9898 )
@@ -813,7 +813,7 @@ texture = ExtResource( 25 )
 
 [node name="Sprite2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D"]
 modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
-material = SubResource( 20 )
+material = SubResource( 21 )
 position = Vector2( 368.58, 414.416 )
 rotation = -1.5708
 texture = ExtResource( 25 )
@@ -826,13 +826,13 @@ position = Vector2( 315.087, 256.956 )
 texture = ExtResource( 26 )
 
 [node name="moon2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
-material = SubResource( 24 )
+material = SubResource( 22 )
 position = Vector2( 315.087, 256.956 )
 texture = ExtResource( 26 )
 
 [node name="moon3" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
 self_modulate = Color( 1, 1, 1, 0.235294 )
-material = SubResource( 24 )
+material = SubResource( 22 )
 position = Vector2( 319.803, 217.516 )
 scale = Vector2( 3.81998, 3.88026 )
 texture = ExtResource( 17 )
@@ -876,7 +876,7 @@ offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3/pyrate ship"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 21 )
+"anims/New Anim" = SubResource( 23 )
 
 [node name="pyrate ship2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3"]
 position = Vector2( 934.546, 529.643 )
@@ -887,7 +887,7 @@ offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3/pyrate ship2"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 22 )
+"anims/New Anim" = SubResource( 24 )
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
 editor/display_folded = true
