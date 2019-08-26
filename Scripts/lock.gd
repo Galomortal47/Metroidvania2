@@ -19,7 +19,8 @@ func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
 
 
 func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
-	contact = false
-	player.state = "walk"
-	player.get_node("Weapons/Key").lock = false
+	if player.state == "pick_lock":
+		contact = false
+		player.state = "walk"
+		player.get_node("Weapons/Key").lock = false
 	pass # Replace with function body.

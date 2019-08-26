@@ -12,7 +12,7 @@ region_rect = Rect2( 61, 22, 65, 48 )
 
 [node name="chocobo4" type="Sprite" parent="chocobo3"]
 position = Vector2( 0.00193834, 17.7384 )
-rotation = -0.508802
+rotation = -0.11082
 texture = ExtResource( 1 )
 offset = Vector2( -0.556483, 6.77265 )
 region_enabled = true
@@ -37,7 +37,7 @@ region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
 [node name="chocobo5" type="Sprite" parent="chocobo3"]
 modulate = Color( 0.592157, 0.592157, 0.592157, 1 )
 position = Vector2( -9.4848, 15.3667 )
-rotation = 0.492979
+rotation = -0.00385162
 z_index = -1
 texture = ExtResource( 1 )
 offset = Vector2( 2.53878, 4.65595 )
@@ -54,7 +54,7 @@ region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
 
 [node name="chocobo6" type="Sprite" parent="chocobo3/chocobo5/chocobo5"]
 position = Vector2( -10.5996, 15.3603 )
-rotation = -0.579006
+rotation = -0.131833
 scale = Vector2( 0.512454, 0.512454 )
 texture = ExtResource( 1 )
 offset = Vector2( -8.60987, 0.281715 )

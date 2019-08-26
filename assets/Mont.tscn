@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Chocobo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Mont.gd" type="Script" id=2]
+
+[node name="Mont" type="Node2D"]
+
+[node name="Chocobo" parent="." instance=ExtResource( 1 )]
+position = Vector2( -11.0496, -24.5546 )
+z_index = 2
+
+[node name="RayCast2D" type="RayCast2D" parent="Chocobo"]
+position = Vector2( 11.7327, 41.5153 )
+enabled = true
+cast_to = Vector2( 0, -50 )
+script = ExtResource( 2 )
+
+[node name="ground" type="RayCast2D" parent="Chocobo/RayCast2D"]
+enabled = true
+cast_to = Vector2( 0, 10 )
+

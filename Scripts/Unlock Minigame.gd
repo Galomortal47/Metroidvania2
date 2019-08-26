@@ -38,7 +38,8 @@ func _process(delta):
 					progress = 100
 				$Label.set_text(str(progress)+"/100")
 	elif lock:
-		get_parent().get_parent().state = "walk"
+		if get_parent().get_parent().state == "pick_locking":
+			get_parent().get_parent().state = "walk"
 		hide()
 		progress = 0
 

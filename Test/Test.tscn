@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://sprites/floatr.png" type="Texture" id=1]
 [ext_resource path="res://sprites/grass.png" type="Texture" id=2]
@@ -32,6 +32,7 @@
 [ext_resource path="res://sprites/grass2.png" type="Texture" id=30]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=31]
 [ext_resource path="res://Scripts/Timer.gd" type="Script" id=32]
+[ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=33]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 541.865, 19.2802 )
@@ -728,25 +729,25 @@ shape = SubResource( 16 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="lock"]
 anims/open = SubResource( 17 )
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Waters" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Water2" parent="Node2D" instance=ExtResource( 21 )]
+[node name="Water2" parent="Waters" instance=ExtResource( 21 )]
 position = Vector2( 1026.8, 732.582 )
 scale = Vector2( 1, 0.464971 )
 offset2 = 300
 
-[node name="Water3" parent="Node2D" instance=ExtResource( 21 )]
+[node name="Water3" parent="Waters" instance=ExtResource( 21 )]
 position = Vector2( -881.524, 822.029 )
 scale = Vector2( 1, 0.327025 )
 offset2 = 170
 
-[node name="Water" parent="Node2D" instance=ExtResource( 21 )]
+[node name="Water" parent="Waters" instance=ExtResource( 21 )]
 position = Vector2( 67.4976, 737.51 )
 scale = Vector2( 1, 0.477343 )
 offset2 = 300
 
-[node name="Water4" parent="Node2D" instance=ExtResource( 21 )]
+[node name="Water4" parent="Waters" instance=ExtResource( 21 )]
 position = Vector2( -1840.43, 822.367 )
 scale = Vector2( 1, 0.324087 )
 offset2 = 170
@@ -763,17 +764,18 @@ position = Vector2( 0, -28.7293 )
 enabled = true
 cast_to = Vector2( 300, 0 )
 
-[node name="Node2D2" type="Node2D" parent="."]
+[node name="Enemies" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Enemy" parent="Node2D2" instance=ExtResource( 23 )]
+[node name="Enemy" parent="Enemies" instance=ExtResource( 23 )]
 position = Vector2( -1104.15, 660.039 )
 health = 10
 
-[node name="Enemy2" parent="Node2D2" instance=ExtResource( 24 )]
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 24 )]
 position = Vector2( -1209.85, 640.055 )
 
 [node name="Day Night cycle" type="AnimationPlayer" parent="."]
+editor/display_folded = true
 autoplay = "day night"
 "anims/day night" = SubResource( 23 )
 
@@ -938,6 +940,9 @@ margin_bottom = 66.4861
 custom_fonts/font = ExtResource( 31 )
 text = "00:00"
 script = ExtResource( 32 )
+
+[node name="Mont" parent="." instance=ExtResource( 33 )]
+position = Vector2( -121.429, 535.181 )
 
 [connection signal="body_shape_entered" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_exited"]

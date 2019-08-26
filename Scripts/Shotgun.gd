@@ -28,8 +28,9 @@ func _ready():
 	mag_aux = mag
 
 func _process(delta):
-	if enable and have and get_parent().get_parent().state == "walk":
-		shoot()
+	if enable and have:
+		if  get_parent().get_parent().state == "walk" or get_parent().get_parent().state == "chocobo":
+			shoot()
 	timer_aux -= delta
 #	pass
 

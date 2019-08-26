@@ -15,10 +15,11 @@ var roll = 400
 var roll_height = 50
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
-var state = "chocobo"
+var state = "walk"
 var swin_speed = 10
 var swin_speed_max = 250
 var swin_drag = 0.95
+var boltspawner = preload("bolt_spawner.gd").new()
 
 func _ready():
 	$Health.health = health
@@ -52,8 +53,9 @@ func _process(delta):
 			jump_timer = 0.5
 			move()
 			jump()
-			if Input.is_action_just_pressed("ui_cancel"):
+			if Input.is_action_just_pressed("ui_roll"):
 				state = "walk"
+				boltspawner.spawn_choco(get_tree().get_root(),get_global_position())
 			if not ground_detect():
 				motion.y += gravity
 				jump_aux -= delta

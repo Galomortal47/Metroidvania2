@@ -11,6 +11,7 @@ func animations():
 	match get_parent().get_parent().state:
 		"walk":
 			$Chocobo.hide()
+			get_parent().get_node("Chocobo").stop()
 			if Input.is_action_pressed("ui_cancel") and not Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down") and not get_parent().get_parent().ledge_detect():
 				get_parent().get_node("Shooting").play("shoot")
 			elif Input.is_action_pressed("ui_up") and not get_parent().get_parent().ledge_detect():
@@ -38,6 +39,7 @@ func animations():
 			$Chocobo.hide()
 		"chocobo":
 			$Chocobo.show()
+			get_parent().get_node("AnimationPlayer").stop()
 			if int(get_parent().get_parent().motion.x *0.1)  == 0 and get_parent().get_parent().ground_detect():
 				get_parent().get_node("Chocobo").play("idle")
 			elif get_parent().get_parent().ground_detect():

@@ -22,11 +22,17 @@ func particle_spawn(var node, var pos):
 	node.add_child(particle_instance)
 
 func health_spawn(var node, var pos):
-			var health2 =  load(health_path)
-			var health_instance = health2.instance()
-			health_instance.set_position(pos)
-			health_instance.health = 5
-			node.add_child(health_instance)
+	var health2 =  load(health_path)
+	var health_instance = health2.instance()
+	health_instance.set_position(pos)
+	health_instance.health = 5
+	node.add_child(health_instance)
+
+func spawn_choco(var node, var pos):
+	var spawn_choco = load("res://assets/Mont.tscn")
+	var choco = spawn_choco.instance()
+	choco.set_global_position(pos)
+	node.add_child(choco)
 
 func ammo_spawn(var node, var pos):
 	var  ammo =  load( ammo_path)
