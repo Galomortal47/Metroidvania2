@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gyahahaha.ogg-9d845a425a349639cc0795b3f04bd715.oggstr"
+
+[deps]
+
+source_file="res://Sonds/gyahahaha.ogg"
+dest_files=[ "res://.import/gyahahaha.ogg-9d845a425a349639cc0795b3f04bd715.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

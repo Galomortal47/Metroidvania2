@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/bullet.gd" type="Script" id=1]
 [ext_resource path="res://assets/Bullet.tres" type="Curve" id=2]
 [ext_resource path="res://assets/Bullet2.tres" type="Gradient" id=3]
+[ext_resource path="res://Sonds/shoot.ogg" type="AudioStream" id=4]
 
 [sub_resource type="Curve" id=1]
 min_value = -360.0
@@ -32,17 +33,9 @@ scale_amount = 15.0
 scale_amount_curve = ExtResource( 2 )
 color_ramp = ExtResource( 3 )
 
-[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
-position = Vector2( 60, 0 )
-emitting = false
-amount = 40
-one_shot = true
-explosiveness = 0.67
-local_coords = false
-spread = 180.0
-gravity = Vector2( 0, 0 )
-initial_velocity = 100.0
-scale_amount = 30.0
-scale_amount_curve = ExtResource( 2 )
-color_ramp = ExtResource( 3 )
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 0.815628, 0.611725 )
+stream = ExtResource( 4 )
+volume_db = -10.0
+autoplay = true
 

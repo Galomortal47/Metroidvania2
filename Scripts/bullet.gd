@@ -14,7 +14,6 @@ var target = "enemy"
 func _ready():
 	motion.y += curve
 	$CPUParticles2D.scale_amount = particle_size
-	$CPUParticles2D2.scale_amount = particle_size
 
 func _process(delta):
 	attack()
@@ -28,8 +27,6 @@ func _process(delta):
 
 func attack():
 	if $bullet.is_colliding():
-		if not $bullet.get_collider().is_in_group(ignore):
-			$CPUParticles2D2.emitting = true
 		if $bullet.get_collider().is_in_group(target):
 			if not $bullet.get_collider().get_node("Health").invicible:
 					$bullet.get_collider().get_node("Health").damage(damage)

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/shoot.ogg-4d15f3415fc46c29c3d407a124553d66.oggstr"
+
+[deps]
+
+source_file="res://Sonds/shoot.ogg"
+dest_files=[ "res://.import/shoot.ogg-4d15f3415fc46c29c3d407a124553d66.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

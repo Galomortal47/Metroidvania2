@@ -50,7 +50,7 @@ func _process(delta):
 		"chocobo":
 			max_speed = 1000
 			jump = 11
-			jump_timer = 3
+			jump_timer = 2.5
 			move()
 			jump()
 			if Input.is_action_just_pressed("ui_roll"):
@@ -62,6 +62,8 @@ func _process(delta):
 					jump_aux -= delta
 			else:
 				jump_aux = jump_timer
+		"chocobo_swin":
+			swin()
 	motion = move_and_slide(motion)
 	die()
 #	pass

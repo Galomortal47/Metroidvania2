@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://sprites/floatr.png" type="Texture" id=1]
 [ext_resource path="res://sprites/grass.png" type="Texture" id=2]
@@ -9,11 +9,11 @@
 [ext_resource path="res://assets/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://icon.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/Mouse.gd" type="Script" id=9]
-[ext_resource path="res://assets/Bolts.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/health pick up.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Pick Up.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Shop.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/health pick up.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/Pick Up.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Shop.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/Bolts.tscn" type="PackedScene" id=14]
 [ext_resource path="res://sprites/plant.png" type="Texture" id=15]
 [ext_resource path="res://Scripts/plant.gd" type="Script" id=16]
 [ext_resource path="res://sprites/light.png" type="Texture" id=17]
@@ -30,9 +30,10 @@
 [ext_resource path="res://sprites/mountains.png" type="Texture" id=28]
 [ext_resource path="res://sprites/pyrate ship.png" type="Texture" id=29]
 [ext_resource path="res://sprites/grass2.png" type="Texture" id=30]
-[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=31]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=32]
-[ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=33]
+[ext_resource path="res://assets/mask.tscn" type="PackedScene" id=31]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=32]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=33]
+[ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=34]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 541.865, 19.2802 )
@@ -45,13 +46,13 @@ extents = Vector2( 1846.42, 10 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 41.6683, 314.736 )
 
-[sub_resource type="RectangleShape2D" id=25]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 2680.58, 10 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 10, 79.1086 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -67,7 +68,7 @@ tracks/0/keys = {
 "values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -83,10 +84,10 @@ tracks/0/keys = {
 "values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 37.9856, 10 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -102,7 +103,7 @@ tracks/0/keys = {
 "values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 134.309, 355.398 ), Vector2( 134.309, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=11]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -118,10 +119,10 @@ tracks/0/keys = {
 "values": [ Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( -192.547, 355.398 ), Vector2( -192.547, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ) ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=11]
+[sub_resource type="CanvasItemMaterial" id=12]
 blend_mode = 1
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=13]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -161,7 +162,7 @@ tracks/2/keys = {
 "values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=14]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -199,8 +200,7 @@ tracks/2/keys = {
 "values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
 }
 
-[sub_resource type="Animation" id=14]
-resource_name = "New Anim"
+[sub_resource type="Animation" id=15]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -216,12 +216,11 @@ tracks/0/keys = {
 "values": [ Vector2( 134.75, 359.318 ), Vector2( -314.279, 187.957 ), Vector2( 134.75, 359.318 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=15]
-
 [sub_resource type="RectangleShape2D" id=16]
 
-[sub_resource type="Animation" id=17]
-resource_name = "open"
+[sub_resource type="RectangleShape2D" id=17]
+
+[sub_resource type="Animation" id=18]
 tracks/0/type = "value"
 tracks/0/path = NodePath("lock2:position")
 tracks/0/interp = 1
@@ -247,8 +246,7 @@ tracks/1/keys = {
 "values": [ 0.0, 52.0 ]
 }
 
-[sub_resource type="Animation" id=18]
-resource_name = "day night"
+[sub_resource type="Animation" id=19]
 length = 1440.0
 loop = true
 step = 10.0
@@ -300,21 +298,33 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 18.0935, 409.686 ), Vector2( -10.7155, -77.8516 ), Vector2( 18.0935, 409.686 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Day Night cycle/CanvasLayer/mask:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 430, 1000, 1440 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
-[sub_resource type="Gradient" id=19]
+[sub_resource type="Gradient" id=20]
 offsets = PoolRealArray( 0.269461, 0.45509 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.565918, 0.907749, 0.953125, 1 )
 
-[sub_resource type="GradientTexture" id=20]
-gradient = SubResource( 19 )
-
-[sub_resource type="CanvasItemMaterial" id=21]
-blend_mode = 1
+[sub_resource type="GradientTexture" id=21]
+gradient = SubResource( 20 )
 
 [sub_resource type="CanvasItemMaterial" id=22]
 blend_mode = 1
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="CanvasItemMaterial" id=23]
+blend_mode = 1
+
+[sub_resource type="Animation" id=24]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -330,7 +340,7 @@ tracks/0/keys = {
 "values": [ -3.39986, 1.20196, -3.39986 ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=25]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -492,11 +502,11 @@ shape = SubResource( 4 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -615.396, 107.745 )
-shape = SubResource( 25 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -409.514, 650.704 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Platform" type="Node2D" parent="."]
 editor/display_folded = true
@@ -504,8 +514,8 @@ position = Vector2( 840.566, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]
 autoplay = "Movment2"
-anims/Movment2 = SubResource( 6 )
-anims/movment = SubResource( 7 )
+anims/Movment2 = SubResource( 7 )
+anims/movment = SubResource( 8 )
 
 [node name="Platform2" parent="Platform" instance=ExtResource( 5 )]
 
@@ -523,12 +533,12 @@ position = Vector2( 286.903, 355.398 )
 motion/sync_to_physics = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Platform2"]
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2/Platform2"]
 autoplay = "movment"
-anims/Movment2 = SubResource( 9 )
-anims/movment = SubResource( 10 )
+anims/Movment2 = SubResource( 10 )
+anims/movment = SubResource( 11 )
 
 [node name="Platform Sticker 2" type="Node2D" parent="Platform2/Platform2"]
 script = ExtResource( 6 )
@@ -552,76 +562,74 @@ visible = false
 texture = ExtResource( 8 )
 script = ExtResource( 9 )
 
-[node name="Bolts" parent="." instance=ExtResource( 10 )]
-
 [node name="Boxes" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Box2" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box2" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box9" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box16" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box3" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box10" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box15" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box4" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box7" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box13" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box5" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box8" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box12" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box6" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box11" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box14" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 1288.2, 437.656 )
 
-[node name="Box_bolts" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box_bolts" parent="Boxes" instance=ExtResource( 10 )]
 
-[node name="Box_health" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box_health" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 300.798, 556.307 )
 object = "ammo"
 
-[node name="Box_ammo" parent="Boxes" instance=ExtResource( 11 )]
+[node name="Box_ammo" parent="Boxes" instance=ExtResource( 10 )]
 position = Vector2( 193.494, 556.307 )
 object = "health"
 
-[node name="Pick Up2" parent="." instance=ExtResource( 12 )]
+[node name="Pick Up2" parent="." instance=ExtResource( 11 )]
 position = Vector2( -346.707, 519.061 )
 
-[node name="Ammo Pick Up" parent="." instance=ExtResource( 13 )]
+[node name="Ammo Pick Up" parent="." instance=ExtResource( 12 )]
 position = Vector2( -245.126, 520.219 )
 
-[node name="Shop" parent="." instance=ExtResource( 14 )]
+[node name="Shop" parent="." instance=ExtResource( 13 )]
 position = Vector2( 386.552, 524.783 )
 
-[node name="Bolts2" parent="." instance=ExtResource( 10 )]
+[node name="Bolts2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 86.887, 555.155 )
 
 [node name="plant" type="Sprite" parent="."]
@@ -648,7 +656,7 @@ offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="plant"]
 modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 11 )
+material = SubResource( 12 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
@@ -661,8 +669,8 @@ texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plant"]
-anims/wind = SubResource( 12 )
-"anims/wind (copy)" = SubResource( 13 )
+anims/wind = SubResource( 13 )
+"anims/wind (copy)" = SubResource( 14 )
 
 [node name="RayCast2D" type="RayCast2D" parent="plant"]
 rotation = 3.49066
@@ -695,7 +703,7 @@ texture = ExtResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Hooks/Hook3"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 14 )
+"anims/New Anim" = SubResource( 15 )
 
 [node name="floatr2" type="Sprite" parent="Hooks/Hook3"]
 position = Vector2( 2.44348, -34.2095 )
@@ -709,7 +717,7 @@ editor/display_folded = true
 position = Vector2( 533.268, 552.313 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 15 )
+shape = SubResource( 16 )
 
 [node name="lock" type="Sprite" parent="."]
 editor/display_folded = true
@@ -731,10 +739,10 @@ region_rect = Rect2( 7.25, 2.375, 24.125, 12.875 )
 editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lock/Area2D"]
-shape = SubResource( 16 )
+shape = SubResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="lock"]
-anims/open = SubResource( 17 )
+anims/open = SubResource( 18 )
 
 [node name="Waters" type="Node2D" parent="."]
 editor/display_folded = true
@@ -772,7 +780,6 @@ enabled = true
 cast_to = Vector2( 300, 0 )
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 23 )]
 position = Vector2( -1104.15, 660.039 )
@@ -787,12 +794,13 @@ position = Vector2( -1209.85, 640.055 )
 
 [node name="Day Night cycle" type="AnimationPlayer" parent="."]
 autoplay = "day night"
-"anims/day night" = SubResource( 18 )
+"anims/day night" = SubResource( 19 )
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="Day Night cycle"]
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Day Night cycle"]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )
@@ -801,7 +809,7 @@ motion_scale = Vector2( 0, 0 )
 position = Vector2( 606.582, -89.1467 )
 rotation = -1.5708
 scale = Vector2( 0.3878, 1154.45 )
-texture = SubResource( 20 )
+texture = SubResource( 21 )
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
 position = Vector2( -8.12115, 27.9898 )
@@ -819,7 +827,7 @@ texture = ExtResource( 25 )
 
 [node name="Sprite2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D"]
 modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
-material = SubResource( 21 )
+material = SubResource( 22 )
 position = Vector2( 368.58, 414.416 )
 rotation = -1.5708
 texture = ExtResource( 25 )
@@ -832,13 +840,13 @@ position = Vector2( 315.087, 256.956 )
 texture = ExtResource( 26 )
 
 [node name="moon2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
-material = SubResource( 22 )
+material = SubResource( 23 )
 position = Vector2( 315.087, 256.956 )
 texture = ExtResource( 26 )
 
 [node name="moon3" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
 self_modulate = Color( 1, 1, 1, 0.235294 )
-material = SubResource( 22 )
+material = SubResource( 23 )
 position = Vector2( 319.803, 217.516 )
 scale = Vector2( 3.81998, 3.88026 )
 texture = ExtResource( 17 )
@@ -882,7 +890,7 @@ offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3/pyrate ship"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 23 )
+"anims/New Anim" = SubResource( 24 )
 
 [node name="pyrate ship2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3"]
 position = Vector2( 934.546, 529.643 )
@@ -893,7 +901,7 @@ offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3/pyrate ship2"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 24 )
+"anims/New Anim" = SubResource( 25 )
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
 editor/display_folded = true
@@ -942,16 +950,21 @@ stretch_mode = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Day Night cycle"]
 
+[node name="mask" parent="Day Night cycle/CanvasLayer" instance=ExtResource( 31 )]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 478.924, 282.43 )
+scale = Vector2( 1, 1 )
+
 [node name="Timer" type="Label" parent="Day Night cycle/CanvasLayer"]
 margin_left = 37.3235
 margin_top = 52.4861
 margin_right = 77.3235
 margin_bottom = 66.4861
-custom_fonts/font = ExtResource( 31 )
+custom_fonts/font = ExtResource( 32 )
 text = "00:00"
-script = ExtResource( 32 )
+script = ExtResource( 33 )
 
-[node name="Mont" parent="." instance=ExtResource( 33 )]
+[node name="Mont" parent="." instance=ExtResource( 34 )]
 position = Vector2( -142.482, 469.918 )
 
 [connection signal="body_shape_entered" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_entered"]

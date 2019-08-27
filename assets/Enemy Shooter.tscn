@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Enemy_class.gd" type="Script" id=1]
 [ext_resource path="res://assets/enemy2 anim.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sonds/gyahahaha.ogg" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
@@ -67,6 +68,12 @@ polygon = PoolVector2Array( -38.2537, -45.0156, -36.8401, -33.7065, -33.2417, -3
 [node name="Polygon2D3" type="Polygon2D" parent="Polygon2D2"]
 color = Color( 1, 0, 0, 1 )
 polygon = PoolVector2Array( -36.3583, -32.7957, -35.4609, -30.0135, -31.9608, -31.629, -32.3198, -32.8854 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+max_distance = 500.0
+attenuation = 0.965937
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="Area2D" to="." method="_on_Area2D_body_shape_exited"]

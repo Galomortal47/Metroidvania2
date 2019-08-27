@@ -12,14 +12,7 @@ func animations():
 		"walk":
 			$Chocobo.hide()
 			get_parent().get_node("Chocobo").stop()
-			if Input.is_action_pressed("ui_cancel") and not Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down") and not get_parent().get_parent().ledge_detect():
-				get_parent().get_node("Shooting").play("shoot")
-			elif Input.is_action_pressed("ui_up") and not get_parent().get_parent().ledge_detect():
-				get_parent().get_node("Shooting").play("shoot up")
-			elif Input.is_action_pressed("ui_down") and not get_parent().get_parent().ledge_detect():
-				get_parent().get_node("Shooting").play("shoot down")
-			else:
-				get_parent().get_node("Shooting").play("hide")
+			shoot_dir(true)
 			if Input.is_action_pressed("ui_roll"):
 				get_parent().get_node("AnimationPlayer").set_current_animation("roll")
 			if not get_parent().get_parent().ground_detect() and not get_parent().get_parent().ledge_detect() and not Input.is_action_pressed("ui_roll"):
@@ -39,6 +32,7 @@ func animations():
 			$Chocobo.hide()
 		"chocobo":
 			$Chocobo.show()
+			shoot_dir(false)
 			get_parent().get_node("AnimationPlayer").stop()
 			if int(get_parent().get_parent().motion.x *0.1)  == 0 and get_parent().get_parent().ground_detect():
 				get_parent().get_node("Chocobo").play("idle")
@@ -53,3 +47,12 @@ func animations():
 	get_parent().get_node("AnimationPlayer").set_speed_scale(get_parent().get_parent().motion.x/500) 
 #	pass
 
+func shoot_dir(var hide):
+			if Input.is_action_pressed("ui_cancel") and not Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down") and not get_parent().get_parent().ledge_detect():
+				get_parent().get_node("Shooting").play("shoot")
+			elif Input.is_action_pressed("ui_up") and not get_parent().get_parent().ledge_detect():
+				get_parent().get_node("Shooting").play("shoot up")
+			elif Input.is_action_pressed("ui_down") and not get_parent().get_parent().ledge_detect():
+				get_parent().get_node("Shooting").play("shoot down")
+			elif hide:
+				get_parent().get_node("Shooting").play("hide")

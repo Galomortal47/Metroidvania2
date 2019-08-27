@@ -1,27 +1,33 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/CamShake.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/Shotgun.gd" type="Script" id=4]
-[ext_resource path="res://assets/Gun_engine.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scripts/Unlock Minigame.gd" type="Script" id=6]
-[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=7]
-[ext_resource path="res://Scripts/Hook.gd" type="Script" id=8]
-[ext_resource path="res://sprites/box.png" type="Texture" id=9]
-[ext_resource path="res://Scripts/Reload.gd" type="Script" id=10]
-[ext_resource path="res://sprites/ammo.png" type="Texture" id=11]
-[ext_resource path="res://Scripts/Menu Items.gd" type="Script" id=12]
-[ext_resource path="res://icon.png" type="Texture" id=13]
-[ext_resource path="res://Scripts/Load_Minigame.gd" type="Script" id=14]
-[ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scripts/Coins.gd" type="Script" id=16]
-[ext_resource path="res://Scripts/Save.gd" type="Script" id=17]
-[ext_resource path="res://sprites/char.png" type="Texture" id=18]
-[ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=20]
-[ext_resource path="res://Scripts/Air Meter.gd" type="Script" id=21]
-[ext_resource path="res://assets/Sword.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/Srink Ray.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Shotgun.gd" type="Script" id=5]
+[ext_resource path="res://assets/Gun_engine.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/Unlock Minigame.gd" type="Script" id=7]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Scripts/Hook.gd" type="Script" id=9]
+[ext_resource path="res://sprites/box.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Reload.gd" type="Script" id=11]
+[ext_resource path="res://sprites/ammo.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/Menu Items.gd" type="Script" id=13]
+[ext_resource path="res://icon.png" type="Texture" id=14]
+[ext_resource path="res://Scripts/Load_Minigame.gd" type="Script" id=15]
+[ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scripts/Coins.gd" type="Script" id=17]
+[ext_resource path="res://Scripts/Save.gd" type="Script" id=18]
+[ext_resource path="res://sprites/char.png" type="Texture" id=19]
+[ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=21]
+[ext_resource path="res://Scripts/Air Meter.gd" type="Script" id=22]
+[ext_resource path="res://assets/Sword.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scripts/Audio Manager.gd" type="Script" id=24]
+[ext_resource path="res://Sonds/footsteps.ogg" type="AudioStream" id=25]
+[ext_resource path="res://Sonds/roll.ogg" type="AudioStream" id=26]
+[ext_resource path="res://Sonds/jump.ogg" type="AudioStream" id=27]
+[ext_resource path="res://Sonds/water.ogg" type="AudioStream" id=28]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
@@ -526,7 +532,7 @@ enabled = true
 cast_to = Vector2( -20, 0 )
 
 [node name="Health" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0.204704, -10.2488 )
+position = Vector2( 23.1253, -11.7118 )
 invicility = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -547,16 +553,13 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
-[node name="Nothing" type="Node2D" parent="Weapons"]
-visible = false
+[node name="Srinking lamp" type="Node2D" parent="Weapons"]
 script = ExtResource( 4 )
-bullet_n = 0
 
 [node name="Shotgun" type="Node2D" parent="Weapons"]
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 weapon = "res://assets/Bullet.tscn"
 speed = 400
 bullet_n = 15
@@ -568,7 +571,7 @@ shot = 2
 ammo = 40
 
 [node name="Bomb" type="Node2D" parent="Weapons"]
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 weapon = "res://assets/Bullet.tscn"
 speed = 400
 timer = 0.5
@@ -581,7 +584,7 @@ particle_size = 45
 ammo = 10
 
 [node name="Sniper" type="Node2D" parent="Weapons"]
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 weapon = "res://assets/Bullet.tscn"
 speed = 800
 timer = 0.5
@@ -592,14 +595,14 @@ pierce = true
 screen_shake = 10
 ammo = 10
 
-[node name="Machine Gun" parent="Weapons" instance=ExtResource( 5 )]
+[node name="Machine Gun" parent="Weapons" instance=ExtResource( 6 )]
 speed = 400
 mag = 30
 lifespan = 5.0
 ammo = 60
 
 [node name="FireTrowher" type="Node2D" parent="Weapons"]
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 weapon = "res://assets/Bullet.tscn"
 speed = 150
 spreed = 10
@@ -615,7 +618,7 @@ screen_shake = 0
 editor/display_folded = true
 visible = false
 position = Vector2( -512, -370 )
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 
 [node name="Polygon2D2" type="Polygon2D" parent="Weapons/Key"]
 editor/display_folded = true
@@ -651,35 +654,35 @@ margin_left = 491.537
 margin_top = 159.073
 margin_right = 531.537
 margin_bottom = 188.073
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "0/100"
 autowrap = true
 
 [node name="Hook" type="Node2D" parent="Weapons"]
 editor/display_folded = true
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 
 [node name="Line2D" type="Line2D" parent="Weapons/Hook"]
 position = Vector2( 2.71121, -3.16309 )
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 3.0
 default_color = Color( 1, 1, 1, 1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 texture_mode = 1021447008
 
 [node name="Label" type="Label" parent="Weapons"]
 editor/display_folded = true
-margin_left = 43.2335
-margin_top = -15.677
-margin_right = 88.2335
-margin_bottom = -1.67703
-custom_fonts/font = ExtResource( 7 )
+margin_left = 66.1541
+margin_top = -17.14
+margin_right = 116.154
+margin_bottom = -3.14005
+custom_fonts/font = ExtResource( 8 )
 text = "00/00"
-script = ExtResource( 10 )
+script = ExtResource( 11 )
 
 [node name="ammo" type="Sprite" parent="Weapons/Label"]
 position = Vector2( -9.95112, 6.13795 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Line2D" type="Line2D" parent="Weapons/Label"]
 position = Vector2( 8.70443, 0 )
@@ -693,7 +696,7 @@ end_cap_mode = 2
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
 editor/display_folded = true
-script = ExtResource( 12 )
+script = ExtResource( 13 )
 
 [node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
 anims/close = SubResource( 6 )
@@ -704,11 +707,13 @@ next/close = "closed"
 next/open = "opened"
 
 [node name="Menu" type="Node2D" parent="Menu Items"]
+editor/display_folded = true
 position = Vector2( 512, 165 )
 
 [node name="icon0" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -120, 0 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
+offset = Vector2( -50, 60 )
 
 [node name="Node2D" type="Node2D" parent="Menu Items/Menu/icon0"]
 editor/display_folded = true
@@ -724,7 +729,7 @@ texture_mode = 1021447008
 
 [node name="icon1" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -80, -80 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Node2D2" type="Node2D" parent="Menu Items/Menu/icon1"]
 editor/display_folded = true
@@ -740,7 +745,7 @@ texture_mode = 1021447008
 
 [node name="icon2" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 0, -120 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Node2D3" type="Node2D" parent="Menu Items/Menu/icon2"]
 editor/display_folded = true
@@ -756,7 +761,7 @@ texture_mode = 1021447008
 
 [node name="icon3" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, -80 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Node2D4" type="Node2D" parent="Menu Items/Menu/icon3"]
 editor/display_folded = true
@@ -772,7 +777,7 @@ texture_mode = 1021447008
 
 [node name="icon4" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 120, 0 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Node2D5" type="Node2D" parent="Menu Items/Menu/icon4"]
 editor/display_folded = true
@@ -788,7 +793,7 @@ texture_mode = 1021447008
 
 [node name="icon5" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, 80 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Node2D6" type="Node2D" parent="Menu Items/Menu/icon5"]
 editor/display_folded = true
@@ -804,7 +809,7 @@ texture_mode = 1021447008
 
 [node name="icon6" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 0, 120 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Node2D7" type="Node2D" parent="Menu Items/Menu/icon6"]
 editor/display_folded = true
@@ -820,7 +825,7 @@ texture_mode = 1021447008
 
 [node name="icon7" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -80, 80 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="Node2D8" type="Node2D" parent="Menu Items/Menu/icon7"]
 editor/display_folded = true
@@ -846,7 +851,7 @@ margin_top = -7.0
 margin_right = 19.537
 margin_bottom = 7.0
 rect_pivot_offset = Vector2( -0.51178, -0.0862732 )
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 align = 1
 autowrap = true
 
@@ -873,7 +878,7 @@ end_cap_mode = 2
 editor/display_folded = true
 modulate = Color( 1, 0, 0, 0 )
 position = Vector2( 15.1387, -12.4528 )
-script = ExtResource( 14 )
+script = ExtResource( 15 )
 
 [node name="Line2D" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 2.64075, -51.4948 )
@@ -900,30 +905,30 @@ anims/Failure = SubResource( 11 )
 anims/Load = SubResource( 12 )
 anims/Succes = SubResource( 13 )
 
-[node name="Coins" parent="." instance=ExtResource( 15 )]
-script = ExtResource( 16 )
+[node name="Coins" parent="." instance=ExtResource( 16 )]
+script = ExtResource( 17 )
 
 [node name="Save" type="Node" parent="."]
-script = ExtResource( 17 )
+script = ExtResource( 18 )
 
 [node name="char" type="Sprite" parent="."]
 visible = false
 position = Vector2( 5.23666, -26.3542 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
-[node name="Scale" parent="." instance=ExtResource( 19 )]
+[node name="Scale" parent="." instance=ExtResource( 20 )]
 
-[node name="Shadow" parent="." instance=ExtResource( 19 )]
+[node name="Shadow" parent="." instance=ExtResource( 20 )]
 modulate = Color( 0, 0, 0, 0.588235 )
 position = Vector2( 0, 36.0592 )
 scale = Vector2( 1, -0.3 )
-script = ExtResource( 20 )
+script = ExtResource( 21 )
 
 [node name="air meter" type="CanvasLayer" parent="."]
 editor/display_folded = true
 scale = Vector2( 0.6, 0.6 )
 transform = Transform2D( 0.6, 0, 0, 0.6, 0, 0 )
-script = ExtResource( 21 )
+script = ExtResource( 22 )
 
 [node name="Line2D" type="Line2D" parent="air meter"]
 position = Vector2( 669.064, 571.801 )
@@ -939,12 +944,31 @@ margin_left = 1025.15
 margin_top = 590.154
 margin_right = 1065.15
 margin_bottom = 638.154
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "A
 I
 R"
 
-[node name="Roll" parent="." instance=ExtResource( 22 )]
+[node name="Roll" parent="." instance=ExtResource( 23 )]
 damage = 3
+
+[node name="Audio Manager" type="Node2D" parent="."]
+script = ExtResource( 24 )
+
+[node name="Footsteps" type="AudioStreamPlayer" parent="Audio Manager"]
+stream = ExtResource( 25 )
+autoplay = true
+
+[node name="Roll" type="AudioStreamPlayer" parent="Audio Manager"]
+stream = ExtResource( 26 )
+autoplay = true
+
+[node name="Jump" type="AudioStreamPlayer" parent="Audio Manager"]
+stream = ExtResource( 27 )
+autoplay = true
+
+[node name="Water" type="AudioStreamPlayer" parent="Audio Manager"]
+stream = ExtResource( 28 )
+autoplay = true
 
 [connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]
