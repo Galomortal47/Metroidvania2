@@ -29,16 +29,16 @@ func _process(delta):
 	if $Health.health <= 0:
 		match object:
 			"bolt": 
-				boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_position())
+				boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position())
 				boltspawner.particle_spawn(get_tree().get_root(),get_position())
 				queue_free()
 			"health":
-				boltspawner.health_spawn(get_tree().get_root(),get_position())
-				boltspawner.particle_spawn(get_tree().get_root(),get_position())
+				boltspawner.health_spawn(get_tree().get_root(),get_global_position())
+				boltspawner.particle_spawn(get_tree().get_root(),get_global_position())
 				queue_free()
 			"ammo":
-				boltspawner.ammo_spawn(get_tree().get_root(),get_position())
-				boltspawner.particle_spawn(get_tree().get_root(),get_position())
+				boltspawner.ammo_spawn(get_tree().get_root(),get_global_position())
+				boltspawner.particle_spawn(get_tree().get_root(),get_global_position())
 				queue_free()
 
 

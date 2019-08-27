@@ -360,7 +360,6 @@ tracks/0/keys = {
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="Ground" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="grass3" type="Sprite" parent="Ground"]
 position = Vector2( 618.643, 519.821 )
@@ -793,7 +792,6 @@ health = 10
 position = Vector2( -1209.85, 640.055 )
 
 [node name="Day Night cycle" type="AnimationPlayer" parent="."]
-editor/display_folded = true
 autoplay = "day night"
 "anims/day night" = SubResource( 19 )
 
@@ -904,7 +902,6 @@ autoplay = "New Anim"
 "anims/New Anim" = SubResource( 25 )
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
-editor/display_folded = true
 motion_scale = Vector2( 0.75, 1 )
 motion_mirroring = Vector2( 1024, 0 )
 
@@ -923,11 +920,9 @@ position = Vector2( -0.429321, 1.7171 )
 color = Color( 0.92549, 0.964706, 0.968627, 1 )
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="Day Night cycle"]
-editor/display_folded = true
 layer = 1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground2"]
-editor/display_folded = true
 modulate = Color( 0.556863, 0.556863, 0.556863, 1 )
 position = Vector2( -51.3721, -924.697 )
 scale = Vector2( 1, 2 )
@@ -945,6 +940,15 @@ margin_top = -16.0
 margin_right = 474.0
 margin_bottom = 129.0
 texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+
+[node name="dirt3" type="TextureRect" parent="Day Night cycle/ParallaxBackground2"]
+margin_left = 1441.33
+margin_top = 611.526
+margin_right = 3874.33
+margin_bottom = 735.526
+texture = ExtResource( 3 )
 expand = true
 stretch_mode = 2
 

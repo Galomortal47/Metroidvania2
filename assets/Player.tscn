@@ -668,6 +668,7 @@ points = PoolVector2Array( 0, 0, 0, 0 )
 width = 3.0
 default_color = Color( 1, 1, 1, 1 )
 texture = ExtResource( 10 )
+texture_mode = 1021447008
 
 [node name="Label" type="Label" parent="Weapons"]
 editor/display_folded = true
@@ -689,6 +690,7 @@ z_index = -1
 points = PoolVector2Array( -25, 7, 60, 7 )
 width = 13.0
 default_color = Color( 0, 0, 0, 0.501961 )
+texture_mode = 1021447008
 begin_cap_mode = 2
 end_cap_mode = 2
 
