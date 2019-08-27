@@ -269,10 +269,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 430, 1000, 1440 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 430, 999.77, 1000, 1440 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -423.161 ), Vector2( 0, 257.896 ), Vector2( 0, 257.896 ), Vector2( 0, -423.161 ) ]
+"values": [ Vector2( 0, -423.161 ), Vector2( 0, 257.896 ), Vector2( 0, 257.896 ), Vector2( 0, -732.847 ), Vector2( 0, -423.161 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Day Night cycle/CanvasModulate2:color")
@@ -293,10 +293,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 430, 700, 1000 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 430, 1000, 1440 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 18.0935, 409.686 ), Vector2( -10.7155, -77.8516 ), Vector2( 18.0935, 409.686 ) ]
+"values": [ Vector2( -89.6261, -630.101 ), Vector2( -89.6261, -630.101 ), Vector2( -89.6261, 339.057 ), Vector2( -89.6261, 339.057 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Day Night cycle/CanvasLayer/mask:modulate")
@@ -793,6 +793,7 @@ health = 10
 position = Vector2( -1209.85, 640.055 )
 
 [node name="Day Night cycle" type="AnimationPlayer" parent="."]
+editor/display_folded = true
 autoplay = "day night"
 "anims/day night" = SubResource( 19 )
 
@@ -800,7 +801,6 @@ autoplay = "day night"
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Day Night cycle"]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )
@@ -833,7 +833,7 @@ rotation = -1.5708
 texture = ExtResource( 25 )
 
 [node name="Node2D2" type="Node2D" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6"]
-position = Vector2( 18.0935, 409.686 )
+position = Vector2( -89.6261, -630.101 )
 
 [node name="moon" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
 position = Vector2( 315.087, 256.956 )

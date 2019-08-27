@@ -553,6 +553,7 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
 [node name="Srinking lamp" type="Node2D" parent="Weapons"]
@@ -647,7 +648,6 @@ position = Vector2( 512, 165 )
 rotation = -1.74846e-007
 points = PoolVector2Array( -150, 0, 150, 0 )
 default_color = Color( 1, 0.796078, 0, 1 )
-texture_mode = 1021447008
 
 [node name="Label" type="Label" parent="Weapons/Key"]
 margin_left = 491.537
@@ -668,7 +668,6 @@ points = PoolVector2Array( 0, 0, 0, 0 )
 width = 3.0
 default_color = Color( 1, 1, 1, 1 )
 texture = ExtResource( 10 )
-texture_mode = 1021447008
 
 [node name="Label" type="Label" parent="Weapons"]
 editor/display_folded = true
@@ -690,7 +689,6 @@ z_index = -1
 points = PoolVector2Array( -25, 7, 60, 7 )
 width = 13.0
 default_color = Color( 0, 0, 0, 0.501961 )
-texture_mode = 1021447008
 begin_cap_mode = 2
 end_cap_mode = 2
 
@@ -725,7 +723,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon1" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -80, -80 )
@@ -741,7 +738,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon2" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 0, -120 )
@@ -757,7 +753,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon3" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, -80 )
@@ -773,7 +768,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon4" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 120, 0 )
@@ -789,7 +783,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon5" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, 80 )
@@ -805,7 +798,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon6" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 0, 120 )
@@ -821,7 +813,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon7" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -80, 80 )
@@ -837,7 +828,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="Polygon2D" type="Polygon2D" parent="Menu Items/Menu"]
 scale = Vector2( 1.2, 1.2 )
@@ -860,7 +850,6 @@ position = Vector2( 0, 29.9285 )
 scale = Vector2( 0.71, 1 )
 points = PoolVector2Array( -50, 40, 50, 40 )
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 begin_cap_mode = 2
 end_cap_mode = 2
 
@@ -870,7 +859,6 @@ anims/timer = SubResource( 10 )
 [node name="Line2D2" type="Line2D" parent="Menu Items/Menu/Bullet Time"]
 points = PoolVector2Array( -50, 40, 50, 40 )
 default_color = Color( 1, 1, 1, 0.25098 )
-texture_mode = 1021447008
 begin_cap_mode = 2
 end_cap_mode = 2
 
@@ -885,20 +873,17 @@ position = Vector2( 2.64075, -51.4948 )
 points = PoolVector2Array( 0, 0, 100, 0 )
 width = 5.0
 default_color = Color( 0, 0, 0, 0.501961 )
-texture_mode = 1021447008
 
 [node name="Line2D2" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 51.392, -56.7652 )
 points = PoolVector2Array( 0, 0, 0, 10 )
 default_color = Color( 1, 1, 1, 0.501961 )
-texture_mode = 1021447008
 
 [node name="Line2D3" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 101.358, -61.2451 )
 points = PoolVector2Array( 0, 0, 0, 20 )
 width = 3.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="Minigame" type="AnimationPlayer" parent="Load_Minigame"]
 anims/Failure = SubResource( 11 )
@@ -925,24 +910,22 @@ scale = Vector2( 1, -0.3 )
 script = ExtResource( 21 )
 
 [node name="air meter" type="CanvasLayer" parent="."]
-editor/display_folded = true
 scale = Vector2( 0.6, 0.6 )
 transform = Transform2D( 0.6, 0, 0, 0.6, 0, 0 )
 script = ExtResource( 22 )
 
 [node name="Line2D" type="Line2D" parent="air meter"]
-position = Vector2( 669.064, 571.801 )
+position = Vector2( 698.452, 571.801 )
 scale = Vector2( 0.4, 0.2 )
 points = PoolVector2Array( 900, 95, 900, 310 )
 width = 50.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="Label" type="Label" parent="air meter"]
 modulate = Color( 0, 0, 0, 1 )
-margin_left = 1025.15
+margin_left = 1054.54
 margin_top = 590.154
-margin_right = 1065.15
+margin_right = 1094.54
 margin_bottom = 638.154
 custom_fonts/font = ExtResource( 8 )
 text = "A
@@ -953,6 +936,7 @@ R"
 damage = 3
 
 [node name="Audio Manager" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 24 )
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="Audio Manager"]

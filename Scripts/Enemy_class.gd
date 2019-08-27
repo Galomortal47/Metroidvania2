@@ -114,8 +114,9 @@ func stun():
 
 func attack():
 	if $Damage.is_colliding():
-		if $Damage.get_collider().has_node("Health"):
-			$Damage.get_collider().get_node("Health").damage(damage)
+		if $Damage.get_collider().is_in_group("player"):
+			if $Damage.get_collider().has_node("Health"):
+				$Damage.get_collider().get_node("Health").damage(damage)
 
 func _on_Timer_timeout():
 	$Polygon2D2.hide()
