@@ -104,10 +104,10 @@ region_rect = Rect2( 0, 130, 960, 540 )
 
 [node name="water" type="TextureRect" parent="."]
 modulate = Color( 1, 1, 1, 0.25098 )
-margin_left = -479.12
-margin_top = -267.855
-margin_right = 480.88
-margin_bottom = 272.145
+margin_left = -480.0
+margin_top = -270.0
+margin_right = 480.0
+margin_bottom = 270.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 2

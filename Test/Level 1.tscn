@@ -47,28 +47,28 @@ extents = Vector2( 1846.42, 10 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 867.925, 10 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 10, 131.159 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 10, 641.642 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 5.9502, 162.175 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 41.6683, 314.736 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 2680.58, 10 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 10, 79.1086 )
 
-[sub_resource type="CanvasItemMaterial" id=14]
+[sub_resource type="CanvasItemMaterial" id=13]
 blend_mode = 1
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=14]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -108,7 +108,7 @@ tracks/2/keys = {
 "values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=15]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -146,7 +146,7 @@ tracks/2/keys = {
 "values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=16]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -162,7 +162,7 @@ tracks/0/keys = {
 "values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=17]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -178,13 +178,13 @@ tracks/0/keys = {
 "values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=28]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 39.418, 10 )
 
-[sub_resource type="RectangleShape2D" id=25]
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 37.9856, 10 )
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=20]
 length = 10.0
 loop = true
 step = 1.0
@@ -201,7 +201,7 @@ tracks/0/keys = {
 "values": [ Vector2( 134.309, 355.398 ), Vector2( 134.309, 355.398 ), Vector2( -243.32, -371.605 ), Vector2( -243.32, -371.605 ), Vector2( 134.309, 355.398 ), Vector2( 134.309, 355.398 ) ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=21]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -221,6 +221,7 @@ tracks/0/keys = {
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="Ground" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="grass" type="TextureRect" parent="Ground"]
 margin_left = -342.0
@@ -592,39 +593,39 @@ shape = SubResource( 6 )
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -5837.24, 874.142 )
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -7164.96, 610.945 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -8888.88, 591.418 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -10557.8, -606.325 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D37" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -7538.92, -633.495 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -8813.76, -608.483 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D35" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -5794.86, -635.654 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -10552.4, 689.919 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -12258.7, -607.626 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -437.709, 829.941 )
@@ -632,15 +633,15 @@ shape = SubResource( 5 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 1489.65, 900.506 )
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -615.396, 107.745 )
-shape = SubResource( 12 )
+shape = SubResource( 11 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -409.514, 650.704 )
-shape = SubResource( 13 )
+shape = SubResource( 12 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 editor/display_folded = true
@@ -687,7 +688,7 @@ offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="plant"]
 modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 14 )
+material = SubResource( 13 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
@@ -700,8 +701,8 @@ texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plant"]
-anims/wind = SubResource( 15 )
-"anims/wind (copy)" = SubResource( 16 )
+anims/wind = SubResource( 14 )
+"anims/wind (copy)" = SubResource( 15 )
 
 [node name="RayCast2D" type="RayCast2D" parent="plant"]
 rotation = 3.49066
@@ -792,6 +793,7 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 15 )
 
 [node name="Waters" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Water2" parent="Waters" instance=ExtResource( 16 )]
 position = Vector2( 1026.8, 732.582 )
@@ -841,6 +843,7 @@ position = Vector2( -9923.78, 328.391 )
 position = Vector2( 6148.68, 2.73041 )
 
 [node name="Boxes" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true
@@ -1075,8 +1078,8 @@ position = Vector2( -6126.68, 371.89 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform"]
 autoplay = "Movment2"
-anims/Movment2 = SubResource( 17 )
-anims/movment = SubResource( 18 )
+anims/Movment2 = SubResource( 16 )
+anims/movment = SubResource( 17 )
 
 [node name="Platform2" parent="Platfroms/Platform" instance=ExtResource( 25 )]
 editor/display_folded = true
@@ -1096,7 +1099,7 @@ position = Vector2( -180.44, -148.367 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform3/StaticBody2D3"]
 position = Vector2( 42.9912, 350.479 )
-shape = SubResource( 28 )
+shape = SubResource( 18 )
 
 [node name="grass2" type="Sprite" parent="Platfroms/Platform3"]
 position = Vector2( 41.1621, 339.085 )
@@ -1112,7 +1115,7 @@ position = Vector2( 76.0332, 147.09 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform5/StaticBody2D2"]
 position = Vector2( 42.9912, 350.479 )
-shape = SubResource( 28 )
+shape = SubResource( 18 )
 
 [node name="grass2" type="Sprite" parent="Platfroms/Platform5"]
 position = Vector2( -59.54, 344.12 )
@@ -1132,7 +1135,7 @@ editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform4/StaticBody2D"]
 position = Vector2( 42.9912, 350.479 )
-shape = SubResource( 28 )
+shape = SubResource( 18 )
 
 [node name="Platform2" type="Node2D" parent="Platfroms"]
 editor/display_folded = true
@@ -1143,12 +1146,12 @@ position = Vector2( 39.9018, 173.647 )
 motion/sync_to_physics = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform2/Platform2"]
-shape = SubResource( 25 )
+shape = SubResource( 19 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform2/Platform2"]
 autoplay = "Movment2"
-anims/Movment2 = SubResource( 26 )
-anims/movment = SubResource( 27 )
+anims/Movment2 = SubResource( 20 )
+anims/movment = SubResource( 21 )
 
 [node name="Platform Sticker 2" type="Node2D" parent="Platfroms/Platform2/Platform2"]
 script = ExtResource( 26 )

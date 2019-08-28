@@ -225,25 +225,30 @@ autoplay = "New Anim"
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.75, 1 )
-motion_mirroring = Vector2( 1024, 0 )
+motion_mirroring = Vector2( 960, 0 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
 modulate = Color( 1, 1, 1, 0.501961 )
-position = Vector2( 1025.01, 621.123 )
+position = Vector2( 961.677, 617.091 )
 rotation = -1.5708
-scale = Vector2( 0.119965, 1024.35 )
+scale = Vector2( 0.12, 960 )
 texture = SubResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
 modulate = Color( 1, 1, 1, 0.501961 )
-position = Vector2( 1920.76, 621.124 )
+position = Vector2( 1916.32, 617.091 )
 rotation = -1.5708
-scale = Vector2( 0.119965, 896.012 )
+scale = Vector2( 0.12, 960 )
 texture = SubResource( 3 )
 
 [node name="Water3" parent="ParallaxBackground/ParallaxLayer5" instance=ExtResource( 7 )]
-position = Vector2( 974.568, 620.319 )
-scale = Vector2( 2.02922, 0.473 )
+position = Vector2( 481.423, 622.077 )
+scale = Vector2( 1, 0.473 )
+script = null
+
+[node name="Water4" parent="ParallaxBackground/ParallaxLayer5" instance=ExtResource( 7 )]
+position = Vector2( 1436.07, 622.077 )
+scale = Vector2( 1, 0.473 )
 script = null
 
 [node name="CanvasModulate" type="CanvasModulate" parent="ParallaxBackground"]
