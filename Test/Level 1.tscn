@@ -1219,5 +1219,5 @@ position = Vector2( -11438.3, -72.6534 )
 
 [node name="Gadeget Pick Up2" parent="." instance=ExtResource( 28 )]
 position = Vector2( 6517.13, -8.06406 )
-gun_id = 0
+gun_id = 2
 

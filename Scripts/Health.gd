@@ -7,6 +7,7 @@ var size = 20
 var knockback = Vector2(0,-200)
 export var invicility = false
 
+
 func _process(delta):
 	if health <= health_max * 0.25:
 		$Line2D3.default_color = (Color(1,0,0))

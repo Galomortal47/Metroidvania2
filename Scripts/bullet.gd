@@ -10,6 +10,9 @@ var particle_size = 15
 var pierce = false
 var ignore = "player"
 var target = "enemy"
+var explosion = false
+var explosive = preload("res://Scripts/explosion.gd").new()
+var explosion_color = Color(1,0,0)
 
 func _ready():
 	motion.y += curve
@@ -32,5 +35,7 @@ func attack():
 					$bullet.get_collider().get_node("Health").damage(damage)
 			else:
 				$bullet.get_collider().get_node("Health").damage(0)
+			if explosion:
+				explosive.explosion(get_global_position(),get_tree().get_root(),"enemy","player", damage,explosion_color)
 			if not pierce:
 				queue_free()

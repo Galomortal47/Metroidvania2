@@ -553,7 +553,6 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
 [node name="Srinking lamp" type="Node2D" parent="Weapons"]
@@ -577,11 +576,11 @@ weapon = "res://assets/Bullet.tscn"
 speed = 400
 timer = 0.5
 gravity = 25
-damage = 4
 curve = -600
 lifespan = 5.0
 pierce = true
 particle_size = 45
+explosion = true
 ammo = 10
 
 [node name="Sniper" type="Node2D" parent="Weapons"]

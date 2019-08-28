@@ -16,12 +16,14 @@ export var shot = 1
 export var pierce = false
 export var particle_size = 15
 export var screen_shake = 5
+export var explosion = false
 var mag_aux = mag
 export var ammo = 100
 var timer_aux = 0.0 
 var enable = false
 var ammo_max
 export var have = false
+export var explosion_color = Color(1,1,1)
 
 func _ready():
 	ammo_max = ammo
@@ -60,6 +62,8 @@ func shoot():
 			bullet_instance.lifespan = lifespan
 			bullet_instance.pierce = pierce
 			bullet_instance.particle_size = particle_size
+			bullet_instance.explosion = explosion
+			bullet_instance.explosion_color = explosion_color
 			match (dir):
 				1:
 					bullet_instance.set_rotation_degrees(-180 +rand_range(-spreed,spreed))

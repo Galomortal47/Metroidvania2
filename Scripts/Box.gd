@@ -35,11 +35,11 @@ func _process(delta):
 				boltspawner.particle_spawn(get_tree().get_root(),get_global_position())
 				queue_free()
 			"explosive":
-				explosive.explosion(get_global_position(),get_tree().get_root())
+				explosive.explosion(get_global_position(),get_tree().get_root(),"player","",5,Color(1,0,0))
 				queue_free()
 	match object:
 		"explosive":
-			if $RayCast2D2.is_colliding() or $RayCast2D3.is_colliding() or $RayCast2D4.is_colliding() :
+			if $RayCast2D2.is_colliding() or $RayCast2D3.is_colliding() or $RayCast2D4.is_colliding() or motion.y > 200:
 				$AnimationPlayer.play("boom")
 				
 
@@ -50,6 +50,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "boom":
 		boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position())
 		boltspawner.particle_spawn(get_tree().get_root(),get_position())
-		explosive.explosion(get_global_position(),get_tree().get_root())
+		explosive.explosion(get_global_position(),get_tree().get_root(),"player","",5,Color(1,0,0))
 		queue_free()
 	pass # Replace with function body.
