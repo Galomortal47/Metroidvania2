@@ -360,6 +360,7 @@ tracks/0/keys = {
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="Ground" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="grass3" type="Sprite" parent="Ground"]
 position = Vector2( 618.643, 519.821 )
@@ -792,6 +793,7 @@ health = 10
 position = Vector2( -1209.85, 640.055 )
 
 [node name="Day Night cycle" type="AnimationPlayer" parent="."]
+editor/display_folded = true
 autoplay = "day night"
 "anims/day night" = SubResource( 19 )
 

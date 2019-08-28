@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Box.gd" type="Script" id=1]
 [ext_resource path="res://sprites/light.png" type="Texture" id=2]
 [ext_resource path="res://sprites/box - explosive.png" type="Texture" id=3]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Sonds/explosion.ogg" type="AudioStream" id=5]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
@@ -13,48 +12,36 @@ blend_mode = 1
 extents = Vector2( 20, 20 )
 
 [sub_resource type="Animation" id=3]
-length = 4.0
+resource_name = "boom"
+length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath("../Box/light2:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 0.423529, 0.423529, 0.423529, 1 ), Color( 1, 1, 1, 1 ), Color( 0.423529, 0.423529, 0.423529, 1 ), Color( 1, 1, 1, 1 ), Color( 0.423529, 0.423529, 0.423529, 1 ), Color( 1, 1, 1, 1 ), Color( 0.423529, 0.423529, 0.423529, 1 ), Color( 1, 1, 1, 1 ), Color( 0.423529, 0.423529, 0.423529, 1 ) ]
+"values": [ Color( 0.101961, 1, 0, 0 ), Color( 0.203922, 0.603922, 0.133333, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("box:frame")
+tracks/1/path = NodePath("../Box/box:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0, 3 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("light2:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ) ]
+"values": [ Color( 0.0509804, 0.415686, 0, 1 ), Color( 0.109804, 0.878431, 0, 1 ) ]
 }
 
 [node name="Box" type="KinematicBody2D" groups=[
 "enemy",
 ]]
-modulate = Color( 0.423529, 0.423529, 0.423529, 1 )
 position = Vector2( 245.98, 556.307 )
 z_index = 2
 collision_layer = 5
@@ -63,13 +50,14 @@ script = ExtResource( 1 )
 object = "explosive"
 
 [node name="light2" type="Sprite" parent="."]
-modulate = Color( 1, 0, 0, 0 )
+modulate = Color( 0.101961, 1, 0, 0 )
 material = SubResource( 1 )
 position = Vector2( -0.420929, 0.336182 )
 z_index = 1
 texture = ExtResource( 2 )
 
 [node name="box" type="Sprite" parent="."]
+modulate = Color( 0.0509804, 0.415686, 0, 1 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -110,8 +98,5 @@ texture = ExtResource( 2 )
 "destroy",
 ]]
 anims/boom = SubResource( 3 )
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 5 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

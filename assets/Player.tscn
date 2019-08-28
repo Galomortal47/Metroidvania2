@@ -553,6 +553,7 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
 [node name="Srinking lamp" type="Node2D" parent="Weapons"]
@@ -925,6 +926,7 @@ scale = Vector2( 1, -0.3 )
 script = ExtResource( 21 )
 
 [node name="air meter" type="CanvasLayer" parent="."]
+editor/display_folded = true
 scale = Vector2( 0.6, 0.6 )
 transform = Transform2D( 0.6, 0, 0, 0.6, 0, 0 )
 script = ExtResource( 22 )

@@ -9,7 +9,7 @@ func _ready():
 func _process(delta):
 	if $RayCast2D.is_colliding():
 		$CanvasLayer/Label.show()
-		if Input.is_action_just_pressed("ui_roll"):
+		if Input.is_action_pressed("ui_roll"):
 			$RayCast2D.get_collider().get_node("Weapons").get_child(gun_id).have = true
 			queue_free()
 	else:

@@ -68,7 +68,7 @@ func guns_have():
 		if get_parent().get_node("Weapons").get_child(i).have:
 			get_node("Menu/icon" + str(i)).set_modulate(Color(1,1,1))
 		else:
-			get_node("Menu/icon" + str(i)).set_modulate(Color(0.5,0.5,0.5))
+			get_node("Menu/icon" + str(i)).set_modulate(Color(0.5,0.5,0.5,0))
 
 func select(var x = 0):
 	for i in range(0,menu_size):

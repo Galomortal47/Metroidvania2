@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -47,9 +47,6 @@ extents = Vector2( 1846.42, 10 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 867.925, 10 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 1801.24, 10 )
-
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 10, 131.159 )
 
@@ -59,19 +56,19 @@ extents = Vector2( 10, 641.642 )
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 5.9502, 162.175 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 41.6683, 314.736 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 2680.58, 10 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 10, 79.1086 )
 
-[sub_resource type="CanvasItemMaterial" id=15]
+[sub_resource type="CanvasItemMaterial" id=14]
 blend_mode = 1
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=15]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -111,7 +108,7 @@ tracks/2/keys = {
 "values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=16]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -149,7 +146,7 @@ tracks/2/keys = {
 "values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=17]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -165,7 +162,7 @@ tracks/0/keys = {
 "values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=18]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -181,106 +178,13 @@ tracks/0/keys = {
 "values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
 }
 
-[sub_resource type="Animation" id=28]
-length = 10.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Platform2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
-}
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 39.418, 10 )
 
-[sub_resource type="Animation" id=29]
-length = 10.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
-}
-
-[sub_resource type="Animation" id=35]
-length = 10.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Platform2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
-}
-
-[sub_resource type="Animation" id=36]
-length = 10.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
-}
-
-[sub_resource type="Animation" id=30]
-length = 10.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Platform2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
-}
-
-[sub_resource type="Animation" id=31]
-length = 10.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
-}
-
-[sub_resource type="RectangleShape2D" id=32]
+[sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 37.9856, 10 )
 
-[sub_resource type="Animation" id=33]
+[sub_resource type="Animation" id=26]
 length = 10.0
 loop = true
 step = 1.0
@@ -297,7 +201,7 @@ tracks/0/keys = {
 "values": [ Vector2( 134.309, 355.398 ), Vector2( 134.309, 355.398 ), Vector2( -243.32, -371.605 ), Vector2( -243.32, -371.605 ), Vector2( 134.309, 355.398 ), Vector2( 134.309, 355.398 ) ]
 }
 
-[sub_resource type="Animation" id=34]
+[sub_resource type="Animation" id=27]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -367,10 +271,10 @@ texture = ExtResource( 1 )
 stretch_mode = 2
 
 [node name="grass12" type="TextureRect" parent="Ground"]
-margin_left = -10587.8
-margin_top = 347.795
-margin_right = -7215.79
-margin_bottom = 475.795
+margin_left = -10588.0
+margin_top = 348.0
+margin_right = -8892.0
+margin_bottom = 476.0
 texture = ExtResource( 1 )
 stretch_mode = 2
 
@@ -445,26 +349,26 @@ stretch_mode = 2
 [node name="dirt6" type="TextureRect" parent="Ground"]
 margin_left = -8902.0
 margin_top = -41.0
-margin_right = -7123.0
-margin_bottom = 297.0
+margin_right = -7137.0
+margin_bottom = 481.0
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
 [node name="dirt10" type="TextureRect" parent="Ground"]
-margin_left = -10560.8
-margin_top = -773.166
-margin_right = -8781.81
-margin_bottom = -435.166
+margin_left = -10561.0
+margin_top = -773.0
+margin_right = -8815.0
+margin_bottom = -435.0
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
 [node name="dirt12" type="TextureRect" parent="Ground"]
-margin_left = -7541.91
-margin_top = -800.336
-margin_right = -5762.91
-margin_bottom = -462.336
+margin_left = -7542.0
+margin_top = -800.0
+margin_right = -5796.0
+margin_bottom = -462.0
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 2
@@ -573,12 +477,6 @@ rotation = 3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 3 )
 
-[node name="end13" type="Sprite" parent="Ground"]
-position = Vector2( -7152.3, 422.426 )
-rotation = -3.14159
-scale = Vector2( 1, -1 )
-texture = ExtResource( 3 )
-
 [node name="end11" type="Sprite" parent="Ground"]
 position = Vector2( -8911.95, -80.2181 )
 rotation = 2.53518e-006
@@ -664,6 +562,10 @@ shape = SubResource( 5 )
 position = Vector2( -5867.93, 910.406 )
 shape = SubResource( 5 )
 
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -9698.13, 434.697 )
+shape = SubResource( 5 )
+
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -8021.58, -35.4664 )
 shape = SubResource( 6 )
@@ -676,10 +578,6 @@ shape = SubResource( 6 )
 position = Vector2( -6661.49, -794.802 )
 shape = SubResource( 6 )
 
-[node name="CollisionShape2D27" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -8021.58, 286.147 )
-shape = SubResource( 6 )
-
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -9680.39, -446.019 )
 shape = SubResource( 6 )
@@ -687,10 +585,6 @@ shape = SubResource( 6 )
 [node name="CollisionShape2D34" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -6661.49, -473.189 )
 shape = SubResource( 6 )
-
-[node name="CollisionShape2D23" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -8938.23, 449.845 )
-shape = SubResource( 7 )
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -11413.7, 44.3762 )
@@ -701,12 +595,12 @@ position = Vector2( -5837.24, 874.142 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -7153.8, 1101.9 )
+position = Vector2( -7164.96, 610.945 )
 shape = SubResource( 9 )
 
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -8899, 141.425 )
-shape = SubResource( 10 )
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -8888.88, 591.418 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -10557.8, -606.325 )
@@ -714,10 +608,6 @@ shape = SubResource( 10 )
 
 [node name="CollisionShape2D37" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -7538.92, -633.495 )
-shape = SubResource( 10 )
-
-[node name="CollisionShape2D26" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -7154.95, 139.266 )
 shape = SubResource( 10 )
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="Ground"]
@@ -742,15 +632,15 @@ shape = SubResource( 5 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 1489.65, 900.506 )
-shape = SubResource( 12 )
+shape = SubResource( 11 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -615.396, 107.745 )
-shape = SubResource( 13 )
+shape = SubResource( 12 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -409.514, 650.704 )
-shape = SubResource( 14 )
+shape = SubResource( 13 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 editor/display_folded = true
@@ -768,7 +658,7 @@ position = Vector2( -346.707, 519.061 )
 position = Vector2( -245.126, 520.219 )
 
 [node name="Shop" parent="." instance=ExtResource( 9 )]
-position = Vector2( 386.552, 524.783 )
+position = Vector2( 466.163, 526.773 )
 
 [node name="Bolts2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 86.887, 555.155 )
@@ -797,7 +687,7 @@ offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="plant"]
 modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 15 )
+material = SubResource( 14 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
@@ -810,8 +700,8 @@ texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plant"]
-anims/wind = SubResource( 16 )
-"anims/wind (copy)" = SubResource( 17 )
+anims/wind = SubResource( 15 )
+"anims/wind (copy)" = SubResource( 16 )
 
 [node name="RayCast2D" type="RayCast2D" parent="plant"]
 rotation = 3.49066
@@ -825,6 +715,15 @@ position = Vector2( 4066.51, 247.875 )
 texture = ExtResource( 14 )
 
 [node name="floatr2" type="Sprite" parent="Hooks/Hook1"]
+position = Vector2( 2.44348, -34.2095 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 15 )
+
+[node name="Hook9" type="Sprite" parent="Hooks"]
+position = Vector2( 4066.51, 247.875 )
+texture = ExtResource( 14 )
+
+[node name="floatr2" type="Sprite" parent="Hooks/Hook9"]
 position = Vector2( 2.44348, -34.2095 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 15 )
@@ -893,7 +792,6 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 15 )
 
 [node name="Waters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Water2" parent="Waters" instance=ExtResource( 16 )]
 position = Vector2( 1026.8, 732.582 )
@@ -1177,8 +1075,8 @@ position = Vector2( -6126.68, 371.89 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform"]
 autoplay = "Movment2"
-anims/Movment2 = SubResource( 26 )
-anims/movment = SubResource( 27 )
+anims/Movment2 = SubResource( 17 )
+anims/movment = SubResource( 18 )
 
 [node name="Platform2" parent="Platfroms/Platform" instance=ExtResource( 25 )]
 editor/display_folded = true
@@ -1190,54 +1088,51 @@ scale = Vector2( 0.643678, 0.644 )
 texture = ExtResource( 15 )
 
 [node name="Platform3" type="Node2D" parent="Platfroms"]
+position = Vector2( -10322.6, -113.116 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Platfroms/Platform3"]
 editor/display_folded = true
-position = Vector2( -9729.21, -333.024 )
+position = Vector2( -180.44, -148.367 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform3"]
-autoplay = "Movment2"
-anims/Movment2 = SubResource( 28 )
-anims/movment = SubResource( 29 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform3/StaticBody2D3"]
+position = Vector2( 42.9912, 350.479 )
+shape = SubResource( 28 )
 
-[node name="Platform2" parent="Platfroms/Platform3" instance=ExtResource( 25 )]
-position = Vector2( 41.1624, 350.363 )
-
-[node name="grass2" type="Sprite" parent="Platfroms/Platform3/Platform2"]
-position = Vector2( 0, -11.2782 )
+[node name="grass2" type="Sprite" parent="Platfroms/Platform3"]
+position = Vector2( 41.1621, 339.085 )
 scale = Vector2( 0.643678, 0.644 )
 texture = ExtResource( 15 )
 
 [node name="Platform5" type="Node2D" parent="Platfroms"]
-position = Vector2( -10096.8, -333.024 )
+position = Vector2( -10401.8, -264.528 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform5"]
-autoplay = "Movment2"
-anims/Movment2 = SubResource( 35 )
-anims/movment = SubResource( 36 )
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platfroms/Platform5"]
+editor/display_folded = true
+position = Vector2( 76.0332, 147.09 )
 
-[node name="Platform2" parent="Platfroms/Platform5" instance=ExtResource( 25 )]
-position = Vector2( -59.5397, 355.398 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform5/StaticBody2D2"]
+position = Vector2( 42.9912, 350.479 )
+shape = SubResource( 28 )
 
-[node name="grass2" type="Sprite" parent="Platfroms/Platform5/Platform2"]
-position = Vector2( 0, -11.2782 )
+[node name="grass2" type="Sprite" parent="Platfroms/Platform5"]
+position = Vector2( -59.54, 344.12 )
 scale = Vector2( 0.643678, 0.644 )
 texture = ExtResource( 15 )
 
 [node name="Platform4" type="Node2D" parent="Platfroms"]
-editor/display_folded = true
-position = Vector2( -9293, -336.629 )
+position = Vector2( -10164, -12.1744 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform4"]
-autoplay = "Movment2"
-anims/Movment2 = SubResource( 30 )
-anims/movment = SubResource( 31 )
-
-[node name="Platform2" parent="Platfroms/Platform4" instance=ExtResource( 25 )]
-position = Vector2( 41.1624, 350.363 )
-
-[node name="grass2" type="Sprite" parent="Platfroms/Platform4/Platform2"]
-position = Vector2( 0, -11.2782 )
+[node name="grass2" type="Sprite" parent="Platfroms/Platform4"]
+position = Vector2( 41.1621, 339.085 )
 scale = Vector2( 0.643678, 0.644 )
 texture = ExtResource( 15 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platfroms/Platform4"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform4/StaticBody2D"]
+position = Vector2( 42.9912, 350.479 )
+shape = SubResource( 28 )
 
 [node name="Platform2" type="Node2D" parent="Platfroms"]
 editor/display_folded = true
@@ -1248,12 +1143,12 @@ position = Vector2( 39.9018, 173.647 )
 motion/sync_to_physics = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform2/Platform2"]
-shape = SubResource( 32 )
+shape = SubResource( 25 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform2/Platform2"]
 autoplay = "Movment2"
-anims/Movment2 = SubResource( 33 )
-anims/movment = SubResource( 34 )
+anims/Movment2 = SubResource( 26 )
+anims/movment = SubResource( 27 )
 
 [node name="Platform Sticker 2" type="Node2D" parent="Platfroms/Platform2/Platform2"]
 script = ExtResource( 26 )
@@ -1317,5 +1212,9 @@ enabled = true
 cast_to = Vector2( 1300, 0 )
 
 [node name="Gadeget Pick Up" parent="." instance=ExtResource( 28 )]
-position = Vector2( -11429, -103.918 )
+position = Vector2( -11438.3, -72.6534 )
+
+[node name="Gadeget Pick Up2" parent="." instance=ExtResource( 28 )]
+position = Vector2( 6517.13, -8.06406 )
+gun_id = 0
 

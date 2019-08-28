@@ -1,9 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://3D models/Material.material" type="Material" id=1]
 [ext_resource path="res://3D models/bolt.tres" type="Material" id=2]
-[ext_resource path="res://sprites/sparkle.png" type="Texture" id=3]
-[ext_resource path="res://assets/Bullet.tres" type="Curve" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube"
@@ -21,7 +19,7 @@ surfaces/0 = {
 "vertex_count": 214
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "rotating"
 length = 3.0
 loop = true
@@ -37,15 +35,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector3( 40.9962, 0, 0 ), Vector3( 40.996, 360, 0 ) ]
 }
-
-[sub_resource type="SpatialMaterial" id=4]
-flags_transparent = true
-flags_unshaded = true
-albedo_texture = ExtResource( 3 )
-
-[sub_resource type="QuadMesh" id=5]
-material = SubResource( 4 )
-size = Vector2( 3, 3 )
 
 [node name="Scene Root" type="Spatial"]
 
@@ -64,19 +53,9 @@ material/0 = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "rotating"
-anims/rotating = SubResource( 3 )
+anims/rotating = SubResource( 2 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.753614, 1.03698, 1.79959 )
 omni_range = 4096.0
-
-[node name="CPUParticles" type="CPUParticles" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.324301, 0.239275 )
-amount = 5
-mesh = SubResource( 5 )
-emission_shape = 2
-emission_box_extents = Vector3( 1, 1, 1 )
-gravity = Vector3( 0, -1, 0 )
-scale_amount = 0.5
-scale_amount_curve = ExtResource( 4 )
 
