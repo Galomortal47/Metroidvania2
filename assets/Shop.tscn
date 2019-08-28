@@ -167,6 +167,13 @@ margin_bottom = 489.81
 custom_fonts/font = ExtResource( 2 )
 text = "X:Buy for a Bolts"
 
+[node name="Line2D" type="Line2D" parent="Shop_Select/Icons/Label"]
+position = Vector2( -5.14423, 16.2902 )
+z_index = -1
+points = PoolVector2Array( 0, 0, 200, 0 )
+width = 50.0
+default_color = Color( 0, 0, 0, 0.392157 )
+
 [node name="Label2" type="Label" parent="Shop_Select/Icons"]
 margin_left = 436.033
 margin_top = 485.687
