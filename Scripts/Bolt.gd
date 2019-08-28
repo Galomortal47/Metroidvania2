@@ -47,5 +47,6 @@ func _on_magnetic_body_shape_entered(body_id, body, body_shape, area_shape):
 func _on_destroy_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
 		body.get_node("Coins/Number").set_text(str(int(body.get_node("Coins/Number").get_text())+value))
+		body.get_node("Coins/AnimationPlayer").play("bolts")
 		queue_free()
 	pass # Replace with function body.

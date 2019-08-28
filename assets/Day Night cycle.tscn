@@ -277,9 +277,9 @@ stretch_mode = 2
 
 [node name="Timer" type="Label" parent="CanvasLayer"]
 margin_left = 37.3235
-margin_top = 52.4861
-margin_right = 77.3235
-margin_bottom = 66.4861
+margin_top = 68.3089
+margin_right = 85.3235
+margin_bottom = 82.3089
 custom_fonts/font = ExtResource( 11 )
 text = "00:00"
 script = ExtResource( 12 )
