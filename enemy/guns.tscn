@@ -36,7 +36,7 @@ own_world = true
 transparent_bg = true
 handle_input_locally = false
 
-[node name="Scene Root2" parent="Monster2D-3D/Viewport1" instance=ExtResource( 2 )]
+[node name="Scene Root" parent="Monster2D-3D/Viewport1" instance=ExtResource( 2 )]
 
 [node name="Viewport2" type="Viewport" parent="Monster2D-3D"]
 size = Vector2( 300, 300 )
@@ -52,7 +52,7 @@ own_world = true
 transparent_bg = true
 handle_input_locally = false
 
-[node name="Scene Root3" parent="Monster2D-3D/Viewport3" instance=ExtResource( 4 )]
+[node name="Scene Root" parent="Monster2D-3D/Viewport3" instance=ExtResource( 4 )]
 
 [node name="Viewport4" type="Viewport" parent="Monster2D-3D"]
 size = Vector2( 300, 300 )

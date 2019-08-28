@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://sprites/floatr.png" type="Texture" id=1]
 [ext_resource path="res://sprites/grass.png" type="Texture" id=2]
@@ -21,9 +21,13 @@
 [ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=19]
 [ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/Box.tscn" type="PackedScene" id=21]
-[ext_resource path="res://assets/Platform2.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Scripts/Platform Sticker 2.gd" type="Script" id=23]
-[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=24]
+[ext_resource path="res://assets/Box_ammo.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/Box_explosive.tscn" type="PackedScene" id=23]
+[ext_resource path="res://assets/Box_health.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/Platform2.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scripts/Platform Sticker 2.gd" type="Script" id=26]
+[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=27]
+[ext_resource path="res://assets/Gadeget Pick Up.tscn" type="PackedScene" id=28]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -198,6 +202,38 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=29]
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
+}
+
+[sub_resource type="Animation" id=35]
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Platform2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
+}
+
+[sub_resource type="Animation" id=36]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -948,7 +984,6 @@ position = Vector2( -9923.78, 328.391 )
 position = Vector2( 6148.68, 2.73041 )
 
 [node name="Boxes" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true
@@ -997,16 +1032,6 @@ position = Vector2( 1288.2, 493.369 )
 
 [node name="Box14" parent="Boxes/Boxes" instance=ExtResource( 21 )]
 position = Vector2( 1288.2, 437.656 )
-
-[node name="Box_bolts" parent="Boxes/Boxes" instance=ExtResource( 21 )]
-
-[node name="Box_health" parent="Boxes/Boxes" instance=ExtResource( 21 )]
-position = Vector2( 300.798, 556.307 )
-object = "ammo"
-
-[node name="Box_ammo" parent="Boxes/Boxes" instance=ExtResource( 21 )]
-position = Vector2( 193.494, 556.307 )
-object = "health"
 
 [node name="Boxes2" type="Node2D" parent="Boxes"]
 editor/display_folded = true
@@ -1155,6 +1180,35 @@ position = Vector2( 1288.2, 493.369 )
 [node name="Box14" parent="Boxes/Boxes4" instance=ExtResource( 21 )]
 position = Vector2( 1288.2, 437.656 )
 
+[node name="Box_bolts" parent="Boxes" instance=ExtResource( 21 )]
+
+[node name="Box_bolts2" parent="Boxes" instance=ExtResource( 21 )]
+position = Vector2( -14.6402, 706.665 )
+
+[node name="Box_bolts3" parent="Boxes" instance=ExtResource( 21 )]
+position = Vector2( -17.5041, 659.409 )
+
+[node name="Box_bolts4" parent="Boxes" instance=ExtResource( 21 )]
+position = Vector2( 1324.26, 688.049 )
+
+[node name="Box2" parent="Boxes" instance=ExtResource( 22 )]
+position = Vector2( 305.294, 555.409 )
+
+[node name="Box3" parent="Boxes" instance=ExtResource( 23 )]
+position = Vector2( 129.182, 553.485 )
+
+[node name="Box5" parent="Boxes" instance=ExtResource( 23 )]
+position = Vector2( 1251.85, 695.25 )
+
+[node name="Box6" parent="Boxes" instance=ExtResource( 23 )]
+position = Vector2( 44.6948, 713.866 )
+
+[node name="Box4" parent="Boxes" instance=ExtResource( 23 )]
+position = Vector2( 1151.61, 384.511 )
+
+[node name="Box" parent="Boxes" instance=ExtResource( 24 )]
+position = Vector2( 184.282, 553.485 )
+
 [node name="Platfroms" type="Node2D" parent="."]
 editor/display_folded = true
 
@@ -1167,7 +1221,7 @@ autoplay = "Movment2"
 anims/Movment2 = SubResource( 26 )
 anims/movment = SubResource( 27 )
 
-[node name="Platform2" parent="Platfroms/Platform" instance=ExtResource( 22 )]
+[node name="Platform2" parent="Platfroms/Platform" instance=ExtResource( 25 )]
 editor/display_folded = true
 position = Vector2( 183.272, 355.398 )
 
@@ -1185,9 +1239,26 @@ autoplay = "Movment2"
 anims/Movment2 = SubResource( 28 )
 anims/movment = SubResource( 29 )
 
-[node name="Platform2" parent="Platfroms/Platform3" instance=ExtResource( 22 )]
+[node name="Platform2" parent="Platfroms/Platform3" instance=ExtResource( 25 )]
+position = Vector2( 41.1624, 350.363 )
 
 [node name="grass2" type="Sprite" parent="Platfroms/Platform3/Platform2"]
+position = Vector2( 0, -11.2782 )
+scale = Vector2( 0.643678, 0.644 )
+texture = ExtResource( 1 )
+
+[node name="Platform5" type="Node2D" parent="Platfroms"]
+position = Vector2( -10096.8, -333.024 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform5"]
+autoplay = "Movment2"
+anims/Movment2 = SubResource( 35 )
+anims/movment = SubResource( 36 )
+
+[node name="Platform2" parent="Platfroms/Platform5" instance=ExtResource( 25 )]
+position = Vector2( -59.5397, 355.398 )
+
+[node name="grass2" type="Sprite" parent="Platfroms/Platform5/Platform2"]
 position = Vector2( 0, -11.2782 )
 scale = Vector2( 0.643678, 0.644 )
 texture = ExtResource( 1 )
@@ -1201,7 +1272,8 @@ autoplay = "Movment2"
 anims/Movment2 = SubResource( 30 )
 anims/movment = SubResource( 31 )
 
-[node name="Platform2" parent="Platfroms/Platform4" instance=ExtResource( 22 )]
+[node name="Platform2" parent="Platfroms/Platform4" instance=ExtResource( 25 )]
+position = Vector2( 41.1624, 350.363 )
 
 [node name="grass2" type="Sprite" parent="Platfroms/Platform4/Platform2"]
 position = Vector2( 0, -11.2782 )
@@ -1225,7 +1297,7 @@ anims/Movment2 = SubResource( 33 )
 anims/movment = SubResource( 34 )
 
 [node name="Platform Sticker 2" type="Node2D" parent="Platfroms/Platform2/Platform2"]
-script = ExtResource( 23 )
+script = ExtResource( 26 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Platfroms/Platform2/Platform2/Platform Sticker 2"]
 position = Vector2( -50, -20 )
@@ -1255,7 +1327,7 @@ editor/display_folded = true
 position = Vector2( 669.711, 618.652 )
 enabled = true
 cast_to = Vector2( 300, 0 )
-script = ExtResource( 24 )
+script = ExtResource( 27 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing"]
 position = Vector2( 0, -28.7293 )
@@ -1267,7 +1339,7 @@ editor/display_folded = true
 position = Vector2( -2138.86, 731.392 )
 enabled = true
 cast_to = Vector2( 300, 0 )
-script = ExtResource( 24 )
+script = ExtResource( 27 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing2"]
 position = Vector2( 0, -28.7293 )
@@ -1278,10 +1350,13 @@ cast_to = Vector2( 300, 0 )
 position = Vector2( -7129.06, 773.322 )
 enabled = true
 cast_to = Vector2( 1300, 0 )
-script = ExtResource( 24 )
+script = ExtResource( 27 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing3"]
 position = Vector2( 0, -28.7293 )
 enabled = true
 cast_to = Vector2( 1300, 0 )
+
+[node name="Gadeget Pick Up" parent="." instance=ExtResource( 28 )]
+position = Vector2( -11429, -103.918 )
 

@@ -4,6 +4,7 @@ var boltspawner = preload("bolt_spawner.gd").new()
 var bolt_path = "res://assets/Bolts.tscn"
 var ammo_health = "res://assets/Pick Up.tscn"
 var health_path = "res://assets/health pick up.tscn"
+var explosive = preload("res://Scripts/explosion.gd").new()
 export var bolt_number = 3
 var ramdom_pos = 30
 var motion = Vector2(0,0)
@@ -11,20 +12,13 @@ var spawn = false
 var grav = 10
 export var object = "bolt"
 
-func _ready():
-	match object:
-		"ammo":
-			$box.set_texture(load("res://sprites/box - Ammo.png"))
-		"health":
-			$box.set_texture(load("res://sprites/box - health.png"))
-
 func _process(delta):
 	if not $RayCast2D.is_colliding():
 		motion.y += grav
-	if $RayCast2D2.is_colliding():
-		motion.x -= 200
-	if $RayCast2D3.is_colliding():
-		motion.x += 200
+#	if $RayCast2D2.is_colliding():
+#		motion.x -= 20
+#	if $RayCast2D3.is_colliding():
+#		motion.x += 20
 	motion = move_and_slide(motion)
 	if $Health.health <= 0:
 		match object:
@@ -40,7 +34,22 @@ func _process(delta):
 				boltspawner.ammo_spawn(get_tree().get_root(),get_global_position())
 				boltspawner.particle_spawn(get_tree().get_root(),get_global_position())
 				queue_free()
-
+			"explosive":
+				explosive.explosion(get_global_position(),get_tree().get_root())
+				queue_free()
+	match object:
+		"explosive":
+			if $RayCast2D2.is_colliding() or $RayCast2D3.is_colliding() or $RayCast2D4.is_colliding() :
+				$AnimationPlayer.play("boom")
+				
 
 func stun():
 	pass
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "boom":
+		boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position())
+		boltspawner.particle_spawn(get_tree().get_root(),get_position())
+		explosive.explosion(get_global_position(),get_tree().get_root())
+		queue_free()
+	pass # Replace with function body.

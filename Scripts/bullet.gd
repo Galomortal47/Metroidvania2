@@ -27,7 +27,7 @@ func _process(delta):
 
 func attack():
 	if $bullet.is_colliding():
-		if $bullet.get_collider().is_in_group(target):
+		if $bullet.get_collider().is_in_group(target) or $bullet.get_collider().is_in_group("destroy"):
 			if not $bullet.get_collider().get_node("Health").invicible:
 					$bullet.get_collider().get_node("Health").damage(damage)
 			else:
