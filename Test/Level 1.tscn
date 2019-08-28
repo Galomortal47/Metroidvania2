@@ -15,25 +15,23 @@
 [ext_resource path="res://Scripts/plant.gd" type="Script" id=13]
 [ext_resource path="res://sprites/light.png" type="Texture" id=14]
 [ext_resource path="res://sprites/hook.png" type="Texture" id=15]
-[ext_resource path="res://sprites/lock.png" type="Texture" id=16]
-[ext_resource path="res://Scripts/lock.gd" type="Script" id=17]
-[ext_resource path="res://assets/Water.tscn" type="PackedScene" id=18]
-[ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=19]
-[ext_resource path="res://assets/Enemy Shooter.tscn" type="PackedScene" id=20]
-[ext_resource path="res://sprites/sun.png" type="Texture" id=21]
-[ext_resource path="res://sprites/moon.png" type="Texture" id=22]
-[ext_resource path="res://sprites/cloud.png" type="Texture" id=23]
-[ext_resource path="res://sprites/mountains.png" type="Texture" id=24]
-[ext_resource path="res://sprites/pyrate ship.png" type="Texture" id=25]
-[ext_resource path="res://sprites/grass2.png" type="Texture" id=26]
-[ext_resource path="res://assets/mask.tscn" type="PackedScene" id=27]
-[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=28]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=29]
-[ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=30]
-[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=31]
-[ext_resource path="res://assets/Platform2.tscn" type="PackedScene" id=32]
-[ext_resource path="res://Scripts/Platform Sticker 2.gd" type="Script" id=33]
-[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=34]
+[ext_resource path="res://assets/Water.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/Enemy Shooter.tscn" type="PackedScene" id=18]
+[ext_resource path="res://sprites/sun.png" type="Texture" id=19]
+[ext_resource path="res://sprites/moon.png" type="Texture" id=20]
+[ext_resource path="res://sprites/cloud.png" type="Texture" id=21]
+[ext_resource path="res://sprites/mountains.png" type="Texture" id=22]
+[ext_resource path="res://sprites/pyrate ship.png" type="Texture" id=23]
+[ext_resource path="res://sprites/grass2.png" type="Texture" id=24]
+[ext_resource path="res://assets/mask.tscn" type="PackedScene" id=25]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=26]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=27]
+[ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=29]
+[ext_resource path="res://assets/Platform2.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Scripts/Platform Sticker 2.gd" type="Script" id=31]
+[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -51,7 +49,7 @@ extents = Vector2( 541.865, 19.2802 )
 extents = Vector2( 1846.42, 10 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 893.009, 10 )
+extents = Vector2( 867.925, 10 )
 
 [sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 1801.24, 10 )
@@ -159,34 +157,6 @@ tracks/2/keys = {
 
 [sub_resource type="RectangleShape2D" id=16]
 
-[sub_resource type="RectangleShape2D" id=17]
-
-[sub_resource type="Animation" id=18]
-tracks/0/type = "value"
-tracks/0/path = NodePath("lock2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -0.647125, -13.912 ), Vector2( 2.78711, -17.7756 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("lock2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 52.0 ]
-}
-
 [sub_resource type="Animation" id=19]
 length = 1440.0
 loop = true
@@ -198,10 +168,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 170, 420, 980, 1230, 1420 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 130, 410, 660, 820, 1070, 1280, 1420 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0.92549, 0.964706, 0.968627, 1 ), Color( 0.917647, 0.772549, 0.647059, 1 ), Color( 0.203922, 0.184314, 0.282353, 1 ), Color( 0.203922, 0.184314, 0.282353, 1 ), Color( 0.917647, 0.772549, 0.647059, 1 ), Color( 0.92549, 0.964706, 0.968627, 1 ) ]
+"values": [ Color( 0.92549, 0.964706, 0.968627, 1 ), Color( 0.92549, 0.964706, 0.968627, 1 ), Color( 0.917647, 0.772549, 0.647059, 1 ), Color( 0.203922, 0.184314, 0.282353, 1 ), Color( 0.203922, 0.184314, 0.282353, 1 ), Color( 0.917647, 0.772549, 0.647059, 1 ), Color( 0.92549, 0.964706, 0.968627, 1 ), Color( 0.92549, 0.964706, 0.968627, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D:position")
@@ -210,10 +180,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 430, 999.77, 1000, 1440 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 130, 670, 840, 1280, 1440 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -423.161 ), Vector2( 0, 257.896 ), Vector2( 0, 257.896 ), Vector2( 0, -732.847 ), Vector2( 0, -423.161 ) ]
+"values": [ Vector2( 0, -423.161 ), Vector2( 0, -423.161 ), Vector2( 0, 257.896 ), Vector2( 0, 257.896 ), Vector2( 0, -423.161 ), Vector2( 0, -423.161 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Day Night cycle/CanvasModulate2:color")
@@ -222,10 +192,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 170, 420, 980, 1230, 1440 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 130, 410, 660, 820, 1070, 1280, 1440 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0.764706, 0.611765, 0.396078, 1 ), Color( 0.345098, 0.345098, 0.517647, 1 ), Color( 0.345098, 0.345098, 0.517647, 1 ), Color( 0.764706, 0.611765, 0.396078, 1 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.764706, 0.611765, 0.396078, 1 ), Color( 0.345098, 0.345098, 0.517647, 1 ), Color( 0.345098, 0.345098, 0.517647, 1 ), Color( 0.764706, 0.611765, 0.396078, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2:position")
@@ -234,10 +204,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 430, 1000, 1440 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 130, 670, 840, 1280, 1440 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -89.6261, -1273.22 ), Vector2( -89.6261, -630.101 ), Vector2( -89.6261, 339.057 ), Vector2( -89.6261, 339.057 ) ]
+"values": [ Vector2( -89.6261, -1273.22 ), Vector2( -89.6261, -1273.22 ), Vector2( -89.6261, -630.101 ), Vector2( -89.6261, 339.057 ), Vector2( -89.6261, -1273.22 ), Vector2( -89.6261, 339.057 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Day Night cycle/CanvasLayer/mask:modulate")
@@ -246,10 +216,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 430, 1000, 1440 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 130, 670, 840, 1280, 1440 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Gradient" id=20]
@@ -329,6 +299,70 @@ tracks/0/keys = {
 "values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
 }
 
+[sub_resource type="Animation" id=33]
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Platform2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
+}
+
+[sub_resource type="Animation" id=34]
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
+}
+
+[sub_resource type="Animation" id=35]
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Platform2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( 183.272, 355.398 ), Vector2( -243.32, 355.398 ), Vector2( -243.32, 355.398 ) ]
+}
+
+[sub_resource type="Animation" id=36]
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 699.164, 355.398 ), Vector2( 699.164, 355.398 ) ]
+}
+
 [sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 37.9856, 10 )
 
@@ -369,6 +403,7 @@ tracks/0/keys = {
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="Ground" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="grass3" type="Sprite" parent="Ground"]
 position = Vector2( 618.643, 519.821 )
@@ -422,6 +457,14 @@ margin_left = -10512.8
 margin_top = -873.166
 margin_right = -8877.81
 margin_bottom = -745.166
+texture = ExtResource( 2 )
+stretch_mode = 2
+
+[node name="grass16" type="TextureRect" parent="Ground"]
+margin_left = -7493.91
+margin_top = -900.336
+margin_right = -5858.91
+margin_bottom = -772.336
 texture = ExtResource( 2 )
 stretch_mode = 2
 
@@ -519,6 +562,15 @@ texture = ExtResource( 3 )
 expand = true
 stretch_mode = 2
 
+[node name="dirt12" type="TextureRect" parent="Ground"]
+margin_left = -7541.91
+margin_top = -800.336
+margin_right = -5762.91
+margin_bottom = -462.336
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 2
+
 [node name="dirt7" type="TextureRect" parent="Ground"]
 margin_left = -10587.0
 margin_top = 455.0
@@ -529,10 +581,19 @@ expand = true
 stretch_mode = 2
 
 [node name="dirt8" type="TextureRect" parent="Ground"]
-margin_left = -12320.3
-margin_top = 36.7635
-margin_right = -10541.3
-margin_bottom = 1107.76
+margin_left = -14048.0
+margin_top = 37.0
+margin_right = -10541.0
+margin_bottom = 1689.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 2
+
+[node name="dirt11" type="TextureRect" parent="Ground"]
+margin_left = -14027.0
+margin_top = -1293.0
+margin_right = -12248.0
+margin_bottom = 70.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 2
@@ -581,7 +642,7 @@ position = Vector2( 5482.32, 47.757 )
 texture = ExtResource( 4 )
 
 [node name="end9" type="Sprite" parent="Ground"]
-position = Vector2( -5859.49, 710.639 )
+position = Vector2( -5857.87, 712.904 )
 texture = ExtResource( 4 )
 
 [node name="end2" type="Sprite" parent="Ground"]
@@ -608,8 +669,14 @@ rotation = 3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 4 )
 
+[node name="end17" type="Sprite" parent="Ground"]
+position = Vector2( -5796.08, -831.082 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 4 )
+
 [node name="end13" type="Sprite" parent="Ground"]
-position = Vector2( -7149.67, 415.418 )
+position = Vector2( -7152.3, 422.426 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 4 )
@@ -621,6 +688,11 @@ texture = ExtResource( 4 )
 
 [node name="end15" type="Sprite" parent="Ground"]
 position = Vector2( -10570.8, -812.384 )
+rotation = 2.53518e-006
+texture = ExtResource( 4 )
+
+[node name="end18" type="Sprite" parent="Ground"]
+position = Vector2( -7551.87, -839.554 )
 rotation = 2.53518e-006
 texture = ExtResource( 4 )
 
@@ -702,6 +774,10 @@ shape = SubResource( 6 )
 position = Vector2( -9680.39, -767.632 )
 shape = SubResource( 6 )
 
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -6661.49, -794.802 )
+shape = SubResource( 6 )
+
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -8021.58, 286.147 )
 shape = SubResource( 6 )
@@ -710,12 +786,16 @@ shape = SubResource( 6 )
 position = Vector2( -9680.39, -446.019 )
 shape = SubResource( 6 )
 
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -6661.49, -473.189 )
+shape = SubResource( 6 )
+
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -8938.23, 449.845 )
 shape = SubResource( 31 )
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -11439.6, 42.5256 )
+position = Vector2( -11413.7, 44.3762 )
 shape = SubResource( 6 )
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="Ground"]
@@ -731,7 +811,11 @@ position = Vector2( -8899, 141.425 )
 shape = SubResource( 32 )
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -10557.8, -590.741 )
+position = Vector2( -10557.8, -606.325 )
+shape = SubResource( 32 )
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -7538.92, -633.495 )
 shape = SubResource( 32 )
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="Ground"]
@@ -739,11 +823,19 @@ position = Vector2( -7154.95, 139.266 )
 shape = SubResource( 32 )
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -8813.76, -592.899 )
+position = Vector2( -8813.76, -608.483 )
+shape = SubResource( 32 )
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -5794.86, -635.654 )
 shape = SubResource( 32 )
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -10552.4, 689.919 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -12258.7, -607.626 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Ground"]
@@ -840,6 +932,7 @@ rotation = 3.49066
 enabled = true
 
 [node name="Hooks" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Hook1" type="Sprite" parent="Hooks"]
 position = Vector2( 4066.51, 247.875 )
@@ -869,7 +962,7 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 1 )
 
 [node name="Hook4" type="Sprite" parent="Hooks"]
-position = Vector2( -11525.4, -491.169 )
+position = Vector2( -11520, -512.905 )
 texture = ExtResource( 15 )
 
 [node name="floatr2" type="Sprite" parent="Hooks/Hook4"]
@@ -878,10 +971,37 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 1 )
 
 [node name="Hook5" type="Sprite" parent="Hooks"]
-position = Vector2( -10993.5, -805.771 )
+position = Vector2( -11004.3, -718.826 )
 texture = ExtResource( 15 )
 
 [node name="floatr2" type="Sprite" parent="Hooks/Hook5"]
+position = Vector2( 2.44348, -34.2095 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+
+[node name="Hook8" type="Sprite" parent="Hooks"]
+position = Vector2( -8184.06, -1023.13 )
+texture = ExtResource( 15 )
+
+[node name="floatr2" type="Sprite" parent="Hooks/Hook8"]
+position = Vector2( 2.44348, -34.2095 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+
+[node name="Hook6" type="Sprite" parent="Hooks"]
+position = Vector2( -10092.6, -200.977 )
+texture = ExtResource( 15 )
+
+[node name="floatr2" type="Sprite" parent="Hooks/Hook6"]
+position = Vector2( 2.44348, -34.2095 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+
+[node name="Hook7" type="Sprite" parent="Hooks"]
+position = Vector2( -9379.96, -236.386 )
+texture = ExtResource( 15 )
+
+[node name="floatr2" type="Sprite" parent="Hooks/Hook7"]
 position = Vector2( 2.44348, -34.2095 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 1 )
@@ -895,74 +1015,49 @@ position = Vector2( 533.268, 552.313 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 16 )
 
-[node name="lock" type="Sprite" parent="."]
-editor/display_folded = true
-position = Vector2( 471.057, 536.757 )
-texture = ExtResource( 16 )
-region_enabled = true
-region_rect = Rect2( 5.5, 15.25, 28.75, 26 )
-script = ExtResource( 17 )
-
-[node name="lock2" type="Sprite" parent="lock"]
-position = Vector2( -0.647125, -13.912 )
-scale = Vector2( 0.83, 1 )
-z_index = -1
-texture = ExtResource( 16 )
-region_enabled = true
-region_rect = Rect2( 7.25, 2.375, 24.125, 12.875 )
-
-[node name="Area2D" type="Area2D" parent="lock"]
-editor/display_folded = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="lock/Area2D"]
-shape = SubResource( 17 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="lock"]
-anims/open = SubResource( 18 )
-
 [node name="Waters" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Water2" parent="Waters" instance=ExtResource( 18 )]
+[node name="Water2" parent="Waters" instance=ExtResource( 16 )]
 position = Vector2( 1026.8, 732.582 )
 scale = Vector2( 1, 0.464971 )
 offset2 = 300
 
-[node name="Water3" parent="Waters" instance=ExtResource( 18 )]
+[node name="Water3" parent="Waters" instance=ExtResource( 16 )]
 position = Vector2( -881.524, 822.029 )
 scale = Vector2( 1, 0.327025 )
 offset2 = 170
 
-[node name="Water" parent="Waters" instance=ExtResource( 18 )]
+[node name="Water" parent="Waters" instance=ExtResource( 16 )]
 position = Vector2( 67.4976, 737.51 )
 scale = Vector2( 1, 0.477343 )
 offset2 = 300
 
-[node name="Water4" parent="Waters" instance=ExtResource( 18 )]
+[node name="Water4" parent="Waters" instance=ExtResource( 16 )]
 position = Vector2( -1840.43, 822.367 )
 scale = Vector2( 1, 0.324087 )
 offset2 = 170
 
-[node name="Water5" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( -6486.46, 822.367 )
-scale = Vector2( 1.33707, 0.324087 )
+[node name="Water5" parent="Waters" instance=ExtResource( 16 )]
+position = Vector2( -6490.76, 823.595 )
+scale = Vector2( 1.34346, 0.324087 )
 offset2 = 170
 
 [node name="Enemies" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Enemy" parent="Enemies" instance=ExtResource( 19 )]
+[node name="Enemy" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( -1104.15, 660.039 )
 health = 10
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource( 19 )]
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( -9557.78, 315.75 )
 health = 10
 
-[node name="Enemy2" parent="Enemies" instance=ExtResource( 20 )]
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 18 )]
 position = Vector2( -3123.18, 665.23 )
 
-[node name="Enemy4" parent="Enemies" instance=ExtResource( 20 )]
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 18 )]
 position = Vector2( -9923.78, 328.391 )
 
 [node name="Day Night cycle" type="AnimationPlayer" parent="."]
@@ -972,7 +1067,6 @@ autoplay = "day night"
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="Day Night cycle"]
 position = Vector2( -0.429321, 1.7171 )
-color = Color( 0.986159, 0.977163, 0.964475, 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Day Night cycle"]
 editor/display_folded = true
@@ -992,32 +1086,32 @@ motion_scale = Vector2( 0.05, 1 )
 
 [node name="Node2D" type="Node2D" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6"]
 editor/display_folded = true
-position = Vector2( 0, -407.322 )
+position = Vector2( 0, -423.161 )
 
 [node name="Sprite" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D"]
 modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
 position = Vector2( 368.58, 414.416 )
 rotation = -1.5708
-texture = ExtResource( 21 )
+texture = ExtResource( 19 )
 
 [node name="Sprite2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D"]
 modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
 material = SubResource( 22 )
 position = Vector2( 368.58, 414.416 )
 rotation = -1.5708
-texture = ExtResource( 21 )
+texture = ExtResource( 19 )
 
 [node name="Node2D2" type="Node2D" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6"]
-position = Vector2( -89.6261, -1258.26 )
+position = Vector2( -89.6261, -1273.22 )
 
 [node name="moon" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
 position = Vector2( 315.087, 256.956 )
-texture = ExtResource( 22 )
+texture = ExtResource( 20 )
 
 [node name="moon2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
 material = SubResource( 23 )
 position = Vector2( 315.087, 256.956 )
-texture = ExtResource( 22 )
+texture = ExtResource( 20 )
 
 [node name="moon3" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/Node2D2"]
 self_modulate = Color( 1, 1, 1, 0.235294 )
@@ -1034,7 +1128,7 @@ motion_mirroring = Vector2( 960, 0 )
 
 [node name="cloud" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer4"]
 position = Vector2( 484.972, -56.5522 )
-texture = ExtResource( 23 )
+texture = ExtResource( 21 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
 editor/display_folded = true
@@ -1044,12 +1138,12 @@ motion_mirroring = Vector2( 960, 0 )
 
 [node name="mountains" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 479.837, 294.725 )
-texture = ExtResource( 24 )
+texture = ExtResource( 22 )
 
 [node name="mountains2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 479.837, 693.746 )
 scale = Vector2( 1, -0.718795 )
-texture = ExtResource( 24 )
+texture = ExtResource( 22 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
 position = Vector2( -983.743, 3.34045 )
@@ -1059,7 +1153,7 @@ motion_scale = Vector2( 0.6, 1 )
 position = Vector2( 936.446, 468.843 )
 rotation = -0.0593387
 scale = Vector2( 1, 0.932 )
-texture = ExtResource( 25 )
+texture = ExtResource( 23 )
 offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3/pyrate ship"]
@@ -1070,7 +1164,7 @@ autoplay = "New Anim"
 position = Vector2( 934.546, 529.643 )
 rotation = -0.0593387
 scale = Vector2( 1, -0.932 )
-texture = ExtResource( 25 )
+texture = ExtResource( 23 )
 offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Day Night cycle/ParallaxBackground/ParallaxLayer3/pyrate ship2"]
@@ -1081,19 +1175,19 @@ autoplay = "New Anim"
 motion_scale = Vector2( 0.75, 1 )
 motion_mirroring = Vector2( 1024, 0 )
 
-[node name="Water3" parent="Day Night cycle/ParallaxBackground/ParallaxLayer5" instance=ExtResource( 18 )]
+[node name="Water3" parent="Day Night cycle/ParallaxBackground/ParallaxLayer5" instance=ExtResource( 16 )]
 position = Vector2( 480.544, 620.319 )
 scale = Vector2( 1, 0.473 )
 offset2 = 300
 
-[node name="Water4" parent="Day Night cycle/ParallaxBackground/ParallaxLayer5" instance=ExtResource( 18 )]
+[node name="Water4" parent="Day Night cycle/ParallaxBackground/ParallaxLayer5" instance=ExtResource( 16 )]
 position = Vector2( 1473.88, 620.32 )
 scale = Vector2( 1.07508, 0.473 )
 offset2 = 350
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Day Night cycle/ParallaxBackground"]
 position = Vector2( -0.429321, 1.7171 )
-color = Color( 0.925029, 0.953403, 0.949711, 1 )
+color = Color( 0.92549, 0.964706, 0.968627, 1 )
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="Day Night cycle"]
 editor/display_folded = true
@@ -1109,7 +1203,7 @@ motion_mirroring = Vector2( 960, 0 )
 [node name="Sprite" type="Sprite" parent="Day Night cycle/ParallaxBackground2/ParallaxLayer"]
 position = Vector2( 553.693, 825.189 )
 scale = Vector2( 1.11631, 1 )
-texture = ExtResource( 26 )
+texture = ExtResource( 24 )
 
 [node name="grass" type="TextureRect" parent="Day Night cycle/ParallaxBackground2/ParallaxLayer/Sprite"]
 margin_left = -487.0
@@ -1130,10 +1224,9 @@ expand = true
 stretch_mode = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Day Night cycle"]
-editor/display_folded = true
 
-[node name="mask" parent="Day Night cycle/CanvasLayer" instance=ExtResource( 27 )]
-modulate = Color( 1, 1, 1, 0.0232558 )
+[node name="mask" parent="Day Night cycle/CanvasLayer" instance=ExtResource( 25 )]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 478.924, 282.43 )
 scale = Vector2( 1, 1 )
 
@@ -1142,12 +1235,12 @@ margin_left = 37.3235
 margin_top = 52.4861
 margin_right = 77.3235
 margin_bottom = 66.4861
-custom_fonts/font = ExtResource( 28 )
+custom_fonts/font = ExtResource( 26 )
 text = "00:00"
-script = ExtResource( 29 )
+script = ExtResource( 27 )
 
-[node name="Mont" parent="." instance=ExtResource( 30 )]
-position = Vector2( -5019.41, 683.409 )
+[node name="Mont" parent="." instance=ExtResource( 28 )]
+position = Vector2( -8054.19, -89.9597 )
 
 [node name="Boxes" type="Node2D" parent="."]
 editor/display_folded = true
@@ -1155,113 +1248,213 @@ editor/display_folded = true
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true
 
-[node name="Box2" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box2" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box9" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box16" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box3" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box10" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box15" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box4" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box7" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box13" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box5" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box8" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box12" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box6" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box11" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box14" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 1288.2, 437.656 )
 
-[node name="Box_bolts" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box_bolts" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 
-[node name="Box_health" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box_health" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 300.798, 556.307 )
 object = "ammo"
 
-[node name="Box_ammo" parent="Boxes/Boxes" instance=ExtResource( 31 )]
+[node name="Box_ammo" parent="Boxes/Boxes" instance=ExtResource( 29 )]
 position = Vector2( 193.494, 556.307 )
 object = "health"
 
 [node name="Boxes2" type="Node2D" parent="Boxes"]
+editor/display_folded = true
 position = Vector2( -5245.46, 164.234 )
 
-[node name="Box2" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box2" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box9" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box16" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box3" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box10" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box15" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box4" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box7" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box13" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box5" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box8" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box12" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box6" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box11" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes2" instance=ExtResource( 31 )]
+[node name="Box14" parent="Boxes/Boxes2" instance=ExtResource( 29 )]
+position = Vector2( 1288.2, 437.656 )
+
+[node name="Boxes3" type="Node2D" parent="Boxes"]
+editor/display_folded = true
+position = Vector2( -10863.1, -1341.04 )
+
+[node name="Box2" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1073.09, 541.343 )
+
+[node name="Box9" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1073.09, 493.369 )
+
+[node name="Box16" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1073.09, 437.656 )
+
+[node name="Box3" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1121.83, 541.343 )
+
+[node name="Box10" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1121.83, 493.369 )
+
+[node name="Box15" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1121.83, 437.656 )
+
+[node name="Box4" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1172.9, 541.343 )
+
+[node name="Box7" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1172.9, 493.369 )
+
+[node name="Box13" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1172.9, 437.656 )
+
+[node name="Box5" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1229.39, 541.343 )
+
+[node name="Box8" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1229.39, 493.369 )
+
+[node name="Box12" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1229.39, 437.656 )
+
+[node name="Box6" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1288.2, 541.343 )
+
+[node name="Box11" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1288.2, 493.369 )
+
+[node name="Box14" parent="Boxes/Boxes3" instance=ExtResource( 29 )]
+position = Vector2( 1288.2, 437.656 )
+
+[node name="Boxes4" type="Node2D" parent="Boxes"]
+editor/display_folded = true
+position = Vector2( -7879.42, -1368.21 )
+
+[node name="Box2" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1073.09, 541.343 )
+
+[node name="Box9" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1073.09, 493.369 )
+
+[node name="Box16" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1073.09, 437.656 )
+
+[node name="Box3" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1121.83, 541.343 )
+
+[node name="Box10" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1121.83, 493.369 )
+
+[node name="Box15" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1121.83, 437.656 )
+
+[node name="Box4" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1172.9, 541.343 )
+
+[node name="Box7" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1172.9, 493.369 )
+
+[node name="Box13" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1172.9, 437.656 )
+
+[node name="Box5" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1229.39, 541.343 )
+
+[node name="Box8" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1229.39, 493.369 )
+
+[node name="Box12" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1229.39, 437.656 )
+
+[node name="Box6" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1288.2, 541.343 )
+
+[node name="Box11" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
+position = Vector2( 1288.2, 493.369 )
+
+[node name="Box14" parent="Boxes/Boxes4" instance=ExtResource( 29 )]
 position = Vector2( 1288.2, 437.656 )
 
 [node name="Platfroms" type="Node2D" parent="."]
 editor/display_folded = true
 
 [node name="Platform" type="Node2D" parent="Platfroms"]
+editor/display_folded = true
 position = Vector2( -6126.68, 371.89 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform"]
@@ -1269,7 +1462,8 @@ autoplay = "Movment2"
 anims/Movment2 = SubResource( 26 )
 anims/movment = SubResource( 27 )
 
-[node name="Platform2" parent="Platfroms/Platform" instance=ExtResource( 32 )]
+[node name="Platform2" parent="Platfroms/Platform" instance=ExtResource( 30 )]
+editor/display_folded = true
 position = Vector2( 183.272, 355.398 )
 
 [node name="grass2" type="Sprite" parent="Platfroms/Platform/Platform2"]
@@ -1277,7 +1471,40 @@ position = Vector2( 0, -11.2782 )
 scale = Vector2( 0.643678, 0.644 )
 texture = ExtResource( 1 )
 
+[node name="Platform3" type="Node2D" parent="Platfroms"]
+editor/display_folded = true
+position = Vector2( -9729.21, -333.024 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform3"]
+autoplay = "Movment2"
+anims/Movment2 = SubResource( 33 )
+anims/movment = SubResource( 34 )
+
+[node name="Platform2" parent="Platfroms/Platform3" instance=ExtResource( 30 )]
+
+[node name="grass2" type="Sprite" parent="Platfroms/Platform3/Platform2"]
+position = Vector2( 0, -11.2782 )
+scale = Vector2( 0.643678, 0.644 )
+texture = ExtResource( 1 )
+
+[node name="Platform4" type="Node2D" parent="Platfroms"]
+editor/display_folded = true
+position = Vector2( -9293, -336.629 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform4"]
+autoplay = "Movment2"
+anims/Movment2 = SubResource( 35 )
+anims/movment = SubResource( 36 )
+
+[node name="Platform2" parent="Platfroms/Platform4" instance=ExtResource( 30 )]
+
+[node name="grass2" type="Sprite" parent="Platfroms/Platform4/Platform2"]
+position = Vector2( 0, -11.2782 )
+scale = Vector2( 0.643678, 0.644 )
+texture = ExtResource( 1 )
+
 [node name="Platform2" type="Node2D" parent="Platfroms"]
+editor/display_folded = true
 position = Vector2( -6817.66, 373.322 )
 
 [node name="Platform2" type="KinematicBody2D" parent="Platfroms/Platform2"]
@@ -1293,7 +1520,7 @@ anims/Movment2 = SubResource( 29 )
 anims/movment = SubResource( 30 )
 
 [node name="Platform Sticker 2" type="Node2D" parent="Platfroms/Platform2/Platform2"]
-script = ExtResource( 33 )
+script = ExtResource( 31 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Platfroms/Platform2/Platform2/Platform Sticker 2"]
 position = Vector2( -50, -20 )
@@ -1323,7 +1550,7 @@ editor/display_folded = true
 position = Vector2( 669.711, 618.652 )
 enabled = true
 cast_to = Vector2( 300, 0 )
-script = ExtResource( 34 )
+script = ExtResource( 32 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing"]
 position = Vector2( 0, -28.7293 )
@@ -1335,7 +1562,7 @@ editor/display_folded = true
 position = Vector2( -2138.86, 731.392 )
 enabled = true
 cast_to = Vector2( 300, 0 )
-script = ExtResource( 34 )
+script = ExtResource( 32 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing2"]
 position = Vector2( 0, -28.7293 )
@@ -1343,15 +1570,13 @@ enabled = true
 cast_to = Vector2( 300, 0 )
 
 [node name="Swwing3" type="RayCast2D" parent="Swin"]
-position = Vector2( -7116.78, 734.034 )
+position = Vector2( -7129.06, 773.322 )
 enabled = true
 cast_to = Vector2( 1300, 0 )
-script = ExtResource( 34 )
+script = ExtResource( 32 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing3"]
 position = Vector2( 0, -28.7293 )
 enabled = true
 cast_to = Vector2( 1300, 0 )
 
-[connection signal="body_shape_entered" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="lock/Area2D" to="lock" method="_on_Area2D_body_shape_exited"]
