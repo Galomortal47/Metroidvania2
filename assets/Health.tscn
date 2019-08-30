@@ -114,6 +114,7 @@ anims/Damage = SubResource( 2 )
 anims/invicible = SubResource( 3 )
 
 [node name="heart" type="Sprite" parent="."]
+visible = false
 position = Vector2( 40.6903, -36.0233 )
 texture = ExtResource( 4 )
 

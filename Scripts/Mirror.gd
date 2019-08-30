@@ -1,7 +1,7 @@
 extends Sprite
 # var a = 2
 # var b = "text"
-export var offset2 = 135
+export var offset2 =270
 export var size = Vector2( 960, 540)
 var player
 

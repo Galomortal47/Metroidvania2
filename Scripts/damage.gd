@@ -1,6 +1,6 @@
 extends RayCast2D
 
-export var damage = 3
+export var damage = 1
 export var attack_range = 100
 export var  screen_shake = 15
 export var jump = 400

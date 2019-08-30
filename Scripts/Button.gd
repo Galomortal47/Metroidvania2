@@ -1,6 +1,6 @@
 extends Button
 
-export var scene = "res://Test/Test.tscn"
+export var scene = "res://Test/Level 1.tscn"
 
 func _on_Button_button_down():
 	get_tree().change_scene(scene)

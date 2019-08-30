@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
@@ -9,25 +9,26 @@
 [ext_resource path="res://Scripts/Unlock Minigame.gd" type="Script" id=7]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=8]
 [ext_resource path="res://Scripts/Hook.gd" type="Script" id=9]
-[ext_resource path="res://sprites/box.png" type="Texture" id=10]
-[ext_resource path="res://Scripts/Reload.gd" type="Script" id=11]
-[ext_resource path="res://sprites/ammo.png" type="Texture" id=12]
-[ext_resource path="res://Scripts/Menu Items.gd" type="Script" id=13]
-[ext_resource path="res://icon.png" type="Texture" id=14]
-[ext_resource path="res://Scripts/Load_Minigame.gd" type="Script" id=15]
-[ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scripts/Coins.gd" type="Script" id=17]
-[ext_resource path="res://Scripts/Save.gd" type="Script" id=18]
-[ext_resource path="res://sprites/char.png" type="Texture" id=19]
-[ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=21]
-[ext_resource path="res://Scripts/Air Meter.gd" type="Script" id=22]
-[ext_resource path="res://assets/Sword.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Scripts/Audio Manager.gd" type="Script" id=24]
-[ext_resource path="res://Sonds/footsteps.ogg" type="AudioStream" id=25]
-[ext_resource path="res://Sonds/roll.ogg" type="AudioStream" id=26]
-[ext_resource path="res://Sonds/jump.ogg" type="AudioStream" id=27]
-[ext_resource path="res://Sonds/water.ogg" type="AudioStream" id=28]
+[ext_resource path="res://Scripts/Reload.gd" type="Script" id=10]
+[ext_resource path="res://sprites/ammo.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/Menu Items.gd" type="Script" id=12]
+[ext_resource path="res://icon.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/Load_Minigame.gd" type="Script" id=14]
+[ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scripts/Coins.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/Save.gd" type="Script" id=17]
+[ext_resource path="res://sprites/char.png" type="Texture" id=18]
+[ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=20]
+[ext_resource path="res://Scripts/Air Meter.gd" type="Script" id=21]
+[ext_resource path="res://assets/Sword.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scripts/Audio Manager.gd" type="Script" id=23]
+[ext_resource path="res://Sonds/footsteps.ogg" type="AudioStream" id=24]
+[ext_resource path="res://Sonds/roll.ogg" type="AudioStream" id=25]
+[ext_resource path="res://Sonds/jump.ogg" type="AudioStream" id=26]
+[ext_resource path="res://Sonds/water.ogg" type="AudioStream" id=27]
+[ext_resource path="res://sprites/touchscreen/arrow key.png" type="Texture" id=28]
+[ext_resource path="res://sprites/touchscreen/buttons.png" type="Texture" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
@@ -578,7 +579,6 @@ timer = 0.5
 gravity = 25
 curve = -600
 lifespan = 5.0
-pierce = true
 particle_size = 45
 explosion = true
 ammo = 10
@@ -647,7 +647,6 @@ position = Vector2( 512, 165 )
 rotation = -1.74846e-007
 points = PoolVector2Array( -150, 0, 150, 0 )
 default_color = Color( 1, 0.796078, 0, 1 )
-texture_mode = 1021447008
 
 [node name="Label" type="Label" parent="Weapons/Key"]
 margin_left = 491.537
@@ -659,16 +658,13 @@ text = "0/100"
 autowrap = true
 
 [node name="Hook" type="Node2D" parent="Weapons"]
-editor/display_folded = true
 script = ExtResource( 9 )
 
 [node name="Line2D" type="Line2D" parent="Weapons/Hook"]
 position = Vector2( 2.71121, -3.16309 )
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 3.0
-default_color = Color( 1, 1, 1, 1 )
-texture = ExtResource( 10 )
-texture_mode = 1021447008
+default_color = Color( 0.458824, 0.368627, 0.160784, 1 )
 
 [node name="Label" type="Label" parent="Weapons"]
 editor/display_folded = true
@@ -678,11 +674,11 @@ margin_right = 116.154
 margin_bottom = -3.14005
 custom_fonts/font = ExtResource( 8 )
 text = "00/00"
-script = ExtResource( 11 )
+script = ExtResource( 10 )
 
 [node name="ammo" type="Sprite" parent="Weapons/Label"]
 position = Vector2( -9.95112, 6.13795 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="Line2D" type="Line2D" parent="Weapons/Label"]
 position = Vector2( 8.70443, 0 )
@@ -690,13 +686,12 @@ z_index = -1
 points = PoolVector2Array( -25, 7, 60, 7 )
 width = 13.0
 default_color = Color( 0, 0, 0, 0.501961 )
-texture_mode = 1021447008
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
 editor/display_folded = true
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 
 [node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
 anims/close = SubResource( 6 )
@@ -712,7 +707,7 @@ position = Vector2( 512, 165 )
 
 [node name="icon0" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -120, 0 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 offset = Vector2( -50, 60 )
 
 [node name="Node2D" type="Node2D" parent="Menu Items/Menu/icon0"]
@@ -725,11 +720,10 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon1" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -80, -80 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="Node2D2" type="Node2D" parent="Menu Items/Menu/icon1"]
 editor/display_folded = true
@@ -741,11 +735,10 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon2" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 0, -120 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="Node2D3" type="Node2D" parent="Menu Items/Menu/icon2"]
 editor/display_folded = true
@@ -757,11 +750,10 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon3" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, -80 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="Node2D4" type="Node2D" parent="Menu Items/Menu/icon3"]
 editor/display_folded = true
@@ -773,11 +765,10 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon4" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 120, 0 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="Node2D5" type="Node2D" parent="Menu Items/Menu/icon4"]
 editor/display_folded = true
@@ -789,11 +780,10 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon5" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, 80 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="Node2D6" type="Node2D" parent="Menu Items/Menu/icon5"]
 editor/display_folded = true
@@ -805,11 +795,10 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon6" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 0, 120 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="Node2D7" type="Node2D" parent="Menu Items/Menu/icon6"]
 editor/display_folded = true
@@ -821,11 +810,10 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="icon7" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( -80, 80 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="Node2D8" type="Node2D" parent="Menu Items/Menu/icon7"]
 editor/display_folded = true
@@ -837,7 +825,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="Polygon2D" type="Polygon2D" parent="Menu Items/Menu"]
 scale = Vector2( 1.2, 1.2 )
@@ -860,7 +847,6 @@ position = Vector2( 0, 29.9285 )
 scale = Vector2( 0.71, 1 )
 points = PoolVector2Array( -50, 40, 50, 40 )
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 begin_cap_mode = 2
 end_cap_mode = 2
 
@@ -878,57 +864,54 @@ end_cap_mode = 2
 editor/display_folded = true
 modulate = Color( 1, 0, 0, 0 )
 position = Vector2( 15.1387, -12.4528 )
-script = ExtResource( 15 )
+script = ExtResource( 14 )
 
 [node name="Line2D" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 2.64075, -51.4948 )
 points = PoolVector2Array( 0, 0, 100, 0 )
 width = 5.0
 default_color = Color( 0, 0, 0, 0.501961 )
-texture_mode = 1021447008
 
 [node name="Line2D2" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 51.392, -56.7652 )
 points = PoolVector2Array( 0, 0, 0, 10 )
 default_color = Color( 1, 1, 1, 0.501961 )
-texture_mode = 1021447008
 
 [node name="Line2D3" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 101.358, -61.2451 )
 points = PoolVector2Array( 0, 0, 0, 20 )
 width = 3.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="Minigame" type="AnimationPlayer" parent="Load_Minigame"]
 anims/Failure = SubResource( 11 )
 anims/Load = SubResource( 12 )
 anims/Succes = SubResource( 13 )
 
-[node name="Coins" parent="." instance=ExtResource( 16 )]
-script = ExtResource( 17 )
+[node name="Coins" parent="." instance=ExtResource( 15 )]
+script = ExtResource( 16 )
 
 [node name="Save" type="Node" parent="."]
-script = ExtResource( 18 )
+script = ExtResource( 17 )
 
 [node name="char" type="Sprite" parent="."]
 visible = false
 position = Vector2( 5.23666, -26.3542 )
-texture = ExtResource( 19 )
+texture = ExtResource( 18 )
 
-[node name="Scale" parent="." instance=ExtResource( 20 )]
+[node name="Scale" parent="." instance=ExtResource( 19 )]
 
-[node name="Shadow" parent="." instance=ExtResource( 20 )]
+[node name="Shadow" parent="." instance=ExtResource( 19 )]
 modulate = Color( 0, 0, 0, 0.588235 )
 position = Vector2( 0, 36.0592 )
 scale = Vector2( 1, -0.3 )
-script = ExtResource( 21 )
+script = ExtResource( 20 )
 
 [node name="air meter" type="CanvasLayer" parent="."]
 editor/display_folded = true
 scale = Vector2( 0.6, 0.6 )
 transform = Transform2D( 0.6, 0, 0, 0.6, 0, 0 )
-script = ExtResource( 22 )
+script = ExtResource( 21 )
 
 [node name="Line2D" type="Line2D" parent="air meter"]
 position = Vector2( 698.452, 571.801 )
@@ -936,7 +919,6 @@ scale = Vector2( 0.4, 0.2 )
 points = PoolVector2Array( 900, 95, 900, 310 )
 width = 50.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
 
 [node name="Label" type="Label" parent="air meter"]
 modulate = Color( 0, 0, 0, 1 )
@@ -949,27 +931,117 @@ text = "A
 I
 R"
 
-[node name="Roll" parent="." instance=ExtResource( 23 )]
-damage = 3
+[node name="Roll" parent="." instance=ExtResource( 22 )]
+damage = 1
 
 [node name="Audio Manager" type="Node2D" parent="."]
 editor/display_folded = true
-script = ExtResource( 24 )
+script = ExtResource( 23 )
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="Audio Manager"]
-stream = ExtResource( 25 )
+stream = ExtResource( 24 )
 autoplay = true
 
 [node name="Roll" type="AudioStreamPlayer" parent="Audio Manager"]
-stream = ExtResource( 26 )
+stream = ExtResource( 25 )
 autoplay = true
 
 [node name="Jump" type="AudioStreamPlayer" parent="Audio Manager"]
-stream = ExtResource( 27 )
+stream = ExtResource( 26 )
 autoplay = true
 
 [node name="Water" type="AudioStreamPlayer" parent="Audio Manager"]
-stream = ExtResource( 28 )
+stream = ExtResource( 27 )
 autoplay = true
+
+[node name="TouchScreen" type="CanvasLayer" parent="."]
+editor/display_folded = true
+
+[node name="Controls" type="Node2D" parent="TouchScreen"]
+visible = false
+
+[node name="Left" type="TouchScreenButton" parent="TouchScreen/Controls"]
+position = Vector2( 75.5191, 509.316 )
+rotation = -1.5708
+normal = ExtResource( 28 )
+action = "ui_left"
+
+[node name="Right" type="TouchScreenButton" parent="TouchScreen/Controls"]
+position = Vector2( 216.545, 442.994 )
+rotation = 1.5708
+normal = ExtResource( 28 )
+action = "ui_right"
+
+[node name="X" type="TouchScreenButton" parent="TouchScreen/Controls"]
+editor/display_folded = true
+self_modulate = Color( 0.141176, 0.172549, 0.980392, 1 )
+position = Vector2( 758.504, 383.636 )
+rotation = 1.5708
+normal = ExtResource( 29 )
+action = "ui_roll"
+
+[node name="X" type="Label" parent="TouchScreen/Controls/X"]
+margin_left = 58.7072
+margin_top = 17.9163
+margin_right = 99.7072
+margin_bottom = 31.9163
+rect_rotation = 90.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = ExtResource( 8 )
+text = "X"
+
+[node name="B" type="TouchScreenButton" parent="TouchScreen/Controls"]
+editor/display_folded = true
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 906.054, 383.636 )
+rotation = 1.5708
+normal = ExtResource( 29 )
+action = "ui_cancel"
+
+[node name="B" type="Label" parent="TouchScreen/Controls/B"]
+margin_left = 9.05573
+margin_top = 42.7281
+margin_right = 50.0557
+margin_bottom = 56.7281
+rect_rotation = 270.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = ExtResource( 8 )
+text = "B"
+
+[node name="Y" type="TouchScreenButton" parent="TouchScreen/Controls"]
+editor/display_folded = true
+self_modulate = Color( 0.933333, 0.803922, 0.211765, 1 )
+position = Vector2( 832.705, 305.671 )
+rotation = 1.5708
+normal = ExtResource( 29 )
+action = "ui_select"
+
+[node name="Y" type="Label" parent="TouchScreen/Controls/Y"]
+margin_left = 9.08124
+margin_top = 42.6484
+margin_right = 50.0812
+margin_bottom = 56.6484
+rect_rotation = 270.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = ExtResource( 8 )
+text = "Y"
+
+[node name="A" type="TouchScreenButton" parent="TouchScreen/Controls"]
+editor/display_folded = true
+self_modulate = Color( 0.168627, 0.952941, 0.145098, 1 )
+position = Vector2( 832.705, 464.686 )
+rotation = 1.5708
+normal = ExtResource( 29 )
+action = "ui_accept"
+
+[node name="Y2" type="Label" parent="TouchScreen/Controls/A"]
+margin_left = 9.83096
+margin_top = 46.6096
+margin_right = 50.831
+margin_bottom = 60.6096
+rect_rotation = 270.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = ExtResource( 8 )
+text = "A"
 
 [connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]

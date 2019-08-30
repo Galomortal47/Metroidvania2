@@ -117,8 +117,7 @@ func ledge_grab():
 
 func jump():
 	if Input.is_action_pressed("ui_accept") and jump_aux > 0:
-		if not Input.is_action_pressed("ui_roll"):
-			motion.y -= jump * Engine.get_time_scale()
+		motion.y -= jump * Engine.get_time_scale()
 
 func move():
 	if Input.is_action_pressed("ui_right"):
