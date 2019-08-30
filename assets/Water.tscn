@@ -74,7 +74,7 @@ void fragment(){
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-shader_param/blue_tint = Color( 0.478431, 0.705882, 0.721569, 1 )
+shader_param/blue_tint = Color( 0.45098, 0.682353, 0.698039, 1 )
 shader_param/sprite_scale = Vector2( 1, 0.233 )
 shader_param/scale_x = 0.5
 
@@ -96,7 +96,6 @@ script = ExtResource( 2 )
 
 [node name="Mirror5" type="Sprite" parent="."]
 material = SubResource( 2 )
-position = Vector2( -0.00012207, 0 )
 z_index = 4096
 texture = SubResource( 4 )
 region_enabled = true
