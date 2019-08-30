@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/sparkle.png-3b8036349814d91f8265031bd47464fc.s3tc.stex"
 path.etc2="res://.import/sparkle.png-3b8036349814d91f8265031bd47464fc.etc2.stex"
+path.etc="res://.import/sparkle.png-3b8036349814d91f8265031bd47464fc.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sprites/sparkle.png"
-dest_files=[ "res://.import/sparkle.png-3b8036349814d91f8265031bd47464fc.s3tc.stex", "res://.import/sparkle.png-3b8036349814d91f8265031bd47464fc.etc2.stex" ]
+dest_files=[ "res://.import/sparkle.png-3b8036349814d91f8265031bd47464fc.s3tc.stex", "res://.import/sparkle.png-3b8036349814d91f8265031bd47464fc.etc2.stex", "res://.import/sparkle.png-3b8036349814d91f8265031bd47464fc.etc.stex" ]
 
 [params]
 

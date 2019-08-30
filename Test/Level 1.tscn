@@ -800,7 +800,6 @@ position = Vector2( -9923.78, 328.391 )
 autoplay = ""
 
 [node name="Boxes" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true

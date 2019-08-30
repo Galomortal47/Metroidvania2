@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
@@ -15,20 +15,19 @@
 [ext_resource path="res://icon.png" type="Texture" id=13]
 [ext_resource path="res://Scripts/Load_Minigame.gd" type="Script" id=14]
 [ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scripts/Coins.gd" type="Script" id=16]
-[ext_resource path="res://Scripts/Save.gd" type="Script" id=17]
-[ext_resource path="res://sprites/char.png" type="Texture" id=18]
-[ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=20]
-[ext_resource path="res://Scripts/Air Meter.gd" type="Script" id=21]
-[ext_resource path="res://assets/Sword.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Scripts/Audio Manager.gd" type="Script" id=23]
-[ext_resource path="res://Sonds/footsteps.ogg" type="AudioStream" id=24]
-[ext_resource path="res://Sonds/roll.ogg" type="AudioStream" id=25]
-[ext_resource path="res://Sonds/jump.ogg" type="AudioStream" id=26]
-[ext_resource path="res://Sonds/water.ogg" type="AudioStream" id=27]
-[ext_resource path="res://sprites/touchscreen/arrow key.png" type="Texture" id=28]
-[ext_resource path="res://sprites/touchscreen/buttons.png" type="Texture" id=29]
+[ext_resource path="res://Scripts/Save.gd" type="Script" id=16]
+[ext_resource path="res://sprites/char.png" type="Texture" id=17]
+[ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=19]
+[ext_resource path="res://Scripts/Air Meter.gd" type="Script" id=20]
+[ext_resource path="res://assets/Sword.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scripts/Audio Manager.gd" type="Script" id=22]
+[ext_resource path="res://Sonds/footsteps.ogg" type="AudioStream" id=23]
+[ext_resource path="res://Sonds/roll.ogg" type="AudioStream" id=24]
+[ext_resource path="res://Sonds/jump.ogg" type="AudioStream" id=25]
+[ext_resource path="res://Sonds/water.ogg" type="AudioStream" id=26]
+[ext_resource path="res://sprites/touchscreen/arrow key.png" type="Texture" id=27]
+[ext_resource path="res://sprites/touchscreen/buttons.png" type="Texture" id=28]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
@@ -554,6 +553,7 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
 [node name="Srinking lamp" type="Node2D" parent="Weapons"]
@@ -755,7 +755,7 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1021447008
+texture_mode = 0
 
 [node name="icon3" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, -80 )
@@ -835,6 +835,7 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
+texture_mode = 0
 
 [node name="Polygon2D" type="Polygon2D" parent="Menu Items/Menu"]
 scale = Vector2( 1.2, 1.2 )
@@ -903,29 +904,28 @@ anims/Load = SubResource( 12 )
 anims/Succes = SubResource( 13 )
 
 [node name="Coins" parent="." instance=ExtResource( 15 )]
-script = ExtResource( 16 )
 
 [node name="Save" type="Node" parent="."]
-script = ExtResource( 17 )
+script = ExtResource( 16 )
 
 [node name="char" type="Sprite" parent="."]
 visible = false
 position = Vector2( 5.23666, -26.3542 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 
-[node name="Scale" parent="." instance=ExtResource( 19 )]
+[node name="Scale" parent="." instance=ExtResource( 18 )]
 
-[node name="Shadow" parent="." instance=ExtResource( 19 )]
+[node name="Shadow" parent="." instance=ExtResource( 18 )]
 modulate = Color( 0, 0, 0, 0.588235 )
 position = Vector2( 0, 36.0592 )
 scale = Vector2( 1, -0.3 )
-script = ExtResource( 20 )
+script = ExtResource( 19 )
 
 [node name="air meter" type="CanvasLayer" parent="."]
 editor/display_folded = true
 scale = Vector2( 0.6, 0.6 )
 transform = Transform2D( 0.6, 0, 0, 0.6, 0, 0 )
-script = ExtResource( 21 )
+script = ExtResource( 20 )
 
 [node name="Line2D" type="Line2D" parent="air meter"]
 position = Vector2( 698.452, 571.801 )
@@ -946,30 +946,31 @@ text = "A
 I
 R"
 
-[node name="Roll" parent="." instance=ExtResource( 22 )]
+[node name="Roll" parent="." instance=ExtResource( 21 )]
 damage = 1
 
 [node name="Audio Manager" type="Node2D" parent="."]
 editor/display_folded = true
-script = ExtResource( 23 )
+script = ExtResource( 22 )
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="Audio Manager"]
-stream = ExtResource( 24 )
+stream = ExtResource( 23 )
 autoplay = true
 
 [node name="Roll" type="AudioStreamPlayer" parent="Audio Manager"]
-stream = ExtResource( 25 )
+stream = ExtResource( 24 )
 autoplay = true
 
 [node name="Jump" type="AudioStreamPlayer" parent="Audio Manager"]
-stream = ExtResource( 26 )
+stream = ExtResource( 25 )
 autoplay = true
 
 [node name="Water" type="AudioStreamPlayer" parent="Audio Manager"]
-stream = ExtResource( 27 )
+stream = ExtResource( 26 )
 autoplay = true
 
 [node name="TouchScreen" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="Controls" type="Node2D" parent="TouchScreen"]
 visible = false
@@ -977,24 +978,24 @@ visible = false
 [node name="Left" type="TouchScreenButton" parent="TouchScreen/Controls"]
 position = Vector2( 43.0205, 477.591 )
 rotation = -1.5708
-normal = ExtResource( 28 )
+normal = ExtResource( 27 )
 action = "ui_left"
 
 [node name="Up" type="TouchScreenButton" parent="TouchScreen/Controls"]
 position = Vector2( 98.7324, 358.43 )
-normal = ExtResource( 28 )
+normal = ExtResource( 27 )
 action = "ui_up"
 
 [node name="Right" type="TouchScreenButton" parent="TouchScreen/Controls"]
 position = Vector2( 216.545, 410.495 )
 rotation = 1.5708
-normal = ExtResource( 28 )
+normal = ExtResource( 27 )
 action = "ui_right"
 
 [node name="Down" type="TouchScreenButton" parent="TouchScreen/Controls"]
 position = Vector2( 163.154, 528.883 )
 rotation = 3.14159
-normal = ExtResource( 28 )
+normal = ExtResource( 27 )
 action = "ui_down"
 
 [node name="X" type="TouchScreenButton" parent="TouchScreen/Controls"]
@@ -1002,7 +1003,7 @@ editor/display_folded = true
 self_modulate = Color( 0.141176, 0.172549, 0.980392, 1 )
 position = Vector2( 758.504, 383.636 )
 rotation = 1.5708
-normal = ExtResource( 29 )
+normal = ExtResource( 28 )
 action = "ui_roll"
 
 [node name="X" type="Label" parent="TouchScreen/Controls/X"]
@@ -1020,7 +1021,7 @@ editor/display_folded = true
 self_modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 906.054, 383.636 )
 rotation = 1.5708
-normal = ExtResource( 29 )
+normal = ExtResource( 28 )
 action = "ui_cancel"
 
 [node name="B" type="Label" parent="TouchScreen/Controls/B"]
@@ -1038,7 +1039,7 @@ editor/display_folded = true
 self_modulate = Color( 0.933333, 0.803922, 0.211765, 1 )
 position = Vector2( 832.705, 305.671 )
 rotation = 1.5708
-normal = ExtResource( 29 )
+normal = ExtResource( 28 )
 action = "ui_select"
 
 [node name="Y" type="Label" parent="TouchScreen/Controls/Y"]
@@ -1056,7 +1057,7 @@ editor/display_folded = true
 self_modulate = Color( 0.168627, 0.952941, 0.145098, 1 )
 position = Vector2( 832.705, 464.686 )
 rotation = 1.5708
-normal = ExtResource( 29 )
+normal = ExtResource( 28 )
 action = "ui_accept"
 
 [node name="Y2" type="Label" parent="TouchScreen/Controls/A"]
@@ -1072,7 +1073,7 @@ text = "A"
 [node name="R1" type="TouchScreenButton" parent="TouchScreen/Controls"]
 position = Vector2( 241.085, 271.965 )
 rotation = 1.5708
-normal = ExtResource( 29 )
+normal = ExtResource( 28 )
 action = "trigger_r"
 
 [node name="Y2" type="Label" parent="TouchScreen/Controls/R1"]
@@ -1088,7 +1089,7 @@ text = "R1"
 [node name="L1" type="TouchScreenButton" parent="TouchScreen/Controls"]
 position = Vector2( 135.968, 248.442 )
 rotation = 1.5708
-normal = ExtResource( 29 )
+normal = ExtResource( 28 )
 action = "trigger_l"
 
 [node name="Y2" type="Label" parent="TouchScreen/Controls/L1"]
