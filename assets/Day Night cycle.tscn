@@ -132,7 +132,7 @@ texture = SubResource( 3 )
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -8.12115, 27.9898 )
-motion_scale = Vector2( 0.05, 1 )
+motion_scale = Vector2( 0.1, 1 )
 
 [node name="Node2D" type="Node2D" parent="ParallaxBackground/ParallaxLayer6"]
 editor/display_folded = true
@@ -197,11 +197,11 @@ motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 960, 0 )
 
 [node name="mountains" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 479.837, 294.725 )
+position = Vector2( 479.837, 296.944 )
 texture = ExtResource( 5 )
 
 [node name="mountains2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 479.837, 693.746 )
+position = Vector2( 479.837, 695.965 )
 scale = Vector2( 1, -0.718795 )
 texture = ExtResource( 5 )
 
