@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -33,9 +33,10 @@
 [ext_resource path="res://sprites/plant.png" type="Texture" id=31]
 [ext_resource path="res://Scripts/plant.gd" type="Script" id=32]
 [ext_resource path="res://sprites/light.png" type="Texture" id=33]
-[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=34]
-[ext_resource path="res://sprites/tree.png" type="Texture" id=35]
-[ext_resource path="res://sprites/bush.png" type="Texture" id=36]
+[ext_resource path="res://sprites/house.png" type="Texture" id=34]
+[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=35]
+[ext_resource path="res://sprites/tree.png" type="Texture" id=36]
+[ext_resource path="res://sprites/bush.png" type="Texture" id=37]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -1409,6 +1410,7 @@ scale = Vector2( 0.643678, 0.644 )
 texture = ExtResource( 21 )
 
 [node name="Swin" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Swwing" type="RayCast2D" parent="Swin"]
 editor/display_folded = true
@@ -1463,7 +1465,6 @@ position = Vector2( -5821.56, -831.195 )
 position = Vector2( -8867.35, -801.194 )
 
 [node name="Art" type="Node2D" parent="."]
-editor/display_folded = true
 z_index = -1
 
 [node name="mushroom" type="Sprite" parent="Art"]
@@ -1962,33 +1963,37 @@ anims/wind = SubResource( 27 )
 rotation = 3.49066
 enabled = true
 
+[node name="house" type="Sprite" parent="Art"]
+position = Vector2( 6077.42, -134.73 )
+texture = ExtResource( 34 )
+
 [node name="Animals" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Butterfly" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly" parent="Animals" instance=ExtResource( 35 )]
 
-[node name="Butterfly2" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly2" parent="Animals" instance=ExtResource( 35 )]
 position = Vector2( -6208.77, 450.44 )
 
-[node name="Butterfly3" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly3" parent="Animals" instance=ExtResource( 35 )]
 position = Vector2( -7382.92, -291.124 )
 
-[node name="Butterfly4" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly4" parent="Animals" instance=ExtResource( 35 )]
 position = Vector2( -7242.62, -182.562 )
 
-[node name="Butterfly5" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly5" parent="Animals" instance=ExtResource( 35 )]
 position = Vector2( -8678.98, -154.169 )
 
-[node name="Butterfly6" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly6" parent="Animals" instance=ExtResource( 35 )]
 position = Vector2( -9105.2, -873.206 )
 
-[node name="Butterfly7" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly7" parent="Animals" instance=ExtResource( 35 )]
 position = Vector2( -10283, -85.8441 )
 
-[node name="Butterfly8" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly8" parent="Animals" instance=ExtResource( 35 )]
 position = Vector2( -9290.65, 233.005 )
 
-[node name="Butterfly9" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly9" parent="Animals" instance=ExtResource( 35 )]
 position = Vector2( -11278.8, -221.752 )
 
 [node name="Trees" type="ParallaxBackground" parent="."]
@@ -2004,7 +2009,7 @@ motion_mirroring = Vector2( 1024, 0 )
 margin_top = -120.614
 margin_right = 1024.0
 margin_bottom = 903.386
-texture = ExtResource( 35 )
+texture = ExtResource( 36 )
 expand = true
 stretch_mode = 2
 
@@ -2019,7 +2024,7 @@ margin_left = -17.2631
 margin_top = 277.757
 margin_right = 605.737
 margin_bottom = 904.757
-texture = ExtResource( 36 )
+texture = ExtResource( 37 )
 expand = true
 stretch_mode = 1
 

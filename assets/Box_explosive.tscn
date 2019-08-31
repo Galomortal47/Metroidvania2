@@ -78,6 +78,7 @@ hframes = 2
 shape = SubResource( 2 )
 
 [node name="Health" parent="." instance=ExtResource( 4 )]
+visible = false
 scale = Vector2( 0.5, 0.5 )
 health_max = 1
 health = 1
