@@ -17,8 +17,9 @@ func _process(delta):
 				$Swwing2.get_collider().state = "chocobo"
 			particle_water()
 func particle_water():
-	var particles = preload("res://assets/CPUParticles2D.tscn").instance()
-	particles.set_position(get_collision_point())
-	particles.amount = 1
-	get_tree().get_root().add_child(particles)
+	if is_colliding():
+		var particles = preload("res://assets/CPUParticles2D.tscn").instance()
+		particles.set_position(get_collision_point())
+		particles.amount = 1
+		get_tree().get_root().add_child(particles)
 #	pass

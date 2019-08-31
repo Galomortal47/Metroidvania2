@@ -1409,7 +1409,6 @@ scale = Vector2( 0.643678, 0.644 )
 texture = ExtResource( 21 )
 
 [node name="Swin" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Swwing" type="RayCast2D" parent="Swin"]
 editor/display_folded = true
@@ -2002,9 +2001,9 @@ motion_scale = Vector2( 0.8, 1 )
 motion_mirroring = Vector2( 1024, 0 )
 
 [node name="tree" type="TextureRect" parent="Trees/ParallaxLayer"]
-margin_top = -162.662
+margin_top = -120.614
 margin_right = 1024.0
-margin_bottom = 861.338
+margin_bottom = 903.386
 texture = ExtResource( 35 )
 expand = true
 stretch_mode = 2
@@ -2017,9 +2016,9 @@ motion_mirroring = Vector2( 1024, 0 )
 
 [node name="tree" type="TextureRect" parent="Trees/ParallaxLayer2"]
 margin_left = -17.2631
-margin_top = 202.071
+margin_top = 277.757
 margin_right = 605.737
-margin_bottom = 829.071
+margin_bottom = 904.757
 texture = ExtResource( 36 )
 expand = true
 stretch_mode = 1
