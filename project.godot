@@ -17,7 +17,12 @@ _global_script_class_icons={
 
 config/name="Metroidvania"
 run/main_scene="res://Test/Level 1.tscn"
+run/low_processor_mode_sleep_usec=16666
 config/icon="res://icon.png"
+
+[debug]
+
+settings/fps/force_fps=60
 
 [display]
 

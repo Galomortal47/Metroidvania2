@@ -832,11 +832,11 @@ position = Vector2( -443.444, 809.512 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -2166.38, 816.544 )
+position = Vector2( -2501.46, 820.84 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -1801.31, 816.544 )
+position = Vector2( -1572.19, 816.544 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Ground"]
@@ -932,7 +932,7 @@ position = Vector2( -12258.7, -607.626 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -440.042, 899.922 )
+position = Vector2( -667.961, 892.13 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Ground"]
@@ -1047,8 +1047,8 @@ position = Vector2( 67.4976, 737.51 )
 scale = Vector2( 1, 0.477343 )
 
 [node name="Water4" parent="Waters" instance=ExtResource( 12 )]
-position = Vector2( -1989.05, 822.367 )
-scale = Vector2( 0.386129, 0.324087 )
+position = Vector2( -2033.85, 873.016 )
+scale = Vector2( 1, 0.5 )
 
 [node name="Water5" parent="Waters" instance=ExtResource( 12 )]
 position = Vector2( -6490.76, 823.595 )
@@ -1785,7 +1785,6 @@ rotation = 3.49066
 enabled = true
 
 [node name="plant2" type="Sprite" parent="Art"]
-editor/display_folded = true
 position = Vector2( -1732.36, 699.648 )
 rotation = 0.034481
 z_index = 1
@@ -1994,6 +1993,7 @@ position = Vector2( -9290.65, 233.005 )
 position = Vector2( -11278.8, -221.752 )
 
 [node name="Trees" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Trees"]
 modulate = Color( 0.54902, 0.513726, 0.513726, 1 )
