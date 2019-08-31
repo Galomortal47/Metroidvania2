@@ -219,7 +219,6 @@ tracks/0/keys = {
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="Ground" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="grass" type="TextureRect" parent="Ground"]
 margin_left = -342.0
@@ -516,6 +515,10 @@ shape = SubResource( 2 )
 position = Vector2( -2166.38, 816.544 )
 shape = SubResource( 2 )
 
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -1801.31, 816.544 )
+shape = SubResource( 2 )
+
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 5332.4, 709.514 )
 shape = SubResource( 1 )
@@ -609,7 +612,7 @@ position = Vector2( -12258.7, -607.626 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -437.709, 829.941 )
+position = Vector2( -440.042, 899.922 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Ground"]
@@ -757,23 +760,18 @@ position = Vector2( 2618.45, -884.349 )
 position = Vector2( 3243.09, -1065.03 )
 
 [node name="Waters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Water2" parent="Waters" instance=ExtResource( 15 )]
 position = Vector2( 1026.8, 732.582 )
 scale = Vector2( 1, 0.464971 )
-
-[node name="Water3" parent="Waters" instance=ExtResource( 15 )]
-position = Vector2( -881.524, 822.029 )
-scale = Vector2( 1, 0.327025 )
 
 [node name="Water" parent="Waters" instance=ExtResource( 15 )]
 position = Vector2( 67.4976, 737.51 )
 scale = Vector2( 1, 0.477343 )
 
 [node name="Water4" parent="Waters" instance=ExtResource( 15 )]
-position = Vector2( -1840.43, 822.367 )
-scale = Vector2( 1, 0.324087 )
+position = Vector2( -1989.05, 822.367 )
+scale = Vector2( 0.386129, 0.324087 )
 
 [node name="Water5" parent="Waters" instance=ExtResource( 15 )]
 position = Vector2( -6490.76, 823.595 )
