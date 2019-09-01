@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -38,9 +38,7 @@
 [ext_resource path="res://sprites/tree.png" type="Texture" id=36]
 [ext_resource path="res://sprites/bush.png" type="Texture" id=37]
 [ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=38]
-[ext_resource path="res://Scripts/Music Player.gd" type="Script" id=39]
-[ext_resource path="res://music/calm.ogg" type="AudioStream" id=40]
-[ext_resource path="res://music/action.ogg" type="AudioStream" id=41]
+[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=39]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -2012,21 +2010,5 @@ stretch_mode = 1
 
 [node name="Level_load" parent="." instance=ExtResource( 38 )]
 
-[node name="Music Player" type="AudioStreamPlayer" parent="."]
-volume_db = -12.0
-script = ExtResource( 39 )
-
-[node name="Calm" type="AudioStreamPlayer" parent="Music Player"]
-stream = ExtResource( 40 )
-volume_db = -12.0
-
-[node name="Trans1" type="AudioStreamPlayer" parent="Music Player"]
-volume_db = -12.0
-
-[node name="Action" type="AudioStreamPlayer" parent="Music Player"]
-stream = ExtResource( 41 )
-volume_db = -12.0
-
-[node name="Trans2" type="AudioStreamPlayer" parent="Music Player"]
-volume_db = -12.0
+[node name="Music Player" parent="." instance=ExtResource( 39 )]
 
