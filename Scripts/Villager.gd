@@ -7,7 +7,7 @@ var temp_min = 3
 var temp_max = 10
 var grav = 100
 var size_min = 0.5
-var size_max = 1.5
+var size_max = 1.0
 var size
 # Called when the node enters the scene tree for the first time.
 func _ready():

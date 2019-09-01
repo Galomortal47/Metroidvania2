@@ -6,7 +6,7 @@ var invicible= false
 var size = 20
 var knockback = Vector2(0,-200)
 export var invicility = false
-
+export var player = false
 
 func _process(delta):
 	if health <= health_max * 0.25:
@@ -24,7 +24,9 @@ func damage(var damage):
 			get_parent().get_node("Camera2D").shake += 50
 		get_parent().stun()
 		health -= damage
-		$"Damage Number".play("Damage")
+		if player:
+			$"Damage Number".play("Damage")
+			$AudioStreamPlayer._set_playing(true)
 		$Label2.set_text(str(-damage))
 	invici()
 	
