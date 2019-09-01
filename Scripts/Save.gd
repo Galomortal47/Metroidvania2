@@ -13,6 +13,7 @@ var data = {"hp":20,
 func _ready():
 	loader()
 	save()
+	get_parent().set_position(Vector2(data.position_x,data.position_y))
 
 func save():
 	if file.open(save, File.WRITE) !=0:

@@ -16,7 +16,7 @@ func _ready():
 	get_parent().get_node("Weapons/Label").menu_size = menu_size
 	get_parent().get_node("Save").loader()
 	for i in range(0,menu_size):
-		get_parent().get_node("Weapons").get_child(i).have = get_parent().get_node("Save").data.gun[i]
+		get_parent().get_node("Weapons").get_child(i).have = get_parent().get_node("Save").data.guns[i]
 
 func icon_generate():
 	for i in range(0,menu_size):
