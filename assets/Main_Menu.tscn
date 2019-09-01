@@ -9,36 +9,36 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 
 [node name="Continue" type="Button" parent="."]
-margin_left = 473.877
+margin_left = 435.0
 margin_top = 197.116
-margin_right = 564.877
+margin_right = 526.0
 margin_bottom = 231.116
 custom_fonts/font = ExtResource( 2 )
 text = "Continue"
 flat = true
 
 [node name="New Game" type="Button" parent="."]
-margin_left = 473.877
+margin_left = 435.0
 margin_top = 231.493
-margin_right = 564.877
+margin_right = 526.0
 margin_bottom = 265.493
 custom_fonts/font = ExtResource( 2 )
 text = "New Game"
 flat = true
 
 [node name="Options" type="Button" parent="."]
-margin_left = 473.877
+margin_left = 435.0
 margin_top = 265.87
-margin_right = 564.877
+margin_right = 526.0
 margin_bottom = 299.87
 custom_fonts/font = ExtResource( 2 )
 text = "Options"
 flat = true
 
 [node name="Quit Game" type="Button" parent="."]
-margin_left = 473.877
+margin_left = 435.0
 margin_top = 301.474
-margin_right = 564.877
+margin_right = 526.0
 margin_bottom = 335.474
 custom_fonts/font = ExtResource( 2 )
 text = "Quit Game"

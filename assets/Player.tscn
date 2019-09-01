@@ -555,7 +555,6 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
 [node name="Srinking lamp" type="Node2D" parent="Weapons"]
@@ -661,6 +660,7 @@ text = "0/100"
 autowrap = true
 
 [node name="Hook" type="Node2D" parent="Weapons"]
+editor/display_folded = true
 script = ExtResource( 9 )
 
 [node name="Line2D" type="Line2D" parent="Weapons/Hook"]

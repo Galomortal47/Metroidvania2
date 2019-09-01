@@ -1,17 +1,28 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Level_load.gd" type="Script" id=1]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
 
-[sub_resource type="RectangleShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.4287, 397.679 )
 
 [node name="Level_load" type="Area2D"]
-editor/display_folded = true
 position = Vector2( 6955.75, -332.205 )
 script = ExtResource( 1 )
 level_load = "res://Test/Level 2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 29 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 435.0
+margin_top = 270.0
+margin_right = 512.0
+margin_bottom = 284.0
+custom_fonts/font = ExtResource( 2 )
+text = "LOADING ..."
 
 [connection signal="body_shape_entered" from="." to="." method="_on_Level_load_body_shape_entered"]

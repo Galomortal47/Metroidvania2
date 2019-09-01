@@ -5,6 +5,7 @@ var save = preload("res://Scripts/Save.gd").new()
 
 func _on_Level_load_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
+		$CanvasLayer/Label.show()
 		save.loader()
 		save.data.level = level_load
 		save.data.money = int(body.get_node("Coins/Number").get_text())
