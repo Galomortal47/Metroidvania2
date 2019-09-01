@@ -8,9 +8,15 @@ var speed = 100
 var pos = Vector2(0,0)
 var area_y = 500
 var area_x = 1000
+var size_min = 0.5
+var size_max = 1.5
+var size
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
 	set_modulate(Color(rand_range(0.5,1),rand_range(0.5,1),rand_range(0.5,1)))
+	size = rand_range(size_min,size_max)
+	set_scale(Vector2(size,size))
 	pass # Replace with function body.
 func _process(delta):
 	if enable:

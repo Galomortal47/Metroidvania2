@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Level_load.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 49.4287, 397.679 )
+
+[node name="Level_load" type="Area2D"]
+editor/display_folded = true
+position = Vector2( 6955.75, -332.205 )
+script = ExtResource( 1 )
+level_load = "res://Test/Level 2.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 29 )
+
+[connection signal="body_shape_entered" from="." to="." method="_on_Level_load_body_shape_entered"]

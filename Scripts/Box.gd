@@ -39,9 +39,12 @@ func _process(delta):
 				queue_free()
 	match object:
 		"explosive":
-			if $RayCast2D2.is_colliding() or $RayCast2D3.is_colliding() or $RayCast2D4.is_colliding() or motion.y > 200:
+			if $RayCast2D2.is_colliding() or $RayCast2D3.is_colliding() or motion.y > 200:
 				$AnimationPlayer.play("boom")
-				
+			if $RayCast2D4.is_colliding():
+				if $RayCast2D4.get_collider().is_in_group("player"):
+					$AnimationPlayer.play("boom")
+			
 
 func stun():
 	pass

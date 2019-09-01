@@ -1,0 +1,128 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Villager.gd" type="Script" id=1]
+[ext_resource path="res://sprites/villager.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.04, 36.1526 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "walking"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("body/leg2:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 20.9031, -32.3582, 20.9031 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("body/leg:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -216.575, -155.47, -216.575 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("body/arm2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -149.077, -186.99, -149.077 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("body/arm:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 10.3164, -26.379, 10.3164 ]
+}
+
+[node name="Villager" type="KinematicBody2D"]
+position = Vector2( 2357.09, 709.019 )
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="body" type="Sprite" parent="."]
+position = Vector2( -1.36743, 5.81677 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 3.75, 89.5, 30, 34 )
+
+[node name="head" type="Sprite" parent="body"]
+position = Vector2( 1.98608, -28.9967 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -2.5, 52.75, 47.75, 37.75 )
+
+[node name="arm" type="Sprite" parent="body"]
+position = Vector2( 11.383, -7.91724 )
+rotation = -0.460401
+z_index = -1
+texture = ExtResource( 2 )
+offset = Vector2( 0.62085, 6.51245 )
+region_enabled = true
+region_rect = Rect2( 33.5, 93.75, 12.5, 24.75 )
+
+[node name="arm2" type="Sprite" parent="body"]
+position = Vector2( -10.0808, -9.49877 )
+rotation = -3.26358
+scale = Vector2( 1, -1 )
+z_index = -1
+texture = ExtResource( 2 )
+offset = Vector2( 3.42578, 8.40137 )
+region_enabled = true
+region_rect = Rect2( 33.5, 93.75, 12.5, 24.75 )
+
+[node name="leg" type="Sprite" parent="body"]
+position = Vector2( -7.59544, 9.93167 )
+rotation = -2.71346
+scale = Vector2( 1, -1 )
+z_index = -1
+texture = ExtResource( 2 )
+offset = Vector2( 1.4873, 6.75104 )
+region_enabled = true
+region_rect = Rect2( 48.5, 96.25, 15.5, 21.5 )
+
+[node name="leg2" type="Sprite" parent="body"]
+position = Vector2( 5.73462, 11.2873 )
+rotation = -0.564756
+z_index = -1
+texture = ExtResource( 2 )
+offset = Vector2( -1.06641, 5.65247 )
+region_enabled = true
+region_rect = Rect2( 48.5, 96.25, 15.5, 21.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.84424, -5.53241 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "walking"
+anims/walking = SubResource( 2 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
