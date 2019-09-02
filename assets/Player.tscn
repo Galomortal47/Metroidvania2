@@ -26,8 +26,8 @@
 [ext_resource path="res://Sonds/roll.ogg" type="AudioStream" id=24]
 [ext_resource path="res://Sonds/jump.ogg" type="AudioStream" id=25]
 [ext_resource path="res://Sonds/water.ogg" type="AudioStream" id=26]
-[ext_resource path="res://sprites/touchscreen/arrow key.png" type="Texture" id=27]
-[ext_resource path="res://sprites/touchscreen/buttons.png" type="Texture" id=28]
+[ext_resource path="res://assets/TouchScreen.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scripts/TouchScreen.gd" type="Script" id=28]
 [ext_resource path="res://Scripts/Health_Load.gd" type="Script" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -555,6 +555,7 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
 [node name="Srinking lamp" type="Node2D" parent="Weapons"]
@@ -668,6 +669,7 @@ position = Vector2( 2.71121, -3.16309 )
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 3.0
 default_color = Color( 0.458824, 0.368627, 0.160784, 1 )
+texture_mode = 1065353216
 
 [node name="Label" type="Label" parent="Weapons"]
 editor/display_folded = true
@@ -788,6 +790,7 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
+texture_mode = -1061803818
 
 [node name="icon5" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, 80 )
@@ -835,6 +838,7 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
+texture_mode = 1541963456
 
 [node name="Polygon2D" type="Polygon2D" parent="Menu Items/Menu"]
 scale = Vector2( 1.2, 1.2 )
@@ -882,12 +886,13 @@ position = Vector2( 2.64075, -51.4948 )
 points = PoolVector2Array( 0, 0, 100, 0 )
 width = 5.0
 default_color = Color( 0, 0, 0, 0.501961 )
+texture_mode = 524289648
 
 [node name="Line2D2" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 51.392, -56.7652 )
 points = PoolVector2Array( 0, 0, 0, 10 )
 default_color = Color( 1, 1, 1, 0.501961 )
-texture_mode = 0
+texture_mode = 524289648
 
 [node name="Line2D3" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 101.358, -61.2451 )
@@ -967,137 +972,8 @@ autoplay = true
 stream = ExtResource( 26 )
 autoplay = true
 
-[node name="TouchScreen" type="CanvasLayer" parent="."]
-
-[node name="Controls" type="Node2D" parent="TouchScreen"]
-visible = false
-
-[node name="Left" type="TouchScreenButton" parent="TouchScreen/Controls"]
-position = Vector2( 43.0205, 477.591 )
-rotation = -1.5708
-normal = ExtResource( 27 )
-action = "ui_left"
-
-[node name="Up" type="TouchScreenButton" parent="TouchScreen/Controls"]
-position = Vector2( 98.7324, 358.43 )
-normal = ExtResource( 27 )
-action = "ui_up"
-
-[node name="Right" type="TouchScreenButton" parent="TouchScreen/Controls"]
-position = Vector2( 216.545, 410.495 )
-rotation = 1.5708
-normal = ExtResource( 27 )
-action = "ui_right"
-
-[node name="Down" type="TouchScreenButton" parent="TouchScreen/Controls"]
-position = Vector2( 163.154, 528.883 )
-rotation = 3.14159
-normal = ExtResource( 27 )
-action = "ui_down"
-
-[node name="X" type="TouchScreenButton" parent="TouchScreen/Controls"]
-editor/display_folded = true
-self_modulate = Color( 0.141176, 0.172549, 0.980392, 1 )
-position = Vector2( 758.504, 383.636 )
-rotation = 1.5708
-normal = ExtResource( 28 )
-action = "ui_roll"
-
-[node name="X" type="Label" parent="TouchScreen/Controls/X"]
-margin_left = 58.7072
-margin_top = 17.9163
-margin_right = 99.7072
-margin_bottom = 31.9163
-rect_rotation = 90.0
-rect_scale = Vector2( 4, 4 )
-custom_fonts/font = ExtResource( 8 )
-text = "X"
-
-[node name="B" type="TouchScreenButton" parent="TouchScreen/Controls"]
-editor/display_folded = true
-self_modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 906.054, 383.636 )
-rotation = 1.5708
-normal = ExtResource( 28 )
-action = "ui_cancel"
-
-[node name="B" type="Label" parent="TouchScreen/Controls/B"]
-margin_left = 9.05573
-margin_top = 42.7281
-margin_right = 50.0557
-margin_bottom = 56.7281
-rect_rotation = 270.0
-rect_scale = Vector2( 4, 4 )
-custom_fonts/font = ExtResource( 8 )
-text = "B"
-
-[node name="Y" type="TouchScreenButton" parent="TouchScreen/Controls"]
-editor/display_folded = true
-self_modulate = Color( 0.933333, 0.803922, 0.211765, 1 )
-position = Vector2( 832.705, 305.671 )
-rotation = 1.5708
-normal = ExtResource( 28 )
-action = "ui_select"
-
-[node name="Y" type="Label" parent="TouchScreen/Controls/Y"]
-margin_left = 9.08124
-margin_top = 42.6484
-margin_right = 50.0812
-margin_bottom = 56.6484
-rect_rotation = 270.0
-rect_scale = Vector2( 4, 4 )
-custom_fonts/font = ExtResource( 8 )
-text = "Y"
-
-[node name="A" type="TouchScreenButton" parent="TouchScreen/Controls"]
-editor/display_folded = true
-self_modulate = Color( 0.168627, 0.952941, 0.145098, 1 )
-position = Vector2( 832.705, 464.686 )
-rotation = 1.5708
-normal = ExtResource( 28 )
-action = "ui_accept"
-
-[node name="Y2" type="Label" parent="TouchScreen/Controls/A"]
-margin_left = 9.83096
-margin_top = 46.6096
-margin_right = 50.831
-margin_bottom = 60.6096
-rect_rotation = 270.0
-rect_scale = Vector2( 4, 4 )
-custom_fonts/font = ExtResource( 8 )
-text = "A"
-
-[node name="R1" type="TouchScreenButton" parent="TouchScreen/Controls"]
-position = Vector2( 241.085, 271.965 )
-rotation = 1.5708
-normal = ExtResource( 28 )
-action = "trigger_r"
-
-[node name="Y2" type="Label" parent="TouchScreen/Controls/R1"]
-margin_left = 7.62573
-margin_top = 54.6956
-margin_right = 48.6258
-margin_bottom = 68.6956
-rect_rotation = 270.0
-rect_scale = Vector2( 4, 4 )
-custom_fonts/font = ExtResource( 8 )
-text = "R1"
-
-[node name="L1" type="TouchScreenButton" parent="TouchScreen/Controls"]
-position = Vector2( 135.968, 248.442 )
-rotation = 1.5708
-normal = ExtResource( 28 )
-action = "trigger_l"
-
-[node name="Y2" type="Label" parent="TouchScreen/Controls/L1"]
-margin_left = 8.36084
-margin_top = 59.8412
-margin_right = 49.3609
-margin_bottom = 73.8412
-rect_rotation = 270.0
-rect_scale = Vector2( 4, 4 )
-custom_fonts/font = ExtResource( 8 )
-text = "L2"
+[node name="TouchScreen" parent="." instance=ExtResource( 27 )]
+script = ExtResource( 28 )
 
 [node name="Health_Load" type="Node" parent="."]
 script = ExtResource( 29 )

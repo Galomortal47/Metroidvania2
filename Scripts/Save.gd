@@ -3,9 +3,9 @@ extends Node
 var save = "res://save.json"
 var file = File.new()
 var data = {"hp":20,
-"level":"res://Test/Level 1.tscn",
-"money":0,"position_x":0,
-"position_y":0,
+"level":"res://Test/Level 3.tscn",
+"money":0,"position_x":19217.744,
+"position_y":650.337,
  "guns" : [false,false,false,false,false,false,false,false]
 }
 

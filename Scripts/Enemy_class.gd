@@ -4,7 +4,8 @@ var angle = 0.0
 var motion = Vector2(0,0)
 var speed = 20
 var max_speed = 300
-var gravity = 10
+export var gravity = 10
+export var music = true
 var jump = 0
 var drag = 0.9
 export var damage = 5
@@ -12,8 +13,8 @@ export var health = 20
 var stun = false
 var boltspawner = preload("bolt_spawner.gd").new()
 var attack = Vector2(60,0)
-var timer = 3
-var time_aux= 3
+export var timer = 3
+var time_aux = 3
 export var type = "melee"
 export var bolts_spwned_upon_death = 5
 var start = true
@@ -21,7 +22,11 @@ var first = false
 var followtrough = 2
 
 func _ready():
+	time_aux = timer
+	$Health.health = health
 	$Health.health_max = health
+	if not music:
+		$AudioStreamPlayer2D2._set_playing(false)
 
 func _process(delta):
 	if not $Ground_Detect.is_colliding():

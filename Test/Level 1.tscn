@@ -1875,3 +1875,5 @@ stretch_mode = 1
 
 [node name="Music Player" parent="." instance=ExtResource( 35 )]
 
+[node name="bolts" type="Node2D" parent="."]
+

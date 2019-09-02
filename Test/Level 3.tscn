@@ -239,10 +239,14 @@ position = Vector2( 11460.3, 140.552 )
 [node name="Trees" parent="." instance=ExtResource( 11 )]
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
-position = Vector2( 14635.4, 612.309 )
+position = Vector2( 19217.7, 650.337 )
 
 [node name="Level_load2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 14274.6, 322.529 )
+
+[node name="Level_load3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 23713.1, -330.58 )
+level_load = "res://Test/Level 4.tscn"
 
 [node name="Node2D" type="Node2D" parent="."]
 editor/display_folded = true
@@ -290,4 +294,6 @@ Z: Shoot
 C: Menu
 D and F: Choose Item
 "
+
+[node name="bolts" type="Node2D" parent="."]
 

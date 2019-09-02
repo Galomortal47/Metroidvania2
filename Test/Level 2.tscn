@@ -253,78 +253,65 @@ position = Vector2( 7335.83, 0 )
 
 [node name="Villager" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 2618.42, 709.019 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager8" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 3565.84, 706.083 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager14" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 5079.76, 706.083 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager2" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 2732.95, 709.019 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager6" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 3680.37, 706.083 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager15" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 5194.29, 706.083 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager3" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 2853.76, 709.019 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager7" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 3801.18, 706.083 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager13" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 5315.1, 706.083 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager4" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 2783.23, 709.019 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager10" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 3730.65, 706.083 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager12" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 5244.57, 706.083 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager5" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 2670.1, 709.019 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager9" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 3617.52, 706.083 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Villager11" parent="Villagers" instance=ExtResource( 14 )]
 position = Vector2( 5131.44, 706.083 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="Music Player" parent="." instance=ExtResource( 15 )]
+
+[node name="bolts" type="Node2D" parent="."]
 
