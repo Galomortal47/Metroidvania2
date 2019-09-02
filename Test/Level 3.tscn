@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://sprites/house.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3893.01, 10.7424 )
@@ -140,4 +141,9 @@ editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
 [node name="Music Player" parent="." instance=ExtResource( 8 )]
+
+[node name="house" type="Sprite" parent="."]
+position = Vector2( 19323.9, 546.672 )
+z_index = -1
+texture = ExtResource( 9 )
 

@@ -20,6 +20,7 @@ func _ready():
 	pass # Replace with function body.
 func _process(delta):
 	if enable:
+		$AnimationPlayer.set_current_animation("flying")
 		var dir = Vector2(cos(get_rotation()), sin(get_rotation()))
 		rotate(get_angle_to(pos))
 		motion += dir * speed *delta

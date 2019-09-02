@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Butterfly.gd" type="Script" id=1]
 [ext_resource path="res://sprites/butterfly.png" type="Texture" id=2]
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=1]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -32,7 +32,6 @@ tracks/1/keys = {
 }
 
 [node name="Butterfly" type="KinematicBody2D"]
-editor/display_folded = true
 position = Vector2( -145.785, 508.567 )
 script = ExtResource( 1 )
 
@@ -61,8 +60,7 @@ region_enabled = true
 region_rect = Rect2( 4, 4.5, 13.5, 21.75 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "flying"
-anims/flying = SubResource( 29 )
+anims/flying = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( -6.03767, -9.05658 )
