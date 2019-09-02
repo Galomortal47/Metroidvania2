@@ -2,11 +2,10 @@
 
 [ext_resource path="res://sprites/floatr.png" type="Texture" id=1]
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 39.418, 10 )
 
 [node name="Platform4" type="Node2D"]
-editor/display_folded = true
 position = Vector2( -10164, -12.1744 )
 
 [node name="grass2" type="Sprite" parent="."]
@@ -19,5 +18,5 @@ editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 42.9912, 350.479 )
-shape = SubResource( 14 )
+shape = SubResource( 1 )
 

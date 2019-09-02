@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -18,26 +18,23 @@
 [ext_resource path="res://assets/Box_ammo.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/Box_explosive.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/Box_health.tscn" type="PackedScene" id=18]
-[ext_resource path="res://assets/Platform.tscn" type="PackedScene" id=19]
-[ext_resource path="res://sprites/floatr.png" type="Texture" id=20]
-[ext_resource path="res://assets/Platform4.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scripts/Platform Sticker 2.gd" type="Script" id=22]
-[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=23]
-[ext_resource path="res://assets/Gadeget Pick Up.tscn" type="PackedScene" id=24]
-[ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=25]
-[ext_resource path="res://sprites/mushroom.png" type="Texture" id=26]
-[ext_resource path="res://sprites/sing.png" type="Texture" id=27]
-[ext_resource path="res://sprites/vines.png" type="Texture" id=28]
-[ext_resource path="res://sprites/flower2.png" type="Texture" id=29]
-[ext_resource path="res://sprites/grass2.png" type="Texture" id=30]
-[ext_resource path="res://sprites/plant.png" type="Texture" id=31]
-[ext_resource path="res://Scripts/plant.gd" type="Script" id=32]
-[ext_resource path="res://sprites/light.png" type="Texture" id=33]
-[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=34]
-[ext_resource path="res://sprites/tree.png" type="Texture" id=35]
-[ext_resource path="res://sprites/bush.png" type="Texture" id=36]
-[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=37]
-[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=38]
+[ext_resource path="res://assets/Platform4.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=20]
+[ext_resource path="res://assets/Gadeget Pick Up.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=22]
+[ext_resource path="res://sprites/mushroom.png" type="Texture" id=23]
+[ext_resource path="res://sprites/sing.png" type="Texture" id=24]
+[ext_resource path="res://sprites/vines.png" type="Texture" id=25]
+[ext_resource path="res://sprites/flower2.png" type="Texture" id=26]
+[ext_resource path="res://sprites/grass2.png" type="Texture" id=27]
+[ext_resource path="res://sprites/plant.png" type="Texture" id=28]
+[ext_resource path="res://Scripts/plant.gd" type="Script" id=29]
+[ext_resource path="res://sprites/light.png" type="Texture" id=30]
+[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=31]
+[ext_resource path="res://sprites/tree.png" type="Texture" id=32]
+[ext_resource path="res://sprites/bush.png" type="Texture" id=33]
+[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=34]
+[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -72,47 +69,164 @@ extents = Vector2( 41.6683, 314.736 )
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 10, 79.1086 )
 
-[sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 39.418, 10 )
+[sub_resource type="CanvasItemMaterial" id=12]
+blend_mode = 1
 
-[sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 37.9856, 10 )
-
-[sub_resource type="Animation" id=14]
-length = 10.0
+[sub_resource type="Animation" id=13]
+length = 5.0
 loop = true
-step = 1.0
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 4, 6, 9, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 134.309, 355.398 ), Vector2( 134.309, 355.398 ), Vector2( -243.32, -371.605 ), Vector2( -243.32, -371.605 ), Vector2( 134.309, 355.398 ), Vector2( 134.309, 355.398 ) ]
+"values": [ -22.3278, -51.385, -45.9729, -22.3278 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("plant2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -67.868, -50.0703, -36.9049, -67.868 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("plant3:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
+}
+
+[sub_resource type="Animation" id=14]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -22.3278, -32.466, 1.97562, -22.3278 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("plant2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -67.868, -56.778, -70.9042, -67.868 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("plant3:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
 }
 
 [sub_resource type="Animation" id=15]
-length = 10.0
+length = 5.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( -1, 0, 1, 4, 6, 9, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( -192.547, 355.398 ), Vector2( -192.547, 355.398 ), Vector2( 286.903, 355.398 ), Vector2( 286.903, 355.398 ) ]
+"values": [ -22.3278, -51.385, -45.9729, -22.3278 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("plant2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -67.868, -50.0703, -36.9049, -67.868 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("plant3:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=16]
-blend_mode = 1
+[sub_resource type="Animation" id=16]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -22.3278, -32.466, 1.97562, -22.3278 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("plant2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -67.868, -56.778, -70.9042, -67.868 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("plant3:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
+}
 
 [sub_resource type="Animation" id=17]
 length = 5.0
@@ -311,162 +425,6 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=22]
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -32.466, 1.97562, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -56.778, -70.9042, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=23]
-length = 5.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -51.385, -45.9729, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -50.0703, -36.9049, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=24]
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -32.466, 1.97562, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -56.778, -70.9042, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=25]
-length = 5.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -51.385, -45.9729, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -50.0703, -36.9049, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=26]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -1273,84 +1231,30 @@ position = Vector2( 184.282, 553.485 )
 [node name="Node2D" type="Node2D" parent="Boxes"]
 
 [node name="Platfroms" type="Node2D" parent="."]
-editor/display_folded = true
 
-[node name="Platform" parent="Platfroms" instance=ExtResource( 19 )]
+[node name="Platform4" parent="Platfroms" instance=ExtResource( 19 )]
+position = Vector2( -5996.3, 321.451 )
 
-[node name="Platform3" type="Node2D" parent="Platfroms"]
-editor/display_folded = true
-position = Vector2( -10322.6, -113.116 )
+[node name="Platform5" parent="Platfroms" instance=ExtResource( 19 )]
+position = Vector2( -6175.57, 284.36 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Platfroms/Platform3"]
-editor/display_folded = true
-position = Vector2( -180.44, -148.367 )
+[node name="Platform6" parent="Platfroms" instance=ExtResource( 19 )]
+position = Vector2( -6444.47, 169.998 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform3/StaticBody2D3"]
-position = Vector2( 42.9912, 350.479 )
-shape = SubResource( 12 )
+[node name="Platform7" parent="Platfroms" instance=ExtResource( 19 )]
+position = Vector2( -6747.38, -15.4543 )
 
-[node name="grass2" type="Sprite" parent="Platfroms/Platform3"]
-position = Vector2( 41.1621, 339.085 )
-scale = Vector2( 0.643678, 0.644 )
-texture = ExtResource( 20 )
+[node name="Platform8" parent="Platfroms" instance=ExtResource( 19 )]
+position = Vector2( -7031.74, -210.179 )
 
-[node name="Platform5" type="Node2D" parent="Platfroms"]
-editor/display_folded = true
-position = Vector2( -10401.8, -264.528 )
+[node name="Platform9" parent="Platfroms" instance=ExtResource( 19 )]
+position = Vector2( -10099.6, -47.9525 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Platfroms/Platform5"]
-editor/display_folded = true
-position = Vector2( 76.0332, 147.09 )
+[node name="Platform10" parent="Platfroms" instance=ExtResource( 19 )]
+position = Vector2( -10339.6, -141.717 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform5/StaticBody2D2"]
-position = Vector2( 42.9912, 350.479 )
-shape = SubResource( 12 )
-
-[node name="grass2" type="Sprite" parent="Platfroms/Platform5"]
-position = Vector2( -59.54, 344.12 )
-scale = Vector2( 0.643678, 0.644 )
-texture = ExtResource( 20 )
-
-[node name="Platform4" parent="Platfroms" instance=ExtResource( 21 )]
-
-[node name="Platform2" type="Node2D" parent="Platfroms"]
-editor/display_folded = true
-position = Vector2( -6817.66, 373.322 )
-
-[node name="Platform2" type="KinematicBody2D" parent="Platfroms/Platform2"]
-position = Vector2( 39.9018, 173.647 )
-motion/sync_to_physics = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platfroms/Platform2/Platform2"]
-shape = SubResource( 13 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platfroms/Platform2/Platform2"]
-autoplay = "Movment2"
-anims/Movment2 = SubResource( 14 )
-anims/movment = SubResource( 15 )
-
-[node name="Platform Sticker 2" type="Node2D" parent="Platfroms/Platform2/Platform2"]
-script = ExtResource( 22 )
-
-[node name="RayCast2D" type="RayCast2D" parent="Platfroms/Platform2/Platform2/Platform Sticker 2"]
-position = Vector2( -50, -20 )
-enabled = true
-cast_to = Vector2( 100, 0 )
-
-[node name="RayCast2D2" type="RayCast2D" parent="Platfroms/Platform2/Platform2/Platform Sticker 2"]
-position = Vector2( -1734.53, 619.813 )
-enabled = true
-cast_to = Vector2( 100, 0 )
-
-[node name="RayCast2D3" type="RayCast2D" parent="Platfroms/Platform2/Platform2/Platform Sticker 2"]
-position = Vector2( -3467.98, 57.992 )
-enabled = true
-cast_to = Vector2( 100, 0 )
-
-[node name="grass" type="Sprite" parent="Platfroms/Platform2/Platform2"]
-position = Vector2( 0, -11.2782 )
-scale = Vector2( 0.643678, 0.644 )
-texture = ExtResource( 20 )
+[node name="Platform11" parent="Platfroms" instance=ExtResource( 19 )]
+position = Vector2( -10516.2, -285.919 )
 
 [node name="Swin" type="Node2D" parent="."]
 editor/display_folded = true
@@ -1360,7 +1264,7 @@ editor/display_folded = true
 position = Vector2( 669.711, 618.652 )
 enabled = true
 cast_to = Vector2( 300, 0 )
-script = ExtResource( 23 )
+script = ExtResource( 20 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing"]
 position = Vector2( 0, -28.7293 )
@@ -1372,7 +1276,7 @@ editor/display_folded = true
 position = Vector2( -2138.86, 731.392 )
 enabled = true
 cast_to = Vector2( 300, 0 )
-script = ExtResource( 23 )
+script = ExtResource( 20 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing2"]
 position = Vector2( 0, -28.7293 )
@@ -1383,28 +1287,28 @@ cast_to = Vector2( 300, 0 )
 position = Vector2( -7129.06, 773.322 )
 enabled = true
 cast_to = Vector2( 1300, 0 )
-script = ExtResource( 23 )
+script = ExtResource( 20 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing3"]
 position = Vector2( 0, -28.7293 )
 enabled = true
 cast_to = Vector2( 1300, 0 )
 
-[node name="Gadeget Pick Up" parent="." instance=ExtResource( 24 )]
+[node name="Gadeget Pick Up" parent="." instance=ExtResource( 21 )]
 position = Vector2( -11438.3, -72.6534 )
 
 [node name="Jumpers" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Jumper" parent="Jumpers" instance=ExtResource( 25 )]
+[node name="Jumper" parent="Jumpers" instance=ExtResource( 22 )]
 
-[node name="Jumper3" parent="Jumpers" instance=ExtResource( 25 )]
+[node name="Jumper3" parent="Jumpers" instance=ExtResource( 22 )]
 position = Vector2( -5650.96, 700.474 )
 
-[node name="Jumper4" parent="Jumpers" instance=ExtResource( 25 )]
+[node name="Jumper4" parent="Jumpers" instance=ExtResource( 22 )]
 position = Vector2( -5821.56, -831.195 )
 
-[node name="Jumper2" parent="Jumpers" instance=ExtResource( 25 )]
+[node name="Jumper2" parent="Jumpers" instance=ExtResource( 22 )]
 position = Vector2( -8867.35, -801.194 )
 
 [node name="Art" type="Node2D" parent="."]
@@ -1414,58 +1318,58 @@ z_index = -1
 [node name="mushroom" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 557.171, 507.842 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="mushroom7" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( -7152.53, -86.2084 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="mushroom8" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( -8670.04, -113.968 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="mushroom9" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( -9088.28, -854.217 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="mushroom3" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 3029.67, 527.316 )
 scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="mushroom4" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 2977.53, 520.694 )
 scale = Vector2( -1, 1 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="mushroom2" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 598.147, 540.995 )
 scale = Vector2( 0.43198, 0.43198 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="mushroom5" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 4247.23, 659.446 )
 scale = Vector2( 0.43198, 0.43198 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="mushroom6" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 4270.38, 665.854 )
 scale = Vector2( 0.15198, 0.15198 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="sing" type="Sprite" parent="Art"]
 position = Vector2( 3826.1, 498.693 )
 rotation = 0.292877
 z_index = -1
-texture = ExtResource( 27 )
+texture = ExtResource( 24 )
 
 [node name="Vines" type="Node2D" parent="Art"]
 editor/display_folded = true
@@ -1476,7 +1380,7 @@ margin_left = -7397.63
 margin_top = -738.664
 margin_right = -7093.63
 margin_bottom = 55.3357
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1485,7 +1389,7 @@ margin_left = -7479.47
 margin_top = -658.495
 margin_right = -7175.47
 margin_bottom = 135.505
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1494,14 +1398,14 @@ margin_left = -7567.99
 margin_top = -853.907
 margin_right = -7263.99
 margin_bottom = -59.9072
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
 [node name="flower2" type="Sprite" parent="Art/Vines"]
 position = Vector2( -7308.97, -321.115 )
 z_index = 1
-texture = ExtResource( 29 )
+texture = ExtResource( 26 )
 
 [node name="Vines2" type="Node2D" parent="Art"]
 editor/display_folded = true
@@ -1513,7 +1417,7 @@ margin_left = -7398.0
 margin_top = -1065.0
 margin_right = -7094.0
 margin_bottom = 55.0
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1522,7 +1426,7 @@ margin_left = -7473.0
 margin_top = -1025.0
 margin_right = -7169.0
 margin_bottom = 166.0
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1531,7 +1435,7 @@ margin_left = -7514.04
 margin_top = -897.552
 margin_right = -7210.04
 margin_bottom = 41.4485
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1539,7 +1443,7 @@ stretch_mode = 2
 position = Vector2( -7255.01, -565.918 )
 rotation = 2.63908
 z_index = 1
-texture = ExtResource( 29 )
+texture = ExtResource( 26 )
 
 [node name="Vines3" type="Node2D" parent="Art"]
 modulate = Color( 0.47451, 0.407843, 0.407843, 1 )
@@ -1550,7 +1454,7 @@ margin_left = -7398.0
 margin_top = -1065.0
 margin_right = -7094.0
 margin_bottom = 55.0
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1559,7 +1463,7 @@ margin_left = -7473.0
 margin_top = -1025.0
 margin_right = -7169.0
 margin_bottom = 166.0
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1568,7 +1472,7 @@ margin_left = -7514.04
 margin_top = -897.552
 margin_right = -7210.04
 margin_bottom = 41.4485
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1582,7 +1486,7 @@ margin_left = -7398.0
 margin_top = -1257.0
 margin_right = -7094.0
 margin_bottom = 55.0
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1591,7 +1495,7 @@ margin_left = -7473.0
 margin_top = -1350.0
 margin_right = -7169.0
 margin_bottom = 166.0
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1600,7 +1504,7 @@ margin_left = -7514.0
 margin_top = -1250.0
 margin_right = -7210.0
 margin_bottom = 42.0
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 expand = true
 stretch_mode = 2
 
@@ -1608,14 +1512,14 @@ stretch_mode = 2
 position = Vector2( -7338.51, -442.669 )
 rotation = 0.300297
 z_index = 1
-texture = ExtResource( 29 )
+texture = ExtResource( 26 )
 
 [node name="grass2" type="TextureRect" parent="Art"]
 margin_left = -8870.0
 margin_top = -173.0
 margin_right = -7181.0
 margin_bottom = -67.0
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 expand = true
 stretch_mode = 2
 
@@ -1624,7 +1528,7 @@ margin_left = -10529.7
 margin_top = 326.858
 margin_right = -8840.74
 margin_bottom = 432.858
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 expand = true
 stretch_mode = 2
 
@@ -1633,7 +1537,7 @@ margin_left = -12245.7
 margin_top = -87.7227
 margin_right = -10556.7
 margin_bottom = 18.2773
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 expand = true
 stretch_mode = 2
 
@@ -1642,7 +1546,7 @@ margin_left = -10511.7
 margin_top = -884.439
 margin_right = -8822.71
 margin_bottom = -778.439
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 expand = true
 stretch_mode = 2
 
@@ -1651,7 +1555,7 @@ margin_left = -7505.1
 margin_top = -913.279
 margin_right = -5816.1
 margin_bottom = -807.279
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 expand = true
 stretch_mode = 2
 
@@ -1660,7 +1564,7 @@ margin_left = 5491.0
 margin_top = -37.0
 margin_right = 8402.0
 margin_bottom = 69.0
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 expand = true
 stretch_mode = 2
 
@@ -1669,7 +1573,7 @@ margin_left = 934.0
 margin_top = 483.0
 margin_right = 3841.0
 margin_bottom = 589.0
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 expand = true
 stretch_mode = 2
 
@@ -1678,7 +1582,7 @@ margin_left = -411.0
 margin_top = 480.0
 margin_right = 645.0
 margin_bottom = 586.0
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 expand = true
 stretch_mode = 2
 
@@ -1687,41 +1591,41 @@ editor/display_folded = true
 position = Vector2( -168.144, 553.332 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 32 )
+script = ExtResource( 29 )
 
 [node name="plant2" type="Sprite" parent="Art/plant"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant"]
 modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 16 )
+material = SubResource( 12 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant"]
-anims/wind = SubResource( 17 )
-"anims/wind (copy)" = SubResource( 18 )
+anims/wind = SubResource( 13 )
+"anims/wind (copy)" = SubResource( 14 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Art/plant"]
 rotation = 3.49066
@@ -1731,41 +1635,41 @@ enabled = true
 position = Vector2( -1732.36, 699.648 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 32 )
+script = ExtResource( 29 )
 
 [node name="plant2" type="Sprite" parent="Art/plant2"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant2"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant2"]
 modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 16 )
+material = SubResource( 12 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant2"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant2"]
-anims/wind = SubResource( 19 )
-"anims/wind (copy)" = SubResource( 20 )
+anims/wind = SubResource( 15 )
+"anims/wind (copy)" = SubResource( 16 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Art/plant2"]
 rotation = 3.49066
@@ -1776,41 +1680,41 @@ editor/display_folded = true
 position = Vector2( -6659.1, 23.7162 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 32 )
+script = ExtResource( 29 )
 
 [node name="plant2" type="Sprite" parent="Art/plant3"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant3"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant3"]
 modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 16 )
+material = SubResource( 12 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant3"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant3"]
-anims/wind = SubResource( 21 )
-"anims/wind (copy)" = SubResource( 22 )
+anims/wind = SubResource( 17 )
+"anims/wind (copy)" = SubResource( 18 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Art/plant3"]
 rotation = 3.49066
@@ -1821,41 +1725,41 @@ editor/display_folded = true
 position = Vector2( -7423.2, -835.358 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 32 )
+script = ExtResource( 29 )
 
 [node name="plant2" type="Sprite" parent="Art/plant4"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant4"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant4"]
 modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 16 )
+material = SubResource( 12 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant4"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant4"]
-anims/wind = SubResource( 23 )
-"anims/wind (copy)" = SubResource( 24 )
+anims/wind = SubResource( 19 )
+"anims/wind (copy)" = SubResource( 20 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Art/plant4"]
 rotation = 3.49066
@@ -1866,41 +1770,41 @@ editor/display_folded = true
 position = Vector2( 3853.63, 550.658 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 32 )
+script = ExtResource( 29 )
 
 [node name="plant2" type="Sprite" parent="Art/plant5"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant5"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 31 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant5"]
 modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 16 )
+material = SubResource( 12 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant5"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant5"]
-anims/wind = SubResource( 25 )
-"anims/wind (copy)" = SubResource( 26 )
+anims/wind = SubResource( 21 )
+"anims/wind (copy)" = SubResource( 22 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Art/plant5"]
 rotation = 3.49066
@@ -1909,30 +1813,30 @@ enabled = true
 [node name="Animals" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Butterfly" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly" parent="Animals" instance=ExtResource( 31 )]
 
-[node name="Butterfly2" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly2" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -6208.77, 450.44 )
 
-[node name="Butterfly3" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly3" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -7382.92, -291.124 )
 
-[node name="Butterfly4" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly4" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -7242.62, -182.562 )
 
-[node name="Butterfly5" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly5" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -8678.98, -154.169 )
 
-[node name="Butterfly6" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly6" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -9105.2, -873.206 )
 
-[node name="Butterfly7" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly7" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -10283, -85.8441 )
 
-[node name="Butterfly8" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly8" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -9290.65, 233.005 )
 
-[node name="Butterfly9" parent="Animals" instance=ExtResource( 34 )]
+[node name="Butterfly9" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -11278.8, -221.752 )
 
 [node name="Trees" type="ParallaxBackground" parent="."]
@@ -1948,7 +1852,7 @@ motion_mirroring = Vector2( 1024, 0 )
 margin_top = -120.614
 margin_right = 1024.0
 margin_bottom = 903.386
-texture = ExtResource( 35 )
+texture = ExtResource( 32 )
 expand = true
 stretch_mode = 2
 
@@ -1963,11 +1867,11 @@ margin_left = -17.2631
 margin_top = 277.757
 margin_right = 605.737
 margin_bottom = 904.757
-texture = ExtResource( 36 )
+texture = ExtResource( 33 )
 expand = true
 stretch_mode = 1
 
-[node name="Level_load" parent="." instance=ExtResource( 37 )]
+[node name="Level_load" parent="." instance=ExtResource( 34 )]
 
-[node name="Music Player" parent="." instance=ExtResource( 38 )]
+[node name="Music Player" parent="." instance=ExtResource( 35 )]
 
