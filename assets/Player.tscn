@@ -668,7 +668,6 @@ position = Vector2( 2.71121, -3.16309 )
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 3.0
 default_color = Color( 0.458824, 0.368627, 0.160784, 1 )
-texture_mode = 1415753840
 
 [node name="Label" type="Label" parent="Weapons"]
 editor/display_folded = true
@@ -789,7 +788,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1415753840
 
 [node name="icon5" type="Sprite" parent="Menu Items/Menu"]
 position = Vector2( 80, 80 )
@@ -837,7 +835,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1415753840
 
 [node name="Polygon2D" type="Polygon2D" parent="Menu Items/Menu"]
 scale = Vector2( 1.2, 1.2 )
@@ -885,7 +882,6 @@ position = Vector2( 2.64075, -51.4948 )
 points = PoolVector2Array( 0, 0, 100, 0 )
 width = 5.0
 default_color = Color( 0, 0, 0, 0.501961 )
-texture_mode = 1415753840
 
 [node name="Line2D2" type="Line2D" parent="Load_Minigame"]
 position = Vector2( 51.392, -56.7652 )
@@ -972,7 +968,6 @@ stream = ExtResource( 26 )
 autoplay = true
 
 [node name="TouchScreen" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="Controls" type="Node2D" parent="TouchScreen"]
 visible = false
