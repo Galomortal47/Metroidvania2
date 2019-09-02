@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -8,11 +8,12 @@
 [ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Platform4.tscn" type="PackedScene" id=7]
 [ext_resource path="res://sprites/house.png" type="Texture" id=8]
-[ext_resource path="res://assets/Trees.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Villager.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=13]
+[ext_resource path="res://sprites/house2.png" type="Texture" id=9]
+[ext_resource path="res://assets/Trees.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Villager.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -175,7 +176,6 @@ editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
 [node name="Art" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 z_index = -1
 
@@ -195,6 +195,7 @@ modulate = Color( 0.47451, 0.407843, 0.407843, 1 )
 [node name="Houses" type="Node2D" parent="Art"]
 
 [node name="house" type="TextureRect" parent="Art/Houses"]
+visible = false
 margin_left = 2269.0
 margin_top = 293.053
 margin_right = 5848.0
@@ -202,20 +203,24 @@ margin_bottom = 805.053
 texture = ExtResource( 8 )
 stretch_mode = 2
 
+[node name="house2" type="Sprite" parent="Art/Houses"]
+position = Vector2( 2642.93, 568.468 )
+texture = ExtResource( 9 )
+
 [node name="Animals" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
-[node name="Trees" parent="." instance=ExtResource( 9 )]
+[node name="Trees" parent="." instance=ExtResource( 10 )]
 
-[node name="Player" parent="." instance=ExtResource( 10 )]
+[node name="Player" parent="." instance=ExtResource( 11 )]
 position = Vector2( 6789.4, -8.47565 )
 
-[node name="Level_load" parent="." instance=ExtResource( 11 )]
+[node name="Level_load" parent="." instance=ExtResource( 12 )]
 position = Vector2( 6642.55, -334.361 )
 level_load = "res://Test/Level 1.tscn"
 
-[node name="Level_load2" parent="." instance=ExtResource( 11 )]
+[node name="Level_load2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 14431.4, 325.442 )
 level_load = "res://Test/Level 3.tscn"
 
@@ -223,64 +228,64 @@ level_load = "res://Test/Level 3.tscn"
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
-[node name="Villager" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager" parent="Node2D" instance=ExtResource( 13 )]
 collision_mask = 0
 
-[node name="Villager8" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager8" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 3783.13, 709.019 )
 collision_mask = 0
 
-[node name="Villager14" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager14" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 5297.05, 709.019 )
 collision_mask = 0
 
-[node name="Villager2" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager2" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 2471.62, 709.019 )
 collision_mask = 0
 
-[node name="Villager6" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager6" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 3897.66, 709.019 )
 collision_mask = 0
 
-[node name="Villager15" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager15" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 5411.58, 709.019 )
 collision_mask = 0
 
-[node name="Villager3" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager3" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 2592.43, 709.019 )
 collision_mask = 0
 
-[node name="Villager7" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager7" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 4018.47, 709.019 )
 collision_mask = 0
 
-[node name="Villager13" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager13" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 5532.39, 709.019 )
 collision_mask = 0
 
-[node name="Villager4" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager4" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 2521.9, 709.019 )
 collision_mask = 0
 
-[node name="Villager10" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager10" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 3947.94, 709.019 )
 collision_mask = 0
 
-[node name="Villager12" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager12" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 5461.86, 709.019 )
 collision_mask = 0
 
-[node name="Villager5" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager5" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 2408.77, 709.019 )
 collision_mask = 0
 
-[node name="Villager9" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager9" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 3834.81, 709.019 )
 collision_mask = 0
 
-[node name="Villager11" parent="Node2D" instance=ExtResource( 12 )]
+[node name="Villager11" parent="Node2D" instance=ExtResource( 13 )]
 position = Vector2( 5348.73, 709.019 )
 collision_mask = 0
 
-[node name="Music Player" parent="." instance=ExtResource( 13 )]
+[node name="Music Player" parent="." instance=ExtResource( 14 )]
 
