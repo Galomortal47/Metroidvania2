@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=1]
 [ext_resource path="res://sprites/grass.png" type="Texture" id=2]
@@ -16,7 +16,8 @@
 [ext_resource path="res://icon.png" type="Texture" id=14]
 [ext_resource path="res://music/boss_1.ogg" type="AudioStream" id=15]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=16]
-[ext_resource path="res://assets/Enemy Shooter.tscn" type="PackedScene" id=17]
+[ext_resource path="res://sprites/boss_1.png" type="Texture" id=17]
+[ext_resource path="res://assets/Enemy Shooter.tscn" type="PackedScene" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3893.01, 10.7424 )
@@ -28,7 +29,7 @@ extents = Vector2( 19.3867, 1060.84 )
 extents = Vector2( 10, 419.061 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 128, 128 )
+extents = Vector2( 98.918, 101.127 )
 
 [node name="Test" type="Node2D"]
 position = Vector2( -0.429321, 1.7171 )
@@ -209,6 +210,7 @@ timer = 3.0
 health = 32
 
 [node name="icon" type="Sprite" parent="Enemies/Boss"]
+visible = false
 scale = Vector2( 4, 4 )
 texture = ExtResource( 14 )
 
@@ -217,23 +219,27 @@ stream = ExtResource( 15 )
 autoplay = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Boss"]
+position = Vector2( 0.697266, -21.6484 )
 shape = SubResource( 4 )
 
 [node name="Health" parent="Enemies/Boss" instance=ExtResource( 16 )]
 visible = false
 
-[node name="Enemy" parent="Enemies/Boss" instance=ExtResource( 17 )]
-position = Vector2( -150.057, -6.94205 )
+[node name="boss_1" type="Sprite" parent="Enemies/Boss"]
+position = Vector2( 31.9727, 46.2453 )
+scale = Vector2( 1.34831, 1.34831 )
+texture = ExtResource( 17 )
+
+[node name="Enemy" parent="Enemies/Boss" instance=ExtResource( 18 )]
+position = Vector2( -136.885, 8.02633 )
 gravity = 0
 music = false
-health = 5
 stun2 = 0
 
-[node name="Enemy2" parent="Enemies/Boss" instance=ExtResource( 17 )]
-position = Vector2( 150.658, -2.64606 )
+[node name="Enemy2" parent="Enemies/Boss" instance=ExtResource( 18 )]
+position = Vector2( 137.486, 3.94003 )
 gravity = 0
 music = false
-health = 5
 stun2 = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Enemies/Boss"]
