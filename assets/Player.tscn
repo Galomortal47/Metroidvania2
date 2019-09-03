@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://assets/TouchScreen.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Scripts/TouchScreen.gd" type="Script" id=28]
 [ext_resource path="res://Scripts/Health_Load.gd" type="Script" id=29]
+[ext_resource path="res://Scripts/Pause.gd" type="Script" id=30]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
@@ -493,6 +494,7 @@ tracks/4/keys = {
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
+z_index = 1
 collision_layer = 15
 collision_mask = 15
 script = ExtResource( 1 )
@@ -557,6 +559,7 @@ drag_margin_v_enabled = false
 script = ExtResource( 3 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
 [node name="Srinking lamp" type="Node2D" parent="Weapons"]
@@ -983,5 +986,34 @@ script = ExtResource( 28 )
 
 [node name="Health_Load" type="Node" parent="."]
 script = ExtResource( 29 )
+
+[node name="CollisionPolygon2D" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( -6.4472, -127.141 )
+z_index = -2
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -511.296, -299.554, -514.979, 292.213, 535.959, 302.034, 532.276, -308.148 )
+
+[node name="Pause" type="Node" parent="."]
+pause_mode = 2
+script = ExtResource( 30 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Pause"]
+
+[node name="Label" type="Label" parent="Pause/CanvasLayer"]
+visible = false
+margin_left = 470.0
+margin_top = 270.0
+margin_right = 510.0
+margin_bottom = 284.0
+custom_fonts/font = ExtResource( 8 )
+text = "Pause"
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="Pause/CanvasLayer/Label"]
+modulate = Color( 1, 1, 1, 0.498039 )
+position = Vector2( -3.62109, -13.1682 )
+z_index = -2
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -511.296, -299.554, -514.979, 292.213, 535.959, 302.034, 532.276, -308.148 )
 
 [connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]
