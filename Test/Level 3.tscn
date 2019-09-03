@@ -60,6 +60,10 @@ stretch_mode = 2
 position = Vector2( 19807.9, -237.006 )
 texture = ExtResource( 4 )
 
+[node name="end2" type="Sprite" parent="Stuff"]
+position = Vector2( 19794.6, 21.0721 )
+texture = ExtResource( 4 )
+
 [node name="boss_2" type="TextureRect" parent="Stuff"]
 margin_left = 19853.0
 margin_top = -353.0
@@ -71,7 +75,6 @@ expand = true
 stretch_mode = 2
 
 [node name="Ground" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 collision_layer = 17
 collision_mask = 17
@@ -146,18 +149,17 @@ position = Vector2( 16347, 63.0507 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 12464.7, 470.021 )
+position = Vector2( 12464.7, 474.932 )
 shape = SubResource( 2 )
 
 [node name="Hooks" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
 [node name="Hook1" parent="Hooks" instance=ExtResource( 6 )]
-position = Vector2( 12070.9, 400.564 )
+position = Vector2( 11678.2, 355.249 )
 
 [node name="Hook2" parent="Hooks" instance=ExtResource( 6 )]
-position = Vector2( 12185.4, -1.71249 )
+position = Vector2( 12006.7, 20.9453 )
 
 [node name="Hook3" parent="Hooks" instance=ExtResource( 6 )]
 position = Vector2( 12567.2, -183.765 )
@@ -197,7 +199,6 @@ position = Vector2( 7335.83, 0 )
 position = Vector2( 9772.61, 712.401 )
 
 [node name="Art" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 z_index = -1
 
@@ -234,32 +235,31 @@ position = Vector2( 22.125, 73.4825 )
 texture = ExtResource( 4 )
 
 [node name="Vines" type="Node2D" parent="Art"]
-editor/display_folded = true
 modulate = Color( 0.47451, 0.407843, 0.407843, 1 )
 
 [node name="vines" type="TextureRect" parent="Art/Vines"]
-margin_left = 11301.3
-margin_top = -288.95
-margin_right = 11557.3
-margin_bottom = 854.05
+margin_left = 11301.0
+margin_top = -1117.0
+margin_right = 11557.0
+margin_bottom = 854.0
 texture = ExtResource( 10 )
 expand = true
 stretch_mode = 2
 
 [node name="vines2" type="TextureRect" parent="Art/Vines"]
 margin_left = 11267.0
-margin_top = -166.345
+margin_top = -803.0
 margin_right = 11523.0
-margin_bottom = 976.655
+margin_bottom = 977.0
 texture = ExtResource( 10 )
 expand = true
 stretch_mode = 2
 
 [node name="vines3" type="TextureRect" parent="Art/Vines"]
-margin_left = 11188.6
-margin_top = -333.088
-margin_right = 11444.6
-margin_bottom = 809.912
+margin_left = 11189.0
+margin_top = -1237.0
+margin_right = 11445.0
+margin_bottom = 810.0
 texture = ExtResource( 10 )
 expand = true
 stretch_mode = 2

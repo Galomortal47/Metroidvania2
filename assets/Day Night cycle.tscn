@@ -173,7 +173,7 @@ texture = ExtResource( 3 )
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -13.2964, 359.004 )
-motion_scale = Vector2( 0.25, 1 )
+motion_scale = Vector2( 0.25, 0.25 )
 motion_mirroring = Vector2( 960, 0 )
 
 [node name="cloud" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
