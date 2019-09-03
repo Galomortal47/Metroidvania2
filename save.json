@@ -1,1 +1,1 @@
-{"guns":[false,false,false,false,false,false,false,false],"hp":4,"level":"res://Test/Level 3.tscn","money":369,"position_x":14389.600586,"position_y":718.906982}
+{"gun":[false,false,false,false,false,false,false,true],"guns":[false,false,false,false,false,false,false,true],"hp":4,"level":"res://Test/Level 4.tscn","money":777,"position_x":23680.914063,"position_y":22.240629}
