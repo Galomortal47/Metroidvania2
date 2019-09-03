@@ -35,7 +35,7 @@ func _process(delta):
 				boltspawner.particle_spawn(get_tree().get_root(),get_global_position())
 				queue_free()
 			"explosive":
-				explosive.explosion(get_global_position(),get_tree().get_root(),"player","",5,Color(1,0,0))
+				explosive.explosion(get_global_position(),get_tree().get_root(),"player","",1,Color(1,0,0))
 				queue_free()
 	match object:
 		"explosive":

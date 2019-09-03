@@ -19,7 +19,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	$CanvasLayer/Line2D.set_points([Vector2(160,50),Vector2(($Health.health*10) + 160,50)])
+	$CanvasLayer/Line2D.set_points([Vector2(160,50),Vector2(($Health.health*20) + 160,50)])
 	get_parent().get_parent().get_node("Hooks").set_position(get_position())
 	if $Health.health < 0:
 		queue_free()

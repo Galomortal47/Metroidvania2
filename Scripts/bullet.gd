@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-var damage = 5.0
+var damage = 1.0
 var motion = Vector2(0,0)
 var speed = 500
 var gravity = 0
 var curve = 0
-var lifespan = 1.0
+var lifespan = 5.0
 var particle_size = 15
 var pierce = false
 var ignore = "player"

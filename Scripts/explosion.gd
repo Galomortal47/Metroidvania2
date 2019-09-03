@@ -10,7 +10,6 @@ func explosion(var pos, node, target, ignore, var damage, var explosion_color):
 		bullet_instance.ignore = ignore
 		bullet_instance.target = target
 		bullet_instance.speed = 175
-		bullet_instance.damage = damage
 		bullet_instance.lifespan = 1
 		bullet_instance.pierce = true
 		node.add_child(bullet_instance)
