@@ -260,7 +260,6 @@ z_index = -1
 texture = ExtResource( 15 )
 
 [node name="Tutorial" type="Control" parent="."]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 16 )
@@ -292,8 +291,7 @@ Space: Jump
 X: Roll
 Z: Shoot
 C: Menu
-D and F: Choose Item
+S and D: Choose Item
 "
 
 [node name="bolts" type="Node2D" parent="."]
-
