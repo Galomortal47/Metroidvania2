@@ -9,8 +9,10 @@ var bomb = load("res://assets/Box_explosive.tscn")
 export var health = 40
 var motion = Vector2(0,0)
 var speed = 200
+var pos_y = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pos_y = get_position().y
 	timer_aux = timer
 	$Health.health = health
 	$Health.health_max = health
@@ -32,6 +34,7 @@ func _process(delta):
 				motion.x = -speed
 		timer = timer_aux
 		get_tree().get_root().add_child(boom)
+	set_position(Vector2(get_position().x,pos_y))
 	motion = move_and_slide(motion)
 #	pass
 

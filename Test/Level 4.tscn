@@ -21,13 +21,13 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3893.01, 10.7424 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 19.3867, 1060.84 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 419.061 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 128, 128 )
 
 [node name="Test" type="Node2D"]
@@ -98,11 +98,11 @@ shape = SubResource( 1 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 20214, -896.7 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 12464.7, 470.021 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Hooks" type="Node2D" parent="."]
 editor/display_folded = true
@@ -217,7 +217,7 @@ stream = ExtResource( 15 )
 autoplay = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Boss"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Health" parent="Enemies/Boss" instance=ExtResource( 16 )]
 visible = false
@@ -240,4 +240,3 @@ default_color = Color( 1, 0, 0, 1 )
 texture_mode = 1415753728
 
 [node name="bolts" type="Node2D" parent="."]
-
