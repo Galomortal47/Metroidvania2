@@ -90,7 +90,7 @@ func die():
 	if get_node("Health").health <= 0:
 		$Save.data.money = int(int($Coins/Number.get_text()))
 		$Save.save()
-		get_tree().change_scene("res://assets/Main_Menu.tscn")
+		state = "death"
 
 func roll():
 	if Input.is_action_pressed("ui_roll") and not ledge_detect():

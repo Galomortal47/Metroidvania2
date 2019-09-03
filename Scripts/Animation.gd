@@ -40,6 +40,8 @@ func animations():
 				get_parent().get_node("Chocobo").play("walk")
 			else:
 				get_parent().get_node("Chocobo").play("jump")
+		"death":
+			get_parent().get_node("Death").set_current_animation("Die")
 	if int(get_parent().get_parent().motion.x) > 0:
 		get_parent().set_scale(Vector2(-1,get_parent().get_scale().y))
 	if int(get_parent().get_parent().motion.x) < -0:
@@ -56,3 +58,8 @@ func shoot_dir(var hide):
 				get_parent().get_node("Shooting").play("shoot down")
 			elif hide:
 				get_parent().get_node("Shooting").play("hide")
+
+
+func _on_Death_animation_finished(anim_name):
+	get_tree().change_scene("res://assets/Main_Menu.tscn")
+	pass # Replace with function body.

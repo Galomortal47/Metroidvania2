@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scripts/Animation.gd" type="Script" id=1]
 [ext_resource path="res://sprites/char2.png" type="Texture" id=2]
@@ -6994,6 +6994,82 @@ tracks/13/keys = {
 "values": [ 0.0, 20.0035, 0.0 ]
 }
 
+[sub_resource type="Animation" id=22]
+resource_name = "Die"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Polygon2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Polygon2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 5, 4096 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Polygon2D:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, -4000 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Animation/Hips:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.3, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -5.98362, 88.2983 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Animation/Hips:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.3, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.43907, 19.6436 ), Vector2( 15.453, 50.9876 ) ]
+}
+
 [node name="Scale" type="Node2D"]
 z_index = 5
 
@@ -7362,3 +7438,13 @@ anims/idle = SubResource( 18 )
 anims/jump = SubResource( 20 )
 anims/walk = SubResource( 21 )
 
+[node name="Death" type="AnimationPlayer" parent="."]
+anims/Die = SubResource( 22 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -856.408, -527.171, -870.761, 596.523, 1073.15, 596.523, 1075.2, -539.474 )
+
+[connection signal="animation_finished" from="Death" to="Animation" method="_on_Death_animation_finished"]
