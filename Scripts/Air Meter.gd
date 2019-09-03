@@ -11,7 +11,7 @@ func _process(delta):
 		if air < 1.0:
 			air += delta * mod
 		else:
-			get_parent().get_node("Health").damage(3)
+			get_parent().get_node("Health").damage(1)
 	else:
 		$Line2D.hide()
 		$Label.hide()
