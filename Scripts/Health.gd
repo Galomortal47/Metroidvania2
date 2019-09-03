@@ -1,7 +1,7 @@
 extends Node2D
 
-export var health_max = 20
-export var health = 20
+export var health_max = 20.0
+export var health = 20.0
 var invicible= false
 var size = 20
 var knockback = Vector2(0,-200)
@@ -15,7 +15,7 @@ func _process(delta):
 		$Line2D3.default_color = (Color(1,1,1))
 	if health > health_max:
 		health = health_max
-	$Label.set_text(str(health) + "/" + str(health_max))
+	$Label.set_text(str(int(health)) + "/" + str(health_max))
 	$Line2D3.set_scale(Vector2(float(health)/float(health_max),1))
 
 func damage(var damage):

@@ -13,8 +13,7 @@ func bolt_spawn(var bolt_number, var node, var pos):
 			var bolt_instance = bolts.instance()
 #			bolt_instance.collect = true
 			bolt_instance.set_position(pos+ Vector2(rand_range(-ramdom_pos,ramdom_pos),rand_range(-ramdom_pos,ramdom_pos)))
-			if has_node("/root/Test"):
-				node.get_node("Test").add_child(bolt_instance)
+			node.get_child(0).add_child(bolt_instance)
 
 func particle_spawn(var node, var pos):
 	var particle =  load(particle_path)

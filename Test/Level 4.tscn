@@ -109,10 +109,10 @@ editor/display_folded = true
 position = Vector2( 25826.3, -419.422 )
 
 [node name="Hook3" parent="Hooks" instance=ExtResource( 3 )]
-position = Vector2( -728.311, 141.144 )
+position = Vector2( -728.311, 42.6642 )
 
 [node name="Hook4" parent="Hooks" instance=ExtResource( 3 )]
-position = Vector2( 649.701, 141.144 )
+position = Vector2( 649.701, 42.6642 )
 
 [node name="Waters" type="Node2D" parent="."]
 position = Vector2( 23075.4, 555.175 )
@@ -206,7 +206,7 @@ collision_layer = 5
 collision_mask = 5
 script = ExtResource( 13 )
 timer = 3.0
-health = 25
+health = 64
 
 [node name="icon" type="Sprite" parent="Enemies/Boss"]
 scale = Vector2( 4, 4 )
@@ -226,11 +226,13 @@ visible = false
 position = Vector2( -150.057, -6.94205 )
 gravity = 0
 music = false
+stun2 = 0
 
 [node name="Enemy2" parent="Enemies/Boss" instance=ExtResource( 17 )]
 position = Vector2( 150.658, -2.64606 )
 gravity = 0
 music = false
+stun2 = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Enemies/Boss"]
 
@@ -240,3 +242,4 @@ default_color = Color( 1, 0, 0, 1 )
 texture_mode = 1415753728
 
 [node name="bolts" type="Node2D" parent="."]
+

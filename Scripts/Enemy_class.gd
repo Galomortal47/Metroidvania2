@@ -13,6 +13,7 @@ export var health = 20
 var stun = false
 var boltspawner = preload("bolt_spawner.gd").new()
 var attack = Vector2(60,0)
+export var stun2 = 500
 export var timer = 3
 var time_aux = 3
 export var type = "melee"
@@ -105,7 +106,7 @@ func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
 
 # verifica a vida do inimigo e o destruir caso ela seja igual ou menor que 0
 func die():
-	if get_node("Health").health <= 0:
+	if int(get_node("Health").health) <= 0:
 		boltspawner.bolt_spawn(bolts_spwned_upon_death,get_tree().get_root(),get_position())
 		boltspawner.particle_spawn(get_tree().get_root(),get_position())
 		queue_free()
@@ -113,9 +114,9 @@ func die():
 
 func stun():
 	if motion.x > 0:
-		motion += Vector2(-500,0)
+		motion += Vector2(-stun2,0)
 	else:
-		motion += Vector2(500,0)
+		motion += Vector2(stun2,0)
 
 func attack():
 	if $Damage.is_colliding():

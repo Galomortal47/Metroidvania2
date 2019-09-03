@@ -893,7 +893,6 @@ position = Vector2( -245.126, 520.219 )
 position = Vector2( 86.887, 555.155 )
 
 [node name="Hooks" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Hook1" parent="Hooks" instance=ExtResource( 10 )]
 
@@ -922,10 +921,13 @@ position = Vector2( -7938.52, -1111.49 )
 position = Vector2( -10542.1, -940.448 )
 
 [node name="Hook9" parent="Hooks" instance=ExtResource( 10 )]
-position = Vector2( -11068.1, -643.324 )
+position = Vector2( -11111.4, -693.795 )
+
+[node name="Hook24" parent="Hooks" instance=ExtResource( 10 )]
+position = Vector2( -10848.2, -899.282 )
 
 [node name="Hook10" parent="Hooks" instance=ExtResource( 10 )]
-position = Vector2( -11278.6, -151.298 )
+position = Vector2( -11357.9, -371.206 )
 
 [node name="Hook11" parent="Hooks" instance=ExtResource( 10 )]
 position = Vector2( -5419.3, -1023.73 )
@@ -983,14 +985,13 @@ position = Vector2( -6490.76, 823.595 )
 scale = Vector2( 1.34346, 0.324087 )
 
 [node name="Enemies" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 12 )]
 position = Vector2( -1661.99, 678.411 )
-health = 10
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource( 12 )]
 position = Vector2( -9557.78, 315.75 )
-health = 10
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 13 )]
 position = Vector2( -3123.18, 665.23 )
@@ -1231,6 +1232,7 @@ position = Vector2( 184.282, 553.485 )
 [node name="Node2D" type="Node2D" parent="Boxes"]
 
 [node name="Platfroms" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Platform4" parent="Platfroms" instance=ExtResource( 19 )]
 position = Vector2( -5996.3, 321.451 )
@@ -1837,7 +1839,7 @@ position = Vector2( -10283, -85.8441 )
 position = Vector2( -9290.65, 233.005 )
 
 [node name="Butterfly9" parent="Animals" instance=ExtResource( 31 )]
-position = Vector2( -11278.8, -221.752 )
+position = Vector2( -12068.3, -16.2644 )
 
 [node name="Trees" type="ParallaxBackground" parent="."]
 editor/display_folded = true

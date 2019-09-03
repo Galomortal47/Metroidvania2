@@ -52,8 +52,8 @@ tracks/2/keys = {
 }
 
 [node name="Box" type="KinematicBody2D" groups=[
-"destroy",
 "enemy",
+"destroy",
 ]]
 modulate = Color( 0.423529, 0.423529, 0.423529, 1 )
 z_index = 2
@@ -80,8 +80,8 @@ shape = SubResource( 2 )
 [node name="Health" parent="." instance=ExtResource( 4 )]
 visible = false
 scale = Vector2( 0.5, 0.5 )
-health_max = 1
-health = 1
+health_max = 0.1
+health = 0.1
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( 0, 21.3286 )
@@ -107,8 +107,8 @@ z_index = -1
 texture = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
-"destroy",
 "enemy",
+"destroy",
 ]]
 anims/boom = SubResource( 3 )
 
