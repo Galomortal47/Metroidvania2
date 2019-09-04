@@ -8,6 +8,7 @@ func _ready():
 	save.loader()
 	if save.data.guns[gun_id]:
 		queue_free()
+	save.save()
 	$Sprite.texture = get_node("enemy/Monster2D-3D/Viewport"+str(gun_id)).get_texture()
 	pass # Replace with function body.
 
