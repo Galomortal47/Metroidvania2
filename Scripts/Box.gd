@@ -11,7 +11,7 @@ var motion = Vector2(0,0)
 var spawn = false
 var grav = 10
 export var object = "bolt"
-
+export var damage = 1
 func _process(delta):
 	if not $RayCast2D.is_colliding():
 		motion.y += grav
@@ -35,7 +35,7 @@ func _process(delta):
 				boltspawner.particle_spawn(get_tree().get_root(),get_global_position())
 				queue_free()
 			"explosive":
-				explosive.explosion(get_global_position(),get_tree().get_root(),"player","",1,Color(1,0,0))
+				explosive.explosion(get_global_position(),get_tree().get_root(),"player","",damage,Color(1,0,0))
 				queue_free()
 	match object:
 		"explosive":
@@ -53,6 +53,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "boom":
 		boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position())
 		boltspawner.particle_spawn(get_tree().get_root(),get_position())
-		explosive.explosion(get_global_position(),get_tree().get_root(),"player","",5,Color(1,0,0))
+		explosive.explosion(get_global_position(),get_tree().get_root(),"player","",damage,Color(1,0,0))
 		queue_free()
 	pass # Replace with function body.
