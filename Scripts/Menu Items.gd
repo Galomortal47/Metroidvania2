@@ -25,8 +25,8 @@ func icon_generate():
 
 func weapon_sprite(var select):
 	if get_parent().get_node("Weapons").get_child(select).have:
-		get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(select).get_texture()
-		get_parent().get_node("Shadow/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(select).get_texture()
+		get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(select+1).get_texture()
+		get_parent().get_node("Shadow/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(select+1).get_texture()
 
 func _process(delta):
 	guns_have()
