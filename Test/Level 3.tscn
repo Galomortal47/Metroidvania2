@@ -177,7 +177,6 @@ editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
 [node name="Day Night cycle" parent="." instance=ExtResource( 7 )]
-autoplay = ""
 
 [node name="Boxes" type="Node2D" parent="."]
 editor/display_folded = true
@@ -350,8 +349,6 @@ S and D: Choose Item
 [node name="Gadeget Pick Up" parent="." instance=ExtResource( 19 )]
 position = Vector2( 18724.3, 623.824 )
 gun_id = 2
-
-[node name="Trees2" parent="." instance=ExtResource( 12 )]
 
 [node name="Node2D2" type="Node2D" parent="."]
 editor/display_folded = true

@@ -159,7 +159,6 @@ position = Vector2( 649.701, 42.6642 )
 position = Vector2( 23075.4, 555.175 )
 
 [node name="Day Night cycle" parent="." instance=ExtResource( 5 )]
-autoplay = ""
 
 [node name="Boxes" type="Node2D" parent="."]
 editor/display_folded = true
