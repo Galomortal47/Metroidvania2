@@ -12,13 +12,16 @@ var spawn = false
 var grav = 10
 export var object = "bolt"
 export var damage = 1
+var drag = 0.975
 func _process(delta):
 	if not $RayCast2D.is_colliding():
 		motion.y += grav
+		motion.x *= drag
 #	if $RayCast2D2.is_colliding():
 #		motion.x -= 20
 #	if $RayCast2D3.is_colliding():
 #		motion.x += 20
+
 	motion = move_and_slide(motion)
 	if $Health.health <= 0:
 		match object:

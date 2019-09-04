@@ -42,6 +42,8 @@ func animations():
 				get_parent().get_node("Chocobo").play("jump")
 		"death":
 			get_parent().get_node("Death").set_current_animation("Die")
+		"carring":
+			get_parent().get_node("AnimationPlayer").set_current_animation("Walk_carry")
 	if int(get_parent().get_parent().motion.x) > 0:
 		get_parent().set_scale(Vector2(-1,get_parent().get_scale().y))
 		get_parent().get_node("Polygon2D/Label").set_scale(Vector2(-8,8))

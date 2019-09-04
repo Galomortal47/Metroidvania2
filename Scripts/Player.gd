@@ -64,6 +64,16 @@ func _process(delta):
 				jump_aux = jump_timer
 		"chocobo_swin":
 			swin()
+		"carring":
+			max_speed = 500
+			jump = 40
+			jump_timer = 0.15
+			move()
+			jump()
+			if not ground_detect():
+				motion.y += gravity
+			if Input.is_action_pressed("ui_accept"):
+				jump_aux -= delta
 	motion = move_and_slide(motion)
 	die()
 #	pass

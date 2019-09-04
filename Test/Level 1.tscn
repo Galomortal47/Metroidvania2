@@ -893,6 +893,7 @@ position = Vector2( -245.126, 520.219 )
 position = Vector2( 86.887, 555.155 )
 
 [node name="Hooks" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Hook1" parent="Hooks" instance=ExtResource( 10 )]
 
@@ -1448,6 +1449,7 @@ z_index = 1
 texture = ExtResource( 26 )
 
 [node name="Vines3" type="Node2D" parent="Art"]
+editor/display_folded = true
 modulate = Color( 0.47451, 0.407843, 0.407843, 1 )
 position = Vector2( -3038.65, 468.048 )
 

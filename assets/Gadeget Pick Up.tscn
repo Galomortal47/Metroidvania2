@@ -40,9 +40,13 @@ z_index = -1
 points = PoolVector2Array( 135.31, -3, 237.722, -3 )
 width = 20.0
 default_color = Color( 0, 0, 0, 0.392157 )
+texture_mode = 524289648
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( 0, -50 )
 enabled = true
 cast_to = Vector2( 0, 100 )
 
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
