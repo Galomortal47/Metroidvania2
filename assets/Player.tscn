@@ -707,7 +707,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
-editor/display_folded = true
 script = ExtResource( 12 )
 
 [node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
@@ -719,16 +718,14 @@ next/close = "closed"
 next/open = "opened"
 
 [node name="Menu" type="Node2D" parent="Menu Items"]
-editor/display_folded = true
 position = Vector2( 512, 165 )
 
 [node name="icon0" type="Sprite" parent="Menu Items/Menu"]
+editor/display_folded = true
 position = Vector2( -120, 0 )
 texture = ExtResource( 13 )
-offset = Vector2( -50, 60 )
 
 [node name="Node2D" type="Node2D" parent="Menu Items/Menu/icon0"]
-editor/display_folded = true
 scale = Vector2( 2, 2 )
 z_index = -1
 
@@ -740,6 +737,7 @@ default_color = Color( 1, 1, 1, 1 )
 texture_mode = 1052819649
 
 [node name="icon1" type="Sprite" parent="Menu Items/Menu"]
+editor/display_folded = true
 position = Vector2( -80, -80 )
 texture = ExtResource( 13 )
 
@@ -756,6 +754,7 @@ default_color = Color( 1, 1, 1, 1 )
 texture_mode = -1039925248
 
 [node name="icon2" type="Sprite" parent="Menu Items/Menu"]
+editor/display_folded = true
 position = Vector2( 0, -120 )
 texture = ExtResource( 13 )
 
@@ -772,6 +771,7 @@ default_color = Color( 1, 1, 1, 1 )
 texture_mode = 1052819649
 
 [node name="icon3" type="Sprite" parent="Menu Items/Menu"]
+editor/display_folded = true
 position = Vector2( 80, -80 )
 texture = ExtResource( 13 )
 
@@ -788,6 +788,7 @@ default_color = Color( 1, 1, 1, 1 )
 texture_mode = 1052819649
 
 [node name="icon4" type="Sprite" parent="Menu Items/Menu"]
+editor/display_folded = true
 position = Vector2( 120, 0 )
 texture = ExtResource( 13 )
 
@@ -804,6 +805,7 @@ default_color = Color( 1, 1, 1, 1 )
 texture_mode = -1061803818
 
 [node name="icon5" type="Sprite" parent="Menu Items/Menu"]
+editor/display_folded = true
 position = Vector2( 80, 80 )
 texture = ExtResource( 13 )
 
@@ -820,6 +822,7 @@ default_color = Color( 1, 1, 1, 1 )
 texture_mode = 1415753728
 
 [node name="icon6" type="Sprite" parent="Menu Items/Menu"]
+editor/display_folded = true
 position = Vector2( 0, 120 )
 texture = ExtResource( 13 )
 
@@ -836,6 +839,7 @@ default_color = Color( 1, 1, 1, 1 )
 texture_mode = 1065353216
 
 [node name="icon7" type="Sprite" parent="Menu Items/Menu"]
+editor/display_folded = true
 position = Vector2( -80, 80 )
 texture = ExtResource( 13 )
 

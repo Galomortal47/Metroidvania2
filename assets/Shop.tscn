@@ -118,45 +118,53 @@ region_rect = Rect2( 8, 96, 35, 19 )
 
 [node name="Icons" type="Node2D" parent="Shop_Select"]
 position = Vector2( -36.694, -58.2787 )
+z_index = 4000
+z_as_relative = false
 
 [node name="icon8" type="Sprite" parent="Shop_Select/Icons"]
-visible = false
-position = Vector2( 159.491, 544.549 )
+position = Vector2( 162.921, 544.549 )
+scale = Vector2( 1, -1 )
 texture = ExtResource( 5 )
 
 [node name="icon7" type="Sprite" parent="Shop_Select/Icons"]
-visible = false
-position = Vector2( 259.491, 544.549 )
+position = Vector2( 262.921, 544.549 )
+scale = Vector2( 1, -1 )
 texture = ExtResource( 5 )
 
 [node name="icon6" type="Sprite" parent="Shop_Select/Icons"]
-visible = false
-position = Vector2( 359.491, 544.549 )
+position = Vector2( 362.921, 544.549 )
+scale = Vector2( 1, -1 )
 texture = ExtResource( 5 )
 
 [node name="icon1" type="Sprite" parent="Shop_Select/Icons"]
-visible = false
-position = Vector2( 459.491, 544.549 )
+position = Vector2( 462.921, 544.549 )
+scale = Vector2( 1, -1 )
 texture = ExtResource( 5 )
 
 [node name="icon2" type="Sprite" parent="Shop_Select/Icons"]
-visible = false
-position = Vector2( 559.491, 544.549 )
+position = Vector2( 562.921, 544.549 )
+scale = Vector2( 1, -1 )
 texture = ExtResource( 5 )
 
 [node name="icon3" type="Sprite" parent="Shop_Select/Icons"]
-visible = false
-position = Vector2( 659.491, 544.549 )
+position = Vector2( 662.921, 544.549 )
+scale = Vector2( 1, -1 )
 texture = ExtResource( 5 )
 
 [node name="icon4" type="Sprite" parent="Shop_Select/Icons"]
-visible = false
-position = Vector2( 759.491, 544.549 )
+position = Vector2( 762.921, 544.549 )
+scale = Vector2( 1, -1 )
 texture = ExtResource( 5 )
 
 [node name="icon5" type="Sprite" parent="Shop_Select/Icons"]
+position = Vector2( 862.921, 544.549 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 5 )
+
+[node name="icon9" type="Sprite" parent="Shop_Select/Icons"]
 visible = false
-position = Vector2( 859.491, 544.549 )
+position = Vector2( 920.365, 544.549 )
+scale = Vector2( 1, -1 )
 texture = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="Shop_Select/Icons"]

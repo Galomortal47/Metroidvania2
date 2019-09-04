@@ -25,8 +25,8 @@ func icon_generate():
 
 func weapon_sprite(var select):
 	if get_parent().get_node("Weapons").get_child(select).have:
-		get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Viewport"+str(select)).get_texture()
-		get_parent().get_node("Shadow/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Viewport"+str(select)).get_texture()
+		get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(select).get_texture()
+		get_parent().get_node("Shadow/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(select).get_texture()
 
 func _process(delta):
 	guns_have()
@@ -38,21 +38,22 @@ func _process(delta):
 		else:
 			Engine.set_time_scale(1) 
 		$"Menu Anim".set_current_animation("open")
-		menu_select()
-		if Input.is_action_just_pressed("trigger_l"):
-			a -= 1
-		if Input.is_action_just_pressed("trigger_r"):
-			a += 1
-		if a < 0:
-			a =  menu_size-1
-		if a >  menu_size-1:
-			a = 0
-		weapon_sprite(a)
-		select(a)
 	else:
 		$"Menu Anim".set_current_animation("close")
 #		$Menu.set_scale(Vector2(0,0))
 		Engine.set_time_scale(1) 
+	menu_select()
+	if Input.is_action_just_pressed("trigger_l"):
+		a -= 1
+	if Input.is_action_just_pressed("trigger_r"):
+		a += 1
+	if a < 0:
+		a =  menu_size-1
+	if a >  menu_size-1:
+		a = 0
+	weapon_sprite(a)
+	select(a)
+
 
 func menu_select():
 	for i in range(0,menu_size):

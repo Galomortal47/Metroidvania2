@@ -8,6 +8,11 @@ var knockback = Vector2(0,-200)
 export var invicility = false
 export var player = false
 
+#func _ready():
+#	get_parent().get_node("Save").loader()
+#	get_parent().get_node("Save").save()
+#	health = get_parent().get_node("Save").data.hp
+
 func _process(delta):
 	if health <= health_max * 0.25:
 		$Line2D3.default_color = (Color(1,0,0))

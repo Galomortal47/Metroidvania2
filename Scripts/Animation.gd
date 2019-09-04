@@ -54,6 +54,7 @@ func animations():
 #	pass
 
 func shoot_dir(var hide):
+		if get_parent().get_parent().state == "walk" or get_parent().get_parent().state == "chocobo":
 			if Input.is_action_pressed("ui_cancel") and not Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down") and not get_parent().get_parent().ledge_detect():
 				get_parent().get_node("Shooting").play("shoot")
 			elif Input.is_action_pressed("ui_up") and not get_parent().get_parent().ledge_detect():
@@ -62,6 +63,8 @@ func shoot_dir(var hide):
 				get_parent().get_node("Shooting").play("shoot down")
 			elif hide:
 				get_parent().get_node("Shooting").play("hide")
+		else:
+			get_parent().get_node("Shooting").play("hide")
 
 
 func _on_Death_animation_finished(anim_name):

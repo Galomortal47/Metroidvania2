@@ -6,7 +6,7 @@
 [node name="Scene Root" instance=ExtResource( 1 )]
 
 [node name="Cylinder" parent="." index="0"]
-transform = Transform( 0.559597, 0.118283, -0.259147, -0.114704, 0.659046, 0.0531189, 0.281994, 0, 0.608933, 0, -1.1082, -0.714689 )
+transform = Transform( 0.559597, 0.118283, -0.259147, -0.114704, 0.659046, 0.0531189, 0.281994, 0, 0.608933, 0, -0.0881989, 0.0551379 )
 material/0 = ExtResource( 2 )
 
 [node name="Light" parent="." index="2"]

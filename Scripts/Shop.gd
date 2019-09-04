@@ -4,26 +4,26 @@ var i
 var select = 0
 var price = [99999,2000,3000,4000,4000,5000,99999,99999]
 var enable = [false,true,true,true,true,true,false,false]
-var items_n = 7
+var items_n = 8
 
 func _process(delta):
-	if Input.is_action_pressed("ui_select"): 
-		if Input.is_action_just_pressed("trigger_r"):
-			select += 1
-		if Input.is_action_just_pressed("trigger_l"):
-			select -= 1
-		if select > items_n:
-			select = 0
-		if select < 0:
-			select = 7
+	if Input.is_action_just_pressed("trigger_r"):
+		select += 1
+	if Input.is_action_just_pressed("trigger_l"):
+		select -= 1
+	if select >= items_n:
+		select = 0
+	if select < 0:
+		select = 7
 	
 	if is_colliding():
-		for i in range(0,items_n+1):
+		for i in range(0,items_n):
+			get_node("Shop_Select/Icons").get_child(i).texture = get_collider().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(i+1).get_texture()
 			if select == i:
-				get_node("Shop_Select/Icons").get_child(i).set_scale(Vector2(1.5,1.5))
+				get_node("Shop_Select/Icons").get_child(i).set_scale(Vector2(0.5,-0.5))
 				get_node("Shop_Select/Icons").get_child(i).set_modulate(Color(1,1,1))
 			else:
-				get_node("Shop_Select/Icons").get_child(i).set_scale(Vector2(0.5,0.5))
+				get_node("Shop_Select/Icons").get_child(i).set_scale(Vector2(0.25,-0.25))
 				get_node("Shop_Select/Icons").get_child(i).set_modulate(Color(0.5,0.5,0.5))
 			if get_collider().is_in_group("player"):
 				get_node("Shop_Select/Icons").show()
