@@ -1,22 +1,27 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://temp/Stuff.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
 [ext_resource path="res://sprites/grass.png" type="Texture" id=3]
 [ext_resource path="res://assets/Hook1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/Trees.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=10]
-[ext_resource path="res://assets/Box_health.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scripts/Boss_1.gd" type="Script" id=12]
-[ext_resource path="res://icon.png" type="Texture" id=13]
-[ext_resource path="res://music/boss_1.ogg" type="AudioStream" id=14]
-[ext_resource path="res://assets/Health.tscn" type="PackedScene" id=15]
-[ext_resource path="res://sprites/boss_1.png" type="Texture" id=16]
-[ext_resource path="res://Scripts/Shooting.gd" type="Script" id=17]
+[ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sprites/vines.png" type="Texture" id=7]
+[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=8]
+[ext_resource path="res://sprites/mushroom.png" type="Texture" id=9]
+[ext_resource path="res://sprites/grass2.png" type="Texture" id=10]
+[ext_resource path="res://assets/Trees.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=15]
+[ext_resource path="res://assets/Box_health.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scripts/Boss_1.gd" type="Script" id=17]
+[ext_resource path="res://icon.png" type="Texture" id=18]
+[ext_resource path="res://music/boss_1.ogg" type="AudioStream" id=19]
+[ext_resource path="res://assets/Health.tscn" type="PackedScene" id=20]
+[ext_resource path="res://sprites/boss_1.png" type="Texture" id=21]
+[ext_resource path="res://Scripts/Shooting.gd" type="Script" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3893.01, 10.7424 )
@@ -177,6 +182,15 @@ position = Vector2( 7335.83, 0 )
 [node name="Jumpers" type="Node2D" parent="."]
 position = Vector2( 7335.83, 0 )
 
+[node name="Jumper" parent="." instance=ExtResource( 6 )]
+position = Vector2( 25803, 40.7488 )
+
+[node name="Jumper2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 24512.4, 40.7488 )
+
+[node name="Jumper3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 27028.7, 22.7236 )
+
 [node name="Art" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
@@ -185,19 +199,103 @@ z_index = -1
 [node name="Vines" type="Node2D" parent="Art"]
 editor/display_folded = true
 modulate = Color( 0.47451, 0.407843, 0.407843, 1 )
+position = Vector2( 14017.6, 20.1403 )
+
+[node name="vines" type="TextureRect" parent="Art/Vines"]
+margin_left = 755.0
+margin_top = -1538.0
+margin_right = 1011.0
+margin_bottom = 64.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 2
+
+[node name="vines2" type="TextureRect" parent="Art/Vines"]
+margin_left = 689.545
+margin_top = -1341.63
+margin_right = 945.545
+margin_bottom = 260.367
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 2
+
+[node name="vines4" type="TextureRect" parent="Art/Vines"]
+margin_left = 2753.92
+margin_top = -1553.1
+margin_right = 3009.92
+margin_bottom = 48.895
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 2
+
+[node name="vines5" type="TextureRect" parent="Art/Vines"]
+margin_left = 2600.35
+margin_top = -1555.62
+margin_right = 2856.35
+margin_bottom = 46.3774
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 2
+
+[node name="vines6" type="TextureRect" parent="Art/Vines"]
+margin_left = 2688.46
+margin_top = -1356.74
+margin_right = 2944.46
+margin_bottom = 245.262
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 2
+
+[node name="vines3" type="TextureRect" parent="Art/Vines"]
+margin_left = 601.432
+margin_top = -1540.52
+margin_right = 857.432
+margin_bottom = 61.4824
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 2
 
 [node name="Houses" type="Node2D" parent="Art"]
+
+[node name="plant" parent="Art" instance=ExtResource( 8 )]
+position = Vector2( 18151.9, 31.4058 )
+
+[node name="plant2" parent="Art" instance=ExtResource( 8 )]
+position = Vector2( 18946.6, 51.0012 )
+
+[node name="mushroom" type="Sprite" parent="Art"]
+modulate = Color( 0.54902, 0.529412, 0.529412, 1 )
+position = Vector2( 17455.5, -282.718 )
+texture = ExtResource( 9 )
+
+[node name="mushroom2" type="Sprite" parent="Art"]
+modulate = Color( 0.54902, 0.529412, 0.529412, 1 )
+position = Vector2( 15632.7, -288.27 )
+texture = ExtResource( 9 )
+
+[node name="Node2D" type="Node2D" parent="Art"]
+modulate = Color( 0.576471, 0.572549, 0.572549, 1 )
+z_index = 1
+
+[node name="grass2" type="TextureRect" parent="Art/Node2D"]
+margin_left = 12527.1
+margin_top = 76.2855
+margin_right = 20265.1
+margin_bottom = 182.285
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 2
 
 [node name="Animals" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 7165.67, 482.585 )
 
-[node name="Trees" parent="." instance=ExtResource( 6 )]
+[node name="Trees" parent="." instance=ExtResource( 11 )]
 
-[node name="Player" parent="." instance=ExtResource( 7 )]
+[node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 23957.4, -94.106 )
 
-[node name="Level_load3" parent="." instance=ExtResource( 8 )]
+[node name="Level_load3" parent="." instance=ExtResource( 13 )]
 position = Vector2( 20581.5, -330.58 )
 level_load = "res://Test/Level 3.tscn"
 
@@ -205,21 +303,22 @@ level_load = "res://Test/Level 3.tscn"
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
-[node name="Music Player" parent="." instance=ExtResource( 9 )]
+[node name="Music Player" parent="." instance=ExtResource( 14 )]
 
 [node name="Tutorial" type="Control" parent="."]
 editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
-script = ExtResource( 10 )
+script = ExtResource( 15 )
 
-[node name="Box" parent="." instance=ExtResource( 11 )]
+[node name="Box" parent="." instance=ExtResource( 16 )]
 position = Vector2( 25161.5, -18.6621 )
 
-[node name="Box2" parent="." instance=ExtResource( 11 )]
+[node name="Box2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 26387.4, -18.6621 )
 
 [node name="Enemies" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Boss" type="KinematicBody2D" parent="Enemies" groups=[
 "enemy",
@@ -227,31 +326,31 @@ position = Vector2( 26387.4, -18.6621 )
 position = Vector2( 25827.5, -333.963 )
 collision_layer = 32
 collision_mask = 32
-script = ExtResource( 12 )
+script = ExtResource( 17 )
 timer = 3.0
 health = 32
 
 [node name="icon" type="Sprite" parent="Enemies/Boss"]
 visible = false
 scale = Vector2( 4, 4 )
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Enemies/Boss"]
-stream = ExtResource( 14 )
+stream = ExtResource( 19 )
 autoplay = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Boss"]
 position = Vector2( 0.697266, -21.6484 )
 shape = SubResource( 4 )
 
-[node name="Health" parent="Enemies/Boss" instance=ExtResource( 15 )]
+[node name="Health" parent="Enemies/Boss" instance=ExtResource( 20 )]
 visible = false
 
 [node name="boss_1" type="Sprite" parent="Enemies/Boss"]
 position = Vector2( 9.41797, -3.69785 )
 rotation = -0.0174533
 scale = Vector2( 1.34831, 1.34831 )
-texture = ExtResource( 16 )
+texture = ExtResource( 21 )
 region_enabled = true
 region_rect = Rect2( 42, 147, 300, 192 )
 
@@ -259,7 +358,7 @@ region_rect = Rect2( 42, 147, 300, 192 )
 position = Vector2( -114.219, 93.411 )
 scale = Vector2( 1.5, 1.5 )
 z_index = 360
-texture = ExtResource( 16 )
+texture = ExtResource( 21 )
 offset = Vector2( 1.05078, 0.567856 )
 region_enabled = true
 region_rect = Rect2( 36, 98, 41, 49 )
@@ -267,7 +366,7 @@ region_rect = Rect2( 36, 98, 41, 49 )
 [node name="wheel2" type="Sprite" parent="Enemies/Boss/boss_1"]
 position = Vector2( 111.012, 93.8294 )
 scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 16 )
+texture = ExtResource( 21 )
 offset = Vector2( 0.957031, 0.149445 )
 region_enabled = true
 region_rect = Rect2( 31, 99, 53, 44 )
@@ -278,11 +377,11 @@ anims/walk = SubResource( 5 )
 
 [node name="Shooting" type="Node2D" parent="Enemies/Boss/boss_1"]
 position = Vector2( -35.3105, -91.6568 )
-script = ExtResource( 17 )
+script = ExtResource( 22 )
 
 [node name="Shooting2" type="Node2D" parent="Enemies/Boss/boss_1"]
 position = Vector2( 28.1543, -90.5491 )
-script = ExtResource( 17 )
+script = ExtResource( 22 )
 timer = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Enemies/Boss"]
@@ -298,4 +397,6 @@ default_color = Color( 1, 0, 0, 1 )
 texture_mode = 1415753728
 
 [node name="bolts" type="Node2D" parent="."]
+
+[node name="Trees2" parent="." instance=ExtResource( 11 )]
 

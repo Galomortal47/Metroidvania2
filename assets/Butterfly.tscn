@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Butterfly.gd" type="Script" id=1]
 [ext_resource path="res://sprites/butterfly.png" type="Texture" id=2]
+[ext_resource path="res://sprites/light.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 length = 0.4
@@ -30,6 +31,9 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 1, -1 ), Vector2( 0.0761537, -1 ), Vector2( 1, -1 ) ]
 }
+
+[sub_resource type="CanvasItemMaterial" id=2]
+blend_mode = 1
 
 [node name="Butterfly" type="KinematicBody2D"]
 position = Vector2( -145.785, 508.567 )
@@ -69,5 +73,11 @@ cast_to = Vector2( 0, 20 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="light" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.501961 )
+material = SubResource( 2 )
+position = Vector2( -3.7626, 1.8107 )
+texture = ExtResource( 3 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

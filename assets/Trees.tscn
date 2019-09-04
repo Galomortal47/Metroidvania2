@@ -4,18 +4,20 @@
 [ext_resource path="res://sprites/bush.png" type="Texture" id=2]
 
 [node name="Trees" type="ParallaxBackground"]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 modulate = Color( 0.54902, 0.513726, 0.513726, 1 )
 position = Vector2( -723.218, -37.8429 )
 motion_scale = Vector2( 0.8, 1 )
-motion_mirroring = Vector2( 1024, 0 )
+motion_mirroring = Vector2( 2048, 0 )
 
 [node name="tree" type="TextureRect" parent="ParallaxLayer"]
-margin_top = -120.614
-margin_right = 1024.0
-margin_bottom = 903.386
+margin_left = -514.108
+margin_top = -1018.59
+margin_right = 509.892
+margin_bottom = 5.4082
+rect_rotation = -1.0
+rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 2
