@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Door.gd" type="Script" id=1]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
+
+[node name="Door" type="RayCast2D"]
+position = Vector2( 222.771, 319.577 )
+enabled = true
+cast_to = Vector2( 0, 200 )
+script = ExtResource( 1 )
+pos = Vector2( 19200, 685 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -34.9902
+margin_top = -71.1467
+margin_right = 39.0098
+margin_bottom = -57.1467
+custom_fonts/font = ExtResource( 2 )
+text = "X To Enter"
+

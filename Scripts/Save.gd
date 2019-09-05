@@ -4,8 +4,8 @@ var save = "res://save.json"
 var file = File.new()
 var data = {"hp":20,
 "level":"res://Test/Level 3.tscn",
-"money":0,"position_x":19217.744,
-"position_y":650.337,
+"money":0,"position_x":760,
+"position_y":460,
  "guns" : [false,false,false,false,false,false,false,false]
 }
 

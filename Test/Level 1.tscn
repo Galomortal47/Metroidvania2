@@ -13,27 +13,27 @@
 [ext_resource path="res://assets/Water.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/Enemy Shooter.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/Box_ammo.tscn" type="PackedScene" id=16]
-[ext_resource path="res://assets/Box_explosive.tscn" type="PackedScene" id=17]
-[ext_resource path="res://assets/Box_health.tscn" type="PackedScene" id=18]
-[ext_resource path="res://assets/Platform4.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=20]
-[ext_resource path="res://assets/Gadeget Pick Up.tscn" type="PackedScene" id=21]
-[ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=22]
-[ext_resource path="res://sprites/mushroom.png" type="Texture" id=23]
-[ext_resource path="res://sprites/sing.png" type="Texture" id=24]
-[ext_resource path="res://sprites/vines.png" type="Texture" id=25]
-[ext_resource path="res://sprites/flower2.png" type="Texture" id=26]
-[ext_resource path="res://sprites/grass2.png" type="Texture" id=27]
-[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=28]
-[ext_resource path="res://sprites/plant.png" type="Texture" id=29]
-[ext_resource path="res://Scripts/plant.gd" type="Script" id=30]
-[ext_resource path="res://sprites/light.png" type="Texture" id=31]
-[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=32]
-[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=33]
-[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=34]
+[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/Box_ammo.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/Box_explosive.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/Box_health.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/Platform4.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=19]
+[ext_resource path="res://assets/Gadeget Pick Up.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=21]
+[ext_resource path="res://sprites/mushroom.png" type="Texture" id=22]
+[ext_resource path="res://sprites/sing.png" type="Texture" id=23]
+[ext_resource path="res://sprites/vines.png" type="Texture" id=24]
+[ext_resource path="res://sprites/flower2.png" type="Texture" id=25]
+[ext_resource path="res://sprites/grass2.png" type="Texture" id=26]
+[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=27]
+[ext_resource path="res://sprites/plant.png" type="Texture" id=28]
+[ext_resource path="res://Scripts/plant.gd" type="Script" id=29]
+[ext_resource path="res://sprites/light.png" type="Texture" id=30]
+[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=31]
+[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=32]
+[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=33]
+[ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=34]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -70,6 +70,84 @@ extents = Vector2( 10, 79.1086 )
 
 [sub_resource type="CanvasItemMaterial" id=12]
 blend_mode = 1
+
+[sub_resource type="Animation" id=13]
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -22.3278, -51.385, -45.9729, -22.3278 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("plant2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -67.868, -50.0703, -36.9049, -67.868 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("plant3:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
+}
+
+[sub_resource type="Animation" id=14]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -22.3278, -32.466, 1.97562, -22.3278 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("plant2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -67.868, -56.778, -70.9042, -67.868 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("plant3:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
+}
 
 [sub_resource type="Animation" id=15]
 length = 5.0
@@ -268,84 +346,6 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=20]
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -32.466, 1.97562, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -56.778, -70.9042, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=21]
-length = 5.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -51.385, -45.9729, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -50.0703, -36.9049, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=22]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -921,233 +921,231 @@ position = Vector2( -3123.18, 665.23 )
 [node name="Enemy4" parent="Enemies" instance=ExtResource( 13 )]
 position = Vector2( -9923.78, 328.391 )
 
-[node name="Day Night cycle" parent="." instance=ExtResource( 14 )]
-
 [node name="Boxes" type="Node2D" parent="."]
 editor/display_folded = true
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true
 
-[node name="Box2" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box2" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box9" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box16" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box3" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box10" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box15" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box4" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box7" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box13" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box5" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box8" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box12" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box6" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box11" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes" instance=ExtResource( 15 )]
+[node name="Box14" parent="Boxes/Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 437.656 )
 
 [node name="Boxes2" type="Node2D" parent="Boxes"]
 editor/display_folded = true
 position = Vector2( -5245.46, 164.234 )
 
-[node name="Box2" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box2" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box9" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box16" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box3" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box10" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box15" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box4" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box7" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box13" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box5" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box8" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box12" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box6" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box11" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes2" instance=ExtResource( 15 )]
+[node name="Box14" parent="Boxes/Boxes2" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 437.656 )
 
 [node name="Boxes3" type="Node2D" parent="Boxes"]
 editor/display_folded = true
 position = Vector2( -10863.1, -1341.04 )
 
-[node name="Box2" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box2" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box9" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box16" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box3" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box10" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box15" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box4" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box7" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box13" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box5" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box8" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box12" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box6" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box11" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes3" instance=ExtResource( 15 )]
+[node name="Box14" parent="Boxes/Boxes3" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 437.656 )
 
 [node name="Boxes4" type="Node2D" parent="Boxes"]
 editor/display_folded = true
 position = Vector2( -7879.42, -1368.21 )
 
-[node name="Box2" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box2" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box9" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box16" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box3" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box10" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box15" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box4" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box7" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box13" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box5" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box8" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box12" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box6" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box11" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes4" instance=ExtResource( 15 )]
+[node name="Box14" parent="Boxes/Boxes4" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 437.656 )
 
-[node name="Box_bolts" parent="Boxes" instance=ExtResource( 15 )]
+[node name="Box_bolts" parent="Boxes" instance=ExtResource( 14 )]
 
-[node name="Box_bolts2" parent="Boxes" instance=ExtResource( 15 )]
+[node name="Box_bolts2" parent="Boxes" instance=ExtResource( 14 )]
 position = Vector2( -14.6402, 706.665 )
 
-[node name="Box_bolts3" parent="Boxes" instance=ExtResource( 15 )]
+[node name="Box_bolts3" parent="Boxes" instance=ExtResource( 14 )]
 position = Vector2( -17.5041, 659.409 )
 
-[node name="Box_bolts4" parent="Boxes" instance=ExtResource( 15 )]
+[node name="Box_bolts4" parent="Boxes" instance=ExtResource( 14 )]
 position = Vector2( 1324.26, 688.049 )
 
-[node name="Box2" parent="Boxes" instance=ExtResource( 16 )]
+[node name="Box2" parent="Boxes" instance=ExtResource( 15 )]
 position = Vector2( 305.294, 555.409 )
 
-[node name="Box3" parent="Boxes" instance=ExtResource( 17 )]
+[node name="Box3" parent="Boxes" instance=ExtResource( 16 )]
 position = Vector2( 129.182, 553.485 )
 
-[node name="Box5" parent="Boxes" instance=ExtResource( 17 )]
+[node name="Box5" parent="Boxes" instance=ExtResource( 16 )]
 position = Vector2( 1251.85, 695.25 )
 
-[node name="Box6" parent="Boxes" instance=ExtResource( 17 )]
+[node name="Box6" parent="Boxes" instance=ExtResource( 16 )]
 position = Vector2( 44.6948, 713.866 )
 
-[node name="Box4" parent="Boxes" instance=ExtResource( 17 )]
+[node name="Box4" parent="Boxes" instance=ExtResource( 16 )]
 position = Vector2( 1151.61, 384.511 )
 
-[node name="Box" parent="Boxes" instance=ExtResource( 18 )]
+[node name="Box" parent="Boxes" instance=ExtResource( 17 )]
 position = Vector2( 184.282, 553.485 )
 
 [node name="Node2D" type="Node2D" parent="Boxes"]
@@ -1155,28 +1153,28 @@ position = Vector2( 184.282, 553.485 )
 [node name="Platfroms" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Platform4" parent="Platfroms" instance=ExtResource( 19 )]
+[node name="Platform4" parent="Platfroms" instance=ExtResource( 18 )]
 position = Vector2( -5996.3, 321.451 )
 
-[node name="Platform5" parent="Platfroms" instance=ExtResource( 19 )]
+[node name="Platform5" parent="Platfroms" instance=ExtResource( 18 )]
 position = Vector2( -6175.57, 284.36 )
 
-[node name="Platform6" parent="Platfroms" instance=ExtResource( 19 )]
+[node name="Platform6" parent="Platfroms" instance=ExtResource( 18 )]
 position = Vector2( -6444.47, 169.998 )
 
-[node name="Platform7" parent="Platfroms" instance=ExtResource( 19 )]
+[node name="Platform7" parent="Platfroms" instance=ExtResource( 18 )]
 position = Vector2( -6747.38, -15.4543 )
 
-[node name="Platform8" parent="Platfroms" instance=ExtResource( 19 )]
+[node name="Platform8" parent="Platfroms" instance=ExtResource( 18 )]
 position = Vector2( -7031.74, -210.179 )
 
-[node name="Platform9" parent="Platfroms" instance=ExtResource( 19 )]
+[node name="Platform9" parent="Platfroms" instance=ExtResource( 18 )]
 position = Vector2( -10099.6, -47.9525 )
 
-[node name="Platform10" parent="Platfroms" instance=ExtResource( 19 )]
+[node name="Platform10" parent="Platfroms" instance=ExtResource( 18 )]
 position = Vector2( -10339.6, -141.717 )
 
-[node name="Platform11" parent="Platfroms" instance=ExtResource( 19 )]
+[node name="Platform11" parent="Platfroms" instance=ExtResource( 18 )]
 position = Vector2( -10516.2, -285.919 )
 
 [node name="Swin" type="Node2D" parent="."]
@@ -1187,7 +1185,7 @@ editor/display_folded = true
 position = Vector2( 669.711, 618.652 )
 enabled = true
 cast_to = Vector2( 300, 0 )
-script = ExtResource( 20 )
+script = ExtResource( 19 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing"]
 position = Vector2( 0, -28.7293 )
@@ -1199,7 +1197,7 @@ editor/display_folded = true
 position = Vector2( -2138.86, 731.392 )
 enabled = true
 cast_to = Vector2( 300, 0 )
-script = ExtResource( 20 )
+script = ExtResource( 19 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing2"]
 position = Vector2( 0, -28.7293 )
@@ -1210,28 +1208,28 @@ cast_to = Vector2( 300, 0 )
 position = Vector2( -7129.06, 773.322 )
 enabled = true
 cast_to = Vector2( 1300, 0 )
-script = ExtResource( 20 )
+script = ExtResource( 19 )
 
 [node name="Swwing2" type="RayCast2D" parent="Swin/Swwing3"]
 position = Vector2( 0, -28.7293 )
 enabled = true
 cast_to = Vector2( 1300, 0 )
 
-[node name="Gadeget Pick Up" parent="." instance=ExtResource( 21 )]
+[node name="Gadeget Pick Up" parent="." instance=ExtResource( 20 )]
 position = Vector2( -11438.3, -72.6534 )
 
 [node name="Jumpers" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Jumper" parent="Jumpers" instance=ExtResource( 22 )]
+[node name="Jumper" parent="Jumpers" instance=ExtResource( 21 )]
 
-[node name="Jumper3" parent="Jumpers" instance=ExtResource( 22 )]
+[node name="Jumper3" parent="Jumpers" instance=ExtResource( 21 )]
 position = Vector2( -5650.96, 700.474 )
 
-[node name="Jumper4" parent="Jumpers" instance=ExtResource( 22 )]
+[node name="Jumper4" parent="Jumpers" instance=ExtResource( 21 )]
 position = Vector2( -5821.56, -831.195 )
 
-[node name="Jumper2" parent="Jumpers" instance=ExtResource( 22 )]
+[node name="Jumper2" parent="Jumpers" instance=ExtResource( 21 )]
 position = Vector2( -8867.35, -801.194 )
 
 [node name="Art" type="Node2D" parent="."]
@@ -1241,58 +1239,58 @@ z_index = -1
 [node name="mushroom" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 557.171, 507.842 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="mushroom7" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( -7152.53, -86.2084 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="mushroom8" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( -8670.04, -113.968 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="mushroom9" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( -9088.28, -854.217 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="mushroom3" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 3029.67, 527.316 )
 scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="mushroom4" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 2977.53, 520.694 )
 scale = Vector2( -1, 1 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="mushroom2" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 598.147, 540.995 )
 scale = Vector2( 0.43198, 0.43198 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="mushroom5" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 4247.23, 659.446 )
 scale = Vector2( 0.43198, 0.43198 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="mushroom6" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 4270.38, 665.854 )
 scale = Vector2( 0.15198, 0.15198 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="sing" type="Sprite" parent="Art"]
 position = Vector2( 3826.1, 498.693 )
 rotation = 0.292877
 z_index = -1
-texture = ExtResource( 24 )
+texture = ExtResource( 23 )
 
 [node name="Vines" type="Node2D" parent="Art"]
 editor/display_folded = true
@@ -1303,7 +1301,7 @@ margin_left = -7397.63
 margin_top = -738.664
 margin_right = -7093.63
 margin_bottom = 55.3357
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1312,7 +1310,7 @@ margin_left = -7479.47
 margin_top = -658.495
 margin_right = -7175.47
 margin_bottom = 135.505
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1321,14 +1319,14 @@ margin_left = -7567.99
 margin_top = -853.907
 margin_right = -7263.99
 margin_bottom = -59.9072
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
 [node name="flower2" type="Sprite" parent="Art/Vines"]
 position = Vector2( -7308.97, -321.115 )
 z_index = 1
-texture = ExtResource( 26 )
+texture = ExtResource( 25 )
 
 [node name="Vines2" type="Node2D" parent="Art"]
 editor/display_folded = true
@@ -1340,7 +1338,7 @@ margin_left = -7398.0
 margin_top = -1065.0
 margin_right = -7094.0
 margin_bottom = 55.0
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1349,7 +1347,7 @@ margin_left = -7473.0
 margin_top = -1025.0
 margin_right = -7169.0
 margin_bottom = 166.0
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1358,7 +1356,7 @@ margin_left = -7514.04
 margin_top = -897.552
 margin_right = -7210.04
 margin_bottom = 41.4485
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1366,7 +1364,7 @@ stretch_mode = 2
 position = Vector2( -7255.01, -565.918 )
 rotation = 2.63908
 z_index = 1
-texture = ExtResource( 26 )
+texture = ExtResource( 25 )
 
 [node name="Vines3" type="Node2D" parent="Art"]
 editor/display_folded = true
@@ -1378,7 +1376,7 @@ margin_left = -7398.0
 margin_top = -1065.0
 margin_right = -7094.0
 margin_bottom = 55.0
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1387,7 +1385,7 @@ margin_left = -7473.0
 margin_top = -1025.0
 margin_right = -7169.0
 margin_bottom = 166.0
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1396,7 +1394,7 @@ margin_left = -7514.04
 margin_top = -897.552
 margin_right = -7210.04
 margin_bottom = 41.4485
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1410,7 +1408,7 @@ margin_left = -7398.0
 margin_top = -1257.0
 margin_right = -7094.0
 margin_bottom = 55.0
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1419,7 +1417,7 @@ margin_left = -7473.0
 margin_top = -1350.0
 margin_right = -7169.0
 margin_bottom = 166.0
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1428,7 +1426,7 @@ margin_left = -7514.0
 margin_top = -1250.0
 margin_right = -7210.0
 margin_bottom = 42.0
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 expand = true
 stretch_mode = 2
 
@@ -1436,14 +1434,14 @@ stretch_mode = 2
 position = Vector2( -7338.51, -442.669 )
 rotation = 0.300297
 z_index = 1
-texture = ExtResource( 26 )
+texture = ExtResource( 25 )
 
 [node name="grass2" type="TextureRect" parent="Art"]
 margin_left = -8870.0
 margin_top = -173.0
 margin_right = -7181.0
 margin_bottom = -67.0
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 expand = true
 stretch_mode = 2
 
@@ -1452,7 +1450,7 @@ margin_left = -10529.7
 margin_top = 326.858
 margin_right = -8840.74
 margin_bottom = 432.858
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 expand = true
 stretch_mode = 2
 
@@ -1461,7 +1459,7 @@ margin_left = -12245.7
 margin_top = -87.7227
 margin_right = -10556.7
 margin_bottom = 18.2773
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 expand = true
 stretch_mode = 2
 
@@ -1470,7 +1468,7 @@ margin_left = -10511.7
 margin_top = -884.439
 margin_right = -8822.71
 margin_bottom = -778.439
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 expand = true
 stretch_mode = 2
 
@@ -1479,7 +1477,7 @@ margin_left = -7505.1
 margin_top = -913.279
 margin_right = -5816.1
 margin_bottom = -807.279
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 expand = true
 stretch_mode = 2
 
@@ -1488,7 +1486,7 @@ margin_left = 5491.0
 margin_top = -37.0
 margin_right = 8402.0
 margin_bottom = 69.0
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 expand = true
 stretch_mode = 2
 
@@ -1497,7 +1495,7 @@ margin_left = 934.0
 margin_top = 483.0
 margin_right = 3841.0
 margin_bottom = 589.0
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 expand = true
 stretch_mode = 2
 
@@ -1506,33 +1504,33 @@ margin_left = -411.0
 margin_top = 480.0
 margin_right = 645.0
 margin_bottom = 586.0
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 expand = true
 stretch_mode = 2
 
-[node name="plant" parent="Art" instance=ExtResource( 28 )]
+[node name="plant" parent="Art" instance=ExtResource( 27 )]
 
 [node name="plant2" type="Sprite" parent="Art"]
 editor/display_folded = true
 position = Vector2( -1732.36, 699.648 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 30 )
+script = ExtResource( 29 )
 
 [node name="plant2" type="Sprite" parent="Art/plant2"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant2"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant2"]
@@ -1541,17 +1539,17 @@ material = SubResource( 12 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 31 )
+texture = ExtResource( 30 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant2"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 31 )
+texture = ExtResource( 30 )
 texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant2"]
-anims/wind = SubResource( 15 )
-"anims/wind (copy)" = SubResource( 16 )
+anims/wind = SubResource( 13 )
+"anims/wind (copy)" = SubResource( 14 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Art/plant2"]
 rotation = 3.49066
@@ -1562,22 +1560,22 @@ editor/display_folded = true
 position = Vector2( -6659.1, 23.7162 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 30 )
+script = ExtResource( 29 )
 
 [node name="plant2" type="Sprite" parent="Art/plant3"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant3"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant3"]
@@ -1586,17 +1584,17 @@ material = SubResource( 12 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 31 )
+texture = ExtResource( 30 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant3"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 31 )
+texture = ExtResource( 30 )
 texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant3"]
-anims/wind = SubResource( 17 )
-"anims/wind (copy)" = SubResource( 18 )
+anims/wind = SubResource( 15 )
+"anims/wind (copy)" = SubResource( 16 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Art/plant3"]
 rotation = 3.49066
@@ -1607,22 +1605,22 @@ editor/display_folded = true
 position = Vector2( -7423.2, -835.358 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 30 )
+script = ExtResource( 29 )
 
 [node name="plant2" type="Sprite" parent="Art/plant4"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant4"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant4"]
@@ -1631,17 +1629,17 @@ material = SubResource( 12 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 31 )
+texture = ExtResource( 30 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant4"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 31 )
+texture = ExtResource( 30 )
 texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant4"]
-anims/wind = SubResource( 19 )
-"anims/wind (copy)" = SubResource( 20 )
+anims/wind = SubResource( 17 )
+"anims/wind (copy)" = SubResource( 18 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Art/plant4"]
 rotation = 3.49066
@@ -1652,22 +1650,22 @@ editor/display_folded = true
 position = Vector2( 3853.63, 550.658 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 30 )
+script = ExtResource( 29 )
 
 [node name="plant2" type="Sprite" parent="Art/plant5"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant5"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant5"]
@@ -1676,17 +1674,17 @@ material = SubResource( 12 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 31 )
+texture = ExtResource( 30 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant5"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 31 )
+texture = ExtResource( 30 )
 texture_scale = 2.0
 energy = 0.7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant5"]
-anims/wind = SubResource( 21 )
-"anims/wind (copy)" = SubResource( 22 )
+anims/wind = SubResource( 19 )
+"anims/wind (copy)" = SubResource( 20 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Art/plant5"]
 rotation = 3.49066
@@ -1695,35 +1693,37 @@ enabled = true
 [node name="Animals" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Butterfly" parent="Animals" instance=ExtResource( 32 )]
+[node name="Butterfly" parent="Animals" instance=ExtResource( 31 )]
 
-[node name="Butterfly2" parent="Animals" instance=ExtResource( 32 )]
+[node name="Butterfly2" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -6208.77, 450.44 )
 
-[node name="Butterfly3" parent="Animals" instance=ExtResource( 32 )]
+[node name="Butterfly3" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -7382.92, -291.124 )
 
-[node name="Butterfly4" parent="Animals" instance=ExtResource( 32 )]
+[node name="Butterfly4" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -7242.62, -182.562 )
 
-[node name="Butterfly5" parent="Animals" instance=ExtResource( 32 )]
+[node name="Butterfly5" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -8678.98, -154.169 )
 
-[node name="Butterfly6" parent="Animals" instance=ExtResource( 32 )]
+[node name="Butterfly6" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -9105.2, -873.206 )
 
-[node name="Butterfly7" parent="Animals" instance=ExtResource( 32 )]
+[node name="Butterfly7" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -10283, -85.8441 )
 
-[node name="Butterfly8" parent="Animals" instance=ExtResource( 32 )]
+[node name="Butterfly8" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -9290.65, 233.005 )
 
-[node name="Butterfly9" parent="Animals" instance=ExtResource( 32 )]
+[node name="Butterfly9" parent="Animals" instance=ExtResource( 31 )]
 position = Vector2( -12068.3, -16.2644 )
 
-[node name="Level_load" parent="." instance=ExtResource( 33 )]
+[node name="Level_load" parent="." instance=ExtResource( 32 )]
 
-[node name="Music Player" parent="." instance=ExtResource( 34 )]
+[node name="Music Player" parent="." instance=ExtResource( 33 )]
 
 [node name="bolts" type="Node2D" parent="."]
+
+[node name="Day Night cycle" parent="." instance=ExtResource( 34 )]
 

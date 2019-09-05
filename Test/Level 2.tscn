@@ -134,11 +134,11 @@ position = Vector2( 2129.23, -44.7396 )
 [node name="Waters" type="Node2D" parent="."]
 position = Vector2( 7335.83, 0 )
 
+[node name="Day Night cycle" parent="." instance=ExtResource( 6 )]
+
 [node name="Enemies" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
-
-[node name="Day Night cycle" parent="." instance=ExtResource( 6 )]
 
 [node name="Boxes" type="Node2D" parent="."]
 editor/display_folded = true
