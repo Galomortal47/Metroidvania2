@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://sprites/room.png" type="Texture" id=1]
 [ext_resource path="res://assets/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 575.981, 10 )
@@ -10,21 +11,21 @@ extents = Vector2( 575.981, 10 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 295.225 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Test" type="Node2D"]
 
 [node name="room" type="Sprite" parent="."]
-modulate = Color( 0.427451, 0.427451, 0.427451, 1 )
-position = Vector2( 481.566, 273.771 )
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
+position = Vector2( 481.566, 363.118 )
 texture = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 225, 460 )
+position = Vector2( 687.077, 460 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-editor/display_folded = true
+position = Vector2( 0, 89.347 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 452.197, 541.13 )
+position = Vector2( 445.88, 442.758 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
@@ -40,4 +41,12 @@ position = Vector2( 975.239, 269.811 )
 shape = SubResource( 2 )
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
+position = Vector2( 222.771, 408.924 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = -1
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -730.66, -385.84, -727.144, 962.605, 114.746, 118.425, 865.12, 118.425, 946.015, 631.692, 13.8226, 625.489, 117.536, 118.425, -777.892, 974.8, -705.365, 1080.8, 1618.28, 1036.17, 1587.6, -411.579 )
+
+[node name="Day Night cycle" parent="." instance=ExtResource( 4 )]
 

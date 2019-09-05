@@ -157,7 +157,6 @@ tracks/0/keys = {
 blend_mode = 2
 
 [node name="Day Night cycle" type="AnimationPlayer"]
-autoplay = "day night"
 "anims/day night" = SubResource( 1 )
 script = ExtResource( 1 )
 
