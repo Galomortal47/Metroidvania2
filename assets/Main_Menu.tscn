@@ -44,7 +44,7 @@ custom_fonts/font = ExtResource( 2 )
 text = "Quit Game"
 flat = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Graphics" type="Button" parent="."]
 margin_left = 425.417
 margin_top = 337.675
 margin_right = 545.417
@@ -56,4 +56,4 @@ flat = true
 [connection signal="button_down" from="Continue" to="." method="_on_Continue_button_down"]
 [connection signal="button_down" from="New Game" to="." method="_on_New_Game_button_down"]
 [connection signal="button_down" from="Quit Game" to="." method="_on_Quit_Game_button_down"]
-[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="Graphics" to="." method="_on_Button_button_down"]

@@ -32,5 +32,12 @@ func _on_Quit_Game_button_down():
 	pass # Replace with function body.
 
 func _on_Button_button_down():
-	if $
+	save.loader()
+	if $Graphics.get_text() == "Graphics:Fancy":
+		$Graphics.set_text("Graphics:Fast")
+		save.data.graphics = "fast"
+	elif$Graphics.get_text() == "Graphics:Fast":
+		$Graphics.set_text("Graphics:Fancy")
+		save.data.graphics = "fancy"
+	save.save()
 	pass # Replace with function body.
