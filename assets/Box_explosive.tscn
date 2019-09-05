@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Box.gd" type="Script" id=1]
 [ext_resource path="res://sprites/light.png" type="Texture" id=2]
-[ext_resource path="res://sprites/box - explosive.png" type="Texture" id=3]
-[ext_resource path="res://assets/Health.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Sonds/explosion.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Scripts/Light2D.gd" type="Script" id=3]
+[ext_resource path="res://sprites/box - explosive.png" type="Texture" id=4]
+[ext_resource path="res://assets/Health.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sonds/explosion.ogg" type="AudioStream" id=6]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
@@ -39,7 +40,7 @@ tracks/1/keys = {
 "values": [ 0, 3 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("light2:modulate")
+tracks/2/path = NodePath("Light2D/light2:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -51,7 +52,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("light2/Light2D:energy")
+tracks/3/path = NodePath("Light2D:energy")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -63,7 +64,7 @@ tracks/3/keys = {
 "values": [ 0.01, 2.0, 0.01, 2.0, 0.01, 2.0, 0.01, 2.0, 0.01 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("light2/Light2D:texture_scale")
+tracks/4/path = NodePath("Light2D:texture_scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -87,28 +88,29 @@ collision_mask = 5
 script = ExtResource( 1 )
 object = "explosive"
 
-[node name="light2" type="Sprite" parent="."]
-modulate = Color( 1, 0, 0, 0 )
-material = SubResource( 1 )
+[node name="Light2D" type="Light2D" parent="."]
 position = Vector2( -0.420929, 0.336182 )
-z_index = 1
-texture = ExtResource( 2 )
-
-[node name="Light2D" type="Light2D" parent="light2"]
 texture = ExtResource( 2 )
 texture_scale = 2.0
 color = Color( 1, 0, 0, 1 )
 energy = 0.01
+script = ExtResource( 3 )
+
+[node name="light2" type="Sprite" parent="Light2D"]
+modulate = Color( 1, 0, 0, 0 )
+material = SubResource( 1 )
+z_index = 1
+texture = ExtResource( 2 )
 
 [node name="box" type="Sprite" parent="."]
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 vframes = 2
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
-[node name="Health" parent="." instance=ExtResource( 4 )]
+[node name="Health" parent="." instance=ExtResource( 5 )]
 visible = false
 scale = Vector2( 0.5, 0.5 )
 health_max = 0.1
@@ -144,6 +146,6 @@ texture = ExtResource( 2 )
 anims/boom = SubResource( 3 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

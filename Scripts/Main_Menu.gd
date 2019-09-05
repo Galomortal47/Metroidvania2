@@ -30,3 +30,7 @@ func _on_New_Game_button_down():
 func _on_Quit_Game_button_down():
 	get_tree().quit()
 	pass # Replace with function body.
+
+func _on_Button_button_down():
+	if $
+	pass # Replace with function body.

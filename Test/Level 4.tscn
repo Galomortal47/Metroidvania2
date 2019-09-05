@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://temp/Stuff.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -22,7 +22,6 @@
 [ext_resource path="res://sprites/boss_1.png" type="Texture" id=20]
 [ext_resource path="res://sprites/light.png" type="Texture" id=21]
 [ext_resource path="res://Scripts/Shooting.gd" type="Script" id=22]
-[ext_resource path="res://assets/Trees.tscn" type="PackedScene" id=23]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3893.01, 10.7424 )
@@ -412,6 +411,4 @@ default_color = Color( 1, 0, 0, 1 )
 texture_mode = 1415753728
 
 [node name="bolts" type="Node2D" parent="."]
-
-[node name="Trees2" parent="." instance=ExtResource( 23 )]
 

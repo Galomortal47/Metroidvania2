@@ -1,13 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://sprites/plant.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/plant.gd" type="Script" id=2]
 [ext_resource path="res://sprites/light.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Light2D.gd" type="Script" id=4]
 
-[sub_resource type="CanvasItemMaterial" id=12]
+[sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=2]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -47,7 +48,7 @@ tracks/2/keys = {
 "values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=3]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -86,7 +87,6 @@ tracks/2/keys = {
 }
 
 [node name="plant" type="Sprite"]
-editor/display_folded = true
 position = Vector2( -168.144, 553.332 )
 rotation = 0.034481
 z_index = 1
@@ -108,23 +108,24 @@ scale = Vector2( 0.836725, 0.802581 )
 texture = ExtResource( 1 )
 offset = Vector2( 7.60596, -46.1156 )
 
-[node name="light" type="Sprite" parent="."]
-modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 12 )
-position = Vector2( 12.1114, -24.2708 )
-rotation = 0.0926029
-scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 3 )
-
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 2.49316, -9.37228 )
 texture = ExtResource( 3 )
 texture_scale = 2.0
 energy = 0.7
+script = ExtResource( 4 )
+
+[node name="light" type="Sprite" parent="Light2D"]
+modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
+material = SubResource( 1 )
+position = Vector2( 9.61824, -14.8985 )
+rotation = 0.0926029
+scale = Vector2( 1.6006, 1.53376 )
+texture = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/wind = SubResource( 13 )
-"anims/wind (copy)" = SubResource( 14 )
+anims/wind = SubResource( 2 )
+"anims/wind (copy)" = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 rotation = 3.49066

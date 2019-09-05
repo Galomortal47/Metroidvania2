@@ -10,18 +10,24 @@ var ramdom_pos = 120
 var life_time = 1
 var falloff = 0.95
 var value = 3
+var save = preload("res://Scripts/Save.gd").new()
 
 func _ready():
+	save.loader()
 	randomize()
 	var random = rand_range(0,1)
-	if random > 0.5:
+	if random > 0.5 and save.data.graphics == "fancy":
 		var three_d_model = load("res://enemy/enemy.tscn")
 		var model = three_d_model.instance()
 		self.add_child(model)
-	else:
+	elif save.data.graphics == "fancy":
 		var three_d_model2 = load("res://enemy/enemy2.tscn")
 		var model = three_d_model2.instance()
 		self.add_child(model)
+	else:
+		var sprite = Sprite.new()
+		sprite.texture = load("res://sprites/bolt_sprite.png")
+		add_child(sprite)
 
 func _process(delta):
 	if not $ground_detect.is_colliding():
