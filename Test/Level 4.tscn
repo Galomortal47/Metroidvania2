@@ -10,18 +10,18 @@
 [ext_resource path="res://assets/plant.tscn" type="PackedScene" id=8]
 [ext_resource path="res://sprites/mushroom.png" type="Texture" id=9]
 [ext_resource path="res://sprites/grass2.png" type="Texture" id=10]
-[ext_resource path="res://assets/Trees.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=15]
-[ext_resource path="res://assets/Box_health.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scripts/Boss_1.gd" type="Script" id=17]
-[ext_resource path="res://icon.png" type="Texture" id=18]
-[ext_resource path="res://music/boss_1.ogg" type="AudioStream" id=19]
-[ext_resource path="res://assets/Health.tscn" type="PackedScene" id=20]
-[ext_resource path="res://sprites/boss_1.png" type="Texture" id=21]
-[ext_resource path="res://Scripts/Shooting.gd" type="Script" id=22]
+[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=14]
+[ext_resource path="res://assets/Box_health.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scripts/Boss_1.gd" type="Script" id=16]
+[ext_resource path="res://icon.png" type="Texture" id=17]
+[ext_resource path="res://music/boss_1.ogg" type="AudioStream" id=18]
+[ext_resource path="res://assets/Health.tscn" type="PackedScene" id=19]
+[ext_resource path="res://sprites/boss_1.png" type="Texture" id=20]
+[ext_resource path="res://Scripts/Shooting.gd" type="Script" id=21]
+[ext_resource path="res://assets/Trees.tscn" type="PackedScene" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3893.01, 10.7424 )
@@ -289,12 +289,10 @@ stretch_mode = 2
 editor/display_folded = true
 position = Vector2( 7165.67, 482.585 )
 
-[node name="Trees" parent="." instance=ExtResource( 11 )]
-
-[node name="Player" parent="." instance=ExtResource( 12 )]
+[node name="Player" parent="." instance=ExtResource( 11 )]
 position = Vector2( 23957.4, -94.106 )
 
-[node name="Level_load3" parent="." instance=ExtResource( 13 )]
+[node name="Level_load3" parent="." instance=ExtResource( 12 )]
 position = Vector2( 20581.5, -330.58 )
 level_load = "res://Test/Level 3.tscn"
 
@@ -302,18 +300,18 @@ level_load = "res://Test/Level 3.tscn"
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
-[node name="Music Player" parent="." instance=ExtResource( 14 )]
+[node name="Music Player" parent="." instance=ExtResource( 13 )]
 
 [node name="Tutorial" type="Control" parent="."]
 editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
-script = ExtResource( 15 )
+script = ExtResource( 14 )
 
-[node name="Box" parent="." instance=ExtResource( 16 )]
+[node name="Box" parent="." instance=ExtResource( 15 )]
 position = Vector2( 25161.5, -18.6621 )
 
-[node name="Box2" parent="." instance=ExtResource( 16 )]
+[node name="Box2" parent="." instance=ExtResource( 15 )]
 position = Vector2( 26387.4, -18.6621 )
 
 [node name="Enemies" type="Node2D" parent="."]
@@ -325,31 +323,31 @@ editor/display_folded = true
 position = Vector2( 25827.5, -333.963 )
 collision_layer = 32
 collision_mask = 32
-script = ExtResource( 17 )
+script = ExtResource( 16 )
 timer = 3.0
 health = 32
 
 [node name="icon" type="Sprite" parent="Enemies/Boss"]
 visible = false
 scale = Vector2( 4, 4 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Enemies/Boss"]
-stream = ExtResource( 19 )
+stream = ExtResource( 18 )
 autoplay = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Boss"]
 position = Vector2( 0.697266, -21.6484 )
 shape = SubResource( 4 )
 
-[node name="Health" parent="Enemies/Boss" instance=ExtResource( 20 )]
+[node name="Health" parent="Enemies/Boss" instance=ExtResource( 19 )]
 visible = false
 
 [node name="boss_1" type="Sprite" parent="Enemies/Boss"]
 position = Vector2( 9.41797, -3.69785 )
 rotation = -0.0174533
 scale = Vector2( 1.34831, 1.34831 )
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 region_enabled = true
 region_rect = Rect2( 42, 147, 300, 192 )
 
@@ -357,7 +355,7 @@ region_rect = Rect2( 42, 147, 300, 192 )
 position = Vector2( -114.219, 93.411 )
 scale = Vector2( 1.5, 1.5 )
 z_index = 360
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 offset = Vector2( 1.05078, 0.567856 )
 region_enabled = true
 region_rect = Rect2( 36, 98, 41, 49 )
@@ -365,7 +363,7 @@ region_rect = Rect2( 36, 98, 41, 49 )
 [node name="wheel2" type="Sprite" parent="Enemies/Boss/boss_1"]
 position = Vector2( 111.012, 93.8294 )
 scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 offset = Vector2( 0.957031, 0.149445 )
 region_enabled = true
 region_rect = Rect2( 31, 99, 53, 44 )
@@ -376,11 +374,11 @@ anims/walk = SubResource( 5 )
 
 [node name="Shooting" type="Node2D" parent="Enemies/Boss/boss_1"]
 position = Vector2( -35.3105, -91.6568 )
-script = ExtResource( 22 )
+script = ExtResource( 21 )
 
 [node name="Shooting2" type="Node2D" parent="Enemies/Boss/boss_1"]
 position = Vector2( 28.1543, -90.5491 )
-script = ExtResource( 22 )
+script = ExtResource( 21 )
 timer = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Enemies/Boss"]
@@ -397,5 +395,5 @@ texture_mode = 1415753728
 
 [node name="bolts" type="Node2D" parent="."]
 
-[node name="Trees2" parent="." instance=ExtResource( 11 )]
+[node name="Trees2" parent="." instance=ExtResource( 22 )]
 

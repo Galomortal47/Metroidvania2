@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -10,12 +10,11 @@
 [ext_resource path="res://assets/Platform4.tscn" type="PackedScene" id=8]
 [ext_resource path="res://sprites/house.png" type="Texture" id=9]
 [ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/Trees.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Villager.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Villager.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -236,16 +235,14 @@ position = Vector2( 4253.84, 690.787 )
 [node name="Butterfly4" parent="Animals" instance=ExtResource( 10 )]
 position = Vector2( 4222.2, 673.206 )
 
-[node name="Trees" parent="." instance=ExtResource( 11 )]
-
-[node name="Player" parent="." instance=ExtResource( 12 )]
+[node name="Player" parent="." instance=ExtResource( 11 )]
 position = Vector2( 6789.4, -8.47565 )
 
-[node name="Level_load" parent="." instance=ExtResource( 13 )]
+[node name="Level_load" parent="." instance=ExtResource( 12 )]
 position = Vector2( 6642.55, -334.361 )
 level_load = "res://Test/Level 1.tscn"
 
-[node name="Level_load2" parent="." instance=ExtResource( 13 )]
+[node name="Level_load2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 14431.4, 325.442 )
 level_load = "res://Test/Level 3.tscn"
 
@@ -253,85 +250,81 @@ level_load = "res://Test/Level 3.tscn"
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
-[node name="Villager" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 2618.42, 709.019 )
 collision_mask = 0
 
-[node name="Villager8" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager8" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 3565.84, 706.083 )
 collision_mask = 0
 
-[node name="Villager14" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager14" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 5079.76, 706.083 )
 collision_mask = 0
 
-[node name="Villager2" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager2" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 2732.95, 709.019 )
 collision_mask = 0
 
-[node name="Villager6" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager6" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 3680.37, 706.083 )
 collision_mask = 0
 
-[node name="Villager15" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager15" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 5194.29, 706.083 )
 collision_mask = 0
 
-[node name="Villager3" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager3" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 2853.76, 709.019 )
 collision_mask = 0
 
-[node name="Villager7" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager7" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 3801.18, 706.083 )
 collision_mask = 0
 
-[node name="Villager13" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager13" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 5315.1, 706.083 )
 collision_mask = 0
 
-[node name="Villager4" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager4" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 2783.23, 709.019 )
 collision_mask = 0
 
-[node name="Villager10" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager10" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 3730.65, 706.083 )
 collision_mask = 0
 
-[node name="Villager12" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager12" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 5244.57, 706.083 )
 collision_mask = 0
 
-[node name="Villager5" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager5" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 2670.1, 709.019 )
 collision_mask = 0
 
-[node name="Villager9" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager9" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 3617.52, 706.083 )
 collision_mask = 0
 
-[node name="Villager11" parent="Villagers" instance=ExtResource( 14 )]
+[node name="Villager11" parent="Villagers" instance=ExtResource( 13 )]
 position = Vector2( 5131.44, 706.083 )
 collision_mask = 0
 
-[node name="Music Player" parent="." instance=ExtResource( 15 )]
+[node name="Music Player" parent="." instance=ExtResource( 14 )]
 
 [node name="bolts" type="Node2D" parent="."]
 
 [node name="plants" type="Node2D" parent="."]
 
-[node name="plant" parent="plants" instance=ExtResource( 16 )]
+[node name="plant" parent="plants" instance=ExtResource( 15 )]
 position = Vector2( 13415.8, 714.292 )
-scale = Vector2( 1, 1 )
 
-[node name="plant2" parent="plants" instance=ExtResource( 16 )]
+[node name="plant2" parent="plants" instance=ExtResource( 15 )]
 position = Vector2( 9326.8, 493.765 )
-scale = Vector2( 1, 1 )
 
-[node name="plant3" parent="plants" instance=ExtResource( 16 )]
+[node name="plant3" parent="plants" instance=ExtResource( 15 )]
 position = Vector2( 8750.25, 40.8083 )
-scale = Vector2( 1, 1 )
 
-[node name="plant4" parent="plants" instance=ExtResource( 16 )]
+[node name="plant4" parent="plants" instance=ExtResource( 15 )]
 position = Vector2( 11857.4, 724.053 )
-scale = Vector2( 1, 1 )
 
