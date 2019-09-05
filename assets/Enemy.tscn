@@ -1,11 +1,12 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Enemy_class.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/monster.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/enemy animation.gd" type="Script" id=4]
-[ext_resource path="res://Sonds/gyahahaha.ogg" type="AudioStream" id=5]
-[ext_resource path="res://music/action.ogg" type="AudioStream" id=6]
+[ext_resource path="res://sprites/light.png" type="Texture" id=5]
+[ext_resource path="res://Sonds/gyahahaha.ogg" type="AudioStream" id=6]
+[ext_resource path="res://music/action.ogg" type="AudioStream" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
@@ -13,8 +14,10 @@ extents = Vector2( 15, 30 )
 [sub_resource type="CircleShape2D" id=2]
 radius = 350.0
 
-[sub_resource type="Animation" id=3]
-resource_name = "attack"
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="Animation" id=4]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -584,8 +587,7 @@ tracks/46/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "idle"
+[sub_resource type="Animation" id=5]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -1129,8 +1131,7 @@ tracks/44/keys = {
 "values": [ Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.45 ), Vector2( 0.5, 0.5 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "shoot"
+[sub_resource type="Animation" id=6]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -1700,7 +1701,7 @@ tracks/46/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -2281,7 +2282,6 @@ cast_to = Vector2( 0, 31 )
 wait_time = 2.0
 
 [node name="Scale" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Body" type="Sprite" parent="Scale"]
 position = Vector2( 0.276131, -23.0354 )
@@ -2290,6 +2290,20 @@ texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 8, 87, 104, 153 )
 script = ExtResource( 4 )
+
+[node name="light" type="Sprite" parent="Scale/Body"]
+modulate = Color( 1, 0.890196, 0.301961, 0.392157 )
+material = SubResource( 3 )
+position = Vector2( -0.409348, -37.5893 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 5 )
+
+[node name="light2" type="Sprite" parent="Scale/Body"]
+modulate = Color( 1, 0.890196, 0.301961, 0.392157 )
+material = SubResource( 3 )
+position = Vector2( -27.2895, -34.7105 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 5 )
 
 [node name="Leg Up" type="Sprite" parent="Scale/Body"]
 position = Vector2( 17.4338, 54.9785 )
@@ -2401,10 +2415,10 @@ region_rect = Rect2( 117, 117, 46, 72 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Scale/Body"]
 autoplay = "idle"
-anims/attack = SubResource( 3 )
-anims/idle = SubResource( 4 )
-anims/shoot = SubResource( 5 )
-anims/walk = SubResource( 6 )
+anims/attack = SubResource( 4 )
+anims/idle = SubResource( 5 )
+anims/shoot = SubResource( 6 )
+anims/walk = SubResource( 7 )
 
 [node name="Damage" type="RayCast2D" parent="."]
 enabled = true
@@ -2412,12 +2426,12 @@ cast_to = Vector2( 60, 0 )
 collision_mask = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 autoplay = true
 max_distance = 500.0
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 6 )
+stream = ExtResource( 7 )
 autoplay = true
 max_distance = 960.0
 

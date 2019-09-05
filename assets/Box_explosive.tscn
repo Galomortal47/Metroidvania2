@@ -50,6 +50,30 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("light2/Light2D:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.01, 2.0, 0.01, 2.0, 0.01, 2.0, 0.01, 2.0, 0.01 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("light2/Light2D:texture_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.0 ]
+}
 
 [node name="Box" type="KinematicBody2D" groups=[
 "enemy",
@@ -69,6 +93,12 @@ material = SubResource( 1 )
 position = Vector2( -0.420929, 0.336182 )
 z_index = 1
 texture = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="light2"]
+texture = ExtResource( 2 )
+texture_scale = 2.0
+color = Color( 1, 0, 0, 1 )
+energy = 0.01
 
 [node name="box" type="Sprite" parent="."]
 texture = ExtResource( 3 )
