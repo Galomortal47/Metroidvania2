@@ -23,6 +23,9 @@ func _process(delta):
 	$CanvasLayer/Line2D.set_points([Vector2(160,50),Vector2(($Health.health*20) + 160,50)])
 	get_parent().get_parent().get_node("Hooks").set_position(get_position())
 	if $Health.health < 0:
+		var boltspawner = preload("bolt_spawner.gd").new()
+		boltspawner.bolt_spawn(32,get_tree().get_root(),get_position())
+		boltspawner.particle_spawn(get_tree().get_root(),get_position())
 		queue_free()
 	timer -= delta
 	if timer < 0:

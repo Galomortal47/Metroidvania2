@@ -1214,6 +1214,7 @@ cast_to = Vector2( 1300, 0 )
 
 [node name="Gadeget Pick Up" parent="." instance=ExtResource( 19 )]
 position = Vector2( -11438.3, -72.6534 )
+gun_id = 1
 
 [node name="Jumpers" type="Node2D" parent="."]
 editor/display_folded = true
