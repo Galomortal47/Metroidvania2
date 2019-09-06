@@ -1,1 +1,1 @@
-{"graphics":"fast","guns":[false,false,false,false,false,false,false,false],"hp":20,"level":"res://assets/Room.tscn","money":0,"position_x":19200,"position_y":685,"time":2.327476}
+{"graphics":"fast","guns":[false,false,true,false,false,false,false,false],"hp":4,"level":"res://Test/Level 1.tscn","money":0,"position_x":6677.578125,"position_y":8.627971,"time":30.407953}
