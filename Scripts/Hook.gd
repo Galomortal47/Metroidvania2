@@ -9,6 +9,8 @@ var have = true
 var enable = false
 var ammo = 0
 var ammo_max = 0
+var mag_aux
+
 
 func _process(delta):
 	if have and enable:

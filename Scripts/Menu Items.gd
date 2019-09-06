@@ -13,10 +13,13 @@ var size_unselected = Vector2(0.2,-0.2)
 func _ready():
 	icon_generate()
 	time_aux = timer
+	select = get_parent().get_node("Save").data.select
 	get_parent().get_node("Weapons/Label").menu_size = menu_size
 	get_parent().get_node("Save").loader()
 	for i in range(0,menu_size):
 		get_parent().get_node("Weapons").get_child(i).have = get_parent().get_node("Save").data.guns[i]
+		get_parent().get_node("Weapons").get_child(i).mag_aux = get_parent().get_node("Save").data.magazine[i]
+		get_parent().get_node("Weapons").get_child(i).ammo = get_parent().get_node("Save").data.ammo[i]
 	guns = get_parent().get_node("Save").data.guns
 
 func icon_generate():

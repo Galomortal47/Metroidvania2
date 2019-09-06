@@ -10,7 +10,6 @@ var jump_ledge = 300
 var jump_aux = 0.0
 var jump_timer = 0.15
 var air_speed = 8
-export var health = 20
 var roll = 400
 var roll_height = 50
 var knockback = Vector2(0,0)
@@ -22,8 +21,7 @@ var swin_drag = 0.95
 var boltspawner = preload("bolt_spawner.gd").new()
 
 func _ready():
-	$Health.health = health
-	$Health.health_max = health
+	state = $Save.data.state
 
 func _process(delta):
 	match state:

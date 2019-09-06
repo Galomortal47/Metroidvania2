@@ -9,6 +9,8 @@ var ammo = 0
 var ammo_max = 0
 var lock = false
 var rot = 0
+var mag_aux
+
 
 func _process(delta):
 	$Line2D.default_color = (Color(-rot,rot,0))

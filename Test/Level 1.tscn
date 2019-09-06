@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=31]
 [ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=32]
 [ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=33]
+[ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=34]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -1722,4 +1723,7 @@ position = Vector2( -12068.3, -16.2644 )
 [node name="bolts" type="Node2D" parent="."]
 
 [node name="Day Night cycle" parent="." instance=ExtResource( 33 )]
+
+[node name="Mont" parent="." instance=ExtResource( 34 )]
+position = Vector2( -7029.11, -862.258 )
 

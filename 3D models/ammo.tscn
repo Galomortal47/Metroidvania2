@@ -5,7 +5,7 @@
 [ext_resource path="res://3D models/bolt.tres" type="Material" id=3]
 [ext_resource path="res://3D models/CPUParticles.tscn" type="PackedScene" id=4]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "rotate"
 length = 2.0
 loop = true
@@ -22,7 +22,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
 }
 
-[node name="Scene Root" index="0" instance=ExtResource( 1 )]
+[node name="Scene Root" instance=ExtResource( 1 )]
 
 [node name="Cylinder004" parent="." index="0"]
 visible = false
@@ -46,7 +46,7 @@ material/0 = ExtResource( 3 )
 
 [node name="AnimationPlayer" parent="." index="5"]
 autoplay = "rotate"
-anims/rotate = SubResource( 2 )
+anims/rotate = SubResource( 1 )
 
 [node name="CPUParticles" parent="." index="6" instance=ExtResource( 4 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.324301, 0.239275 )

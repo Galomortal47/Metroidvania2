@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Main_Menu.gd" type="Script" id=1]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
+[ext_resource path="res://music/calm.ogg" type="AudioStream" id=3]
 
 [node name="Main Menu" type="Control"]
 anchor_right = 1.0
@@ -26,34 +27,48 @@ custom_fonts/font = ExtResource( 2 )
 text = "New Game"
 flat = true
 
-[node name="Options" type="Button" parent="."]
-margin_left = 435.0
-margin_top = 265.87
-margin_right = 526.0
-margin_bottom = 299.87
+[node name="Volume" type="Button" parent="."]
+margin_left = 436.951
+margin_top = 257.827
+margin_right = 527.951
+margin_bottom = 291.827
 custom_fonts/font = ExtResource( 2 )
-text = "Options"
+text = "Volume:"
 flat = true
 
+[node name="HSlider" type="HSlider" parent="Volume"]
+margin_left = -37.6306
+margin_top = 37.0546
+margin_right = 130.369
+margin_bottom = 53.0546
+max_value = 125.0
+value = 100.0
+tick_count = 10
+
 [node name="Quit Game" type="Button" parent="."]
-margin_left = 435.0
-margin_top = 301.474
-margin_right = 526.0
-margin_bottom = 335.474
+margin_left = 436.951
+margin_top = 344.941
+margin_right = 527.951
+margin_bottom = 378.941
 custom_fonts/font = ExtResource( 2 )
 text = "Quit Game"
 flat = true
 
 [node name="Graphics" type="Button" parent="."]
-margin_left = 425.417
-margin_top = 337.675
-margin_right = 545.417
-margin_bottom = 357.675
+margin_left = 424.427
+margin_top = 320.865
+margin_right = 544.427
+margin_bottom = 340.865
 custom_fonts/font = ExtResource( 2 )
 text = "Graphics:Fancy"
 flat = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
 [connection signal="button_down" from="Continue" to="." method="_on_Continue_button_down"]
 [connection signal="button_down" from="New Game" to="." method="_on_New_Game_button_down"]
+[connection signal="value_changed" from="Volume/HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="button_down" from="Quit Game" to="." method="_on_Quit_Game_button_down"]
 [connection signal="button_down" from="Graphics" to="." method="_on_Button_button_down"]

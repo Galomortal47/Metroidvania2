@@ -10,6 +10,10 @@ func _on_Pick_Up_body_shape_entered(body_id, body, body_shape, area_shape):
 		body.get_node("Health").health += health
 		if health == 0:
 			if body.is_in_group("player"):
+				for i in range(0,8):
+					if body.get_node("Menu Items").select[i]:
+						gun_id = i
+						print(i)
 				var text = load("res://assets/Dialog.tscn")
 				var text_instance = text.instance()
 				text_instance.get_node("Label").set_text("You Gained Ammo " + str(body.get_node("Weapons").get_child(gun_id).get_name()))

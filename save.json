@@ -1,1 +1,1 @@
-{"graphics":"fancy","guns":[false,false,true,false,false,false,false,true],"hp":4,"level":"res://Test/Level 3.tscn","money":339,"position_x":20626.96875,"position_y":22.228302,"time":296.30661}
+{"ammo":[0,0,1,0,0,0,0,0],"graphics":"fancy","guns":[false,false,true,false,false,false,false,true],"hp":3,"level":"res://Test/Level 3.tscn","magazine":[0,0,1,0,0,0,0,0],"money":153,"position_x":20602.904297,"position_y":22.228298,"select":[false,false,true,false,false,false,false,false],"state":"chocobo","time":247.529007}

@@ -8,7 +8,11 @@ var data = {"hp":20,
 "position_y":460,
  "guns" : [false,false,false,false,false,false,false,false],
 "time": 00,
-"graphics": "fancy"
+"graphics": "fancy",
+"magazine" : [0,0,0,0,0,0,0,0],
+"ammo" : [0,0,0,0,0,0,0,0],
+"select" : [true,false,false,false,false,false,false,false],
+"state" : "walk"
 }
 
 
