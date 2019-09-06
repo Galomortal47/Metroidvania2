@@ -51,7 +51,7 @@ func shoot():
 			mag_aux-= shot
 		update_text()
 		for i in range(0,bullet_n):
-			get_parent().get_parent().get_node("Camera2D").shake += screen_shake
+			get_parent().get_parent().get_node("CamShake").shake += screen_shake
 			var bullet =  load(weapon)
 			var bullet_instance = bullet.instance()
 			bullet_instance.set_position(get_global_position())

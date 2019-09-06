@@ -14,7 +14,7 @@ func _process(delta):
 		if is_colliding() and not get_parent().motion.x == 0:
 			if get_collider().is_in_group("enemy"):
 				if get_collider().has_node("Health"):
-					get_parent().get_node("Camera2D").shake += screen_shake
+					get_parent().get_node("CamShake").shake += screen_shake
 					get_parent().motion.y -= jump
 					if get_parent().motion.x > 0:
 						get_collider().get_node("Health").health -= damage
