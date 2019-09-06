@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Srink Ray.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/Shotgun.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Shotgun.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Hook.gd" type="Script" id=4]
 [ext_resource path="res://assets/Gun_engine.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Unlock Minigame.gd" type="Script" id=6]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=7]
-[ext_resource path="res://Scripts/Hook.gd" type="Script" id=8]
+[ext_resource path="res://assets/Srink Ray.gd" type="Script" id=8]
 [ext_resource path="res://Scripts/Reload.gd" type="Script" id=9]
 [ext_resource path="res://sprites/ammo.png" type="Texture" id=10]
 [ext_resource path="res://Scripts/Menu Items.gd" type="Script" id=11]
@@ -552,27 +552,10 @@ anims/roll = SubResource( 4 )
 anims/swin = SubResource( 5 )
 
 [node name="Weapons" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 
-[node name="Srinking lamp" type="Node2D" parent="Weapons"]
-script = ExtResource( 3 )
-
-[node name="Shotgun" type="Node2D" parent="Weapons"]
-script = ExtResource( 4 )
-weapon = "res://assets/Bullet.tscn"
-speed = 400
-bullet_n = 15
-spreed = 20
-timer = 0.5
-damage = 0.1
-mag = 2
-lifespan = 5.0
-shot = 2
-ammo = 40
-
 [node name="Bomb" type="Node2D" parent="Weapons"]
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 weapon = "res://assets/Bullet.tscn"
 speed = 400
 timer = 0.5
@@ -584,8 +567,32 @@ particle_size = 45
 explosion = true
 ammo = 10
 
-[node name="Sniper" type="Node2D" parent="Weapons"]
+[node name="Hook" type="Node2D" parent="Weapons"]
+editor/display_folded = true
 script = ExtResource( 4 )
+
+[node name="Line2D" type="Line2D" parent="Weapons/Hook"]
+position = Vector2( 2.71121, -3.16309 )
+points = PoolVector2Array( 0, 0, 0, 0 )
+width = 3.0
+default_color = Color( 0.458824, 0.368627, 0.160784, 1 )
+texture_mode = 1052819649
+
+[node name="Shotgun" type="Node2D" parent="Weapons"]
+script = ExtResource( 3 )
+weapon = "res://assets/Bullet.tscn"
+speed = 400
+bullet_n = 15
+spreed = 20
+timer = 0.5
+damage = 0.1
+mag = 2
+lifespan = 5.0
+shot = 2
+ammo = 40
+
+[node name="Sniper" type="Node2D" parent="Weapons"]
+script = ExtResource( 3 )
 weapon = "res://assets/Bullet.tscn"
 speed = 800
 timer = 0.5
@@ -605,7 +612,7 @@ lifespan = 5.0
 ammo = 225
 
 [node name="FireTrowher" type="Node2D" parent="Weapons"]
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 weapon = "res://assets/Bullet.tscn"
 speed = 150
 spreed = 10
@@ -662,16 +669,8 @@ custom_fonts/font = ExtResource( 7 )
 text = "0/100"
 autowrap = true
 
-[node name="Hook" type="Node2D" parent="Weapons"]
-editor/display_folded = true
+[node name="Srinking lamp" type="Node2D" parent="Weapons"]
 script = ExtResource( 8 )
-
-[node name="Line2D" type="Line2D" parent="Weapons/Hook"]
-position = Vector2( 2.71121, -3.16309 )
-points = PoolVector2Array( 0, 0, 0, 0 )
-width = 3.0
-default_color = Color( 0.458824, 0.368627, 0.160784, 1 )
-texture_mode = 1052819649
 
 [node name="Label" type="Label" parent="Weapons"]
 editor/display_folded = true

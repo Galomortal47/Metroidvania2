@@ -24,7 +24,7 @@ func _ready():
 
 func icon_generate():
 	for i in range(0,menu_size):
-		get_parent().get_node("Menu Items/Menu").get_child(i).texture = get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Viewport"+str(i)).get_texture()
+		get_parent().get_node("Menu Items/Menu").get_child(i).texture = get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(i+1).get_texture()
 
 func weapon_sprite(var select):
 	if get_parent().get_node("Weapons").get_child(select).have:
@@ -85,5 +85,6 @@ func select(var x = 0):
 			select[i] = false
 
 func _on_Bullet_Time_animation_finished(anim_name):
-	timer = time_aux
+	if anim_name == "timer":
+		timer = time_aux
 	pass # Replace with function body.

@@ -16317,7 +16317,6 @@ region_rect = Rect2( 10.75, 95, 4.5, 6 )
 
 [node name="Iron Circle" type="Sprite" parent="Animation/Hips/Belt"]
 position = Vector2( -1.45547, -0.152555 )
-scale = Vector2( 1, 1 )
 z_index = 1
 texture = ExtResource( 2 )
 region_enabled = true
@@ -16325,7 +16324,6 @@ region_rect = Rect2( 11.125, 95.5, 3.875, 5.625 )
 
 [node name="Belt Piece" type="Sprite" parent="Animation/Hips/Belt"]
 position = Vector2( 4.36553, -0.108372 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
@@ -16338,7 +16336,6 @@ region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
 
 [node name="body" type="Sprite" parent="Animation/Hips/Belt"]
-editor/display_folded = true
 position = Vector2( 1.26223, -7.86402 )
 z_index = -1
 texture = ExtResource( 2 )

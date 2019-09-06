@@ -23,7 +23,7 @@ func _on_Continue_button_down():
 
 func _on_New_Game_button_down():
 	save.save()
-	get_tree().change_scene("res://assets/Room.tscn")
+	get_tree().change_scene(save.data.level)
 	pass # Replace with function body.
 
 

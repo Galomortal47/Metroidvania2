@@ -363,7 +363,7 @@ S and D: Choose Item
 
 [node name="Gadeget Pick Up" parent="." instance=ExtResource( 21 )]
 position = Vector2( 18719.3, 672.353 )
-gun_id = 2
+gun_id = 0
 
 [node name="Node2D2" type="Node2D" parent="."]
 editor/display_folded = true

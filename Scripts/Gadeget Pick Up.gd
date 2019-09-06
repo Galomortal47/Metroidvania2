@@ -9,7 +9,7 @@ func _ready():
 	if save.data.guns[gun_id]:
 		queue_free()
 	save.save()
-	$Sprite.texture = get_node("enemy/Monster2D-3D/Viewport"+str(gun_id)).get_texture()
+	$Sprite.texture = get_node("enemy/Monster2D-3D").get_child(gun_id+1).get_texture()
 	pass # Replace with function body.
 
 func _process(delta):

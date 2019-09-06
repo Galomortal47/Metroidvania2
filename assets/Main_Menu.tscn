@@ -42,8 +42,10 @@ margin_top = 37.0546
 margin_right = 130.369
 margin_bottom = 53.0546
 max_value = 125.0
+step = 10.0
 value = 100.0
 tick_count = 10
+ticks_on_borders = true
 
 [node name="Quit Game" type="Button" parent="."]
 margin_left = 436.951
