@@ -7,7 +7,7 @@ func _ready():
 	set_speed_scale(1)
 	play("day night")
 	save.loader()
-	print(save.data.time)
+#	print(save.data.time)
 	advance(save.data.time)
 	save.save()
 	pass # Replace with function body.

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Villager.gd" type="Script" id=1]
 [ext_resource path="res://sprites/villager.png" type="Texture" id=2]
+[ext_resource path="res://sprites/light.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Light2D.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.04, 36.1526 )
@@ -76,6 +78,20 @@ position = Vector2( 1.98608, -28.9967 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( -2.5, 52.75, 47.75, 37.75 )
+
+[node name="light" type="Light2D" parent="body/head"]
+position = Vector2( -10.5474, -0.0629272 )
+texture = ExtResource( 3 )
+texture_scale = 0.5
+color = Color( 1, 0.788235, 0.0705882, 1 )
+script = ExtResource( 4 )
+
+[node name="light2" type="Light2D" parent="body/head"]
+position = Vector2( -1.98096, 0.286743 )
+texture = ExtResource( 3 )
+texture_scale = 0.5
+color = Color( 1, 0.788235, 0.0705882, 1 )
+script = ExtResource( 4 )
 
 [node name="arm" type="Sprite" parent="body"]
 position = Vector2( 11.383, -7.91724 )
