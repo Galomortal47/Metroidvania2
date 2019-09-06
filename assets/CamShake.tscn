@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/CamShake.gd" type="Script" id=1]
+
+[node name="CamShake" type="Camera2D"]
+position = Vector2( 0, -135 )
+current = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+script = ExtResource( 1 )
+

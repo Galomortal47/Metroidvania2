@@ -8,7 +8,7 @@ var data = {"hp":20,
 "position_y":460,
  "guns" : [false,false,false,false,false,false,false,false],
 "time": 00,
-"graphics": "fast"
+"graphics": "fancy"
 }
 
 
