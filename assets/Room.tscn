@@ -50,3 +50,7 @@ polygon = PoolVector2Array( -730.66, -385.84, -727.144, 962.605, 114.746, 118.42
 
 [node name="Day Night cycle" parent="." instance=ExtResource( 4 )]
 
+[node name="Hooks" type="Node2D" parent="."]
+
+[node name="Enemies" type="Node2D" parent="."]
+
