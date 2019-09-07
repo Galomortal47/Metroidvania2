@@ -3,7 +3,7 @@ extends RayCast2D
 var i
 var select = 0
 var price = [99999,2000,3000,4000,4000,5000,99999,99999]
-var enable = [false,true,true,true,true,true,false,false]
+var enable = [false,false,true,true,true,true,false,false]
 var items_n = 8
 
 func _process(delta):
@@ -17,6 +17,10 @@ func _process(delta):
 		select = 7
 	
 	if is_colliding():
+		if get_collider().get_global_position().x > $Scale.get_global_position().x:
+			$Scale.set_scale(Vector2(-1,1))
+		else:
+			$Scale.set_scale(Vector2(1,1))
 		for i in range(0,items_n):
 			get_node("Shop_Select/Icons").get_child(i).texture = get_collider().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(i+1).get_texture()
 			if select == i:
@@ -38,11 +42,8 @@ func _process(delta):
 					if  weapon_checker_money_checker():
 						get_collider().get_node("Coins/Number").set_text(str(int(get_collider().get_node("Coins/Number").get_text())-price[select]))
 						get_collider().get_node("Weapons").get_child(select).have = true
-	elif is_colliding():
-		get_node("Label").show()
 	else:
 		get_node("Shop_Select/Icons").hide()
-		get_node("Label").hide()
 
 func weapon_checker_money_checker():
 		if int(get_collider().get_node("Coins/Number").get_text()) >= price[select] and not get_collider().get_node("Weapons").get_child(select).have:

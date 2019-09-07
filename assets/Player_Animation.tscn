@@ -16448,8 +16448,9 @@ region_rect = Rect2( 42.375, 20.875, 3.75, 4.25 )
 position = Vector2( 1.42395, -2.42072 )
 z_index = -1
 texture = ExtResource( 2 )
+offset = Vector2( 0, 24.98 )
 region_enabled = true
-region_rect = Rect2( 4, 38.25, 31, 27.25 )
+region_rect = Rect2( 54, 36, 44.25, 80.5 )
 
 [node name="Hair Front" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -2.13495, -4.82822 )

@@ -1,396 +1,11 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=42 format=2]
 
-[ext_resource path="res://sprites/grass.png" type="Texture" id=1]
-[ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
-[ext_resource path="res://sprites/end.png" type="Texture" id=3]
-[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/health pick up.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/Pick Up.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/Bolts.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/Hook1.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/Water.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Enemy Shooter.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Box_ammo.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/Box_explosive.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/Box_health.tscn" type="PackedScene" id=16]
-[ext_resource path="res://assets/Platform4.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=18]
-[ext_resource path="res://assets/Gadeget Pick Up.tscn" type="PackedScene" id=19]
-[ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=20]
-[ext_resource path="res://sprites/mushroom.png" type="Texture" id=21]
-[ext_resource path="res://sprites/sing.png" type="Texture" id=22]
-[ext_resource path="res://sprites/vines.png" type="Texture" id=23]
-[ext_resource path="res://sprites/flower2.png" type="Texture" id=24]
-[ext_resource path="res://sprites/grass2.png" type="Texture" id=25]
-[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=26]
-[ext_resource path="res://sprites/plant.png" type="Texture" id=27]
-[ext_resource path="res://Scripts/plant.gd" type="Script" id=28]
-[ext_resource path="res://sprites/light.png" type="Texture" id=29]
-[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=30]
-[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=31]
-[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=32]
-[ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=33]
-[ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=34]
-[ext_resource path="res://sprites/rocket.png" type="Texture" id=35]
-[ext_resource path="res://sprites/scientist.png" type="Texture" id=36]
-[ext_resource path="res://enemy/guns.tscn" type="PackedScene" id=37]
-[ext_resource path="res://sprites/chocobo.png" type="Texture" id=38]
-[ext_resource path="res://assets/rest.tres" type="Animation" id=39]
-[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=40]
-[ext_resource path="res://assets/CPUParticles2D2.tscn" type="PackedScene" id=41]
+[ext_resource path="res://sprites/scientist.png" type="Texture" id=1]
+[ext_resource path="res://enemy/guns.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/chocobo.png" type="Texture" id=3]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1463.3, 18.0403 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 79.5491 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 25.6528, 729.089 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 541.865, 19.2802 )
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 1846.42, 10 )
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 867.925, 10 )
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 10, 131.159 )
-
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 10, 641.642 )
-
-[sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 5.9502, 162.175 )
-
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 41.6683, 314.736 )
-
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 10, 79.1086 )
-
-[sub_resource type="CanvasItemMaterial" id=12]
-blend_mode = 1
-
-[sub_resource type="Animation" id=13]
-length = 5.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -51.385, -45.9729, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -50.0703, -36.9049, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=14]
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -32.466, 1.97562, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -56.778, -70.9042, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=15]
-length = 5.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -51.385, -45.9729, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -50.0703, -36.9049, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=16]
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -32.466, 1.97562, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -56.778, -70.9042, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=17]
-length = 5.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -51.385, -45.9729, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -50.0703, -36.9049, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=18]
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -32.466, 1.97562, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -56.778, -70.9042, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=19]
-length = 5.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -51.385, -45.9729, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -50.0703, -36.9049, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.1, 3.5, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 8.27264, 23.9174, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=20]
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -22.3278, -32.466, 1.97562, -22.3278 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("plant2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ -67.868, -56.778, -70.9042, -67.868 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("plant3:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 49.2539, 41.81, 42.3311, 49.2539 ]
-}
-
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=1]
 resource_name = "idle"
 loop = true
 tracks/0/type = "value"
@@ -502,7 +117,7 @@ tracks/8/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.06, 0.95 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=2]
 resource_name = "wakj"
 loop = true
 tracks/0/type = "value"
@@ -614,7 +229,7 @@ tracks/8/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.06, 0.95 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=3]
 resource_name = "walk"
 length = 0.5
 loop = true
@@ -728,7 +343,7 @@ tracks/8/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.06, 0.95 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=4]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -1452,7 +1067,7 @@ tracks/59/keys = {
 "values": [ Rect2( 40, 20.875, 7.5, 4.25 ) ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=5]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -2140,7 +1755,7 @@ tracks/56/keys = {
 "values": [ Vector2( -4, 8.42777 ) ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=6]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -2802,7 +2417,7 @@ tracks/54/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -3500,7 +3115,7 @@ tracks/57/keys = {
 "values": [ Vector2( -4.10209, 8.42777 ), Vector2( -3.54058, 8.47882 ) ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=8]
 length = 0.5
 loop = true
 step = 0.05
@@ -4333,7 +3948,7 @@ tracks/68/keys = {
 "values": [ Vector2( -1.45547, -0.152555 ), Vector2( -4.64831, -0.230887 ), Vector2( -1.45547, -0.152555 ), Vector2( -4.64831, -0.230887 ), Vector2( -1.45547, -0.152555 ) ]
 }
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=9]
 resource_name = "Walk_carry"
 length = 0.5
 loop = true
@@ -5059,7 +4674,7 @@ tracks/59/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=30]
+[sub_resource type="Animation" id=10]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -5721,7 +5336,7 @@ tracks/54/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=11]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -6385,7 +6000,7 @@ tracks/54/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=32]
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -6987,7 +6602,7 @@ tracks/49/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=33]
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -7589,7 +7204,7 @@ tracks/49/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=34]
+[sub_resource type="Animation" id=14]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
@@ -8240,7 +7855,7 @@ tracks/53/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=35]
+[sub_resource type="Animation" id=15]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
@@ -8927,7 +8542,7 @@ tracks/56/keys = {
 "values": [ Vector2( -4, 8.42777 ) ]
 }
 
-[sub_resource type="Animation" id=36]
+[sub_resource type="Animation" id=16]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -9615,7 +9230,7 @@ tracks/56/keys = {
 "values": [ Vector2( -4, 8.42777 ) ]
 }
 
-[sub_resource type="Animation" id=37]
+[sub_resource type="Animation" id=17]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -10277,7 +9892,7 @@ tracks/54/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=38]
+[sub_resource type="Animation" id=18]
 resource_name = "Pick Up"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
@@ -10988,7 +10603,7 @@ tracks/58/keys = {
 "values": [ false, true, false ]
 }
 
-[sub_resource type="Animation" id=39]
+[sub_resource type="Animation" id=19]
 length = 0.5
 loop = true
 step = 0.05
@@ -11713,7 +11328,7 @@ tracks/59/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=40]
+[sub_resource type="Animation" id=20]
 resource_name = "Walk_carry"
 length = 0.5
 loop = true
@@ -12439,7 +12054,7 @@ tracks/59/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=41]
+[sub_resource type="Animation" id=21]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -13101,7 +12716,7 @@ tracks/54/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=42]
+[sub_resource type="Animation" id=22]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -13765,7 +13380,7 @@ tracks/54/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=23]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -14367,7 +13982,7 @@ tracks/49/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=44]
+[sub_resource type="Animation" id=24]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -14969,7 +14584,7 @@ tracks/49/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=45]
+[sub_resource type="Animation" id=25]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
@@ -15620,7 +15235,7 @@ tracks/53/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=26]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -15648,7 +15263,7 @@ tracks/1/keys = {
 "values": [ Vector2( -0.66, 1 ), Vector2( -0.66, 1 ), Vector2( -0.66, 0.15 ), Vector2( -0.66, 1 ), Vector2( -0.66, 0.15 ), Vector2( -0.66, 1 ), Vector2( -0.66, 1 ) ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=27]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Belt/body/arm up2/arm down/hand/weapons:visible")
 tracks/0/interp = 1
@@ -15662,7 +15277,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=28]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Belt/body/arm up:rotation_degrees")
 tracks/0/interp = 1
@@ -15784,7 +15399,7 @@ tracks/9/keys = {
 "values": [ Vector2( 1, 1.19 ) ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=29]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Belt/body/arm up:rotation_degrees")
 tracks/0/interp = 1
@@ -15906,7 +15521,7 @@ tracks/9/keys = {
 "values": [ Vector2( -1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=30]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Belt/body/arm up:rotation_degrees")
 tracks/0/interp = 1
@@ -16028,7 +15643,7 @@ tracks/9/keys = {
 "values": [ Vector2( -1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=51]
+[sub_resource type="Animation" id=31]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation:scale")
 tracks/0/interp = 1
@@ -16042,7 +15657,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.15, 0.89 ), Vector2( 0.863, 1.151 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=52]
+[sub_resource type="Animation" id=32]
 resource_name = "walk"
 length = 0.5
 loop = true
@@ -16156,7 +15771,7 @@ tracks/8/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.06, 0.95 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=33]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips:position")
 tracks/0/interp = 1
@@ -16314,7 +15929,7 @@ tracks/12/keys = {
 "values": [ 3 ]
 }
 
-[sub_resource type="Animation" id=54]
+[sub_resource type="Animation" id=34]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips:position")
 tracks/0/interp = 1
@@ -16328,7 +15943,7 @@ tracks/0/keys = {
 "values": [ Vector2( 19.3985, -24.0496 ) ]
 }
 
-[sub_resource type="Animation" id=55]
+[sub_resource type="Animation" id=35]
 length = 0.85
 loop = true
 tracks/0/type = "value"
@@ -16476,7 +16091,7 @@ tracks/11/keys = {
 "values": [ 66.5415 ]
 }
 
-[sub_resource type="Animation" id=56]
+[sub_resource type="Animation" id=36]
 length = 0.5
 loop = true
 step = 0.05
@@ -16649,7 +16264,7 @@ tracks/13/keys = {
 "values": [ 0.0, 20.0035, 0.0 ]
 }
 
-[sub_resource type="Animation" id=57]
+[sub_resource type="Animation" id=37]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Polygon2D:visible")
@@ -16904,1792 +16519,425 @@ tracks/20/keys = {
 "values": [ 0.0, 0.0 ]
 }
 
-[node name="Test" type="Node2D"]
-position = Vector2( -0.429321, 1.7171 )
-__meta__ = {
-"_edit_vertical_guides_": [ 5510.29 ]
-}
-
-[node name="Ground" type="StaticBody2D" parent="."]
+[node name="Scientist anim" type="Node2D"]
 editor/display_folded = true
-
-[node name="grass" type="TextureRect" parent="Ground"]
-margin_left = -342.0
-margin_top = 489.0
-margin_right = 566.0
-margin_bottom = 617.0
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="grass10" type="TextureRect" parent="Ground"]
-margin_left = -5795.0
-margin_top = 650.0
-margin_right = -2230.0
-margin_bottom = 778.0
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="grass7" type="TextureRect" parent="Ground"]
-margin_left = -1730.0
-margin_top = 637.0
-margin_right = -419.0
-margin_bottom = 765.0
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="grass11" type="TextureRect" parent="Ground"]
-margin_left = -8854.0
-margin_top = -141.0
-margin_right = -7219.0
-margin_bottom = -13.0
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="grass14" type="TextureRect" parent="Ground"]
-margin_left = -10512.8
-margin_top = -873.166
-margin_right = -8877.81
-margin_bottom = -745.166
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="grass16" type="TextureRect" parent="Ground"]
-margin_left = -7502.0
-margin_top = -900.0
-margin_right = -5825.0
-margin_bottom = -772.0
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="grass12" type="TextureRect" parent="Ground"]
-margin_left = -10588.0
-margin_top = 348.0
-margin_right = -8892.0
-margin_bottom = 476.0
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="grass13" type="TextureRect" parent="Ground"]
-margin_left = -12319.0
-margin_top = -63.008
-margin_right = -10637.0
-margin_bottom = 64.992
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="grass6" type="TextureRect" parent="Ground"]
-margin_left = 1018.0
-margin_top = 489.0
-margin_right = 3838.0
-margin_bottom = 617.0
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="grass8" type="TextureRect" parent="Ground"]
-margin_left = 3862.0
-margin_top = 612.0
-margin_right = 6793.0
-margin_bottom = 740.0
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="grass9" type="TextureRect" parent="Ground"]
-margin_left = 5537.0
-margin_top = -9.0
-margin_right = 8403.0
-margin_bottom = 119.0
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="dirt" type="TextureRect" parent="Ground"]
-margin_left = -403.006
-margin_top = 720.0
-margin_right = 6795.99
-margin_bottom = 844.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
-[node name="dirt5" type="TextureRect" parent="Ground"]
-margin_left = -7174.0
-margin_top = 749.0
-margin_right = 5723.0
-margin_bottom = 1178.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
-[node name="dirt6" type="TextureRect" parent="Ground"]
-margin_left = -8902.0
-margin_top = -41.0
-margin_right = -7137.0
-margin_bottom = 481.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
-[node name="dirt10" type="TextureRect" parent="Ground"]
-margin_left = -10561.0
-margin_top = -773.0
-margin_right = -8815.0
-margin_bottom = -435.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
-[node name="dirt12" type="TextureRect" parent="Ground"]
-margin_left = -7542.0
-margin_top = -800.0
-margin_right = -5796.0
-margin_bottom = -462.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
-[node name="dirt7" type="TextureRect" parent="Ground"]
-margin_left = -10587.0
-margin_top = 455.0
-margin_right = -7136.0
-margin_bottom = 1669.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
-[node name="dirt8" type="TextureRect" parent="Ground"]
-margin_left = -14048.0
-margin_top = 37.0
-margin_right = -10541.0
-margin_bottom = 1689.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
-[node name="dirt11" type="TextureRect" parent="Ground"]
-margin_left = -14027.0
-margin_top = -1293.0
-margin_right = -12248.0
-margin_bottom = 70.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
-[node name="dirt3" type="TextureRect" parent="Ground"]
-margin_left = 5489.0
-margin_top = 90.0
-margin_right = 8416.0
-margin_bottom = 1157.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
-[node name="dirt2" type="TextureRect" parent="Ground"]
-margin_left = -400.0
-margin_top = 604.0
-margin_right = 3875.0
-margin_bottom = 734.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
-
-[node name="grass2" type="TextureRect" parent="Ground"]
-visible = false
-margin_left = -2081.0
-margin_top = 625.0
-margin_right = 1622.0
-margin_bottom = 753.0
-texture = ExtResource( 1 )
-stretch_mode = 2
-
-[node name="end" type="Sprite" parent="Ground"]
-position = Vector2( -405.497, 549.765 )
-texture = ExtResource( 3 )
-
-[node name="end5" type="Sprite" parent="Ground"]
-position = Vector2( -1793.39, 699.654 )
-texture = ExtResource( 3 )
-
-[node name="end3" type="Sprite" parent="Ground"]
-position = Vector2( 954.506, 549.765 )
-texture = ExtResource( 3 )
-
-[node name="end7" type="Sprite" parent="Ground"]
-position = Vector2( 5482.32, 47.757 )
-texture = ExtResource( 3 )
-
-[node name="end9" type="Sprite" parent="Ground"]
-position = Vector2( -5857.87, 712.904 )
-texture = ExtResource( 3 )
-
-[node name="end2" type="Sprite" parent="Ground"]
-position = Vector2( 629.932, 553.372 )
-rotation = -3.14159
-scale = Vector2( 1, -1 )
-texture = ExtResource( 3 )
-
-[node name="end8" type="Sprite" parent="Ground"]
-position = Vector2( -2167.86, 714.07 )
-rotation = -3.14159
-scale = Vector2( 1, -1 )
-texture = ExtResource( 3 )
-
-[node name="end10" type="Sprite" parent="Ground"]
-position = Vector2( -7156.16, -71.7465 )
-rotation = 3.14159
-scale = Vector2( 1, -1 )
-texture = ExtResource( 3 )
-
-[node name="end14" type="Sprite" parent="Ground"]
-position = Vector2( -8814.98, -803.912 )
-rotation = 3.14159
-scale = Vector2( 1, -1 )
-texture = ExtResource( 3 )
-
-[node name="end17" type="Sprite" parent="Ground"]
-position = Vector2( -5797.07, -834.216 )
-rotation = 3.14159
-scale = Vector2( 0.456517, -1 )
-texture = ExtResource( 3 )
-
-[node name="end11" type="Sprite" parent="Ground"]
-position = Vector2( -8911.95, -80.2181 )
-rotation = 2.53518e-006
-texture = ExtResource( 3 )
-
-[node name="end15" type="Sprite" parent="Ground"]
-position = Vector2( -10570.8, -812.384 )
-rotation = 2.53518e-006
-texture = ExtResource( 3 )
-
-[node name="end18" type="Sprite" parent="Ground"]
-position = Vector2( -7541.96, -839.554 )
-rotation = 2.53518e-006
-scale = Vector2( 0.632117, 1 )
-texture = ExtResource( 3 )
-
-[node name="end12" type="Sprite" parent="Ground"]
-position = Vector2( -10574.1, -1.52142 )
-rotation = -3.14159
-scale = Vector2( 1, -1 )
-texture = ExtResource( 3 )
-
-[node name="end6" type="Sprite" parent="Ground"]
-position = Vector2( 3872.61, 550.827 )
-rotation = -3.14159
-scale = Vector2( 0.59968, -1 )
-texture = ExtResource( 3 )
-
-[node name="end4" type="Sprite" parent="Ground"]
-editor/display_folded = true
-position = Vector2( -439.757, 613.533 )
-scale = Vector2( 0.448972, 3.89709 )
-z_index = 4094
-texture = ExtResource( 3 )
-
-[node name="end5" type="Sprite" parent="Ground/end4"]
-position = Vector2( 123.43, -6.10352e-005 )
-rotation = -3.14159
-scale = Vector2( 1, -1.00006 )
-z_index = 4096
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 2415.91, 583.337 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 3863.67, 678.181 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -443.444, 809.512 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -2501.46, 820.84 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D26" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -1572.19, 816.544 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 5332.4, 709.514 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 6950.79, 91.5816 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 5506.89, 826.305 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 120.301, 586.465 )
-shape = SubResource( 4 )
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 33.5359, 728.393 )
-shape = SubResource( 5 )
-
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -4001.74, 737.456 )
-shape = SubResource( 5 )
-
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -5867.93, 910.406 )
-shape = SubResource( 5 )
-
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -9698.13, 434.697 )
-shape = SubResource( 5 )
-
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -8021.58, -35.4664 )
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D28" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -9680.39, -767.632 )
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D36" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -6661.49, -794.802 )
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D29" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -9680.39, -446.019 )
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D34" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -6661.49, -473.189 )
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -11413.7, 44.3762 )
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -5837.24, 874.142 )
-shape = SubResource( 7 )
-
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -7164.96, 610.945 )
-shape = SubResource( 8 )
-
-[node name="CollisionShape2D23" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -8887.98, 600.443 )
-shape = SubResource( 8 )
-
-[node name="CollisionShape2D31" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -10557.8, -606.325 )
-shape = SubResource( 9 )
-
-[node name="CollisionShape2D37" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -7538.92, -633.495 )
-shape = SubResource( 9 )
-
-[node name="CollisionShape2D30" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -8813.76, -608.483 )
-shape = SubResource( 9 )
-
-[node name="CollisionShape2D35" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -5794.86, -635.654 )
-shape = SubResource( 9 )
-
-[node name="CollisionShape2D25" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -10552.4, 689.919 )
-shape = SubResource( 8 )
-
-[node name="CollisionShape2D32" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -12258.7, -607.626 )
-shape = SubResource( 8 )
-
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -667.961, 892.13 )
-shape = SubResource( 5 )
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 1489.65, 900.506 )
-shape = SubResource( 10 )
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Ground"]
-position = Vector2( -409.514, 650.704 )
-shape = SubResource( 11 )
-
-[node name="Player" parent="." instance=ExtResource( 4 )]
-editor/display_folded = true
-position = Vector2( -1473.07, 637.329 )
-
-[node name="CamShake" parent="Player" instance=ExtResource( 5 )]
-
-[node name="Pick Up2" parent="." instance=ExtResource( 6 )]
-position = Vector2( -346.707, 519.061 )
-
-[node name="Ammo Pick Up" parent="." instance=ExtResource( 7 )]
-position = Vector2( -245.126, 520.219 )
-
-[node name="Bolts2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 86.887, 555.155 )
-
-[node name="Hooks" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="Hook1" parent="Hooks" instance=ExtResource( 9 )]
-
-[node name="Hook2" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( 4470.86, 52.3754 )
-
-[node name="Hook3" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( 4955.97, -82.9726 )
-
-[node name="Hook23" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( 5583.42, -154.063 )
-
-[node name="Hook4" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -6245.28, 370.098 )
-
-[node name="Hook5" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -6663.43, 96.494 )
-
-[node name="Hook6" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -8516.71, -1101.17 )
-
-[node name="Hook7" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -7938.52, -1111.49 )
-
-[node name="Hook8" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -10542.1, -940.448 )
-
-[node name="Hook9" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -11111.4, -693.795 )
-
-[node name="Hook24" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -10848.2, -899.282 )
-
-[node name="Hook10" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -11357.9, -371.206 )
-
-[node name="Hook11" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -5419.3, -1023.73 )
-
-[node name="Hook12" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -4624.31, -1008.25 )
-
-[node name="Hook13" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -4092.58, -941.135 )
-
-[node name="Hook14" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -3369.86, -899.836 )
-
-[node name="Hook15" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -2136.06, -1178.6 )
-
-[node name="Hook16" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -1532.07, -1008.24 )
-
-[node name="Hook17" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -411.841, -930.81 )
-
-[node name="Hook18" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( 636.113, -884.349 )
-
-[node name="Hook19" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( 1472.41, -879.187 )
-
-[node name="Hook20" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( 2004.13, -1101.17 )
-
-[node name="Hook21" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( 2618.45, -884.349 )
-
-[node name="Hook22" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( 3243.09, -1065.03 )
-
-[node name="Waters" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="Water2" parent="Waters" instance=ExtResource( 10 )]
-position = Vector2( 1026.8, 732.582 )
-scale = Vector2( 1, 0.464971 )
-
-[node name="Water" parent="Waters" instance=ExtResource( 10 )]
-position = Vector2( 67.4976, 737.51 )
-scale = Vector2( 1, 0.477343 )
-
-[node name="Water4" parent="Waters" instance=ExtResource( 10 )]
-position = Vector2( -2033.85, 873.016 )
-scale = Vector2( 1, 0.5 )
-
-[node name="Water5" parent="Waters" instance=ExtResource( 10 )]
-position = Vector2( -6490.76, 823.595 )
-scale = Vector2( 1.34346, 0.324087 )
-
-[node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="Enemy" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( -1661.99, 678.411 )
-
-[node name="Enemy3" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( -9557.78, 315.75 )
-
-[node name="Enemy2" parent="Enemies" instance=ExtResource( 12 )]
-position = Vector2( -3123.18, 665.23 )
-
-[node name="Enemy4" parent="Enemies" instance=ExtResource( 12 )]
-position = Vector2( -9923.78, 328.391 )
-
-[node name="Boxes" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="Boxes" type="Node2D" parent="Boxes"]
-editor/display_folded = true
-
-[node name="Box2" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 541.343 )
-
-[node name="Box9" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 493.369 )
-
-[node name="Box16" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 437.656 )
-
-[node name="Box3" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 541.343 )
-
-[node name="Box10" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 493.369 )
-
-[node name="Box15" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 437.656 )
-
-[node name="Box4" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 541.343 )
-
-[node name="Box7" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 493.369 )
-
-[node name="Box13" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 437.656 )
-
-[node name="Box5" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 541.343 )
-
-[node name="Box8" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 493.369 )
-
-[node name="Box12" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 437.656 )
-
-[node name="Box6" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 541.343 )
-
-[node name="Box11" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 493.369 )
-
-[node name="Box14" parent="Boxes/Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 437.656 )
-
-[node name="Boxes2" type="Node2D" parent="Boxes"]
-editor/display_folded = true
-position = Vector2( -5245.46, 164.234 )
-
-[node name="Box2" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 541.343 )
-
-[node name="Box9" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 493.369 )
-
-[node name="Box16" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 437.656 )
-
-[node name="Box3" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 541.343 )
-
-[node name="Box10" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 493.369 )
-
-[node name="Box15" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 437.656 )
-
-[node name="Box4" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 541.343 )
-
-[node name="Box7" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 493.369 )
-
-[node name="Box13" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 437.656 )
-
-[node name="Box5" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 541.343 )
-
-[node name="Box8" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 493.369 )
-
-[node name="Box12" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 437.656 )
-
-[node name="Box6" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 541.343 )
-
-[node name="Box11" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 493.369 )
-
-[node name="Box14" parent="Boxes/Boxes2" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 437.656 )
-
-[node name="Boxes3" type="Node2D" parent="Boxes"]
-editor/display_folded = true
-position = Vector2( -10863.1, -1341.04 )
-
-[node name="Box2" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 541.343 )
-
-[node name="Box9" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 493.369 )
-
-[node name="Box16" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 437.656 )
-
-[node name="Box3" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 541.343 )
-
-[node name="Box10" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 493.369 )
-
-[node name="Box15" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 437.656 )
-
-[node name="Box4" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 541.343 )
-
-[node name="Box7" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 493.369 )
-
-[node name="Box13" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 437.656 )
-
-[node name="Box5" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 541.343 )
-
-[node name="Box8" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 493.369 )
-
-[node name="Box12" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 437.656 )
-
-[node name="Box6" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 541.343 )
-
-[node name="Box11" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 493.369 )
-
-[node name="Box14" parent="Boxes/Boxes3" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 437.656 )
-
-[node name="Boxes4" type="Node2D" parent="Boxes"]
-editor/display_folded = true
-position = Vector2( -7879.42, -1368.21 )
-
-[node name="Box2" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 541.343 )
-
-[node name="Box9" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 493.369 )
-
-[node name="Box16" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1073.09, 437.656 )
-
-[node name="Box3" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 541.343 )
-
-[node name="Box10" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 493.369 )
-
-[node name="Box15" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1121.83, 437.656 )
-
-[node name="Box4" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 541.343 )
-
-[node name="Box7" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 493.369 )
-
-[node name="Box13" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1172.9, 437.656 )
-
-[node name="Box5" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 541.343 )
-
-[node name="Box8" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 493.369 )
-
-[node name="Box12" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1229.39, 437.656 )
-
-[node name="Box6" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 541.343 )
-
-[node name="Box11" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 493.369 )
-
-[node name="Box14" parent="Boxes/Boxes4" instance=ExtResource( 13 )]
-position = Vector2( 1288.2, 437.656 )
-
-[node name="Box_bolts" parent="Boxes" instance=ExtResource( 13 )]
-
-[node name="Box_bolts2" parent="Boxes" instance=ExtResource( 13 )]
-position = Vector2( -14.6402, 706.665 )
-
-[node name="Box_bolts3" parent="Boxes" instance=ExtResource( 13 )]
-position = Vector2( -17.5041, 659.409 )
-
-[node name="Box_bolts4" parent="Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1324.26, 688.049 )
-
-[node name="Box2" parent="Boxes" instance=ExtResource( 14 )]
-position = Vector2( 305.294, 555.409 )
-
-[node name="Box3" parent="Boxes" instance=ExtResource( 15 )]
-position = Vector2( 129.182, 553.485 )
-
-[node name="Box5" parent="Boxes" instance=ExtResource( 15 )]
-position = Vector2( 1251.85, 695.25 )
-
-[node name="Box6" parent="Boxes" instance=ExtResource( 15 )]
-position = Vector2( 44.6948, 713.866 )
-
-[node name="Box4" parent="Boxes" instance=ExtResource( 15 )]
-position = Vector2( 1151.61, 384.511 )
-
-[node name="Box" parent="Boxes" instance=ExtResource( 16 )]
-position = Vector2( 184.282, 553.485 )
-
-[node name="Node2D" type="Node2D" parent="Boxes"]
-
-[node name="Platfroms" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="Platform4" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -5996.3, 321.451 )
-
-[node name="Platform5" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -6175.57, 284.36 )
-
-[node name="Platform6" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -6444.47, 169.998 )
-
-[node name="Platform7" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -6747.38, -15.4543 )
-
-[node name="Platform8" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -7031.74, -210.179 )
-
-[node name="Platform9" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -10099.6, -47.9525 )
-
-[node name="Platform10" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -10339.6, -141.717 )
-
-[node name="Platform11" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -10516.2, -285.919 )
-
-[node name="Swin" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="Swwing" type="RayCast2D" parent="Swin"]
-editor/display_folded = true
-position = Vector2( 669.711, 618.652 )
-enabled = true
-cast_to = Vector2( 300, 0 )
-script = ExtResource( 18 )
-
-[node name="Swwing2" type="RayCast2D" parent="Swin/Swwing"]
-position = Vector2( 0, -28.7293 )
-enabled = true
-cast_to = Vector2( 300, 0 )
-
-[node name="Swwing2" type="RayCast2D" parent="Swin"]
-editor/display_folded = true
-position = Vector2( -2138.86, 731.392 )
-enabled = true
-cast_to = Vector2( 300, 0 )
-script = ExtResource( 18 )
-
-[node name="Swwing2" type="RayCast2D" parent="Swin/Swwing2"]
-position = Vector2( 0, -28.7293 )
-enabled = true
-cast_to = Vector2( 300, 0 )
-
-[node name="Swwing3" type="RayCast2D" parent="Swin"]
-position = Vector2( -7129.06, 773.322 )
-enabled = true
-cast_to = Vector2( 1300, 0 )
-script = ExtResource( 18 )
-
-[node name="Swwing2" type="RayCast2D" parent="Swin/Swwing3"]
-position = Vector2( 0, -28.7293 )
-enabled = true
-cast_to = Vector2( 1300, 0 )
-
-[node name="Gadeget Pick Up" parent="." instance=ExtResource( 19 )]
-position = Vector2( -11438.3, -72.6534 )
-gun_id = 1
-
-[node name="Jumpers" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="Jumper" parent="Jumpers" instance=ExtResource( 20 )]
-
-[node name="Jumper3" parent="Jumpers" instance=ExtResource( 20 )]
-position = Vector2( -5650.96, 700.474 )
-
-[node name="Jumper4" parent="Jumpers" instance=ExtResource( 20 )]
-position = Vector2( -5821.56, -831.195 )
-
-[node name="Jumper2" parent="Jumpers" instance=ExtResource( 20 )]
-position = Vector2( -8867.35, -801.194 )
-
-[node name="Art" type="Node2D" parent="."]
-editor/display_folded = true
-z_index = -1
-
-[node name="mushroom" type="Sprite" parent="Art"]
-modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( 557.171, 507.842 )
-texture = ExtResource( 21 )
-
-[node name="mushroom7" type="Sprite" parent="Art"]
-modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( -7152.53, -86.2084 )
-texture = ExtResource( 21 )
-
-[node name="mushroom8" type="Sprite" parent="Art"]
-modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( -8670.04, -113.968 )
-texture = ExtResource( 21 )
-
-[node name="mushroom9" type="Sprite" parent="Art"]
-modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( -9088.28, -854.217 )
-texture = ExtResource( 21 )
-
-[node name="mushroom3" type="Sprite" parent="Art"]
-modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( 3029.67, 527.316 )
-scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 21 )
-
-[node name="mushroom4" type="Sprite" parent="Art"]
-modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( 2977.53, 520.694 )
-scale = Vector2( -1, 1 )
-texture = ExtResource( 21 )
-
-[node name="mushroom2" type="Sprite" parent="Art"]
-modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( 598.147, 540.995 )
-scale = Vector2( 0.43198, 0.43198 )
-texture = ExtResource( 21 )
-
-[node name="mushroom5" type="Sprite" parent="Art"]
-modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( 4247.23, 659.446 )
-scale = Vector2( 0.43198, 0.43198 )
-texture = ExtResource( 21 )
-
-[node name="mushroom6" type="Sprite" parent="Art"]
-modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( 4270.38, 665.854 )
-scale = Vector2( 0.15198, 0.15198 )
-texture = ExtResource( 21 )
-
-[node name="sing" type="Sprite" parent="Art"]
-position = Vector2( 3826.1, 498.693 )
-rotation = 0.292877
-z_index = -1
-texture = ExtResource( 22 )
-
-[node name="Vines" type="Node2D" parent="Art"]
-editor/display_folded = true
-modulate = Color( 0.47451, 0.407843, 0.407843, 1 )
-
-[node name="vines" type="TextureRect" parent="Art/Vines"]
-margin_left = -7397.63
-margin_top = -738.664
-margin_right = -7093.63
-margin_bottom = 55.3357
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="vines2" type="TextureRect" parent="Art/Vines"]
-margin_left = -7479.47
-margin_top = -658.495
-margin_right = -7175.47
-margin_bottom = 135.505
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="vines3" type="TextureRect" parent="Art/Vines"]
-margin_left = -7567.99
-margin_top = -853.907
-margin_right = -7263.99
-margin_bottom = -59.9072
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="flower2" type="Sprite" parent="Art/Vines"]
-position = Vector2( -7308.97, -321.115 )
-z_index = 1
-texture = ExtResource( 24 )
-
-[node name="Vines2" type="Node2D" parent="Art"]
-editor/display_folded = true
-modulate = Color( 0.47451, 0.407843, 0.407843, 1 )
-position = Vector2( -1869.24, 472.707 )
-
-[node name="vines" type="TextureRect" parent="Art/Vines2"]
-margin_left = -7398.0
-margin_top = -1065.0
-margin_right = -7094.0
-margin_bottom = 55.0
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="vines2" type="TextureRect" parent="Art/Vines2"]
-margin_left = -7473.0
-margin_top = -1025.0
-margin_right = -7169.0
-margin_bottom = 166.0
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="vines3" type="TextureRect" parent="Art/Vines2"]
-margin_left = -7514.04
-margin_top = -897.552
-margin_right = -7210.04
-margin_bottom = 41.4485
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="flower4" type="Sprite" parent="Art/Vines2"]
-position = Vector2( -7255.01, -565.918 )
-rotation = 2.63908
-z_index = 1
-texture = ExtResource( 24 )
-
-[node name="Vines3" type="Node2D" parent="Art"]
-editor/display_folded = true
-modulate = Color( 0.47451, 0.407843, 0.407843, 1 )
-position = Vector2( -3038.65, 468.048 )
-
-[node name="vines" type="TextureRect" parent="Art/Vines3"]
-margin_left = -7398.0
-margin_top = -1065.0
-margin_right = -7094.0
-margin_bottom = 55.0
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="vines2" type="TextureRect" parent="Art/Vines3"]
-margin_left = -7473.0
-margin_top = -1025.0
-margin_right = -7169.0
-margin_bottom = 166.0
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="vines3" type="TextureRect" parent="Art/Vines3"]
-margin_left = -7514.04
-margin_top = -897.552
-margin_right = -7210.04
-margin_bottom = 41.4485
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="Vines4" type="Node2D" parent="Art"]
-editor/display_folded = true
-modulate = Color( 0.47451, 0.407843, 0.407843, 1 )
-position = Vector2( 1075.25, 733.611 )
-
-[node name="vines" type="TextureRect" parent="Art/Vines4"]
-margin_left = -7398.0
-margin_top = -1257.0
-margin_right = -7094.0
-margin_bottom = 55.0
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="vines2" type="TextureRect" parent="Art/Vines4"]
-margin_left = -7473.0
-margin_top = -1350.0
-margin_right = -7169.0
-margin_bottom = 166.0
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="vines3" type="TextureRect" parent="Art/Vines4"]
-margin_left = -7514.0
-margin_top = -1250.0
-margin_right = -7210.0
-margin_bottom = 42.0
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 2
-
-[node name="flower3" type="Sprite" parent="Art/Vines4"]
-position = Vector2( -7338.51, -442.669 )
-rotation = 0.300297
-z_index = 1
-texture = ExtResource( 24 )
-
-[node name="grass2" type="TextureRect" parent="Art"]
-margin_left = -8870.0
-margin_top = -173.0
-margin_right = -7181.0
-margin_bottom = -67.0
-texture = ExtResource( 25 )
-expand = true
-stretch_mode = 2
-
-[node name="grass3" type="TextureRect" parent="Art"]
-margin_left = -10529.7
-margin_top = 326.858
-margin_right = -8840.74
-margin_bottom = 432.858
-texture = ExtResource( 25 )
-expand = true
-stretch_mode = 2
-
-[node name="grass4" type="TextureRect" parent="Art"]
-margin_left = -12245.7
-margin_top = -87.7227
-margin_right = -10556.7
-margin_bottom = 18.2773
-texture = ExtResource( 25 )
-expand = true
-stretch_mode = 2
-
-[node name="grass5" type="TextureRect" parent="Art"]
-margin_left = -10511.7
-margin_top = -884.439
-margin_right = -8822.71
-margin_bottom = -778.439
-texture = ExtResource( 25 )
-expand = true
-stretch_mode = 2
-
-[node name="grass6" type="TextureRect" parent="Art"]
-margin_left = -7505.1
-margin_top = -913.279
-margin_right = -5816.1
-margin_bottom = -807.279
-texture = ExtResource( 25 )
-expand = true
-stretch_mode = 2
-
-[node name="grass7" type="TextureRect" parent="Art"]
-margin_left = 5491.0
-margin_top = -37.0
-margin_right = 8402.0
-margin_bottom = 69.0
-texture = ExtResource( 25 )
-expand = true
-stretch_mode = 2
-
-[node name="grass8" type="TextureRect" parent="Art"]
-margin_left = 934.0
-margin_top = 483.0
-margin_right = 3841.0
-margin_bottom = 589.0
-texture = ExtResource( 25 )
-expand = true
-stretch_mode = 2
-
-[node name="grass9" type="TextureRect" parent="Art"]
-margin_left = -411.0
-margin_top = 480.0
-margin_right = 645.0
-margin_bottom = 586.0
-texture = ExtResource( 25 )
-expand = true
-stretch_mode = 2
-
-[node name="plant" parent="Art" instance=ExtResource( 26 )]
-
-[node name="plant2" type="Sprite" parent="Art"]
-editor/display_folded = true
-position = Vector2( -1732.36, 699.648 )
-rotation = 0.034481
-z_index = 1
-texture = ExtResource( 27 )
-offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 28 )
-
-[node name="plant2" type="Sprite" parent="Art/plant2"]
-position = Vector2( -0.916016, 0.958496 )
-rotation = -1.23751
-scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 27 )
-offset = Vector2( 7.60596, -46.1156 )
-
-[node name="plant3" type="Sprite" parent="Art/plant2"]
-position = Vector2( -0.916016, 0.958496 )
-rotation = 0.738818
-scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 27 )
-offset = Vector2( 7.60596, -46.1156 )
-
-[node name="light" type="Sprite" parent="Art/plant2"]
-modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 12 )
-position = Vector2( 12.1114, -24.2708 )
-rotation = 0.0926029
-scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 29 )
-
-[node name="Light2D" type="Light2D" parent="Art/plant2"]
-position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 29 )
-texture_scale = 2.0
-energy = 0.7
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant2"]
-anims/wind = SubResource( 13 )
-"anims/wind (copy)" = SubResource( 14 )
-
-[node name="RayCast2D" type="RayCast2D" parent="Art/plant2"]
-rotation = 3.49066
-enabled = true
-
-[node name="plant3" type="Sprite" parent="Art"]
-editor/display_folded = true
-position = Vector2( -6659.1, 23.7162 )
-rotation = 0.034481
-z_index = 1
-texture = ExtResource( 27 )
-offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 28 )
-
-[node name="plant2" type="Sprite" parent="Art/plant3"]
-position = Vector2( -0.916016, 0.958496 )
-rotation = -1.23751
-scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 27 )
-offset = Vector2( 7.60596, -46.1156 )
-
-[node name="plant3" type="Sprite" parent="Art/plant3"]
-position = Vector2( -0.916016, 0.958496 )
-rotation = 0.738818
-scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 27 )
-offset = Vector2( 7.60596, -46.1156 )
-
-[node name="light" type="Sprite" parent="Art/plant3"]
-modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 12 )
-position = Vector2( 12.1114, -24.2708 )
-rotation = 0.0926029
-scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 29 )
-
-[node name="Light2D" type="Light2D" parent="Art/plant3"]
-position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 29 )
-texture_scale = 2.0
-energy = 0.7
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant3"]
-anims/wind = SubResource( 15 )
-"anims/wind (copy)" = SubResource( 16 )
-
-[node name="RayCast2D" type="RayCast2D" parent="Art/plant3"]
-rotation = 3.49066
-enabled = true
-
-[node name="plant4" type="Sprite" parent="Art"]
-editor/display_folded = true
-position = Vector2( -7423.2, -835.358 )
-rotation = 0.034481
-z_index = 1
-texture = ExtResource( 27 )
-offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 28 )
-
-[node name="plant2" type="Sprite" parent="Art/plant4"]
-position = Vector2( -0.916016, 0.958496 )
-rotation = -1.23751
-scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 27 )
-offset = Vector2( 7.60596, -46.1156 )
-
-[node name="plant3" type="Sprite" parent="Art/plant4"]
-position = Vector2( -0.916016, 0.958496 )
-rotation = 0.738818
-scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 27 )
-offset = Vector2( 7.60596, -46.1156 )
-
-[node name="light" type="Sprite" parent="Art/plant4"]
-modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 12 )
-position = Vector2( 12.1114, -24.2708 )
-rotation = 0.0926029
-scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 29 )
-
-[node name="Light2D" type="Light2D" parent="Art/plant4"]
-position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 29 )
-texture_scale = 2.0
-energy = 0.7
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant4"]
-anims/wind = SubResource( 17 )
-"anims/wind (copy)" = SubResource( 18 )
-
-[node name="RayCast2D" type="RayCast2D" parent="Art/plant4"]
-rotation = 3.49066
-enabled = true
-
-[node name="plant5" type="Sprite" parent="Art"]
-editor/display_folded = true
-position = Vector2( 3853.63, 550.658 )
-rotation = 0.034481
-z_index = 1
-texture = ExtResource( 27 )
-offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 28 )
-
-[node name="plant2" type="Sprite" parent="Art/plant5"]
-position = Vector2( -0.916016, 0.958496 )
-rotation = -1.23751
-scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 27 )
-offset = Vector2( 7.60596, -46.1156 )
-
-[node name="plant3" type="Sprite" parent="Art/plant5"]
-position = Vector2( -0.916016, 0.958496 )
-rotation = 0.738818
-scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 27 )
-offset = Vector2( 7.60596, -46.1156 )
-
-[node name="light" type="Sprite" parent="Art/plant5"]
-modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 12 )
-position = Vector2( 12.1114, -24.2708 )
-rotation = 0.0926029
-scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 29 )
-
-[node name="Light2D" type="Light2D" parent="Art/plant5"]
-position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 29 )
-texture_scale = 2.0
-energy = 0.7
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Art/plant5"]
-anims/wind = SubResource( 19 )
-"anims/wind (copy)" = SubResource( 20 )
-
-[node name="RayCast2D" type="RayCast2D" parent="Art/plant5"]
-rotation = 3.49066
-enabled = true
-
-[node name="Animals" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="Butterfly" parent="Animals" instance=ExtResource( 30 )]
-
-[node name="Butterfly2" parent="Animals" instance=ExtResource( 30 )]
-position = Vector2( -6208.77, 450.44 )
-
-[node name="Butterfly3" parent="Animals" instance=ExtResource( 30 )]
-position = Vector2( -7382.92, -291.124 )
-
-[node name="Butterfly4" parent="Animals" instance=ExtResource( 30 )]
-position = Vector2( -7242.62, -182.562 )
-
-[node name="Butterfly5" parent="Animals" instance=ExtResource( 30 )]
-position = Vector2( -8678.98, -154.169 )
-
-[node name="Butterfly6" parent="Animals" instance=ExtResource( 30 )]
-position = Vector2( -9105.2, -873.206 )
-
-[node name="Butterfly7" parent="Animals" instance=ExtResource( 30 )]
-position = Vector2( -10283, -85.8441 )
-
-[node name="Butterfly8" parent="Animals" instance=ExtResource( 30 )]
-position = Vector2( -9290.65, 233.005 )
-
-[node name="Butterfly9" parent="Animals" instance=ExtResource( 30 )]
-position = Vector2( -12068.3, -16.2644 )
-
-[node name="Level_load" parent="." instance=ExtResource( 31 )]
-
-[node name="Music Player" parent="." instance=ExtResource( 32 )]
-
-[node name="bolts" type="Node2D" parent="."]
-
-[node name="Day Night cycle" parent="." instance=ExtResource( 33 )]
-
-[node name="Mont" parent="." instance=ExtResource( 34 )]
-position = Vector2( -7029.11, -862.258 )
-
-[node name="rocket" type="Sprite" parent="."]
-position = Vector2( -11685.5, -43.9109 )
-texture = ExtResource( 35 )
-
-[node name="Scientist anim" type="Node2D" parent="rocket"]
-editor/display_folded = true
-position = Vector2( 64.041, 53.2135 )
-scale = Vector2( -0.8, 0.8 )
+position = Vector2( 100, -27.484 )
 z_index = 5
 
-[node name="Animation" type="Node2D" parent="rocket/Scientist anim"]
-position = Vector2( -8.46877, -17.2881 )
-scale = Vector2( 1.03441, 0.965589 )
+[node name="Animation" type="Node2D" parent="."]
+position = Vector2( -8.21547, -19.8211 )
 z_index = 4
 
-[node name="Hips" type="Sprite" parent="rocket/Scientist anim/Animation"]
-position = Vector2( 15.145, 24.2827 )
-rotation = 0.637431
+[node name="Hips" type="Sprite" parent="Animation"]
+position = Vector2( 9.31056, 16.3023 )
 z_index = -1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 7.625, 107.313, 21, 17.75 )
 
-[node name="Belt" type="Sprite" parent="rocket/Scientist anim/Animation/Hips"]
+[node name="Belt" type="Sprite" parent="Animation/Hips"]
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -1.97421, -6.73163 )
-rotation = -0.919078
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 10.75, 95, 4.5, 6 )
 
-[node name="Iron Circle" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
+[node name="Iron Circle" type="Sprite" parent="Animation/Hips/Belt"]
 position = Vector2( -1.45547, -0.152555 )
 z_index = 1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 11.125, 95.5, 3.875, 5.625 )
 
-[node name="Belt Piece" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
+[node name="Belt Piece" type="Sprite" parent="Animation/Hips/Belt"]
 position = Vector2( 4.36553, -0.108372 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
 
-[node name="Belt Piece2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
+[node name="Belt Piece2" type="Sprite" parent="Animation/Hips/Belt"]
 position = Vector2( -5.18532, -0.0746479 )
 scale = Vector2( -0.5, 1 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
 
-[node name="body" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
+[node name="body" type="Sprite" parent="Animation/Hips/Belt"]
 position = Vector2( 1.26223, -7.86402 )
 z_index = -1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 5.5, 66, 17.5, 20.75 )
 
-[node name="arm up" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body"]
+[node name="arm up" type="Sprite" parent="Animation/Hips/Belt/body"]
 position = Vector2( 4.56733, -4.43989 )
-rotation = 0.960289
 z_index = 3
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 offset = Vector2( 4.87874, 3.99989 )
 region_enabled = true
 region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 
-[node name="arm down" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up"]
+[node name="arm down" type="Sprite" parent="Animation/Hips/Belt/body/arm up"]
 position = Vector2( 6.04005, 7.58219 )
-rotation = -0.0786195
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 offset = Vector2( 1.20303, 4.5292 )
 region_enabled = true
 region_rect = Rect2( 111.75, 22.6875, 8.125, 12.875 )
 
-[node name="hand" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up/arm down"]
+[node name="hand" type="Sprite" parent="Animation/Hips/Belt/body/arm up/arm down"]
 position = Vector2( 2.44712, 9.93858 )
 z_index = 5
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 
-[node name="arm up2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body"]
+[node name="arm up2" type="Sprite" parent="Animation/Hips/Belt/body"]
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
 position = Vector2( -5.45658, -5.08245 )
-rotation = 0.154479
 scale = Vector2( -1, 1 )
 z_index = -1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 offset = Vector2( 2.59755, 3.87138 )
 region_enabled = true
 region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 
-[node name="arm down" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up2"]
+[node name="arm down" type="Sprite" parent="Animation/Hips/Belt/body/arm up2"]
 position = Vector2( 3.59833, 6.68261 )
-rotation = -0.0840107
 z_index = -1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 offset = Vector2( 1.20303, 4.78622 )
 region_enabled = true
 region_rect = Rect2( 111.75, 22.6875, 8.125, 12.875 )
 
-[node name="hand" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up2/arm down"]
+[node name="hand" type="Sprite" parent="Animation/Hips/Belt/body/arm up2/arm down"]
 position = Vector2( 2.57563, 10.4526 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 
-[node name="weapons" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up2/arm down/hand"]
+[node name="weapons" type="Sprite" parent="Animation/Hips/Belt/body/arm up2/arm down/hand"]
 visible = false
 position = Vector2( 1.08023, 11.6544 )
 rotation = -1.24453
 scale = Vector2( 1, -1 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 2, 1, 34, 28 )
 
-[node name="enemy" type="KinematicBody2D" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons" instance=ExtResource( 37 )]
+[node name="enemy" type="KinematicBody2D" parent="Animation/Hips/Belt/body/arm up2/arm down/hand/weapons" instance=ExtResource( 2 )]
 position = Vector2( -4.06763, 4.59555 )
 scale = Vector2( 0.2, 0.2 )
 collision_layer = 5
 collision_mask = 5
 
-[node name="Neck" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body"]
+[node name="Neck" type="Sprite" parent="Animation/Hips/Belt/body"]
 position = Vector2( 1.19008, -6.09009 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 53.375, 20.25, 14, 8.125 )
 
-[node name="Bone" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck"]
+[node name="Bone" type="Sprite" parent="Animation/Hips/Belt/body/Neck"]
 position = Vector2( -2.4927, 1.27788 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 54.25, 10.375, 8.625, 6.875 )
 
-[node name="Head" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck"]
+[node name="Head" type="Sprite" parent="Animation/Hips/Belt/body/Neck"]
 position = Vector2( 0, -11.2936 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 6.375, 17.8125, 20.25, 19.875 )
 
-[node name="Hair Side2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
+[node name="Hair Side2" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -5.48219, 5.76211 )
 z_index = -1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
 
-[node name="Ear2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Hair Side2"]
+[node name="Ear2" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head/Hair Side2"]
 position = Vector2( -6.30947, -3.38557 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 z_index = -1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 
-[node name="mouth" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
+[node name="mouth" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -4, 8.42777 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 40, 20.875, 7.5, 4.25 )
 
-[node name="HairBack" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
+[node name="HairBack" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 1.42395, -2.42072 )
 z_index = -3
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 offset = Vector2( 1.5, 20.13 )
 region_enabled = true
 region_rect = Rect2( 58, 32, 42, 74 )
 
-[node name="Hair Front" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
+[node name="Hair Front" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -2.13495, -4.82822 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 14.75, 1.8125, 15.375, 14.75 )
 
-[node name="Hair Side" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
+[node name="Hair Side" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 6.98758, 5.57318 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
 
-[node name="Ear" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Hair Side"]
+[node name="Ear" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head/Hair Side"]
 position = Vector2( 5.37519, -1.94479 )
 z_index = -1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 
-[node name="Eyewhite" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
+[node name="Eyewhite" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 0.94193, 3.12923 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 37.625, 5.9375, 11.25, 7.5 )
 
-[node name="Eye" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite"]
+[node name="Eye" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head/Eyewhite"]
 position = Vector2( -2.20997, -0.685127 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 41.875, 14.9375, 3.875, 5.125 )
 
-[node name="Eyebrown" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite"]
+[node name="Eyebrown" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head/Eyewhite"]
 position = Vector2( 0.942062, -5.11232 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
-[node name="Eyewhite2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
+[node name="Eyewhite2" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -9.19797, 3.28111 )
 scale = Vector2( -0.66, 1 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 38.25, 5.9375, 13, 7.5 )
 
-[node name="Eye2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2"]
+[node name="Eye2" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head/Eyewhite2"]
 position = Vector2( -1.03538, -0.828034 )
 rotation = -3.14159
 scale = Vector2( 1.51515, -1 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 39.75, 14.9375, 6, 5.125 )
 
-[node name="Eyebrown2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2"]
+[node name="Eyebrown2" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head/Eyewhite2"]
 position = Vector2( -1.42736, -5.11233 )
 scale = Vector2( 0.757576, 1 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
-[node name="Eye2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
+[node name="Eye2" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 1.08012, 2.85248 )
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 7.375, 40.5, 11.875, 10 )
 
-[node name="Leg Up" type="Sprite" parent="rocket/Scientist anim/Animation/Hips"]
-position = Vector2( -1.95825, 8.14844 )
-rotation = -2.63253
+[node name="Leg Up" type="Sprite" parent="Animation/Hips"]
+position = Vector2( 2.58815, 9.6758 )
+rotation = -3.14159
 scale = Vector2( 1, -1 )
 z_index = -1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
-[node name="Leg Down" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Leg Up"]
+[node name="Leg Down" type="Sprite" parent="Animation/Hips/Leg Up"]
 position = Vector2( -0.729217, 5.15951 )
 scale = Vector2( -1, 1 )
 z_index = -1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 offset = Vector2( 1.40492, 7.86707 )
 region_enabled = true
 region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 
-[node name="Leg Up2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips"]
+[node name="Leg Up2" type="Sprite" parent="Animation/Hips"]
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
 position = Vector2( -5.71371, 9.55371 )
-rotation = -2.59794
+rotation = -3.14159
 scale = Vector2( 1, -1 )
 z_index = -3
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
-[node name="Leg Down" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Leg Up2"]
+[node name="Leg Down" type="Sprite" parent="Animation/Hips/Leg Up2"]
 position = Vector2( 0.093255, 4.89606 )
-rotation = -0.171104
 scale = Vector2( -1, 1 )
 z_index = -1
-texture = ExtResource( 36 )
+texture = ExtResource( 1 )
 offset = Vector2( 2.22739, 8.13052 )
 region_enabled = true
 region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 
-[node name="Chocobo" type="Node2D" parent="rocket/Scientist anim/Animation"]
+[node name="Chocobo" type="Node2D" parent="Animation"]
 editor/display_folded = true
 visible = false
 z_index = -4
 
-[node name="chocobo3" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo"]
+[node name="chocobo3" type="Sprite" parent="Animation/Chocobo"]
 position = Vector2( 20.5028, -5.73519 )
-texture = ExtResource( 38 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 61, 22, 65, 48 )
 
-[node name="chocobo4" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3"]
+[node name="chocobo4" type="Sprite" parent="Animation/Chocobo/chocobo3"]
 position = Vector2( 0.00193834, 17.7384 )
 rotation = -0.471669
-texture = ExtResource( 38 )
+texture = ExtResource( 3 )
 offset = Vector2( -0.556483, 6.77265 )
 region_enabled = true
 region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
 
-[node name="chocobo5" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3/chocobo4"]
+[node name="chocobo5" type="Sprite" parent="Animation/Chocobo/chocobo3/chocobo4"]
 position = Vector2( 2.68076, 18.9964 )
 rotation = -0.664627
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 3 )
 offset = Vector2( -6.9669, 6.72212 )
 region_enabled = true
 region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
 
-[node name="chocobo6" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3/chocobo4/chocobo5"]
+[node name="chocobo6" type="Sprite" parent="Animation/Chocobo/chocobo3/chocobo4/chocobo5"]
 position = Vector2( -8.53208, 13.9103 )
 rotation = 0.864784
 scale = Vector2( 0.512454, 0.512454 )
-texture = ExtResource( 38 )
+texture = ExtResource( 3 )
 offset = Vector2( -9.5188, 2.11838 )
 region_enabled = true
 region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
 
-[node name="chocobo5" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3"]
+[node name="chocobo5" type="Sprite" parent="Animation/Chocobo/chocobo3"]
 modulate = Color( 0.592157, 0.592157, 0.592157, 1 )
 position = Vector2( -9.4848, 15.3667 )
 rotation = 0.484444
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 3 )
 offset = Vector2( 2.53878, 4.65595 )
 region_enabled = true
 region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
 
-[node name="chocobo5" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3/chocobo5"]
+[node name="chocobo5" type="Sprite" parent="Animation/Chocobo/chocobo3/chocobo5"]
 position = Vector2( 5.9997, 15.6227 )
 rotation = -0.195669
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 3 )
 offset = Vector2( -7.48377, 6.33683 )
 region_enabled = true
 region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
 
-[node name="chocobo6" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3/chocobo5/chocobo5"]
+[node name="chocobo6" type="Sprite" parent="Animation/Chocobo/chocobo3/chocobo5/chocobo5"]
 position = Vector2( -10.5996, 15.3603 )
 rotation = 0.0712048
 scale = Vector2( 0.512454, 0.512454 )
-texture = ExtResource( 38 )
+texture = ExtResource( 3 )
 offset = Vector2( -8.60987, 0.281715 )
 region_enabled = true
 region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
 
-[node name="chocobo2" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3"]
+[node name="chocobo2" type="Sprite" parent="Animation/Chocobo/chocobo3"]
 position = Vector2( -18.8513, -5.33002 )
 rotation = -0.0501298
-texture = ExtResource( 38 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 18, 26, 33, 46 )
 
-[node name="chocobo" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3/chocobo2"]
+[node name="chocobo" type="Sprite" parent="Animation/Chocobo/chocobo3/chocobo2"]
 position = Vector2( -4.51872, -18.0749 )
 rotation = 0.0434251
 z_index = 4
-texture = ExtResource( 38 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 20, -3, 48, 28 )
 
-[node name="chocobo7" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3"]
+[node name="chocobo7" type="Sprite" parent="Animation/Chocobo/chocobo3"]
 position = Vector2( -8.20816, 5.8003 )
 rotation = -0.311447
-texture = ExtResource( 38 )
+texture = ExtResource( 3 )
 offset = Vector2( 15.3924, 0.911716 )
 region_enabled = true
 region_rect = Rect2( 25, 74, 48, 29 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="rocket/Scientist anim/Animation/Chocobo"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation/Chocobo"]
 autoplay = "idle"
-anims/idle = SubResource( 21 )
-anims/wakj = SubResource( 22 )
-anims/walk = SubResource( 23 )
+anims/idle = SubResource( 1 )
+anims/wakj = SubResource( 2 )
+anims/walk = SubResource( 3 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="rocket/Scientist anim"]
-autoplay = "rest"
-anims/Idle = SubResource( 24 )
-"anims/Idle (copy) (copy)" = SubResource( 25 )
-anims/Jump = SubResource( 26 )
-"anims/Pick Up" = SubResource( 27 )
-anims/Walk = SubResource( 28 )
-anims/Walk_carry = SubResource( 29 )
-"anims/ledge grab" = SubResource( 30 )
-anims/rest = ExtResource( 39 )
-anims/roll = SubResource( 31 )
-anims/slide = SubResource( 32 )
-anims/slide2 = SubResource( 33 )
-anims/swin = SubResource( 34 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
+anims/Idle = SubResource( 4 )
+"anims/Idle (copy) (copy)" = SubResource( 5 )
+anims/Jump = SubResource( 6 )
+"anims/Pick Up" = SubResource( 7 )
+anims/Walk = SubResource( 8 )
+anims/Walk_carry = SubResource( 9 )
+"anims/ledge grab" = SubResource( 10 )
+anims/roll = SubResource( 11 )
+anims/slide = SubResource( 12 )
+anims/slide2 = SubResource( 13 )
+anims/swin = SubResource( 14 )
 
-[node name="Pick Up" type="AnimationPlayer" parent="rocket/Scientist anim"]
-anims/Idle = SubResource( 35 )
-"anims/Idle (copy) (copy)" = SubResource( 36 )
-anims/Jump = SubResource( 37 )
-"anims/Pick Up" = SubResource( 38 )
-anims/Walk = SubResource( 39 )
-anims/Walk_carry = SubResource( 40 )
-"anims/ledge grab" = SubResource( 41 )
-anims/roll = SubResource( 42 )
-anims/slide = SubResource( 43 )
-anims/slide2 = SubResource( 44 )
-anims/swin = SubResource( 45 )
+[node name="Pick Up" type="AnimationPlayer" parent="."]
+anims/Idle = SubResource( 15 )
+"anims/Idle (copy) (copy)" = SubResource( 16 )
+anims/Jump = SubResource( 17 )
+"anims/Pick Up" = SubResource( 18 )
+anims/Walk = SubResource( 19 )
+anims/Walk_carry = SubResource( 20 )
+"anims/ledge grab" = SubResource( 21 )
+anims/roll = SubResource( 22 )
+anims/slide = SubResource( 23 )
+anims/slide2 = SubResource( 24 )
+anims/swin = SubResource( 25 )
 
-[node name="Blink" type="AnimationPlayer" parent="rocket/Scientist anim"]
+[node name="Blink" type="AnimationPlayer" parent="."]
 autoplay = "Blink"
-anims/Blink = SubResource( 46 )
+anims/Blink = SubResource( 26 )
 
-[node name="Shooting" type="AnimationPlayer" parent="rocket/Scientist anim"]
-anims/hide = SubResource( 47 )
-anims/shoot = SubResource( 48 )
-"anims/shoot down" = SubResource( 49 )
-"anims/shoot up" = SubResource( 50 )
+[node name="Shooting" type="AnimationPlayer" parent="."]
+anims/hide = SubResource( 27 )
+anims/shoot = SubResource( 28 )
+"anims/shoot down" = SubResource( 29 )
+"anims/shoot up" = SubResource( 30 )
 
-[node name="Squash Jump" type="AnimationPlayer" parent="rocket/Scientist anim"]
-anims/Squash = SubResource( 51 )
+[node name="Squash Jump" type="AnimationPlayer" parent="."]
+anims/Squash = SubResource( 31 )
 
-[node name="Chocobo" type="AnimationPlayer" parent="rocket/Scientist anim"]
-anims/Chocobo = SubResource( 52 )
-anims/idle = SubResource( 53 )
-"anims/idle (copy)" = SubResource( 54 )
-anims/jump = SubResource( 55 )
-anims/walk = SubResource( 56 )
+[node name="Chocobo" type="AnimationPlayer" parent="."]
+anims/Chocobo = SubResource( 32 )
+anims/idle = SubResource( 33 )
+"anims/idle (copy)" = SubResource( 34 )
+anims/jump = SubResource( 35 )
+anims/walk = SubResource( 36 )
 
-[node name="Death" type="AnimationPlayer" parent="rocket/Scientist anim"]
-anims/Die = SubResource( 57 )
+[node name="Death" type="AnimationPlayer" parent="."]
+anims/Die = SubResource( 37 )
 
-[node name="Polygon2D" type="Polygon2D" parent="rocket/Scientist anim"]
+[node name="Polygon2D" type="Polygon2D" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( -856.408, -527.171, -870.761, 596.523, 1073.15, 596.523, 1075.2, -539.474 )
 
-[node name="Label" type="Label" parent="rocket/Scientist anim/Polygon2D"]
+[node name="Label" type="Label" parent="Polygon2D"]
 margin_left = -36.9097
 margin_top = -151.74
 margin_right = 42.0903
 margin_bottom = -137.74
 rect_scale = Vector2( 4, 4 )
 rect_pivot_offset = Vector2( 36.5365, 6.91501 )
-custom_fonts/font = ExtResource( 40 )
+custom_fonts/font = ExtResource( 4 )
 text = "GAME OVER"
 
-[node name="CPUParticles2D" parent="rocket" instance=ExtResource( 41 )]
-position = Vector2( 73.9473, -66.1226 )
-z_index = -1
-lifetime = 2.0
-emission_shape = 1
-emission_sphere_radius = 33.0
-gravity = Vector2( 0, -100 )
-
-[connection signal="animation_finished" from="rocket/Scientist anim/Death" to="rocket/Scientist anim/Animation" method="_on_Death_animation_finished"]
+[connection signal="animation_finished" from="Death" to="Animation" method="_on_Death_animation_finished"]

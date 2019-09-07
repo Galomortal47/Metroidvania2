@@ -1,16 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/bullet.gd" type="Script" id=1]
-[ext_resource path="res://assets/Bullet.tres" type="Curve" id=2]
-[ext_resource path="res://assets/Bullet2.tres" type="Gradient" id=3]
-[ext_resource path="res://Sonds/shoot.ogg" type="AudioStream" id=4]
-[ext_resource path="res://sprites/light.png" type="Texture" id=5]
-[ext_resource path="res://Scripts/Light2D.gd" type="Script" id=6]
-
-[sub_resource type="Curve" id=1]
-min_value = -360.0
-max_value = 360.0
-_data = [ Vector2( 0.00872233, 360 ), 0.0, 0.0, 0, 0, Vector2( 1, -360 ), 0.0, 0.0, 0, 0 ]
+[ext_resource path="res://assets/CPUParticles2D2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sonds/shoot.ogg" type="AudioStream" id=3]
+[ext_resource path="res://sprites/light.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Light2D.gd" type="Script" id=5]
 
 [node name="Bullet" type="KinematicBody2D" groups=[
 "bullet",
@@ -24,25 +18,16 @@ enabled = true
 cast_to = Vector2( 60, 0 )
 collision_mask = 37
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2( 60, 0 )
-local_coords = false
-draw_order = 1
-gravity = Vector2( 0, 0 )
-angle = -720.0
-angle_curve = SubResource( 1 )
-scale_amount = 15.0
-scale_amount_curve = ExtResource( 2 )
-color_ramp = ExtResource( 3 )
+[node name="CPUParticles2D" parent="." instance=ExtResource( 2 )]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 0.815628, 0.611725 )
-stream = ExtResource( 4 )
+stream = ExtResource( 3 )
 volume_db = -10.0
 autoplay = true
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 59.9486, 0 )
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
 

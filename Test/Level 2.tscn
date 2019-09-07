@@ -152,7 +152,8 @@ editor/display_folded = true
 editor/display_folded = true
 
 [node name="Shop" parent="." instance=ExtResource( 7 )]
-position = Vector2( 9600.98, 700.839 )
+position = Vector2( 9599.87, 740.728 )
+scale = Vector2( 1, 1 )
 
 [node name="Platfroms" type="Node2D" parent="."]
 editor/display_folded = true
@@ -318,6 +319,7 @@ collision_mask = 0
 [node name="bolts" type="Node2D" parent="."]
 
 [node name="plants" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="plant" parent="plants" instance=ExtResource( 16 )]
 position = Vector2( 13415.8, 714.292 )

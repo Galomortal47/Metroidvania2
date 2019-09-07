@@ -12,7 +12,8 @@ var data = {"hp":20,
 "magazine" : [0,0,0,0,0,0,0,0],
 "ammo" : [0,0,0,0,0,0,0,0],
 "select" : [true,false,false,false,false,false,false,false],
-"state" : "walk"
+"state" : "walk",
+"cutscenes":[true,true,true,true,true,true,true,true]
 }
 
 
@@ -33,4 +34,4 @@ func loader():
 		print("erro_open")
 		return
 	data = parse_json(file.get_line())
-	
+	file.close()

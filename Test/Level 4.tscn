@@ -410,6 +410,11 @@ texture_scale = 2.0
 color = Color( 1, 0.741176, 0.0588235, 1 )
 script = ExtResource( 24 )
 
+[node name="light" type="Sprite" parent="Enemies/Boss/boss_1/light3"]
+modulate = Color( 1, 0.784314, 0.207843, 0.380392 )
+position = Vector2( -2.29297, 0.752533 )
+texture = ExtResource( 22 )
+
 [node name="light4" type="Light2D" parent="Enemies/Boss/boss_1"]
 position = Vector2( 34.2734, 61.3032 )
 rotation = 0.00787875
@@ -418,6 +423,12 @@ texture = ExtResource( 22 )
 texture_scale = 2.0
 color = Color( 1, 0.741176, 0.0588235, 1 )
 script = ExtResource( 24 )
+
+[node name="light2" type="Sprite" parent="Enemies/Boss/boss_1/light4"]
+modulate = Color( 1, 0.784314, 0.207843, 0.380392 )
+position = Vector2( -0.285156, -0.836288 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 22 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Enemies/Boss"]
 
