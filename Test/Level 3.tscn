@@ -33,7 +33,6 @@ extents = Vector2( 10, 419.061 )
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="Stuff" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="dirt5" type="TextureRect" parent="Stuff"]
 margin_left = 19781.8
@@ -277,6 +276,19 @@ position = Vector2( 11330, 690.111 )
 rotation = -0.777705
 scale = Vector2( -1, 1 )
 texture = ExtResource( 11 )
+
+[node name="Node2D" type="Node2D" parent="Art"]
+modulate = Color( 0.619608, 0.603922, 0.603922, 1 )
+z_index = 1
+
+[node name="grass10" type="TextureRect" parent="Art/Node2D"]
+margin_left = 12479.2
+margin_top = 76.285
+margin_right = 20296.2
+margin_bottom = 182.285
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 2
 
 [node name="Animals" type="Node2D" parent="."]
 editor/display_folded = true

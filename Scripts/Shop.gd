@@ -3,7 +3,7 @@ extends RayCast2D
 var i
 var select = 0
 var price = [99999,2000,3000,4000,4000,5000,99999,99999]
-var enable = [false,false,true,true,true,true,false,false]
+var enable = [false,true,true,true,true,true,false,false]
 var items_n = 8
 
 func _process(delta):
