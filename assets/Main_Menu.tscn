@@ -75,8 +75,18 @@ stream = ExtResource( 4 )
 autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 495.001, 419 )
+position = Vector2( 495.001, 425.318 )
 current = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 25.8471
+margin_top = 175.488
+margin_right = 144.847
+margin_bottom = 223.488
+custom_fonts/font = ExtResource( 3 )
+text = "Credits:
+Code and Art: Galo
+Music: RopeBoyo"
 
 [connection signal="button_down" from="Continue" to="." method="_on_Continue_button_down"]
 [connection signal="button_down" from="New Game" to="." method="_on_New_Game_button_down"]
