@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Scripts/Shop.gd" type="Script" id=1]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
@@ -6,11 +6,12 @@
 [ext_resource path="res://enemy/guns.tscn" type="PackedScene" id=4]
 [ext_resource path="res://sprites/chocobo.png" type="Texture" id=5]
 [ext_resource path="res://assets/Chocobo.tres" type="Animation" id=6]
-[ext_resource path="res://sprites/shop.png" type="Texture" id=7]
-[ext_resource path="res://sprites/light.png" type="Texture" id=8]
-[ext_resource path="res://icon.png" type="Texture" id=9]
+[ext_resource path="res://assets/Player_Animation.tres" type="Animation" id=7]
+[ext_resource path="res://sprites/shop.png" type="Texture" id=8]
+[ext_resource path="res://sprites/light.png" type="Texture" id=9]
+[ext_resource path="res://icon.png" type="Texture" id=10]
 
-[sub_resource type="Animation" id=37]
+[sub_resource type="Animation" id=1]
 resource_name = "idle"
 loop = true
 tracks/0/type = "value"
@@ -122,7 +123,7 @@ tracks/8/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.06, 0.95 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=38]
+[sub_resource type="Animation" id=2]
 resource_name = "wakj"
 loop = true
 tracks/0/type = "value"
@@ -234,7 +235,7 @@ tracks/8/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.06, 0.95 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=39]
+[sub_resource type="Animation" id=3]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -958,7 +959,7 @@ tracks/59/keys = {
 "values": [ Rect2( 40, 20.875, 7.5, 4.25 ) ]
 }
 
-[sub_resource type="Animation" id=40]
+[sub_resource type="Animation" id=4]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -1646,7 +1647,7 @@ tracks/56/keys = {
 "values": [ Vector2( -4, 8.42777 ) ]
 }
 
-[sub_resource type="Animation" id=41]
+[sub_resource type="Animation" id=5]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -2308,7 +2309,7 @@ tracks/54/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=42]
+[sub_resource type="Animation" id=6]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -3006,7 +3007,7 @@ tracks/57/keys = {
 "values": [ Vector2( -4.10209, 8.42777 ), Vector2( -3.54058, 8.47882 ) ]
 }
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=7]
 length = 0.5
 loop = true
 step = 0.05
@@ -3839,7 +3840,7 @@ tracks/68/keys = {
 "values": [ Vector2( -1.45547, -0.152555 ), Vector2( -4.64831, -0.230887 ), Vector2( -1.45547, -0.152555 ), Vector2( -4.64831, -0.230887 ), Vector2( -1.45547, -0.152555 ) ]
 }
 
-[sub_resource type="Animation" id=44]
+[sub_resource type="Animation" id=8]
 resource_name = "Walk_carry"
 length = 0.5
 loop = true
@@ -4565,7 +4566,7 @@ tracks/59/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=45]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -5227,7 +5228,7 @@ tracks/54/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=10]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -5891,7 +5892,7 @@ tracks/54/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -6493,7 +6494,7 @@ tracks/49/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -7095,7 +7096,7 @@ tracks/49/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=13]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
@@ -7746,7 +7747,7 @@ tracks/53/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=14]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
@@ -8433,7 +8434,7 @@ tracks/56/keys = {
 "values": [ Vector2( -4, 8.42777 ) ]
 }
 
-[sub_resource type="Animation" id=51]
+[sub_resource type="Animation" id=15]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -9121,7 +9122,7 @@ tracks/56/keys = {
 "values": [ Vector2( -4, 8.42777 ) ]
 }
 
-[sub_resource type="Animation" id=52]
+[sub_resource type="Animation" id=16]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -9783,7 +9784,7 @@ tracks/54/keys = {
 "values": [ Vector2( -3.4989, 5.76211 ) ]
 }
 
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=17]
 resource_name = "Pick Up"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
@@ -10494,7 +10495,7 @@ tracks/58/keys = {
 "values": [ false, true, false ]
 }
 
-[sub_resource type="Animation" id=54]
+[sub_resource type="Animation" id=18]
 length = 0.5
 loop = true
 step = 0.05
@@ -11219,7 +11220,7 @@ tracks/59/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=55]
+[sub_resource type="Animation" id=19]
 resource_name = "Walk_carry"
 length = 0.5
 loop = true
@@ -11945,7 +11946,7 @@ tracks/59/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ), Vector2( 0.867549, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=56]
+[sub_resource type="Animation" id=20]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Animation/Hips/Leg Up2/Leg Down:scale")
 tracks/0/interp = 1
@@ -16330,7 +16331,6 @@ text = "Shop
 "
 
 [node name="Scale" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 100, -27.484 )
 z_index = 5
 
@@ -16434,11 +16434,9 @@ texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 2, 1, 34, 28 )
 
-[node name="enemy" type="KinematicBody2D" parent="Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons" instance=ExtResource( 4 )]
+[node name="enemy" parent="Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons" instance=ExtResource( 4 )]
 position = Vector2( -4.06763, 4.59555 )
 scale = Vector2( 0.2, 0.2 )
-collision_layer = 5
-collision_mask = 5
 
 [node name="Neck" type="Sprite" parent="Scale/Animation/Hips/Belt/body"]
 position = Vector2( 1.19008, -6.09009 )
@@ -16478,7 +16476,7 @@ region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 position = Vector2( -4, 8.42777 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 40.125, 20.625, 8, 4.125 )
+region_rect = Rect2( 40, 20.875, 7.5, 4.25 )
 
 [node name="HairBack" type="Sprite" parent="Scale/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 1.42395, -2.42072 )
@@ -16680,32 +16678,33 @@ region_rect = Rect2( 25, 74, 48, 29 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Scale/Animation/Chocobo"]
 autoplay = "idle"
-anims/idle = SubResource( 37 )
-anims/wakj = SubResource( 38 )
+anims/idle = SubResource( 1 )
+anims/wakj = SubResource( 2 )
 anims/walk = ExtResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Scale"]
-autoplay = "Idle"
-anims/Idle = SubResource( 39 )
-"anims/Idle (copy) (copy)" = SubResource( 40 )
-anims/Jump = SubResource( 41 )
-"anims/Pick Up" = SubResource( 42 )
-anims/Walk = SubResource( 43 )
-anims/Walk_carry = SubResource( 44 )
-"anims/ledge grab" = SubResource( 45 )
-anims/roll = SubResource( 46 )
-anims/slide = SubResource( 47 )
-anims/slide2 = SubResource( 48 )
-anims/swin = SubResource( 49 )
+autoplay = "Idle (copy) (copy)"
+anims/Idle = SubResource( 3 )
+"anims/Idle (copy) (copy)" = SubResource( 4 )
+anims/Jump = SubResource( 5 )
+"anims/Pick Up" = SubResource( 6 )
+anims/Player_Animation = ExtResource( 7 )
+anims/Walk = SubResource( 7 )
+anims/Walk_carry = SubResource( 8 )
+"anims/ledge grab" = SubResource( 9 )
+anims/roll = SubResource( 10 )
+anims/slide = SubResource( 11 )
+anims/slide2 = SubResource( 12 )
+anims/swin = SubResource( 13 )
 
 [node name="Pick Up" type="AnimationPlayer" parent="Scale"]
-anims/Idle = SubResource( 50 )
-"anims/Idle (copy) (copy)" = SubResource( 51 )
-anims/Jump = SubResource( 52 )
-"anims/Pick Up" = SubResource( 53 )
-anims/Walk = SubResource( 54 )
-anims/Walk_carry = SubResource( 55 )
-"anims/ledge grab" = SubResource( 56 )
+anims/Idle = SubResource( 14 )
+"anims/Idle (copy) (copy)" = SubResource( 15 )
+anims/Jump = SubResource( 16 )
+"anims/Pick Up" = SubResource( 17 )
+anims/Walk = SubResource( 18 )
+anims/Walk_carry = SubResource( 19 )
+"anims/ledge grab" = SubResource( 20 )
 anims/roll = SubResource( 21 )
 anims/slide = SubResource( 22 )
 anims/slide2 = SubResource( 23 )
@@ -16754,12 +16753,11 @@ text = "GAME OVER"
 anims/idle = SubResource( 36 )
 
 [node name="shop2" type="Sprite" parent="."]
-editor/display_folded = true
 visible = false
 position = Vector2( -6.00766, -44.6021 )
 scale = Vector2( 2, 2 )
 z_index = 2
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 11, 3, 69, 67 )
 
@@ -16768,61 +16766,61 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 12.5576, 66.722 )
 scale = Vector2( 1.31719, 0.359336 )
 z_index = -1
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="shop8" type="Sprite" parent="shop2"]
 position = Vector2( 8.19421, 28.893 )
 scale = Vector2( 1.25, 1.5 )
 z_index = -1
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 51, 73, 56, 53 )
 
 [node name="shop" type="Sprite" parent="shop2"]
 z_index = 2
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( -5, 62, 51, 37 )
 
 [node name="shop2" type="Sprite" parent="shop2"]
 position = Vector2( -1.22351, -16.8995 )
 z_index = 2
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 90, 44, 36, 32 )
 
 [node name="shop4" type="Sprite" parent="shop2"]
 position = Vector2( 20.1083, 30.9532 )
 z_index = 2
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 85, 23, 23, 21 )
 
 [node name="shop5" type="Sprite" parent="shop2"]
 position = Vector2( -17.623, 32.5349 )
 z_index = 2
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 85, 23, 23, 21 )
 
 [node name="shop6" type="Sprite" parent="shop2"]
 position = Vector2( 21.8844, 65.3695 )
 z_index = -1
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 85, 23, 23, 21 )
 
 [node name="shop7" type="Sprite" parent="shop2"]
 position = Vector2( -12.006, 62.8842 )
 z_index = -1
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 85, 23, 23, 21 )
 
 [node name="shop3" type="Sprite" parent="shop2"]
 position = Vector2( -6.47726, 13.4528 )
 z_index = 2
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 8, 96, 35, 19 )
 
@@ -16837,48 +16835,48 @@ z_as_relative = false
 [node name="icon8" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 162.921, 544.549 )
 scale = Vector2( 1, -1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="icon7" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 262.921, 544.549 )
 scale = Vector2( 1, -1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="icon6" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 362.921, 544.549 )
 scale = Vector2( 1, -1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="icon1" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 462.921, 544.549 )
 scale = Vector2( 1, -1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="icon2" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 562.921, 544.549 )
 scale = Vector2( 1, -1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="icon3" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 662.921, 544.549 )
 scale = Vector2( 1, -1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="icon4" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 762.921, 544.549 )
 scale = Vector2( 1, -1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="icon5" type="Sprite" parent="Shop_Select/Icons"]
 position = Vector2( 862.921, 544.549 )
 scale = Vector2( 1, -1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="icon9" type="Sprite" parent="Shop_Select/Icons"]
 visible = false
 position = Vector2( 920.365, 544.549 )
 scale = Vector2( 1, -1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="Shop_Select/Icons"]
 margin_left = 394.831

@@ -5,10 +5,11 @@ extends AnimationPlayer
 # var b = "text"
 var save = preload("res://Scripts/Save.gd").new()
 export var cuscene_id = 0
+export var autoplay2 = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	save.loader()
-	if save.data.cutscenes[cuscene_id]:
+	if save.data.cutscenes[cuscene_id] and autoplay2:
 		play(str(cuscene_id))
 	pass # Replace with function body.
 
