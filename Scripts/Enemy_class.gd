@@ -57,7 +57,7 @@ func shot_player():
 			$Vision.rotate(get_angle_to($Vision.get_collider().get_position()) - $Vision.get_rotation() -1.57)
 			var bullet = load("res://assets/Bullet.tscn")
 			var bullet_instance = bullet.instance()
-			bullet_instance.set_rotation(get_angle_to($Vision.get_collider().get_position()),3)
+			bullet_instance.set_rotation(get_angle_to($Vision.get_collider().get_position()))
 			bullet_instance.ignore = "enemy"
 			bullet_instance.target = "player"
 			bullet_instance.speed = 175
