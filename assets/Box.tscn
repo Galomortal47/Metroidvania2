@@ -10,8 +10,8 @@ extents = Vector2( 20, 20 )
 
 [node name="Box" type="KinematicBody2D" groups=[
 "enemy",
-"grabable",
 "destroy",
+"grabable",
 ]]
 position = Vector2( 245.98, 556.307 )
 z_index = 2

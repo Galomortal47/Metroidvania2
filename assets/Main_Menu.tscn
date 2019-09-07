@@ -33,6 +33,7 @@ margin_top = 257.827
 margin_right = 527.951
 margin_bottom = 291.827
 custom_fonts/font = ExtResource( 2 )
+disabled = true
 text = "Volume:"
 flat = true
 

@@ -13,7 +13,7 @@ func animations():
 			$Chocobo.hide()
 			get_parent().get_node("Chocobo").stop()
 			shoot_dir(true)
-			if Input.is_action_pressed("ui_roll"):
+			if Input.is_action_pressed("ui_roll") and not get_parent().get_node("Scientist anim").is_visible():
 				get_parent().get_node("AnimationPlayer").set_current_animation("roll")
 			if not get_parent().get_parent().ground_detect() and not get_parent().get_parent().ledge_detect() and not Input.is_action_pressed("ui_roll"):
 				get_parent().get_node("AnimationPlayer").set_current_animation("Jump")

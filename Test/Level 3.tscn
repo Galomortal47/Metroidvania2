@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=1]
 [ext_resource path="res://sprites/grass.png" type="Texture" id=2]
@@ -10,17 +10,18 @@
 [ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=8]
 [ext_resource path="res://sprites/mushroom.png" type="Texture" id=9]
 [ext_resource path="res://sprites/vines.png" type="Texture" id=10]
-[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Door.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Box_ammo.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=16]
-[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=17]
-[ext_resource path="res://sprites/house.png" type="Texture" id=18]
-[ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=19]
-[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=20]
-[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=21]
+[ext_resource path="res://sprites/sing.png" type="Texture" id=11]
+[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Door.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/Box_ammo.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=18]
+[ext_resource path="res://sprites/house.png" type="Texture" id=19]
+[ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=20]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=21]
+[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3893.01, 10.7424 )
@@ -204,7 +205,6 @@ position = Vector2( 7335.83, 0 )
 position = Vector2( 9772.61, 712.401 )
 
 [node name="Art" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 z_index = -1
 
@@ -272,38 +272,44 @@ stretch_mode = 2
 
 [node name="Houses" type="Node2D" parent="Art"]
 
+[node name="sing" type="Sprite" parent="Art"]
+position = Vector2( 11330, 690.111 )
+rotation = -0.777705
+scale = Vector2( -1, 1 )
+texture = ExtResource( 11 )
+
 [node name="Animals" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 7165.67, 482.585 )
 
-[node name="Butterfly" parent="Animals" instance=ExtResource( 11 )]
+[node name="Butterfly" parent="Animals" instance=ExtResource( 12 )]
 position = Vector2( 9429.5, 174.026 )
 
-[node name="Butterfly2" parent="Animals" instance=ExtResource( 11 )]
+[node name="Butterfly2" parent="Animals" instance=ExtResource( 12 )]
 position = Vector2( 10500.7, 179.605 )
 
-[node name="Butterfly3" parent="Animals" instance=ExtResource( 11 )]
+[node name="Butterfly3" parent="Animals" instance=ExtResource( 12 )]
 position = Vector2( 11460.3, 140.552 )
 
-[node name="Door" parent="." instance=ExtResource( 12 )]
+[node name="Door" parent="." instance=ExtResource( 13 )]
 position = Vector2( 19210.8, 645.325 )
 cast_to = Vector2( 0, 80 )
 level = "res://assets/Room.tscn"
 pos = Vector2( 225, 460 )
 
-[node name="Box" parent="." instance=ExtResource( 13 )]
+[node name="Box" parent="." instance=ExtResource( 14 )]
 position = Vector2( 18520.8, 670.376 )
 
-[node name="Player" parent="." instance=ExtResource( 14 )]
+[node name="Player" parent="." instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 19211.8, 685.573 )
 
-[node name="CamShake" parent="Player" instance=ExtResource( 15 )]
+[node name="CamShake" parent="Player" instance=ExtResource( 16 )]
 
-[node name="Level_load2" parent="." instance=ExtResource( 16 )]
+[node name="Level_load2" parent="." instance=ExtResource( 17 )]
 position = Vector2( 14274.6, 322.529 )
 
-[node name="Level_load3" parent="." instance=ExtResource( 16 )]
+[node name="Level_load3" parent="." instance=ExtResource( 17 )]
 position = Vector2( 23713.1, -330.58 )
 level_load = "res://Test/Level 4.tscn"
 
@@ -311,18 +317,18 @@ level_load = "res://Test/Level 4.tscn"
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
-[node name="Music Player" parent="." instance=ExtResource( 17 )]
+[node name="Music Player" parent="." instance=ExtResource( 18 )]
 
 [node name="house" type="Sprite" parent="."]
 position = Vector2( 19323.9, 546.672 )
 z_index = -1
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="Tutorial" type="Control" parent="."]
 editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
-script = ExtResource( 19 )
+script = ExtResource( 20 )
 
 [node name="Label" type="Label" parent="Tutorial"]
 margin_left = 17595.4
@@ -330,7 +336,7 @@ margin_top = 309.937
 margin_right = 17755.4
 margin_bottom = 418.937
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = ExtResource( 20 )
+custom_fonts/font = ExtResource( 21 )
 text = "JoyStick
 A: Jump
 X: Roll
@@ -345,7 +351,7 @@ margin_top = 309.937
 margin_right = 18100.2
 margin_bottom = 418.937
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = ExtResource( 20 )
+custom_fonts/font = ExtResource( 21 )
 text = "KeyBoard
 Space: Jump
 X: Roll
@@ -357,14 +363,13 @@ S and D: Choose Item
 [node name="bolts" type="Node2D" parent="."]
 
 [node name="Node2D2" type="Node2D" parent="."]
-editor/display_folded = true
 
-[node name="plant" parent="Node2D2" instance=ExtResource( 21 )]
+[node name="plant" parent="Node2D2" instance=ExtResource( 22 )]
 position = Vector2( 19793.9, 34.3428 )
 
-[node name="plant3" parent="Node2D2" instance=ExtResource( 21 )]
+[node name="plant3" parent="Node2D2" instance=ExtResource( 22 )]
 position = Vector2( 15163.8, 720.514 )
 
-[node name="plant2" parent="Node2D2" instance=ExtResource( 21 )]
+[node name="plant2" parent="Node2D2" instance=ExtResource( 22 )]
 position = Vector2( 18471, 708.15 )
 

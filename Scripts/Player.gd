@@ -101,7 +101,7 @@ func die():
 		state = "death"
 
 func roll():
-	if Input.is_action_pressed("ui_roll") and not ledge_detect():
+	if Input.is_action_pressed("ui_roll") and not ledge_detect() and not get_node("Scale/Scientist anim").is_visible():
 		if Input.is_action_pressed("ui_right"):
 			if ground_detect():
 				if motion.x < max_speed + roll:

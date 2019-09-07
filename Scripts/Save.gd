@@ -13,7 +13,9 @@ var data = {"hp":20,
 "ammo" : [0,0,0,0,0,0,0,0],
 "select" : [true,false,false,false,false,false,false,false],
 "state" : "walk",
-"cutscenes":[true,true,true,true,true,true,true,true]
+"cutscenes":[true,true,true,true,true,true,true,true],
+"carry" : false,
+"little_girl" : false
 }
 
 

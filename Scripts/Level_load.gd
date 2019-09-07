@@ -16,6 +16,7 @@ func _on_Level_load_body_shape_entered(body_id, body, body_shape, area_shape):
 			save.data.ammo[i] = body.get_node("Weapons").get_child(i).ammo
 		save.data.select = body.get_node("Menu Items").select
 		save.data.state = body.state
+		save.data.carry = body.get_node("Scale/Scientist anim").is_visible()
 		save.data.position_y = body.get_position().y
 		save.data.position_x = body.get_position().x
 		save.data.time = get_node("/root/Test/Day Night cycle").get_current_animation_position()

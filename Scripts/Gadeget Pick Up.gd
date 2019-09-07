@@ -15,7 +15,7 @@ func _ready():
 func _process(delta):
 	if $RayCast2D.is_colliding():
 		$CanvasLayer/Label.show()
-		if Input.is_action_pressed("ui_roll"):
+		if Input.is_action_pressed("ui_roll") and $RayCast2D.get_collider().is_in_group("player"):
 			$RayCast2D.get_collider().get_node("Weapons").get_child(gun_id).have = true
 			$RayCast2D.get_collider().get_node("Scale/Pick Up").set_current_animation("Pick Up")
 			$Timer.start()

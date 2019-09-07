@@ -13,6 +13,7 @@ func _process(delta):
 			save.data.position_y = pos.y
 			save.data.position_x = pos.x
 			save.data.level = level
+			save.data.carry =get_collider().get_node("Scale/Scientist anim").is_visible()
 			save.data.time = get_node("/root/Test/Day Night cycle").get_current_animation_position()
 			save.save()
 	else:
