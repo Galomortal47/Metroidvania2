@@ -24,8 +24,6 @@ func _process(delta):
 							if get_global_position().distance_to(get_node("/root/Test/Hooks").get_child(i).get_global_position()) < get_global_position().distance_to(get_node("/root/Test/Hooks").get_child(j).get_global_position()):
 								get_parent().get_parent().motion += dir * speed
 					$Line2D.set_points([get_position(),get_node("/root/Test/Hooks").get_child(i).get_global_position()-get_global_position()])
-				else:
-					$Line2D.set_points([Vector2(0,0),Vector2(0,0)])
 			else:
 				$Line2D.set_points([Vector2(0,0),Vector2(0,0)])
 				
