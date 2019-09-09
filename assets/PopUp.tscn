@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=1]
+
+[sub_resource type="Animation" id=79]
+resource_name = "CloseUp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-005, 1e-005 ) ]
+}
+
+[sub_resource type="Animation" id=80]
+resource_name = "PopUp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-005, 1e-005 ), Vector2( 1, 1 ) ]
+}
+
+[node name="PopUp" type="Polygon2D"]
+position = Vector2( 70.8301, 25.355 )
+scale = Vector2( 1e-005, 1e-005 )
+color = Color( 0.623529, 0.623529, 0.623529, 1 )
+offset = Vector2( -70.8301, -25.355 )
+polygon = PoolVector2Array( 69.9053, 13.1625, 70.1689, 26.8656, 77.8105, 12.3719, 126.035, 12.1084, 125.771, -25.575, 23.2617, -25.3115, 23.5254, 13.1625 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -44.0
+margin_top = -49.0
+margin_right = 50.0
+margin_bottom = -15.0
+custom_fonts/font = ExtResource( 1 )
+text = "help"
+autowrap = true
+percent_visible = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/CloseUp = SubResource( 79 )
+anims/PopUp = SubResource( 80 )
+

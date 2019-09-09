@@ -14,4 +14,5 @@ func _process(delta):
 			save.loader()
 			save.data.little_girl = true
 			save.save()
+			get_parent().get_node("CutScene2").play("2")
 	pass
