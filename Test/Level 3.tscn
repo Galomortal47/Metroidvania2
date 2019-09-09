@@ -33,6 +33,7 @@ extents = Vector2( 10, 419.061 )
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="Stuff" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="dirt5" type="TextureRect" parent="Stuff"]
 margin_left = 20883.0
@@ -79,6 +80,7 @@ expand = true
 stretch_mode = 2
 
 [node name="Ground" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 collision_layer = 17
 collision_mask = 17
@@ -214,6 +216,11 @@ texture = ExtResource( 9 )
 [node name="mushroom2" type="Sprite" parent="Art"]
 modulate = Color( 0.513726, 0.513726, 0.513726, 1 )
 position = Vector2( 9252.73, 680.95 )
+texture = ExtResource( 9 )
+
+[node name="mushroom3" type="Sprite" parent="Art"]
+modulate = Color( 0.513726, 0.513726, 0.513726, 1 )
+position = Vector2( 12934.9, 680.95 )
 texture = ExtResource( 9 )
 
 [node name="grass8" type="TextureRect" parent="Art"]
