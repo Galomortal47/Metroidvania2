@@ -269,6 +269,7 @@ position = Vector2( 24512.4, 26.012 )
 position = Vector2( 27028.7, 22.7236 )
 
 [node name="Art" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 z_index = -1
 

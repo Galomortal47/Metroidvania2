@@ -564,6 +564,7 @@ position = Vector2( 2.71121, -3.16309 )
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 3.0
 default_color = Color( 0.458824, 0.368627, 0.160784, 1 )
+texture_mode = 1065353216
 
 [node name="Bomb" type="Node2D" parent="Weapons"]
 script = ExtResource( 4 )
@@ -725,6 +726,7 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
+texture_mode = -1039925248
 
 [node name="icon1" type="Sprite" parent="Menu Items/Menu"]
 editor/display_folded = true

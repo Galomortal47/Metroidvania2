@@ -18,6 +18,8 @@ var state = "walk"
 var swin_speed = 10
 var swin_speed_max = 250
 var swin_drag = 0.95
+var jump_count = 10
+var jump_count_aux = jump_count
 var boltspawner = preload("bolt_spawner.gd").new()
 
 func _ready():
@@ -35,6 +37,8 @@ func _process(delta):
 			if not ground_detect() and not ledge_detect():
 				motion.y += gravity
 				jump_aux -= delta
+			elif ground_detect():
+				jump_count = jump_count_aux
 			elif ledge_detect():
 				ledge_grab()
 			else:
@@ -58,8 +62,8 @@ func _process(delta):
 				motion.y += gravity
 				if Input.is_action_pressed("ui_accept"):
 					jump_aux -= delta
-			else:
-				jump_aux = jump_timer
+			if ground_detect():
+				jump_count = jump_count_aux
 		"chocobo_swin":
 			swin()
 		"carring":
@@ -124,8 +128,9 @@ func ledge_grab():
 		motion.y = 0
 
 func jump():
-	if Input.is_action_pressed("ui_accept") and jump_aux > 0 and not Input.is_action_pressed("ui_roll"):
-		motion.y -= jump * Engine.get_time_scale()
+	if Input.is_action_pressed("ui_accept") and jump_count > 0 and not Input.is_action_pressed("ui_roll"):
+		motion.y -= jump
+		jump_count -= 1
 
 func move():
 	if Input.is_action_pressed("ui_right"):

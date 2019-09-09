@@ -7,7 +7,6 @@
 [ext_resource path="res://sprites/boss_1.png" type="Texture" id=5]
 
 [node name="Stuff" type="Node2D"]
-editor/display_folded = true
 
 [node name="dirt5" type="TextureRect" parent="."]
 margin_left = 19781.8

@@ -159,6 +159,7 @@ position = Vector2( 13555.3, 474.932 )
 shape = SubResource( 2 )
 
 [node name="Hooks" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
 [node name="Hook4" parent="Hooks" instance=ExtResource( 6 )]
@@ -205,6 +206,7 @@ position = Vector2( 7335.83, 0 )
 position = Vector2( 9772.61, 712.401 )
 
 [node name="Art" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 z_index = -1
 
@@ -307,7 +309,7 @@ position = Vector2( 9429.5, 174.026 )
 position = Vector2( 10500.7, 179.605 )
 
 [node name="Butterfly3" parent="Animals" instance=ExtResource( 12 )]
-position = Vector2( 11460.3, 140.552 )
+position = Vector2( 11489.5, 187.206 )
 
 [node name="Door" parent="." instance=ExtResource( 13 )]
 position = Vector2( 19210.8, 645.325 )
@@ -381,6 +383,7 @@ S and D: Choose Item
 [node name="bolts" type="Node2D" parent="."]
 
 [node name="Node2D2" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="plant" parent="Node2D2" instance=ExtResource( 22 )]
 position = Vector2( 20886.8, 36.6149 )
