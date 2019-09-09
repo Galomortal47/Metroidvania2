@@ -35,24 +35,24 @@ position = Vector2( -0.429321, 1.7171 )
 [node name="Stuff" type="Node2D" parent="."]
 
 [node name="dirt5" type="TextureRect" parent="Stuff"]
-margin_left = 19781.8
+margin_left = 20883.0
 margin_top = -188.0
-margin_right = 27713.8
+margin_right = 27713.0
 margin_bottom = 1730.0
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 2
 
 [node name="grass12" type="TextureRect" parent="Stuff"]
-margin_left = 19856.3
-margin_top = -304.759
-margin_right = 27727.3
-margin_bottom = -176.759
+margin_left = 20881.0
+margin_top = -305.0
+margin_right = 27727.0
+margin_bottom = -177.0
 texture = ExtResource( 2 )
 stretch_mode = 2
 
 [node name="grass9" type="TextureRect" parent="Stuff"]
-margin_left = 19815.0
+margin_left = 20883.0
 margin_top = -333.0
 margin_right = 27632.0
 margin_bottom = -227.0
@@ -61,17 +61,17 @@ expand = true
 stretch_mode = 2
 
 [node name="end" type="Sprite" parent="Stuff"]
-position = Vector2( 19807.9, -237.006 )
+position = Vector2( 20880.3, -246.094 )
 texture = ExtResource( 4 )
 
 [node name="end2" type="Sprite" parent="Stuff"]
-position = Vector2( 19794.6, 21.0721 )
+position = Vector2( 20887.5, 23.3442 )
 texture = ExtResource( 4 )
 
 [node name="boss_2" type="TextureRect" parent="Stuff"]
-margin_left = 19853.0
+margin_left = 20878.0
 margin_top = -353.0
-margin_right = 23706.0
+margin_right = 24219.0
 margin_bottom = -258.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
@@ -79,13 +79,12 @@ expand = true
 stretch_mode = 2
 
 [node name="Ground" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 collision_layer = 17
 collision_mask = 17
 
 [node name="dirt5" type="TextureRect" parent="Ground"]
-margin_left = 12441.0
+margin_left = 13555.0
 margin_top = 45.0
 margin_right = 20373.0
 margin_bottom = 1730.0
@@ -103,25 +102,25 @@ texture = ExtResource( 2 )
 stretch_mode = 2
 
 [node name="grass10" type="TextureRect" parent="Ground"]
-margin_left = 4650.7
+margin_left = 4651.0
 margin_top = 663.0
-margin_right = 12521.7
+margin_right = 13564.0
 margin_bottom = 791.0
 texture = ExtResource( 2 )
 stretch_mode = 2
 
 [node name="grass11" type="TextureRect" parent="Ground"]
-margin_left = 12520.5
-margin_top = -43.2513
-margin_right = 20391.5
-margin_bottom = 84.7487
+margin_left = 13546.0
+margin_top = -43.0
+margin_right = 20391.0
+margin_bottom = 85.0
 texture = ExtResource( 2 )
 stretch_mode = 2
 
 [node name="dirt4" type="TextureRect" parent="Ground"]
-margin_left = 4602.7
+margin_left = 4603.0
 margin_top = 762.0
-margin_right = 12526.7
+margin_right = 13561.0
 margin_bottom = 1829.0
 texture = ExtResource( 1 )
 expand = true
@@ -146,28 +145,28 @@ texture = ExtResource( 2 )
 stretch_mode = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 8586.28, 747.214 )
+position = Vector2( 9672.72, 747.214 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 16347, 63.0507 )
+position = Vector2( 17437.6, 63.0507 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 12464.7, 474.932 )
+position = Vector2( 13555.3, 474.932 )
 shape = SubResource( 2 )
 
 [node name="Hooks" type="Node2D" parent="."]
 position = Vector2( 7335.83, 0 )
 
 [node name="Hook4" parent="Hooks" instance=ExtResource( 6 )]
-position = Vector2( 11579.2, 385.178 )
+position = Vector2( 12421.9, 385.178 )
 
 [node name="Hook2" parent="Hooks" instance=ExtResource( 6 )]
-position = Vector2( 11927.4, 59.0253 )
+position = Vector2( 12770.1, 59.0253 )
 
 [node name="Hook3" parent="Hooks" instance=ExtResource( 6 )]
-position = Vector2( 12567.2, -183.765 )
+position = Vector2( 13286.8, -134.648 )
 
 [node name="Waters" type="Node2D" parent="."]
 position = Vector2( 7335.83, 0 )
@@ -218,16 +217,16 @@ position = Vector2( 9252.73, 680.95 )
 texture = ExtResource( 9 )
 
 [node name="grass8" type="TextureRect" parent="Art"]
-margin_left = 4566.83
-margin_top = 629.368
-margin_right = 12514.8
-margin_bottom = 735.368
+margin_left = 4567.0
+margin_top = 629.0
+margin_right = 13722.0
+margin_bottom = 735.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 2
 
 [node name="grass9" type="TextureRect" parent="Art"]
-margin_left = 12448.0
+margin_left = 13545.0
 margin_top = -54.0
 margin_right = 20296.0
 margin_bottom = 52.0
@@ -282,10 +281,10 @@ modulate = Color( 0.619608, 0.603922, 0.603922, 1 )
 z_index = 1
 
 [node name="grass10" type="TextureRect" parent="Art/Node2D"]
-margin_left = 12479.2
-margin_top = 76.285
-margin_right = 20296.2
-margin_bottom = 182.285
+margin_left = 13553.0
+margin_top = 76.0
+margin_right = 20297.0
+margin_bottom = 182.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 2
@@ -377,7 +376,7 @@ S and D: Choose Item
 [node name="Node2D2" type="Node2D" parent="."]
 
 [node name="plant" parent="Node2D2" instance=ExtResource( 22 )]
-position = Vector2( 19793.9, 34.3428 )
+position = Vector2( 20886.8, 36.6149 )
 
 [node name="plant3" parent="Node2D2" instance=ExtResource( 22 )]
 position = Vector2( 15163.8, 720.514 )
