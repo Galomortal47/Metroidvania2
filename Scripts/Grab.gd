@@ -29,8 +29,9 @@ func release(var motion):
 	get_parent().state = "walk"
 
 func grab():
-	get_collider().get_parent().remove_child(get_collider())
-	var pos = get_collider().get_global_position()
-	add_child(get_collider())
-	get_collider().set_global_position(pos+Vector2(0,-150))
+	var boxs = get_collider()
+	boxs.get_parent().remove_child(boxs)
+	var pos = boxs.get_global_position()
+	add_child(boxs)
+	boxs.set_global_position(pos+Vector2(0,-150))
 	get_parent().state = "carring"

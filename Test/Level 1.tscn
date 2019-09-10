@@ -17580,7 +17580,6 @@ position = Vector2( -3123.18, 665.23 )
 position = Vector2( -9923.78, 328.391 )
 
 [node name="Boxes" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true
@@ -17836,6 +17835,7 @@ position = Vector2( -10339.6, -141.717 )
 position = Vector2( -10516.2, -285.919 )
 
 [node name="Swin" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Swwing" parent="Swin" instance=ExtResource( 18 )]
 

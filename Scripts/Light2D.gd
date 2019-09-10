@@ -15,7 +15,6 @@ func _ready():
 		"fast":
 			set_enabled(false)
 			hide()
-	save.save()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -723,4 +723,28 @@ tracks/59/keys = {
 "update": 0,
 "values": [ Rect2( 42.375, 20.875, 3.75, 4.25 ) ]
 }
+tracks/60/type = "value"
+tracks/60/path = NodePath("Animation/Hips/Skirt:scale")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/61/type = "value"
+tracks/61/path = NodePath("Animation/Hips/Belt/body/Neck/Head/HairBack:scale")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
 

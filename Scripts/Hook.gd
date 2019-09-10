@@ -12,7 +12,8 @@ var ammo_max = 0
 var mag_aux
 
 func _ready():
-	speed = speed / get_node("/root/Test/Hooks").get_child_count()
+	if get_node("/root/Test/Hooks").get_child_count() > 0:
+		speed = speed / get_node("/root/Test/Hooks").get_child_count()
 
 func _process(delta):
 	if have and enable:
