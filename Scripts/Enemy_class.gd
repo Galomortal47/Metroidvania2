@@ -17,6 +17,8 @@ export var stun2 = 500
 export var timer = 3
 var time_aux = 3
 export var type = "melee"
+export var target = "player"
+export var ignore = "enemy"
 export var bolts_spwned_upon_death = 5
 var start = true
 var first = false
@@ -45,21 +47,21 @@ func _process(delta):
 #ar dano ao encostar no jgador
 func damage():
 	if $Damage.is_colliding():
-		if $Damage.get_collider().is_in_group("player"):
+		if $Damage.get_collider().is_in_group(target):
 		 $Scale/Body/AnimationPlayer2.play("attack")
 
 func shot_player():
 	if $Vision.is_colliding():
-		if $Vision.get_collider().is_in_group("player") and timer-followtrough < 0:
+		if $Vision.get_collider().is_in_group(target) and timer-followtrough < 0:
 			$Timer.start()
-		if $Vision.get_collider().is_in_group("player") and timer < 0:
+		if $Vision.get_collider().is_in_group(target) and timer < 0:
 			$Polygon2D2.show()
 			$Vision.rotate(get_angle_to($Vision.get_collider().get_position()) - $Vision.get_rotation() -1.57)
 			var bullet = load("res://assets/Bullet.tscn")
 			var bullet_instance = bullet.instance()
 			bullet_instance.set_rotation(get_angle_to($Vision.get_collider().get_position()))
-			bullet_instance.ignore = "enemy"
-			bullet_instance.target = "player"
+			bullet_instance.ignore = ignore
+			bullet_instance.target = target
 			bullet_instance.speed = 175
 			bullet_instance.lifespan = 10
 			bullet_instance.get_node("CPUParticles2D").set_color(Color(1,0,0))
@@ -71,7 +73,7 @@ func shot_player():
 func hunt_player(var distance):
 	$Damage.set_cast_to(attack)
 	if $Vision.is_colliding():
-		if $Vision.get_collider().is_in_group("player"):
+		if $Vision.get_collider().is_in_group(target):
 			if get_position().distance_to($Vision.get_collider().get_position()) > distance:
 				$Vision.rotate(get_angle_to($Vision.get_collider().get_position()) - $Vision.get_rotation() - 1.57)
 				if $Vision.get_collider().get_position().x - get_position().x > 0:
@@ -120,7 +122,7 @@ func stun():
 
 func attack():
 	if $Damage.is_colliding():
-		if $Damage.get_collider().is_in_group("player"):
+		if $Damage.get_collider().is_in_group(target):
 			if $Damage.get_collider().has_node("Health"):
 				$Damage.get_collider().get_node("Health").damage(damage)
 

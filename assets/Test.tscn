@@ -16855,7 +16855,7 @@ min_value = -360.0
 max_value = 360.0
 _data = [ Vector2( 0.00872233, 360 ), 0.0, 0.0, 0, 0, Vector2( 1, -360 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="Animation" id=42]
+[sub_resource type="Animation" id=79]
 resource_name = "CloseUp"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:percent_visible")
@@ -16882,7 +16882,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1e-005, 1e-005 ) ]
 }
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=80]
 resource_name = "PopUp"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:percent_visible")
@@ -17726,8 +17726,8 @@ autowrap = true
 percent_visible = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PopUp"]
-anims/CloseUp = SubResource( 42 )
-anims/PopUp = SubResource( 43 )
+anims/CloseUp = SubResource( 79 )
+anims/PopUp = SubResource( 80 )
 
 [connection signal="animation_finished" from="CutScene" to="CutScene" method="_on_CutScene_animation_finished"]
 [connection signal="animation_finished" from="CutScene2" to="CutScene2" method="_on_CutScene_animation_finished"]
