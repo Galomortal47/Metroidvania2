@@ -24,9 +24,14 @@ func _process(delta):
 			climate = "clear"
 	match climate:
 		"rain":
-			$Rain.set_emitting(!$Rain.is_emitting())
+			climate (true,false,false)
 		"snow":
-			$Snow.set_emitting(!$Snow.is_emitting())
+			climate (false,true,false)
 		"leaf":
-			$Leaf.set_emitting(!$Leaf.is_emitting())
+			climate (false,false,true)
 #	pass
+
+func climate (rain,snow,leaf):
+	$Rain.set_emitting(rain)
+	$Snow.set_emitting(snow)
+	$Leaf.set_emitting(leaf)
