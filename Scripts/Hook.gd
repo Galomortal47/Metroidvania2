@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed = 50
+var speed = 150
 var rage = 300
 var rage2 = 150
 var hook = false
@@ -11,6 +11,8 @@ var ammo = 0
 var ammo_max = 0
 var mag_aux
 
+func _ready():
+	speed = speed / get_node("/root/Test/Hooks").get_child_count()
 
 func _process(delta):
 	if have and enable:
