@@ -15,7 +15,8 @@ var data = {"hp":20,
 "state" : "walk",
 "cutscenes":[true,true,true,true,true,true,true,true],
 "carry" : false,
-"little_girl" : false
+"little_girl" : false,
+"climate" : "clear"
 }
 
 

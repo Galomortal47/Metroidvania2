@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scripts/Day Night cycle.gd" type="Script" id=1]
 [ext_resource path="res://sprites/sun.png" type="Texture" id=2]
@@ -17,7 +17,9 @@
 [ext_resource path="res://Scripts/Timer.gd" type="Script" id=15]
 [ext_resource path="res://sprites/tree.png" type="Texture" id=16]
 [ext_resource path="res://sprites/bush.png" type="Texture" id=17]
-[ext_resource path="res://assets/Rain.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scripts/Rain.gd" type="Script" id=18]
+[ext_resource path="res://sprites/snowflake.png" type="Texture" id=19]
+[ext_resource path="res://sprites/leaf.png" type="Texture" id=20]
 
 [sub_resource type="Animation" id=1]
 length = 1440.0
@@ -164,6 +166,7 @@ script = ExtResource( 1 )
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )
@@ -385,7 +388,6 @@ script = ExtResource( 15 )
 [node name="Trees2" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Trees2"]
-editor/display_folded = true
 modulate = Color( 0.54902, 0.513726, 0.513726, 1 )
 position = Vector2( -723.218, -37.8429 )
 motion_scale = Vector2( 0.8, 1 )
@@ -393,9 +395,9 @@ motion_mirroring = Vector2( 2048, 0 )
 
 [node name="tree" type="TextureRect" parent="Trees2/ParallaxLayer"]
 margin_left = -514.108
-margin_top = -975.422
+margin_top = -973.571
 margin_right = 509.892
-margin_bottom = 48.5779
+margin_bottom = 50.4285
 rect_rotation = -2.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 16 )
@@ -422,5 +424,46 @@ stretch_mode = 1
 position = Vector2( -0.429321, 1.7171 )
 color = Color( 0.92549, 0.964706, 0.968627, 1 )
 
-[node name="Rain" parent="." instance=ExtResource( 18 )]
+[node name="Rain" type="CanvasLayer" parent="."]
+script = ExtResource( 18 )
+
+[node name="Rain" type="CPUParticles2D" parent="Rain"]
+position = Vector2( 480.215, 0 )
+scale = Vector2( 1, 11 )
+emitting = false
+amount = 100
+emission_shape = 2
+emission_rect_extents = Vector2( 480, 1 )
+color = Color( 0.376471, 0.6, 0.709804, 0.643137 )
+
+[node name="Snow" type="CPUParticles2D" parent="Rain"]
+position = Vector2( 480.215, -27.7595 )
+emitting = false
+amount = 40
+lifetime = 4.0
+texture = ExtResource( 19 )
+emission_shape = 2
+emission_rect_extents = Vector2( 480, 1 )
+radial_accel = -12.07
+scale_amount = 0.0
+scale_amount_random = 0.45
+color = Color( 1, 1, 1, 0.643137 )
+
+[node name="Leaf" type="CPUParticles2D" parent="Rain"]
+position = Vector2( 480.215, -27.7595 )
+emitting = false
+amount = 40
+lifetime = 4.0
+texture = ExtResource( 20 )
+emission_shape = 2
+emission_rect_extents = Vector2( 480, 1 )
+angular_velocity = 12.42
+angular_velocity_random = 0.19
+radial_accel = -12.07
+radial_accel_random = 0.05
+angle_random = 0.34
+scale_amount_random = 1.0
+color = Color( 1, 1, 1, 0.643137 )
+hue_variation = -1.0
+hue_variation_random = 1.0
 

@@ -8,6 +8,7 @@ func _process(delta):
 	animations()
 
 func animations():
+#	print(get_parent().get_node("AnimationPlayer").get_current_animation())
 	match get_parent().get_parent().state:
 		"walk":
 			$Chocobo.hide()
@@ -50,7 +51,10 @@ func animations():
 	if int(get_parent().get_parent().motion.x) < -0:
 		get_parent().set_scale(Vector2(1,get_parent().get_scale().y))
 		get_parent().get_node("Polygon2D/Label").set_scale(Vector2(8,8))
-	get_parent().get_node("AnimationPlayer").set_speed_scale(get_parent().get_parent().motion.x/500) 
+	if not int(get_parent().get_parent().motion.x) == 0:
+		get_parent().get_node("AnimationPlayer").set_speed_scale(get_parent().get_parent().motion.x/500) 
+	else:
+		get_parent().get_node("AnimationPlayer").set_speed_scale(1) 
 #	pass
 
 func shoot_dir(var hide):
