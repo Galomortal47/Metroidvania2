@@ -22,7 +22,7 @@ config/icon="res://icon.png"
 
 [debug]
 
-settings/fps/force_fps=60
+settings/fps/force_fps=20
 
 [display]
 

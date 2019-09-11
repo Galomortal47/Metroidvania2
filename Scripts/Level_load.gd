@@ -2,13 +2,12 @@ extends Area2D
 
 export var level_load = ""
 var save = preload("res://Scripts/Save.gd").new()
-var player
+
 
 func _on_Level_load_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
-		player = body
 		get_tree().change_scene(level_load)
-		save()
+		save(body,body)
 #		if thread.is_active():
 #			return
 #		thread.start(self, "_load", level_load)
@@ -19,9 +18,8 @@ func _on_Level_load_body_shape_entered(body_id, body, body_shape, area_shape):
 
 func _load(level):
 	get_tree().change_scene(level)
-	save()
 
-func save():
+func save(var player,var pos):
 	save.loader()
 	save.data.level = level_load
 	save.data.money = int(player.get_node("Coins/Number").get_text())
@@ -33,9 +31,9 @@ func save():
 	save.data.select = player.get_node("Menu Items").select
 	save.data.state = player.state
 	save.data.carry = player.get_node("Scale/Scientist anim").is_visible()
-	save.data.position_y = player.get_position().y
-	save.data.position_x = player.get_position().x
-	save.data.time = get_node("/root/Test/Day Night cycle").get_current_animation_position()
-	save.data.climate =get_node("/root/Test/Day Night cycle/Rain").climate
+	save.data.position_y = pos.get_position().y
+	save.data.position_x = pos.get_position().x
+	var day = player.get_parent().get_node("Day Night cycle")
+	save.data.time = day.get_current_animation_position()
+	save.data.climate = day.get_node("Rain").climate
 	save.save()
-	var day = get_tree().get_root().get_node("Test/Day Night cycle")
