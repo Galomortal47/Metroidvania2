@@ -9,7 +9,7 @@ var collect = false
 var ramdom_pos = 120
 var life_time = 1
 var falloff = 0.95
-var value = 8
+var value = 10
 var save = preload("res://Scripts/Save.gd").new()
 
 func _ready():

@@ -6,7 +6,6 @@ func _process(delta):
 	if $RayCast2D.is_colliding():
 		if $RayCast2D.get_collider().is_in_group("player"):
 			$Label.show()
-			print("col")
 			if Input.is_action_just_pressed("ui_roll") and int($RayCast2D.get_collider().get_node("Coins/Number").get_text()) >= price:
 				$RayCast2D.get_collider().get_node("Coins/Number").set_text(str(int($RayCast2D.get_collider().get_node("Coins/Number").get_text())-price))
 				$RayCast2D.get_collider().get_node("Save").loader()
