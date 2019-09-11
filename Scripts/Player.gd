@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var motion = Vector2(0,0)
-var speed = 30
+var speed = 50
 var max_speed = 500
 var drag = 0.8
 var gravity = 10
@@ -30,7 +30,7 @@ func _process(delta):
 		"walk":
 			max_speed = 500
 			jump = 40
-			jump_timer = 0.15
+			jump_count_aux = 10
 			move()
 			jump()
 			roll()
@@ -52,7 +52,7 @@ func _process(delta):
 		"chocobo":
 			max_speed = 1000
 			jump = 11
-			jump_timer = 2
+			jump_count_aux = 100
 			move()
 			jump()
 			if Input.is_action_just_pressed("ui_roll"):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=2]
+[gd_scene load_steps=105 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -33,18 +33,17 @@
 [ext_resource path="res://assets/Level_load.tscn" type="PackedScene" id=31]
 [ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=32]
 [ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=33]
-[ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=34]
-[ext_resource path="res://sprites/rocket.png" type="Texture" id=35]
-[ext_resource path="res://Scripts/playcuscene.gd" type="Script" id=36]
-[ext_resource path="res://assets/Gadeget Pick Up.tscn" type="PackedScene" id=37]
-[ext_resource path="res://sprites/scientist.png" type="Texture" id=38]
-[ext_resource path="res://enemy/guns.tscn" type="PackedScene" id=39]
-[ext_resource path="res://sprites/chocobo.png" type="Texture" id=40]
-[ext_resource path="res://assets/rest.tres" type="Animation" id=41]
-[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=42]
-[ext_resource path="res://assets/CPUParticles2D2.tscn" type="PackedScene" id=43]
-[ext_resource path="res://Scripts/CutScene.gd" type="Script" id=44]
-[ext_resource path="res://assets/PopUp.tscn" type="PackedScene" id=45]
+[ext_resource path="res://sprites/rocket.png" type="Texture" id=34]
+[ext_resource path="res://Scripts/playcuscene.gd" type="Script" id=35]
+[ext_resource path="res://assets/Gadeget Pick Up.tscn" type="PackedScene" id=36]
+[ext_resource path="res://sprites/scientist.png" type="Texture" id=37]
+[ext_resource path="res://enemy/guns.tscn" type="PackedScene" id=38]
+[ext_resource path="res://sprites/chocobo.png" type="Texture" id=39]
+[ext_resource path="res://assets/rest.tres" type="Animation" id=40]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=41]
+[ext_resource path="res://assets/CPUParticles2D2.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Scripts/CutScene.gd" type="Script" id=43]
+[ext_resource path="res://assets/PopUp.tscn" type="PackedScene" id=44]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -17580,6 +17579,7 @@ position = Vector2( -3123.18, 665.23 )
 position = Vector2( -9923.78, 328.391 )
 
 [node name="Boxes" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true
@@ -18371,13 +18371,11 @@ position = Vector2( -12068.3, -16.2644 )
 
 [node name="Day Night cycle" parent="." instance=ExtResource( 33 )]
 
-[node name="Mont" parent="." instance=ExtResource( 34 )]
-position = Vector2( -7029.11, -862.258 )
-
 [node name="rocket" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -11685.5, -43.9109 )
-texture = ExtResource( 35 )
-script = ExtResource( 36 )
+texture = ExtResource( 34 )
+script = ExtResource( 35 )
 
 [node name="Area2D" type="Area2D" parent="rocket"]
 editor/display_folded = true
@@ -18387,7 +18385,7 @@ position = Vector2( 173.188, 54.4705 )
 position = Vector2( 42.5986, 0.698334 )
 shape = SubResource( 21 )
 
-[node name="Gadeget Pick Up" parent="rocket" instance=ExtResource( 37 )]
+[node name="Gadeget Pick Up" parent="rocket" instance=ExtResource( 36 )]
 position = Vector2( 54.14, 52 )
 scale = Vector2( 1e-005, 1e-005 )
 gun_id = 0
@@ -18407,7 +18405,7 @@ z_index = 4
 position = Vector2( 15.145, 24.2827 )
 rotation = 0.637431
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 7.625, 107.313, 21, 17.75 )
 
@@ -18415,34 +18413,34 @@ region_rect = Rect2( 7.625, 107.313, 21, 17.75 )
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -1.97421, -6.73163 )
 rotation = -0.919078
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 10.75, 95, 4.5, 6 )
 
 [node name="Iron Circle" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
 position = Vector2( -1.45547, -0.152555 )
 z_index = 1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 11.125, 95.5, 3.875, 5.625 )
 
 [node name="Belt Piece" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
 position = Vector2( 4.36553, -0.108372 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
 
 [node name="Belt Piece2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
 position = Vector2( -5.18532, -0.0746479 )
 scale = Vector2( -0.5, 1 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
 
 [node name="body" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
 position = Vector2( 1.26223, -7.86402 )
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 5.5, 66, 17.5, 20.75 )
 
@@ -18450,7 +18448,7 @@ region_rect = Rect2( 5.5, 66, 17.5, 20.75 )
 position = Vector2( 4.56733, -4.43989 )
 rotation = 0.960289
 z_index = 3
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 offset = Vector2( 4.87874, 3.99989 )
 region_enabled = true
 region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
@@ -18458,7 +18456,7 @@ region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 [node name="arm down" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up"]
 position = Vector2( 6.04005, 7.58219 )
 rotation = -0.0786195
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 offset = Vector2( 1.20303, 4.5292 )
 region_enabled = true
 region_rect = Rect2( 111.75, 22.6875, 8.125, 12.875 )
@@ -18466,7 +18464,7 @@ region_rect = Rect2( 111.75, 22.6875, 8.125, 12.875 )
 [node name="hand" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up/arm down"]
 position = Vector2( 2.44712, 9.93858 )
 z_index = 5
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 
@@ -18476,7 +18474,7 @@ position = Vector2( -5.45658, -5.08245 )
 rotation = 0.154479
 scale = Vector2( -1, 1 )
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 offset = Vector2( 2.59755, 3.87138 )
 region_enabled = true
 region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
@@ -18485,14 +18483,14 @@ region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 position = Vector2( 3.59833, 6.68261 )
 rotation = -0.0840107
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 offset = Vector2( 1.20303, 4.78622 )
 region_enabled = true
 region_rect = Rect2( 111.75, 22.6875, 8.125, 12.875 )
 
 [node name="hand" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up2/arm down"]
 position = Vector2( 2.57563, 10.4526 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 
@@ -18501,36 +18499,36 @@ visible = false
 position = Vector2( 1.08023, 11.6544 )
 rotation = -1.24453
 scale = Vector2( 1, -1 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 2, 1, 34, 28 )
 
-[node name="enemy" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons" instance=ExtResource( 39 )]
+[node name="enemy" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons" instance=ExtResource( 38 )]
 position = Vector2( -4.06763, 4.59555 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Neck" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body"]
 position = Vector2( 1.19008, -6.09009 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 53.375, 20.25, 14, 8.125 )
 
 [node name="Bone" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck"]
 position = Vector2( -2.4927, 1.27788 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 54.25, 10.375, 8.625, 6.875 )
 
 [node name="Head" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck"]
 position = Vector2( 0, -11.2936 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 6.375, 17.8125, 20.25, 19.875 )
 
 [node name="Hair Side2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -5.48219, 5.76211 )
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
 
@@ -18539,65 +18537,65 @@ position = Vector2( -6.30947, -3.38557 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 
 [node name="mouth" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -4, 8.42777 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 40, 20.875, 7.5, 4.25 )
 
 [node name="HairBack" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 1.42395, -2.42072 )
 z_index = -3
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 offset = Vector2( 1.5, 20.13 )
 region_enabled = true
 region_rect = Rect2( 58, 32, 42, 74 )
 
 [node name="Hair Front" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -2.13495, -4.82822 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 14.75, 1.8125, 15.375, 14.75 )
 
 [node name="Hair Side" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 6.98758, 5.57318 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
 
 [node name="Ear" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Hair Side"]
 position = Vector2( 5.37519, -1.94479 )
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 
 [node name="Eyewhite" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 0.94193, 3.12923 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 37.625, 5.9375, 11.25, 7.5 )
 
 [node name="Eye" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite"]
 position = Vector2( -2.20997, -0.685127 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 41.875, 14.9375, 3.875, 5.125 )
 
 [node name="Eyebrown" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite"]
 position = Vector2( 0.942062, -5.11232 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
 [node name="Eyewhite2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -9.19797, 3.28111 )
 scale = Vector2( -0.66, 1 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 38.25, 5.9375, 13, 7.5 )
 
@@ -18605,20 +18603,20 @@ region_rect = Rect2( 38.25, 5.9375, 13, 7.5 )
 position = Vector2( -1.03538, -0.828034 )
 rotation = -3.14159
 scale = Vector2( 1.51515, -1 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 39.75, 14.9375, 6, 5.125 )
 
 [node name="Eyebrown2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2"]
 position = Vector2( -1.42736, -5.11233 )
 scale = Vector2( 0.757576, 1 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
 [node name="Eye2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 1.08012, 2.85248 )
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 7.375, 40.5, 11.875, 10 )
 
@@ -18627,7 +18625,7 @@ position = Vector2( -1.95825, 8.14844 )
 rotation = -2.63253
 scale = Vector2( 1, -1 )
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
@@ -18635,7 +18633,7 @@ region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 position = Vector2( -0.729217, 5.15951 )
 scale = Vector2( -1, 1 )
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 offset = Vector2( 1.40492, 7.86707 )
 region_enabled = true
 region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
@@ -18646,7 +18644,7 @@ position = Vector2( -5.71371, 9.55371 )
 rotation = -2.59794
 scale = Vector2( 1, -1 )
 z_index = -3
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
@@ -18655,7 +18653,7 @@ position = Vector2( 0.093255, 4.89606 )
 rotation = -0.171104
 scale = Vector2( -1, 1 )
 z_index = -1
-texture = ExtResource( 38 )
+texture = ExtResource( 37 )
 offset = Vector2( 2.22739, 8.13052 )
 region_enabled = true
 region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
@@ -18667,14 +18665,14 @@ z_index = -4
 
 [node name="chocobo3" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo"]
 position = Vector2( 20.5028, -5.73519 )
-texture = ExtResource( 40 )
+texture = ExtResource( 39 )
 region_enabled = true
 region_rect = Rect2( 61, 22, 65, 48 )
 
 [node name="chocobo4" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3"]
 position = Vector2( 0.00193834, 17.7384 )
 rotation = -0.471669
-texture = ExtResource( 40 )
+texture = ExtResource( 39 )
 offset = Vector2( -0.556483, 6.77265 )
 region_enabled = true
 region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
@@ -18683,7 +18681,7 @@ region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
 position = Vector2( 2.68076, 18.9964 )
 rotation = -0.664627
 z_index = -1
-texture = ExtResource( 40 )
+texture = ExtResource( 39 )
 offset = Vector2( -6.9669, 6.72212 )
 region_enabled = true
 region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
@@ -18692,7 +18690,7 @@ region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
 position = Vector2( -8.53208, 13.9103 )
 rotation = 0.864784
 scale = Vector2( 0.512454, 0.512454 )
-texture = ExtResource( 40 )
+texture = ExtResource( 39 )
 offset = Vector2( -9.5188, 2.11838 )
 region_enabled = true
 region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
@@ -18702,7 +18700,7 @@ modulate = Color( 0.592157, 0.592157, 0.592157, 1 )
 position = Vector2( -9.4848, 15.3667 )
 rotation = 0.484444
 z_index = -1
-texture = ExtResource( 40 )
+texture = ExtResource( 39 )
 offset = Vector2( 2.53878, 4.65595 )
 region_enabled = true
 region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
@@ -18711,7 +18709,7 @@ region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
 position = Vector2( 5.9997, 15.6227 )
 rotation = -0.195669
 z_index = -1
-texture = ExtResource( 40 )
+texture = ExtResource( 39 )
 offset = Vector2( -7.48377, 6.33683 )
 region_enabled = true
 region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
@@ -18720,7 +18718,7 @@ region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
 position = Vector2( -10.5996, 15.3603 )
 rotation = 0.0712048
 scale = Vector2( 0.512454, 0.512454 )
-texture = ExtResource( 40 )
+texture = ExtResource( 39 )
 offset = Vector2( -8.60987, 0.281715 )
 region_enabled = true
 region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
@@ -18728,7 +18726,7 @@ region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
 [node name="chocobo2" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3"]
 position = Vector2( -18.8513, -5.33002 )
 rotation = -0.0501298
-texture = ExtResource( 40 )
+texture = ExtResource( 39 )
 region_enabled = true
 region_rect = Rect2( 18, 26, 33, 46 )
 
@@ -18736,14 +18734,14 @@ region_rect = Rect2( 18, 26, 33, 46 )
 position = Vector2( -4.51872, -18.0749 )
 rotation = 0.0434251
 z_index = 4
-texture = ExtResource( 40 )
+texture = ExtResource( 39 )
 region_enabled = true
 region_rect = Rect2( 20, -3, 48, 28 )
 
 [node name="chocobo7" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3"]
 position = Vector2( -8.20816, 5.8003 )
 rotation = -0.311447
-texture = ExtResource( 40 )
+texture = ExtResource( 39 )
 offset = Vector2( 15.3924, 0.911716 )
 region_enabled = true
 region_rect = Rect2( 25, 74, 48, 29 )
@@ -18763,7 +18761,7 @@ anims/Jump = SubResource( 27 )
 anims/Walk = SubResource( 29 )
 anims/Walk_carry = SubResource( 30 )
 "anims/ledge grab" = SubResource( 31 )
-anims/rest = ExtResource( 41 )
+anims/rest = ExtResource( 40 )
 anims/roll = SubResource( 32 )
 anims/slide = SubResource( 33 )
 anims/slide2 = SubResource( 34 )
@@ -18818,10 +18816,10 @@ margin_right = 42.0903
 margin_bottom = -137.74
 rect_scale = Vector2( 4, 4 )
 rect_pivot_offset = Vector2( 36.5365, 6.91501 )
-custom_fonts/font = ExtResource( 42 )
+custom_fonts/font = ExtResource( 41 )
 text = "GAME OVER"
 
-[node name="CPUParticles2D" parent="rocket" instance=ExtResource( 43 )]
+[node name="CPUParticles2D" parent="rocket" instance=ExtResource( 42 )]
 position = Vector2( 73.9473, -66.1226 )
 z_index = -1
 lifetime = 2.0
@@ -18832,11 +18830,11 @@ gravity = Vector2( 0, -100 )
 [node name="CutScene" type="AnimationPlayer" parent="rocket"]
 anims/1 = SubResource( 59 )
 anims/2 = SubResource( 60 )
-script = ExtResource( 44 )
+script = ExtResource( 43 )
 cuscene_id = 1
 autoplay2 = false
 
-[node name="PopUp" parent="rocket" instance=ExtResource( 45 )]
+[node name="PopUp" parent="rocket" instance=ExtResource( 44 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="rocket"]
 editor/display_folded = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=1]
 [ext_resource path="res://sprites/grass.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=20]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=21]
 [ext_resource path="res://assets/plant.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=23]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3893.01, 10.7424 )
@@ -396,4 +397,7 @@ position = Vector2( 18471, 708.15 )
 
 [node name="pos" type="Node2D" parent="."]
 position = Vector2( 222.771, 509 )
+
+[node name="Mont" parent="pos" instance=ExtResource( 23 )]
+position = Vector2( 18748.3, 202.337 )
 
