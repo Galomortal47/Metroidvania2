@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://assets/Villager.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/Music Player.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/plant.tscn" type="PackedScene" id=16]
+[ext_resource path="res://sprites/hp buy.png" type="Texture" id=17]
+[ext_resource path="res://Scripts/hp buy.gd" type="Script" id=18]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1463.3, 18.0403 )
@@ -30,6 +33,7 @@ extents = Vector2( 5849.86, 10 )
 position = Vector2( -0.429321, 1.7171 )
 
 [node name="Ground" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 collision_layer = 17
 collision_mask = 17
@@ -331,4 +335,23 @@ position = Vector2( 8750.25, 40.8083 )
 
 [node name="plant4" parent="plants" instance=ExtResource( 16 )]
 position = Vector2( 11857.4, 724.053 )
+
+[node name="hp buy" type="Sprite" parent="."]
+position = Vector2( 9402.58, 677.953 )
+texture = ExtResource( 17 )
+script = ExtResource( 18 )
+
+[node name="RayCast2D" type="RayCast2D" parent="hp buy"]
+position = Vector2( -64.0254, 61.6418 )
+enabled = true
+cast_to = Vector2( 150, 0 )
+
+[node name="Label" type="Label" parent="hp buy"]
+margin_left = -48.917
+margin_top = -45.5042
+margin_right = 64.083
+margin_bottom = -16.5042
+custom_fonts/font = ExtResource( 19 )
+text = "X TO BUY HEALTH
+PRICE : 2000"
 

@@ -2,7 +2,8 @@ extends Node
 
 var save = "res://save.json"
 var file = File.new()
-var data = {"hp":20,
+var data = {"hp":4,
+"hp_max":4,
 "level":"res://assets/Room.tscn",
 "money":0,"position_x":690,
 "position_y":460,

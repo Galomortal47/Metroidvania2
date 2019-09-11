@@ -552,6 +552,7 @@ anims/roll = SubResource( 4 )
 anims/swin = SubResource( 5 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 z_index = 4096
 
@@ -1010,6 +1011,7 @@ color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( -511.296, -299.554, -514.979, 292.213, 535.959, 302.034, 532.276, -308.148 )
 
 [node name="Grab" type="RayCast2D" parent="."]
+editor/display_folded = true
 position = Vector2( 0, -50 )
 enabled = true
 cast_to = Vector2( 0, 100 )
