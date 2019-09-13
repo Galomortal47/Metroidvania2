@@ -86,7 +86,7 @@ margin_bottom = 223.488
 custom_fonts/font = ExtResource( 3 )
 text = "Credits:
 Code and Art: Galo
-Music: RopeBoyo"
+Music: RopeBoyo and chasebethea"
 
 [connection signal="button_down" from="Continue" to="." method="_on_Continue_button_down"]
 [connection signal="button_down" from="New Game" to="." method="_on_New_Game_button_down"]
