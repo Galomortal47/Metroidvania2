@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/bullet.gd" type="Script" id=1]
 [ext_resource path="res://assets/CPUParticles2D2.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sonds/shoot.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Sonds/alts/collide_explosion.ogg" type="AudioStream" id=3]
 [ext_resource path="res://sprites/light.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Light2D.gd" type="Script" id=5]
 

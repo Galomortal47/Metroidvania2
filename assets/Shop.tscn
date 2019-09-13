@@ -16331,6 +16331,7 @@ text = "Shop
 "
 
 [node name="Scale" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 100, -27.484 )
 z_index = 5
 
@@ -16825,7 +16826,6 @@ region_enabled = true
 region_rect = Rect2( 8, 96, 35, 19 )
 
 [node name="Shop_Select" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="Icons" type="Node2D" parent="Shop_Select"]
 position = Vector2( -36.694, -58.2787 )
@@ -16873,24 +16873,23 @@ scale = Vector2( 1, -1 )
 texture = ExtResource( 10 )
 
 [node name="icon9" type="Sprite" parent="Shop_Select/Icons"]
-visible = false
 position = Vector2( 920.365, 544.549 )
 scale = Vector2( 1, -1 )
 texture = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="Shop_Select/Icons"]
-margin_left = 394.831
-margin_top = 475.81
-margin_right = 534.831
-margin_bottom = 489.81
+margin_left = 395.0
+margin_top = 463.62
+margin_right = 590.0
+margin_bottom = 499.62
 custom_fonts/font = ExtResource( 2 )
 text = "X:Buy for a Bolts"
 
 [node name="Line2D" type="Line2D" parent="Shop_Select/Icons/Label"]
-position = Vector2( -5.14423, 16.2902 )
+position = Vector2( -4.37046, -5.37566 )
 z_index = -1
 points = PoolVector2Array( 0, 0, 200, 0 )
-width = 50.0
+width = 100.0
 default_color = Color( 0, 0, 0, 0.588235 )
 texture_mode = 1052819649
 

@@ -17,7 +17,8 @@ var data = {"hp":4,
 "cutscenes":[true,true,true,true,true,true,true,true],
 "carry" : false,
 "little_girl" : false,
-"climate" : "clear"
+"climate" : "clear",
+"damage" : [0,0.01,0.1,0.1,0.1,0.5,0,0]
 }
 
 

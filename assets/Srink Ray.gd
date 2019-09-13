@@ -6,6 +6,7 @@ var ammo = 0
 var ammo_max = 0
 var shrink =false
 var mag_aux
+var damage
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel") and have and enable and not shrink:

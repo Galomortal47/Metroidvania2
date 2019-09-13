@@ -10,6 +10,7 @@ var enable = false
 var ammo = 0
 var ammo_max = 0
 var mag_aux
+var damage
 
 func _ready():
 	if get_node("/root/Test/Hooks").get_child_count() > 0:

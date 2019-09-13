@@ -28,7 +28,7 @@ func _ready():
 func _process(delta):
 	match state:
 		"walk":
-			max_speed = 500
+			max_speed = 600
 			jump = 40
 			jump_count_aux = 10
 			move()

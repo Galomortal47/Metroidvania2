@@ -5,6 +5,7 @@ var select_aux = select
 var menu_size = 8
 var a = 0
 var guns = [false,false,false,false,false,false,false,false]
+var damage = [0,0.01,0.1,0.1,0.1,0.5,0,0]
 var timer = 0.5
 var time_aux
 var size_selected = Vector2(0.4,-0.4)
@@ -20,6 +21,7 @@ func _ready():
 		get_parent().get_node("Weapons").get_child(i).have = get_parent().get_node("Save").data.guns[i]
 		get_parent().get_node("Weapons").get_child(i).mag_aux = get_parent().get_node("Save").data.magazine[i]
 		get_parent().get_node("Weapons").get_child(i).ammo = get_parent().get_node("Save").data.ammo[i]
+		get_parent().get_node("Weapons").get_child(i).damage = get_parent().get_node("Save").data.damage[i]
 	guns = get_parent().get_node("Save").data.guns
 
 func icon_generate():

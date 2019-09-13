@@ -21,9 +21,9 @@
 [ext_resource path="res://Scripts/Air Meter.gd" type="Script" id=19]
 [ext_resource path="res://assets/Sword.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scripts/Audio Manager.gd" type="Script" id=21]
-[ext_resource path="res://Sonds/footsteps.ogg" type="AudioStream" id=22]
-[ext_resource path="res://Sonds/roll.ogg" type="AudioStream" id=23]
-[ext_resource path="res://Sonds/jump.ogg" type="AudioStream" id=24]
+[ext_resource path="res://Sonds/alts/footstep1.ogg" type="AudioStream" id=22]
+[ext_resource path="res://Sonds/alts/roll.ogg" type="AudioStream" id=23]
+[ext_resource path="res://Sonds/alts/jump.ogg" type="AudioStream" id=24]
 [ext_resource path="res://Sonds/water.ogg" type="AudioStream" id=25]
 [ext_resource path="res://assets/TouchScreen.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Scripts/TouchScreen.gd" type="Script" id=27]
@@ -962,7 +962,6 @@ collision_mask = 36
 damage = 0.25
 
 [node name="Audio Manager" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 21 )
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="Audio Manager"]
@@ -971,6 +970,7 @@ autoplay = true
 
 [node name="Roll" type="AudioStreamPlayer" parent="Audio Manager"]
 stream = ExtResource( 23 )
+pitch_scale = 2.0
 autoplay = true
 
 [node name="Jump" type="AudioStreamPlayer" parent="Audio Manager"]
@@ -989,10 +989,10 @@ script = ExtResource( 28 )
 
 [node name="Pause" type="Node" parent="."]
 pause_mode = 2
-editor/display_folded = true
 script = ExtResource( 29 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Pause"]
+editor/display_folded = true
 
 [node name="Label" type="Label" parent="Pause/CanvasLayer"]
 visible = false

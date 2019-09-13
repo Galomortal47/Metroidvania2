@@ -53,8 +53,10 @@ func animations():
 		get_parent().get_node("Polygon2D/Label").set_scale(Vector2(8,8))
 	if not int(get_parent().get_parent().motion.x) == 0:
 		get_parent().get_node("AnimationPlayer").set_speed_scale(get_parent().get_parent().motion.x/500) 
-	else:
+	elif not Input.is_action_pressed("ui_roll"):
 		get_parent().get_node("AnimationPlayer").set_speed_scale(1) 
+	else:
+		get_parent().get_node("AnimationPlayer").set_speed_scale(get_parent().get_parent().motion.x/500)  
 #	pass
 
 func shoot_dir(var hide):
