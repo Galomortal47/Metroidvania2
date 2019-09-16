@@ -17,7 +17,6 @@ func _ready():
 
 func _on_Continue_button_down():
 	save.loader()
-	save.save()
 	get_tree().change_scene(save.data.level)
 	pass # Replace with function body.
 

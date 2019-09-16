@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var motion = Vector2(0,0)
-var speed = 50
+var speed = 100
 var max_speed = 500
 var drag = 0.8
 var gravity = 10

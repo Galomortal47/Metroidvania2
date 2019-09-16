@@ -87,6 +87,7 @@ func select(var x = 0):
 			select[i] = false
 
 func _on_Bullet_Time_animation_finished(anim_name):
+	print("anim")
 	if anim_name == "timer":
 		timer = time_aux
 	pass # Replace with function body.
