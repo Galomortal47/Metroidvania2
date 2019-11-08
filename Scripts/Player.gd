@@ -10,8 +10,8 @@ var jump_ledge = 300
 var jump_aux = 0.0
 var jump_timer = 0.15
 var air_speed = 8
-var roll = 400
-var roll_height = 50
+var roll = 2000
+var roll_height = 150
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
 var state = "walk"
@@ -105,20 +105,25 @@ func die():
 		state = "death"
 
 func roll():
-	if Input.is_action_pressed("ui_roll") and not ledge_detect() and not get_node("Scale/Scientist anim").is_visible():
+	if Input.is_action_just_pressed("ui_roll") and not ledge_detect():
 		if Input.is_action_pressed("ui_right"):
 			if ground_detect():
-				if motion.x < max_speed + roll:
-					motion.x += roll
+				motion.x += roll
 				motion.y -= roll_height
 		elif Input.is_action_pressed("ui_left"):
 			if ground_detect():
-				if motion.x > -max_speed - roll:
-					motion.x -= roll
+				motion.x -= roll
 				motion.y -= roll_height
 	if Input.is_action_pressed("ui_roll"):
 		$CollisionShape2D/Colision.set_current_animation("roll")
+		motion.x *= 0.97
 	else:
+		if Input.is_action_pressed("ui_right"):
+			if ground_detect():
+				motion.x = max_speed
+		elif Input.is_action_pressed("ui_left"):
+			if ground_detect():
+				motion.x = -max_speed
 		$CollisionShape2D/Colision.set_current_animation("normal")
 
 func ledge_grab():

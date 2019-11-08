@@ -22,8 +22,8 @@
 [ext_resource path="res://assets/Sword.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scripts/Audio Manager.gd" type="Script" id=21]
 [ext_resource path="res://Sonds/alts/footstep1.ogg" type="AudioStream" id=22]
-[ext_resource path="res://Sonds/alts/roll.ogg" type="AudioStream" id=23]
-[ext_resource path="res://Sonds/alts/jump.ogg" type="AudioStream" id=24]
+[ext_resource path="res://Sonds/roll.ogg" type="AudioStream" id=23]
+[ext_resource path="res://Sonds/jump.ogg" type="AudioStream" id=24]
 [ext_resource path="res://Sonds/water.ogg" type="AudioStream" id=25]
 [ext_resource path="res://assets/TouchScreen.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Scripts/TouchScreen.gd" type="Script" id=27]
@@ -565,7 +565,7 @@ position = Vector2( 2.71121, -3.16309 )
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 3.0
 default_color = Color( 0.458824, 0.368627, 0.160784, 1 )
-texture_mode = -1039925248
+texture_mode = 1065353216
 
 [node name="Bomb" type="Node2D" parent="Weapons"]
 script = ExtResource( 4 )
@@ -694,11 +694,12 @@ z_index = -1
 points = PoolVector2Array( -25, 7, 60, 7 )
 width = 13.0
 default_color = Color( 0, 0, 0, 0.501961 )
-texture_mode = -1039925248
+texture_mode = 1541963456
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
+editor/display_folded = true
 script = ExtResource( 11 )
 
 [node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
@@ -726,7 +727,7 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = -1039925248
+texture_mode = 1541963456
 
 [node name="icon1" type="Sprite" parent="Menu Items/Menu"]
 editor/display_folded = true
@@ -743,7 +744,7 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = -1039925248
+texture_mode = 1541963456
 
 [node name="icon2" type="Sprite" parent="Menu Items/Menu"]
 editor/display_folded = true
@@ -864,11 +865,12 @@ align = 1
 autowrap = true
 
 [node name="Bullet Time" type="Line2D" parent="Menu Items/Menu"]
+visible = false
 position = Vector2( 0, 29.9285 )
 scale = Vector2( 0.71, 1 )
 points = PoolVector2Array( -50, 40, 50, 40 )
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = -1039925248
+texture_mode = 0
 begin_cap_mode = 2
 end_cap_mode = 2
 
@@ -961,6 +963,7 @@ collision_mask = 36
 damage = 0.25
 
 [node name="Audio Manager" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 21 )
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="Audio Manager"]
@@ -969,7 +972,7 @@ autoplay = true
 
 [node name="Roll" type="AudioStreamPlayer" parent="Audio Manager"]
 stream = ExtResource( 23 )
-pitch_scale = 2.0
+pitch_scale = 0.5
 autoplay = true
 
 [node name="Jump" type="AudioStreamPlayer" parent="Audio Manager"]
@@ -988,10 +991,10 @@ script = ExtResource( 28 )
 
 [node name="Pause" type="Node" parent="."]
 pause_mode = 2
+editor/display_folded = true
 script = ExtResource( 29 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Pause"]
-editor/display_folded = true
 
 [node name="Label" type="Label" parent="Pause/CanvasLayer"]
 visible = false

@@ -8,8 +8,8 @@ func _ready():
 
 func _process(delta):
 	if is_colliding():
-		if get_collider().get_node("Scale/Scientist anim").is_visible():
-			get_collider().get_node("Scale/Scientist anim").hide()
+		if get_collider().get_node("Scale/Animation/Hips/Scientist anim").is_visible():
+			get_collider().get_node("Scale/Animation/Hips/Scientist anim").hide()
 			$"little girl carry".show()
 			save.loader()
 			save.data.little_girl = true

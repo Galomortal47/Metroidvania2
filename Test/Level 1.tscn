@@ -16954,40 +16954,47 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 54.14, 52 ), Vector2( 54.14, 52 ), Vector2( 126.513, 9.35215 ), Vector2( 189.838, 28.7375 ) ]
 }
-tracks/4/type = "animation"
-tracks/4/path = NodePath("PopUp/AnimationPlayer")
+tracks/4/type = "value"
+tracks/4/path = NodePath("Scientist anim/Animation/Hips/Belt:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"clips": PoolStringArray( "PopUp", "CloseUp" ),
-"times": PoolRealArray( 0, 5.5 )
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Scientist anim/Animation/Hips/Belt:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
 "times": PoolRealArray( 0, 1, 5.5, 5.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ -52.6593, -48.2521, -52.6593, -81.4045 ]
 }
-tracks/6/type = "method"
-tracks/6/path = NodePath(".")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
 "times": PoolRealArray( 7 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "carry"
+} ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("CanvasLayer/PopUp")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 5.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "pop_up"
+}, {
+"args": [  ],
+"method": "close_up"
 } ]
 }
 
@@ -17050,6 +17057,7 @@ __meta__ = {
 }
 
 [node name="Ground" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="grass" type="TextureRect" parent="Ground"]
 margin_left = -342.0
@@ -17578,6 +17586,7 @@ position = Vector2( -3123.18, 665.23 )
 position = Vector2( -9923.78, 328.391 )
 
 [node name="Boxes" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true
@@ -17815,31 +17824,38 @@ position = Vector2( 184.282, 553.485 )
 [node name="Node2D" type="Node2D" parent="Boxes"]
 
 [node name="Platfroms" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Platform4" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -5996.3, 321.451 )
+position = Vector2( -6045.33, -75.127 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform5" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -6175.57, 284.36 )
+position = Vector2( -6276.65, -144.753 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform6" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -6444.47, 169.998 )
+position = Vector2( -6493.5, -226.58 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform7" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -6747.38, -15.4543 )
+position = Vector2( -6796.4, -412.032 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform8" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -7031.74, -210.179 )
+position = Vector2( -7080.76, -606.757 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform9" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -10099.6, -47.9525 )
+position = Vector2( -10048.6, -397.83 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform10" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -10339.6, -141.717 )
+position = Vector2( -10288.6, -491.594 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform11" parent="Platfroms" instance=ExtResource( 17 )]
-position = Vector2( -10516.2, -285.919 )
+position = Vector2( -10465.2, -635.796 )
+scale = Vector2( 2, 2 )
 
 [node name="Swin" type="Node2D" parent="."]
 editor/display_folded = true
@@ -17884,7 +17900,6 @@ position = Vector2( -5821.56, -831.195 )
 position = Vector2( -8867.35, -801.194 )
 
 [node name="Art" type="Node2D" parent="."]
-editor/display_folded = true
 z_index = -1
 
 [node name="mushroom" type="Sprite" parent="Art"]
@@ -18207,7 +18222,6 @@ rotation = 3.49066
 enabled = true
 
 [node name="plant3" type="Sprite" parent="Art"]
-editor/display_folded = true
 position = Vector2( -6659.1, 23.7162 )
 rotation = 0.034481
 z_index = 1
@@ -18379,7 +18393,6 @@ position = Vector2( -12068.3, -16.2644 )
 [node name="Day Night cycle" parent="." instance=ExtResource( 33 )]
 
 [node name="rocket" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( -11685.5, -43.9109 )
 texture = ExtResource( 34 )
 script = ExtResource( 35 )
@@ -18419,7 +18432,7 @@ region_rect = Rect2( 7.625, 107.313, 21, 17.75 )
 [node name="Belt" type="Sprite" parent="rocket/Scientist anim/Animation/Hips"]
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -1.97421, -6.73163 )
-rotation = -0.919078
+rotation = -0.910532
 texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 10.75, 95, 4.5, 6 )
@@ -18516,6 +18529,7 @@ scale = Vector2( 0.2, 0.2 )
 
 [node name="Neck" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body"]
 position = Vector2( 1.19008, -6.09009 )
+rotation = 0.516434
 texture = ExtResource( 37 )
 region_enabled = true
 region_rect = Rect2( 53.375, 20.25, 14, 8.125 )
@@ -18841,9 +18855,11 @@ script = ExtResource( 43 )
 cuscene_id = 1
 autoplay2 = false
 
-[node name="PopUp" parent="rocket" instance=ExtResource( 44 )]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="rocket"]
+
+[node name="PopUp" parent="rocket/CanvasLayer" instance=ExtResource( 44 )]
+position = Vector2( 63.9634, 507.971 )
+text = "Help, Tey Stole a the Scients Machines"
 
 [node name="Polygon2D" type="Polygon2D" parent="rocket/CanvasLayer"]
 modulate = Color( 1, 1, 1, 0 )

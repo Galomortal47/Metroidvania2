@@ -97,7 +97,6 @@ position = Vector2( -8.12115, 27.9898 )
 motion_scale = Vector2( 0.1, 1 )
 
 [node name="Node2D" type="Node2D" parent="ParallaxBackground/ParallaxLayer6"]
-editor/display_folded = true
 position = Vector2( 0, -423.161 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer6/Node2D"]
@@ -114,7 +113,6 @@ rotation = -1.5708
 texture = ExtResource( 2 )
 
 [node name="Node2D2" type="Node2D" parent="ParallaxBackground/ParallaxLayer6"]
-editor/display_folded = true
 position = Vector2( -89.6261, 355.574 )
 
 [node name="moon" type="Sprite" parent="ParallaxBackground/ParallaxLayer6/Node2D2"]
@@ -219,7 +217,6 @@ position = Vector2( -0.429321, 1.7171 )
 color = Color( 0.92549, 0.964706, 0.968627, 1 )
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground2"]
 editor/display_folded = true
@@ -239,7 +236,6 @@ position = Vector2( -0.429321, 1.7171 )
 color = Color( 0.92549, 0.964706, 0.968627, 1 )
 
 [node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 layer = 1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
@@ -277,7 +273,6 @@ position = Vector2( -0.429321, 1.7171 )
 color = Color( 0.92549, 0.964706, 0.968627, 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="light2" type="Sprite" parent="CanvasLayer"]
 visible = false
@@ -297,7 +292,6 @@ text = "00:00"
 script = ExtResource( 15 )
 
 [node name="Trees2" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Trees2"]
 modulate = Color( 0.54902, 0.513726, 0.513726, 1 )
@@ -317,7 +311,6 @@ expand = true
 stretch_mode = 2
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Trees2"]
-editor/display_folded = true
 modulate = Color( 0.54902, 0.513726, 0.513726, 1 )
 position = Vector2( -723.218, -37.8429 )
 motion_scale = Vector2( 0.9, 1 )
@@ -337,7 +330,6 @@ position = Vector2( -0.429321, 1.7171 )
 color = Color( 0.92549, 0.964706, 0.968627, 1 )
 
 [node name="Rain" type="CanvasLayer" parent="."]
-editor/display_folded = true
 script = ExtResource( 18 )
 
 [node name="Rain" type="CPUParticles2D" parent="Rain"]

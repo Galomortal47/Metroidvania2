@@ -808,19 +808,19 @@ tracks/66/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.04167, 0.95012 ), Vector2( 0.927081, 1.10429 ), Vector2( 1, 1 ) ]
 }
 tracks/67/type = "value"
-tracks/67/path = NodePath("Scientist anim:position")
+tracks/67/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body:rotation_degrees")
 tracks/67/interp = 1
 tracks/67/loop_wrap = true
 tracks/67/imported = false
 tracks/67/enabled = true
 tracks/67/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 12.9558, -3.74467 ), Vector2( 12.9558, 0.333459 ), Vector2( 12.9558, -1.02592 ), Vector2( 12.9558, -3.74467 ) ]
+"values": [ 0.0 ]
 }
 tracks/68/type = "value"
-tracks/68/path = NodePath("Scientist anim:rotation_degrees")
+tracks/68/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body:position")
 tracks/68/interp = 1
 tracks/68/loop_wrap = true
 tracks/68/imported = false
@@ -829,18 +829,6 @@ tracks/68/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0 ]
-}
-tracks/69/type = "value"
-tracks/69/path = NodePath("Scientist anim:z_index")
-tracks/69/interp = 1
-tracks/69/loop_wrap = true
-tracks/69/imported = false
-tracks/69/enabled = true
-tracks/69/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ -2 ]
+"values": [ Vector2( 1.44602, -8.38152 ) ]
 }
 

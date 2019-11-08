@@ -10,9 +10,9 @@ func _process(delta):
 		$Footsteps.set_volume_db(-50)
 	if Input.is_action_pressed("ui_roll"):
 		if get_parent().motion.x > 0:
-			$Roll.set_pitch_scale(get_parent().motion.x/500)
+			$Roll.set_pitch_scale(get_parent().motion.x/1000)
 		else:
-			$Roll.set_pitch_scale(get_parent().motion.x/-500)
+			$Roll.set_pitch_scale(get_parent().motion.x/-1000)
 		$Roll.set_volume_db(0)
 	else:
 		$Roll.set_volume_db(-50)

@@ -97,8 +97,8 @@ tracks/5/keys = {
 
 [node name="Box" type="KinematicBody2D" groups=[
 "enemy",
-"grabable",
 "destroy",
+"grabable",
 ]]
 modulate = Color( 0.423529, 0.423529, 0.423529, 1 )
 z_index = 2

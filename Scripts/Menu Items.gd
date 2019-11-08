@@ -36,13 +36,8 @@ func weapon_sprite(var select):
 func _process(delta):
 	guns_have()
 	if Input.is_action_pressed("ui_select"):
-		timer -= delta
-		if timer > 0:
-			$"Menu/Bullet Time/Bullet Time".play("timer")
-			Engine.set_time_scale(0.1) 
-		else:
-			Engine.set_time_scale(1) 
 		$"Menu Anim".set_current_animation("open")
+		Engine.set_time_scale(0.1) 
 	else:
 		$"Menu Anim".set_current_animation("close")
 #		$Menu.set_scale(Vector2(0,0))

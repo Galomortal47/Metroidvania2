@@ -14,7 +14,7 @@ func animations():
 			$Chocobo.hide()
 			get_parent().get_node("Chocobo").stop()
 			shoot_dir(true)
-			if Input.is_action_pressed("ui_roll") and not get_parent().get_node("Scientist anim").is_visible():
+			if Input.is_action_pressed("ui_roll"):
 				get_parent().get_node("AnimationPlayer").set_current_animation("roll")
 			if not get_parent().get_parent().ground_detect() and not get_parent().get_parent().ledge_detect() and not Input.is_action_pressed("ui_roll"):
 				get_parent().get_node("AnimationPlayer").set_current_animation("Jump")
@@ -39,7 +39,7 @@ func animations():
 				get_parent().get_node("Chocobo").play("idle")
 			elif get_parent().get_parent().ground_detect():
 				get_parent().get_node("Chocobo").play("walk")
-			else:
+			if not get_parent().get_parent().ground_detect():
 				get_parent().get_node("Chocobo").play("jump")
 		"death":
 			get_parent().get_node("Death").set_current_animation("Die")
@@ -48,12 +48,14 @@ func animations():
 	if int(get_parent().get_parent().motion.x) > 0:
 		get_parent().set_scale(Vector2(-1,get_parent().get_scale().y))
 		get_parent().get_node("Polygon2D/Label").set_scale(Vector2(-8,8))
-	if int(get_parent().get_parent().motion.x) < -0:
+		particles_func()
+	if int(get_parent().get_parent().motion.x) < 0:
 		get_parent().set_scale(Vector2(1,get_parent().get_scale().y))
 		get_parent().get_node("Polygon2D/Label").set_scale(Vector2(8,8))
-	if not int(get_parent().get_parent().motion.x) == 0:
-		get_parent().get_node("AnimationPlayer").set_speed_scale(get_parent().get_parent().motion.x/500) 
-	elif not Input.is_action_pressed("ui_roll"):
+		particles_func()
+	elif int(get_parent().get_parent().motion.x) == 0:
+		$CPUParticles2D.emitting = false
+	if not Input.is_action_pressed("ui_roll") or get_parent().get_parent().ground_detect():
 		get_parent().get_node("AnimationPlayer").set_speed_scale(1) 
 	else:
 		get_parent().get_node("AnimationPlayer").set_speed_scale(get_parent().get_parent().motion.x/500)  
@@ -76,3 +78,9 @@ func shoot_dir(var hide):
 func _on_Death_animation_finished(anim_name):
 	get_tree().change_scene("res://assets/Main_Menu.tscn")
 	pass # Replace with function body.
+
+func particles_func():
+	if  get_parent().get_parent().ground_detect():
+		$CPUParticles2D.emitting = true
+	else:
+		$CPUParticles2D.emitting = false

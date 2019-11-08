@@ -43,9 +43,9 @@ default_color = Color( 0, 0, 0, 0.392157 )
 texture_mode = 524289648
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 0, -50 )
+position = Vector2( -75, 0 )
 enabled = true
-cast_to = Vector2( 0, 100 )
+cast_to = Vector2( 150, 0 )
 
 [node name="Timer" type="Timer" parent="."]
 
