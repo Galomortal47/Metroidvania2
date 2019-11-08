@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node2D
 
 var rain_chance = 10000
 var snow_chance = 30000

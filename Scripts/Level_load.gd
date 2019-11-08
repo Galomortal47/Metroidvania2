@@ -35,5 +35,5 @@ func save(var player,var pos):
 	save.data.position_x = pos.get_position().x
 	var day = player.get_parent().get_node("Day Night cycle")
 	save.data.time = day.get_current_animation_position()
-	save.data.climate = day.get_node("Rain").climate
+	save.data.climate = player.get_node("Rain").climate
 	save.save()

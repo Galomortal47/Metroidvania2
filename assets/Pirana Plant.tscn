@@ -1,0 +1,781 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scripts/Boss.gd" type="Script" id=1]
+[ext_resource path="res://sprites/shadow.png" type="Texture" id=2]
+[ext_resource path="res://sprites/boss.png" type="Texture" id=3]
+[ext_resource path="res://sprites/crown.png" type="Texture" id=4]
+[ext_resource path="res://Sonds/attack.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Sonds/hurt.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/Health.tscn" type="PackedScene" id=7]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0.9752 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Animation" id=4]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Root:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Root/stem1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 12.136, 20.6793, 12.136 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Root/stem1/stem2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 39.1893, 18.1241, 39.1893 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Root/stem1/stem2/stem3:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -28.7873, -32.2857, -28.7873 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Root/stem1/stem2/stem3/stem4:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -67.1446, -71.7457, -67.1446 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -53.5929, -36.4039, -53.5929 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/leaf:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 98.1995, 103.358, 98.1995 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/leaf2:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -81.0456, -78.2107, -81.0456 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/mouth Bottom:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 80.2514, 72.3929, 80.2514 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/Mouth Top:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 107.523, 115.343, 107.523 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Root:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2, 2 ), Vector2( 2.2, 1.8 ), Vector2( 2, 2 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Root:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Root/stem1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 0.80329, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 12.136, 37.4157, 2.42246, -4.02878, 2.42246, 12.136 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Root/stem1/stem2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 39.1893, 11.5725, -51.869, -51.869, 39.1893 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Root/stem1/stem2/stem3:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -28.7873, -12.1304, -28.2299, -28.2299, -28.7873 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Root/stem1/stem2/stem3/stem4:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.8, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -67.1446, -7.86858, -7.86858, -67.1446 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -53.5929, -68.493, -21.3335, -21.3335, -53.5929 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/leaf:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 98.1995, 98.1995 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/leaf2:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -81.0456, -81.0456 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/mouth Bottom:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 80.2514, 42.688, 84.6889, 84.6889, 80.2514 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/Mouth Top:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 107.523, 155.434, 93.5032, 113.603, 107.523 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Root:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ) ]
+}
+tracks/11/type = "audio"
+tracks/11/path = NodePath("AudioStreamPlayer2D")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 5 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=6]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Root:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Root/stem1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 0.80329, 1.5, 1.50329, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 12.136, 37.4157, 2.42246, -4.02878, 2.42246, -4.02878, 12.136 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Root/stem1/stem2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 39.1893, 11.5725, -51.869, -51.869, 39.1893 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Root/stem1/stem2/stem3:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -28.7873, -12.1304, -28.2299, -28.2299, -28.7873 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Root/stem1/stem2/stem3/stem4:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -67.1446, -7.86858, -7.86858, -67.1446 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -53.5929, -68.493, -21.3335, -21.3335, -53.5929 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/leaf:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 98.1995, 98.1995 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/leaf2:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -81.0456, -81.0456 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/mouth Bottom:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 80.2514, 42.688, 84.6889, 84.6889, 80.2514 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/Mouth Top:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 107.523, 155.434, 93.5032, 113.603, 107.523 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Root:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ) ]
+}
+tracks/11/type = "audio"
+tracks/11/path = NodePath("AudioStreamPlayer2D")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=7]
+length = 2.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Root:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2, 2 ), Vector2( 1e-005, 1e-005 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.57 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "dead"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CPUParticles2D:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0.01 )
+}
+
+[sub_resource type="Animation" id=8]
+length = 2.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("CPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Root/stem1/stem2/stem3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -28.7873, 18.6454, -28.7873 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Root/stem1/stem2/stem3/stem4:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -67.1444, -25.3589, -67.1444 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -53.5929, -27.7876, -53.5929 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Root/stem1:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 12.136, 25.418, 12.136 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/mouth Bottom:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 80.2513, 16.6255, 80.2513 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Root/stem1/stem2/stem3/stem4/stem5/Mouth Top:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 107.524, 192.37, 107.524 ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "death"
+} ]
+}
+tracks/8/type = "audio"
+tracks/8/path = NodePath("AudioStreamPlayer2D")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0.04 )
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 23.1191, 21.5491 )
+
+[node name="Pirana Plant" type="KinematicBody2D" groups=[
+"enemy",
+]]
+position = Vector2( 244.139, 97.523 )
+scale = Vector2( 0.5, 0.5 )
+collision_layer = 5
+collision_mask = 5
+script = ExtResource( 1 )
+vida = 3
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( -492.289, -200.184 )
+emitting = false
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 193.55
+scale_amount = 64.0
+scale_amount_random = 0.67
+scale_amount_curve = SubResource( 1 )
+
+[node name="shadow" type="Sprite" parent="."]
+position = Vector2( -492.414, -153.984 )
+scale = Vector2( 4, 2 )
+z_index = -10
+texture = ExtResource( 2 )
+
+[node name="player detection" type="RayCast2D" parent="."]
+position = Vector2( -558.57, -200.512 )
+enabled = true
+cast_to = Vector2( -380, 0 )
+collision_mask = 5
+
+[node name="Root" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( -494.725, -183.564 )
+scale = Vector2( 1e-005, 1e-005 )
+z_index = -10
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 97, 21, 48, 46 )
+
+[node name="stem1" type="Sprite" parent="Root"]
+position = Vector2( 2.02008, -7.14214 )
+rotation = 0.211813
+texture = ExtResource( 3 )
+offset = Vector2( 0.18512, -17.1159 )
+region_enabled = true
+region_rect = Rect2( 180, 91, 16, 46 )
+
+[node name="stem2" type="Sprite" parent="Root/stem1"]
+position = Vector2( 0.270172, -25.397 )
+rotation = 0.683982
+texture = ExtResource( 3 )
+offset = Vector2( 0.18512, -17.1159 )
+region_enabled = true
+region_rect = Rect2( 180, 91, 16, 46 )
+
+[node name="stem3" type="Sprite" parent="Root/stem1/stem2"]
+position = Vector2( -0.333191, -26.9185 )
+rotation = -0.502433
+texture = ExtResource( 3 )
+offset = Vector2( 0.18512, -17.1159 )
+region_enabled = true
+region_rect = Rect2( 180, 91, 16, 46 )
+
+[node name="stem4" type="Sprite" parent="Root/stem1/stem2/stem3"]
+position = Vector2( -0.984528, -24.8165 )
+rotation = -1.17189
+texture = ExtResource( 3 )
+offset = Vector2( 0.18512, -17.1159 )
+region_enabled = true
+region_rect = Rect2( 180, 91, 16, 46 )
+
+[node name="stem5" type="Sprite" parent="Root/stem1/stem2/stem3/stem4"]
+position = Vector2( 1.09494, -25.9199 )
+rotation = -0.935373
+texture = ExtResource( 3 )
+offset = Vector2( 0.18512, -17.1159 )
+region_enabled = true
+region_rect = Rect2( 180, 91, 16, 46 )
+
+[node name="leaf" type="Sprite" parent="Root/stem1/stem2/stem3/stem4/stem5"]
+position = Vector2( -1.83004, -31.07 )
+rotation = 1.7139
+texture = ExtResource( 3 )
+offset = Vector2( 0.452271, -20.7782 )
+region_enabled = true
+region_rect = Rect2( 175, 170, 21, 51 )
+
+[node name="leaf2" type="Sprite" parent="Root/stem1/stem2/stem3/stem4/stem5"]
+position = Vector2( -1.17961, -31.7952 )
+rotation = -1.41451
+texture = ExtResource( 3 )
+offset = Vector2( -1.7966, -19.9971 )
+region_enabled = true
+region_rect = Rect2( 175, 170, 21, 51 )
+
+[node name="mouth Bottom" type="Sprite" parent="Root/stem1/stem2/stem3/stem4/stem5"]
+position = Vector2( -0.0613403, -41.8032 )
+rotation = 1.40065
+texture = ExtResource( 3 )
+offset = Vector2( -29.4694, 8.08078 )
+region_enabled = true
+region_rect = Rect2( 14, 181, 107, 69 )
+
+[node name="Mouth Top" type="Sprite" parent="Root/stem1/stem2/stem3/stem4/stem5"]
+position = Vector2( 10.4604, -42.1422 )
+rotation = 1.87663
+texture = ExtResource( 3 )
+offset = Vector2( -38.7363, -5.33804 )
+region_enabled = true
+region_rect = Rect2( 7, 66, 112, 76 )
+
+[node name="crown" type="Sprite" parent="Root/stem1/stem2/stem3/stem4/stem5/Mouth Top"]
+visible = false
+position = Vector2( -11.0592, -44.2207 )
+rotation = 0.17005
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="Spawn Fireball" type="Timer" parent="Root/stem1/stem2/stem3/stem4/stem5"]
+wait_time = 2.0
+autostart = true
+
+[node name="Damage" type="RayCast2D" parent="Root/stem1/stem2/stem3/stem4/stem5"]
+position = Vector2( -2.11595, -30.1937 )
+rotation = 4.47035e-008
+scale = Vector2( 1, 1 )
+enabled = true
+cast_to = Vector2( 0, -100 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
+anims/Idle = SubResource( 4 )
+anims/attack = SubResource( 5 )
+next/attack = "Idle"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+anims/attack = SubResource( 6 )
+anims/death = SubResource( 7 )
+anims/hurt = SubResource( 8 )
+next/attack = "Idle"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -639.626, -343.94 )
+stream = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -494.725, -183.564 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 3 )
+
+[node name="Health" parent="." instance=ExtResource( 7 )]
+position = Vector2( -487.304, -361.22 )
+health_max = 3.0
+health = 3.0
+
+[connection signal="timeout" from="Root/stem1/stem2/stem3/stem4/stem5/Spawn Fireball" to="." method="_on_Spawn_Fireball_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer2" to="." method="_on_AnimationPlayer2_animation_finished"]

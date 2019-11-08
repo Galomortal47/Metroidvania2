@@ -16872,11 +16872,6 @@ position = Vector2( 862.921, 544.549 )
 scale = Vector2( 1, -1 )
 texture = ExtResource( 10 )
 
-[node name="icon9" type="Sprite" parent="Shop_Select/Icons"]
-position = Vector2( 920.365, 544.549 )
-scale = Vector2( 1, -1 )
-texture = ExtResource( 10 )
-
 [node name="Label" type="Label" parent="Shop_Select/Icons"]
 margin_left = 395.0
 margin_top = 463.62
