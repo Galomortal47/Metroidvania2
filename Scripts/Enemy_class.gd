@@ -51,6 +51,7 @@ func damage():
 		 $Scale/Body/AnimationPlayer2.play("attack")
 
 func shot_player():
+	motion.x *= 0.9
 	if $Vision.is_colliding():
 		if $Vision.get_collider().is_in_group(target) and timer-followtrough < 0:
 			$Timer.start()
@@ -71,6 +72,8 @@ func shot_player():
 			timer = time_aux
 
 #virar raycast em direçao ao jogador se mover ate ele
+
+var dir = "right"
 func hunt_player(var distance):
 	$Damage.set_cast_to(attack)
 	if $Vision.is_colliding():
@@ -81,10 +84,12 @@ func hunt_player(var distance):
 					if motion.x < max_speed:
 						motion.x += speed
 					attack.x = 60
+					dir = "right"
 				elif $Vision.get_collider().get_position().x - get_position().x < 0:
 					if motion.x > -max_speed:
 						motion.x -= speed
 					attack.x = -60
+					dir = "left"
 				if $Vision.get_collider().get_position().y - get_position().y < -30:
 					attack.y = -60
 					motion.y = -jump
@@ -116,7 +121,7 @@ func die():
 		
 
 func stun():
-	if motion.x > 0:
+	if dir == "right":
 		motion += Vector2(-stun2,0)
 	else:
 		motion += Vector2(stun2,0)

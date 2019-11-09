@@ -55,7 +55,7 @@ func animations():
 		particles_func()
 	elif int(get_parent().get_parent().motion.x) == 0:
 		$CPUParticles2D.emitting = false
-	if not get_parent().get_parent().ground_detect():
+	if not get_parent().get_parent().ground_detect() or int(get_parent().get_parent().motion.x) == 0 and not Input.is_action_pressed("ui_roll"):
 		get_parent().get_node("AnimationPlayer").set_speed_scale(1) 
 	else:
 		get_parent().get_node("AnimationPlayer").set_speed_scale(get_parent().get_parent().motion.x/500)  

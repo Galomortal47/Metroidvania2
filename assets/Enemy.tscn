@@ -2254,7 +2254,7 @@ collision_mask = 5
 script = ExtResource( 1 )
 damage = 1
 health = 3
-stun2 = 1000
+stun2 = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

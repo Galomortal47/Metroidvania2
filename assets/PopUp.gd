@@ -9,6 +9,7 @@ func _ready():
 func _input(event):
 	if Input.is_action_just_pressed("ui_roll") and open:
 		$AnimationPlayer.play("CloseUp")
+		open = false
 
 func pop_up():
 	$AnimationPlayer.play("PopUp")
