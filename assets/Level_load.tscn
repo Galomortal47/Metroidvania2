@@ -4,7 +4,7 @@
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 49.4287, 397.679 )
+extents = Vector2( 49.429, 2000 )
 
 [node name="Level_load" type="Area2D"]
 position = Vector2( 6955.75, -332.205 )

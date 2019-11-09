@@ -18465,7 +18465,6 @@ scale = Vector2( 1e-005, 1e-005 )
 gun_id = 0
 
 [node name="Scientist anim" type="Node2D" parent="rocket"]
-editor/display_folded = true
 position = Vector2( 64.041, 53.2135 )
 scale = Vector2( -0.8, 0.8 )
 z_index = 5
@@ -18521,6 +18520,7 @@ region_rect = Rect2( 5.5, 66, 17.5, 20.75 )
 [node name="arm up" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body"]
 position = Vector2( 4.56733, -4.43989 )
 rotation = 0.960289
+scale = Vector2( 1, 0.79 )
 z_index = 3
 texture = ExtResource( 38 )
 offset = Vector2( 4.87874, 3.99989 )
@@ -18546,7 +18546,7 @@ region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
 position = Vector2( -5.45658, -5.08245 )
 rotation = 0.154479
-scale = Vector2( -1, 1 )
+scale = Vector2( -1, 0.79 )
 z_index = -1
 texture = ExtResource( 38 )
 offset = Vector2( 2.59755, 3.87138 )
@@ -18596,6 +18596,7 @@ region_rect = Rect2( 54.25, 10.375, 8.625, 6.875 )
 
 [node name="Head" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck"]
 position = Vector2( 0, -11.2936 )
+scale = Vector2( 1.06, 1.08 )
 texture = ExtResource( 38 )
 region_enabled = true
 region_rect = Rect2( 6.375, 17.8125, 20.25, 19.875 )
@@ -18696,9 +18697,9 @@ region_enabled = true
 region_rect = Rect2( 7.375, 40.5, 11.875, 10 )
 
 [node name="Leg Up" type="Sprite" parent="rocket/Scientist anim/Animation/Hips"]
-position = Vector2( -1.95825, 8.14844 )
+position = Vector2( -1.37646, 6.35156 )
 rotation = -2.63253
-scale = Vector2( 1, -1 )
+scale = Vector2( 1, -0.55 )
 z_index = -1
 texture = ExtResource( 38 )
 region_enabled = true
@@ -18715,9 +18716,9 @@ region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 
 [node name="Leg Up2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips"]
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
-position = Vector2( -5.71371, 9.55371 )
+position = Vector2( -5.06445, 7.83594 )
 rotation = -2.59794
-scale = Vector2( 1, -1 )
+scale = Vector2( 1, -0.55 )
 z_index = -3
 texture = ExtResource( 38 )
 region_enabled = true
