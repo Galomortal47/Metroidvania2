@@ -33,5 +33,5 @@ func grab():
 	boxs.get_parent().remove_child(boxs)
 	var pos = boxs.get_global_position()
 	add_child(boxs)
-	boxs.set_global_position(pos+Vector2(0,-150))
+	boxs.set_position(Vector2(0,0))
 	get_parent().state = "carring"

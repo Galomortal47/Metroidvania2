@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
@@ -491,6 +491,9 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 4, 2 ), Vector2( 1, 1 ) ]
 }
+
+[sub_resource type="OccluderPolygon2D" id=14]
+polygon = PoolVector2Array( -11.2924, 14.9614, 10.5254, -44.7829, -18.0213, -43.9673, 13.1762, 19.6512 )
 
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
@@ -1026,5 +1029,8 @@ polygon = PoolVector2Array( -13.0453, -87.8916, -11.3425, -72.2259, -23.6027, -7
 
 [node name="Rain" parent="." instance=ExtResource( 31 )]
 position = Vector2( -480, -350 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 14 )
 
 [connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]

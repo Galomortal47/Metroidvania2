@@ -15,6 +15,9 @@ func _ready():
 		get_node("Root/stem1/stem2/stem3/stem4/stem5/Mouth Top/crown").hide()
 #	get_node("Root/stem1/stem2/stem3/stem4/stem5/Jumpers").multiplier = mult
 func _process(delta):
+	if $"player detection2".is_colliding():
+		print("col")
+		set_scale(get_scale()*Vector2(-1,1))
 	attack()
 	death()
 	if get_node("player detection").is_colliding():

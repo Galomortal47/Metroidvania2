@@ -159,23 +159,27 @@ position = Vector2( 9599.87, 740.728 )
 scale = Vector2( 1, 1 )
 
 [node name="Platfroms" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 6847.79, -403.441 )
 
 [node name="Platform4" parent="Platfroms" instance=ExtResource( 8 )]
-position = Vector2( 2034.01, 284.362 )
+position = Vector2( 1997, -59.8542 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform5" parent="Platfroms" instance=ExtResource( 8 )]
-position = Vector2( 2173.1, 377.089 )
+position = Vector2( 2136.09, 32.8728 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform6" parent="Platfroms" instance=ExtResource( 8 )]
-position = Vector2( 2306.01, 472.906 )
+position = Vector2( 2269, 128.69 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform7" parent="Platfroms" instance=ExtResource( 8 )]
-position = Vector2( 2435.82, 565.632 )
+position = Vector2( 2398.81, 221.416 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform8" parent="Platfroms" instance=ExtResource( 8 )]
-position = Vector2( 2602.73, 673.813 )
+position = Vector2( 2565.72, 329.597 )
+scale = Vector2( 2, 2 )
 
 [node name="Swin" type="Node2D" parent="."]
 editor/display_folded = true
@@ -322,7 +326,6 @@ collision_mask = 0
 [node name="bolts" type="Node2D" parent="."]
 
 [node name="plants" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="plant" parent="plants" instance=ExtResource( 16 )]
 position = Vector2( 13415.8, 714.292 )

@@ -1,12 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/plant.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/plant.gd" type="Script" id=2]
-[ext_resource path="res://sprites/light.png" type="Texture" id=3]
-[ext_resource path="res://Scripts/Light2D.gd" type="Script" id=4]
-
-[sub_resource type="CanvasItemMaterial" id=1]
-blend_mode = 1
+[ext_resource path="res://assets/light.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=2]
 length = 5.0
@@ -108,21 +104,6 @@ scale = Vector2( 0.836725, 0.802581 )
 texture = ExtResource( 1 )
 offset = Vector2( 7.60596, -46.1156 )
 
-[node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 3 )
-texture_scale = 2.0
-energy = 0.7
-script = ExtResource( 4 )
-
-[node name="light" type="Sprite" parent="Light2D"]
-modulate = Color( 0.368627, 0.772549, 0.827451, 0.4 )
-material = SubResource( 1 )
-position = Vector2( 9.61824, -14.8985 )
-rotation = 0.0926029
-scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 3 )
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/wind = SubResource( 2 )
 "anims/wind (copy)" = SubResource( 3 )
@@ -130,4 +111,9 @@ anims/wind = SubResource( 2 )
 [node name="RayCast2D" type="RayCast2D" parent="."]
 rotation = 3.49066
 enabled = true
+
+[node name="light" parent="." instance=ExtResource( 3 )]
+modulate = Color( 0.0705882, 0.776471, 0.72549, 1 )
+texture_scale = 3.0
+color = Color( 0.270588, 0.898039, 0.811765, 0.392157 )
 

@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Butterfly.gd" type="Script" id=1]
 [ext_resource path="res://sprites/butterfly.png" type="Texture" id=2]
-[ext_resource path="res://sprites/light.png" type="Texture" id=3]
-[ext_resource path="res://Scripts/Light2D.gd" type="Script" id=4]
+[ext_resource path="res://assets/light.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 length = 0.4
@@ -32,9 +31,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 1, -1 ), Vector2( 0.0761537, -1 ), Vector2( 1, -1 ) ]
 }
-
-[sub_resource type="CanvasItemMaterial" id=2]
-blend_mode = 1
 
 [node name="Butterfly" type="KinematicBody2D"]
 position = Vector2( -145.785, 508.567 )
@@ -75,15 +71,11 @@ cast_to = Vector2( 0, 20 )
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="Light2D" type="Light2D" parent="."]
-texture = ExtResource( 3 )
-color = Color( 1, 1, 1, 0.501961 )
-script = ExtResource( 4 )
-
-[node name="light" type="Sprite" parent="Light2D"]
-modulate = Color( 1, 1, 1, 0.196078 )
-material = SubResource( 2 )
-position = Vector2( -3.7626, 1.8107 )
-texture = ExtResource( 3 )
+[node name="light" parent="." instance=ExtResource( 3 )]
+modulate = Color( 0.505882, 0.505882, 0.505882, 1 )
+position = Vector2( -7.30786, 1.90375 )
+texture_scale = 0.5
+color = Color( 1, 1, 1, 0.392157 )
+energy = 0.2
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
