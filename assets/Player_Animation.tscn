@@ -16390,6 +16390,7 @@ region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 
 [node name="Scientist anim" type="Node2D" parent="Animation/Hips"]
 editor/display_folded = true
+visible = false
 position = Vector2( 5.74338, -0.418458 )
 scale = Vector2( -0.6, 0.6 )
 z_index = -4

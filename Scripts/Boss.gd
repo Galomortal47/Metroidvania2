@@ -5,6 +5,7 @@ export var mult = 0
 export var crown = false
 var fireball = load("res://Resources/fireball.tscn")
 var able = false
+var boltspawner = preload("bolt_spawner.gd").new()
 
 func _ready():
 	get_node("Health").set_scale(get_scale()*Vector2(4,4))
@@ -46,7 +47,11 @@ func attack():
 			if Damage.get_collider().has_node("Health"):
 				Damage.get_collider().get_node("Health").damage(damage)
 
+export var bolts_spwned_upon_death = 5
+
 func dead():
+	boltspawner.bolt_spawn(bolts_spwned_upon_death,get_tree().get_root(),get_position())
+	boltspawner.particle_spawn(get_tree().get_root(),get_position())
 	queue_free()
 
 func stun():

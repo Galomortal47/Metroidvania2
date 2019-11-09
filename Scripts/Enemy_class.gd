@@ -56,6 +56,7 @@ func shot_player():
 			$Timer.start()
 		if $Vision.get_collider().is_in_group(target) and timer < 0:
 			$Polygon2D2.show()
+			$AudioStreamPlayer2D3.play()
 			$Vision.rotate(get_angle_to($Vision.get_collider().get_position()) - $Vision.get_rotation() -1.57)
 			var bullet = load("res://assets/Bullet.tscn")
 			var bullet_instance = bullet.instance()
