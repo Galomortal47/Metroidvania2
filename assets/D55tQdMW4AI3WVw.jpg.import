@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light - Cópia.png-980598849da7da176db888ef93ffc834.stex"
+path="res://.import/D55tQdMW4AI3WVw.jpg-48764bf74a2d41b01b4408d8161ef935.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/light - Cópia.png"
-dest_files=[ "res://.import/light - Cópia.png-980598849da7da176db888ef93ffc834.stex" ]
+source_file="res://assets/D55tQdMW4AI3WVw.jpg"
+dest_files=[ "res://.import/D55tQdMW4AI3WVw.jpg-48764bf74a2d41b01b4408d8161ef935.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

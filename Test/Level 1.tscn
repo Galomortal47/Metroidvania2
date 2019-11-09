@@ -17584,13 +17584,12 @@ position = Vector2( -3123.18, 665.23 )
 position = Vector2( -9923.78, 328.391 )
 
 [node name="Pirana Plant" parent="Enemies" instance=ExtResource( 13 )]
-position = Vector2( 2187.26, 554.629 )
+position = Vector2( -4947.13, 706.041 )
 rotation = -3.14159
 scale = Vector2( 0.5, -0.5 )
 z_index = 10
 
 [node name="Boxes" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true
@@ -17638,6 +17637,55 @@ position = Vector2( 1288.2, 541.343 )
 position = Vector2( 1288.2, 493.369 )
 
 [node name="Box14" parent="Boxes/Boxes" instance=ExtResource( 14 )]
+position = Vector2( 1288.2, 437.656 )
+
+[node name="Boxes5" type="Node2D" parent="Boxes"]
+editor/display_folded = true
+position = Vector2( 1442.02, 14.4202 )
+
+[node name="Box2" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1073.09, 541.343 )
+
+[node name="Box9" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1073.09, 493.369 )
+
+[node name="Box16" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1073.09, 437.656 )
+
+[node name="Box3" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1121.83, 541.343 )
+
+[node name="Box10" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1121.83, 493.369 )
+
+[node name="Box15" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1121.83, 437.656 )
+
+[node name="Box4" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1172.9, 541.343 )
+
+[node name="Box7" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1172.9, 493.369 )
+
+[node name="Box13" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1172.9, 437.656 )
+
+[node name="Box5" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1229.39, 541.343 )
+
+[node name="Box8" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1229.39, 493.369 )
+
+[node name="Box12" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1229.39, 437.656 )
+
+[node name="Box6" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1288.2, 541.343 )
+
+[node name="Box11" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
+position = Vector2( 1288.2, 493.369 )
+
+[node name="Box14" parent="Boxes/Boxes5" instance=ExtResource( 14 )]
 position = Vector2( 1288.2, 437.656 )
 
 [node name="Boxes2" type="Node2D" parent="Boxes"]

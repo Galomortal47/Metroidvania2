@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 var motion = Vector2(0,0)
-var speed = 100
-var max_speed = 500
+var speed = 50
+var max_speed = 550
 var drag = 0.8
 var gravity = 10
 var jump = 40
@@ -10,8 +10,10 @@ var jump_ledge = 300
 var jump_aux = 0.0
 var jump_timer = 0.15
 var air_speed = 8
-var roll = 2000
-var roll_height = 150
+var roll = 1000
+var roll_drag = 0.99
+var roll_height = 250
+var roll_timer = 1.5
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
 var state = "walk"
@@ -21,10 +23,13 @@ var swin_drag = 0.95
 var jump_count = 10
 var jump_count_aux = jump_count
 var boltspawner = preload("bolt_spawner.gd").new()
+var timer = Timer.new()
 
 func _ready():
 	state = $Save.data.state
-
+	timer.connect("timeout",self,"_on_timer_timeout") 
+	timer.wait_time = roll_timer
+	
 func _process(delta):
 	match state:
 		"walk":
@@ -104,26 +109,31 @@ func die():
 		$Save.save()
 		state = "death"
 
+var roll_able = true
+
 func roll():
-	if Input.is_action_just_pressed("ui_roll") and not ledge_detect():
+	if Input.is_action_just_pressed("ui_roll") and not ledge_detect() and roll_able:
 		if Input.is_action_pressed("ui_right"):
 			if ground_detect():
-				motion.x += roll
+				if motion.x < max_speed + roll:
+					motion.x += roll
 				motion.y -= roll_height
+				roll_able = false
+				add_child(timer) #to process
+				timer.start() #to start
 		elif Input.is_action_pressed("ui_left"):
 			if ground_detect():
-				motion.x -= roll
+				if motion.x > -max_speed - roll:
+					motion.x -= roll
 				motion.y -= roll_height
-	if Input.is_action_pressed("ui_roll"):
-		$CollisionShape2D/Colision.set_current_animation("roll")
-		motion.x *= 0.97
+				roll_able = false
+				add_child(timer) #to process
+				timer.start() #to start
 	else:
-		if Input.is_action_pressed("ui_right"):
-			if ground_detect():
-				motion.x = max_speed
-		elif Input.is_action_pressed("ui_left"):
-			if ground_detect():
-				motion.x = -max_speed
+		motion.x *= roll_drag
+	if Input.is_action_pressed("ui_roll") and roll_able:
+		$CollisionShape2D/Colision.set_current_animation("roll")
+	else:
 		$CollisionShape2D/Colision.set_current_animation("normal")
 
 func ledge_grab():
@@ -167,3 +177,6 @@ func stun():
 		motion += Vector2(-500,-300)
 	else:
 		motion += Vector2(500,-300)
+
+func _on_timer_timeout():
+	roll_able = true
