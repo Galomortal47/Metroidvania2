@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=2]
+[gd_scene load_steps=107 format=2]
 
 [ext_resource path="res://assets/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=2]
@@ -51,6 +51,9 @@ extents = Vector2( 1463.3, 18.0403 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 79.5491 )
+
+[sub_resource type="RectangleShape2D" id=61]
+extents = Vector2( 3325.59, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 25.6528, 729.089 )
@@ -17061,7 +17064,6 @@ position = Vector2( -1473.07, 637.329 )
 [node name="CamShake" parent="Player" instance=ExtResource( 2 )]
 
 [node name="Ground" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="grass" type="TextureRect" parent="Ground"]
 margin_left = -342.0
@@ -17146,7 +17148,7 @@ stretch_mode = 2
 [node name="grass9" type="TextureRect" parent="Ground"]
 margin_left = 5537.0
 margin_top = -9.0
-margin_right = 8403.0
+margin_right = 12689.0
 margin_bottom = 119.0
 texture = ExtResource( 3 )
 stretch_mode = 2
@@ -17226,7 +17228,7 @@ stretch_mode = 2
 [node name="dirt3" type="TextureRect" parent="Ground"]
 margin_left = 5489.0
 margin_top = 90.0
-margin_right = 8416.0
+margin_right = 12694.0
 margin_bottom = 1157.0
 texture = ExtResource( 4 )
 expand = true
@@ -17367,8 +17369,8 @@ position = Vector2( 5332.4, 709.514 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 6950.79, 91.5816 )
-shape = SubResource( 1 )
+position = Vector2( 8804.25, 91.5816 )
+shape = SubResource( 61 )
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 5506.89, 826.305 )
@@ -17590,6 +17592,7 @@ scale = Vector2( 0.5, -0.5 )
 z_index = 10
 
 [node name="Boxes" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true
@@ -17953,7 +17956,6 @@ position = Vector2( -5821.56, -831.195 )
 position = Vector2( -8867.35, -801.194 )
 
 [node name="Art" type="Node2D" parent="."]
-editor/display_folded = true
 z_index = -1
 
 [node name="mushroom" type="Sprite" parent="Art"]
@@ -18204,7 +18206,7 @@ stretch_mode = 2
 [node name="grass7" type="TextureRect" parent="Art"]
 margin_left = 5491.0
 margin_top = -37.0
-margin_right = 8402.0
+margin_right = 12680.0
 margin_bottom = 69.0
 texture = ExtResource( 26 )
 expand = true
@@ -18447,6 +18449,7 @@ position = Vector2( -12068.3, -16.2644 )
 [node name="Day Night cycle" parent="." instance=ExtResource( 34 )]
 
 [node name="rocket" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -11685.5, -43.9109 )
 texture = ExtResource( 35 )
 script = ExtResource( 36 )
@@ -18465,6 +18468,7 @@ scale = Vector2( 1e-005, 1e-005 )
 gun_id = 0
 
 [node name="Scientist anim" type="Node2D" parent="rocket"]
+editor/display_folded = true
 position = Vector2( 64.041, 53.2135 )
 scale = Vector2( -0.8, 0.8 )
 z_index = 5

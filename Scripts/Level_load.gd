@@ -6,15 +6,15 @@ var save = preload("res://Scripts/Save.gd").new()
 
 func _on_Level_load_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
-		get_tree().change_scene(level_load)
+#		get_tree().change_scene(level_load)
 		save(body,body)
-#		if thread.is_active():
-#			return
-#		thread.start(self, "_load", level_load)
-#	pass # Replace with function body.
-#
-#var thread = Thread.new()
-#var level_resource
+		if thread.is_active():
+			return
+		thread.start(self, "_load", level_load)
+	pass # Replace with function body.
+
+var thread = Thread.new()
+var level_resource
 
 func _load(level):
 	get_tree().change_scene(level)

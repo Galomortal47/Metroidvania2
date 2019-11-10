@@ -721,7 +721,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
-editor/display_folded = true
 script = ExtResource( 12 )
 
 [node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
@@ -733,7 +732,9 @@ next/close = "closed"
 next/open = "opened"
 
 [node name="Menu" type="Node2D" parent="Menu Items"]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 512, 165 )
+scale = Vector2( 1e-005, 1e-005 )
 
 [node name="icon0" type="Sprite" parent="Menu Items/Menu"]
 editor/display_folded = true
