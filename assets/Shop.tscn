@@ -16754,6 +16754,7 @@ text = "GAME OVER"
 anims/idle = SubResource( 36 )
 
 [node name="shop2" type="Sprite" parent="."]
+editor/display_folded = true
 visible = false
 position = Vector2( -6.00766, -44.6021 )
 scale = Vector2( 2, 2 )
@@ -16827,8 +16828,43 @@ region_rect = Rect2( 8, 96, 35, 19 )
 
 [node name="Shop_Select" type="CanvasLayer" parent="."]
 
+[node name="text" type="Node2D" parent="Shop_Select"]
+
+[node name="Label2" type="Label" parent="Shop_Select/text"]
+margin_left = 399.033
+margin_top = 370.439
+margin_right = 539.033
+margin_bottom = 384.439
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Shop_Select/text"]
+editor/display_folded = true
+margin_left = 358.0
+margin_top = 348.372
+margin_right = 553.0
+margin_bottom = 384.372
+custom_fonts/font = ExtResource( 2 )
+text = "X:Buy for a Bolts"
+
+[node name="Line2D" type="Line2D" parent="Shop_Select/text/Label"]
+position = Vector2( -4.37046, -5.37566 )
+z_index = -1
+points = PoolVector2Array( 0, 0, 200, 0 )
+width = 100.0
+default_color = Color( 0, 0, 0, 0.588235 )
+texture_mode = 1052819649
+
+[node name="Label3" type="Label" parent="Shop_Select/text"]
+margin_left = 358.0
+margin_top = 299.502
+margin_right = 553.0
+margin_bottom = 335.502
+custom_fonts/font = ExtResource( 2 )
+text = "B:Buy Ammo for 100 bolts"
+
 [node name="Icons" type="Node2D" parent="Shop_Select"]
-position = Vector2( -36.694, -58.2787 )
+editor/display_folded = true
+position = Vector2( -37, -60 )
 z_index = 4000
 z_as_relative = false
 
@@ -16871,28 +16907,5 @@ texture = ExtResource( 10 )
 position = Vector2( 862.921, 544.549 )
 scale = Vector2( 1, -1 )
 texture = ExtResource( 10 )
-
-[node name="Label" type="Label" parent="Shop_Select/Icons"]
-margin_left = 395.0
-margin_top = 463.62
-margin_right = 590.0
-margin_bottom = 499.62
-custom_fonts/font = ExtResource( 2 )
-text = "X:Buy for a Bolts"
-
-[node name="Line2D" type="Line2D" parent="Shop_Select/Icons/Label"]
-position = Vector2( -4.37046, -5.37566 )
-z_index = -1
-points = PoolVector2Array( 0, 0, 200, 0 )
-width = 100.0
-default_color = Color( 0, 0, 0, 0.588235 )
-texture_mode = 1052819649
-
-[node name="Label2" type="Label" parent="Shop_Select/Icons"]
-margin_left = 436.033
-margin_top = 485.687
-margin_right = 576.033
-margin_bottom = 499.687
-custom_fonts/font = ExtResource( 2 )
 
 [connection signal="animation_finished" from="Scale/Death" to="Scale/Animation" method="_on_Death_animation_finished"]

@@ -67,8 +67,6 @@ shape = SubResource( 2 )
 
 [node name="Health" parent="." instance=ExtResource( 4 )]
 scale = Vector2( 0.5, 0.5 )
-health_max = 1
-health = 1
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( 0, 21.3286 )
