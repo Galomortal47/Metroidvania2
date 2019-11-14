@@ -7,7 +7,7 @@ var save = preload("res://Scripts/Save.gd").new()
 func _on_Level_load_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
 #		get_tree().change_scene(level_load)
-		save(body,body)
+		save(body,body,level_load)
 		if thread.is_active():
 			return
 		thread.start(self, "_load", level_load)
@@ -19,9 +19,9 @@ var level_resource
 func _load(level):
 	get_tree().change_scene(level)
 
-func save(var player,var pos):
+func save(var player,var pos, var level):
 	save.loader()
-	save.data.level = level_load
+	save.data.level = level
 	save.data.money = int(player.get_node("Coins/Number").get_text())
 	save.data.guns = player.get_node("Menu Items").guns
 	save.data.hp = player.get_node("Health").health

@@ -9,7 +9,7 @@ func _process(delta):
 		$Label.show()
 		if get_collider().is_in_group("player") and Input.is_action_pressed("ui_roll"):
 			get_tree().change_scene(level)
-			save.save(get_collider(),get_parent().get_node("pos"))
+			save.save(get_collider(),get_parent().get_node("pos"),level)
 	else:
 		$Label.hide()
 #	pass
