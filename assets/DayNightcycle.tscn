@@ -19,18 +19,34 @@
 [ext_resource path="res://sprites/tree.png" type="Texture" id=17]
 [ext_resource path="res://sprites/bush.png" type="Texture" id=18]
 
-[sub_resource type="Gradient" id=2]
+[sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0.123404, 0.285106 )
-colors = PoolColorArray( 1, 1, 1, 1, 0.565918, 0.907749, 0.953125, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.214844, 0.907989, 1, 1 )
 
-[sub_resource type="GradientTexture" id=3]
-gradient = SubResource( 2 )
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
 
-[sub_resource type="CanvasItemMaterial" id=5]
+[sub_resource type="CanvasItemMaterial" id=3]
 blend_mode = 1
 
 [sub_resource type="CanvasItemMaterial" id=4]
 blend_mode = 1
+
+[sub_resource type="Animation" id=5]
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -3.39986, 1.20196, -3.39986 ]
+}
 
 [sub_resource type="Animation" id=6]
 length = 10.0
@@ -48,23 +64,7 @@ tracks/0/keys = {
 "values": [ -3.39986, 1.20196, -3.39986 ]
 }
 
-[sub_resource type="Animation" id=7]
-length = 10.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 5, 10 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ -3.39986, 1.20196, -3.39986 ]
-}
-
-[sub_resource type="CanvasItemMaterial" id=8]
+[sub_resource type="CanvasItemMaterial" id=7]
 blend_mode = 2
 
 [node name="Day Night cycle" type="AnimationPlayer"]
@@ -79,14 +79,13 @@ position = Vector2( -0.429321, 1.7171 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-editor/display_folded = true
 motion_scale = Vector2( 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 606.582, -89.1467 )
 rotation = -1.5708
 scale = Vector2( 0.3878, 1154.45 )
-texture = SubResource( 3 )
+texture = SubResource( 2 )
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -8.12115, 27.9898 )
@@ -100,13 +99,13 @@ position = Vector2( 339.978, 633.414 )
 texture = ExtResource( 3 )
 
 [node name="moon2" type="Sprite" parent="ParallaxBackground/ParallaxLayer6/Node2D"]
-material = SubResource( 5 )
+material = SubResource( 3 )
 position = Vector2( 339.978, 633.414 )
 texture = ExtResource( 3 )
 
 [node name="moon3" type="Sprite" parent="ParallaxBackground/ParallaxLayer6/Node2D"]
 self_modulate = Color( 1, 1, 1, 0.235294 )
-material = SubResource( 5 )
+material = SubResource( 3 )
 position = Vector2( 344.694, 593.974 )
 scale = Vector2( 3.81998, 3.88026 )
 texture = ExtResource( 4 )
@@ -145,7 +144,7 @@ motion_scale = Vector2( 0.75, 1 )
 position = Vector2( 0.880249, 740.88 )
 rotation = -1.5708
 scale = Vector2( 0.12, 960 )
-texture = SubResource( 3 )
+texture = SubResource( 2 )
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -177,7 +176,7 @@ offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer3/pyrate ship"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 6 )
+"anims/New Anim" = SubResource( 5 )
 
 [node name="pyrate ship2" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
 position = Vector2( 934.546, 529.643 )
@@ -188,7 +187,7 @@ offset = Vector2( -19.1546, -67.5755 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer3/pyrate ship2"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 7 )
+"anims/New Anim" = SubResource( 6 )
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
 editor/display_folded = true
@@ -235,7 +234,6 @@ position = Vector2( -0.429321, 1.7171 )
 color = Color( 0.92549, 0.964706, 0.968627, 1 )
 
 [node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 layer = 1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
@@ -277,7 +275,7 @@ color = Color( 0.92549, 0.964706, 0.968627, 1 )
 [node name="light2" type="Sprite" parent="CanvasLayer"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 8 )
+material = SubResource( 7 )
 position = Vector2( 480, 270 )
 texture = ExtResource( 14 )
 
