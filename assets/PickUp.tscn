@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/PickUp.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ammo.png" type="Texture" id=2]
+[ext_resource path="res://enemy/enemy3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/light.png" type="Texture" id=4]
+
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15, 15 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+blend_mode = 1
+
+[node name="Pick Up" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Pick Up" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pick Up"]
+shape = SubResource( 1 )
+
+[node name="ammo" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="enemy" parent="." instance=ExtResource( 3 )]
+
+[node name="light" type="Sprite" parent="enemy"]
+modulate = Color( 1, 0.960784, 0, 0.501961 )
+material = SubResource( 2 )
+position = Vector2( 3.24304, -7.87596 )
+z_index = 400
+texture = ExtResource( 4 )
+
+[connection signal="body_shape_entered" from="Pick Up" to="." method="_on_Pick_Up_body_shape_entered"]

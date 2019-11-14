@@ -5,7 +5,7 @@ export var mult = 0
 export var crown = false
 var fireball = load("res://Resources/fireball.tscn")
 var able = false
-var boltspawner = preload("bolt_spawner.gd").new()
+var boltspawner = preload("boltspawner.gd").new()
 
 func _ready():
 	get_node("Health").set_scale(get_scale()*Vector2(4,4))

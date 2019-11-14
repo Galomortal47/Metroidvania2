@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/transition2.ogg-1f92b43e12b37b94d804a5acdc4ec379.oggstr"
+
+[deps]
+
+source_file="res://music/transition2.ogg"
+dest_files=[ "res://.import/transition2.ogg-1f92b43e12b37b94d804a5acdc4ec379.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

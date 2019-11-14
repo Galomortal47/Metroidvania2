@@ -1,9 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://3D models/ammo.dae" type="PackedScene" id=1]
-[ext_resource path="res://3D models/new_arraymesh2.tres" type="ArrayMesh" id=2]
+[ext_resource path="res://3D models/newarraymesh2.tres" type="ArrayMesh" id=2]
 [ext_resource path="res://3D models/bolt.tres" type="Material" id=3]
 [ext_resource path="res://3D models/CPUParticles.tscn" type="PackedScene" id=4]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "rotate"

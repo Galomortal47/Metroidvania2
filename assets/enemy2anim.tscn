@@ -1,0 +1,203 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/enemy2.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/enemyanim2.gd" type="Script" id=2]
+[ext_resource path="res://sprites/weapons.png" type="Texture" id=3]
+[ext_resource path="res://sprites/light.png" type="Texture" id=4]
+
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[node name="Scale" type="Node2D"]
+position = Vector2( -0.475655, -6.18353 )
+
+[node name="Body" type="Sprite" parent="."]
+position = Vector2( 14.7849, 61.3075 )
+texture = ExtResource( 1 )
+offset = Vector2( 2.01756, -32.9089 )
+region_enabled = true
+region_rect = Rect2( 79, 4, 47.5, 103.5 )
+script = ExtResource( 2 )
+scale2 = 0.5
+
+[node name="head" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( -5.23222, -65.165 )
+texture = ExtResource( 1 )
+offset = Vector2( -13.6791, -5.08295 )
+region_enabled = true
+region_rect = Rect2( 10, 0, 43.25, 39.75 )
+
+[node name="enemy3" type="Sprite" parent="Body/head"]
+position = Vector2( -31.3933, 13.5562 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1.25, 39.25, 23.5, 25 )
+
+[node name="enemy4" type="Sprite" parent="Body/head"]
+position = Vector2( -14.7454, -24.2585 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 4, 70, 23.5, 29.25 )
+
+[node name="enemy6" type="Sprite" parent="Body/head"]
+position = Vector2( -24.7342, -22.5937 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 4, 70, 23.5, 29.25 )
+
+[node name="arm4" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( -4.04308, -50.8953 )
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/arm4"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -1.25382
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/arm4/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+z_index = 1
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 82, 109.5, 16.5, 16.25 )
+
+[node name="weapons" type="Sprite" parent="Body/arm4/enemy8/enemy5"]
+position = Vector2( -8.15451, -6.13685 )
+z_index = -1
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 4, 0, 39, 28 )
+
+[node name="arm3" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( 1.90263, -18.075 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/arm3"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -1.25382
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/arm3/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 82, 109.5, 16.5, 16.25 )
+
+[node name="arm2" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( -18.075, -49.7061 )
+z_index = -1
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/arm2"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -1.25382
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/arm2/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 82, 109.5, 16.5, 16.25 )
+
+[node name="arm" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( -12.1292, -16.8858 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -1
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/arm"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -1.25382
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/arm/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 82, 109.5, 16.5, 16.25 )
+
+[node name="Leg" type="Sprite" parent="Body"]
+editor/display_folded = true
+position = Vector2( -11.1779, 8.56182 )
+z_index = -1
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/Leg"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -2.16322
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/Leg/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+rotation = -4.09105
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 88, 18.5, 10.5 )
+
+[node name="Leg2" type="Sprite" parent="Body"]
+position = Vector2( 2.85394, 7.37267 )
+rotation = 1.09503
+texture = ExtResource( 1 )
+offset = Vector2( 12.7198, 7.99762 )
+region_enabled = true
+region_rect = Rect2( 32.75, 97, 32.5, 30 )
+
+[node name="enemy8" type="Sprite" parent="Body/Leg2"]
+position = Vector2( 19.8627, 16.9744 )
+rotation = -2.90832
+texture = ExtResource( 1 )
+offset = Vector2( -7.50239, -10.1832 )
+region_enabled = true
+region_rect = Rect2( 2.25, 102, 26.5, 24.5 )
+
+[node name="enemy5" type="Sprite" parent="Body/Leg2/enemy8"]
+position = Vector2( -15.3064, -17.1403 )
+rotation = -4.45452
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 46.5, 87.5, 21.75, 9.25 )
+
+[node name="light" type="Sprite" parent="Body"]
+modulate = Color( 0.980392, 0.87451, 0.188235, 0.588235 )
+material = SubResource( 1 )
+position = Vector2( -26.5517, -65.089 )
+scale = Vector2( 0.681434, 0.659763 )
+texture = ExtResource( 4 )
+

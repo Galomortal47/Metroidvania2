@@ -1,6 +1,6 @@
 extends Node
 
-var save = "res://save.json"
+var save = "user://data.json"
 var file = File.new()
 var data = {"hp":4,
 "hp_max":4,
@@ -9,7 +9,7 @@ var data = {"hp":4,
 "position_y":460,
  "guns" : [false,true,false,false,false,false,false,false],
 "time": 00,
-"graphics": "fancy",
+"graphics": "fast",
 "magazine" : [0,0,0,0,0,0,0,0],
 "ammo" : [0,0,0,0,0,0,0,0],
 "select" : [true,false,false,false,false,false,false,false],

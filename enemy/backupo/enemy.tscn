@@ -1,10 +1,11 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://enemy/enemy.gd" type="Script" id=1]
-[ext_resource path="res://enemy/Monster2D-3D.gd" type="Script" id=2]
+[ext_resource path="res://enemy/Monster2D3D.gd" type="Script" id=2]
 [ext_resource path="res://Light/light2.png" type="Texture" id=3]
 [ext_resource path="res://Light/light3.png" type="Texture" id=4]
 [ext_resource path="res://enemy/monster.tscn" type="PackedScene" id=5]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "end"

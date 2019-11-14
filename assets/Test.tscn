@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Door.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/DayNightcycle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/CutScene.gd" type="Script" id=6]
 [ext_resource path="res://sprites/char2.png" type="Texture" id=7]
 [ext_resource path="res://enemy/guns.tscn" type="PackedScene" id=8]
@@ -16,8 +16,10 @@
 [ext_resource path="res://assets/Bullet.tres" type="Curve" id=14]
 [ext_resource path="res://assets/Bullet2.tres" type="Gradient" id=15]
 [ext_resource path="res://Sonds/shoot.ogg" type="AudioStream" id=16]
-[ext_resource path="res://Scripts/little girl.gd" type="Script" id=17]
+[ext_resource path="res://Scripts/littlegirl.gd" type="Script" id=17]
 [ext_resource path="res://sprites/scientist.png" type="Texture" id=18]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 575.981, 10 )

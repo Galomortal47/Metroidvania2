@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/collideexplosion.ogg-6fa0801cf85628ade697c74ed0076e7e.oggstr"
+
+[deps]
+
+source_file="res://Sonds/collideexplosion.ogg"
+dest_files=[ "res://.import/collideexplosion.ogg-6fa0801cf85628ade697c74ed0076e7e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -22,13 +22,14 @@ var swin_speed_max = 250
 var swin_drag = 0.95
 var jump_count = 10
 var jump_count_aux = jump_count
-var boltspawner = preload("bolt_spawner.gd").new()
+var boltspawner = preload("boltspawner.gd").new()
 var timer = Timer.new()
 
 func _ready():
 	state = $Save.data.state
 	timer.connect("timeout",self,"_on_timer_timeout") 
 	timer.wait_time = roll_timer
+	add_child(timer)
 	
 func _process(delta):
 	match state:
@@ -113,21 +114,19 @@ var roll_able = true
 
 func roll():
 	if Input.is_action_just_pressed("ui_roll") and not ledge_detect() and roll_able:
-		if Input.is_action_pressed("ui_right"):
+		if Input.is_action_pressed("ui_right") and roll_able:
 			if ground_detect():
 				if motion.x < max_speed + roll:
 					motion.x += roll
 				motion.y -= roll_height
 				roll_able = false
-				add_child(timer) #to process
 				timer.start() #to start
-		elif Input.is_action_pressed("ui_left"):
+		elif Input.is_action_pressed("ui_left") and roll_able:
 			if ground_detect():
 				if motion.x > -max_speed - roll:
 					motion.x -= roll
 				motion.y -= roll_height
 				roll_able = false
-				add_child(timer) #to process
 				timer.start() #to start
 	else:
 		motion.x *= roll_drag

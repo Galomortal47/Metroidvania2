@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var boltspawner = preload("bolt_spawner.gd").new()
+var boltspawner = preload("boltspawner.gd").new()
 var bolt_path = "res://assets/Bolts.tscn"
 var ammo_health = "res://assets/Pick Up.tscn"
 var health_path = "res://assets/health pick up.tscn"

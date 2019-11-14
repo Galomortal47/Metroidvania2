@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Scripts/Enemy_class.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Enemyclass.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/monster.png" type="Texture" id=3]
-[ext_resource path="res://Scripts/enemy animation.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/enemyanimation.gd" type="Script" id=4]
 [ext_resource path="res://sprites/light.png" type="Texture" id=5]
 [ext_resource path="res://Sonds/gyahahaha.ogg" type="AudioStream" id=6]
 [ext_resource path="res://music/action.ogg" type="AudioStream" id=7]
@@ -2262,6 +2262,7 @@ shape = SubResource( 1 )
 [node name="Area2D" type="Area2D" parent="." groups=[
 "enemy",
 ]]
+editor/display_folded = true
 collision_layer = 2
 collision_mask = 2
 
@@ -2283,9 +2284,9 @@ cast_to = Vector2( 0, 31 )
 wait_time = 2.0
 
 [node name="Scale" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Body" type="Sprite" parent="Scale"]
+editor/display_folded = true
 position = Vector2( 0.276131, -23.0354 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )

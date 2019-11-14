@@ -5,14 +5,14 @@
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=3]
 [ext_resource path="res://sprites/end.png" type="Texture" id=4]
 [ext_resource path="res://assets/Platform2.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scripts/Platform Sticker 2.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/PlatfornSticker2.gd" type="Script" id=6]
 [ext_resource path="res://assets/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://icon.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/Mouse.gd" type="Script" id=9]
 [ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Box.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/health pick up.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Pick Up.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/healthpickup.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/PickUp.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/Shop.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/Bolts.tscn" type="PackedScene" id=15]
 [ext_resource path="res://sprites/plant.png" type="Texture" id=16]
@@ -24,10 +24,15 @@
 [ext_resource path="res://assets/Water.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scripts/Swwing.gd" type="Script" id=23]
 [ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=24]
-[ext_resource path="res://assets/Enemy Shooter.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/EnemyShooter.tscn" type="PackedScene" id=25]
 [ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=26]
-[ext_resource path="res://assets/Day Night cycle.tscn" type="PackedScene" id=27]
+[ext_resource path="res://assets/DayNightcycle.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Scripts/Turrent.gd" type="Script" id=28]
+
+
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 541.865, 19.2802 )

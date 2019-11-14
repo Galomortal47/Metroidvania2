@@ -27,7 +27,7 @@ func _ready():
 			self.add_child(model)
 	else:
 		var sprite = Sprite.new()
-		sprite.texture = load("res://sprites/bolt_sprite.png")
+		sprite.texture = load("res://sprites/boltsprite.png")
 		add_child(sprite)
 
 func _process(delta):

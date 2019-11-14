@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://sprites/touchscreen/arrow key.png" type="Texture" id=1]
+[ext_resource path="res://sprites/touchscreen/arrowkey.png" type="Texture" id=1]
 [ext_resource path="res://sprites/touchscreen/buttons.png" type="Texture" id=2]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=3]
+
 
 [node name="TouchScreen" type="CanvasLayer"]
 

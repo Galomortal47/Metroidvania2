@@ -2,7 +2,7 @@ extends RayCast2D
 
 export var level = "res://Test/Level 3.tscn"
 export var pos = Vector2(0,0)
-var save = load("res://Scripts/Level_load.gd").new()
+var save = load("res://Scripts/Levelload.gd").new()
 
 func _process(delta):
 	if is_colliding():

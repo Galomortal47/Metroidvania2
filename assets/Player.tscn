@@ -5,33 +5,42 @@
 [ext_resource path="res://Scripts/Dash.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Hook.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Shotgun.gd" type="Script" id=5]
-[ext_resource path="res://assets/Gun_engine.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scripts/Unlock Minigame.gd" type="Script" id=7]
+[ext_resource path="res://assets/Gunengine.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/UnlockMinigame.gd" type="Script" id=7]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=8]
-[ext_resource path="res://assets/Srink Ray.gd" type="Script" id=9]
+[ext_resource path="res://assets/SrinkRay.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/Reload.gd" type="Script" id=10]
 [ext_resource path="res://sprites/ammo.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/Menu Items.gd" type="Script" id=12]
 [ext_resource path="res://icon.png" type="Texture" id=13]
-[ext_resource path="res://Scripts/Load_Minigame.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/LoadMinigame.gd" type="Script" id=14]
 [ext_resource path="res://assets/Coins.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scripts/Save.gd" type="Script" id=16]
 [ext_resource path="res://sprites/char.png" type="Texture" id=17]
-[ext_resource path="res://assets/Player_Animation.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Scripts/Player_Animation.gd" type="Script" id=19]
-[ext_resource path="res://Scripts/Air Meter.gd" type="Script" id=20]
+[ext_resource path="res://assets/PlayerAnimation.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scripts/PlayerAnimation.gd" type="Script" id=19]
+[ext_resource path="res://Scripts/AirMeter.gd" type="Script" id=20]
 [ext_resource path="res://assets/Sword.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scripts/Audio Manager.gd" type="Script" id=22]
+[ext_resource path="res://Scripts/AudioManager.gd" type="Script" id=22]
 [ext_resource path="res://Sonds/alts/footstep1.ogg" type="AudioStream" id=23]
 [ext_resource path="res://Sonds/roll.ogg" type="AudioStream" id=24]
 [ext_resource path="res://Sonds/jump.ogg" type="AudioStream" id=25]
 [ext_resource path="res://Sonds/water.ogg" type="AudioStream" id=26]
 [ext_resource path="res://assets/TouchScreen.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Scripts/TouchScreen.gd" type="Script" id=28]
-[ext_resource path="res://Scripts/Health_Load.gd" type="Script" id=29]
+[ext_resource path="res://Scripts/HealthLoad.gd" type="Script" id=29]
 [ext_resource path="res://Scripts/Pause.gd" type="Script" id=30]
 [ext_resource path="res://Scripts/Grab.gd" type="Script" id=31]
 [ext_resource path="res://assets/climate.tscn" type="PackedScene" id=32]
+
+
+
+
+
+
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 40 )
