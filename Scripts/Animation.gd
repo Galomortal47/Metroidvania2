@@ -43,6 +43,7 @@ func animations():
 				get_parent().get_node("Chocobo").play("jump")
 		"death":
 			get_parent().get_node("Death").set_current_animation("Die")
+			get_parent().get_node("Polygon2D/Label/Control/Button").grab_focus()
 		"carring":
 			get_parent().get_node("AnimationPlayer").set_current_animation("Walk_carry")
 	if int(get_parent().get_parent().motion.x) > 0:

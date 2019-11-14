@@ -1,24 +1,28 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/Button.gd" type="Script" id=1]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 485.439
-margin_top = 299.282
-margin_right = 561.439
-margin_bottom = 313.282
+visible = false
+margin_left = -40.6685
+margin_top = -13.0421
+margin_right = 35.3315
+margin_bottom = 0.957886
 text = "GAME OVER"
 
 [node name="Button" type="Button" parent="."]
-margin_left = 491.095
-margin_top = 315.991
-margin_right = 556.094
-margin_bottom = 335.991
+margin_right = 70.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 1 )
 text = "RESTART"
-script = ExtResource( 1 )
+flat = true
+script = ExtResource( 2 )
+scene = "res://assets/MainMenu.tscn"
 
 [connection signal="button_down" from="Button" to="Button" method="_on_Button_button_down"]

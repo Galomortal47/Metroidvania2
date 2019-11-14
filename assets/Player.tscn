@@ -546,6 +546,7 @@ health = 4.0
 invicility = true
 
 [node name="Dash" type="Line2D" parent="."]
+editor/display_folded = true
 position = Vector2( 55.0519, -60.7325 )
 points = PoolVector2Array( -6, 0, 0, 6, -4.29141, 0.143768, 0, -6, -6, 0 )
 width = 2.0
@@ -987,6 +988,7 @@ collision_mask = 36
 damage = 0.25
 
 [node name="Audio Manager" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 22 )
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="Audio Manager"]
