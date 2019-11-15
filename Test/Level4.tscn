@@ -398,7 +398,6 @@ position = Vector2( 25161.5, -18.6621 )
 position = Vector2( 26387.4, -18.6621 )
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Boss" type="KinematicBody2D" parent="Enemies" groups=[
 "enemy",
@@ -408,7 +407,7 @@ collision_layer = 32
 collision_mask = 32
 script = ExtResource( 20 )
 timer = 3.0
-health = 32
+health = 20
 
 [node name="icon" type="Sprite" parent="Enemies/Boss"]
 visible = false
@@ -427,6 +426,7 @@ shape = SubResource( 6 )
 visible = false
 
 [node name="boss_1" type="Sprite" parent="Enemies/Boss"]
+editor/display_folded = true
 position = Vector2( 9.41797, -3.69785 )
 rotation = -0.00787875
 scale = Vector2( 1.34831, 1.34831 )

@@ -1,6 +1,6 @@
 extends Node
 
-var rays = 14
+var rays = 7
 
 func explosion(var pos, node, target, ignore, var damage, var explosion_color):
 	for i in range(0,rays):

@@ -22,7 +22,7 @@ func _ready():
 
 func _process(delta):
 	$boss_1/AnimationPlayer.set_speed_scale(motion.x / speed)
-	$CanvasLayer/Line2D.set_points([Vector2(160,50),Vector2(($Health.health*20) + 160,50)])
+	$CanvasLayer/Line2D.set_points([Vector2(160,50),Vector2(($Health.health*health*1.6) + 160,50)])
 	get_parent().get_parent().get_node("Hooks").set_position(get_position())
 	if $Health.health < 0:
 		boltspawner.bolt_spawn(bolts_spwned_upon_death,get_tree().get_root(),get_position(),100)

@@ -103,9 +103,9 @@ anims/health = SubResource( 1 )
 visible = false
 modulate = Color( 1, 0, 0, 0 )
 margin_left = -37.1414
-margin_top = -41.3728
+margin_top = -72.5611
 margin_right = 2.85858
-margin_bottom = -27.3728
+margin_bottom = -58.5611
 custom_fonts/font = ExtResource( 2 )
 text = "9999"
 
