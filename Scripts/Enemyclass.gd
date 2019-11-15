@@ -31,7 +31,7 @@ func _ready():
 	if not music:
 		$AudioStreamPlayer2D2._set_playing(false)
 
-func _process(delta):
+func _physics_process(delta):
 	if not $Ground_Detect.is_colliding():
 		motion.y += gravity
 	match type:

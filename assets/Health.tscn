@@ -101,11 +101,11 @@ anims/health = SubResource( 1 )
 
 [node name="Label2" type="Label" parent="."]
 visible = false
-modulate = Color( 1, 0, 0, 1 )
+modulate = Color( 1, 0, 0, 0 )
 margin_left = -37.1414
-margin_top = -55.7122
+margin_top = -41.3728
 margin_right = 2.85858
-margin_bottom = -41.7122
+margin_bottom = -27.3728
 custom_fonts/font = ExtResource( 2 )
 text = "9999"
 

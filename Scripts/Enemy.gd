@@ -17,7 +17,7 @@ var attack = Vector2(60,0)
 func _ready():
 	$Health.health = health
 
-func _process(delta):
+func _physics_process(delta):
 	if not $Ground_Detect.is_colliding():
 		motion.y += gravity
 	hunt_player()

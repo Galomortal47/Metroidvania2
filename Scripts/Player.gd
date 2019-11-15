@@ -31,7 +31,7 @@ func _ready():
 	timer.wait_time = roll_timer
 	add_child(timer)
 	
-func _process(delta):
+func _physics_process(delta):
 	match state:
 		"walk":
 			max_speed = 550

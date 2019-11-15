@@ -2,7 +2,7 @@ extends Area2D
 
 export var level_load = ""
 var save = preload("res://Scripts/Save.gd").new()
-
+var pos2
 
 func _on_Level_load_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
@@ -18,6 +18,9 @@ var level_resource
 
 func _load(level):
 	get_tree().change_scene(level)
+#	save.data.position_y = pos2.get_position().y
+#	save.data.position_x = pos2.get_position().x
+#	save.save()
 
 func save(var player,var pos, var level):
 	save.loader()
@@ -33,6 +36,7 @@ func save(var player,var pos, var level):
 	save.data.carry = player.get_node("Scale/Animation/Hips/Scientist anim").is_visible()
 	save.data.position_y = pos.get_position().y
 	save.data.position_x = pos.get_position().x
+	pos2 = pos
 	var day = player.get_parent().get_node("Day Night cycle")
 	save.data.time = day.get_current_animation_position()
 	save.data.climate = player.get_node("Rain").climate

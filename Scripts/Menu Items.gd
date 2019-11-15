@@ -5,7 +5,7 @@ var select_aux = select
 var menu_size = 8
 var a = 0
 var guns = [false,false,false,false,false,false,false,false]
-var damage = [0,0.01,0.1,0.1,0.1,0.5,0,0]
+var damage = [0,1,1,1,1,5,0,0]
 var timer = 0.5
 var time_aux
 var size_selected = Vector2(0.4,-0.4)

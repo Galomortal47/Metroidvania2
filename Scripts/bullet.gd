@@ -18,7 +18,7 @@ func _ready():
 	motion.y += curve
 	$CPUParticles2D.scale_amount = particle_size
 
-func _process(delta):
+func _physics_process(delta):
 	attack()
 	var dir = Vector2(cos(get_rotation()), sin(get_rotation()))
 	set_position(get_position() + dir * (speed * delta))

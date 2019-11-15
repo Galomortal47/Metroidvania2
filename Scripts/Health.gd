@@ -13,7 +13,7 @@ export var player = false
 #	get_parent().get_node("Save").save()
 #	health = get_parent().get_node("Save").data.hp
 
-func _process(delta):
+func _physics_process(delta):
 	if health <= health_max * 0.25:
 		$Line2D3.default_color = (Color(1,0,0))
 	else:
@@ -36,8 +36,7 @@ func damage(var damage):
 	invici()
 	
 func invici():
-	if invicility:
-		invicible = true
+	invicible = true
 	get_node("Invicibility timer").set_current_animation("invicible")
 
 func _on_Invicibility_timer_animation_finished(anim_name):
