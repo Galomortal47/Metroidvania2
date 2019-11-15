@@ -8,6 +8,7 @@ var scenary = load("res://assets/DayNightcycle.tscn").instance()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Continue.grab_focus()
+	graphics()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,8 +32,15 @@ func _on_Quit_Game_button_down():
 	pass # Replace with function body.
 
 func _on_Button_button_down():
+	graphics()
+	pass # Replace with function body.
+	
+func _on_HSlider_value_changed(value):
+	AudioServer.set_bus_volume_db(0 , (value - 90) * 0.6)
+	pass # Replace with function body.
+
+func graphics():
 	save.loader()
-	get_node("Test/room/Node2D/light2").save()
 	if $Graphics.get_text() == "Graphics:Fancy":
 		$Graphics.set_text("Graphics:Fast")
 		save.data.graphics = "fast"
@@ -40,8 +48,4 @@ func _on_Button_button_down():
 		$Graphics.set_text("Graphics:Fancy")
 		save.data.graphics = "fancy"
 	save.save()
-	pass # Replace with function body.
-	
-func _on_HSlider_value_changed(value):
-	AudioServer.set_bus_volume_db(0 , (value - 90) * 0.6)
-	pass # Replace with function body.
+	get_node("Test/room/Node2D/light2").save()

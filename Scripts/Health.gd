@@ -13,15 +13,15 @@ export var player = false
 #	get_parent().get_node("Save").save()
 #	health = get_parent().get_node("Save").data.hp
 
-func _physics_process(delta):
+func _process(delta):
 	if health <= health_max * 0.25:
-		$Line2D3.default_color = (Color(1,0,0))
+		$Line2D4.default_color = (Color(1,0,0))
 	else:
-		$Line2D3.default_color = (Color(1,1,1))
+		$Line2D4.default_color = (Color(1,1,1))
 	if health > health_max:
 		health = health_max
 	$Label.set_text(str(int(health)) + "/" + str(health_max))
-	$Line2D3.set_scale(Vector2(float(health)/float(health_max),1))
+	$Line2D4.set_scale(Vector2(float(health)/float(health_max),1))
 
 func damage(var damage):
 	if invicible == false:
@@ -31,7 +31,7 @@ func damage(var damage):
 		health -= damage
 		if player:
 			$"Damage Number".play("Damage")
-			$AudioStreamPlayer._set_playing(true)
+			$AudioStreamPlayer.play()
 		$Label2.set_text(str(-damage))
 	invici()
 	

@@ -67,7 +67,7 @@ margin_top = 459.49
 margin_right = 544.427
 margin_bottom = 479.49
 custom_fonts/font = ExtResource( 3 )
-text = "Graphics:Fancy"
+text = "Graphics:Fast"
 flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
