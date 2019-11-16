@@ -16,7 +16,7 @@ func _ready():
 	if get_node("/root/Test/Hooks").get_child_count() > 0:
 		speed = speed / get_node("/root/Test/Hooks").get_child_count()
 
-func _process(delta):
+func _physics_process(delta):
 	if have and enable:
 		for i in range(0,get_node("/root/Test/Hooks").get_child_count()):
 			if Input.is_action_pressed("ui_cancel"):

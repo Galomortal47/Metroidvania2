@@ -30,7 +30,7 @@ func _ready():
 		sprite.texture = load("res://sprites/boltsprite.png")
 		add_child(sprite)
 
-func _process(delta):
+func _physics_process(delta):
 	if not $ground_detect.is_colliding():
 		set_position(get_position() + Vector2(0,gravity))
 	else:

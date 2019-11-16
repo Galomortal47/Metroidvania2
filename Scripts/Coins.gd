@@ -8,7 +8,7 @@ func _ready():
 	before = int($Number.get_text())
 	pass # Replace with function body.
 
-func _process(delta):
+func _physics_process(delta):
 	$Label2.set_text("+"+str(int($Number.get_text())-before))
 
 func _on_AnimationPlayer_animation_finished(anim_name):
