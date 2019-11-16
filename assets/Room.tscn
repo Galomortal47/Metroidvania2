@@ -16863,18 +16863,17 @@ tracks/1/keys = {
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 editor/display_folded = true
-position = Vector2( 493.071, 629.053 )
+position = Vector2( 655.069, 565.054 )
 
 [node name="CamShake" parent="Player" instance=ExtResource( 2 )]
 limit_left = 0
 limit_right = 1000
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 0, 190.206 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 445.88, 482.209 )
+position = Vector2( 445.88, 427.094 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]

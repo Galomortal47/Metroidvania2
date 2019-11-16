@@ -4,13 +4,13 @@
 [ext_resource path="res://assets/light.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/light.png" type="Texture" id=3]
 
-[sub_resource type="OccluderPolygon2D" id=3]
+[sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( -27.5041, 25.7265, -20.5331, 31.0384, -13.8162, 33.9069, 7.36755, 33.6872, 15.3783, 30.4378, 21.0922, 25.4025, 15.4749, 30.47, 7.4353, 33.8166, -13.8092, 34.0304, -20.6297, 31.1028 )
 
 [sub_resource type="OccluderPolygon2D" id=2]
 polygon = PoolVector2Array( 9.40942, -17.7711, 15.1802, 4.08112, 9.79413, -18.3866 )
 
-[sub_resource type="OccluderPolygon2D" id=1]
+[sub_resource type="OccluderPolygon2D" id=3]
 polygon = PoolVector2Array( -20.6257, 3.72363, -14.2001, -16.7096, -15.2283, -16.7096 )
 
 [sub_resource type="OccluderPolygon2D" id=4]
@@ -42,7 +42,7 @@ texture = ExtResource( 3 )
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="Node2D/Node2D"]
 visible = false
 position = Vector2( 359.455, 90.1074 )
-occluder = SubResource( 3 )
+occluder = SubResource( 1 )
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="Node2D/Node2D"]
 visible = false
@@ -52,7 +52,7 @@ occluder = SubResource( 2 )
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Node2D"]
 visible = false
 position = Vector2( 359.455, 90.1074 )
-occluder = SubResource( 1 )
+occluder = SubResource( 3 )
 
 [node name="Node2D2" type="Node2D" parent="Node2D"]
 
