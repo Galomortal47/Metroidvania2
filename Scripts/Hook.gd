@@ -2,7 +2,7 @@ extends Node2D
 
 var speed = 25
 var rage = 1000
-var rage2 = 100
+var rage2 = 150
 var hook = false
 var area = Vector2(0,0)
 var have = true
@@ -23,6 +23,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_cancel"):
 			close = get_closest()
 		if Input.is_action_pressed("ui_cancel"):
+			print(get_distance(close))
 			if get_distance(close) < rage:
 				var rot = get_angle_to(get_node("/root/Test/Hooks").get_child(close).get_global_position())
 				var dir = Vector2(cos(rot), sin(rot))
@@ -54,5 +55,5 @@ func get_closest():
 	return dist.find(smallest[0])
 
 func get_distance(var number):
-	var distance = get_parent().get_parent().get_position().distance_to(get_node("/root/Test/Hooks").get_child(number).get_position())
+	var distance = get_parent().get_parent().get_global_position().distance_to(get_node("/root/Test/Hooks").get_child(number).get_global_position())
 	return distance

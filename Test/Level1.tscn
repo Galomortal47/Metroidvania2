@@ -17487,7 +17487,7 @@ position = Vector2( 4470.86, 52.3754 )
 position = Vector2( 4955.97, -82.9726 )
 
 [node name="Hook23" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( 5583.42, -154.063 )
+position = Vector2( 5344.32, -137.761 )
 
 [node name="Hook4" parent="Hooks" instance=ExtResource( 9 )]
 position = Vector2( -6245.28, 370.098 )
@@ -17502,7 +17502,7 @@ position = Vector2( -8516.71, -1101.17 )
 position = Vector2( -7938.52, -1111.49 )
 
 [node name="Hook8" parent="Hooks" instance=ExtResource( 9 )]
-position = Vector2( -10338.6, -1033.9 )
+position = Vector2( -10526.3, -1025.91 )
 
 [node name="Hook9" parent="Hooks" instance=ExtResource( 9 )]
 position = Vector2( -11111.4, -693.795 )

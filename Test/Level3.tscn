@@ -160,17 +160,22 @@ position = Vector2( 13555.3, 474.932 )
 shape = SubResource( 2 )
 
 [node name="Hooks" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
 [node name="Hook4" parent="Hooks" instance=ExtResource( 6 )]
-position = Vector2( 12421.9, 385.178 )
+position = Vector2( 12610.1, 159.925 )
+
+[node name="Hook5" parent="Hooks" instance=ExtResource( 6 )]
+position = Vector2( 12353, 430.229 )
 
 [node name="Hook2" parent="Hooks" instance=ExtResource( 6 )]
-position = Vector2( 12770.1, 59.0253 )
+position = Vector2( 12921.2, -52.2762 )
 
 [node name="Hook3" parent="Hooks" instance=ExtResource( 6 )]
-position = Vector2( 13286.8, -134.648 )
+position = Vector2( 13310.7, -192.949 )
+
+[node name="Hook6" parent="Hooks" instance=ExtResource( 6 )]
+position = Vector2( 13705.5, -344.001 )
 
 [node name="Waters" type="Node2D" parent="."]
 position = Vector2( 7335.83, 0 )
