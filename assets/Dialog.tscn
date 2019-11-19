@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=1]
 
 [sub_resource type="Animation" id=1]
 resource_name = "New Anim"
@@ -36,6 +38,7 @@ margin_left = 512.0
 margin_top = 264.77
 margin_right = 631.0
 margin_bottom = 295.77
+custom_fonts/font = ExtResource( 1 )
 text = "You Gained Ammo"
 align = 1
 valign = 1

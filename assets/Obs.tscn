@@ -10,6 +10,10 @@
 shape = SubResource( 1 )
 
 [node name="icon" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( -8.89186, 4.56801, -5.45292, 8.70548, -0.133316, 3.00975, 5.66989, 8.97415, 8.89389, 5.58895, 3.14442, -0.106789, 8.57149, -5.58759, 5.66989, -8.97279, -0.240784, -2.63226, -5.77532, -8.59666, -9.05305, -5.74879, -3.35732, 0.0544109 )
 

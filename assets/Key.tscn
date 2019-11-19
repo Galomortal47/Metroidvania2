@@ -48,3 +48,11 @@ current = true
 [node name="goals" type="Node2D" parent="."]
 position = Vector2( 512, 165 )
 
+[node name="Label2" type="Label" parent="."]
+margin_left = 678.959
+margin_top = 298.615
+margin_right = 833.959
+margin_bottom = 312.615
+custom_fonts/font = ExtResource( 2 )
+text = "press X: to randomize"
+
