@@ -23,7 +23,6 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_cancel"):
 			close = get_closest()
 		if Input.is_action_pressed("ui_cancel"):
-			print(get_distance(close))
 			if get_distance(close) < rage:
 				var rot = get_angle_to(get_node("/root/Test/Hooks").get_child(close).get_global_position())
 				var dir = Vector2(cos(rot), sin(rot))
