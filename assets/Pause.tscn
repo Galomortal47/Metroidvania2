@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Pause.gd" type="Script" id=1]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/Volume.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=4]
+
+[node name="Pause" type="Node"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+pause_mode = 2
+margin_left = 458.544
+margin_top = 165.647
+margin_right = 498.544
+margin_bottom = 179.647
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = ExtResource( 2 )
+text = "Pause"
+
+[node name="Volume" parent="CanvasLayer/Label" instance=ExtResource( 3 )]
+margin_left = -23.4423
+margin_top = 25.2704
+margin_right = 67.5577
+margin_bottom = 59.2704
+
+[node name="Button" type="Button" parent="CanvasLayer/Label"]
+margin_left = -27.3685
+margin_top = 92.6318
+margin_right = 69.6315
+margin_bottom = 112.632
+custom_fonts/font = ExtResource( 2 )
+text = "Quit to Menu"
+flat = true
+script = ExtResource( 4 )
+scene = "res://assets/MainMenu.tscn"
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="CanvasLayer/Label"]
+modulate = Color( 1, 1, 1, 0.498039 )
+position = Vector2( -3.62109, 91.1897 )
+z_index = -2
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -511.296, -299.554, -514.979, 292.213, 535.959, 302.034, 532.276, -308.148 )
+
+[connection signal="button_down" from="CanvasLayer/Label/Button" to="CanvasLayer/Label/Button" method="_on_Button_button_down"]

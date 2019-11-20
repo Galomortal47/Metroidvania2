@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Roommenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=3]
-[ext_resource path="res://music/calm.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/Volume.tscn" type="PackedScene" id=4]
+[ext_resource path="res://music/calm.ogg" type="AudioStream" id=5]
 
 [node name="Main Menu" type="Control"]
 anchor_right = 1.0
@@ -33,27 +34,7 @@ custom_fonts/font = ExtResource( 3 )
 text = "New Game"
 flat = true
 
-[node name="Volume" type="Button" parent="."]
-editor/display_folded = true
-margin_left = 445.33
-margin_top = 415.589
-margin_right = 536.33
-margin_bottom = 449.589
-custom_fonts/font = ExtResource( 3 )
-disabled = true
-text = "Volume:"
-flat = true
-
-[node name="HSlider" type="HSlider" parent="Volume"]
-margin_left = -37.6306
-margin_top = 37.0546
-margin_right = 130.369
-margin_bottom = 53.0546
-max_value = 125.0
-step = 10.0
-value = 100.0
-tick_count = 10
-ticks_on_borders = true
+[node name="Volume" parent="." instance=ExtResource( 4 )]
 
 [node name="Quit Game" type="Button" parent="."]
 margin_left = 401.409
@@ -76,7 +57,7 @@ text = "Graphics:Fast"
 flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -95,6 +76,5 @@ Music: RopeBoyo and chasebethea"
 
 [connection signal="button_down" from="Continue" to="." method="_on_Continue_button_down"]
 [connection signal="button_down" from="New Game" to="." method="_on_New_Game_button_down"]
-[connection signal="value_changed" from="Volume/HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="button_down" from="Quit Game" to="." method="_on_Quit_Game_button_down"]
 [connection signal="button_down" from="Graphics" to="." method="_on_Button_button_down"]

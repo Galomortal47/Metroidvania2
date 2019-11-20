@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Volume.gd" type="Script" id=2]
+
+[node name="Volume" type="Button"]
+margin_left = 445.33
+margin_top = 415.589
+margin_right = 536.33
+margin_bottom = 449.589
+custom_fonts/font = ExtResource( 1 )
+disabled = true
+text = "Volume:"
+flat = true
+script = ExtResource( 2 )
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = -37.6306
+margin_top = 37.0546
+margin_right = 130.369
+margin_bottom = 53.0546
+max_value = 125.0
+step = 10.0
+value = 100.0
+tick_count = 10
+ticks_on_borders = true
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
