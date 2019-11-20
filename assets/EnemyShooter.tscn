@@ -7,8 +7,6 @@
 [ext_resource path="res://music/action.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Sonds/alarm.ogg" type="AudioStream" id=6]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
 
@@ -54,6 +52,7 @@ position = Vector2( -1.05264, 0 )
 cast_to = Vector2( 0, 31 )
 
 [node name="Health" parent="." instance=ExtResource( 3 )]
+time = 4.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

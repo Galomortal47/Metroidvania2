@@ -4,6 +4,7 @@
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
 
 [node name="Key" type="Node2D"]
+visible = false
 position = Vector2( -512, -370 )
 script = ExtResource( 1 )
 

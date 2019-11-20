@@ -18,7 +18,7 @@ var data = {"hp":4,
 "carry" : false,
 "little_girl" : false,
 "climate" : "clear",
-"damage" : [0,1,1,1,1,1,0,0]
+"damage" : [0,1,1,5,1,1,0,0]
 }
 
 func _ready():

@@ -407,7 +407,7 @@ collision_layer = 32
 collision_mask = 32
 script = ExtResource( 20 )
 timer = 3.0
-health = 20
+health = 32
 
 [node name="icon" type="Sprite" parent="Enemies/Boss"]
 visible = false
@@ -424,6 +424,7 @@ shape = SubResource( 6 )
 
 [node name="Health" parent="Enemies/Boss" instance=ExtResource( 23 )]
 visible = false
+time = 4.0
 
 [node name="boss_1" type="Sprite" parent="Enemies/Boss"]
 editor/display_folded = true

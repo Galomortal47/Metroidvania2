@@ -65,9 +65,9 @@ func obstacles_generate():
 			var instance_obs = instance.instance()
 			instance_obs.set_position(Vector2(0,(i*15)+45))
 			$lines.get_child(i).get_node("pos2").add_child(instance_obs) 
-			var random = rand_range(2,7)
+			var random = rand_range(3,7)
 			random = int(random)*45
-			if random == 180 or random == 90 or random == 270:
+			if random == 180 or random == 270:
 				random = 225
 			$lines.get_child(i).get_node("pos2").set_rotation_degrees(random)
 

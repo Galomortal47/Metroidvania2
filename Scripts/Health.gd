@@ -7,6 +7,10 @@ var size = 20
 var knockback = Vector2(0,-200)
 export var invicility = false
 export var player = false
+export var time = 1.0
+
+func _ready():
+	get_node("Invicibility timer").set_speed_scale(time)
 
 #func _ready():
 #	get_parent().get_node("Save").loader()
