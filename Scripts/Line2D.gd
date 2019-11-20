@@ -1,8 +1,16 @@
 extends Line2D
 
 var begin = -150
+var complexity = 0.2
 
 func _ready():
+	if has_node("Line2D"):
+		randomize()
+		if rand_range(0,1) > complexity:
+			get_node("Line2D").queue_free()
+		get_node("Line2D").begin = begin
+		randomize()
+		get_node("Line2D").set_rotation_degrees(int(rand_range(1,7))*45)
 	$RayCast2D.set_position(Vector2(begin,0))
 	if begin > 0:
 		$RayCast2D.set_rotation_degrees(180)
@@ -11,6 +19,8 @@ func _ready():
 
 
 func _process(delta):
+	if has_node("Line2D"):
+		get_node("Line2D").set_self_modulate(get_self_modulate())
 	$icon.set_position(Vector2(begin,0))
 	if $RayCast2D.is_colliding():
 		if not $RayCast2D.get_collider().is_in_group("goal"):
