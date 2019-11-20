@@ -1,7 +1,7 @@
 extends Line2D
 
 var begin = -150
-var complexity = 0.2
+var complexity = 0.0
 
 func _ready():
 	if has_node("Line2D"):

@@ -51,11 +51,10 @@ func goals_generate():
 			var remover = list.find(rand)
 			list.remove(remover)
 			list.append(rand)
-	print(list)
 	for i in range(0,list.size()):
 			var instance = load(goal)
 			var instance_goal = instance.instance()
-			instance_goal.set_position($Polygon2D2.get_polygon()[list[i]]*Vector2(1.1,1.1))
+			instance_goal.set_position($Polygon2D2.get_polygon()[list[i]]*Vector2(1.2,1.2))
 			$goals.add_child(instance_goal)
 
 func obstacles_generate():
@@ -64,7 +63,7 @@ func obstacles_generate():
 		for i in range(0,$lines.get_child_count()):
 			var instance = load(obs)
 			var instance_obs = instance.instance()
-			instance_obs.set_position(Vector2(0,(i*15)+50))
+			instance_obs.set_position(Vector2(0,(i*15)+45))
 			$lines.get_child(i).get_node("pos2").add_child(instance_obs) 
 			var random = rand_range(2,7)
 			random = int(random)*45
