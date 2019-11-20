@@ -18,12 +18,14 @@ export var difficult = 4
 export var difficult2 = 4
 export var complexity = 0.5
 export var complexity2 = 0.5
+export var complexity3 = 0.5
 var select = 0
 
 func _ready():
 	randomizer()
 
 func randomizer():
+	$Label.set_text("...pick logking")
 	select = 0
 	cleaner()
 	keyhole_generate()
@@ -46,23 +48,25 @@ func goals_generate():
 			var remover = list.find(rand)
 			list.remove(remover)
 			list.append(rand)
-	for i in range(0,list.size()):
+	for i in range(0,list.size()-1):
 			var instance = load(goal)
 			var instance_goal = instance.instance()
 			instance_goal.set_position($Polygon2D2.get_polygon()[list[i]]*Vector2(1.1,1.1))
 			$goals.add_child(instance_goal)
 
 func obstacles_generate():
-	for i in range(0,$lines.get_child_count()):
-		var instance = load(obs)
-		var instance_obs = instance.instance()
-		instance_obs.set_position(Vector2(0,(i*25)+25))
-		$lines.get_child(i).get_node("pos2").add_child(instance_obs) 
-		var random = rand_range(2,7)
-		random = int(random)*45
-		if random == 180 or random == 90 or random == 270:
-			random = 225
-		$lines.get_child(i).get_node("pos2").set_rotation_degrees(random)
+	randomize()
+	if rand_range(0,1) > complexity3:
+		for i in range(0,$lines.get_child_count()):
+			var instance = load(obs)
+			var instance_obs = instance.instance()
+			instance_obs.set_position(Vector2(0,(i*25)+25))
+			$lines.get_child(i).get_node("pos2").add_child(instance_obs) 
+			var random = rand_range(2,7)
+			random = int(random)*45
+			if random == 180 or random == 90 or random == 270:
+				random = 225
+			$lines.get_child(i).get_node("pos2").set_rotation_degrees(random)
 
 func keyhole_generate():
 	for i in range(0,difficult):
@@ -79,22 +83,39 @@ func keyhole_generate():
 				instance_line.begin = num
 			$lines.add_child(instance_line)
 
-func _process(delta):
+func _physics_process(delta):
 	controls()
 	win()
 
 func win():
+	checker()
 	progress.resize($goals.get_child_count())
 	var victor = []
 	victor.resize($goals.get_child_count())
 	for i in range(0,victor.size()):
 		victor[i] = true
 	for i in range(0,$goals.get_child_count()):
-		progress[i] = $goals.get_child(i).goal
+		$goals.get_child(i).goal.sort()
+		print($goals.get_child(i).goal)
+		if $goals.get_child(i).goal[0] == 0:
+			progress[i] = true
+		else:
+			progress[i] = false
 #		if not $lines.get_child(i).obj == null:
 #			get_node($lines.get_child(i).obj.get_path()).goal = $lines.get_child(i).goal
 	if progress == victor:
-		print("completed")
+		$Label.set_text("UNLOCKED")
+		
+
+func checker():
+	var goals = get_node("goals")
+	for i in range (0,goals.get_child_count()):
+		for j in range (0,$lines.get_child_count()):
+			var obj = $lines.get_child(j).get_node("RayCast2D").get_collider()
+			if obj == goals.get_child(i):
+				goals.get_child(i).goal[j] = 0
+			else:
+				goals.get_child(i).goal[j] = 1
 
 func controls():
 	var open = true
@@ -103,9 +124,11 @@ func controls():
 	if have and enable and lock:
 		for i in range(0,$lines.get_child_count()):
 			if i == select:
-				$lines.get_child(select).default_color = (Color(1,0,0))
+				$lines.get_child(select).set_self_modulate(Color(1,0,0))
+				$lines.get_child(select).get_node("pos2").set_modulate(Color(1,0,0))
 			else:
-				$lines.get_child(i).default_color = (Color(1,0.8,0))
+				$lines.get_child(i).set_self_modulate((Color(1,0.8,0)))
+				$lines.get_child(i).get_node("pos2").set_modulate(Color(1,1,1))
 		if Input.is_action_just_pressed("ui_down"):
 			if select <= $lines.get_child_count()-2:
 				select += 1

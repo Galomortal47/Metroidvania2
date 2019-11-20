@@ -30,13 +30,15 @@ color = Color( 0, 0, 0, 0.498039 )
 polygon = PoolVector2Array( -120, 0, -80, -80, 0, -120, 80, -80, 120, 0, 80, 80, 0, 120, -80, 80 )
 
 [node name="Label" type="Label" parent="."]
-visible = false
-margin_left = 491.537
-margin_top = 5.43948
-margin_right = 531.537
-margin_bottom = 34.4395
+margin_left = 452.235
+margin_top = -7.57349
+margin_right = 567.235
+margin_bottom = 21.4265
+rect_pivot_offset = Vector2( 59.1773, 15.3651 )
 custom_fonts/font = ExtResource( 2 )
-text = "0/100"
+text = "...pick logking"
+align = 1
+valign = 1
 autowrap = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
