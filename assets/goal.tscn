@@ -4,6 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.50488, 10 )
 
 [node name="Goal" type="KinematicBody2D" groups=[
 "goal",
@@ -11,6 +12,7 @@
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.36248, 0.0730972 )
 shape = SubResource( 1 )
 
 [node name="icon" type="Sprite" parent="."]

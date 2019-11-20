@@ -16,15 +16,18 @@ var obs = "res://assets/Obs.tscn"
 var goal = "res://assets/goal.tscn"
 export var difficult = 4
 export var difficult2 = 4
+export var difficult3 = 2
 export var complexity = 0.5
 export var complexity2 = 0.5
 export var complexity3 = 0.5
 var select = 0
+var lines
 
 func _ready():
 	randomizer()
 
 func randomizer():
+	lines = $lines.get_child_count()
 	$Label.set_text("...pick logking")
 	select = 0
 	cleaner()
@@ -41,14 +44,15 @@ func cleaner():
 func goals_generate():
 	var list = []
 #	list.resize($lines.get_child_count())
-	for i in range(0,$lines.get_child_count()):
+	for i in range(0,$lines.get_child_count() - lines):
 			randomize()
 			var rand = rand_range(1,8)
 			rand = int(rand)
 			var remover = list.find(rand)
 			list.remove(remover)
 			list.append(rand)
-	for i in range(0,list.size()-1):
+	print(list)
+	for i in range(0,list.size()):
 			var instance = load(goal)
 			var instance_goal = instance.instance()
 			instance_goal.set_position($Polygon2D2.get_polygon()[list[i]]*Vector2(1.1,1.1))
@@ -71,7 +75,7 @@ func obstacles_generate():
 func keyhole_generate():
 	for i in range(0,difficult):
 		randomize()
-		if rand_range(0,1) > complexity or i == 0:
+		if rand_range(0,1) > complexity or i == 0 or i == 1:
 			var instance = load(line)
 			var instance_line = instance.instance()
 			instance_line.set_rotation_degrees(i*45)
@@ -96,7 +100,6 @@ func win():
 		victor[i] = true
 	for i in range(0,$goals.get_child_count()):
 		$goals.get_child(i).goal.sort()
-		print($goals.get_child(i).goal)
 		if $goals.get_child(i).goal[0] == 0:
 			progress[i] = true
 		else:
