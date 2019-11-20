@@ -19,7 +19,7 @@ export var difficult2 = 4
 export var difficult3 = 2
 export var complexity = 0.5
 export var complexity2 = 0.5
-export var complexity3 = 0.5
+export var complexity3 = 0.2
 var select = 0
 var lines
 
@@ -64,7 +64,7 @@ func obstacles_generate():
 		for i in range(0,$lines.get_child_count()):
 			var instance = load(obs)
 			var instance_obs = instance.instance()
-			instance_obs.set_position(Vector2(0,(i*25)+25))
+			instance_obs.set_position(Vector2(0,(i*15)+50))
 			$lines.get_child(i).get_node("pos2").add_child(instance_obs) 
 			var random = rand_range(2,7)
 			random = int(random)*45
