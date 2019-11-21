@@ -2,12 +2,12 @@ extends KinematicBody2D
 
 var angle = 0.0
 var motion = Vector2(0,0)
-var speed = 20
-var max_speed = 300
+export var speed = 20
+export var max_speed = 300
 export var gravity = 10
 export var music = true
-var jump = 0
-var drag = 0.9
+export var jump = 0
+export var drag = 0.9
 export var damage = 5
 export var health = 20
 var stun = false
@@ -107,10 +107,10 @@ func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
 	$Vision.rotate(angle - $Vision.get_rotation())
 	pass # Replace with function body.
 
-func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
-	angle = get_angle_to(body.get_position()) -1.57
-	$Vision.rotate(angle - $Vision.get_rotation())
-	pass # Replace with function body.
+#func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
+#	angle = get_angle_to(body.get_position()) -1.57
+#	$Vision.rotate(angle - $Vision.get_rotation())
+#	pass # Replace with function body.
 
 # verifica a vida do inimigo e o destruir caso ela seja igual ou menor que 0
 func die():

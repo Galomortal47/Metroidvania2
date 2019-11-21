@@ -17050,7 +17050,6 @@ tracks/3/keys = {
 }
 
 [node name="Test" type="Node2D"]
-position = Vector2( -0.429321, 1.7171 )
 __meta__ = {
 "_edit_vertical_guides_": [ 5510.29 ]
 }
@@ -17477,6 +17476,7 @@ position = Vector2( -245.126, 520.219 )
 position = Vector2( 86.887, 555.155 )
 
 [node name="Hooks" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Hook1" parent="Hooks" instance=ExtResource( 9 )]
 
@@ -17954,6 +17954,7 @@ position = Vector2( -5821.56, -831.195 )
 position = Vector2( -8867.35, -801.194 )
 
 [node name="Art" type="Node2D" parent="."]
+editor/display_folded = true
 z_index = -1
 
 [node name="mushroom" type="Sprite" parent="Art"]
@@ -18448,6 +18449,7 @@ level_load = "res://Test/Level2.tscn"
 [node name="Day Night cycle" parent="." instance=ExtResource( 34 )]
 
 [node name="rocket" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -11685.5, -43.9109 )
 script = ExtResource( 35 )
 
