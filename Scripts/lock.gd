@@ -2,13 +2,15 @@ extends Sprite
 
 var contact = false
 var player 
+var lock = false
 
 func _ready():
 	player = get_node("/root/Test/Player")
 
 func _process(delta):
 	if contact:
-		if player.get_node("Weapons/Key").UNLOCK:
+		lock = player.get_node("Weapons/Key").UNLOCK
+		if lock:
 			$AnimationPlayer.play("open")
 
 func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):

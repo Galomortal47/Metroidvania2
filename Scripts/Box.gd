@@ -14,7 +14,13 @@ export var object = "bolt"
 export var damage = 1
 var air_drag = 0.99
 var drag = 0.9
-func _process(delta):
+var spam = true
+
+func _physics_process(delta):
+	match object:
+		"chest":
+			if get_node("Chest/lock").lock:
+				get_node("Health").health = 0
 	if not $RayCast2D.is_colliding():
 		motion.y += grav
 		motion.x *= air_drag
@@ -43,6 +49,11 @@ func _process(delta):
 			"explosive":
 				explosive.explosion(get_global_position(),get_tree().get_root(),"player","",damage,Color(1,0,0))
 				queue_free()
+			"chest":
+				if spam :
+					get_node("Chest/AnimationPlayer").play("open")
+					boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position(),20)
+					spam = false
 	match object:
 		"explosive":
 			if $RayCast2D2.is_colliding() or $RayCast2D3.is_colliding() or motion.y > 300:

@@ -5,7 +5,7 @@
 [ext_resource path="res://sprites/lock.png" type="Texture" id=3]
 [ext_resource path="res://assets/light.tscn" type="PackedScene" id=4]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 length = 1000.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("lock2:position")
@@ -56,7 +56,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.2, 0.95 ), Vector2( 0.88, 1.165 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 length = 1000.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("lock2:position")
@@ -203,6 +203,6 @@ z_index = 999
 color = Color( 0.972549, 0.811765, 0.0862745, 0.392157 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/lock"]
-anims/open = SubResource( 2 )
-"anims/open (copy)" = SubResource( 3 )
+anims/open = SubResource( 1 )
+"anims/open (copy)" = SubResource( 2 )
 

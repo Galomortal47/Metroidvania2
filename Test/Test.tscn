@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/lock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Chest.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2000, 10 )
@@ -25,4 +26,7 @@ shape = SubResource( 1 )
 
 [node name="lock" parent="StaticBody2D" instance=ExtResource( 3 )]
 position = Vector2( 367.58, 99.7899 )
+
+[node name="Box" parent="." instance=ExtResource( 4 )]
+position = Vector2( -880.284, 121.702 )
 

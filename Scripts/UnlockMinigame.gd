@@ -129,7 +129,6 @@ func controls():
 #	if Input.is_action_just_pressed("ui_roll"):
 #		randomizer()
 	if Input.is_action_just_pressed("ui_cancel"):
-		print(using)
 		if using:
 			using = false
 		else:
