@@ -19,7 +19,7 @@ var close = 0
 #		speed = speed / get_node("/root/Test/Hooks").get_child_count()
 
 func _physics_process(delta):
-	if have and enable:
+	if have and enable and get_node("/root/Test/Hooks").get_child_count() > 0:
 		if Input.is_action_just_pressed("ui_cancel"):
 			close = get_closest()
 		if Input.is_action_pressed("ui_cancel"):

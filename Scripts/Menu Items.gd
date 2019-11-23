@@ -33,8 +33,14 @@ func weapon_sprite(var select):
 		get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(select+1).get_texture()
 		get_parent().get_node("Shadow/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(select+1).get_texture()
 
+var enabled = true
+
 func _process(delta):
 	guns_have()
+	if enabled:
+		controls()
+
+func controls():
 	if Input.is_action_pressed("ui_select"):
 		$"Menu Anim".set_current_animation("open")
 		Engine.set_time_scale(0.25) 

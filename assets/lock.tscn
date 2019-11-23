@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/lock.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/lock.gd" type="Script" id=2]
+[ext_resource path="res://assets/light.tscn" type="PackedScene" id=3]
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 60, 60 )
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=2]
+length = 1000.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("lock2:position")
 tracks/0/interp = 1
@@ -13,7 +16,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.14 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( -0.647125, -13.912 ), Vector2( 2.78711, -17.7756 ) ]
@@ -25,15 +28,37 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.14 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 52.0 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 23.6598, -14.4849, 1.11124 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 0.95 ), Vector2( 0.88, 1.165 ), Vector2( 1, 1 ) ]
+}
 
 [node name="lock" type="Sprite"]
-editor/display_folded = true
-position = Vector2( 471.057, 536.757 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 5.5, 15.25, 28.75, 26 )
@@ -51,10 +76,17 @@ region_rect = Rect2( 7.25, 2.375, 24.125, 12.875 )
 editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 17 )
+visible = false
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/open = SubResource( 18 )
+anims/open = SubResource( 2 )
+
+[node name="light" parent="." instance=ExtResource( 3 )]
+modulate = Color( 1, 0.701961, 0, 0.427451 )
+position = Vector2( 0.189807, -0.103261 )
+z_index = 999
+color = Color( 1, 0.937255, 0, 0.392157 )
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="Area2D" to="." method="_on_Area2D_body_shape_exited"]

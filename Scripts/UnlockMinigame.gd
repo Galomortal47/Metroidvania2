@@ -1,7 +1,7 @@
 extends Node2D
 
-var have = true
-var enable = true
+var have = false
+var enable = false
 var progress = []
 var code = [false,false,false,false,false,false,false,false,false,false,false]
 var current = 0
@@ -22,6 +22,8 @@ export var complexity2 = 0.5
 export var complexity3 = 0.2
 var select = 0
 var lines
+
+var UNLOCK = false
 
 func _ready():
 	randomizer()
@@ -107,7 +109,8 @@ func win():
 #			get_node($lines.get_child(i).obj.get_path()).goal = $lines.get_child(i).goal
 	if progress == victor:
 		$Label.set_text("UNLOCKED")
-		
+		UNLOCK = true
+		get_node("Node2D/lock/AnimationPlayer").play("open (copy)")
 
 func checker():
 	var goals = get_node("goals")
@@ -119,11 +122,21 @@ func checker():
 			else:
 				goals.get_child(i).goal[j] = 1
 
+var using = false
+
 func controls():
 	var open = true
-	if Input.is_action_just_pressed("ui_roll"):
-		randomizer()
-	if have and enable and lock:
+#	if Input.is_action_just_pressed("ui_roll"):
+#		randomizer()
+	if Input.is_action_just_pressed("ui_cancel"):
+		print(using)
+		if using:
+			using = false
+		else:
+			using = true
+	if have and enable and lock and using:
+		get_parent().get_parent().get_node("Menu Items").enabled = false
+		show()
 		for i in range(0,$lines.get_child_count()):
 			if i == select:
 				$lines.get_child(select).set_self_modulate(Color(1,0,0))
@@ -142,5 +155,13 @@ func controls():
 			$lines.get_child(select).set_rotation_degrees(rot +45)
 		if Input.is_action_just_pressed("trigger_r"):
 			$lines.get_child(select).set_rotation_degrees(rot -45)
+	else:
+		hide()
+		get_parent().get_parent().get_node("Menu Items").enabled = true
+			
+func update_text():
+	if have:
+		get_parent().get_node("Label").set_text("infi/infi")
+
 func reload():
 	pass
