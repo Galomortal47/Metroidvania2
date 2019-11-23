@@ -10,6 +10,9 @@ var timer = 0.5
 var time_aux
 var size_selected = Vector2(0.4,-0.4)
 var size_unselected = Vector2(0.2,-0.2)
+var anim_path = "Anim/Viewport/Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster"
+var anim_path2 = "Anim/Viewport/Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D"
+var shadow_path3 = "Shadow/Viewport/Shadow/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster"
 
 func _ready():
 	icon_generate()
@@ -26,12 +29,12 @@ func _ready():
 
 func icon_generate():
 	for i in range(0,menu_size):
-		get_parent().get_node("Menu Items/Menu").get_child(i).texture = get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(i+1).get_texture()
+		get_parent().get_node("Menu Items/Menu").get_child(i).texture = get_parent().get_node(anim_path2).get_child(i+1).get_texture()
 
 func weapon_sprite(var select):
 	if get_parent().get_node("Weapons").get_child(select).have:
-		get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(select+1).get_texture()
-		get_parent().get_node("Shadow/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D/Monster").texture =  get_parent().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(select+1).get_texture()
+		get_parent().get_node(anim_path).texture =  get_parent().get_node(anim_path2).get_child(select+1).get_texture()
+		get_parent().get_node(shadow_path3).texture =  get_parent().get_node(anim_path2).get_child(select+1).get_texture()
 
 var enabled = true
 

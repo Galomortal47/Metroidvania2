@@ -3,7 +3,6 @@
 [ext_resource path="res://enemy/Monster2D3D.gd" type="Script" id=1]
 [ext_resource path="res://3D models/Heart.tscn" type="PackedScene" id=2]
 
-
 [sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 1
 
