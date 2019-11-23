@@ -11,5 +11,5 @@ dest_files=[ "res://.import/roll.ogg-aa95c69601f5ae7f4f4033e1b3b5ef29.oggstr" ]
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

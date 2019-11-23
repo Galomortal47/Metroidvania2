@@ -24,7 +24,7 @@ func _process(delta):
 			$Scale.set_scale(Vector2(1,1))
 		for i in range(0,items_n):
 			if get_collider().is_in_group("player"):
-				get_node("Shop_Select/Icons").get_child(i).texture = get_collider().get_node("Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(i+1).get_texture()
+				get_node("Shop_Select/Icons").get_child(i).texture = get_collider().get_node("Anim/Viewport/Scale/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons/enemy/Monster2D-3D").get_child(i+1).get_texture()
 			if select == i:
 				get_node("Shop_Select/Icons").get_child(i).set_scale(Vector2(0.75,-0.75))
 				get_node("Shop_Select/Icons").get_child(i).set_modulate(Color(1,1,1))

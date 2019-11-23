@@ -19,6 +19,10 @@ func _ready():
 
 
 func _process(delta):
+	if get_parent().get_parent().enable:
+		goal_find()
+
+func goal_find():
 	if has_node("Line2D"):
 		get_node("Line2D").set_self_modulate(get_self_modulate())
 	$icon.set_position(Vector2(begin,0))

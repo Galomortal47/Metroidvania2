@@ -27,7 +27,7 @@ func release(var motion):
 	remove_child(child)
 	get_tree().get_root().add_child(child)
 	child.set_global_position(pos)
-	child.motion += Vector2(motion.x * -get_parent().get_node("Scale").get_scale().x,-motion.y)
+	child.motion += Vector2(motion.x * -get_parent().get_node("Anim/Viewport/Scale").get_scale().x,-motion.y)
 	get_parent().state = "walk"
 
 func grab():

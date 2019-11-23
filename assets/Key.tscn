@@ -177,6 +177,7 @@ custom_fonts/font = ExtResource( 2 )
 text = "press X: to randomize"
 
 [node name="Node2D" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 513.02, 166.205 )
 scale = Vector2( 5, 5 )
 z_index = 999

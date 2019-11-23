@@ -12,11 +12,12 @@ func _process(delta):
 		set_cast_to(Vector2(attack_range ,30))
 	if Input.is_action_pressed("ui_roll"):
 		if is_colliding() and not get_parent().motion.x == 0:
-			if get_collider().is_in_group("enemy"):
-				if get_collider().has_node("Health"):
-					get_parent().get_node("CamShake").shake += screen_shake
-					get_parent().motion.y -= jump
-					if get_parent().motion.x > 0:
-						get_collider().get_node("Health").health -= damage
-					else:
-						get_collider().get_node("Health").health -= damage
+			if not get_collider() == null:
+				if get_collider().is_in_group("enemy"):
+					if get_collider().has_node("Health"):
+						get_parent().get_node("CamShake").shake += screen_shake
+						get_parent().motion.y -= jump
+						if get_parent().motion.x > 0:
+							get_collider().get_node("Health").health -= damage
+						else:
+							get_collider().get_node("Health").health -= damage

@@ -33,7 +33,7 @@ func save(var player,var pos, var level):
 		save.data.ammo[i] = player.get_node("Weapons").get_child(i).ammo
 	save.data.select = player.get_node("Menu Items").select
 	save.data.state = player.state
-	save.data.carry = player.get_node("Scale/Animation/Hips/Scientist anim").is_visible()
+	save.data.carry = player.get_node("Anim/Viewport/Scale/Animation/Hips/Scientist anim").is_visible()
 	save.data.position_y = pos.get_position().y
 	save.data.position_x = pos.get_position().x
 	pos2 = pos
