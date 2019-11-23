@@ -35,7 +35,7 @@ func _physics_process(delta):
 	if $Health.health <= 0:
 		match object:
 			"bolt": 
-				boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position(),3)
+				boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position(),bolt_number)
 				boltspawner.particle_spawn(get_tree().get_root(),get_position())
 				queue_free()
 			"health":
@@ -52,7 +52,7 @@ func _physics_process(delta):
 			"chest":
 				if spam :
 					get_node("Chest/AnimationPlayer").play("open")
-					boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position(),20)
+					boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position(),bolt_number)
 					spam = false
 	match object:
 		"explosive":
