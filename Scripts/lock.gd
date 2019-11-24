@@ -13,7 +13,6 @@ func _process(delta):
 		lock = player.get_node("Weapons/Key").UNLOCK
 		if lock:
 			$AnimationPlayer.play("open")
-			player.get_node("Weapons/Key").UNLOCK = false
 
 func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
