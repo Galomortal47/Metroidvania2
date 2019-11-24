@@ -10,12 +10,13 @@ func _process(delta):
 				get_collider().state = "chocobo_swin"
 			particle_water()
 	if $Swwing2.is_colliding():
-		if $Swwing2.get_collider().is_in_group("player"):
-			if $Swwing2.get_collider().state == "swin":
-				$Swwing2.get_collider().state = "walk"
-			if $Swwing2.get_collider().state == "chocobo_swin":
-				$Swwing2.get_collider().state = "chocobo"
-			particle_water()
+		if not $Swwing2.get_collider() == null:
+			if $Swwing2.get_collider().is_in_group("player"):
+				if $Swwing2.get_collider().state == "swin":
+					$Swwing2.get_collider().state = "walk"
+				if $Swwing2.get_collider().state == "chocobo_swin":
+					$Swwing2.get_collider().state = "chocobo"
+				particle_water()
 func particle_water():
 	if is_colliding():
 		var particles = preload("res://assets/CPUParticles2D.tscn").instance()

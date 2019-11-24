@@ -158,6 +158,7 @@ position = Vector2( 9599.87, 740.728 )
 scale = Vector2( 1, 1 )
 
 [node name="Platfroms" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 6847.79, -403.441 )
 
 [node name="Platform4" parent="Platfroms" instance=ExtResource( 8 )]

@@ -27,10 +27,11 @@ func goal_find():
 		get_node("Line2D").set_self_modulate(get_self_modulate())
 	$icon.set_position(Vector2(begin,0))
 	if $RayCast2D.is_colliding():
-		if not $RayCast2D.get_collider().is_in_group("goal"):
-			line_drawn()
-		elif $RayCast2D.get_collider().is_in_group("goal"):
-			line_drawn()
+		if not $RayCast2D.get_collider() == null:
+			if not $RayCast2D.get_collider().is_in_group("goal"):
+				line_drawn()
+			elif $RayCast2D.get_collider().is_in_group("goal"):
+				line_drawn()
 	else:
 		if begin > 0:
 			set_points([Vector2(begin,0),Vector2(-150,0)])

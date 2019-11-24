@@ -25,8 +25,8 @@ var lines
 
 var UNLOCK = false
 
-func _ready():
-	randomizer()
+#func _ready():
+#	randomizer()
 
 func randomizer():
 	lines = $lines.get_child_count()
@@ -89,8 +89,9 @@ func keyhole_generate():
 			$lines.add_child(instance_line)
 
 func _physics_process(delta):
-	controls()
-	win()
+	if $lines.get_child_count() > 0 and $goals.get_child_count() > 0:
+		controls()
+		win()
 
 func win():
 	checker()

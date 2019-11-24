@@ -8,12 +8,13 @@ func _process(delta):
 	elif get_child_count() == 1 and get_parent().state == "carring":
 		get_parent().state = "walk"
 	if is_colliding():
-		if get_collider().is_in_group("grabable"):
-			$Polygon2D.show()
-			if Input.is_action_just_pressed("ui_down")  and not get_parent().state == "carring":
-				grab()
-		else:
-			$Polygon2D.hide()
+		if not get_collider() == null:
+			if get_collider().is_in_group("grabable"):
+				$Polygon2D.show()
+				if Input.is_action_just_pressed("ui_down")  and not get_parent().state == "carring":
+					grab()
+			else:
+				$Polygon2D.hide()
 	else:
 		$Polygon2D.hide()
 	if Input.is_action_just_pressed("ui_up") and get_parent().state == "carring" and carring:
