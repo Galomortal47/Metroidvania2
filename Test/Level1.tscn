@@ -18472,7 +18472,6 @@ level_load = "res://Test/Level2.tscn"
 [node name="Day Night cycle" parent="." instance=ExtResource( 37 )]
 
 [node name="rocket" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( -11685.5, -43.9109 )
 script = ExtResource( 38 )
 
@@ -18492,7 +18491,7 @@ gun_id = 0
 [node name="Scientist anim" type="Node2D" parent="rocket"]
 editor/display_folded = true
 position = Vector2( 64.041, 53.2135 )
-scale = Vector2( -0.8, 0.8 )
+scale = Vector2( -0.6, 0.6 )
 z_index = 5
 
 [node name="Animation" type="Node2D" parent="rocket/Scientist anim"]

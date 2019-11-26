@@ -24,31 +24,35 @@ var jump_count = 10
 var jump_count_aux = jump_count
 var boltspawner = preload("boltspawner.gd").new()
 var timer = Timer.new()
+var jetpack = false
+var jetpackfall = 0.07
 
 func _ready():
 	state = $Save.data.state
 	timer.connect("timeout",self,"_on_timer_timeout") 
 	timer.wait_time = roll_timer
 	add_child(timer)
-	
+
+func jetpack_checker():
+	jetpack = get_node("Anim/Viewport/Scale/Animation/Hips/Scientist anim").visible
+
 func _physics_process(delta):
+	jetpack_checker()
 	match state:
 		"walk":
-			max_speed = 550
-			jump = 50
-			jump_count_aux = 10
 			move()
-			jump()
-			roll()
-			if not ground_detect() and not ledge_detect():
-				motion.y += gravity
-				jump_aux -= delta
-			elif ground_detect():
-				jump_count = jump_count_aux
-			elif ledge_detect():
-				ledge_grab()
+			max_speed = 550
+			if not jetpack:
+				jump()
+				jump = 50
+				jump_count_aux = 10
 			else:
-				jump_aux = jump_timer
+				jetjump()
+				jump = 50
+				jump_count_aux = 10
+				jetpackfall = 7.5
+			roll()
+
 		"swin":
 			swin()
 		"pick_lock":
@@ -64,24 +68,16 @@ func _physics_process(delta):
 			if Input.is_action_just_pressed("ui_roll"):
 				state = "walk"
 				boltspawner.spawn_choco(get_tree().get_root(),get_global_position())
-			if not ground_detect():
-				motion.y += gravity
-				if Input.is_action_pressed("ui_accept"):
-					jump_aux -= delta
 			if ground_detect():
 				jump_count = jump_count_aux
 		"chocobo_swin":
 			swin()
 		"carring":
-			max_speed = 500
+			max_speed = 400
 			jump = 40
 			jump_timer = 0.15
 			move()
 			jump()
-			if not ground_detect():
-				motion.y += gravity
-			if Input.is_action_pressed("ui_accept"):
-				jump_aux -= delta
 	motion = move_and_slide(motion)
 	die()
 #	pass
@@ -145,6 +141,32 @@ func jump():
 	if Input.is_action_pressed("ui_accept") and jump_count > 0 and not Input.is_action_pressed("ui_roll"):
 		motion.y -= jump
 		jump_count -= 1
+	if not ground_detect() and not ledge_detect():
+		motion.y += gravity
+		jump_aux -= 1
+	elif ground_detect():
+		jump_count = jump_count_aux
+	elif ledge_detect():
+		ledge_grab()
+	else:
+		jump_aux = jump_timer
+
+func jetjump():
+	if Input.is_action_pressed("ui_accept") and not Input.is_action_pressed("ui_roll"):
+		if jump_count > 0:
+			motion.y -= jump
+		elif motion.y > 0:
+			motion.y -= jetpackfall
+		jump_count -= 1
+	if not ground_detect() and not ledge_detect():
+		motion.y += gravity
+	elif ground_detect():
+		jump_count = jump_count_aux
+	elif ledge_detect():
+		ledge_grab()
+	else:
+		jump_aux = jump_timer
+
 
 func move():
 	if Input.is_action_pressed("ui_right"):

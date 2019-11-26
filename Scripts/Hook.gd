@@ -32,6 +32,8 @@ func _physics_process(delta):
 				$Line2D.set_points([Vector2(0,0),Vector2(0,0)])
 		else:
 			$Line2D.set_points([Vector2(0,0),Vector2(0,0)])
+	else:
+			$Line2D.set_points([Vector2(0,0),Vector2(0,0)])
 
 func update_text():
 	if have:

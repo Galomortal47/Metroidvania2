@@ -620,6 +620,7 @@ anims/roll = SubResource( 4 )
 anims/swin = SubResource( 5 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 z_index = 4096
 
