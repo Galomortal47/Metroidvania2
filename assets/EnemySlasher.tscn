@@ -2286,7 +2286,6 @@ wait_time = 2.0
 [node name="Scale" type="Node2D" parent="."]
 
 [node name="Body" type="Sprite" parent="Scale"]
-editor/display_folded = true
 position = Vector2( 0.276131, -23.0354 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )

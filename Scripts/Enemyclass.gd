@@ -95,6 +95,7 @@ func hunt_player(var distance):
 					motion.y = -jump
 				elif $Vision.get_collider().get_position().y - get_position().y > 30:
 					attack.y = 60
+					motion.y = jump
 				else:
 					attack.y = 0
 	else:
