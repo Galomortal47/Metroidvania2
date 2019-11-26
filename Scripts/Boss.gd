@@ -3,7 +3,7 @@ extends KinematicBody2D
 export var vida = 1
 export var mult = 0
 export var crown = false
-var fireball = load("res://Resources/fireball.tscn")
+#var fireball = load("res://Resources/fireball.tscn")
 var able = false
 var boltspawner = preload("boltspawner.gd").new()
 
@@ -29,13 +29,13 @@ func death():
 	if $Health.health < 1:
 		get_node("AnimationPlayer2").play("death")
 
-func _on_Spawn_Fireball_timeout():
-	if able:
-		var bomb = fireball.instance()
-		var pos = get_node("Root/stem1/stem2/stem3/stem4/stem5/Mouth Top/crown").get_global_position()
-		bomb.set_position(pos)
-		get_parent().add_child(bomb)
-	pass # Replace with function body.
+#func _on_Spawn_Fireball_timeout():
+#	if able:
+#		var bomb = fireball.instance()
+#		var pos = get_node("Root/stem1/stem2/stem3/stem4/stem5/Mouth Top/crown").get_global_position()
+#		bomb.set_position(pos)
+#		get_parent().add_child(bomb)
+#	pass # Replace with function body.
 
 export var target = "player"
 export var damage = 1

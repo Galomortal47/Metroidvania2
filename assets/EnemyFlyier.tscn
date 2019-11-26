@@ -633,6 +633,7 @@ time = 4.0
 wait_time = 2.0
 
 [node name="Scale" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Body" type="Sprite" parent="Scale"]
 position = Vector2( 0.276131, -23.0354 )
@@ -765,5 +766,4 @@ autoplay = true
 max_distance = 960.0
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="Area2D" to="." method="_on_Area2D_body_shape_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

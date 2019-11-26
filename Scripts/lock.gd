@@ -15,6 +15,9 @@ func _process(delta):
 			$AnimationPlayer.play("open")
 
 func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
+	call_deferred('enter', body)
+
+func enter(var body):
 	if body.is_in_group("player"):
 		contact = true
 		player.get_node("Weapons/Key").UNLOCK = false
@@ -26,6 +29,9 @@ func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
 	pass # Replace with fu nnction body.
 
 func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
+	call_deferred('exit')
+
+func exit():
 	if player.state == "pick_lock":
 		contact = false
 		player.state = "walk"

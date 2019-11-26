@@ -2438,5 +2438,4 @@ autoplay = true
 max_distance = 960.0
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="Area2D" to="." method="_on_Area2D_body_shape_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

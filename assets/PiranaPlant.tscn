@@ -660,7 +660,6 @@ cast_to = Vector2( 380, 0 )
 collision_mask = 5
 
 [node name="Root" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( -2.52698, 0.718628 )
 scale = Vector2( 2, 2 )
 z_index = -10
@@ -789,5 +788,4 @@ stream = ExtResource( 8 )
 autoplay = true
 max_distance = 960.0
 
-[connection signal="timeout" from="Root/stem1/stem2/stem3/stem4/stem5/Spawn Fireball" to="." method="_on_Spawn_Fireball_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer2" to="." method="_on_AnimationPlayer2_animation_finished"]
