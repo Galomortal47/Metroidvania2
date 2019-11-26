@@ -42,15 +42,13 @@ func _physics_process(delta):
 		"walk":
 			move()
 			max_speed = 550
+			jump = 50
+			jump_count_aux = 10
 			if not jetpack:
 				jump()
-				jump = 50
-				jump_count_aux = 10
 			else:
 				jetjump()
 				jump = 50
-				jump_count_aux = 10
-				jetpackfall = 7.5
 			roll()
 
 		"swin":
