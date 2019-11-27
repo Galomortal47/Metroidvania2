@@ -20,9 +20,10 @@ margin_right = 70.0
 margin_bottom = 20.0
 rect_scale = Vector2( 0.25, 0.25 )
 custom_fonts/font = ExtResource( 1 )
-text = "RESTART"
+text = "X TO RESTART"
 flat = true
 script = ExtResource( 2 )
 scene = "res://assets/MainMenu.tscn"
+button = true
 
 [connection signal="button_down" from="Button" to="Button" method="_on_Button_button_down"]

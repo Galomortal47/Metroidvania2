@@ -1,19 +1,19 @@
 extends KinematicBody2D
 
 var motion = Vector2(0,0)
-var speed = 50
+var speed = 20
 var max_speed = 550
-var drag = 0.8
-var gravity = 10
+var drag = 0.9
+var gravity = 20
 var jump = 40
-var jump_ledge = 300
+var jump_ledge = 450
 var jump_aux = 0.0
 var jump_timer = 0.15
 var air_speed = 8
-var roll = 1000
+var roll = 1500
 var roll_drag = 0.99
-var roll_height = 250
-var roll_timer = 1.5
+var roll_height = 350
+var roll_timer = 1.0
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
 var state = "walk"
@@ -25,7 +25,7 @@ var jump_count_aux = jump_count
 var boltspawner = preload("boltspawner.gd").new()
 var timer = Timer.new()
 var jetpack = false
-var jetpackfall = 0.07
+var jetpackfall = 17
 
 func _ready():
 	state = $Save.data.state
@@ -42,15 +42,15 @@ func _physics_process(delta):
 		"walk":
 			move()
 			max_speed = 550
-			jump = 50
-			jump_count_aux = 10
 			if not jetpack:
+				jump_count_aux = 10
+				jump = 70
 				jump()
 			else:
 				jetjump()
-				jump = 50
+				jump_count_aux = 5
+				jump = 140
 			roll()
-
 		"swin":
 			swin()
 		"pick_lock":
@@ -59,7 +59,7 @@ func _physics_process(delta):
 				motion.x = 0
 		"chocobo":
 			max_speed = 1000
-			jump = 11
+			jump = 21
 			jump_count_aux = 100
 			move()
 			jump()
@@ -73,7 +73,7 @@ func _physics_process(delta):
 		"carring":
 			max_speed = 400
 			jump = 40
-			jump_timer = 0.15
+			jump_timer = 5
 			move()
 			jump()
 	motion = move_and_slide(motion)

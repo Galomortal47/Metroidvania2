@@ -20,10 +20,13 @@ func animations():
 			$Chocobo.hide()
 			get_parent().get_node("Chocobo").stop()
 			shoot_dir(true)
-			if Input.is_action_pressed("ui_roll"):
+			if Input.is_action_pressed("ui_roll") and not player.ground_detect():
 				animator.set_current_animation("roll")
 			if not player.ground_detect() and not player.ledge_detect() and not Input.is_action_pressed("ui_roll"):
-				animator.set_current_animation("Jump")
+				if player.motion.y < 0:
+					animator.set_current_animation("Jump")
+				else:
+					animator.set_current_animation("fall")
 				if player.jetpack:
 					if Input.is_action_pressed("ui_accept"):
 						if player.motion.y < 0:
@@ -33,13 +36,13 @@ func animations():
 					else:
 						get_parent().get_node("JetPack").set_current_animation("normal")
 			elif player.motion.x > wall_dead_zone or player.motion.x < -wall_dead_zone:
-				if player.ground_detect() and not Input.is_action_pressed("ui_roll"):
+				if player.ground_detect() and not roll_detect():
 					animator.set_current_animation("Walk")
 					get_parent().get_node("JetPack").set_current_animation("normal")
 			if player.motion.x > stop_dead_zone and Input.is_action_pressed("ui_left") or player.motion.x < -stop_dead_zone and Input.is_action_pressed("ui_right"): 
-				if player.ground_detect() and not Input.is_action_pressed("ui_roll"):
+				if player.ground_detect() and not roll_detect():
 					animator.set_current_animation("slide")
-			elif int(player.motion.x) == 0 and not Input.is_action_pressed("ui_roll") and player.ground_detect():
+			elif int(player.motion.x) == 0 and not roll_detect() and player.ground_detect():
 				animator.set_current_animation("Idle")
 				get_parent().get_node("JetPack").set_current_animation("normal")
 			if player.ledge_detect() and not player.ground_detect():
@@ -72,10 +75,13 @@ func animations():
 		particles_func()
 	elif int(player.motion.x) == 0:
 		$CPUParticles2D.emitting = false
-	if not player.ground_detect() or int(player.motion.x) == 0 and not Input.is_action_pressed("ui_roll"):
+	if not player.ground_detect() or int(player.motion.x) == 0 and not roll_detect():
 		animator.set_speed_scale(1) 
 	else:
-		animator.set_speed_scale(player.motion.x/500)  
+		if player.motion.x > 0:
+			animator.set_speed_scale(player.motion.x/500)  
+		else:
+			animator.set_speed_scale(player.motion.x/500 * -1)  
 #	pass
 
 func shoot_dir(var hide):
@@ -101,3 +107,7 @@ func particles_func():
 		$CPUParticles2D.emitting = true
 	else:
 		$CPUParticles2D.emitting = false
+
+func roll_detect():
+	if Input.is_action_pressed("ui_roll") and not player.ground_detect():
+		return true

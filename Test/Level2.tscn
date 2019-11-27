@@ -27,7 +27,7 @@ extents = Vector2( 2988.99, 18.0403 )
 extents = Vector2( 25.6528, 729.089 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 5849.86, 10 )
+extents = Vector2( 100000, 10 )
 
 [node name="Test" type="Node2D"]
 position = Vector2( -0.429321, 1.7171 )
@@ -88,6 +88,12 @@ rotation = -3.14159
 scale = Vector2( 1, -1 )
 shape = SubResource( 2 )
 
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -4422.44, 826.305 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+shape = SubResource( 2 )
+
 [node name="grass10" type="TextureRect" parent="Ground"]
 margin_left = 1415.0
 margin_top = 663.0
@@ -96,8 +102,16 @@ margin_bottom = 791.0
 texture = ExtResource( 1 )
 stretch_mode = 2
 
+[node name="grass11" type="TextureRect" parent="Ground"]
+margin_left = -12297.2
+margin_top = 663.0
+margin_right = -4426.2
+margin_bottom = 791.0
+texture = ExtResource( 1 )
+stretch_mode = 2
+
 [node name="dirt4" type="TextureRect" parent="Ground"]
-margin_left = 1367.0
+margin_left = -9158.0
 margin_top = 762.0
 margin_right = 9291.0
 margin_bottom = 1829.0
@@ -190,15 +204,14 @@ editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
 [node name="Art" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 z_index = -1
 
 [node name="grass8" type="TextureRect" parent="Art"]
-margin_left = 1331.13
-margin_top = 629.368
-margin_right = 9279.13
-margin_bottom = 735.368
+margin_left = -9022.0
+margin_top = 629.0
+margin_right = 9279.0
+margin_bottom = 735.0
 texture = ExtResource( 4 )
 expand = true
 stretch_mode = 2

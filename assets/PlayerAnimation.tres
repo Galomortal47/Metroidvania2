@@ -831,4 +831,40 @@ tracks/68/keys = {
 "update": 0,
 "values": [ Vector2( 1.44602, -8.38152 ) ]
 }
+tracks/69/type = "value"
+tracks/69/path = NodePath("Animation/Hips/Skirt:rotation_degrees")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/70/type = "value"
+tracks/70/path = NodePath("Animation/Hips/Skirt:position")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.487206, 1.99295 ) ]
+}
+tracks/71/type = "value"
+tracks/71/path = NodePath("Animation/Hips/Scientist anim:position")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10.9634, 1.27024 ) ]
+}
 

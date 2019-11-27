@@ -18,9 +18,9 @@ var level_resource
 
 func _load(level):
 	get_tree().change_scene(level)
-#	save.data.position_y = pos2.get_position().y
-#	save.data.position_x = pos2.get_position().x
-#	save.save()
+	save.data.position_y = pos2.get_position().y
+	save.data.position_x = pos2.get_position().x
+	save.save()
 
 func save(var player,var pos, var level):
 	save.loader()

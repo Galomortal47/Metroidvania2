@@ -1,5 +1,6 @@
 extends RayCast2D
 
+var impulse_up = -200
 
 func _process(delta):
 	if is_colliding():
@@ -13,8 +14,10 @@ func _process(delta):
 		if not $Swwing2.get_collider() == null:
 			if $Swwing2.get_collider().is_in_group("player"):
 				if $Swwing2.get_collider().state == "swin":
+					out_of_water()
 					$Swwing2.get_collider().state = "walk"
 				if $Swwing2.get_collider().state == "chocobo_swin":
+					out_of_water()
 					$Swwing2.get_collider().state = "chocobo"
 				particle_water()
 func particle_water():
@@ -24,3 +27,8 @@ func particle_water():
 		particles.amount = 1
 		get_tree().get_root().add_child(particles)
 #	pass
+
+func out_of_water():
+	if Input.is_action_pressed("ui_up"):
+		if $Swwing2.get_collider().motion.y < -100:
+				$Swwing2.get_collider().motion.y += impulse_up

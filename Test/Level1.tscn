@@ -17900,7 +17900,6 @@ position = Vector2( -10085.2, -807.188 )
 position = Vector2( -7212.66, -847.022 )
 
 [node name="Platfroms" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Platform4" parent="Platfroms" instance=ExtResource( 21 )]
 position = Vector2( -6045.33, -75.127 )
@@ -17915,7 +17914,11 @@ position = Vector2( -6493.5, -226.58 )
 scale = Vector2( 2, 2 )
 
 [node name="Platform7" parent="Platfroms" instance=ExtResource( 21 )]
-position = Vector2( -6796.4, -412.032 )
+position = Vector2( -6713.89, -359.672 )
+scale = Vector2( 2, 2 )
+
+[node name="Platform12" parent="Platfroms" instance=ExtResource( 21 )]
+position = Vector2( -6883.67, -486.606 )
 scale = Vector2( 2, 2 )
 
 [node name="Platform8" parent="Platfroms" instance=ExtResource( 21 )]
