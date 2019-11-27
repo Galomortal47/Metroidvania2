@@ -25,7 +25,7 @@ var jump_count_aux = jump_count
 var boltspawner = preload("boltspawner.gd").new()
 var timer = Timer.new()
 var jetpack = false
-var jetpackfall = 17
+var jetpackfall = 18
 
 func _ready():
 	state = $Save.data.state
@@ -42,14 +42,12 @@ func _physics_process(delta):
 		"walk":
 			move()
 			max_speed = 550
+			jump_count_aux = 10
+			jump = 70
 			if not jetpack:
-				jump_count_aux = 10
-				jump = 70
 				jump()
 			else:
 				jetjump()
-				jump_count_aux = 5
-				jump = 140
 			roll()
 		"swin":
 			swin()

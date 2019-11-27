@@ -17073,7 +17073,7 @@ tracks/8/keys = {
 "values": [ true ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:initial_velocity")
+tracks/9/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/turbine:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -17081,40 +17081,16 @@ tracks/9/enabled = true
 tracks/9/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 50.0 ]
+"update": 1,
+"values": [ true ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:scale_amount")
+tracks/10/path = NodePath("Animation/Hips/Scientist anim:rotation_degrees")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 10.0 ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/turbine:visible")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("Animation/Hips/Scientist anim:rotation_degrees")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -18033,6 +18009,8 @@ material = SubResource( 2 )
 position = Vector2( 5.93048, 10.6214 )
 rotation = 1.5708
 amount = 40
+local_coords = false
+draw_order = 1
 gravity = Vector2( 0, 0 )
 initial_velocity = 200.0
 angular_velocity = 360.0

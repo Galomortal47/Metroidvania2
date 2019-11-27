@@ -338,7 +338,7 @@ position = Vector2( 14274.6, 322.529 )
 level_load = "res://Test/Level2.tscn"
 
 [node name="Level_load3" parent="." instance=ExtResource( 17 )]
-position = Vector2( 23713.1, -330.58 )
+position = Vector2( 23500, -330.58 )
 level_load = "res://Test/Level4.tscn"
 
 [node name="Node2D" type="Node2D" parent="."]

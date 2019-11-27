@@ -376,7 +376,7 @@ position = Vector2( 23957.4, -94.106 )
 [node name="CamShake" parent="Player" instance=ExtResource( 15 )]
 
 [node name="Level_load3" parent="." instance=ExtResource( 16 )]
-position = Vector2( 23510.4, -330.58 )
+position = Vector2( 23500, -326.585 )
 level_load = "res://Test/Level3.tscn"
 
 [node name="Node2D" type="Node2D" parent="."]

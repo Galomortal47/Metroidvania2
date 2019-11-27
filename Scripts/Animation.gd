@@ -22,6 +22,7 @@ func animations():
 			shoot_dir(true)
 			if Input.is_action_pressed("ui_roll") and not player.ground_detect():
 				animator.set_current_animation("roll")
+				get_parent().get_node("JetPack").set_current_animation("normal")
 			if not player.ground_detect() and not player.ledge_detect() and not Input.is_action_pressed("ui_roll"):
 				if player.motion.y < 0:
 					animator.set_current_animation("Jump")
