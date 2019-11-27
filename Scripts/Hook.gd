@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed = 25
+var speed = 35
 var rage = 1000
 var rage2 = 150
 var hook = false
