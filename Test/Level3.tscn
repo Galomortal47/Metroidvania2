@@ -24,13 +24,13 @@
 [ext_resource path="res://assets/plant.tscn" type="PackedScene" id=22]
 [ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=23]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=66]
 extents = Vector2( 100000, 10 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=67]
 extents = Vector2( 3893.01, 10.7424 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=68]
 extents = Vector2( 10, 419.061 )
 
 [node name="Test" type="Node2D"]
@@ -151,15 +151,15 @@ stretch_mode = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 9672.72, 747.214 )
-shape = SubResource( 1 )
+shape = SubResource( 66 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 17437.6, 63.0507 )
-shape = SubResource( 2 )
+shape = SubResource( 67 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 13555.3, 474.932 )
-shape = SubResource( 3 )
+shape = SubResource( 68 )
 
 [node name="Hooks" type="Node2D" parent="."]
 position = Vector2( 7335.83, 0 )

@@ -23,10 +23,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5000, 10 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=64]
 extents = Vector2( 25.6528, 729.089 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=65]
 extents = Vector2( 100000, 10 )
 
 [node name="Test" type="Node2D"]
@@ -86,7 +86,7 @@ shape = SubResource( 1 )
 position = Vector2( 1443.01, 826.305 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-shape = SubResource( 2 )
+shape = SubResource( 64 )
 
 [node name="grass10" type="TextureRect" parent="Ground"]
 margin_left = 1415.0
@@ -125,7 +125,7 @@ stretch_mode = 2
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 3461.01, 758.987 )
-shape = SubResource( 3 )
+shape = SubResource( 65 )
 
 [node name="Hooks" type="Node2D" parent="."]
 editor/display_folded = true
