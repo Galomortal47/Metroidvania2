@@ -3,21 +3,26 @@ extends Area2D
 export var level_load = ""
 var save = preload("res://Scripts/Save.gd").new()
 var pos2
+var pre_loader
+
+func _ready():
+	pre_loader = load(level_load)
 
 func _on_Level_load_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("player"):
 #		get_tree().change_scene(level_load)
 		save(body,body,level_load)
-		if thread.is_active():
-			return
-		thread.start(self, "_load", level_load)
+		get_tree().change_scene_to(pre_loader)
+#		if thread.is_active():
+#			return
+#		thread.start(self, "_load", level_load)
 	pass # Replace with function body.
 
 var thread = Thread.new()
 var level_resource
 
 func _load(level):
-	get_tree().change_scene(level)
+	get_tree().change_scene_to(pre_loader)
 	save.data.position_y = pos2.get_position().y
 	save.data.position_x = pos2.get_position().x
 	save.save()

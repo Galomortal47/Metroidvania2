@@ -43,11 +43,14 @@ func _process(delta):
 	if enabled:
 		controls()
 
+var open = false
+
 func controls():
 	if Input.is_action_pressed("ui_select"):
 		$"Menu Anim".set_current_animation("open")
 		Engine.set_time_scale(0.25) 
-	else:
+		open = true
+	elif open:
 		$"Menu Anim".set_current_animation("close")
 #		$Menu.set_scale(Vector2(0,0))
 		Engine.set_time_scale(1) 

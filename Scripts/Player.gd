@@ -25,7 +25,7 @@ var jump_count_aux = jump_count
 var boltspawner = preload("boltspawner.gd").new()
 var timer = Timer.new()
 var jetpack = false
-var jetpackfall = 18
+var jetpackfall = 19
 
 func _ready():
 	state = $Save.data.state
