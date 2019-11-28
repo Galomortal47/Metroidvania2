@@ -73,7 +73,7 @@ anims/DayNightcycle2 = ExtResource( 1 )
 "anims/day night" = ExtResource( 1 )
 script = ExtResource( 2 )
 
-[node name="Day Night cycle" type="Node" parent="."]
+[node name="Day Night cycle" type="Node2D" parent="."]
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="Day Night cycle"]
 position = Vector2( -0.429321, 1.7171 )
@@ -129,7 +129,6 @@ rotation = -1.5708
 texture = ExtResource( 5 )
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
-editor/display_folded = true
 position = Vector2( -13.2964, 359.004 )
 motion_scale = Vector2( 0.25, 1 )
 motion_mirroring = Vector2( 960, 0 )
@@ -139,18 +138,16 @@ position = Vector2( 484.972, -56.5522 )
 texture = ExtResource( 6 )
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
-editor/display_folded = true
 motion_scale = Vector2( 0.75, 1 )
 
 [node name="Sprite2" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer5"]
-position = Vector2( 0.880249, 740.88 )
+position = Vector2( 0.88049, 807.502 )
 rotation = -1.5708
-scale = Vector2( 0.12, 960 )
+scale = Vector2( 0.15253, 960 )
 texture = SubResource( 2 )
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
-editor/display_folded = true
 modulate = Color( 0.878431, 0.780392, 0.486275, 1 )
 motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 960, 0 )
@@ -165,7 +162,6 @@ scale = Vector2( 1, -0.718795 )
 texture = ExtResource( 7 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
-editor/display_folded = true
 position = Vector2( -983.743, 3.34045 )
 motion_scale = Vector2( 0.6, 1 )
 
@@ -192,7 +188,6 @@ autoplay = "New Anim"
 "anims/New Anim" = SubResource( 6 )
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="Day Night cycle/ParallaxBackground"]
-editor/display_folded = true
 motion_scale = Vector2( 0.75, 1 )
 motion_mirroring = Vector2( 960, 0 )
 
@@ -201,7 +196,7 @@ modulate = Color( 1, 1, 1, 0.392157 )
 margin_left = -3.0
 margin_top = 502.0
 margin_right = 962.0
-margin_bottom = 762.0
+margin_bottom = 803.0
 texture = ExtResource( 9 )
 expand = true
 stretch_mode = 2
@@ -210,8 +205,8 @@ stretch_mode = 2
 motion_scale = Vector2( 0, 1 )
 
 [node name="Mirror5" parent="Day Night cycle/ParallaxBackground/ParallaxLayer9" instance=ExtResource( 10 )]
-position = Vector2( 0, 626.949 )
-scale = Vector2( 1, 0.47376 )
+position = Vector2( 0, 646.38 )
+scale = Vector2( 1, 0.571969 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Day Night cycle/ParallaxBackground"]
 position = Vector2( -0.429321, 1.7171 )

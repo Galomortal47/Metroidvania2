@@ -6,7 +6,7 @@
 [ext_resource path="res://sprites/water.png" type="Texture" id=4]
 
 [node name="Water" type="Sprite"]
-self_modulate = Color( 1, 1, 1, 0.501961 )
+self_modulate = Color( 1, 1, 1, 0.25098 )
 position = Vector2( 1174, 660 )
 z_index = 4095
 texture = ExtResource( 1 )
