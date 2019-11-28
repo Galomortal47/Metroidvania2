@@ -31,7 +31,7 @@ func animations():
 				if player.jetpack:
 					if Input.is_action_pressed("ui_accept"):
 						if player.motion.y < 0:
-							get_parent().get_node("JetPack").set_current_animation("jetup")
+							get_parent().get_node("JetPack").set_current_animation("normal")
 						else:
 							get_parent().get_node("JetPack").set_current_animation("jetdown")
 					else:

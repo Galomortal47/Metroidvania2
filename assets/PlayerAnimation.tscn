@@ -4842,10 +4842,10 @@ tracks/32/loop_wrap = true
 tracks/32/imported = false
 tracks/32/enabled = true
 tracks/32/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 6.04005, 7.58219 ) ]
+"values": [ Vector2( 6.04005, 7.58219 ), Vector2( 6.04005, 7.58219 ) ]
 }
 tracks/33/type = "value"
 tracks/33/path = NodePath("Animation/Hips/Belt/body/arm up/arm down:rotation_degrees")
@@ -4857,7 +4857,7 @@ tracks/33/keys = {
 "times": PoolRealArray( 0, 0.4, 7.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, -37.1999, 7.46568 ]
+"values": [ 0.0, 23.882, 7.46568 ]
 }
 tracks/34/type = "value"
 tracks/34/path = NodePath("Animation/Hips/Belt/body/arm up/arm down:scale")
@@ -4878,10 +4878,10 @@ tracks/35/loop_wrap = true
 tracks/35/imported = false
 tracks/35/enabled = true
 tracks/35/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.416405, -3.95154 ) ]
+"values": [ Vector2( 0.416405, -3.95154 ), Vector2( 0.416405, -3.95154 ) ]
 }
 tracks/36/type = "value"
 tracks/36/path = NodePath("Animation/Hips/Belt/body/arm up:rotation_degrees")
@@ -4893,7 +4893,7 @@ tracks/36/keys = {
 "times": PoolRealArray( 0, 0.4, 7.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 250.236, 111.337 ]
+"values": [ 0.0, 122.487, 111.337 ]
 }
 tracks/37/type = "value"
 tracks/37/path = NodePath("Animation/Hips/Belt/body/arm up:scale")
@@ -16965,7 +16965,7 @@ tracks/20/keys = {
 length = 10.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down:rotation_degrees")
+tracks/0/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -16974,10 +16974,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -0.859391 ]
+"values": [ Rect2( 55.875, 1.5, 5.5, 7 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up/Leg Down:rotation_degrees")
+tracks/1/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2:region_rect")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -16986,10 +16986,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 22.4248 ]
+"values": [ Rect2( 56.125, 1.5, 6, 7.5 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite:region_rect")
+tracks/2/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2/Eye2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -16997,11 +16997,11 @@ tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Rect2( 55.875, 1.5, 5.5, 7 ) ]
+"update": 1,
+"values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2:region_rect")
+tracks/3/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite/Eye:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -17009,11 +17009,11 @@ tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Rect2( 56.125, 1.5, 6, 7.5 ) ]
+"update": 1,
+"values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2/Eye2:visible")
+tracks/4/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -17021,11 +17021,11 @@ tracks/4/enabled = true
 tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"update": 0,
+"values": [ Vector2( -8.06587, 2.96903 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite/Eye:visible")
+tracks/5/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -17033,11 +17033,11 @@ tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"update": 0,
+"values": [ Vector2( -1.2004, 3.16514 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2:position")
+tracks/6/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:emitting")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -17045,11 +17045,11 @@ tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -8.06587, 2.96903 ) ]
+"update": 1,
+"values": [ true ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite:position")
+tracks/7/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/turbine:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -17057,40 +17057,16 @@ tracks/7/enabled = true
 tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -1.2004, 3.16514 ) ]
+"update": 1,
+"values": [ true ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:emitting")
+tracks/8/path = NodePath("Animation/Hips/Scientist anim:rotation_degrees")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/turbine:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("Animation/Hips/Scientist anim:rotation_degrees")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -17101,7 +17077,7 @@ tracks/10/keys = {
 length = 10.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down:rotation_degrees")
+tracks/0/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -17110,10 +17086,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -0.859391 ]
+"values": [ Rect2( 55.875, 1.5, 5.5, 7 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up/Leg Down:rotation_degrees")
+tracks/1/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2:region_rect")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -17122,10 +17098,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 22.4248 ]
+"values": [ Rect2( 56.125, 1.5, 6, 7.5 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite:region_rect")
+tracks/2/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2/Eye2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -17133,11 +17109,11 @@ tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Rect2( 55.875, 1.5, 5.5, 7 ) ]
+"update": 1,
+"values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2:region_rect")
+tracks/3/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite/Eye:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -17145,11 +17121,11 @@ tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Rect2( 56.125, 1.5, 6, 7.5 ) ]
+"update": 1,
+"values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2/Eye2:visible")
+tracks/4/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -17157,11 +17133,11 @@ tracks/4/enabled = true
 tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"update": 0,
+"values": [ Vector2( -8.06587, 2.96903 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite/Eye:visible")
+tracks/5/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -17169,11 +17145,11 @@ tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"update": 0,
+"values": [ Vector2( -1.2004, 3.16514 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2:position")
+tracks/6/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:emitting")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -17181,11 +17157,11 @@ tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -8.06587, 2.96903 ) ]
+"update": 1,
+"values": [ true ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite:position")
+tracks/7/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:amount")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -17193,11 +17169,11 @@ tracks/7/enabled = true
 tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -1.2004, 3.16514 ) ]
+"update": 1,
+"values": [ 40 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:emitting")
+tracks/8/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:initial_velocity")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -17205,11 +17181,11 @@ tracks/8/enabled = true
 tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"update": 0,
+"values": [ 200.0 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:amount")
+tracks/9/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:scale_amount")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -17217,11 +17193,11 @@ tracks/9/enabled = true
 tracks/9/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 40 ]
+"update": 0,
+"values": [ 20.0 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:initial_velocity")
+tracks/10/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/turbine:visible")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -17229,40 +17205,16 @@ tracks/10/enabled = true
 tracks/10/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 200.0 ]
+"update": 1,
+"values": [ true ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/Leg Up2/Leg Down/CPUParticles2D:scale_amount")
+tracks/11/path = NodePath("Animation/Hips/Scientist anim:rotation_degrees")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 20.0 ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("Animation/Hips/Scientist anim/Animation/Hips/turbine:visible")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("Animation/Hips/Scientist anim:rotation_degrees")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -17452,14 +17404,16 @@ script = ExtResource( 1 )
 
 [node name="Hips" type="Sprite" parent="Animation"]
 position = Vector2( 9.31056, 16.3023 )
-rotation = -0.27878
+rotation = -0.179771
+scale = Vector2( 0.7, 1 )
 z_index = -1
 region_enabled = true
 region_rect = Rect2( 7.625, 107.313, 21, 17.75 )
 
 [node name="Skirt" type="Sprite" parent="Animation/Hips"]
 editor/display_folded = true
-position = Vector2( 0.487206, 1.99295 )
+position = Vector2( -1.89107, 1.51729 )
+rotation = 0.559275
 scale = Vector2( 1.16281, 0.893634 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -17497,6 +17451,7 @@ anims/tail = SubResource( 1 )
 [node name="Belt" type="Sprite" parent="Animation/Hips"]
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -1.97421, -6.73163 )
+rotation = -0.00191366
 region_enabled = true
 region_rect = Rect2( 10.75, 95, 4.5, 6 )
 
@@ -17521,7 +17476,8 @@ region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
 
 [node name="body" type="Sprite" parent="Animation/Hips/Belt"]
-position = Vector2( -0.120339, -10.0732 )
+position = Vector2( 2.8319, -8.10819 )
+scale = Vector2( 1.4, 1 )
 z_index = -1
 region_enabled = true
 region_rect = Rect2( 5.5, 66, 17.5, 20.75 )
@@ -17536,9 +17492,8 @@ region_enabled = true
 region_rect = Rect2( 5.5, 66, 17.5, 20.75 )
 
 [node name="arm up" type="Sprite" parent="Animation/Hips/Belt/body"]
-position = Vector2( -0.770308, -4.49837 )
-rotation = 1.24495
-scale = Vector2( 1, 1.19 )
+position = Vector2( 0.416405, -3.95154 )
+rotation = 2.13779
 z_index = 3
 texture = ExtResource( 2 )
 offset = Vector2( 4.87874, 3.99989 )
@@ -17547,7 +17502,7 @@ region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 
 [node name="arm down" type="Sprite" parent="Animation/Hips/Belt/body/arm up"]
 position = Vector2( 6.04005, 7.58219 )
-rotation = 0.843423
+rotation = 0.41682
 texture = ExtResource( 2 )
 offset = Vector2( 1.20303, 4.5292 )
 region_enabled = true
@@ -17562,8 +17517,8 @@ region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 
 [node name="arm up2" type="Sprite" parent="Animation/Hips/Belt/body"]
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
-position = Vector2( 2.17715, -5.70509 )
-rotation = -0.893006
+position = Vector2( -0.328964, -4.83827 )
+rotation = 1.48341
 scale = Vector2( -1, 1 )
 z_index = -2
 texture = ExtResource( 2 )
@@ -17573,6 +17528,7 @@ region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 
 [node name="arm down" type="Sprite" parent="Animation/Hips/Belt/body/arm up2"]
 position = Vector2( 3.59833, 6.68261 )
+rotation = -0.694688
 z_index = -1
 texture = ExtResource( 2 )
 offset = Vector2( 1.20303, 4.78622 )
@@ -17599,7 +17555,7 @@ scale = Vector2( 0.2, 0.2 )
 
 [node name="Neck" type="Sprite" parent="Animation/Hips/Belt/body"]
 position = Vector2( 1.19008, -6.09009 )
-rotation = 0.239012
+rotation = -0.10494
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 53.375, 20.25, 14, 8.125 )
@@ -17611,13 +17567,14 @@ region_enabled = true
 region_rect = Rect2( 54.25, 10.375, 8.625, 6.875 )
 
 [node name="Head" type="Sprite" parent="Animation/Hips/Belt/body/Neck"]
-position = Vector2( 0, -11.2936 )
+position = Vector2( -2.19061, -12.937 )
+rotation = -0.378766
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 6.375, 17.8125, 20.25, 19.875 )
 
 [node name="Hair Side2" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( -5.48219, 5.76211 )
+position = Vector2( -3.4989, 5.76211 )
 z_index = -1
 texture = ExtResource( 2 )
 region_enabled = true
@@ -17633,7 +17590,7 @@ region_enabled = true
 region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 
 [node name="mouth" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( -4, 8.42777 )
+position = Vector2( -6.31384, 8.20741 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 42.375, 20.875, 3.75, 4.25 )
@@ -17653,7 +17610,7 @@ region_enabled = true
 region_rect = Rect2( 14.75, 1.8125, 15.375, 14.75 )
 
 [node name="Hair Side" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( 6.98758, 5.57318 )
+position = Vector2( 3.93543, 5.45109 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
@@ -17666,7 +17623,7 @@ region_enabled = true
 region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 
 [node name="Eyewhite" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( 0.94193, 3.12923 )
+position = Vector2( -3.57526, 3.12923 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 37.625, 5.9375, 11.25, 7.5 )
@@ -17685,7 +17642,7 @@ region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
 [node name="Eyewhite2" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -9.19797, 3.28111 )
-scale = Vector2( -0.66, 1 )
+scale = Vector2( -0.07, 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 38.25, 5.9375, 13, 7.5 )
@@ -17706,18 +17663,18 @@ region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
 [node name="Leg Up" type="Sprite" parent="Animation/Hips"]
-position = Vector2( 3.30142, 9.08418 )
-rotation = -3.25584
-scale = Vector2( 1.15619, -0.904549 )
+position = Vector2( -8.63389, 8.16993 )
+rotation = -2.0072
+scale = Vector2( 1, -1.4 )
 z_index = -1
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
 [node name="Leg Down" type="Sprite" parent="Animation/Hips/Leg Up"]
-position = Vector2( -0.224552, 5.18207 )
-rotation = 1.61547
-scale = Vector2( -1, 0.82 )
+position = Vector2( -0.729217, 5.15951 )
+rotation = 1.44741
+scale = Vector2( -1, 1 )
 z_index = -1
 texture = ExtResource( 2 )
 offset = Vector2( 1.40492, 7.86707 )
@@ -17726,9 +17683,9 @@ region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 
 [node name="Leg Up2" type="Sprite" parent="Animation/Hips"]
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
-position = Vector2( -8.69972, 8.18689 )
-rotation = -2.76727
-scale = Vector2( 0.950782, -1.0771 )
+position = Vector2( -13.5118, 1.82821 )
+rotation = -1.59569
+scale = Vector2( 1, -1.4 )
 z_index = -3
 texture = ExtResource( 2 )
 region_enabled = true
@@ -17736,7 +17693,7 @@ region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
 [node name="Leg Down" type="Sprite" parent="Animation/Hips/Leg Up2"]
 position = Vector2( 0.093255, 4.89606 )
-rotation = -0.333141
+rotation = 1.2862
 scale = Vector2( -1, 1 )
 z_index = -1
 texture = ExtResource( 2 )
@@ -17745,8 +17702,8 @@ region_enabled = true
 region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 
 [node name="Scientist anim" type="Node2D" parent="Animation/Hips"]
-position = Vector2( 10.9634, 1.27024 )
-rotation = 2.98486
+position = Vector2( 14.4599, 2.74246 )
+rotation = 2.91674
 scale = Vector2( 0.6, -0.6 )
 z_index = -4
 
@@ -17975,7 +17932,7 @@ region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
 [node name="Leg Down" type="Sprite" parent="Animation/Hips/Scientist anim/Animation/Hips/Leg Up"]
 position = Vector2( -0.729217, 5.15951 )
-rotation = 0.391387
+rotation = 1.15475
 scale = Vector2( -1, 1 )
 z_index = 3
 texture = ExtResource( 4 )
@@ -17995,7 +17952,7 @@ region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
 [node name="Leg Down" type="Sprite" parent="Animation/Hips/Scientist anim/Animation/Hips/Leg Up2"]
 position = Vector2( 0.093255, 4.89606 )
-rotation = -0.0149992
+rotation = 0.914675
 scale = Vector2( -1, 1 )
 z_index = -1
 texture = ExtResource( 4 )
@@ -18007,7 +17964,7 @@ region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 modulate = Color( 0, 1, 0.976471, 1 )
 material = SubResource( 2 )
 position = Vector2( 5.93048, 10.6214 )
-rotation = 1.5708
+rotation = 2.6222
 amount = 40
 local_coords = false
 draw_order = 1

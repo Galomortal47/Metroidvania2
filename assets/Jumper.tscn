@@ -5,6 +5,7 @@
 [ext_resource path="res://Scripts/Jumpers.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("flower:scale")
 tracks/0/interp = 1
@@ -12,10 +13,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.7, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.32001, 0.52 ), Vector2( 0.76001, 1.63999 ), Vector2( 1.13793, 0.92001 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 1.32001, 0.52 ), Vector2( 0.76001, 2.99999 ), Vector2( 1.13793, 0.92001 ), Vector2( 1, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("flower2:position")
@@ -24,10 +25,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.7, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.131714, -27.6375 ), Vector2( -0.131775, -15.8713 ), Vector2( 0.869629, -50.4189 ), Vector2( 0.619324, -24.1326 ), Vector2( -0.131714, -27.6375 ) ]
+"values": [ Vector2( -0.131714, -27.6375 ), Vector2( -0.131775, -15.8713 ), Vector2( 0.869629, -101.987 ), Vector2( 0.619324, -24.1326 ), Vector2( -0.131714, -27.6375 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=2]
