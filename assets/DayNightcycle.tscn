@@ -77,7 +77,6 @@ script = ExtResource( 2 )
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="Day Night cycle"]
 position = Vector2( -0.429321, 1.7171 )
-color = Color( 0.137255, 0.156863, 0.203922, 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Day Night cycle"]
 
@@ -95,7 +94,7 @@ position = Vector2( -8.12115, 27.9898 )
 motion_scale = Vector2( 0.1, 1 )
 
 [node name="moon" type="Node2D" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6"]
-position = Vector2( 8.17035, -390.772 )
+position = Vector2( -2.9364, 354.965 )
 
 [node name="moon" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/moon"]
 position = Vector2( 339.978, 633.414 )
@@ -114,7 +113,7 @@ scale = Vector2( 3.81998, 3.88026 )
 texture = ExtResource( 4 )
 
 [node name="sun" type="Node2D" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6"]
-position = Vector2( -35.258, 562.106 )
+position = Vector2( -16.2179, -40.83 )
 
 [node name="Sprite" type="Sprite" parent="Day Night cycle/ParallaxBackground/ParallaxLayer6/sun"]
 modulate = Color( 0.972549, 0.529412, 0.235294, 1 )
