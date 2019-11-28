@@ -1,7 +1,8 @@
 extends RayCast2D
 
 export var attack_range = 100
-export var  screen_shake = 25
+export var  screen_shake = 75
+var time = 0.93
 export var jump = 0
 export var damage = 1
 
@@ -24,6 +25,6 @@ func collision_check(var node):
 		if not  node.get_collider() == null:
 			if  node.get_collider().is_in_group("enemy"):
 				if  node.get_collider().has_node("Health"):
-					get_parent().get_node("CamShake").shake += screen_shake
+					get_parent().get_node("CamShake").shaker(screen_shake,time)
 					get_parent().motion.y -= jump
 					node.get_collider().get_node("Health").damage(damage)

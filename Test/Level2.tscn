@@ -247,6 +247,7 @@ position = Vector2( 4222.2, 673.206 )
 position = Vector2( 6789.4, -8.47565 )
 
 [node name="CamShake" parent="Player" instance=ExtResource( 12 )]
+position = Vector2( 0, 0 )
 
 [node name="Level_load" parent="." instance=ExtResource( 13 )]
 position = Vector2( 6642.55, -334.361 )

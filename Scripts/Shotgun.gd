@@ -15,7 +15,8 @@ export var infinite = false
 export var shot = 1
 export var pierce = false
 export var particle_size = 15
-export var screen_shake = 5
+export var screen_shake = 75
+export var time = 0.93
 export var explosion = false
 var mag_aux = mag
 export var ammo = 100
@@ -51,7 +52,7 @@ func shoot():
 			mag_aux-= shot
 		update_text()
 		for i in range(0,bullet_n):
-			get_parent().get_parent().get_node("CamShake").shake += screen_shake
+			get_parent().get_parent().get_node("CamShake").shaker(screen_shake,time)
 			var bullet =  load(weapon)
 			var bullet_instance = bullet.instance()
 			bullet_instance.set_position(get_global_position())

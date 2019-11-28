@@ -370,10 +370,10 @@ editor/display_folded = true
 position = Vector2( 7165.67, 482.585 )
 
 [node name="Player" parent="." instance=ExtResource( 14 )]
-editor/display_folded = true
 position = Vector2( 23957.4, -94.106 )
 
 [node name="CamShake" parent="Player" instance=ExtResource( 15 )]
+position = Vector2( 0, 0 )
 
 [node name="Level_load3" parent="." instance=ExtResource( 16 )]
 position = Vector2( 23500, -326.585 )

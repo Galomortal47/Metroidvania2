@@ -17058,10 +17058,10 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-editor/display_folded = true
 position = Vector2( -1473.07, 637.329 )
 
 [node name="CamShake" parent="Player" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
 
 [node name="Ground" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -17553,7 +17553,6 @@ position = Vector2( 2618.45, -884.349 )
 position = Vector2( 3243.09, -1065.03 )
 
 [node name="Waters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Water2" parent="Waters" instance=ExtResource( 10 )]
 position = Vector2( 1026.8, 732.582 )

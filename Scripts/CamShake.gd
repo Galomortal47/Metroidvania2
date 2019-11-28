@@ -2,6 +2,7 @@ extends Camera2D
 
 var shake = 0
 var falloff = 0.9
+var offseter = 135  
 
 func _process(delta):
 	shake()
@@ -9,8 +10,9 @@ func _process(delta):
 
 func shake():
 	randomize()
-	set_position(Vector2(rand_range(-shake,shake),(rand_range(-shake,shake)-135)))
+	set_position(Vector2(rand_range(-shake,shake),(rand_range(-shake,shake)-offseter)))
 	shake *= falloff
 
-func shaker():
-	shake += 150
+func shaker(var amount, var time):
+	shake += amount
+	falloff = time
