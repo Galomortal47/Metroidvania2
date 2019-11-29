@@ -68,8 +68,8 @@ tracks/0/keys = {
 [sub_resource type="ShaderMaterial" id=8]
 shader = ExtResource( 11 )
 shader_param/blue_tint = null
-shader_param/sprite_scale = null
-shader_param/scale_x = 0.67
+shader_param/sprite_scale = Vector2( 1, 1 )
+shader_param/scale_x = 0.1
 
 [sub_resource type="CanvasItemMaterial" id=7]
 blend_mode = 2

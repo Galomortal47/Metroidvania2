@@ -43,7 +43,7 @@ void fragment(){
 	vec4 color = textureLod(SCREEN_TEXTURE, SCREEN_UV + distort_sum, 0.0);
 	
 	vec2 uv = SCREEN_UV * vec2(1,-1);
-	vec2 ofsset = vec2(0,1.0);
+	vec2 ofsset = vec2(0,0.4);
 	vec4 relection = textureLod(SCREEN_TEXTURE, uv + ofsset, 0.0);
 	color = mix(color, relection, 0.2);
 	
