@@ -18062,6 +18062,7 @@ position = Vector2( -9290.65, 233.005 )
 position = Vector2( -12068.3, -16.2644 )
 
 [node name="Level_load" parent="." instance=ExtResource( 29 )]
+position = Vector2( 6955.75, -1908.55 )
 level_load = "res://Test/Level2.tscn"
 
 [node name="Music Player" parent="." instance=ExtResource( 30 )]
