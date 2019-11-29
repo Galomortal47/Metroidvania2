@@ -11,13 +11,13 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 30 )
 
-[sub_resource type="CircleShape2D" id=7]
+[sub_resource type="CircleShape2D" id=2]
 radius = 500.0
 
-[sub_resource type="CanvasItemMaterial" id=6]
+[sub_resource type="CanvasItemMaterial" id=3]
 blend_mode = 1
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "attack"
 loop = true
 tracks/0/type = "value"
@@ -227,8 +227,7 @@ tracks/16/keys = {
 "values": [ Vector2( 0.760001, 0.680019 ), Vector2( 2.2, 2.28 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "idle"
+[sub_resource type="Animation" id=5]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("wing:scale")
@@ -411,8 +410,7 @@ tracks/14/keys = {
 "values": [ 0.0, -25.65, 0.0 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "walk"
+[sub_resource type="Animation" id=6]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -609,6 +607,7 @@ jump = 200
 damage = 1
 health = 1
 stun2 = 200
+bolts_spwned_upon_death = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -620,7 +619,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 7 )
+shape = SubResource( 2 )
 
 [node name="Vision" type="RayCast2D" parent="."]
 enabled = true
@@ -650,7 +649,7 @@ script = ExtResource( 4 )
 
 [node name="light" type="Sprite" parent="Scale/Body"]
 modulate = Color( 1, 0.866667, 0.25098, 0.643137 )
-material = SubResource( 6 )
+material = SubResource( 3 )
 position = Vector2( -6.41464, 6.8208 )
 z_index = 1
 texture = ExtResource( 5 )
@@ -704,7 +703,6 @@ region_rect = Rect2( 44, 63.875, 22.5, 23.875 )
 [node name="Leg Up2" type="Sprite" parent="Scale/Body/body"]
 position = Vector2( 14.0569, 28.4667 )
 rotation = 0.877751
-scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
 offset = Vector2( -5.33572, 10.0365 )
 region_enabled = true
@@ -758,9 +756,9 @@ region_rect = Rect2( 8.25, 101.5, 70, 26.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Scale/Body"]
 autoplay = "idle"
-anims/attack = SubResource( 5 )
-anims/idle = SubResource( 3 )
-anims/walk = SubResource( 4 )
+anims/attack = SubResource( 4 )
+anims/idle = SubResource( 5 )
+anims/walk = SubResource( 6 )
 
 [node name="Damage" type="RayCast2D" parent="."]
 enabled = true

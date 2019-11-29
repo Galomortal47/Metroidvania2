@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Bolts.tscn" type="PackedScene" id=1]
+
+[node name="Bolt Group" type="Node2D"]
+
+[node name="Bolts" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3.08429, -3.08429 )
+
+[node name="Bolts14" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7.82765, -15.2062 )
+
+[node name="Bolts6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 11.3091, -4.2409 )
+
+[node name="Bolts16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6.5657, -16.3628 )
+
+[node name="Bolts3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6.81114, 7.71072 )
+
+[node name="Bolts17" parent="." instance=ExtResource( 1 )]
+position = Vector2( -11.5545, -4.41119 )
+
+[node name="Bolts8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 7.58221, 6.55412 )
+
+[node name="Bolts12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2.83885, -5.56779 )
+
+[node name="Bolts2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6.29709, -1.67066 )
+
+[node name="Bolts15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1.55373, -13.7926 )
+
+[node name="Bolts7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 20.6904, -2.82726 )
+
+[node name="Bolts19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 15.9471, -14.9492 )
+
+[node name="Bolts4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2.57024, 9.12436 )
+
+[node name="Bolts11" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2.17312, -2.99755 )
+
+[node name="Bolts9" parent="." instance=ExtResource( 1 )]
+position = Vector2( -22.3611, 2.44173 )
+
+[node name="Bolts20" parent="." instance=ExtResource( 1 )]
+position = Vector2( -27.1045, -9.68018 )
+
+[node name="Bolts5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 16.9636, 7.96775 )
+
+[node name="Bolts18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 12.2202, -4.15416 )
+
+[node name="Bolts10" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7.96774, 1.28512 )
+
+[node name="Bolts13" parent="." instance=ExtResource( 1 )]
+position = Vector2( -12.7111, -10.8368 )
+

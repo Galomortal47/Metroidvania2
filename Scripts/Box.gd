@@ -15,6 +15,8 @@ export var damage = 1
 var air_drag = 0.99
 var drag = 0.9
 var spam = true
+var thread_test = Thread.new()
+
 
 func _physics_process(delta):
 	match object:
@@ -30,30 +32,9 @@ func _physics_process(delta):
 #		motion.x -= 20
 #	if $RayCast2D3.is_colliding():
 #		motion.x += 20
-
 	motion = move_and_slide(motion)
 	if $Health.health <= 0:
-		match object:
-			"bolt": 
-				boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position(),bolt_number)
-				boltspawner.particle_spawn(get_tree().get_root(),get_position())
-				queue_free()
-			"health":
-				boltspawner.health_spawn(get_tree().get_root(),get_global_position())
-				boltspawner.particle_spawn(get_tree().get_root(),get_global_position())
-				queue_free()
-			"ammo":
-				boltspawner.ammo_spawn(get_tree().get_root(),get_global_position())
-				boltspawner.particle_spawn(get_tree().get_root(),get_global_position())
-				queue_free()
-			"explosive":
-				explosive.explosion(get_global_position(),get_tree().get_root(),"player","",damage,Color(1,0,0))
-				queue_free()
-			"chest":
-				if spam :
-					get_node("Chest/AnimationPlayer").play("open")
-					boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position(),bolt_number)
-					spam = false
+		spawn()
 	match object:
 		"explosive":
 			if $RayCast2D2.is_colliding() or $RayCast2D3.is_colliding() or motion.y > 300:
@@ -62,6 +43,32 @@ func _physics_process(delta):
 				if $RayCast2D4.get_collider().is_in_group("player"):
 					$AnimationPlayer.play("boom")
 			
+
+func test_thread(myvar):
+	 spawn()
+
+func spawn():
+	match object:
+		"bolt": 
+			boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position(),bolt_number)
+			boltspawner.particle_spawn(get_tree().get_root(),get_position())
+			queue_free()
+		"health":
+			boltspawner.health_spawn(get_tree().get_root(),get_global_position())
+			boltspawner.particle_spawn(get_tree().get_root(),get_global_position())
+			queue_free()
+		"ammo":
+			boltspawner.ammo_spawn(get_tree().get_root(),get_global_position())
+			boltspawner.particle_spawn(get_tree().get_root(),get_global_position())
+			queue_free()
+		"explosive":
+			explosive.explosion(get_global_position(),get_tree().get_root(),"player","",damage,Color(1,0,0))
+			queue_free()
+		"chest":
+			if spam :
+				get_node("Chest/AnimationPlayer").play("open")
+				boltspawner.bolt_spawn(bolt_number,get_tree().get_root(),get_global_position(),bolt_number)
+				spam = false
 
 func stun():
 	pass

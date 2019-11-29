@@ -9,7 +9,7 @@ var collect = false
 var ramdom_pos = 120
 var life_time = 1
 var falloff = 0.95
-var value = 50
+var value = 20
 var save = preload("res://Scripts/Save.gd").new()
 
 func _ready():
@@ -30,31 +30,25 @@ func _ready():
 		sprite.texture = load("res://sprites/boltsprite.png")
 		add_child(sprite)
 
+var player = "/root/Test/Player"
+
 func _physics_process(delta):
+	if get_position().distance_to(get_node(player).get_position()) < 300:
+		collect = true
+		gravity = 0
+	if get_position().distance_to(get_node(player).get_position()) < 30:
+		get_node(player).get_node("Coins/Number").set_text(str(int(get_node(player).get_node("Coins/Number").get_text())+value))
+		get_node(player).get_node("Coins/AnimationPlayer").play("bolts")
+		queue_free()
 	if not $ground_detect.is_colliding():
 		set_position(get_position() + Vector2(0,gravity))
 	else:
 		set_position(get_position() + Vector2(rand_range(-ramdom_pos,ramdom_pos)*delta,rand_range(-ramdom_pos,0)*delta))
 		ramdom_pos *= falloff
 	if collect:
-		var rotation = get_angle_to(body2.get_position())
+		var rotation = get_angle_to(get_node(player).get_position())
 		var dir = Vector2(cos(rotation), sin(rotation))
 		set_position(get_position() + dir * (speed * delta))
 		if speed < max_speed:
 			speed *= accel
 
-
-func _on_magnetic_body_shape_entered(body_id, body, body_shape, area_shape):
-	if body.is_in_group("player"):
-		if has_node("/root/Test/Player"):
-			body2 = get_node("/root/Test/Player")
-		collect = true
-		gravity = 0
-	pass # Replace with function body.
-
-func _on_destroy_body_shape_entered(body_id, body, body_shape, area_shape):
-	if body.is_in_group("player"):
-		body.get_node("Coins/Number").set_text(str(int(body.get_node("Coins/Number").get_text())+value))
-		body.get_node("Coins/AnimationPlayer").play("bolts")
-		queue_free()
-	pass # Replace with function body.
