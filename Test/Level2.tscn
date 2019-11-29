@@ -75,10 +75,6 @@ scale = Vector2( 2, 2 )
 position = Vector2( 2565.72, 329.597 )
 scale = Vector2( 2, 2 )
 
-[node name="Swin" type="Node2D" parent="."]
-editor/display_folded = true
-position = Vector2( 7335.83, 0 )
-
 [node name="Jumpers" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=2]
+[gd_scene load_steps=93 format=2]
 
 [ext_resource path="res://assets/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=2]
@@ -6,46 +6,43 @@
 [ext_resource path="res://assets/PickUp.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Bolts.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Hook1.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/Water.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/EnemySlasher.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/EnemyShooter.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/PiranaPlant.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/EnemyFlyier.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Boxammo.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Boxexplosive.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/Boxhealth.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/ironBox.tscn" type="PackedScene" id=16]
-[ext_resource path="res://assets/Chest.tscn" type="PackedScene" id=17]
-[ext_resource path="res://assets/Platform4.tscn" type="PackedScene" id=18]
-[ext_resource path="res://assets/Swwing.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scripts/Swwing.gd" type="Script" id=20]
-[ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=21]
-[ext_resource path="res://sprites/mushroom.png" type="Texture" id=22]
-[ext_resource path="res://sprites/sing.png" type="Texture" id=23]
-[ext_resource path="res://sprites/vines.png" type="Texture" id=24]
-[ext_resource path="res://sprites/flower2.png" type="Texture" id=25]
-[ext_resource path="res://sprites/grass2.png" type="Texture" id=26]
-[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=27]
-[ext_resource path="res://sprites/plant.png" type="Texture" id=28]
-[ext_resource path="res://Scripts/plant.gd" type="Script" id=29]
-[ext_resource path="res://sprites/light.png" type="Texture" id=30]
-[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=31]
-[ext_resource path="res://assets/Levelload.tscn" type="PackedScene" id=32]
-[ext_resource path="res://assets/MusicPlayer.tscn" type="PackedScene" id=33]
-[ext_resource path="res://assets/DayNightcycle.tscn" type="PackedScene" id=34]
-[ext_resource path="res://Scripts/playcuscene.gd" type="Script" id=35]
-[ext_resource path="res://assets/GadegePickUp.tscn" type="PackedScene" id=36]
-[ext_resource path="res://sprites/scientist.png" type="Texture" id=37]
-[ext_resource path="res://enemy/guns.tscn" type="PackedScene" id=38]
-[ext_resource path="res://sprites/chocobo.png" type="Texture" id=39]
-[ext_resource path="res://assets/rest.tres" type="Animation" id=40]
-[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=41]
-[ext_resource path="res://Scripts/CutScene.gd" type="Script" id=42]
-[ext_resource path="res://assets/PopUp.tscn" type="PackedScene" id=43]
-[ext_resource path="res://sprites/rocket.png" type="Texture" id=44]
-[ext_resource path="res://assets/CPUParticles2D2.tscn" type="PackedScene" id=45]
-[ext_resource path="res://Test/test2.tscn" type="PackedScene" id=46]
+[ext_resource path="res://assets/EnemySlasher.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/EnemyShooter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/PiranaPlant.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/EnemyFlyier.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/Boxammo.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Boxexplosive.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/Boxhealth.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/ironBox.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/Chest.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/Platform4.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=18]
+[ext_resource path="res://sprites/mushroom.png" type="Texture" id=19]
+[ext_resource path="res://sprites/sing.png" type="Texture" id=20]
+[ext_resource path="res://sprites/vines.png" type="Texture" id=21]
+[ext_resource path="res://sprites/flower2.png" type="Texture" id=22]
+[ext_resource path="res://sprites/grass2.png" type="Texture" id=23]
+[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=24]
+[ext_resource path="res://sprites/plant.png" type="Texture" id=25]
+[ext_resource path="res://Scripts/plant.gd" type="Script" id=26]
+[ext_resource path="res://sprites/light.png" type="Texture" id=27]
+[ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/Levelload.tscn" type="PackedScene" id=29]
+[ext_resource path="res://assets/MusicPlayer.tscn" type="PackedScene" id=30]
+[ext_resource path="res://assets/DayNightcycle.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Scripts/playcuscene.gd" type="Script" id=32]
+[ext_resource path="res://assets/GadegePickUp.tscn" type="PackedScene" id=33]
+[ext_resource path="res://sprites/scientist.png" type="Texture" id=34]
+[ext_resource path="res://enemy/guns.tscn" type="PackedScene" id=35]
+[ext_resource path="res://sprites/chocobo.png" type="Texture" id=36]
+[ext_resource path="res://assets/rest.tres" type="Animation" id=37]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=38]
+[ext_resource path="res://Scripts/CutScene.gd" type="Script" id=39]
+[ext_resource path="res://assets/PopUp.tscn" type="PackedScene" id=40]
+[ext_resource path="res://sprites/rocket.png" type="Texture" id=41]
+[ext_resource path="res://assets/CPUParticles2D2.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Test/test2.tscn" type="PackedScene" id=43]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
@@ -17020,6 +17017,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+editor/display_folded = true
 position = Vector2( -1473.07, 637.329 )
 
 [node name="CamShake" parent="Player" instance=ExtResource( 2 )]
@@ -17108,496 +17106,534 @@ position = Vector2( 2618.45, -884.349 )
 [node name="Hook22" parent="Hooks" instance=ExtResource( 6 )]
 position = Vector2( 3243.09, -1065.03 )
 
-[node name="Waters" type="Node2D" parent="."]
-
-[node name="Water" parent="Waters" instance=ExtResource( 7 )]
-position = Vector2( 1072, 734.962 )
-scale = Vector2( 1, 0.5 )
-
-[node name="Water2" parent="Waters" instance=ExtResource( 7 )]
-position = Vector2( 115.198, 734.962 )
-scale = Vector2( 1, 0.5 )
-
-[node name="Water4" parent="Waters" instance=ExtResource( 7 )]
-position = Vector2( -2044.64, 924.819 )
-scale = Vector2( 1, 0.5 )
-
-[node name="Water5" parent="Waters" instance=ExtResource( 7 )]
-position = Vector2( -6687.9, 926.122 )
-scale = Vector2( 1, 0.5 )
-
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
-[node name="Enemy" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Enemy" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( -1661.99, 678.411 )
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( -9557.78, 315.75 )
 
-[node name="Enemy2" parent="Enemies" instance=ExtResource( 9 )]
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( -3123.18, 665.23 )
 
-[node name="Enemy4" parent="Enemies" instance=ExtResource( 9 )]
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( -9923.78, 328.391 )
 
-[node name="Pirana Plant" parent="Enemies" instance=ExtResource( 10 )]
+[node name="Enemy9" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -10833.1, 747.96 )
+
+[node name="Pirana Plant" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( -4942.09, 794.155 )
 rotation = -3.14159
 scale = Vector2( 0.5, -0.5 )
 z_index = 10
 
-[node name="Enemy5" parent="Enemies" instance=ExtResource( 11 )]
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 3078.89, 246.585 )
 
-[node name="Enemy6" parent="Enemies" instance=ExtResource( 11 )]
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( -9330.88, -1046.36 )
 
-[node name="Enemy7" parent="Enemies" instance=ExtResource( 11 )]
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( -7030.19, -1084.39 )
 
+[node name="Enemy8" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( -10440.8, 758.978 )
+
 [node name="Boxes" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -2.58472, -64.618 )
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
 editor/display_folded = true
+position = Vector2( 4.75, 40.8501 )
 
-[node name="Box2" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box2" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box9" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box16" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box3" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box10" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box15" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box4" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box7" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box13" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box5" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box8" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box12" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box6" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box11" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes" instance=ExtResource( 12 )]
+[node name="Box14" parent="Boxes/Boxes" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 437.656 )
 
 [node name="Boxes5" type="Node2D" parent="Boxes"]
 editor/display_folded = true
 position = Vector2( 1442.02, 14.4202 )
 
-[node name="Box2" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box2" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box9" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box16" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box3" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box10" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box15" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box4" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box7" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box13" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box5" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box8" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box12" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box6" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box11" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes5" instance=ExtResource( 12 )]
+[node name="Box14" parent="Boxes/Boxes5" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 437.656 )
 
 [node name="Boxes2" type="Node2D" parent="Boxes"]
 editor/display_folded = true
 position = Vector2( -5245.46, 164.234 )
 
-[node name="Box2" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box2" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box9" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box16" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box3" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box10" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box15" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box4" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box7" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box13" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box5" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box8" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box12" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box6" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box11" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes2" instance=ExtResource( 12 )]
+[node name="Box14" parent="Boxes/Boxes2" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 437.656 )
 
 [node name="Boxes3" type="Node2D" parent="Boxes"]
 editor/display_folded = true
 position = Vector2( -10863.1, -1341.04 )
 
-[node name="Box2" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box2" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box9" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box16" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box3" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box10" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box15" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box4" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box7" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box13" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box5" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box8" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box12" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box6" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box11" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes3" instance=ExtResource( 12 )]
+[node name="Box14" parent="Boxes/Boxes3" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 437.656 )
 
 [node name="Boxes4" type="Node2D" parent="Boxes"]
 editor/display_folded = true
 position = Vector2( -7879.42, -1368.21 )
 
-[node name="Box2" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box2" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 541.343 )
 
-[node name="Box9" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box9" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 493.369 )
 
-[node name="Box16" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box16" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1073.09, 437.656 )
 
-[node name="Box3" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box3" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 541.343 )
 
-[node name="Box10" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box10" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 493.369 )
 
-[node name="Box15" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box15" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1121.83, 437.656 )
 
-[node name="Box4" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box4" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 541.343 )
 
-[node name="Box7" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box7" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 493.369 )
 
-[node name="Box13" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box13" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1172.9, 437.656 )
 
-[node name="Box5" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box5" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 541.343 )
 
-[node name="Box8" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box8" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 493.369 )
 
-[node name="Box12" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box12" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1229.39, 437.656 )
 
-[node name="Box6" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box6" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 541.343 )
 
-[node name="Box11" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box11" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 493.369 )
 
-[node name="Box14" parent="Boxes/Boxes4" instance=ExtResource( 12 )]
+[node name="Box14" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 437.656 )
 
-[node name="Box_bolts" parent="Boxes" instance=ExtResource( 12 )]
+[node name="Boxes6" type="Node2D" parent="Boxes"]
+editor/display_folded = true
+position = Vector2( -13071.9, 533.034 )
 
-[node name="Box_bolts2" parent="Boxes" instance=ExtResource( 12 )]
+[node name="Box2" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1073.09, 541.343 )
+
+[node name="Box9" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1073.09, 493.369 )
+
+[node name="Box16" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1073.09, 437.656 )
+
+[node name="Box3" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1121.83, 541.343 )
+
+[node name="Box10" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1121.83, 493.369 )
+
+[node name="Box15" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1121.83, 437.656 )
+
+[node name="Box4" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1172.9, 541.343 )
+
+[node name="Box7" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1172.9, 493.369 )
+
+[node name="Box13" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1172.9, 437.656 )
+
+[node name="Box5" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1229.39, 541.343 )
+
+[node name="Box17" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1583.5, 541.343 )
+
+[node name="Box23" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1529.81, 541.343 )
+
+[node name="Box8" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1229.39, 493.369 )
+
+[node name="Box21" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1583.5, 493.369 )
+
+[node name="Box24" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1529.81, 493.369 )
+
+[node name="Box12" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1229.39, 437.656 )
+
+[node name="Box18" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1583.5, 437.656 )
+
+[node name="Box6" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1288.2, 541.343 )
+
+[node name="Box22" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1642.31, 541.343 )
+
+[node name="Box11" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1288.2, 493.369 )
+
+[node name="Box20" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1642.31, 493.369 )
+
+[node name="Box14" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1288.2, 437.656 )
+
+[node name="Box19" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1642.31, 437.656 )
+
+[node name="Box_bolts" parent="Boxes" instance=ExtResource( 11 )]
+
+[node name="Box_bolts2" parent="Boxes" instance=ExtResource( 11 )]
 position = Vector2( -17.3635, 825.689 )
+z_index = 0
 
-[node name="Box_bolts3" parent="Boxes" instance=ExtResource( 12 )]
+[node name="Box_bolts3" parent="Boxes" instance=ExtResource( 11 )]
 position = Vector2( -20.2274, 778.433 )
+z_index = 0
 
-[node name="Box_bolts4" parent="Boxes" instance=ExtResource( 12 )]
-position = Vector2( 1333.78, 790.749 )
+[node name="Box_bolts4" parent="Boxes" instance=ExtResource( 11 )]
+position = Vector2( 1318.58, 835.399 )
+z_index = 0
 
-[node name="Box2" parent="Boxes" instance=ExtResource( 13 )]
+[node name="Box2" parent="Boxes" instance=ExtResource( 12 )]
 position = Vector2( 305.294, 555.409 )
 
-[node name="Box7" parent="Boxes" instance=ExtResource( 13 )]
+[node name="Box7" parent="Boxes" instance=ExtResource( 12 )]
 position = Vector2( 305.294, 510.826 )
 
-[node name="Box9" parent="Boxes" instance=ExtResource( 13 )]
+[node name="Box9" parent="Boxes" instance=ExtResource( 12 )]
 position = Vector2( 355.022, 510.826 )
 
-[node name="Box8" parent="Boxes" instance=ExtResource( 13 )]
+[node name="Box8" parent="Boxes" instance=ExtResource( 12 )]
 position = Vector2( 305.294, 467.099 )
 
-[node name="Box3" parent="Boxes" instance=ExtResource( 14 )]
+[node name="Box3" parent="Boxes" instance=ExtResource( 13 )]
 position = Vector2( 129.182, 553.485 )
 
-[node name="Box5" parent="Boxes" instance=ExtResource( 14 )]
-position = Vector2( 1260.01, 793.868 )
+[node name="Box5" parent="Boxes" instance=ExtResource( 13 )]
+position = Vector2( 1256.21, 831.868 )
+z_index = 0
 
-[node name="Box6" parent="Boxes" instance=ExtResource( 14 )]
+[node name="Box6" parent="Boxes" instance=ExtResource( 13 )]
 position = Vector2( 59.6563, 824.728 )
+z_index = 0
 
-[node name="Box4" parent="Boxes" instance=ExtResource( 14 )]
-position = Vector2( 1151.61, 384.511 )
+[node name="Box4" parent="Boxes" instance=ExtResource( 13 )]
+position = Vector2( 1159.21, 433.911 )
 
-[node name="Box" parent="Boxes" instance=ExtResource( 15 )]
+[node name="Box" parent="Boxes" instance=ExtResource( 14 )]
 position = Vector2( 184.282, 553.485 )
 
 [node name="Node2D" type="Node2D" parent="Boxes"]
 
-[node name="Box10" parent="Boxes" instance=ExtResource( 16 )]
+[node name="Box10" parent="Boxes" instance=ExtResource( 15 )]
 position = Vector2( 1985.11, 543.536 )
 
-[node name="Box11" parent="Boxes" instance=ExtResource( 16 )]
+[node name="Box11" parent="Boxes" instance=ExtResource( 15 )]
 position = Vector2( 1984.46, 502.468 )
 
-[node name="Box12" parent="Boxes" instance=ExtResource( 17 )]
+[node name="Box12" parent="Boxes" instance=ExtResource( 16 )]
 position = Vector2( -10085.2, -807.188 )
 
-[node name="Box13" parent="Boxes" instance=ExtResource( 17 )]
+[node name="Box14" parent="Boxes" instance=ExtResource( 16 )]
+position = Vector2( -11697.1, 1082.01 )
+
+[node name="Box15" parent="Boxes" instance=ExtResource( 16 )]
+position = Vector2( -12098, 1076.73 )
+
+[node name="Box13" parent="Boxes" instance=ExtResource( 16 )]
 position = Vector2( -7212.66, -847.022 )
 
 [node name="Platfroms" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Platform4" parent="Platfroms" instance=ExtResource( 18 )]
+[node name="Platform4" parent="Platfroms" instance=ExtResource( 17 )]
 position = Vector2( -6045.33, -75.127 )
 scale = Vector2( 2, 2 )
 
-[node name="Platform5" parent="Platfroms" instance=ExtResource( 18 )]
+[node name="Platform5" parent="Platfroms" instance=ExtResource( 17 )]
 position = Vector2( -6276.65, -144.753 )
 scale = Vector2( 2, 2 )
 
-[node name="Platform6" parent="Platfroms" instance=ExtResource( 18 )]
+[node name="Platform6" parent="Platfroms" instance=ExtResource( 17 )]
 position = Vector2( -6493.5, -226.58 )
 scale = Vector2( 2, 2 )
 
-[node name="Platform7" parent="Platfroms" instance=ExtResource( 18 )]
+[node name="Platform7" parent="Platfroms" instance=ExtResource( 17 )]
 position = Vector2( -6713.89, -359.672 )
 scale = Vector2( 2, 2 )
 
-[node name="Platform12" parent="Platfroms" instance=ExtResource( 18 )]
+[node name="Platform12" parent="Platfroms" instance=ExtResource( 17 )]
 position = Vector2( -6883.67, -486.606 )
 scale = Vector2( 2, 2 )
 
-[node name="Platform8" parent="Platfroms" instance=ExtResource( 18 )]
+[node name="Platform8" parent="Platfroms" instance=ExtResource( 17 )]
 position = Vector2( -7080.76, -606.757 )
 scale = Vector2( 2, 2 )
 
-[node name="Platform9" parent="Platfroms" instance=ExtResource( 18 )]
+[node name="Platform9" parent="Platfroms" instance=ExtResource( 17 )]
 position = Vector2( -10048.6, -397.83 )
 scale = Vector2( 2, 2 )
 
-[node name="Platform10" parent="Platfroms" instance=ExtResource( 18 )]
+[node name="Platform10" parent="Platfroms" instance=ExtResource( 17 )]
 position = Vector2( -10288.6, -491.594 )
 scale = Vector2( 2, 2 )
 
-[node name="Platform11" parent="Platfroms" instance=ExtResource( 18 )]
+[node name="Platform11" parent="Platfroms" instance=ExtResource( 17 )]
 position = Vector2( -10465.2, -635.796 )
 scale = Vector2( 2, 2 )
-
-[node name="Swin" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="Swwing" parent="Swin" instance=ExtResource( 19 )]
-position = Vector2( 642.711, 600.652 )
-
-[node name="Swwing2" type="RayCast2D" parent="Swin"]
-editor/display_folded = true
-position = Vector2( -2419.46, 839.316 )
-scale = Vector2( 3, 1 )
-enabled = true
-cast_to = Vector2( 300, 0 )
-script = ExtResource( 20 )
-
-[node name="Swwing2" type="RayCast2D" parent="Swin/Swwing2"]
-position = Vector2( 0, -28.7293 )
-enabled = true
-cast_to = Vector2( 300, 0 )
-
-[node name="Swwing3" type="RayCast2D" parent="Swin"]
-position = Vector2( -7144.54, 777.643 )
-enabled = true
-cast_to = Vector2( 1300, 0 )
-script = ExtResource( 20 )
-
-[node name="Swwing2" type="RayCast2D" parent="Swin/Swwing3"]
-position = Vector2( 0, -28.7293 )
-enabled = true
-cast_to = Vector2( 1300, 0 )
 
 [node name="Jumpers" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Jumper" parent="Jumpers" instance=ExtResource( 21 )]
+[node name="Jumper" parent="Jumpers" instance=ExtResource( 18 )]
 position = Vector2( -668.823, 762.375 )
 
-[node name="Jumper3" parent="Jumpers" instance=ExtResource( 21 )]
+[node name="Jumper3" parent="Jumpers" instance=ExtResource( 18 )]
 position = Vector2( -5645.92, 788.588 )
 
-[node name="Jumper4" parent="Jumpers" instance=ExtResource( 21 )]
+[node name="Jumper4" parent="Jumpers" instance=ExtResource( 18 )]
 position = Vector2( -5816.53, -755.669 )
 
-[node name="Jumper2" parent="Jumpers" instance=ExtResource( 21 )]
+[node name="Jumper2" parent="Jumpers" instance=ExtResource( 18 )]
 position = Vector2( -8867.35, -758.396 )
 
 [node name="Art" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 0, -43.1695 )
 z_index = -1000
 
 [node name="mushroom" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 557.171, 507.842 )
-texture = ExtResource( 22 )
+texture = ExtResource( 19 )
 
 [node name="mushroom7" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( -7152.53, -86.2084 )
-texture = ExtResource( 22 )
+texture = ExtResource( 19 )
 
 [node name="mushroom8" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( -8670.04, -113.968 )
-texture = ExtResource( 22 )
+texture = ExtResource( 19 )
 
 [node name="mushroom9" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( -9088.28, -733.375 )
-texture = ExtResource( 22 )
+texture = ExtResource( 19 )
 
 [node name="mushroom3" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 3029.67, 527.316 )
 scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 22 )
+texture = ExtResource( 19 )
 
 [node name="mushroom4" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 2977.53, 520.694 )
 scale = Vector2( -1, 1 )
-texture = ExtResource( 22 )
+texture = ExtResource( 19 )
 
 [node name="mushroom2" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
 position = Vector2( 598.147, 540.995 )
 scale = Vector2( 0.43198, 0.43198 )
-texture = ExtResource( 22 )
+texture = ExtResource( 19 )
 
 [node name="mushroom5" type="Sprite" parent="Art"]
 modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( 4247.23, 659.446 )
+position = Vector2( 4226.72, 802.985 )
 scale = Vector2( 0.43198, 0.43198 )
-texture = ExtResource( 22 )
-
-[node name="mushroom6" type="Sprite" parent="Art"]
-modulate = Color( 0.603922, 0.576471, 0.576471, 1 )
-position = Vector2( 4270.38, 665.854 )
-scale = Vector2( 0.15198, 0.15198 )
-texture = ExtResource( 22 )
+texture = ExtResource( 19 )
 
 [node name="sing" type="Sprite" parent="Art"]
 position = Vector2( 3826.1, 498.693 )
 rotation = 0.292877
 z_index = -1
-texture = ExtResource( 23 )
+texture = ExtResource( 20 )
 
 [node name="Vines" type="Node2D" parent="Art"]
 editor/display_folded = true
@@ -17608,7 +17644,7 @@ margin_left = -7397.63
 margin_top = -738.664
 margin_right = -7093.63
 margin_bottom = 55.3357
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17617,7 +17653,7 @@ margin_left = -7479.47
 margin_top = -658.495
 margin_right = -7175.47
 margin_bottom = 135.505
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17626,14 +17662,14 @@ margin_left = -7567.99
 margin_top = -853.907
 margin_right = -7263.99
 margin_bottom = -59.9072
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
 [node name="flower2" type="Sprite" parent="Art/Vines"]
 position = Vector2( -7308.97, -321.115 )
 z_index = 1
-texture = ExtResource( 25 )
+texture = ExtResource( 22 )
 
 [node name="Vines2" type="Node2D" parent="Art"]
 editor/display_folded = true
@@ -17645,7 +17681,7 @@ margin_left = -7398.0
 margin_top = -1065.0
 margin_right = -7094.0
 margin_bottom = 55.0
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17654,7 +17690,7 @@ margin_left = -7473.0
 margin_top = -1025.0
 margin_right = -7169.0
 margin_bottom = 166.0
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17663,7 +17699,7 @@ margin_left = -7514.04
 margin_top = -897.552
 margin_right = -7210.04
 margin_bottom = 41.4485
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17671,7 +17707,7 @@ stretch_mode = 2
 position = Vector2( -7255.01, -565.918 )
 rotation = 2.63908
 z_index = 1
-texture = ExtResource( 25 )
+texture = ExtResource( 22 )
 
 [node name="Vines3" type="Node2D" parent="Art"]
 editor/display_folded = true
@@ -17683,7 +17719,7 @@ margin_left = -7398.0
 margin_top = -1065.0
 margin_right = -7094.0
 margin_bottom = 55.0
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17692,7 +17728,7 @@ margin_left = -7473.0
 margin_top = -1025.0
 margin_right = -7169.0
 margin_bottom = 166.0
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17701,7 +17737,7 @@ margin_left = -7514.04
 margin_top = -897.552
 margin_right = -7210.04
 margin_bottom = 41.4485
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17716,7 +17752,7 @@ margin_left = -7398.0
 margin_top = -1257.0
 margin_right = -7094.0
 margin_bottom = 618.0
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17725,7 +17761,7 @@ margin_left = -7473.0
 margin_top = -1350.0
 margin_right = -7169.0
 margin_bottom = 585.0
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17734,7 +17770,7 @@ margin_left = -7514.0
 margin_top = -1250.0
 margin_right = -7210.0
 margin_bottom = 340.0
-texture = ExtResource( 24 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -17742,23 +17778,23 @@ stretch_mode = 2
 position = Vector2( -7338.51, -442.669 )
 rotation = 0.300297
 z_index = 1
-texture = ExtResource( 25 )
+texture = ExtResource( 22 )
 
 [node name="grass2" type="TextureRect" parent="Art"]
 margin_left = -8870.0
 margin_top = -173.0
 margin_right = -7181.0
 margin_bottom = -67.0
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 expand = true
 stretch_mode = 2
 
 [node name="grass3" type="TextureRect" parent="Art"]
-margin_left = -10529.7
-margin_top = 326.858
-margin_right = -8840.74
-margin_bottom = 432.858
-texture = ExtResource( 26 )
+margin_left = -10527.5
+margin_top = 333.506
+margin_right = -8838.52
+margin_bottom = 439.506
+texture = ExtResource( 23 )
 expand = true
 stretch_mode = 2
 
@@ -17767,7 +17803,7 @@ margin_left = -12278.4
 margin_top = -37.3719
 margin_right = -10589.4
 margin_bottom = 68.6281
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 expand = true
 stretch_mode = 2
 
@@ -17776,7 +17812,7 @@ margin_left = -10516.7
 margin_top = -803.878
 margin_right = -8827.75
 margin_bottom = -697.878
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 expand = true
 stretch_mode = 2
 
@@ -17785,7 +17821,7 @@ margin_left = -7497.55
 margin_top = -797.472
 margin_right = -5808.55
 margin_bottom = -691.472
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 expand = true
 stretch_mode = 2
 
@@ -17794,7 +17830,7 @@ margin_left = 5491.0
 margin_top = -37.0
 margin_right = 12680.0
 margin_bottom = 69.0
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 expand = true
 stretch_mode = 2
 
@@ -17803,7 +17839,7 @@ margin_left = 934.0
 margin_top = 483.0
 margin_right = 3841.0
 margin_bottom = 589.0
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 expand = true
 stretch_mode = 2
 
@@ -17812,32 +17848,32 @@ margin_left = -411.0
 margin_top = 480.0
 margin_right = 645.0
 margin_bottom = 586.0
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 expand = true
 stretch_mode = 2
 
-[node name="plant" parent="Art" instance=ExtResource( 27 )]
+[node name="plant" parent="Art" instance=ExtResource( 24 )]
 
 [node name="plant2" type="Sprite" parent="Art"]
 position = Vector2( -1206.78, 814.387 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 29 )
+script = ExtResource( 26 )
 
 [node name="plant2" type="Sprite" parent="Art/plant2"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant2"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant2"]
@@ -17846,11 +17882,11 @@ material = SubResource( 1 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant2"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 texture_scale = 2.0
 energy = 0.7
 
@@ -17867,22 +17903,22 @@ editor/display_folded = true
 position = Vector2( -6659.1, 23.7162 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 29 )
+script = ExtResource( 26 )
 
 [node name="plant2" type="Sprite" parent="Art/plant3"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant3"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant3"]
@@ -17891,11 +17927,11 @@ material = SubResource( 1 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant3"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 texture_scale = 2.0
 energy = 0.7
 
@@ -17911,22 +17947,22 @@ enabled = true
 position = Vector2( -7417.65, -711.366 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 29 )
+script = ExtResource( 26 )
 
 [node name="plant2" type="Sprite" parent="Art/plant4"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant4"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant4"]
@@ -17935,11 +17971,11 @@ material = SubResource( 1 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant4"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 texture_scale = 2.0
 energy = 0.7
 
@@ -17955,22 +17991,22 @@ enabled = true
 position = Vector2( 3738.89, 558.061 )
 rotation = 0.034481
 z_index = 1
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 5.51535, -48.2062 )
-script = ExtResource( 29 )
+script = ExtResource( 26 )
 
 [node name="plant2" type="Sprite" parent="Art/plant5"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = -1.23751
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="plant3" type="Sprite" parent="Art/plant5"]
 position = Vector2( -0.916016, 0.958496 )
 rotation = 0.738818
 scale = Vector2( 0.836725, 0.802581 )
-texture = ExtResource( 28 )
+texture = ExtResource( 25 )
 offset = Vector2( 7.60596, -46.1156 )
 
 [node name="light" type="Sprite" parent="Art/plant5"]
@@ -17979,11 +18015,11 @@ material = SubResource( 1 )
 position = Vector2( 12.1114, -24.2708 )
 rotation = 0.0926029
 scale = Vector2( 1.6006, 1.53376 )
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 
 [node name="Light2D" type="Light2D" parent="Art/plant5"]
 position = Vector2( 2.49316, -9.37228 )
-texture = ExtResource( 30 )
+texture = ExtResource( 27 )
 texture_scale = 2.0
 energy = 0.7
 
@@ -17998,44 +18034,45 @@ enabled = true
 [node name="Animals" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Butterfly" parent="Animals" instance=ExtResource( 31 )]
+[node name="Butterfly" parent="Animals" instance=ExtResource( 28 )]
 
-[node name="Butterfly2" parent="Animals" instance=ExtResource( 31 )]
+[node name="Butterfly2" parent="Animals" instance=ExtResource( 28 )]
 position = Vector2( -6208.77, 450.44 )
 
-[node name="Butterfly3" parent="Animals" instance=ExtResource( 31 )]
+[node name="Butterfly3" parent="Animals" instance=ExtResource( 28 )]
 position = Vector2( -7382.92, -291.124 )
 
-[node name="Butterfly4" parent="Animals" instance=ExtResource( 31 )]
+[node name="Butterfly4" parent="Animals" instance=ExtResource( 28 )]
 position = Vector2( -7242.62, -182.562 )
 
-[node name="Butterfly5" parent="Animals" instance=ExtResource( 31 )]
+[node name="Butterfly5" parent="Animals" instance=ExtResource( 28 )]
 position = Vector2( -8678.98, -154.169 )
 
-[node name="Butterfly6" parent="Animals" instance=ExtResource( 31 )]
+[node name="Butterfly6" parent="Animals" instance=ExtResource( 28 )]
 position = Vector2( -9105.2, -752.364 )
 
-[node name="Butterfly7" parent="Animals" instance=ExtResource( 31 )]
+[node name="Butterfly7" parent="Animals" instance=ExtResource( 28 )]
 position = Vector2( -10283, -85.8441 )
 
-[node name="Butterfly8" parent="Animals" instance=ExtResource( 31 )]
+[node name="Butterfly8" parent="Animals" instance=ExtResource( 28 )]
 position = Vector2( -9290.65, 233.005 )
 
-[node name="Butterfly9" parent="Animals" instance=ExtResource( 31 )]
+[node name="Butterfly9" parent="Animals" instance=ExtResource( 28 )]
 position = Vector2( -12068.3, -16.2644 )
 
-[node name="Level_load" parent="." instance=ExtResource( 32 )]
+[node name="Level_load" parent="." instance=ExtResource( 29 )]
 level_load = "res://Test/Level2.tscn"
 
-[node name="Music Player" parent="." instance=ExtResource( 33 )]
+[node name="Music Player" parent="." instance=ExtResource( 30 )]
 
 [node name="bolts" type="Node2D" parent="."]
 
-[node name="Day Night cycle" parent="." instance=ExtResource( 34 )]
+[node name="Day Night cycle" parent="." instance=ExtResource( 31 )]
 
 [node name="rocket" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -11685.5, -43.9109 )
-script = ExtResource( 35 )
+script = ExtResource( 32 )
 
 [node name="Area2D" type="Area2D" parent="rocket"]
 editor/display_folded = true
@@ -18045,7 +18082,7 @@ position = Vector2( 173.188, 54.4705 )
 position = Vector2( 42.5986, 0.698334 )
 shape = SubResource( 10 )
 
-[node name="Gadeget Pick Up" parent="rocket" instance=ExtResource( 36 )]
+[node name="Gadeget Pick Up" parent="rocket" instance=ExtResource( 33 )]
 position = Vector2( 54.14, -5000 )
 scale = Vector2( 1e-005, 1e-005 )
 gun_id = 0
@@ -18065,7 +18102,7 @@ z_index = 4
 position = Vector2( 15.145, 24.2827 )
 rotation = 0.637431
 z_index = -1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 7.625, 107.313, 21, 17.75 )
 
@@ -18073,34 +18110,34 @@ region_rect = Rect2( 7.625, 107.313, 21, 17.75 )
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -1.97421, -6.73163 )
 rotation = -0.919078
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 10.75, 95, 4.5, 6 )
 
 [node name="Iron Circle" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
 position = Vector2( -1.45547, -0.152555 )
 z_index = 1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 11.125, 95.5, 3.875, 5.625 )
 
 [node name="Belt Piece" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
 position = Vector2( 4.36553, -0.108372 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
 
 [node name="Belt Piece2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
 position = Vector2( -5.18532, -0.0746479 )
 scale = Vector2( -0.5, 1 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
 
 [node name="body" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt"]
 position = Vector2( 1.26223, -7.86402 )
 z_index = -1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 5.5, 66, 17.5, 20.75 )
 
@@ -18109,7 +18146,7 @@ position = Vector2( 4.56733, -4.43989 )
 rotation = 0.960289
 scale = Vector2( 1, 0.79 )
 z_index = 3
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 offset = Vector2( 4.87874, 3.99989 )
 region_enabled = true
 region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
@@ -18117,7 +18154,7 @@ region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 [node name="arm down" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up"]
 position = Vector2( 6.04005, 7.58219 )
 rotation = -0.0786195
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 offset = Vector2( 1.20303, 4.5292 )
 region_enabled = true
 region_rect = Rect2( 111.75, 22.6875, 8.125, 12.875 )
@@ -18125,7 +18162,7 @@ region_rect = Rect2( 111.75, 22.6875, 8.125, 12.875 )
 [node name="hand" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up/arm down"]
 position = Vector2( 2.44712, 9.93858 )
 z_index = 5
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 
@@ -18135,7 +18172,7 @@ position = Vector2( -5.45658, -5.08245 )
 rotation = 0.154479
 scale = Vector2( -1, 0.79 )
 z_index = -1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 offset = Vector2( 2.59755, 3.87138 )
 region_enabled = true
 region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
@@ -18144,14 +18181,14 @@ region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 position = Vector2( 3.59833, 6.68261 )
 rotation = -0.0840107
 z_index = -1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 offset = Vector2( 1.20303, 4.78622 )
 region_enabled = true
 region_rect = Rect2( 111.75, 22.6875, 8.125, 12.875 )
 
 [node name="hand" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up2/arm down"]
 position = Vector2( 2.57563, 10.4526 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 
@@ -18160,37 +18197,37 @@ visible = false
 position = Vector2( 1.08023, 11.6544 )
 rotation = -1.24453
 scale = Vector2( 1, -1 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 2, 1, 34, 28 )
 
-[node name="enemy" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons" instance=ExtResource( 38 )]
+[node name="enemy" parent="rocket/Scientist anim/Animation/Hips/Belt/body/arm up2/arm down/hand/weapons" instance=ExtResource( 35 )]
 position = Vector2( -4.06763, 4.59555 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Neck" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body"]
 position = Vector2( 1.19008, -6.09009 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 53.375, 20.25, 14, 8.125 )
 
 [node name="Bone" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck"]
 position = Vector2( -2.4927, 1.27788 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 54.25, 10.375, 8.625, 6.875 )
 
 [node name="Head" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck"]
 position = Vector2( 0, -11.2936 )
 scale = Vector2( 1.06, 1.08 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 6.375, 17.8125, 20.25, 19.875 )
 
 [node name="Hair Side2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -5.48219, 5.76211 )
 z_index = -1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
 
@@ -18199,65 +18236,65 @@ position = Vector2( -6.30947, -3.38557 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 z_index = -1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 
 [node name="mouth" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -4, 8.42777 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 40, 20.875, 7.5, 4.25 )
 
 [node name="HairBack" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 1.42395, -2.42072 )
 z_index = -3
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 offset = Vector2( 1.5, 20.13 )
 region_enabled = true
 region_rect = Rect2( 58, 32, 42, 74 )
 
 [node name="Hair Front" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -2.13495, -4.82822 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 14.75, 1.8125, 15.375, 14.75 )
 
 [node name="Hair Side" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 6.98758, 5.57318 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
 
 [node name="Ear" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Hair Side"]
 position = Vector2( 5.37519, -1.94479 )
 z_index = -1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 38.375, 26.8125, 11.375, 10.125 )
 
 [node name="Eyewhite" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 0.94193, 3.12923 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 37.625, 5.9375, 11.25, 7.5 )
 
 [node name="Eye" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite"]
 position = Vector2( -2.20997, -0.685127 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 41.875, 14.9375, 3.875, 5.125 )
 
 [node name="Eyebrown" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite"]
 position = Vector2( 0.942062, -5.11232 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
 [node name="Eyewhite2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( -9.19797, 3.28111 )
 scale = Vector2( -0.66, 1 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 38.25, 5.9375, 13, 7.5 )
 
@@ -18265,20 +18302,20 @@ region_rect = Rect2( 38.25, 5.9375, 13, 7.5 )
 position = Vector2( -1.03538, -0.828034 )
 rotation = -3.14159
 scale = Vector2( 1.51515, -1 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 39.75, 14.9375, 6, 5.125 )
 
 [node name="Eyebrown2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head/Eyewhite2"]
 position = Vector2( -1.42736, -5.11233 )
 scale = Vector2( 0.757576, 1 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
 [node name="Eye2" type="Sprite" parent="rocket/Scientist anim/Animation/Hips/Belt/body/Neck/Head"]
 position = Vector2( 1.08012, 2.85248 )
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 7.375, 40.5, 11.875, 10 )
 
@@ -18287,7 +18324,7 @@ position = Vector2( -1.37646, 6.35156 )
 rotation = -2.63253
 scale = Vector2( 1, -0.55 )
 z_index = -1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
@@ -18295,7 +18332,7 @@ region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 position = Vector2( -0.729217, 5.15951 )
 scale = Vector2( -1, 1 )
 z_index = -1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 offset = Vector2( 1.40492, 7.86707 )
 region_enabled = true
 region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
@@ -18306,7 +18343,7 @@ position = Vector2( -5.06445, 7.83594 )
 rotation = -2.59794
 scale = Vector2( 1, -0.55 )
 z_index = -3
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
@@ -18315,7 +18352,7 @@ position = Vector2( 0.093255, 4.89606 )
 rotation = -0.171104
 scale = Vector2( -1, 1 )
 z_index = -1
-texture = ExtResource( 37 )
+texture = ExtResource( 34 )
 offset = Vector2( 2.22739, 8.13052 )
 region_enabled = true
 region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
@@ -18327,14 +18364,14 @@ z_index = -4
 
 [node name="chocobo3" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo"]
 position = Vector2( 20.5028, -5.73519 )
-texture = ExtResource( 39 )
+texture = ExtResource( 36 )
 region_enabled = true
 region_rect = Rect2( 61, 22, 65, 48 )
 
 [node name="chocobo4" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3"]
 position = Vector2( 0.00193834, 17.7384 )
 rotation = -0.471669
-texture = ExtResource( 39 )
+texture = ExtResource( 36 )
 offset = Vector2( -0.556483, 6.77265 )
 region_enabled = true
 region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
@@ -18343,7 +18380,7 @@ region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
 position = Vector2( 2.68076, 18.9964 )
 rotation = -0.664627
 z_index = -1
-texture = ExtResource( 39 )
+texture = ExtResource( 36 )
 offset = Vector2( -6.9669, 6.72212 )
 region_enabled = true
 region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
@@ -18352,7 +18389,7 @@ region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
 position = Vector2( -8.53208, 13.9103 )
 rotation = 0.864784
 scale = Vector2( 0.512454, 0.512454 )
-texture = ExtResource( 39 )
+texture = ExtResource( 36 )
 offset = Vector2( -9.5188, 2.11838 )
 region_enabled = true
 region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
@@ -18362,7 +18399,7 @@ modulate = Color( 0.592157, 0.592157, 0.592157, 1 )
 position = Vector2( -9.4848, 15.3667 )
 rotation = 0.484444
 z_index = -1
-texture = ExtResource( 39 )
+texture = ExtResource( 36 )
 offset = Vector2( 2.53878, 4.65595 )
 region_enabled = true
 region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
@@ -18371,7 +18408,7 @@ region_rect = Rect2( 83.625, 71.5, 26.375, 25.375 )
 position = Vector2( 5.9997, 15.6227 )
 rotation = -0.195669
 z_index = -1
-texture = ExtResource( 39 )
+texture = ExtResource( 36 )
 offset = Vector2( -7.48377, 6.33683 )
 region_enabled = true
 region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
@@ -18380,7 +18417,7 @@ region_rect = Rect2( 86.5, 98.4587, 19.25, 24.25 )
 position = Vector2( -10.5996, 15.3603 )
 rotation = 0.0712048
 scale = Vector2( 0.512454, 0.512454 )
-texture = ExtResource( 39 )
+texture = ExtResource( 36 )
 offset = Vector2( -8.60987, 0.281715 )
 region_enabled = true
 region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
@@ -18388,7 +18425,7 @@ region_rect = Rect2( 33, 107.209, 42.5, 19.25 )
 [node name="chocobo2" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3"]
 position = Vector2( -18.8513, -5.33002 )
 rotation = -0.0501298
-texture = ExtResource( 39 )
+texture = ExtResource( 36 )
 region_enabled = true
 region_rect = Rect2( 18, 26, 33, 46 )
 
@@ -18396,14 +18433,14 @@ region_rect = Rect2( 18, 26, 33, 46 )
 position = Vector2( -4.51872, -18.0749 )
 rotation = 0.0434251
 z_index = 4
-texture = ExtResource( 39 )
+texture = ExtResource( 36 )
 region_enabled = true
 region_rect = Rect2( 20, -3, 48, 28 )
 
 [node name="chocobo7" type="Sprite" parent="rocket/Scientist anim/Animation/Chocobo/chocobo3"]
 position = Vector2( -8.20816, 5.8003 )
 rotation = -0.311447
-texture = ExtResource( 39 )
+texture = ExtResource( 36 )
 offset = Vector2( 15.3924, 0.911716 )
 region_enabled = true
 region_rect = Rect2( 25, 74, 48, 29 )
@@ -18423,7 +18460,7 @@ anims/Jump = SubResource( 16 )
 anims/Walk = SubResource( 18 )
 anims/Walk_carry = SubResource( 19 )
 "anims/ledge grab" = SubResource( 20 )
-anims/rest = ExtResource( 40 )
+anims/rest = ExtResource( 37 )
 anims/roll = SubResource( 21 )
 anims/slide = SubResource( 22 )
 anims/slide2 = SubResource( 23 )
@@ -18478,19 +18515,19 @@ margin_right = 42.0903
 margin_bottom = -137.74
 rect_scale = Vector2( 4, 4 )
 rect_pivot_offset = Vector2( 36.5365, 6.91501 )
-custom_fonts/font = ExtResource( 41 )
+custom_fonts/font = ExtResource( 38 )
 text = "GAME OVER"
 
 [node name="CutScene" type="AnimationPlayer" parent="rocket"]
 anims/1 = SubResource( 48 )
 anims/2 = SubResource( 49 )
-script = ExtResource( 42 )
+script = ExtResource( 39 )
 cuscene_id = 1
 autoplay2 = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="rocket"]
 
-[node name="PopUp" parent="rocket/CanvasLayer" instance=ExtResource( 43 )]
+[node name="PopUp" parent="rocket/CanvasLayer" instance=ExtResource( 40 )]
 position = Vector2( 63.9634, 507.971 )
 text = "Help, Tey Stole a the Scients Machines, this is not much but this grappling hook might help you"
 
@@ -18502,10 +18539,10 @@ polygon = PoolVector2Array( -34.6343, -44.8465, -61.7665, 660.59, 1065.73, 645.5
 [node name="rocket2" type="Sprite" parent="."]
 editor/display_folded = true
 position = Vector2( -11685.5, -43.9109 )
-texture = ExtResource( 44 )
-script = ExtResource( 35 )
+texture = ExtResource( 41 )
+script = ExtResource( 32 )
 
-[node name="CPUParticles2D" parent="rocket2" instance=ExtResource( 45 )]
+[node name="CPUParticles2D" parent="rocket2" instance=ExtResource( 42 )]
 position = Vector2( 73.9473, -66.1226 )
 z_index = -1
 lifetime = 2.0
@@ -18513,7 +18550,7 @@ emission_shape = 1
 emission_sphere_radius = 33.0
 gravity = Vector2( 0, -100 )
 
-[node name="Test" parent="." instance=ExtResource( 46 )]
+[node name="Test" parent="." instance=ExtResource( 43 )]
 
 [connection signal="body_entered" from="rocket/Area2D" to="rocket" method="_on_Area2D_body_entered"]
 [connection signal="animation_finished" from="rocket/Scientist anim/Death" to="rocket/Scientist anim/Animation" method="_on_Death_animation_finished"]

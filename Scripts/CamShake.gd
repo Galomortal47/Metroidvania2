@@ -2,7 +2,7 @@ extends Camera2D
 
 var shake = 0
 var falloff = 0.9
-var offseter = 135  
+var offseter = 135
 
 func _process(delta):
 	shake()

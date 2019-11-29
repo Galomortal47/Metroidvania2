@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://assets/Pause.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Scripts/Grab.gd" type="Script" id=33]
 [ext_resource path="res://assets/climate.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Scripts/Swin.gd" type="Script" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 40 )
@@ -620,6 +621,7 @@ anims/roll = SubResource( 4 )
 anims/swin = SubResource( 5 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 z_index = 4096
 
@@ -730,6 +732,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Menu Items" type="CanvasLayer" parent="."]
+editor/display_folded = true
 script = ExtResource( 13 )
 
 [node name="Menu Anim" type="AnimationPlayer" parent="Menu Items"]
@@ -958,7 +961,6 @@ position = Vector2( 5.23666, -26.3542 )
 texture = ExtResource( 18 )
 
 [node name="Shadow" type="Node2D" parent="."]
-editor/display_folded = true
 z_index = 999
 script = ExtResource( 19 )
 
@@ -1012,6 +1014,7 @@ I
 R"
 
 [node name="Roll" parent="." instance=ExtResource( 23 )]
+editor/display_folded = true
 collision_mask = 36
 damage = 1
 
@@ -1070,5 +1073,12 @@ position = Vector2( -480, -350 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource( 15 )
+
+[node name="Swin" type="RayCast2D" parent="."]
+position = Vector2( 0, -25 )
+enabled = true
+collision_mask = 1024
+collide_with_areas = true
+script = ExtResource( 35 )
 
 [connection signal="animation_finished" from="Menu Items/Menu/Bullet Time/Bullet Time" to="Menu Items" method="_on_Bullet_Time_animation_finished"]

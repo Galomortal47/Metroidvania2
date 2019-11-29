@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/DayNightcycle2.tres" type="Animation" id=1]
 [ext_resource path="res://Scripts/DayNightcycle.gd" type="Script" id=2]
@@ -10,14 +10,15 @@
 [ext_resource path="res://sprites/pyrateship.png" type="Texture" id=8]
 [ext_resource path="res://sprites/water.png" type="Texture" id=9]
 [ext_resource path="res://assets/water effect.tscn" type="PackedScene" id=10]
-[ext_resource path="res://sprites/grass2.png" type="Texture" id=11]
-[ext_resource path="res://sprites/grass.png" type="Texture" id=12]
+[ext_resource path="res://assets/Water.shader" type="Shader" id=11]
+[ext_resource path="res://sprites/grass2.png" type="Texture" id=12]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=13]
-[ext_resource path="res://sprites/light2.png" type="Texture" id=14]
-[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=15]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=16]
-[ext_resource path="res://sprites/tree.png" type="Texture" id=17]
-[ext_resource path="res://sprites/bush.png" type="Texture" id=18]
+[ext_resource path="res://sprites/grass.png" type="Texture" id=14]
+[ext_resource path="res://sprites/light2.png" type="Texture" id=15]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=16]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=17]
+[ext_resource path="res://sprites/tree.png" type="Texture" id=18]
+[ext_resource path="res://sprites/bush.png" type="Texture" id=19]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0.123404, 0.285106 )
@@ -63,6 +64,12 @@ tracks/0/keys = {
 "update": 0,
 "values": [ -3.39986, 1.20196, -3.39986 ]
 }
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 11 )
+shader_param/blue_tint = null
+shader_param/sprite_scale = null
+shader_param/scale_x = 0.67
 
 [sub_resource type="CanvasItemMaterial" id=7]
 blend_mode = 2
@@ -205,6 +212,7 @@ stretch_mode = 2
 motion_scale = Vector2( 0, 1 )
 
 [node name="Mirror5" parent="Day Night cycle/ParallaxBackground/ParallaxLayer9" instance=ExtResource( 10 )]
+material = SubResource( 8 )
 position = Vector2( 0, 646.38 )
 scale = Vector2( 1, 0.571969 )
 
@@ -223,7 +231,7 @@ motion_mirroring = Vector2( 960, 0 )
 
 [node name="Sprite" type="Sprite" parent="Day Night cycle/ParallaxBackground2/ParallaxLayer2"]
 position = Vector2( 399.203, 828.564 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="Day Night cycle/ParallaxBackground2"]
 position = Vector2( -0.429321, 1.7171 )
@@ -240,25 +248,25 @@ motion_scale = Vector2( 1.25, 1 )
 motion_mirroring = Vector2( 960, 0 )
 
 [node name="Sprite2" type="Sprite" parent="Day Night cycle/ParallaxBackground3/ParallaxLayer"]
-position = Vector2( 408.983, 867.398 )
+position = Vector2( 408.983, 960 )
 scale = Vector2( 0.99883, 1 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
+
+[node name="dirt9" type="TextureRect" parent="Day Night cycle/ParallaxBackground3/ParallaxLayer/Sprite2"]
+margin_left = -482.778
+margin_top = 68.602
+margin_right = 475.222
+margin_bottom = 192.602
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 2
 
 [node name="grass" type="TextureRect" parent="Day Night cycle/ParallaxBackground3/ParallaxLayer/Sprite2"]
 margin_left = -487.0
 margin_top = -16.0
 margin_right = 474.0
 margin_bottom = 129.0
-texture = ExtResource( 12 )
-expand = true
-stretch_mode = 2
-
-[node name="dirt9" type="TextureRect" parent="Day Night cycle/ParallaxBackground3/ParallaxLayer"]
-margin_left = -73.2297
-margin_top = 936.0
-margin_right = 884.77
-margin_bottom = 1060.0
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 expand = true
 stretch_mode = 2
 
@@ -273,7 +281,7 @@ visible = false
 modulate = Color( 1, 1, 1, 0 )
 material = SubResource( 7 )
 position = Vector2( 480, 270 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="Timer" type="Label" parent="Day Night cycle/CanvasLayer"]
 visible = false
@@ -281,9 +289,9 @@ margin_left = 37.3235
 margin_top = 68.3089
 margin_right = 85.3235
 margin_bottom = 82.3089
-custom_fonts/font = ExtResource( 15 )
+custom_fonts/font = ExtResource( 16 )
 text = "00:00"
-script = ExtResource( 16 )
+script = ExtResource( 17 )
 
 [node name="Trees2" type="ParallaxBackground" parent="Day Night cycle"]
 
@@ -300,7 +308,7 @@ margin_right = 509.892
 margin_bottom = 50.4285
 rect_rotation = -2.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 expand = true
 stretch_mode = 2
 
@@ -315,7 +323,7 @@ margin_left = -17.2631
 margin_top = 277.757
 margin_right = 605.737
 margin_bottom = 904.757
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 expand = true
 stretch_mode = 1
 

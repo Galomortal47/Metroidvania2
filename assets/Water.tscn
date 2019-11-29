@@ -8,13 +8,14 @@
 [node name="Water" type="Sprite"]
 self_modulate = Color( 1, 1, 1, 0.25098 )
 position = Vector2( 1174, 660 )
-z_index = 4095
+z_index = 4000
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 130, 960, 540 )
 script = ExtResource( 2 )
 
 [node name="Mirror5" parent="." instance=ExtResource( 3 )]
+z_index = 0
 
 [node name="water" type="TextureRect" parent="."]
 visible = false

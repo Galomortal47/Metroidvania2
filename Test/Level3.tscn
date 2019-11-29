@@ -71,10 +71,6 @@ editor/display_folded = true
 editor/display_folded = true
 position = Vector2( 6847.79, -403.441 )
 
-[node name="Swin" type="Node2D" parent="."]
-editor/display_folded = true
-position = Vector2( 7335.83, 0 )
-
 [node name="Jumpers" type="Node2D" parent="."]
 position = Vector2( 7335.83, 0 )
 

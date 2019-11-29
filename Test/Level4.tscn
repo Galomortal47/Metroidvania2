@@ -1,30 +1,28 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://temp/Stuff.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Hook1.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Swwing.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/Water.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/DayNightcycle.tscn" type="PackedScene" id=6]
-[ext_resource path="res://sprites/vines.png" type="Texture" id=7]
-[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=8]
-[ext_resource path="res://sprites/mushroom.png" type="Texture" id=9]
-[ext_resource path="res://sprites/grass2.png" type="Texture" id=10]
-[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Levelload.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/MusicPlayer.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=15]
-[ext_resource path="res://assets/Boxhealth.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scripts/Boss1.gd" type="Script" id=17]
-[ext_resource path="res://icon.png" type="Texture" id=18]
-[ext_resource path="res://music/boss1.ogg" type="AudioStream" id=19]
-[ext_resource path="res://assets/Health.tscn" type="PackedScene" id=20]
-[ext_resource path="res://sprites/boss1.png" type="Texture" id=21]
-[ext_resource path="res://sprites/light.png" type="Texture" id=22]
-[ext_resource path="res://Scripts/Shooting.gd" type="Script" id=23]
-[ext_resource path="res://Scripts/Light2D.gd" type="Script" id=24]
-[ext_resource path="res://Test/test2.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/Jumper.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/DayNightcycle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/vines.png" type="Texture" id=5]
+[ext_resource path="res://assets/plant.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sprites/mushroom.png" type="Texture" id=7]
+[ext_resource path="res://sprites/grass2.png" type="Texture" id=8]
+[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/Levelload.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/MusicPlayer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=13]
+[ext_resource path="res://assets/Boxhealth.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scripts/Boss1.gd" type="Script" id=15]
+[ext_resource path="res://icon.png" type="Texture" id=16]
+[ext_resource path="res://music/boss1.ogg" type="AudioStream" id=17]
+[ext_resource path="res://assets/Health.tscn" type="PackedScene" id=18]
+[ext_resource path="res://sprites/boss1.png" type="Texture" id=19]
+[ext_resource path="res://sprites/light.png" type="Texture" id=20]
+[ext_resource path="res://Scripts/Shooting.gd" type="Script" id=21]
+[ext_resource path="res://Scripts/Light2D.gd" type="Script" id=22]
+[ext_resource path="res://Test/test2.tscn" type="PackedScene" id=23]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 98.918, 101.127 )
@@ -86,9 +84,6 @@ position = Vector2( -728.311, 42.6642 )
 [node name="Hook4" parent="Hooks" instance=ExtResource( 2 )]
 position = Vector2( 649.701, 42.6642 )
 
-[node name="Waters" type="Node2D" parent="."]
-position = Vector2( 23075.4, 555.175 )
-
 [node name="Boxes" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
@@ -103,36 +98,18 @@ editor/display_folded = true
 editor/display_folded = true
 position = Vector2( 6847.79, -403.441 )
 
-[node name="Swin" type="Node2D" parent="."]
-position = Vector2( 7335.83, 0 )
-
-[node name="Swwing" parent="Swin" instance=ExtResource( 3 )]
-position = Vector2( 18140.4, 45.3484 )
-
-[node name="Swwing2" parent="Swin" instance=ExtResource( 3 )]
-position = Vector2( 19176.9, 52.3117 )
-scale = Vector2( 1.33, 1 )
-
-[node name="Water" parent="." instance=ExtResource( 4 )]
-position = Vector2( 25590.8, 157.567 )
-scale = Vector2( 1, 0.5 )
-
-[node name="Water2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 26551.9, 157.567 )
-scale = Vector2( 1, 0.5 )
-
 [node name="Jumpers" type="Node2D" parent="."]
 position = Vector2( 7334.37, -40.5836 )
 
-[node name="Jumper" parent="." instance=ExtResource( 5 )]
+[node name="Jumper" parent="." instance=ExtResource( 3 )]
 position = Vector2( 25801.5, 0.165198 )
 
-[node name="Jumper2" parent="." instance=ExtResource( 5 )]
+[node name="Jumper2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 24510.9, 0.165198 )
 
-[node name="Day Night cycle" parent="." instance=ExtResource( 6 )]
+[node name="Day Night cycle" parent="." instance=ExtResource( 4 )]
 
-[node name="Jumper3" parent="." instance=ExtResource( 5 )]
+[node name="Jumper3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 27027.2, -3.1232 )
 
 [node name="Art" type="Node2D" parent="."]
@@ -150,7 +127,7 @@ margin_left = 755.0
 margin_top = -1538.0
 margin_right = 1011.0
 margin_bottom = 64.0
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 expand = true
 stretch_mode = 2
 
@@ -159,7 +136,7 @@ margin_left = 689.545
 margin_top = -1341.63
 margin_right = 945.545
 margin_bottom = 260.367
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 expand = true
 stretch_mode = 2
 
@@ -168,7 +145,7 @@ margin_left = 2753.92
 margin_top = -1553.1
 margin_right = 3009.92
 margin_bottom = 48.895
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 expand = true
 stretch_mode = 2
 
@@ -177,7 +154,7 @@ margin_left = 2600.35
 margin_top = -1555.62
 margin_right = 2856.35
 margin_bottom = 46.3774
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 expand = true
 stretch_mode = 2
 
@@ -186,7 +163,7 @@ margin_left = 2688.46
 margin_top = -1356.74
 margin_right = 2944.46
 margin_bottom = 245.262
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 expand = true
 stretch_mode = 2
 
@@ -195,28 +172,28 @@ margin_left = 601.432
 margin_top = -1540.52
 margin_right = 857.432
 margin_bottom = 61.4824
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 expand = true
 stretch_mode = 2
 
 [node name="Houses" type="Node2D" parent="Art"]
 
-[node name="plant" parent="Art" instance=ExtResource( 8 )]
+[node name="plant" parent="Art" instance=ExtResource( 6 )]
 position = Vector2( 18053.6, 25.0309 )
 
-[node name="plant2" parent="Art" instance=ExtResource( 8 )]
+[node name="plant2" parent="Art" instance=ExtResource( 6 )]
 position = Vector2( 18844.6, 22.7237 )
 
 [node name="mushroom" type="Sprite" parent="Art"]
 modulate = Color( 0.54902, 0.529412, 0.529412, 1 )
 position = Vector2( 17455.5, -282.718 )
 z_index = -1
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 
 [node name="mushroom2" type="Sprite" parent="Art"]
 modulate = Color( 0.54902, 0.529412, 0.529412, 1 )
 position = Vector2( 15632.7, -288.27 )
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 
 [node name="Node2D" type="Node2D" parent="Art"]
 modulate = Color( 0.576471, 0.572549, 0.572549, 1 )
@@ -233,7 +210,7 @@ margin_left = 13531.0
 margin_top = 76.0
 margin_right = 20265.0
 margin_bottom = 182.0
-texture = ExtResource( 10 )
+texture = ExtResource( 8 )
 expand = true
 stretch_mode = 2
 
@@ -241,14 +218,14 @@ stretch_mode = 2
 editor/display_folded = true
 position = Vector2( 7165.67, 482.585 )
 
-[node name="Player" parent="." instance=ExtResource( 11 )]
+[node name="Player" parent="." instance=ExtResource( 9 )]
 editor/display_folded = true
 position = Vector2( 23957.4, -94.106 )
 
-[node name="CamShake" parent="Player" instance=ExtResource( 12 )]
+[node name="CamShake" parent="Player" instance=ExtResource( 10 )]
 position = Vector2( 0, 0 )
 
-[node name="Level_load3" parent="." instance=ExtResource( 13 )]
+[node name="Level_load3" parent="." instance=ExtResource( 11 )]
 position = Vector2( 23368.2, -322.041 )
 level_load = "res://Test/Level3.tscn"
 
@@ -256,18 +233,18 @@ level_load = "res://Test/Level3.tscn"
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
-[node name="Music Player" parent="." instance=ExtResource( 14 )]
+[node name="Music Player" parent="." instance=ExtResource( 12 )]
 
 [node name="Tutorial" type="Control" parent="."]
 editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
-script = ExtResource( 15 )
+script = ExtResource( 13 )
 
-[node name="Box" parent="." instance=ExtResource( 16 )]
+[node name="Box" parent="." instance=ExtResource( 14 )]
 position = Vector2( 25161.5, -18.6621 )
 
-[node name="Box2" parent="." instance=ExtResource( 16 )]
+[node name="Box2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 26387.4, -18.6621 )
 
 [node name="Enemies" type="Node2D" parent="."]
@@ -279,24 +256,24 @@ editor/display_folded = true
 position = Vector2( 25827.5, -333.963 )
 collision_layer = 32
 collision_mask = 32
-script = ExtResource( 17 )
+script = ExtResource( 15 )
 timer = 3.0
 health = 32
 
 [node name="icon" type="Sprite" parent="Enemies/Boss"]
 visible = false
 scale = Vector2( 4, 4 )
-texture = ExtResource( 18 )
+texture = ExtResource( 16 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Enemies/Boss"]
-stream = ExtResource( 19 )
+stream = ExtResource( 17 )
 autoplay = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Boss"]
 position = Vector2( 0.697266, -21.6484 )
 shape = SubResource( 1 )
 
-[node name="Health" parent="Enemies/Boss" instance=ExtResource( 20 )]
+[node name="Health" parent="Enemies/Boss" instance=ExtResource( 18 )]
 visible = false
 time = 4.0
 
@@ -305,7 +282,7 @@ editor/display_folded = true
 position = Vector2( 9.41797, -3.69785 )
 rotation = -0.00787875
 scale = Vector2( 1.34831, 1.34831 )
-texture = ExtResource( 21 )
+texture = ExtResource( 19 )
 region_enabled = true
 region_rect = Rect2( 42, 147, 300, 192 )
 
@@ -314,21 +291,21 @@ modulate = Color( 0, 0, 0, 0.588235 )
 position = Vector2( -65.1396, 111.831 )
 scale = Vector2( 4.01472, 0.801703 )
 z_index = -1
-texture = ExtResource( 22 )
+texture = ExtResource( 20 )
 
 [node name="light2" type="Sprite" parent="Enemies/Boss/boss_1"]
 modulate = Color( 0, 0, 0, 0.588235 )
 position = Vector2( 97.2412, 118.238 )
 scale = Vector2( 4.01472, 0.801703 )
 z_index = -1
-texture = ExtResource( 22 )
+texture = ExtResource( 20 )
 
 [node name="wheel" type="Sprite" parent="Enemies/Boss/boss_1"]
 position = Vector2( -114.219, 93.411 )
 rotation = 1.33443
 scale = Vector2( 1.5, 1.5 )
 z_index = 360
-texture = ExtResource( 21 )
+texture = ExtResource( 19 )
 offset = Vector2( 1.05078, 0.567856 )
 region_enabled = true
 region_rect = Rect2( 36, 98, 41, 49 )
@@ -337,7 +314,7 @@ region_rect = Rect2( 36, 98, 41, 49 )
 position = Vector2( 111.012, 93.8294 )
 rotation = 1.33443
 scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 21 )
+texture = ExtResource( 19 )
 offset = Vector2( 0.957031, 0.149445 )
 region_enabled = true
 region_rect = Rect2( 31, 99, 53, 44 )
@@ -348,40 +325,40 @@ anims/walk = SubResource( 2 )
 
 [node name="Shooting" type="Node2D" parent="Enemies/Boss/boss_1"]
 position = Vector2( -35.3105, -91.6568 )
-script = ExtResource( 23 )
+script = ExtResource( 21 )
 
 [node name="Shooting2" type="Node2D" parent="Enemies/Boss/boss_1"]
 position = Vector2( 28.1543, -90.5491 )
-script = ExtResource( 23 )
+script = ExtResource( 21 )
 timer = 1.0
 
 [node name="light3" type="Light2D" parent="Enemies/Boss/boss_1"]
 position = Vector2( -32.2871, 60.7788 )
 rotation = 0.00787875
 scale = Vector2( 0.741669, 0.741669 )
-texture = ExtResource( 22 )
+texture = ExtResource( 20 )
 texture_scale = 2.0
 color = Color( 1, 0.741176, 0.0588235, 1 )
-script = ExtResource( 24 )
+script = ExtResource( 22 )
 
 [node name="light" type="Sprite" parent="Enemies/Boss/boss_1/light3"]
 modulate = Color( 1, 0.784314, 0.207843, 0.380392 )
 position = Vector2( -2.29297, 0.752533 )
-texture = ExtResource( 22 )
+texture = ExtResource( 20 )
 
 [node name="light4" type="Light2D" parent="Enemies/Boss/boss_1"]
 position = Vector2( 34.2734, 61.3032 )
 rotation = 0.00787875
 scale = Vector2( 0.741669, 0.741669 )
-texture = ExtResource( 22 )
+texture = ExtResource( 20 )
 texture_scale = 2.0
 color = Color( 1, 0.741176, 0.0588235, 1 )
-script = ExtResource( 24 )
+script = ExtResource( 22 )
 
 [node name="light2" type="Sprite" parent="Enemies/Boss/boss_1/light4"]
 modulate = Color( 1, 0.784314, 0.207843, 0.380392 )
 position = Vector2( -0.285156, -0.836288 )
-texture = ExtResource( 22 )
+texture = ExtResource( 20 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Enemies/Boss"]
 
@@ -397,5 +374,5 @@ texture_mode = 1415753728
 
 [node name="bolts" type="Node2D" parent="."]
 
-[node name="Test" parent="." instance=ExtResource( 25 )]
+[node name="Test" parent="." instance=ExtResource( 23 )]
 
