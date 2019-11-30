@@ -17,10 +17,12 @@ func _process(delta):
 				$Polygon2D.hide()
 	else:
 		$Polygon2D.hide()
-	if Input.is_action_just_pressed("ui_up") and get_parent().state == "carring" and carring:
+	if Input.is_action_just_pressed("ui_up") and carring:
 		release(Vector2(0,0))
-	if Input.is_action_just_pressed("ui_cancel") and get_parent().state == "carring" and carring:
+		carring = false
+	if Input.is_action_just_pressed("ui_cancel")and carring:
 		release(Vector2(300,300))
+		carring = false
 
 func release(var motion):
 	var child = get_child(1)

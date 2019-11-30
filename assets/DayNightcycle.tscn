@@ -20,7 +20,6 @@
 [ext_resource path="res://sprites/tree.png" type="Texture" id=18]
 [ext_resource path="res://sprites/bush.png" type="Texture" id=19]
 
-
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0.123404, 0.285106 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.214844, 0.907989, 1, 1 )
@@ -66,13 +65,13 @@ tracks/0/keys = {
 "values": [ -3.39986, 1.20196, -3.39986 ]
 }
 
-[sub_resource type="ShaderMaterial" id=8]
+[sub_resource type="ShaderMaterial" id=7]
 shader = ExtResource( 11 )
 shader_param/blue_tint = null
 shader_param/sprite_scale = Vector2( 1, 1 )
 shader_param/scale_x = 0.1
 
-[sub_resource type="CanvasItemMaterial" id=7]
+[sub_resource type="CanvasItemMaterial" id=8]
 blend_mode = 2
 
 [node name="Day Night cycle" type="AnimationPlayer"]
@@ -213,7 +212,7 @@ stretch_mode = 2
 motion_scale = Vector2( 0, 1 )
 
 [node name="Mirror5" parent="Day Night cycle/ParallaxBackground/ParallaxLayer9" instance=ExtResource( 10 )]
-material = SubResource( 8 )
+material = SubResource( 7 )
 position = Vector2( 0, 646.38 )
 scale = Vector2( 1, 0.571969 )
 
@@ -254,10 +253,10 @@ scale = Vector2( 0.99883, 1 )
 texture = ExtResource( 12 )
 
 [node name="dirt9" type="TextureRect" parent="Day Night cycle/ParallaxBackground3/ParallaxLayer/Sprite2"]
-margin_left = -482.778
-margin_top = 68.602
-margin_right = 475.222
-margin_bottom = 192.602
+margin_left = -480.0
+margin_top = 69.0
+margin_right = 480.0
+margin_bottom = 339.0
 texture = ExtResource( 13 )
 expand = true
 stretch_mode = 2
@@ -280,7 +279,7 @@ color = Color( 0.92549, 0.964706, 0.968627, 1 )
 [node name="light2" type="Sprite" parent="Day Night cycle/CanvasLayer"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 7 )
+material = SubResource( 8 )
 position = Vector2( 480, 270 )
 texture = ExtResource( 15 )
 
