@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://sprites/floatr.png" type="Texture" id=1]
+[ext_resource path="res://sprites/hook.png" type="Texture" id=2]
+[ext_resource path="res://sprites/chain.png" type="Texture" id=3]
 
 [node name="floatr" type="Sprite"]
-position = Vector2( -11.0005, -56.942 )
+position = Vector2( -3.76208, -0.762085 )
 texture = ExtResource( 1 )
+offset = Vector2( 1.62593, -88.3132 )
+
+[node name="hook" type="Sprite" parent="."]
+position = Vector2( -0.64138, 7.25996 )
+texture = ExtResource( 2 )
+
+[node name="chain" type="Sprite" parent="hook"]
+position = Vector2( 4.92242, -46.3673 )
+scale = Vector2( 0.5, 0.70221 )
+z_index = -1
+texture = ExtResource( 3 )
 

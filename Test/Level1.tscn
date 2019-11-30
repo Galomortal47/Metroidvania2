@@ -17033,7 +17033,6 @@ position = Vector2( -245.126, 520.219 )
 position = Vector2( 86.887, 555.155 )
 
 [node name="Hooks" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Hook1" parent="Hooks" instance=ExtResource( 6 )]
 
@@ -17050,7 +17049,7 @@ position = Vector2( 5344.32, -137.761 )
 position = Vector2( -6245.28, 370.098 )
 
 [node name="Hook5" parent="Hooks" instance=ExtResource( 6 )]
-position = Vector2( -6663.43, 96.494 )
+position = Vector2( -6663.43, 94.222 )
 
 [node name="Hook6" parent="Hooks" instance=ExtResource( 6 )]
 position = Vector2( -8516.71, -1101.17 )
