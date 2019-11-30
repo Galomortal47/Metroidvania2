@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=34 format=2]
+[gd_resource type="TileSet" load_steps=35 format=2]
 
 [ext_resource path="res://sprites/tilemap.png" type="Texture" id=1]
+[ext_resource path="res://sprites/tilemap2.png" type="Texture" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
@@ -360,7 +361,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 } ]
 16/z_index = 0
 17/name = "autotile"
-17/texture = ExtResource( 1 )
+17/texture = ExtResource( 2 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 0, 0, 400, 400 )

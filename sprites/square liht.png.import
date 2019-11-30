@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/water.png-31009146f73da861d68bb8ecbdb2c273.stex"
+path="res://.import/square liht.png-eddb3c758da92c31ed65fef482654837.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/water.png"
-dest_files=[ "res://.import/water.png-31009146f73da861d68bb8ecbdb2c273.stex" ]
+source_file="res://sprites/square liht.png"
+dest_files=[ "res://.import/square liht.png-eddb3c758da92c31ed65fef482654837.stex" ]
 
 [params]
 
@@ -19,8 +19,8 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=2
-flags/filter=false
+flags/repeat=0
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

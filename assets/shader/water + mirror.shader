@@ -9,7 +9,7 @@ uniform vec2 sprite_scale;
 uniform float scale_x = 0.67;
 
 float rand(vec2 coord){
-	return fract(sin(dot(coord, vec2(10, 10))));
+	return fract(sin(dot(coord, vec2(1, 1))));
 }
 
 float noise(vec2 coord){
@@ -30,33 +30,34 @@ float noise(vec2 coord){
 void fragment(){
 	
 	vec2 noisecoord1 = UV * sprite_scale * scale_x;
-	vec2 noisecoord2 = UV * sprite_scale * scale_x + 4.0;
 	
 	vec2 motion1 = vec2(TIME , TIME );
-	vec2 motion2 = vec2(TIME , TIME );
 	
-	vec2 distort1 = vec2(noise(noisecoord1 + motion1), noise(noisecoord2 + motion1)) - vec2(0.5);
-	vec2 distort2 = vec2(noise(noisecoord1 + motion2), noise(noisecoord2 + motion2)) - vec2(0.5);
+	vec2 distort1 = vec2(noise(noisecoord1 + motion1), noise(noisecoord1  + motion1));
 	
 	vec2 distort_sum = (distort1) / 60.0;
 	
-	vec4 color = textureLod(SCREEN_TEXTURE, SCREEN_UV + distort_sum, 0.0);
+	vec4 color;
 	
-	vec2 uv = SCREEN_UV * vec2(1,-1);
-	vec2 ofsset = vec2(0,0.4);
-	vec4 relection = textureLod(SCREEN_TEXTURE, uv + ofsset, 0.0);
-	color = mix(color, relection, 0.2);
+	vec2 uv = SCREEN_UV;
+	uv.y *= -1.0;
+	vec2 ofsset = (vec2(0.0,0.333));
+	vec4 relection = textureLod(SCREEN_TEXTURE, uv + ofsset + distort_sum, 0.0);
+	vec4 screen  = textureLod(SCREEN_TEXTURE, SCREEN_UV + distort_sum, 0.0);
+	vec4 disto = mix(relection, screen, 0.7);
+	
+	color = disto;
 	
 	color = mix(color, blue_tint, 0.3);
 	color.rgb = mix(vec3(0.5), color.rgb, 1.4);
 	
-	float near_top = (UV.x + (distort_sum.x *0.1)) / (0.01);
+	float near_top = (UV.x + (distort_sum.x *0.3)) / (0.01);
 	near_top = clamp(near_top, 0.0, 1.0);
 	near_top = 1.0 - near_top;
 	
 	color = mix(color, vec4(1.0), near_top);
 	
-	if(near_top > 0.01){
+	if(near_top > 0.2){
 		color.a = 0.0;
 		}
 

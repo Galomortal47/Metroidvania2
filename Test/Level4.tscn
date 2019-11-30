@@ -207,9 +207,9 @@ z_as_relative = false
 
 [node name="grass2" type="TextureRect" parent="Art/Node2D2"]
 margin_left = 13531.0
-margin_top = 76.0
+margin_top = 105.687
 margin_right = 20265.0
-margin_bottom = 182.0
+margin_bottom = 211.687
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 2

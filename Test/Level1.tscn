@@ -17143,7 +17143,6 @@ position = Vector2( -7030.19, -1084.39 )
 position = Vector2( -10440.8, 758.978 )
 
 [node name="Boxes" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -2.58472, -64.618 )
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
@@ -17391,79 +17390,6 @@ position = Vector2( 1288.2, 493.369 )
 [node name="Box14" parent="Boxes/Boxes4" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 437.656 )
 
-[node name="Boxes6" type="Node2D" parent="Boxes"]
-editor/display_folded = true
-position = Vector2( -13071.9, 533.034 )
-
-[node name="Box2" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1073.09, 541.343 )
-
-[node name="Box9" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1073.09, 493.369 )
-
-[node name="Box16" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1073.09, 437.656 )
-
-[node name="Box3" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1121.83, 541.343 )
-
-[node name="Box10" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1121.83, 493.369 )
-
-[node name="Box15" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1121.83, 437.656 )
-
-[node name="Box4" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1172.9, 541.343 )
-
-[node name="Box7" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1172.9, 493.369 )
-
-[node name="Box13" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1172.9, 437.656 )
-
-[node name="Box5" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1229.39, 541.343 )
-
-[node name="Box17" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1583.5, 541.343 )
-
-[node name="Box23" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1529.81, 541.343 )
-
-[node name="Box8" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1229.39, 493.369 )
-
-[node name="Box21" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1583.5, 493.369 )
-
-[node name="Box24" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1529.81, 493.369 )
-
-[node name="Box12" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1229.39, 437.656 )
-
-[node name="Box18" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1583.5, 437.656 )
-
-[node name="Box6" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1288.2, 541.343 )
-
-[node name="Box22" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1642.31, 541.343 )
-
-[node name="Box11" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1288.2, 493.369 )
-
-[node name="Box20" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1642.31, 493.369 )
-
-[node name="Box14" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1288.2, 437.656 )
-
-[node name="Box19" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
-position = Vector2( 1642.31, 437.656 )
-
 [node name="Box_bolts" parent="Boxes" instance=ExtResource( 11 )]
 
 [node name="Box_bolts2" parent="Boxes" instance=ExtResource( 11 )]
@@ -17517,12 +17443,6 @@ position = Vector2( 1984.46, 502.468 )
 
 [node name="Box12" parent="Boxes" instance=ExtResource( 16 )]
 position = Vector2( -10085.2, -807.188 )
-
-[node name="Box14" parent="Boxes" instance=ExtResource( 16 )]
-position = Vector2( -11697.1, 1082.01 )
-
-[node name="Box15" parent="Boxes" instance=ExtResource( 16 )]
-position = Vector2( -12098, 1076.73 )
 
 [node name="Box13" parent="Boxes" instance=ExtResource( 16 )]
 position = Vector2( -7212.66, -847.022 )
@@ -18064,6 +17984,11 @@ position = Vector2( -12068.3, -16.2644 )
 [node name="Level_load" parent="." instance=ExtResource( 29 )]
 position = Vector2( 6955.75, -1908.55 )
 level_load = "res://Test/Level2.tscn"
+
+[node name="Level_load2" parent="." instance=ExtResource( 29 )]
+position = Vector2( -11326.6, 1691.59 )
+rotation = 1.5708
+level_load = "res://Test/Level5.tscn"
 
 [node name="Music Player" parent="." instance=ExtResource( 30 )]
 

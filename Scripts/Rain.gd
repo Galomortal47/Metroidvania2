@@ -1,7 +1,7 @@
 extends Node2D
 
-var rain_chance = 10000
-var snow_chance = 30000
+var rain_chance = 30000
+var snow_chance = 9999999
 var leaf_chance = 20000
 var climate = "clear"
 

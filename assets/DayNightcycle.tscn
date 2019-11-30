@@ -10,7 +10,7 @@
 [ext_resource path="res://sprites/pyrateship.png" type="Texture" id=8]
 [ext_resource path="res://sprites/water.png" type="Texture" id=9]
 [ext_resource path="res://assets/water effect.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/Water.shader" type="Shader" id=11]
+[ext_resource path="res://assets/shader/Water.shader" type="Shader" id=11]
 [ext_resource path="res://sprites/grass2.png" type="Texture" id=12]
 [ext_resource path="res://sprites/dirt.png" type="Texture" id=13]
 [ext_resource path="res://sprites/grass.png" type="Texture" id=14]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scripts/Timer.gd" type="Script" id=17]
 [ext_resource path="res://sprites/tree.png" type="Texture" id=18]
 [ext_resource path="res://sprites/bush.png" type="Texture" id=19]
+
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0.123404, 0.285106 )
