@@ -93,7 +93,6 @@ position = Vector2( -10320.7, 2943.49 )
 texture = ExtResource( 5 )
 
 [node name="enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Enemy4" parent="enemies" instance=ExtResource( 6 )]
 position = Vector2( -8778.33, 2747.76 )
@@ -121,9 +120,6 @@ position = Vector2( -11679.1, 2825.75 )
 
 [node name="Enemy9" parent="enemies" instance=ExtResource( 8 )]
 position = Vector2( -8875.56, 2762.73 )
-
-[node name="Enemy10" parent="enemies" instance=ExtResource( 8 )]
-position = Vector2( -12071, 2375.56 )
 
 [node name="Enemy11" parent="enemies" instance=ExtResource( 8 )]
 position = Vector2( -7941.18, 2406.53 )

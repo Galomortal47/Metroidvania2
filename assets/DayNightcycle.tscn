@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/DayNightcycle2.tres" type="Animation" id=1]
 [ext_resource path="res://Scripts/DayNightcycle.gd" type="Script" id=2]
@@ -11,14 +11,17 @@
 [ext_resource path="res://sprites/water.png" type="Texture" id=9]
 [ext_resource path="res://assets/water effect.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/shader/Water.shader" type="Shader" id=11]
-[ext_resource path="res://sprites/grass2.png" type="Texture" id=12]
-[ext_resource path="res://sprites/dirt.png" type="Texture" id=13]
-[ext_resource path="res://sprites/grass.png" type="Texture" id=14]
-[ext_resource path="res://sprites/light2.png" type="Texture" id=15]
-[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=16]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=17]
-[ext_resource path="res://sprites/tree.png" type="Texture" id=18]
-[ext_resource path="res://sprites/bush.png" type="Texture" id=19]
+[ext_resource path="res://Scripts/water.gd" type="Script" id=12]
+[ext_resource path="res://assets/Tiles/watershader2.tres" type="Material" id=13]
+[ext_resource path="res://assets/Tiles/watershaderfast2.tres" type="Material" id=14]
+[ext_resource path="res://sprites/grass2.png" type="Texture" id=15]
+[ext_resource path="res://sprites/dirt.png" type="Texture" id=16]
+[ext_resource path="res://sprites/grass.png" type="Texture" id=17]
+[ext_resource path="res://sprites/light2.png" type="Texture" id=18]
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=19]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=20]
+[ext_resource path="res://sprites/tree.png" type="Texture" id=21]
+[ext_resource path="res://sprites/bush.png" type="Texture" id=22]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0.123404, 0.285106 )
@@ -215,6 +218,9 @@ motion_scale = Vector2( 0, 1 )
 material = SubResource( 7 )
 position = Vector2( 0, 646.38 )
 scale = Vector2( 1, 0.571969 )
+script = ExtResource( 12 )
+material_fancy = ExtResource( 13 )
+material_fast = ExtResource( 14 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Day Night cycle/ParallaxBackground"]
 position = Vector2( -0.429321, 1.7171 )
@@ -231,7 +237,7 @@ motion_mirroring = Vector2( 960, 0 )
 
 [node name="Sprite" type="Sprite" parent="Day Night cycle/ParallaxBackground2/ParallaxLayer2"]
 position = Vector2( 399.203, 828.564 )
-texture = ExtResource( 12 )
+texture = ExtResource( 15 )
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="Day Night cycle/ParallaxBackground2"]
 position = Vector2( -0.429321, 1.7171 )
@@ -250,14 +256,14 @@ motion_mirroring = Vector2( 960, 0 )
 [node name="Sprite2" type="Sprite" parent="Day Night cycle/ParallaxBackground3/ParallaxLayer"]
 position = Vector2( 408.983, 960 )
 scale = Vector2( 0.99883, 1 )
-texture = ExtResource( 12 )
+texture = ExtResource( 15 )
 
 [node name="dirt9" type="TextureRect" parent="Day Night cycle/ParallaxBackground3/ParallaxLayer/Sprite2"]
 margin_left = -480.0
 margin_top = 69.0
 margin_right = 480.0
 margin_bottom = 339.0
-texture = ExtResource( 13 )
+texture = ExtResource( 16 )
 expand = true
 stretch_mode = 2
 
@@ -266,7 +272,7 @@ margin_left = -487.0
 margin_top = -16.0
 margin_right = 474.0
 margin_bottom = 129.0
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 expand = true
 stretch_mode = 2
 
@@ -281,7 +287,7 @@ visible = false
 modulate = Color( 1, 1, 1, 0 )
 material = SubResource( 8 )
 position = Vector2( 480, 270 )
-texture = ExtResource( 15 )
+texture = ExtResource( 18 )
 
 [node name="Timer" type="Label" parent="Day Night cycle/CanvasLayer"]
 visible = false
@@ -289,9 +295,9 @@ margin_left = 37.3235
 margin_top = 68.3089
 margin_right = 85.3235
 margin_bottom = 82.3089
-custom_fonts/font = ExtResource( 16 )
+custom_fonts/font = ExtResource( 19 )
 text = "00:00"
-script = ExtResource( 17 )
+script = ExtResource( 20 )
 
 [node name="Trees2" type="ParallaxBackground" parent="Day Night cycle"]
 
@@ -308,7 +314,7 @@ margin_right = 509.892
 margin_bottom = 50.4285
 rect_rotation = -2.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 18 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 2
 
@@ -323,7 +329,7 @@ margin_left = -17.2631
 margin_top = 277.757
 margin_right = 605.737
 margin_bottom = 904.757
-texture = ExtResource( 19 )
+texture = ExtResource( 22 )
 expand = true
 stretch_mode = 1
 

@@ -1,30 +1,26 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/shader/water + mirror.shader" type="Shader" id=1]
+[ext_resource path="res://assets/Tiles/watershader.tres" type="Material" id=1]
+[ext_resource path="res://Scripts/water.gd" type="Script" id=2]
 
-[sub_resource type="ShaderMaterial" id=1]
-shader = ExtResource( 1 )
-shader_param/blue_tint = Color( 0.211765, 0.627451, 0.721569, 1 )
-shader_param/sprite_scale = Vector2( 1, 0.1 )
-shader_param/scale_x = 1.0
-
-[sub_resource type="Gradient" id=2]
+[sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.982639 )
 colors = PoolColorArray( 0.961806, 0.961806, 0.961806, 1, 1, 1, 1, 0 )
 
-[sub_resource type="GradientTexture" id=3]
-gradient = SubResource( 2 )
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 80, 72 )
 
 [node name="Mirror5" type="Sprite"]
-material = SubResource( 1 )
+material = ExtResource( 1 )
 rotation = 1.5708
 z_index = 4096
-texture = SubResource( 3 )
+texture = SubResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 130, 160, 160 )
+script = ExtResource( 2 )
 
 [node name="Area2D" type="StaticBody2D" parent="." groups=[
 "swin",
@@ -38,5 +34,5 @@ collision_mask = 1024
 ]]
 visible = false
 position = Vector2( 0, -8 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 

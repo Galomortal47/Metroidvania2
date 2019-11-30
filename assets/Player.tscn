@@ -811,7 +811,6 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1359
 
 [node name="icon4" type="Sprite" parent="Menu Items/Menu"]
 editor/display_folded = true
