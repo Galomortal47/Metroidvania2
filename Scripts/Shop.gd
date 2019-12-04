@@ -3,7 +3,7 @@ extends RayCast2D
 var i
 var select = 0
 var price = [99999,2000,3000,15000,4000,5000,4000,6000]
-var enable = [false,true,true,true,true,true,true,false]
+var enable = [false,true,true,true,true,true,false,false]
 var items_n = 8
 
 func _process(delta):
@@ -45,7 +45,7 @@ func _process(delta):
 					if  weapon_checker_money_checker(price[select]):
 						money_cut(price[select])
 						get_collider().get_node("Weapons").get_child(select).have = true
-				if Input.is_action_just_pressed("ui_cancel"):
+				if Input.is_action_just_pressed("ui_cancel") or Input.is_action_just_pressed("ui_b"):
 					if int(get_collider().get_node("Coins/Number").get_text()) >= 100:
 						if not get_collider().get_node("Weapons").get_child(select).ammo == get_collider().get_node("Weapons").get_child(select).ammo_max:
 							get_collider().get_node("Weapons").get_child(select).ammo = get_collider().get_node("Weapons").get_child(select).ammo_max

@@ -2,7 +2,7 @@ extends Node2D
 
 var speed = 50
 var rage = 1000
-var rage2 = 150
+var rage2 = 50
 var hook = false
 var area = Vector2(0,0)
 var have = true
@@ -56,8 +56,22 @@ func get_closest():
 		smallest[i] = dist[i]
 		if smallest[i] < rage2:
 			smallest[i] *= 1000 
+		if get_dir(i):
+			smallest[i] *= 1000 
 	smallest.sort()
 	return dist.find(smallest[0])
+
+func get_dir(var number):
+	if get_parent().get_parent().motion.x > 0:
+		if get_parent().get_parent().get_global_position().x > hook_path.get_child(number).get_global_position().x:
+			return true
+		else:
+			return false
+	else:
+		if get_parent().get_parent().get_global_position().x < hook_path.get_child(number).get_global_position().x:
+			return true
+		else:
+			return false
 
 func get_distance(var number):
 	var distance = get_parent().get_parent().get_global_position().distance_to(hook_path.get_child(number).get_global_position())
