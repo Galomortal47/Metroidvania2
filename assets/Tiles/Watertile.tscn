@@ -7,15 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 80, 72 )
 
-[node name="Mirror5" type="Sprite"]
-material = ExtResource( 1 )
-position = Vector2( 125.837, 0.000455528 )
-rotation = 1.5708
-z_index = 4096
-texture = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 0, 130, 160, 160 )
-script = ExtResource( 3 )
+[node name="Node2D" type="Node2D"]
 
 [node name="Area2D" type="StaticBody2D" parent="." groups=[
 "swin",
@@ -30,4 +22,9 @@ collision_mask = 1024
 visible = false
 position = Vector2( 0, -8 )
 shape = SubResource( 1 )
+
+[node name="water" type="Sprite" parent="."]
+material = ExtResource( 1 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
 

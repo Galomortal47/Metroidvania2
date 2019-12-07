@@ -47,13 +47,13 @@ void fragment(){
 	color = blue_tint * 0.5;
 	color.rgb = mix(vec3(0.5), color.rgb, 1.4);
 	
-	float near_top = (UV.x + (distort_sum.x * 10.0)) + (0.5);
+	float near_top = (UV.x + (distort_sum.x * 10.0)) + (0.66);
 	near_top = clamp(near_top, 0.0, 1.0);
 	near_top = 1.0 - near_top;
 
 	color = mix(color, vec4(1.0), near_top);
 
-	if(near_top > 0.2){
+	if(near_top > 0.1){
 		color.a = 0.0;
 	}	
 

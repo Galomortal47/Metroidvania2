@@ -58,15 +58,16 @@ void fragment(){
 //	vec2 VectorOp = vec2(UV + input - vec2(0,0));
 //	color.a = texture(alpha, VectorOp).a;
 	
-	float near_top = (UV.x + (distort_sum.x * 10.0)) + (0.5);
+	float near_top = (UV.y + (distort_sum.y * 10.0)) + (0.66);
 	near_top = clamp(near_top, 0.0, 1.0);
 	near_top = 1.0 - near_top;
-
+	
 	color = mix(color, vec4(1.0), near_top);
 
-	if(near_top > 0.2){
+	if(near_top > 0.1){
 		color.a = 0.0;
 	}
 	
 	COLOR = color;
+//	COLOR.rg = UV;
 }
