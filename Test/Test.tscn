@@ -9,8 +9,8 @@
 [ext_resource path="res://sprites/water.png" type="Texture" id=7]
 [ext_resource path="res://icon.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/shaderparam.gd" type="Script" id=9]
-[ext_resource path="res://assets/Tiles/Watertile.tscn" type="PackedScene" id=10]
-[ext_resource path="res://sprites/reverse.png" type="Texture" id=11]
+[ext_resource path="res://sprites/reverse.png" type="Texture" id=10]
+[ext_resource path="res://assets/Tiles/Watertile.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2000, 10 )
@@ -25,7 +25,7 @@ shader_param/alpha = ExtResource( 6 )
 shader = ExtResource( 5 )
 shader_param/input = Vector2( 0, 0 )
 shader_param/sprite = ExtResource( 7 )
-shader_param/alpha = ExtResource( 11 )
+shader_param/alpha = ExtResource( 10 )
 
 [node name="Test" type="Node2D"]
 
@@ -56,14 +56,14 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 8 )
 script = ExtResource( 9 )
 
-[node name="Mirror5" parent="shaderparam" instance=ExtResource( 10 )]
-position = Vector2( 398.131, 13.3141 )
-scale = Vector2( 1, 1.79533 )
-
 [node name="shaderparam2" type="Sprite" parent="."]
 material = SubResource( 3 )
 position = Vector2( -301.349, 12.537 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 8 )
 script = ExtResource( 9 )
+
+[node name="Mirror5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 674.963, 12.5943 )
+scale = Vector2( 2, 2 )
 

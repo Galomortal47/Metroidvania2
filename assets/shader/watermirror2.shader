@@ -27,6 +27,10 @@ float noise(vec2 coord){
 	return mix(a, b, cubic.x) + (c - a) * cubic.y * (1.0 - cubic.x) + (d - b) * cubic.x * cubic.y;
 }
 
+uniform vec2 input;
+uniform sampler2D sprite;
+uniform sampler2D alpha;
+
 void fragment(){
 	
 	vec2 noisecoord1 = UV * sprite_scale * scale_x;
@@ -43,15 +47,15 @@ void fragment(){
 	color = blue_tint * 0.5;
 	color.rgb = mix(vec3(0.5), color.rgb, 1.4);
 	
-	float near_top = (UV.x + (distort_sum.x *0.3)) / (0.01);
+	float near_top = (UV.x + (distort_sum.x * 10.0)) + (0.5);
 	near_top = clamp(near_top, 0.0, 1.0);
 	near_top = 1.0 - near_top;
-	
+
 	color = mix(color, vec4(1.0), near_top);
-	
+
 	if(near_top > 0.2){
 		color.a = 0.0;
-		}
+	}	
 
 	COLOR = color;
 }
