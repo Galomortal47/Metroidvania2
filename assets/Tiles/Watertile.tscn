@@ -5,14 +5,13 @@
 [ext_resource path="res://Scripts/water.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 80, 72 )
+extents = Vector2( 64, 56 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Area2D" type="StaticBody2D" parent="." groups=[
 "swin",
 ]]
-rotation = 1.5708
 collision_layer = 1024
 collision_mask = 1024
 
@@ -20,7 +19,7 @@ collision_mask = 1024
 "swin",
 ]]
 visible = false
-position = Vector2( 0, -8 )
+position = Vector2( 0, 8 )
 shape = SubResource( 1 )
 
 [node name="water" type="Sprite" parent="."]
