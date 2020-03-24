@@ -6,7 +6,9 @@ var stop_dead_zone = 1
 var player
 var animator
 
-func _process(delta):
+var gameoverscene = load('res://assets/DeatScreen.tscn').instance()
+
+func _physics_process(delta):
 	animations()
 
 func _ready():
@@ -20,8 +22,9 @@ func animations():
 			$Chocobo.hide()
 			get_parent().get_node("Chocobo").stop()
 			shoot_dir(true)
-			if Input.is_action_pressed("ui_roll") and not player.ground_detect():
+			if roll_detect():
 				animator.set_current_animation("roll")
+				get_parent().get_parent().get_parent().afterimage()
 				get_parent().get_node("JetPack").set_current_animation("normal")
 			if not player.ground_detect() and not player.ledge_detect() and not Input.is_action_pressed("ui_roll"):
 				if player.motion.y < 0:
@@ -63,16 +66,14 @@ func animations():
 				get_parent().get_node("Chocobo").play("jump")
 		"death":
 			get_parent().get_node("Death").set_current_animation("Die")
-			get_parent().get_node("Polygon2D/Label/Control/Button").grab_focus()
+			get_node('/root').add_child(gameoverscene)
 		"carring":
 			animator.set_current_animation("Walk_carry")
 	if int(player.motion.x) > 0:
 		get_parent().set_scale(Vector2(-1,get_parent().get_scale().y))
-		get_parent().get_node("Polygon2D/Label").set_scale(Vector2(-8,8))
 		particles_func()
 	if int(player.motion.x) < 0:
 		get_parent().set_scale(Vector2(1,get_parent().get_scale().y))
-		get_parent().get_node("Polygon2D/Label").set_scale(Vector2(8,8))
 		particles_func()
 	elif int(player.motion.x) == 0:
 		$CPUParticles2D.emitting = false
@@ -110,5 +111,5 @@ func particles_func():
 		$CPUParticles2D.emitting = false
 
 func roll_detect():
-	if Input.is_action_pressed("ui_roll") and not player.ground_detect():
+	if Input.is_action_pressed("ui_roll") and not player.get_node('timer_boost').is_stopped():
 		return true

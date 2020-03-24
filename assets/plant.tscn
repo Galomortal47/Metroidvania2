@@ -111,6 +111,7 @@ anims/wind = SubResource( 1 )
 [node name="RayCast2D" type="RayCast2D" parent="."]
 rotation = 3.49066
 enabled = true
+collision_mask = 524289
 
 [node name="light" parent="." instance=ExtResource( 3 )]
 modulate = Color( 0.0705882, 0.776471, 0.72549, 1 )

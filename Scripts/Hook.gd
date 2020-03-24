@@ -24,8 +24,7 @@ func _ready():
 
 func _physics_process(delta):
 	if have and enable and hook_path.get_child_count() > 0:
-		if Input.is_action_just_pressed("ui_cancel"):
-			close = get_closest()
+		close = get_closest()
 		if Input.is_action_pressed("ui_cancel"):
 			if get_distance(close) < rage:
 				var rot = get_angle_to(hook_path.get_child(close).get_global_position())
@@ -54,10 +53,10 @@ func get_closest():
 	for i in range(0,hook_path.get_child_count()):
 		dist[i] = get_distance(i)
 		smallest[i] = dist[i]
-		if smallest[i] < rage2:
-			smallest[i] *= 1000 
-		if get_dir(i):
-			smallest[i] *= 1000 
+#		if smallest[i] < rage2:
+#			smallest[i] *= 1000 
+#		if get_dir(i):
+#			smallest[i] *= 1000 
 	smallest.sort()
 	return dist.find(smallest[0])
 

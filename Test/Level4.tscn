@@ -226,7 +226,7 @@ position = Vector2( 23957.4, -94.106 )
 position = Vector2( 0, 0 )
 
 [node name="Level_load3" parent="." instance=ExtResource( 11 )]
-position = Vector2( 23368.2, -322.041 )
+position = Vector2( 21740.3, -382.216 )
 level_load = "res://Test/Level3.tscn"
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -248,7 +248,6 @@ position = Vector2( 25161.5, -18.6621 )
 position = Vector2( 26387.4, -18.6621 )
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Boss" type="KinematicBody2D" parent="Enemies" groups=[
 "enemy",
@@ -258,7 +257,7 @@ collision_layer = 32
 collision_mask = 32
 script = ExtResource( 15 )
 timer = 3.0
-health = 32
+health = 16
 
 [node name="icon" type="Sprite" parent="Enemies/Boss"]
 visible = false

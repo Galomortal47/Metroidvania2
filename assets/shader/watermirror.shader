@@ -6,6 +6,7 @@ shader_type canvas_item;
 uniform vec4 blue_tint : hint_color;
 
 uniform vec2 sprite_scale;
+uniform vec2 player_position;
 uniform float scale_x = 0.67;
 
 float rand(vec2 coord){
@@ -33,7 +34,7 @@ uniform sampler2D alpha;
 
 void fragment(){
 	
-	vec2 noisecoord1 = UV * sprite_scale * scale_x;
+	vec2 noisecoord1 = UV * sprite_scale * scale_x * 1.0;
 	
 	vec2 motion1 = vec2(TIME , TIME );
 	
@@ -45,22 +46,29 @@ void fragment(){
 	
 	vec2 uv = SCREEN_UV;
 	uv.y *= -1.0;
-	vec2 ofsset = (vec2(0.0,0.333));
-	vec4 relection = textureLod(SCREEN_TEXTURE, uv + ofsset + distort_sum, 0.0);
-	vec4 screen  = textureLod(SCREEN_TEXTURE, SCREEN_UV + distort_sum, 0.0);
-	vec4 disto = mix(relection, screen, 0.7);
-	
-	color = disto;
+	uv.y -= player_position.y;
+	vec2 offsset = (vec2(0.0,0.333));
+	vec4 relection = textureLod(SCREEN_TEXTURE, uv + offsset, 0.0);
+	vec4 screen  = textureLod(SCREEN_TEXTURE, SCREEN_UV + (distort_sum * 2.0), 0.0);
 	
 	color = mix(color, blue_tint, 0.3);
 	color.rgb = mix(vec3(0.5), color.rgb, 1.4);
 	
-//	vec2 VectorOp = vec2(UV + input - vec2(0,0));
-//	color.a = texture(alpha, VectorOp).a;
-	
-	float near_top = (UV.y + (distort_sum.y * 10.0)) + (0.66);
+	float y = UV.y + (distort_sum.y * 10.0);
+	float near_top = (y) + (0.66);
 	near_top = clamp(near_top, 0.0, 1.0);
-	near_top = 1.0 - near_top;
+	near_top = (1.0 - near_top);
+	
+	float y2 = UV.y + (distort_sum.y * 1.0);
+	float near_top2 = (y) + (0.5);
+	near_top2 = clamp(near_top2, 0.0, 1.0);
+	near_top2 = 1.0 - near_top2;
+	
+	relection = mix(blue_tint, relection, near_top2 * 2.0);
+	
+	vec4 disto = mix(relection, screen, 0.66);
+	
+	color = disto;
 	
 	color = mix(color, vec4(1.0), near_top);
 

@@ -34,7 +34,7 @@ func icon_generate():
 func weapon_sprite(var select):
 	if get_parent().get_node("Weapons").get_child(select).have:
 		get_parent().get_node(anim_path).texture =  get_parent().get_node(anim_path2).get_child(select+1).get_texture()
-		get_parent().get_node(shadow_path3).texture =  get_parent().get_node(anim_path2).get_child(select+1).get_texture()
+#		get_parent().get_node(shadow_path3).texture =  get_parent().get_node(anim_path2).get_child(select+1).get_texture()
 
 var enabled = true
 

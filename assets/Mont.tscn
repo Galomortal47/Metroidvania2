@@ -22,7 +22,6 @@ tracks/0/keys = {
 [node name="Mont" type="Node2D"]
 
 [node name="Chocobo" parent="." instance=ExtResource( 1 )]
-editor/display_folded = true
 position = Vector2( -10.4948, -60.0603 )
 scale = Vector2( 0.94, 1.07 )
 z_index = 2
@@ -31,6 +30,7 @@ z_index = 2
 position = Vector2( 11.7327, 26.4793 )
 enabled = true
 cast_to = Vector2( 0, -50 )
+collision_mask = 524289
 script = ExtResource( 2 )
 
 [node name="ground" type="RayCast2D" parent="Chocobo/RayCast2D"]

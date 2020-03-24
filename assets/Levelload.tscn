@@ -8,6 +8,8 @@ extents = Vector2( 49.429, 2000 )
 
 [node name="Level_load" type="Area2D"]
 position = Vector2( 6955.75, -332.205 )
+collision_layer = 524289
+collision_mask = 524289
 script = ExtResource( 1 )
 level_load = "res://Test/Level 2.tscn"
 

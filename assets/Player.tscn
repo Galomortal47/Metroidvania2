@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Health.tscn" type="PackedScene" id=2]
@@ -539,15 +539,21 @@ tracks/4/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 4, 2 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="OccluderPolygon2D" id=15]
+[sub_resource type="ViewportTexture" id=15]
+viewport_path = NodePath("Anim/Viewport")
+
+[sub_resource type="ViewportTexture" id=16]
+viewport_path = NodePath("Anim/Viewport")
+
+[sub_resource type="OccluderPolygon2D" id=17]
 polygon = PoolVector2Array( -11.2924, 14.9614, 10.5254, -44.7829, -18.0213, -43.9673, 13.1762, 19.6512 )
 
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
 z_index = 1
-collision_layer = 47
-collision_mask = 47
+collision_layer = 524288
+collision_mask = 524288
 script = ExtResource( 1 )
 
 [node name="Groud_Middle" type="RayCast2D" parent="."]
@@ -621,6 +627,7 @@ anims/roll = SubResource( 4 )
 anims/swin = SubResource( 5 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 z_index = 4096
 
@@ -811,6 +818,7 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
+texture_mode = 824
 
 [node name="icon4" type="Sprite" parent="Menu Items/Menu"]
 editor/display_folded = true
@@ -957,33 +965,30 @@ visible = false
 position = Vector2( 5.23666, -26.3542 )
 texture = ExtResource( 18 )
 
-[node name="Shadow" type="Node2D" parent="."]
+[node name="Anim" type="Node2D" parent="."]
 z_index = 999
 script = ExtResource( 19 )
 
-[node name="Monster" type="Sprite" parent="Shadow"]
+[node name="Shadow" type="Sprite" parent="Anim"]
 modulate = Color( 0, 0, 0, 0.447059 )
 position = Vector2( 0, 35 )
 scale = Vector2( 1, 0.3 )
+texture = SubResource( 15 )
 region_rect = Rect2( -150, -150, 0, 0 )
 script = ExtResource( 20 )
 
-[node name="Viewport" type="Viewport" parent="Shadow"]
+[node name="Monster" type="Sprite" parent="Anim"]
+scale = Vector2( 1, -1 )
+texture = SubResource( 16 )
+region_rect = Rect2( -150, -150, 0, 0 )
+
+[node name="Viewport" type="Viewport" parent="Anim"]
 size = Vector2( 300, 300 )
 own_world = true
 transparent_bg = true
-handle_input_locally = false
-
-[node name="Shadow" parent="Shadow/Viewport" instance=ExtResource( 21 )]
-position = Vector2( 150, 150 )
-
-[node name="Anim" type="Node2D" parent="."]
-editor/display_folded = true
-z_index = 999
-
-[node name="Viewport" type="Node2D" parent="Anim"]
 
 [node name="Scale" parent="Anim/Viewport" instance=ExtResource( 21 )]
+position = Vector2( 150, 150 )
 
 [node name="air meter" type="CanvasLayer" parent="."]
 editor/display_folded = true
@@ -1069,7 +1074,7 @@ polygon = PoolVector2Array( -13.0453, -87.8916, -11.3425, -72.2259, -23.6027, -7
 position = Vector2( -480, -350 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource( 15 )
+occluder = SubResource( 17 )
 
 [node name="Swin" type="RayCast2D" parent="."]
 position = Vector2( 0, -25 )

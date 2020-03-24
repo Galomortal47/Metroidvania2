@@ -10,10 +10,11 @@ var jump_ledge = 450
 var jump_aux = 0.0
 var jump_timer = 0.15
 var air_speed = 8
-var roll = 1500
-var roll_drag = 0.99
-var roll_height = 350
+var roll = 2750
+var roll_drag = 1
+var roll_height = 0
 var roll_timer = 1.0
+var roll_boost = 0.15
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
 var state = "walk"
@@ -24,14 +25,22 @@ var jump_count = 10
 var jump_count_aux = jump_count
 var boltspawner = preload("boltspawner.gd").new()
 var timer = Timer.new()
+var timer_boost = Timer.new()
 var jetpack = false
 var jetpackfall = 19
+var roll_able = true
+var roll_boost_active = true
 
 func _ready():
 	state = $Save.data.state
 	timer.connect("timeout",self,"_on_timer_timeout") 
 	timer.wait_time = roll_timer
 	add_child(timer)
+	timer_boost.connect("timeout",self,"_on_timer_boost_timeout") 
+	timer_boost.wait_time = roll_boost
+	timer_boost.set_one_shot(true)
+	timer_boost.name = 'timer_boost'
+	add_child(timer_boost)
 
 func jetpack_checker():
 	jetpack = get_node("Anim/Viewport/Scale/Animation/Hips/Scientist anim").visible
@@ -102,26 +111,22 @@ func die():
 		$Save.save()
 		state = "death"
 
-var roll_able = true
-
 func roll():
 	if Input.is_action_just_pressed("ui_roll") and not ledge_detect() and roll_able:
 		if Input.is_action_pressed("ui_right") and roll_able:
-			if ground_detect():
-				if motion.x < max_speed + roll:
-					motion.x += roll
-				motion.y -= roll_height
-				roll_able = false
-				timer.start() #to start
+			motion.x = roll
+			motion.y -= roll_height
+			roll_able = false
+			collision(false)
+			timer_boost.start()
+			timer.start() #to start
 		elif Input.is_action_pressed("ui_left") and roll_able:
-			if ground_detect():
-				if motion.x > -max_speed - roll:
-					motion.x -= roll
-				motion.y -= roll_height
-				roll_able = false
-				timer.start() #to start
-	else:
-		motion.x *= roll_drag
+			motion.x = -roll
+			motion.y -= roll_height
+			roll_able = false
+			collision(false)
+			timer_boost.start()
+			timer.start() #to start
 	if Input.is_action_pressed("ui_roll") and roll_able:
 		$CollisionShape2D/Colision.set_current_animation("roll")
 	else:
@@ -197,3 +202,22 @@ func stun():
 
 func _on_timer_timeout():
 	roll_able = true
+
+func collision(activate):
+	set_collision_mask_bit(1,activate)
+	set_collision_mask_bit(2,activate)
+	set_collision_mask_bit(3,activate)
+	set_collision_mask_bit(4,activate)
+	set_collision_mask_bit(5,activate)
+	set_collision_mask_bit(6,activate)
+	set_collision_layer_bit(1,activate)
+	set_collision_layer_bit(2,activate)
+	set_collision_layer_bit(3,activate)
+	set_collision_layer_bit(4,activate)
+	set_collision_layer_bit(5,activate)
+	set_collision_layer_bit(6,activate)
+
+func _on_timer_boost_timeout():
+	motion.x *= 0.2
+	collision(true)
+	timer_boost.wait_time = roll_boost

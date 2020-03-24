@@ -78,6 +78,7 @@ position = Vector2( 7335.83, 0 )
 position = Vector2( 9776.81, 775.472 )
 
 [node name="Art" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 7335.83, 51.7321 )
 z_index = -1000
 
@@ -174,8 +175,9 @@ position = Vector2( 10500.7, 179.605 )
 position = Vector2( 11489.5, 187.206 )
 
 [node name="Door" parent="." instance=ExtResource( 11 )]
-position = Vector2( 19210.8, 645.325 )
+position = Vector2( 7938.42, 2744.23 )
 cast_to = Vector2( 0, 80 )
+collision_mask = 524289
 level = "res://assets/Room.tscn"
 pos = Vector2( 225, 460 )
 

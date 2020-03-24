@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/gameover.tscn" type="PackedScene" id=2]
+
+[node name="Polygon2D" type="Polygon2D"]
+position = Vector2( 368.006, 256.549 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -856.408, -527.171, -870.761, 596.523, 1073.15, 596.523, 1075.2, -539.474 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 34.1921
+margin_top = -13.6964
+margin_right = 113.192
+margin_bottom = 0.30365
+rect_scale = Vector2( 4, 4 )
+rect_pivot_offset = Vector2( 36.5365, 6.91501 )
+custom_fonts/font = ExtResource( 1 )
+text = "GAME OVER"
+
+[node name="Control" parent="Label" instance=ExtResource( 2 )]
+margin_left = -9.66243
+margin_top = 12.6015
+margin_right = -9.66243
+margin_bottom = 12.6015
+rect_scale = Vector2( 4, 4 )
+

@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://font/8bit.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "New Anim"
+
+[node name="DeatScreen" type="CanvasLayer"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 368.006, 256.549 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -856.408, -527.171, -870.761, 596.523, 1073.15, 596.523, 1075.2, -539.474 )
+
+[node name="Label" type="Label" parent="Polygon2D"]
+margin_left = 34.1921
+margin_top = -13.6964
+margin_right = 113.192
+margin_bottom = 0.30365
+rect_scale = Vector2( 4, 4 )
+rect_pivot_offset = Vector2( 36.5365, 6.91501 )
+custom_fonts/font = ExtResource( 1 )
+text = "GAME OVER"
+
+[node name="Control" type="Control" parent="Polygon2D/Label"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Polygon2D/Label/Control"]
+visible = false
+margin_left = -40.6685
+margin_top = -13.0421
+margin_right = 35.3315
+margin_bottom = 0.957886
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="Polygon2D/Label/Control"]
+pause_mode = 2
+margin_left = -0.540344
+margin_top = 0.540359
+margin_right = 101.46
+margin_bottom = 20.5404
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 1 )
+text = "X TO RESTART"
+flat = true
+script = ExtResource( 2 )
+scene = "res://assets/MainMenu.tscn"
+
+[connection signal="button_down" from="Polygon2D/Label/Control/Button" to="Polygon2D/Label/Control/Button" method="_on_Button_button_down"]

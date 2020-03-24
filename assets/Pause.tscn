@@ -37,7 +37,7 @@ custom_fonts/font = ExtResource( 2 )
 text = "Quit to Menu"
 flat = true
 script = ExtResource( 4 )
-scene = "res://assets/MainMenu.tscn"
+button = false
 
 [node name="CollisionPolygon2D2" type="Polygon2D" parent="CanvasLayer/Label"]
 modulate = Color( 1, 1, 1, 0.498039 )

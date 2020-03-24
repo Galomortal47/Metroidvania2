@@ -20,6 +20,10 @@ run/main_scene="res://assets/MainMenu.tscn"
 run/low_processor_mode_sleep_usec=16666
 config/icon="res://icon.png"
 
+[autoload]
+
+singleton_player="*res://Scripts/singleton_player.gd"
+
 [debug]
 
 settings/fps/force_fps=60

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://sprites/arte.png" type="Texture" id=6]
 [ext_resource path="res://sprites/water.png" type="Texture" id=7]
 [ext_resource path="res://icon.png" type="Texture" id=8]
-[ext_resource path="res://Scripts/shaderparam.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/springshader.gd" type="Script" id=9]
 [ext_resource path="res://sprites/reverse.png" type="Texture" id=10]
 [ext_resource path="res://assets/Tiles/Watertile.tscn" type="PackedScene" id=11]
 
@@ -26,6 +26,23 @@ shader = ExtResource( 5 )
 shader_param/input = Vector2( 0, 0 )
 shader_param/sprite = ExtResource( 7 )
 shader_param/alpha = ExtResource( 10 )
+
+[sub_resource type="Shader" id=4]
+code = "shader_type canvas_item;
+
+uniform float amplitude : hint_range(0.0,1.0);
+uniform float rate : hint_range(0.0,60.0);
+
+void fragment(){
+	float final_offset = (sin(UV.y * rate)) * (amplitude/1.0);
+	COLOR = texture(TEXTURE,vec2(UV.x + final_offset, UV.y));
+	float offset_dir = step(sin(UV.y * rate), 0.05) * 2.0;
+}"
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 4 )
+shader_param/amplitude = 1.0
+shader_param/rate = 1.0
 
 [node name="Test" type="Node2D"]
 
@@ -64,6 +81,11 @@ texture = ExtResource( 8 )
 script = ExtResource( 9 )
 
 [node name="Mirror5" parent="." instance=ExtResource( 11 )]
-position = Vector2( 674.963, 12.5943 )
+position = Vector2( 674.264, 13.2927 )
 scale = Vector2( 2, 2 )
+
+[node name="srping" type="Sprite" parent="."]
+material = SubResource( 5 )
+position = Vector2( 305.962, 66.5177 )
+texture = ExtResource( 7 )
 

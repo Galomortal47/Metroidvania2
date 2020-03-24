@@ -16,14 +16,16 @@ margin_bottom = 0.957886
 text = "GAME OVER"
 
 [node name="Button" type="Button" parent="."]
-margin_right = 70.0
-margin_bottom = 20.0
+pause_mode = 2
+margin_left = -0.540344
+margin_top = 0.540359
+margin_right = 101.46
+margin_bottom = 20.5404
 rect_scale = Vector2( 0.25, 0.25 )
 custom_fonts/font = ExtResource( 1 )
 text = "X TO RESTART"
 flat = true
 script = ExtResource( 2 )
 scene = "res://assets/MainMenu.tscn"
-button = true
 
 [connection signal="button_down" from="Button" to="Button" method="_on_Button_button_down"]
