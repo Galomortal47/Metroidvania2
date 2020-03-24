@@ -3,7 +3,6 @@
 [ext_resource path="res://3D models/newarraymesh.tres" type="ArrayMesh" id=1]
 [ext_resource path="res://3D models/bolt.tres" type="Material" id=2]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "rotating"
 length = 3.0

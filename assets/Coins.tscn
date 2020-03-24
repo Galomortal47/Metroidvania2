@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Coins.gd" type="Script" id=1]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=2]
 [ext_resource path="res://enemy/enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sprites/light.png" type="Texture" id=4]
+[ext_resource path="res://3D models/bolt.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "bolts"
@@ -45,6 +46,9 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="ViewportTexture" id=3]
+viewport_path = NodePath("Viewport")
+
 [sub_resource type="CanvasItemMaterial" id=2]
 blend_mode = 1
 
@@ -56,6 +60,7 @@ position = Vector2( 0, -32.1952 )
 points = PoolVector2Array( 150, 60, 40, 60 )
 width = 20.0
 default_color = Color( 0, 0, 0, 0.25098 )
+texture_mode = 0
 begin_cap_mode = 2
 end_cap_mode = 2
 
@@ -100,11 +105,26 @@ text = "+3"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/bolts = SubResource( 1 )
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 41.6456, 28.8797 )
+texture = SubResource( 3 )
+region_rect = Rect2( -150, -150, 0, 0 )
+
 [node name="light" type="Sprite" parent="."]
 modulate = Color( 1, 0.74902, 0, 0.392157 )
 material = SubResource( 2 )
-position = Vector2( 39.547, 28.7456 )
+position = Vector2( 41.6456, 28.8797 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 150, 150 )
+own_world = true
+transparent_bg = true
+handle_input_locally = false
+render_target_v_flip = true
+
+[node name="Scene Root" parent="Viewport" instance=ExtResource( 5 )]
+transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

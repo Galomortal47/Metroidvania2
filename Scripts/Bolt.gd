@@ -18,13 +18,13 @@ func _ready():
 	var random = rand_range(0,1)
 	if save.data.graphics == "fancy":
 		if random > 0.5:
-			var three_d_model = load("res://enemy/enemy.tscn")
+			var three_d_model = load("res://3D models/bolt.tscn")
 			var model = three_d_model.instance()
-			self.add_child(model)
+			get_node("Viewport").add_child(model)
 		else:
-			var three_d_model2 = load("res://enemy/enemy2.tscn")
+			var three_d_model2 = load("res://3D models/bolt2.tscn")
 			var model = three_d_model2.instance()
-			self.add_child(model)
+			get_node("Viewport").add_child(model)
 	else:
 		var sprite = Sprite.new()
 		sprite.texture = load("res://sprites/boltsprite.png")

@@ -13,8 +13,8 @@ var air_speed = 8
 var roll = 2750
 var roll_drag = 1
 var roll_height = 0
-var roll_timer = 1.0
-var roll_boost = 0.15
+var roll_timer = 1.5
+var roll_boost = 0.1
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
 var state = "walk"
@@ -115,18 +115,28 @@ func roll():
 	if Input.is_action_just_pressed("ui_roll") and not ledge_detect() and roll_able:
 		if Input.is_action_pressed("ui_right") and roll_able:
 			motion.x = roll
-			motion.y -= roll_height
 			roll_able = false
 			collision(false)
 			timer_boost.start()
 			timer.start() #to start
 		elif Input.is_action_pressed("ui_left") and roll_able:
 			motion.x = -roll
-			motion.y -= roll_height
 			roll_able = false
 			collision(false)
 			timer_boost.start()
 			timer.start() #to start
+#		elif Input.is_action_pressed("ui_up") and roll_able:
+#			motion.y = -roll
+#			roll_able = false
+#			collision(false)
+#			timer_boost.start()
+#			timer.start() #to start
+#		elif Input.is_action_pressed("ui_down") and roll_able:
+#			motion.y = roll
+#			roll_able = false
+#			collision(false)
+#			timer_boost.start()
+#			timer.start() #to start
 	if Input.is_action_pressed("ui_roll") and roll_able:
 		$CollisionShape2D/Colision.set_current_animation("roll")
 	else:
@@ -219,5 +229,6 @@ func collision(activate):
 
 func _on_timer_boost_timeout():
 	motion.x *= 0.2
+	motion.y *= 0.2
 	collision(true)
 	timer_boost.wait_time = roll_boost

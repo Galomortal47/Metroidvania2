@@ -966,6 +966,7 @@ position = Vector2( 5.23666, -26.3542 )
 texture = ExtResource( 18 )
 
 [node name="Anim" type="Node2D" parent="."]
+editor/display_folded = true
 z_index = 999
 script = ExtResource( 19 )
 
