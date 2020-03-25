@@ -1,8 +1,9 @@
 extends Node2D
 
-var speed = 50
+var speed = 40
 var rage = 1000
-var rage2 = 50
+var rage2 = 100
+var rage3 = 100
 var hook = false
 var area = Vector2(0,0)
 var have = true
@@ -14,6 +15,7 @@ var damage
 var current = 0
 var close = 0
 var hook_path 
+var pres_again = true
 
 func _ready():
 	hook_path = get_node("/root/Test/Hooks")
@@ -24,13 +26,18 @@ func _ready():
 
 func _physics_process(delta):
 	if have and enable and hook_path.get_child_count() > 0:
-		close = get_closest()
-		if Input.is_action_pressed("ui_cancel"):
-			if get_distance(close) < rage:
+		if Input.is_action_just_pressed("ui_cancel"):
+			pres_again = true
+			close = get_closest()
+		if Input.is_action_pressed("ui_cancel") and not close == -1 and pres_again:
+			if get_distance(close) < rage and get_distance(close) > rage3:
+				speed = get_distance(close) * 5
 				var rot = get_angle_to(hook_path.get_child(close).get_global_position())
 				var dir = Vector2(cos(rot), sin(rot))
-				get_parent().get_parent().motion += dir * speed
+				get_parent().get_parent().motion = dir * speed
 				$Line2D.set_points([get_position(),hook_path.get_child(close).get_global_position()-get_global_position()])
+			elif get_distance(close) < rage3:
+				pres_again = false
 			else:
 				$Line2D.set_points([Vector2(0,0),Vector2(0,0)])
 		else:
@@ -53,10 +60,10 @@ func get_closest():
 	for i in range(0,hook_path.get_child_count()):
 		dist[i] = get_distance(i)
 		smallest[i] = dist[i]
-#		if smallest[i] < rage2:
-#			smallest[i] *= 1000 
-#		if get_dir(i):
-#			smallest[i] *= 1000 
+		if smallest[i] < rage2:
+			smallest[i] *= 1000 
+		if get_dir(i):
+			smallest[i] *= 1000 
 	smallest.sort()
 	return dist.find(smallest[0])
 

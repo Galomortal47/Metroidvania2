@@ -31,10 +31,11 @@ func _physics_process(delta):
 func attack():
 	if $bullet.is_colliding():
 		if $bullet.get_collider().is_in_group(target) or $bullet.get_collider().is_in_group("destroy"):
-			if not $bullet.get_collider().get_node("Health").invicible:
-					$bullet.get_collider().get_node("Health").damage(damage)
-			else:
-				$bullet.get_collider().get_node("Health").damage(0)
+			if $bullet.get_collider().has_node("Health"):
+				if not $bullet.get_collider().get_node("Health").invicible:
+						$bullet.get_collider().get_node("Health").damage(damage)
+				else:
+					$bullet.get_collider().get_node("Health").damage(0)
 			if explosion:
 				explosive.explosion(get_global_position(),get_tree().get_root(),"enemy","player", damage,explosion_color)
 			if not pierce:

@@ -1,7 +1,5 @@
-extends Line2D
+extends Node2D
 
-func _process(delta):
-	if get_parent().roll_able:
-		show()
-	else:
-		hide()
+func _physics_process(delta):
+	get_node("circle").point_render = 17 - int(get_parent().timer.get_time_left() * 17) 
+	

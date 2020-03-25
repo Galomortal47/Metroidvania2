@@ -26,7 +26,7 @@ func _process(delta):
 		health = health_max
 	$Label.set_text(str(int(health)) + "/" + str(health_max))
 #	$Line2D4.set_scale(Vector2(float(health)/float(health_max),1))
-	$Line2D4.set_points([Vector2(20,-35), Vector2((85*float(health)/float(health_max))+20,-35)])
+	$Line2D4.set_points([Vector2(20,-35), Vector2((85*(float(health)/float(health_max)))+20,-35)])
 
 func damage(var damage):
 	if invicible == false:

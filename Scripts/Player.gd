@@ -14,7 +14,7 @@ var roll = 2750
 var roll_drag = 1
 var roll_height = 0
 var roll_timer = 1.5
-var roll_boost = 0.1
+var roll_boost = 0.15
 var knockback = Vector2(0,0)
 var max_speed_crouch = 200
 var state = "walk"
@@ -35,6 +35,8 @@ func _ready():
 	state = $Save.data.state
 	timer.connect("timeout",self,"_on_timer_timeout") 
 	timer.wait_time = roll_timer
+	timer.set_one_shot(true)
+	timer_boost.name = 'timer'
 	add_child(timer)
 	timer_boost.connect("timeout",self,"_on_timer_boost_timeout") 
 	timer_boost.wait_time = roll_boost

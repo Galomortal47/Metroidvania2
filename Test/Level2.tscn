@@ -244,7 +244,6 @@ expand = true
 stretch_mode = 2
 
 [node name="hp buy" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 9396.43, 714.863 )
 texture = ExtResource( 14 )
 script = ExtResource( 15 )
@@ -253,6 +252,7 @@ script = ExtResource( 15 )
 position = Vector2( -64.0254, 61.6418 )
 enabled = true
 cast_to = Vector2( 150, 0 )
+collision_mask = 524289
 
 [node name="Label" type="Label" parent="hp buy"]
 margin_left = -48.917

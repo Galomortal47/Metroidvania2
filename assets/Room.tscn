@@ -16891,7 +16891,7 @@ position = Vector2( 975.239, 269.811 )
 shape = SubResource( 2 )
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
-position = Vector2( 222.771, 509.783 )
+position = Vector2( 228.034, 392.942 )
 collision_mask = 524289
 level = "res://Test/Level3.tscn"
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://temp/Stuff.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Hook1.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://assets/plant.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/Mont.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Test/test2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/GadegePickUp.tscn" type="PackedScene" id=23]
 
 [node name="Test" type="Node2D"]
 position = Vector2( -0.429321, 1.7171 )
@@ -175,7 +176,7 @@ position = Vector2( 10500.7, 179.605 )
 position = Vector2( 11489.5, 187.206 )
 
 [node name="Door" parent="." instance=ExtResource( 11 )]
-position = Vector2( 7938.42, 2744.23 )
+position = Vector2( 19209.5, 685.316 )
 cast_to = Vector2( 0, 80 )
 collision_mask = 524289
 level = "res://assets/Room.tscn"
@@ -260,10 +261,18 @@ position = Vector2( 15163.8, 720.514 )
 position = Vector2( 18471, 708.15 )
 
 [node name="pos" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 222.771, 509 )
 
 [node name="Mont" parent="pos" instance=ExtResource( 21 )]
 position = Vector2( 18748.3, 202.337 )
 
 [node name="Test" parent="." instance=ExtResource( 22 )]
+
+[node name="Node2D3" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Gadeget Pick Up" parent="Node2D3" instance=ExtResource( 23 )]
+position = Vector2( 18646.6, 676.159 )
+gun_id = 1
 
