@@ -60,7 +60,7 @@ void fragment(){
 	near_top = (1.0 - near_top);
 	
 	float y2 = UV.y + (0.0);
-	float near_top2 = (y) + (0.5);
+	float near_top2 = (y2) + (0.5);
 	near_top2 = clamp(near_top2, 0.5, 1.0);
 	near_top2 = 1.0 - near_top2;
 	
