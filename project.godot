@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "boltspawner",
+"language": "GDScript",
+"path": "res://Scripts/boltspawner.gd"
+} ]
 _global_script_class_icons={
-
+"boltspawner": ""
 }
 
 [application]
@@ -23,6 +28,7 @@ config/icon="res://icon.png"
 [autoload]
 
 singleton_player="*res://Scripts/singletonplayer.gd"
+singleton_models="*res://Scripts/singleton_models.gd"
 
 [debug]
 

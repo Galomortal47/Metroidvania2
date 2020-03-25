@@ -879,4 +879,28 @@ tracks/72/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
+tracks/73/type = "value"
+tracks/73/path = NodePath("Animation/Hips/Belt/body/Neck/Head/Ear Back:position")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -5.26059, -14.3522 ) ]
+}
+tracks/74/type = "value"
+tracks/74/path = NodePath("Animation/Hips/Belt/body/Neck/Head/Ear Font:position")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 7.08408, -12.7372 ) ]
+}
 

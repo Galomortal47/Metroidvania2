@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends boltspawner
 
 var angle = 0.0
 var motion = Vector2(0,0)
@@ -11,7 +11,6 @@ export var drag = 0.9
 export var damage = 5
 export var health = 20
 var stun = false
-var boltspawner = preload("boltspawner.gd").new()
 var attack = Vector2(60,0)
 export var stun2 = 500
 export var timer = 3
@@ -116,8 +115,8 @@ func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
 # verifica a vida do inimigo e o destruir caso ela seja igual ou menor que 0
 func die():
 	if int(get_node("Health").health) <= 0:
-		boltspawner.bolt_spawn(bolts_spwned_upon_death,get_tree().get_root(),get_position())
-		boltspawner.particle_spawn(get_tree().get_root(),get_position())
+		bolt_spawn(bolts_spwned_upon_death,get_tree().get_root(),get_position())
+		particle_spawn(get_tree().get_root(),get_position())
 		queue_free()
 		
 

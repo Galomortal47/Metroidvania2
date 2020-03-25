@@ -18,7 +18,7 @@ z_index = 2
 collision_layer = 5
 collision_mask = 5
 script = ExtResource( 1 )
-bolt_number = 5
+bolt_number = 25
 damage = 0
 
 [node name="box" type="Sprite" parent="."]

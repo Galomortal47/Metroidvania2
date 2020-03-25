@@ -24,7 +24,7 @@ damage = 1
 health = 3
 stun2 = 75
 type = "shooter"
-bolts_spwned_upon_death = 12
+bolts_spwned_upon_death = 25
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

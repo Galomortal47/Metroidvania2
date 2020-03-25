@@ -1,19 +1,27 @@
-extends Node2D
+extends KinematicBody2D
+class_name boltspawner
 
 var ammo_path = load("res://assets/PickUp.tscn")
 var health_path = load("res://assets/healthpickup.tscn")
 var bolt_path = load("res://assets/Bolts.tscn")
 var particle_path = load("res://assets/CPUParticles2D.tscn")
-var bolt_number = 7
+var bolt_number2 = 7
 var ramdom_pos = 30
+var node2
+var pos2
+var thread = Thread.new()
 
 func bolt_spawn(var bolt_number, var node, var pos,var bolt_value = 3):
-	for i in range(0,bolt_number):
+	node2 = node
+	pos2 = pos
+	bolt_number2 = bolt_number
+	_method_run_by_thread()
+
+func _method_run_by_thread():
+	for i in range(0,bolt_number2):
 			var bolt_instance = bolt_path.instance()
-#			bolt_instance.collect = true
-#			bolt_instance.value = bolt_value 
-			bolt_instance.set_position(pos+ Vector2(rand_range(-ramdom_pos,ramdom_pos),rand_range(-ramdom_pos,ramdom_pos)))
-			node.get_child(0).add_child(bolt_instance)
+			bolt_instance.set_position(pos2+ Vector2(rand_range(-ramdom_pos,ramdom_pos),rand_range(-ramdom_pos,ramdom_pos)))
+			node2.get_child(0).add_child(bolt_instance)
 
 func particle_spawn(var node, var pos):
 	var particle =  particle_path

@@ -17149,7 +17149,6 @@ position = Vector2( -7030.19, -1084.39 )
 position = Vector2( -10440.8, 758.978 )
 
 [node name="Boxes" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -2.58472, -64.618 )
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
@@ -17484,7 +17483,7 @@ position = Vector2( 59.6563, 824.728 )
 z_index = 0
 
 [node name="Box4" parent="Boxes" instance=ExtResource( 13 )]
-position = Vector2( 1159.21, 433.911 )
+position = Vector2( 1153.79, 433.911 )
 
 [node name="Box" parent="Boxes" instance=ExtResource( 14 )]
 position = Vector2( 184.282, 553.485 )

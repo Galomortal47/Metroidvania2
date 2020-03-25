@@ -9,26 +9,22 @@ var collect = false
 var ramdom_pos = 120
 var life_time = 1
 var falloff = 0.95
-var value = 20
+var value = 1
 var save = preload("res://Scripts/Save.gd").new()
 
 func _ready():
 	save.loader()
 	randomize()
 	var random = rand_range(0,1)
+	var sprite = Sprite.new()
 	if save.data.graphics == "fancy":
 		if random > 0.5:
-			var three_d_model = load("res://3D models/bolt.tscn")
-			var model = three_d_model.instance()
-			get_node("Viewport").add_child(model)
+			sprite.texture = get_node("/root/singleton_models/Viewport").get_texture()
 		else:
-			var three_d_model2 = load("res://3D models/bolt2.tscn")
-			var model = three_d_model2.instance()
-			get_node("Viewport").add_child(model)
+			sprite.texture = get_node("/root/singleton_models/Viewport2").get_texture()
 	else:
-		var sprite = Sprite.new()
 		sprite.texture = load("res://sprites/boltsprite.png")
-		add_child(sprite)
+	add_child(sprite)
 
 var player = "/root/Test/Player"
 
