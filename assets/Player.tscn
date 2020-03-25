@@ -565,7 +565,7 @@ script = ExtResource( 2 )
 [node name="circle" type="Line2D" parent="Dash"]
 width = 4.0
 default_color = Color( 0, 1, 0.0862745, 1 )
-texture_mode = 1065353216
+texture_mode = 524289648
 script = ExtResource( 3 )
 
 [node name="Groud_Middle" type="RayCast2D" parent="."]
@@ -621,6 +621,7 @@ anims/roll = SubResource( 4 )
 anims/swin = SubResource( 5 )
 
 [node name="Weapons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 z_index = 4096
 

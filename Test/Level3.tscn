@@ -11,11 +11,11 @@
 [ext_resource path="res://sprites/sing.png" type="Texture" id=9]
 [ext_resource path="res://assets/Butterfly.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Door.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Boxammo.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/Levelload.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/MusicPlayer.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/CamShake.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/Levelload.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/MusicPlayer.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/PickUp.tscn" type="PackedScene" id=16]
 [ext_resource path="res://sprites/house.png" type="Texture" id=17]
 [ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=18]
 [ext_resource path="res://font/8bit.tres" type="DynamicFont" id=19]
@@ -73,13 +73,13 @@ editor/display_folded = true
 position = Vector2( 6847.79, -403.441 )
 
 [node name="Jumpers" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
 [node name="Jumper" parent="Jumpers" instance=ExtResource( 4 )]
 position = Vector2( 9776.81, 775.472 )
 
 [node name="Art" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 7335.83, 51.7321 )
 z_index = -1000
 
@@ -142,9 +142,9 @@ expand = true
 stretch_mode = 2
 
 [node name="vines3" type="TextureRect" parent="Art/Vines"]
-margin_left = 11189.0
+margin_left = 11188.0
 margin_top = -1237.0
-margin_right = 11445.0
+margin_right = 11444.0
 margin_bottom = 810.0
 texture = ExtResource( 8 )
 expand = true
@@ -182,20 +182,18 @@ collision_mask = 524289
 level = "res://assets/Room.tscn"
 pos = Vector2( 225, 460 )
 
-[node name="Box" parent="." instance=ExtResource( 12 )]
-position = Vector2( 18520.8, 670.376 )
-
-[node name="Player" parent="." instance=ExtResource( 13 )]
+[node name="Player" parent="." instance=ExtResource( 12 )]
+editor/display_folded = true
 position = Vector2( 19211.8, 685.573 )
 
-[node name="CamShake" parent="Player" instance=ExtResource( 14 )]
+[node name="CamShake" parent="Player" instance=ExtResource( 13 )]
 position = Vector2( 0, 0 )
 
-[node name="Level_load2" parent="." instance=ExtResource( 15 )]
+[node name="Level_load2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 14274.6, 322.529 )
 level_load = "res://Test/Level2.tscn"
 
-[node name="Level_load3" parent="." instance=ExtResource( 15 )]
+[node name="Level_load3" parent="." instance=ExtResource( 14 )]
 position = Vector2( 23500, -330.58 )
 level_load = "res://Test/Level4.tscn"
 
@@ -203,7 +201,10 @@ level_load = "res://Test/Level4.tscn"
 editor/display_folded = true
 position = Vector2( 7335.83, 0 )
 
-[node name="Music Player" parent="." instance=ExtResource( 16 )]
+[node name="Music Player" parent="." instance=ExtResource( 15 )]
+
+[node name="Pick Up" parent="." instance=ExtResource( 16 )]
+position = Vector2( 18492.4, 746.734 )
 
 [node name="house" type="Sprite" parent="."]
 position = Vector2( 19323.9, 594.505 )
@@ -247,9 +248,9 @@ S and D: Choose Item
 "
 
 [node name="bolts" type="Node2D" parent="."]
+position = Vector2( 5.70117, -4.75 )
 
 [node name="Node2D2" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="plant" parent="Node2D2" instance=ExtResource( 20 )]
 position = Vector2( 20886.8, 36.6149 )
@@ -258,7 +259,7 @@ position = Vector2( 20886.8, 36.6149 )
 position = Vector2( 15163.8, 720.514 )
 
 [node name="plant2" parent="Node2D2" instance=ExtResource( 20 )]
-position = Vector2( 18471, 708.15 )
+position = Vector2( 18393, 726.15 )
 
 [node name="pos" type="Node2D" parent="."]
 editor/display_folded = true

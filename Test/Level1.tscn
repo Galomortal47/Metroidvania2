@@ -17024,10 +17024,10 @@ position = Vector2( -1473.07, 637.329 )
 position = Vector2( 0, 0 )
 
 [node name="Pick Up2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -346.707, 519.061 )
+position = Vector2( -36.47, 514.889 )
 
 [node name="Ammo Pick Up" parent="." instance=ExtResource( 4 )]
-position = Vector2( -245.126, 520.219 )
+position = Vector2( 27.9698, 521.463 )
 
 [node name="Bolts2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 86.887, 555.155 )
@@ -17199,6 +17199,55 @@ position = Vector2( 1288.2, 541.343 )
 position = Vector2( 1288.2, 493.369 )
 
 [node name="Box14" parent="Boxes/Boxes" instance=ExtResource( 11 )]
+position = Vector2( 1288.2, 437.656 )
+
+[node name="Boxes6" type="Node2D" parent="Boxes"]
+editor/display_folded = true
+position = Vector2( -12546.7, 403.109 )
+
+[node name="Box2" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1073.09, 541.343 )
+
+[node name="Box9" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1073.09, 493.369 )
+
+[node name="Box16" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1073.09, 437.656 )
+
+[node name="Box3" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1121.83, 541.343 )
+
+[node name="Box10" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1121.83, 493.369 )
+
+[node name="Box15" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1121.83, 437.656 )
+
+[node name="Box4" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1172.9, 541.343 )
+
+[node name="Box7" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1172.9, 493.369 )
+
+[node name="Box13" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1172.9, 437.656 )
+
+[node name="Box5" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1229.39, 541.343 )
+
+[node name="Box8" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1229.39, 493.369 )
+
+[node name="Box12" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1229.39, 437.656 )
+
+[node name="Box6" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1288.2, 541.343 )
+
+[node name="Box11" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
+position = Vector2( 1288.2, 493.369 )
+
+[node name="Box14" parent="Boxes/Boxes6" instance=ExtResource( 11 )]
 position = Vector2( 1288.2, 437.656 )
 
 [node name="Boxes5" type="Node2D" parent="Boxes"]
@@ -17450,6 +17499,12 @@ position = Vector2( 1984.46, 502.468 )
 
 [node name="Box12" parent="Boxes" instance=ExtResource( 16 )]
 position = Vector2( -10085.2, -807.188 )
+
+[node name="Box14" parent="Boxes" instance=ExtResource( 16 )]
+position = Vector2( -11567.9, 941.088 )
+
+[node name="Box15" parent="Boxes" instance=ExtResource( 16 )]
+position = Vector2( -11700.7, 937.192 )
 
 [node name="Box13" parent="Boxes" instance=ExtResource( 16 )]
 position = Vector2( -7212.66, -847.022 )
@@ -17781,6 +17836,7 @@ expand = true
 stretch_mode = 2
 
 [node name="plant" parent="Art" instance=ExtResource( 24 )]
+position = Vector2( -168.842, 552.634 )
 
 [node name="plant2" type="Sprite" parent="Art"]
 position = Vector2( -1206.78, 814.387 )
@@ -17997,13 +18053,15 @@ position = Vector2( -11326.6, 1691.59 )
 rotation = 1.5708
 level_load = "res://Test/Level5.tscn"
 
-[node name="Music Player" parent="." instance=ExtResource( 30 )]
-
 [node name="bolts" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Music Player" parent="bolts" instance=ExtResource( 30 )]
 
 [node name="Day Night cycle" parent="." instance=ExtResource( 31 )]
 
 [node name="rocket" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -11685.5, -43.9109 )
 script = ExtResource( 32 )
 

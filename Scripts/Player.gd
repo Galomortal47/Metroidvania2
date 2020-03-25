@@ -45,7 +45,8 @@ func _ready():
 	add_child(timer_boost)
 
 func jetpack_checker():
-	jetpack = get_node("Anim/Viewport/Scale/Animation/Hips/Scientist anim").visible
+	jetpack = false
+#	jetpack = get_node("Anim/Viewport/Scale/Animation/Hips/Scientist anim").visible
 
 func _physics_process(delta):
 	jetpack_checker()
@@ -127,12 +128,12 @@ func roll():
 			collision(false)
 			timer_boost.start()
 			timer.start() #to start
-#		elif Input.is_action_pressed("ui_up") and roll_able:
-#			motion.y = -roll
-#			roll_able = false
-#			collision(false)
-#			timer_boost.start()
-#			timer.start() #to start
+		elif Input.is_action_pressed("ui_up") and roll_able:
+			motion.y = -roll
+			roll_able = false
+			collision(false)
+			timer_boost.start()
+			timer.start() #to start
 #		elif Input.is_action_pressed("ui_down") and roll_able:
 #			motion.y = roll
 #			roll_able = false
