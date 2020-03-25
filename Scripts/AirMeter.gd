@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node2D
 
 var air = 0.0
 var mod = 0.1
