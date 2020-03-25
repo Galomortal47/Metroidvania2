@@ -54,12 +54,12 @@ void fragment(){
 	color = mix(color, blue_tint, 0.3);
 	color.rgb = mix(vec3(0.5), color.rgb, 1.4);
 	
-	float y = UV.y + (distort_sum.y * 10.0);
-	float near_top = (y) + (0.66);
+	float y = UV.y + (distort_sum.y*5.0);
+	float near_top = (y) + (0.7);
 	near_top = clamp(near_top, 0.0, 1.0);
 	near_top = (1.0 - near_top);
 	
-	float y2 = UV.y + (0.0);
+	float y2 = UV.y;
 	float near_top2 = (y2) + (0.5);
 	near_top2 = clamp(near_top2, 0.5, 1.0);
 	near_top2 = 1.0 - near_top2;
