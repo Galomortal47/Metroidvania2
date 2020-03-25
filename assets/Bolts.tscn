@@ -13,10 +13,10 @@ script = ExtResource( 1 )
 enabled = true
 cast_to = Vector2( 0, 10 )
 
-[node name="light" type="Sprite" parent="."]
-modulate = Color( 1, 0.890196, 0, 0.0588235 )
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.937255, 0.635294, 0, 0.192157 )
 material = SubResource( 1 )
 scale = Vector2( 0.5, 0.5 )
-z_index = 400
+z_index = 10
 texture = ExtResource( 2 )
 

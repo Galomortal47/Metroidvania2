@@ -28,6 +28,7 @@ func release(var motion):
 	var child = get_child(1)
 	var pos = child.get_global_position()
 	remove_child(child)
+	child.grav = 10
 	get_tree().get_root().add_child(child)
 	child.set_global_position(pos)
 	child.motion += Vector2(motion.x * -get_parent().get_node("Anim/Viewport/Scale").get_scale().x,-motion.y)
@@ -37,6 +38,7 @@ func grab():
 	var boxs = get_collider()
 	boxs.get_parent().remove_child(boxs)
 	var pos = boxs.get_global_position()
+	boxs.grav = 0
 	add_child(boxs)
-	boxs.set_position(Vector2(0,0))
+	boxs.set_position(Vector2(0,-35))
 	get_parent().state = "carring"

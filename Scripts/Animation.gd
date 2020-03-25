@@ -17,6 +17,8 @@ func _ready():
 
 func animations():
 #	print(animator.get_current_animation())
+	if player.get_node("Grab").carring:
+		get_parent().get_node("Carrying").set_current_animation("carry")
 	match player.state:
 		"walk":
 			$Chocobo.hide()
@@ -71,7 +73,7 @@ func animations():
 			get_parent().get_node("Death").set_current_animation("Die")
 			get_node('/root').add_child(gameoverscene)
 		"carring":
-			animator.set_current_animation("Walk_carry")
+			get_parent().get_node("Carrying").set_current_animation("carry")
 	if int(player.motion.x) > 0:
 		get_parent().set_scale(Vector2(-1,get_parent().get_scale().y))
 		particles_func()

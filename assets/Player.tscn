@@ -650,7 +650,6 @@ anims/roll = SubResource( 4 )
 anims/swin = SubResource( 5 )
 
 [node name="Weapons" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -0.66433, -19.7639 )
 z_index = 4096
 
@@ -668,11 +667,13 @@ texture_mode = 524289536
 [node name="Bomb" type="Node2D" parent="Weapons"]
 script = ExtResource( 8 )
 weapon = "res://assets/Bullet.tscn"
+speed = 800
 timer = 0.5
-gravity = 75
+gravity = 25
 damage = 0.01
-curve = -1000
+curve = -300
 lifespan = 5.0
+infinite = true
 particle_size = 45
 explosion = true
 ammo = 10
@@ -989,7 +990,6 @@ position = Vector2( 5.23666, -26.3542 )
 texture = ExtResource( 20 )
 
 [node name="Anim" type="Node2D" parent="."]
-editor/display_folded = true
 z_index = 999
 script = ExtResource( 21 )
 
@@ -1061,7 +1061,7 @@ script = ExtResource( 32 )
 
 [node name="Grab" type="RayCast2D" parent="."]
 editor/display_folded = true
-position = Vector2( 0, -50 )
+position = Vector2( 0, -30 )
 enabled = true
 cast_to = Vector2( 0, 100 )
 script = ExtResource( 34 )
