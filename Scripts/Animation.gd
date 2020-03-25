@@ -25,7 +25,7 @@ func animations():
 			get_parent().get_node("Chocobo").stop()
 			shoot_dir(true)
 			if roll_detect():
-				if player.motion.y >= 0:
+				if not Input.is_action_pressed("ui_up"):
 					animator.set_current_animation("roll")
 				else:
 					animator.set_current_animation("roll_up")
@@ -97,7 +97,7 @@ func shoot_dir(var hide):
 				get_parent().get_node("Shooting").play("shoot")
 			elif Input.is_action_pressed("ui_up") and not player.ledge_detect() and not roll_detect():
 				get_parent().get_node("Shooting").play("shoot up")
-			elif Input.is_action_pressed("ui_down") and not player.ledge_detect():
+			elif Input.is_action_pressed("ui_down") and not player.ledge_detect() and not roll_detect():
 				get_parent().get_node("Shooting").play("shoot down")
 			elif hide:
 				get_parent().get_node("Shooting").play("hide")

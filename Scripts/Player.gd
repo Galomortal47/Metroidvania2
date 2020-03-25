@@ -116,7 +116,21 @@ func die():
 
 func roll():
 	if Input.is_action_just_pressed("ui_roll") and not ledge_detect() and roll_able:
-		if Input.is_action_pressed("ui_right") and roll_able:
+		if Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_up") and roll_able:
+			motion.y = -roll * 0.7
+			motion.x = roll * 0.7
+			roll_able = false
+			collision(false)
+			timer_boost.start()
+			timer.start() #to start
+		if Input.is_action_pressed("ui_left") and Input.is_action_pressed("ui_up") and roll_able:
+			motion.y = -roll * 0.7
+			motion.x = -roll * 0.7
+			roll_able = false
+			collision(false)
+			timer_boost.start()
+			timer.start() #to start
+		elif Input.is_action_pressed("ui_right") and roll_able:
 			motion.x = roll
 			roll_able = false
 			collision(false)
@@ -134,12 +148,6 @@ func roll():
 			collision(false)
 			timer_boost.start()
 			timer.start() #to start
-#		elif Input.is_action_pressed("ui_down") and roll_able:
-#			motion.y = roll
-#			roll_able = false
-#			collision(false)
-#			timer_boost.start()
-#			timer.start() #to start
 	if Input.is_action_pressed("ui_roll") and roll_able:
 		$CollisionShape2D/Colision.set_current_animation("roll")
 	else:

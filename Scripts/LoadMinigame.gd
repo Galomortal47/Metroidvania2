@@ -11,7 +11,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("ui_cancel") and not $Minigame.get_current_animation() == "Failure":
 		if minigame:
 			get_parent().get_node("Weapons/Label").reload()
 			$Minigame.set_current_animation("Succes")

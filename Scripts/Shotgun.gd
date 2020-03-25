@@ -46,36 +46,37 @@ func shoot():
 		dir = 3
 	elif Input.is_action_just_pressed("ui_down"):
 		dir = 4
-	if Input.is_action_pressed("ui_cancel") and timer_aux < 0 and mag_aux > 0 and not get_parent().get_parent().ledge_detect():
-		timer_aux = timer
-		if not infinite:
-			mag_aux-= shot
-		update_text()
-		for i in range(0,bullet_n):
-			get_parent().get_parent().get_node("CamShake").shaker(screen_shake,time)
-			var bullet =  load(weapon)
-			var bullet_instance = bullet.instance()
-			bullet_instance.set_position(get_global_position())
-			bullet_instance.speed = speed
-			bullet_instance.gravity = gravity
-			bullet_instance.damage = damage
-			bullet_instance.curve = curve
-			bullet_instance.lifespan = lifespan
-			bullet_instance.pierce = pierce
-			bullet_instance.particle_size = particle_size
-			bullet_instance.explosion = explosion
-			bullet_instance.explosion_color = explosion_color
-			match (dir):
-				1:
-					bullet_instance.set_rotation_degrees(-180 +rand_range(-spreed,spreed))
-				2:
-					bullet_instance.set_rotation_degrees(0 +rand_range(-spreed,spreed))
-				3:
-					bullet_instance.set_rotation_degrees(-90 +rand_range(-spreed,spreed))
-				4:
-					bullet_instance.set_rotation_degrees(90 +rand_range(-spreed,spreed))
-			get_tree().get_root().add_child(bullet_instance)
-	elif mag_aux < 1 and ammo > 0:
+	if Input.is_action_pressed("ui_cancel") and timer_aux < 0 and not get_parent().get_parent().ledge_detect():
+		if mag_aux > 0:
+			timer_aux = timer
+			if true:
+				mag_aux-= shot
+			update_text()
+			for i in range(0,bullet_n):
+				get_parent().get_parent().get_node("CamShake").shaker(screen_shake,time)
+				var bullet =  load(weapon)
+				var bullet_instance = bullet.instance()
+				bullet_instance.set_position(get_global_position())
+				bullet_instance.speed = speed
+				bullet_instance.gravity = gravity
+				bullet_instance.damage = damage
+				bullet_instance.curve = curve
+				bullet_instance.lifespan = lifespan
+				bullet_instance.pierce = pierce
+				bullet_instance.particle_size = particle_size
+				bullet_instance.explosion = explosion
+				bullet_instance.explosion_color = explosion_color
+				match (dir):
+					1:
+						bullet_instance.set_rotation_degrees(-180 +rand_range(-spreed,spreed))
+					2:
+						bullet_instance.set_rotation_degrees(0 +rand_range(-spreed,spreed))
+					3:
+						bullet_instance.set_rotation_degrees(-90 +rand_range(-spreed,spreed))
+					4:
+						bullet_instance.set_rotation_degrees(90 +rand_range(-spreed,spreed))
+				get_tree().get_root().add_child(bullet_instance)
+	elif mag_aux < 1 and ammo > 0 and not get_parent().get_parent().get_node("Load_Minigame/Minigame").get_current_animation() == "Failure":
 		get_parent().get_parent().get_node("Load_Minigame/Minigame").set_current_animation("Load")
 
 func update_text():
@@ -87,4 +88,5 @@ func update_text():
 
 func reload():
 	mag_aux = mag
-	ammo -= mag
+	if not infinite:
+		ammo -= mag

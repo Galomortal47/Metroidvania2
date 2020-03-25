@@ -903,4 +903,86 @@ tracks/74/keys = {
 "update": 0,
 "values": [ Vector2( 7.08408, -12.7372 ) ]
 }
+tracks/75/type = "animation"
+tracks/75/path = NodePath("Animation/Hips/Skirt/tail3/AnimationPlayer2")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/keys = {
+"clips": PoolStringArray( "tail" ),
+"times": PoolRealArray( 0 )
+}
+tracks/76/type = "value"
+tracks/76/path = NodePath("Animation/Hips/Skirt/tail3:scale")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/77/type = "value"
+tracks/77/path = NodePath("Animation/Hips/Belt/Belt Piece:scale")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/78/type = "value"
+tracks/78/path = NodePath("Animation/Hips/Belt/Iron Circle:scale")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/79/type = "value"
+tracks/79/path = NodePath("Animation/Hips/Belt/Iron Circle:position")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.701026, 0.500091 ) ]
+}
+tracks/80/type = "value"
+tracks/80/path = NodePath("Animation/Hips/Belt/Belt Piece2:scale")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, -1 ) ]
+}
+tracks/81/type = "value"
+tracks/81/path = NodePath("Animation/Hips/Belt/Belt Piece2:position")
+tracks/81/interp = 1
+tracks/81/loop_wrap = true
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -3.53296, -1.50606 ) ]
+}
 
