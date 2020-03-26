@@ -17012,6 +17012,7 @@ tracks/3/keys = {
 }
 
 [node name="Test" type="Node2D"]
+position = Vector2( -13702.3, 250.113 )
 __meta__ = {
 "_edit_vertical_guides_": [ 5510.29 ]
 }
@@ -17113,6 +17114,7 @@ position = Vector2( 2618.45, -884.349 )
 position = Vector2( 3243.09, -1065.03 )
 
 [node name="Enemies" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( -1661.99, 678.411 )

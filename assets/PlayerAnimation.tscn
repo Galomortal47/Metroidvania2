@@ -18689,21 +18689,18 @@ position = Vector2( 4.6581, -2.06226 )
 z_index = 5
 
 [node name="Animation" type="Node2D" parent="."]
-position = Vector2( -8.63359, -6.02311 )
+position = Vector2( -8.21547, -19.8211 )
 z_index = 4
 script = ExtResource( 1 )
 
 [node name="Hips" type="Sprite" parent="Animation"]
-position = Vector2( 7.78053, -2.40153 )
-rotation = -0.27878
+position = Vector2( 9.31056, 16.3023 )
 z_index = -1
 region_enabled = true
 region_rect = Rect2( 7.625, 107.313, 21, 17.75 )
 
 [node name="Skirt" type="Sprite" parent="Animation/Hips"]
-position = Vector2( 0.269356, 1.87672 )
-rotation = 0.627317
-scale = Vector2( 1.19089, 0.86178 )
+position = Vector2( 0.487206, 1.99295 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 7.625, 107.313, 21, 17.75 )
@@ -18717,7 +18714,6 @@ polygon = PoolVector2Array( -1.73128, 13.792, 3.18185, 15.8073, 6.30007, 20.5811
 
 [node name="tail3" type="Sprite" parent="Animation/Hips/Skirt"]
 position = Vector2( 4.6581, -2.06226 )
-scale = Vector2( 1.447, 0.649 )
 z_index = -1
 texture = ExtResource( 2 )
 offset = Vector2( 2.02652, 0.731349 )
@@ -18747,14 +18743,12 @@ anims/tail = SubResource( 1 )
 
 [node name="Belt" type="Sprite" parent="Animation/Hips"]
 self_modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 1.87577, -5.86864 )
-rotation = 0.162316
+position = Vector2( -1.97421, -6.73163 )
 region_enabled = true
 region_rect = Rect2( 10.75, 95, 4.5, 6 )
 
 [node name="Iron Circle" type="Sprite" parent="Animation/Hips/Belt"]
-position = Vector2( -3.13566, 0.0121107 )
-scale = Vector2( 0.717678, 1 )
+position = Vector2( -0.701026, 0.500091 )
 z_index = 1
 texture = ExtResource( 2 )
 region_enabled = true
@@ -18762,22 +18756,20 @@ region_rect = Rect2( 11.125, 95.5, 3.875, 5.625 )
 
 [node name="Belt Piece" type="Sprite" parent="Animation/Hips/Belt"]
 position = Vector2( 2.71251, 0.198033 )
-scale = Vector2( 1.3, 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
 
 [node name="Belt Piece2" type="Sprite" parent="Animation/Hips/Belt"]
-position = Vector2( -6.35566, -0.216925 )
+position = Vector2( -3.53296, -1.50606 )
 rotation = -2.53518e-006
-scale = Vector2( -0.36, 1 )
+scale = Vector2( 0.5, -1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 15.125, 93.5, 6.625, 9.125 )
 
 [node name="body" type="Sprite" parent="Animation/Hips/Belt"]
-position = Vector2( 0.521833, -9.42323 )
-rotation = 0.102074
+position = Vector2( 1.26223, -7.86402 )
 z_index = -1
 region_enabled = true
 region_rect = Rect2( 5.5, 66, 17.5, 20.75 )
@@ -18797,9 +18789,7 @@ region_enabled = true
 region_rect = Rect2( 4.63, 66, 17.5, 20.75 )
 
 [node name="arm up" type="Sprite" parent="Animation/Hips/Belt/body"]
-position = Vector2( 0.830983, -4.48083 )
-rotation = 0.0636493
-scale = Vector2( 0.84, 1.31 )
+position = Vector2( 4.56733, -4.43989 )
 z_index = 3
 texture = ExtResource( 2 )
 offset = Vector2( 4.87874, 3.99989 )
@@ -18807,8 +18797,7 @@ region_enabled = true
 region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 
 [node name="arm down" type="Sprite" parent="Animation/Hips/Belt/body/arm up"]
-position = Vector2( 5.85211, 5.13251 )
-rotation = -0.00262533
+position = Vector2( 6.04005, 7.58219 )
 texture = ExtResource( 2 )
 offset = Vector2( 1.20303, 4.5292 )
 region_enabled = true
@@ -18823,9 +18812,8 @@ region_rect = Rect2( 112, 37.9375, 5.625, 5.875 )
 
 [node name="arm up2" type="Sprite" parent="Animation/Hips/Belt/body"]
 modulate = Color( 0.643137, 0.643137, 0.643137, 1 )
-position = Vector2( -1.05676, -4.02033 )
-rotation = 0.0145753
-scale = Vector2( -0.8, 1.34 )
+position = Vector2( -5.45658, -5.08245 )
+scale = Vector2( -1, 1 )
 z_index = -2
 texture = ExtResource( 2 )
 offset = Vector2( 2.59755, 3.87138 )
@@ -18834,7 +18822,6 @@ region_rect = Rect2( 106.25, 7.0625, 10.125, 13.25 )
 
 [node name="arm down" type="Sprite" parent="Animation/Hips/Belt/body/arm up2"]
 position = Vector2( 3.59833, 6.68261 )
-rotation = -0.484858
 z_index = -1
 texture = ExtResource( 2 )
 offset = Vector2( 1.20303, 4.78622 )
@@ -18859,21 +18846,19 @@ position = Vector2( -4.06763, 4.59555 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Neck" type="Sprite" parent="Animation/Hips/Belt/body"]
-position = Vector2( 0.517758, -5.72655 )
-rotation = 0.0351046
+position = Vector2( 1.19008, -6.09009 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 53.375, 20.25, 14, 8.125 )
 
 [node name="Bone" type="Sprite" parent="Animation/Hips/Belt/body/Neck"]
-position = Vector2( -4.1864, 1.32687 )
-scale = Vector2( 0.48, 1 )
+position = Vector2( -2.4927, 1.27788 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 54.25, 10.375, 8.625, 6.875 )
 
 [node name="Head" type="Sprite" parent="Animation/Hips/Belt/body/Neck"]
-position = Vector2( -1.35908, -12.39 )
+position = Vector2( 0, -11.2936 )
 region_enabled = true
 region_rect = Rect2( 6.375, 17.8125, 20.25, 19.875 )
 
@@ -18885,21 +18870,20 @@ region_enabled = true
 region_rect = Rect2( 6.375, 17.8125, 20.25, 19.875 )
 
 [node name="Hair Side2" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( -1.3634, 5.81631 )
+position = Vector2( -5.48219, 5.76211 )
 z_index = -1
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
 
 [node name="mouth" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( -7.50495, 7.76633 )
+position = Vector2( -4, 8.42777 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 42.375, 20.875, 3.75, 4.25 )
 
 [node name="HairBack" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( 0.335538, -1.95001 )
-scale = Vector2( 0.868, 1.2 )
+position = Vector2( 0.871239, -2.18169 )
 z_index = -1
 texture = ExtResource( 2 )
 offset = Vector2( 0, 24.98 )
@@ -18913,28 +18897,26 @@ region_enabled = true
 region_rect = Rect2( 14.75, 1.8125, 15.375, 14.75 )
 
 [node name="Ear Font" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( 0.332348, -13.0923 )
+position = Vector2( 7.08408, -12.7372 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 75.25, 19.25, 12.5, 14.5 )
 
 [node name="Ear Back" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( 0.712735, -16.0742 )
+position = Vector2( -5.26059, -14.3522 )
 z_index = -2
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 90.5, 19, 15.25, 13.75 )
 
 [node name="Hair Side" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( 1.67728, 2.63402 )
-scale = Vector2( 1.12152, 1 )
+position = Vector2( 6.98758, 5.57318 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 38.5, 38.625, 14.75, 34.25 )
 
 [node name="Eyewhite" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( -4.65149, 2.71894 )
-scale = Vector2( 0.95, 1.05 )
+position = Vector2( 0.94193, 3.12923 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 37.625, 5.9375, 11.25, 7.5 )
@@ -18952,8 +18934,8 @@ region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
 [node name="Eyewhite2" type="Sprite" parent="Animation/Hips/Belt/body/Neck/Head"]
-position = Vector2( -9.43542, 3.28242 )
-scale = Vector2( 1e-005, 1.05 )
+position = Vector2( -9.19797, 3.28111 )
+scale = Vector2( -0.66, 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 38.25, 5.9375, 13, 7.5 )
@@ -18974,18 +18956,17 @@ region_enabled = true
 region_rect = Rect2( 36.375, 1.3125, 9, 4.375 )
 
 [node name="Leg Up" type="Sprite" parent="Animation/Hips"]
-position = Vector2( -1.98468, 8.68723 )
-rotation = -3.42875
-scale = Vector2( 0.847928, -1.22589 )
+position = Vector2( 2.58815, 9.6758 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
 z_index = -1
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
 [node name="Leg Down" type="Sprite" parent="Animation/Hips/Leg Up"]
-position = Vector2( -0.577817, 5.16628 )
-rotation = -0.131079
-scale = Vector2( -1, 0.82 )
+position = Vector2( -0.729217, 5.15951 )
+scale = Vector2( -1, 1 )
 z_index = -1
 texture = ExtResource( 2 )
 offset = Vector2( 1.40492, 7.86707 )
@@ -18994,18 +18975,17 @@ region_rect = Rect2( 105.75, 103.375, 11.25, 21.625 )
 
 [node name="Leg Up2" type="Sprite" parent="Animation/Hips"]
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
-position = Vector2( -5.75841, 6.92107 )
-rotation = -2.76727
-scale = Vector2( 0.980313, -1.03084 )
+position = Vector2( -5.71371, 9.55371 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
 z_index = -3
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 103.75, 81.25, 12.125, 19.375 )
 
 [node name="Leg Down" type="Sprite" parent="Animation/Hips/Leg Up2"]
-position = Vector2( 0.443643, 4.50766 )
-rotation = 1.32025
-scale = Vector2( -1, 0.85734 )
+position = Vector2( 0.093255, 4.89606 )
+scale = Vector2( -1, 1 )
 z_index = -1
 texture = ExtResource( 2 )
 offset = Vector2( 2.22739, 8.13052 )

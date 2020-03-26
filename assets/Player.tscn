@@ -611,7 +611,6 @@ texture_mode = 524289648
 script = ExtResource( 4 )
 
 [node name="air meter" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -485.568, -405.432 )
 scale = Vector2( 0.6, 0.6 )
 z_index = 4000
