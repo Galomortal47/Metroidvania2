@@ -17113,19 +17113,24 @@ position = Vector2( 2618.45, -884.349 )
 position = Vector2( 3243.09, -1065.03 )
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( -1661.99, 678.411 )
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( -9557.78, 315.75 )
+position = Vector2( -9724.8, 344.143 )
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource( 7 )]
+position = Vector2( -8952.34, 361.991 )
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( -3123.18, 665.23 )
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( -9923.78, 328.391 )
+position = Vector2( -9834.16, 340.668 )
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -8758.85, 358.2 )
 
 [node name="Enemy9" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( -10833.1, 747.96 )
@@ -17142,6 +17147,15 @@ position = Vector2( 3078.89, 246.585 )
 [node name="Enemy6" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( -9330.88, -1046.36 )
 
+[node name="Enemy12" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( -9437.54, 198.708 )
+
+[node name="Enemy13" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( -9694.59, 217.258 )
+
+[node name="Enemy14" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( -9029.44, 238.458 )
+
 [node name="Enemy7" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( -7030.19, -1084.39 )
 
@@ -17149,6 +17163,7 @@ position = Vector2( -7030.19, -1084.39 )
 position = Vector2( -10440.8, 758.978 )
 
 [node name="Boxes" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -2.58472, -64.618 )
 
 [node name="Boxes" type="Node2D" parent="Boxes"]
@@ -17563,6 +17578,7 @@ position = Vector2( -5816.53, -755.669 )
 position = Vector2( -8867.35, -758.396 )
 
 [node name="Art" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 0, -43.1695 )
 z_index = -1000
 
