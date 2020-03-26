@@ -3,7 +3,7 @@
 [ext_resource path="res://externallibs/WaterRipple/example_3.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
-[sub_resource type="Shader" id=10]
+[sub_resource type="Shader" id=1]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -51,13 +51,13 @@ void fragment()
 	COLOR = final;
 }"
 
-[sub_resource type="ShaderMaterial" id=11]
+[sub_resource type="ShaderMaterial" id=2]
 resource_local_to_scene = true
-shader = SubResource( 10 )
+shader = SubResource( 1 )
 shader_param/initialize = 0.0
 shader_param/drop_position = Vector2( -1, -1 )
 
-[sub_resource type="StreamTexture" id=6]
+[sub_resource type="StreamTexture" id=3]
 flags = 4
 load_path = "res://.import/pixel.png-1d9d3c000c8d8ee8972ffe64a197a595.stex"
 
@@ -76,7 +76,7 @@ tracks/0/keys = {
 "values": [ 1.0, 0.0 ]
 }
 
-[sub_resource type="Shader" id=9]
+[sub_resource type="Shader" id=5]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -90,6 +90,7 @@ uniform vec4 blue_tint : hint_color;
 
 uniform vec2 sprite_scale;
 uniform vec2 player_position;
+uniform vec2 own_position;
 uniform float scale_x = 0.67;
 
 float rand(vec2 coord){
@@ -135,7 +136,7 @@ void fragment(){
 	uv.y *= -1.0;
 	uv.y -= player_position.y;
 	vec2 offsset = (vec2(0.0,0.333));
-	vec4 relection = textureLod(SCREEN_TEXTURE, uv + offsset, 0.0);
+	vec4 relection = textureLod(SCREEN_TEXTURE, uv + own_position, 0.0);
 	vec4 screen  = textureLod(SCREEN_TEXTURE, SCREEN_UV + (distort_sum * 2.0), 0.0);
 	
 	color = mix(color, blue_tint, 0.3);
@@ -167,17 +168,18 @@ void fragment(){
 //	COLOR.rg = UV;
 }"
 
-[sub_resource type="ShaderMaterial" id=12]
+[sub_resource type="ShaderMaterial" id=6]
 resource_local_to_scene = true
-shader = SubResource( 9 )
+shader = SubResource( 5 )
 shader_param/blue_tint = Color( 0, 0.505882, 0.639216, 1 )
 shader_param/sprite_scale = Vector2( 30, 1 )
 shader_param/player_position = null
+shader_param/own_position = null
 shader_param/scale_x = 0.3
 shader_param/input = null
 shader_param/image = ExtResource( 2 )
 
-[sub_resource type="ViewportTexture" id=8]
+[sub_resource type="ViewportTexture" id=7]
 viewport_path = NodePath("hv_viewport")
 
 [node name="example_2" type="Node2D"]
@@ -198,10 +200,10 @@ render_target_clear_mode = 2
 render_target_update_mode = 3
 
 [node name="height_velocity" type="TextureRect" parent="hv_viewport"]
-material = SubResource( 11 )
+material = SubResource( 2 )
 margin_right = 200.0
 margin_bottom = 200.0
-texture = SubResource( 6 )
+texture = SubResource( 3 )
 expand = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="hv_viewport/height_velocity"]
@@ -209,8 +211,8 @@ autoplay = "initialize"
 anims/initialize = SubResource( 4 )
 
 [node name="tex_with_image" type="TextureRect" parent="."]
-material = SubResource( 12 )
+material = SubResource( 6 )
 margin_right = 200.0
 margin_bottom = 200.0
-texture = SubResource( 8 )
+texture = SubResource( 7 )
 
