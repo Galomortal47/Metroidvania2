@@ -9,12 +9,8 @@ func _ready():
 	save()
 	pass # Replace with function body.
 
-#func _process(delta):
-#	var size = Vector2(32 * get_parent().get_scale().x ,32 * get_parent().get_scale().y)
-#	var pos = get_global_position() - get_parent().get_parent().get_node("Player").get_global_position()
-#	var mouse_pos = Vector2(pos .x / size.x ,pos .y / size.y)
-#	get_material().set_shader_param("input",mouse_pos)
-#	pass
+func _process(delta):
+	print(get_material().get_shader_param("distort_sum"))
 
 func save():
 	save.loader()
