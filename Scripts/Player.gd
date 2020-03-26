@@ -49,6 +49,7 @@ func jetpack_checker():
 #	jetpack = get_node("Anim/Viewport/Scale/Animation/Hips/Scientist anim").visible
 
 func _physics_process(delta):
+	get_node("/root/singleton_player").pos_glob = get_global_position()
 	jetpack_checker()
 	match state:
 		"walk":

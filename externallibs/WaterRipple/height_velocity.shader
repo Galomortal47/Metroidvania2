@@ -26,7 +26,7 @@ void fragment()
 	if ( mod( TIME, 0.2 ) < 0.1 && initialize < 0.5 )
 	{
 		vec2 drop_pos = drop_position;
-		if((length( (UV) - drop_pos)) < 0.01 )
+		if((length( (UV) - drop_pos)) < 0.05 )
 		{
 			h -= 0.5;
 		}

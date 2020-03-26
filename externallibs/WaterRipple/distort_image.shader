@@ -13,7 +13,7 @@ uniform vec2 player_position;
 uniform float scale_x = 0.67;
 
 float rand(vec2 coord){
-	return fract(sin(dot(coord, vec2(1, 1))));
+	return fract(sin(dot(coord, vec2(70.85489489, 11.8545649))));
 }
 
 float noise(vec2 coord){
@@ -43,7 +43,7 @@ void fragment(){
 	
 	vec2 noisecoord1 = UV * sprite_scale * scale_x * 1.0;
 	
-	vec2 motion1 = vec2(TIME , TIME );
+	vec2 motion1 = vec2(TIME , TIME * 2.0);
 	
 	vec2 distort1 = vec2(noise(noisecoord1 + motion1), noise(noisecoord1  + motion1));
 	
@@ -61,7 +61,7 @@ void fragment(){
 	color = mix(color, blue_tint, 0.3);
 	color.rgb = mix(vec3(0.5), color.rgb, 1.4);
 	
-	float y = UV.y + ((distort_sum.y*5.0));
+	float y = UV.y + ((distort_sum.y*2.0));
 	float near_top = (y) + (0.7);
 	near_top = clamp(near_top, 0.0, 1.0);
 	near_top = (1.0 - near_top);

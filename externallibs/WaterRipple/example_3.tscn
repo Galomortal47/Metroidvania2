@@ -2,14 +2,64 @@
 
 [ext_resource path="res://externallibs/WaterRipple/example_3.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://externallibs/WaterRipple/height_velocity.shader" type="Shader" id=3]
-[ext_resource path="res://externallibs/WaterRipple/pixel.png" type="Texture" id=4]
-[ext_resource path="res://externallibs/WaterRipple/distort_image.shader" type="Shader" id=5]
 
-[sub_resource type="ShaderMaterial" id=1]
-shader = ExtResource( 3 )
+[sub_resource type="Shader" id=10]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform float initialize = 0.0;
+uniform vec2 drop_position = vec2(0,0);
+
+void fragment()
+{
+	// GET THE HEIGHT AND VELOCITY OF THIS UV
+	float h = texture( SCREEN_TEXTURE, SCREEN_UV ).r - 0.5;
+	float v = texture( SCREEN_TEXTURE, SCREEN_UV ).g - 0.5;
+	
+	// COMPUTE NEW VELOCITY AND HEIGHT
+	vec2 ps = SCREEN_PIXEL_SIZE;
+	v -= 0.1* (h); // velocity of a point depends on the height of that point, to have a spring effect
+	// velocity of a point also depends on the height of the points around it
+	v += ( 
+			( texture( SCREEN_TEXTURE, SCREEN_UV + vec2( 0, -ps.y ) ).x - 0.5 ) +
+			( texture( SCREEN_TEXTURE, SCREEN_UV + vec2( 0,  ps.y ) ).x - 0.5 ) +
+			( texture( SCREEN_TEXTURE, SCREEN_UV + vec2( -ps.x, 0 ) ).x - 0.5 ) +
+			( texture( SCREEN_TEXTURE, SCREEN_UV + vec2(  ps.x, 0 ) ).x - 0.5 ) -
+			4.0 * h ) * 0.20;
+	v *= 0.99; // Dampen the velocity, otherwise it would oscillate forever
+	h += v; // change the height with the new velocity - NOT FRAME RATE INDEPENDENT!
+	
+	// Generate drops
+	if ( mod( TIME, 0.2 ) < 0.5 && initialize < 0.5 )
+	{
+		vec2 drop_pos = drop_position;
+		if((length( (UV) - drop_pos)) < 0.05 )
+		{
+			h -= 0.5;
+		}
+	}
+	
+	// INITIALIZATION
+	if( initialize > 0.5 )
+	{
+		h *= 0.0;
+		v *= 0.0;
+	}
+	
+	// SET FRAGMENT COLOR BASED ON HEIGHT (RED) AND VELOCITY (GREEN)
+	vec4 final = vec4( h + 0.5, v + 0.5, 0.0, 1.0 );
+	COLOR = final;
+}"
+
+[sub_resource type="ShaderMaterial" id=11]
+resource_local_to_scene = true
+shader = SubResource( 10 )
 shader_param/initialize = 0.0
 shader_param/drop_position = Vector2( -1, -1 )
+
+[sub_resource type="StreamTexture" id=6]
+flags = 4
+load_path = "res://.import/pixel.png-1d9d3c000c8d8ee8972ffe64a197a595.stex"
 
 [sub_resource type="Animation" id=4]
 resource_name = "initialize"
@@ -26,16 +76,108 @@ tracks/0/keys = {
 "values": [ 1.0, 0.0 ]
 }
 
-[sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 5 )
+[sub_resource type="Shader" id=9]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+// create uniform with the texture to be distorted (GODOT icon)
+uniform sampler2D image;
+
+// Gonkee's water shader for Godot 3 - full tutorial https://youtu.be/uhMAHpV_cDg
+// If you use this shader, I would prefer if you gave credit to me and my channel
+
+uniform vec4 blue_tint : hint_color;
+
+uniform vec2 sprite_scale;
+uniform vec2 player_position;
+uniform float scale_x = 0.67;
+
+float rand(vec2 coord){
+	return fract(sin(dot(coord, vec2(70.85489489, 11.8545649))));
+}
+
+float noise(vec2 coord){
+	vec2 i = floor(coord);
+	vec2 f = fract(coord);
+
+	// 4 corners of a rectangle surrounding our point
+	float a = rand(i);
+	float b = rand(i + vec2(1.0, 0.0));
+	float c = rand(i + vec2(0.0, 1.0));
+	float d = rand(i + vec2(1.0, 1.0));
+
+	vec2 cubic = f * f * (3.0 - 2.0 * f);
+
+	return mix(a, b, cubic.x) + (c - a) * cubic.y * (1.0 - cubic.x) + (d - b) * cubic.x * cubic.y;
+}
+
+uniform vec2 input;
+uniform sampler2D sprite;
+uniform sampler2D alpha;
+
+void fragment(){
+	
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float dx = 0.5 * ( texture( TEXTURE, UV + vec2( ps.x, 0.0 ) ).r + texture( TEXTURE, UV + vec2( -ps.x, 0.0 ) ).r - 1.0 );
+	float dy = 0.5 * ( texture( TEXTURE, UV + vec2( 0.0, ps.y ) ).r + texture( TEXTURE, UV + vec2( 0.0, -ps.y ) ).r - 1.0 );
+	
+	vec2 noisecoord1 = UV * sprite_scale * scale_x * 1.0;
+	
+	vec2 motion1 = vec2(TIME , TIME * 2.0);
+	
+	vec2 distort1 = vec2(noise(noisecoord1 + motion1), noise(noisecoord1  + motion1));
+	
+	vec2 distort_sum = ((distort1-(dy)) / 60.0);
+	
+	vec4 color;
+	
+	vec2 uv = SCREEN_UV;
+	uv.y *= -1.0;
+	uv.y -= player_position.y;
+	vec2 offsset = (vec2(0.0,0.333));
+	vec4 relection = textureLod(SCREEN_TEXTURE, uv + offsset, 0.0);
+	vec4 screen  = textureLod(SCREEN_TEXTURE, SCREEN_UV + (distort_sum * 2.0), 0.0);
+	
+	color = mix(color, blue_tint, 0.3);
+	color.rgb = mix(vec3(0.5), color.rgb, 1.4);
+	
+	float y = UV.y + ((distort_sum.y*2.0));
+	float near_top = (y) + (0.7);
+	near_top = clamp(near_top, 0.0, 1.0);
+	near_top = (1.0 - near_top);
+	
+	float y2 = UV.y;
+	float near_top2 = (y2) + (0.5);
+	near_top2 = clamp(near_top2, 0.5, 1.0);
+	near_top2 = 1.0 - near_top2;
+	
+	relection = mix(blue_tint, relection, near_top2 * 2.0);
+	
+	vec4 disto = mix(relection, screen, 0.66);
+	
+	color = disto;
+	
+	color = mix(color, vec4(1.0), near_top);
+
+	if(near_top > 0.1){
+		color.a = 0.0;
+	}
+	
+	COLOR = color;
+//	COLOR.rg = UV;
+}"
+
+[sub_resource type="ShaderMaterial" id=12]
+resource_local_to_scene = true
+shader = SubResource( 9 )
 shader_param/blue_tint = Color( 0, 0.505882, 0.639216, 1 )
-shader_param/sprite_scale = Vector2( 5, 1 )
+shader_param/sprite_scale = Vector2( 30, 1 )
 shader_param/player_position = null
-shader_param/scale_x = 1.0
+shader_param/scale_x = 0.3
 shader_param/input = null
 shader_param/image = ExtResource( 2 )
 
-[sub_resource type="ViewportTexture" id=5]
+[sub_resource type="ViewportTexture" id=8]
 viewport_path = NodePath("hv_viewport")
 
 [node name="example_2" type="Node2D"]
@@ -47,15 +189,6 @@ position = Vector2( 106.662, 143.463 )
 scale = Vector2( 3.11219, 3.09488 )
 texture = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "Here, an AnimationPlayer node 
-is used to set an initialization period."
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="hv_viewport" type="Viewport" parent="."]
 size = Vector2( 200, 200 )
 hdr = false
@@ -65,23 +198,19 @@ render_target_clear_mode = 2
 render_target_update_mode = 3
 
 [node name="height_velocity" type="TextureRect" parent="hv_viewport"]
-material = SubResource( 1 )
+material = SubResource( 11 )
 margin_right = 200.0
 margin_bottom = 200.0
-texture = ExtResource( 4 )
+texture = SubResource( 6 )
 expand = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="hv_viewport/height_velocity"]
 autoplay = "initialize"
 anims/initialize = SubResource( 4 )
 
 [node name="tex_with_image" type="TextureRect" parent="."]
-material = SubResource( 2 )
-margin_top = 38.0
+material = SubResource( 12 )
 margin_right = 200.0
-margin_bottom = 238.0
-texture = SubResource( 5 )
+margin_bottom = 200.0
+texture = SubResource( 8 )
 

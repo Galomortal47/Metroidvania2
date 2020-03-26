@@ -38,19 +38,19 @@ tile_data = PoolIntArray( 0, 524209, 0, 1, 655311, 0, 2, 458749, 0, 17, 131072, 
 [node name="water" type="Node2D" parent="."]
 z_index = 1000
 
-[node name="Water" parent="water" instance=ExtResource( 2 )]
-position = Vector2( 26103.4, 158.681 )
-scale = Vector2( 10.48, 1.72 )
+[node name="WaterTile" parent="water" instance=ExtResource( 2 )]
+position = Vector2( -2080.79, 925.469 )
+scale = Vector2( 4.5, 2 )
 
-[node name="Water2" parent="water/Water" instance=ExtResource( 2 )]
-position = Vector2( -2685.11, 438.679 )
-scale = Vector2( 0.698473, 1.27326 )
+[node name="WaterTile2" parent="water" instance=ExtResource( 2 )]
+position = Vector2( 676.026, 685.112 )
+scale = Vector2( 10, 1.7 )
 
-[node name="Water3" parent="water" instance=ExtResource( 2 )]
-position = Vector2( -8122.54, 1066.41 )
-scale = Vector2( 29.33, 2 )
+[node name="WaterTile4" parent="water" instance=ExtResource( 2 )]
+position = Vector2( 26095.2, 157.41 )
+scale = Vector2( 8, 1.7 )
 
-[node name="Water4" parent="water" instance=ExtResource( 2 )]
-position = Vector2( 700.637, 685.538 )
-scale = Vector2( 13.76, 2.14 )
+[node name="WaterTile3" parent="water" instance=ExtResource( 2 )]
+position = Vector2( -8156.71, 1089.61 )
+scale = Vector2( 20, 1.7 )
 
