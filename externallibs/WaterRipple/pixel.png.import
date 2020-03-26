@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pixel.png-8cab6e87eb832a44da40de3ab4b33493.stex"
+path="res://.import/pixel.png-1d9d3c000c8d8ee8972ffe64a197a595.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://external libs/Water_Ripple_Tutorial-master/pixel.png"
-dest_files=[ "res://.import/pixel.png-8cab6e87eb832a44da40de3ab4b33493.stex" ]
+source_file="res://externallibs/WaterRipple/pixel.png"
+dest_files=[ "res://.import/pixel.png-1d9d3c000c8d8ee8972ffe64a197a595.stex" ]
 
 [params]
 

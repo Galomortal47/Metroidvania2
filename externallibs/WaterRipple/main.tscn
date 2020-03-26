@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://example_1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://example_2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://example_3.tscn" type="PackedScene" id=3]
+
+[node name="main" type="Node2D" index="0"]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="example_1" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 61.8009, 10.5514 )
+
+[node name="example_2" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 61.8009, 251.726 )
+
+[node name="example_3" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 776.28, 352.718 )
+
+
