@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/Tiles/TileMap.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/Tiles/Watertile.tscn" type="PackedScene" id=2]
-[ext_resource path="res://sprites/light.png" type="Texture" id=3]
 
 [node name="Test" type="Node2D"]
 
@@ -41,29 +40,22 @@ tile_data = PoolIntArray( 0, 524209, 0, 1, 655311, 0, 2, 458749, 0, 17, 131072, 
 z_index = 1000
 
 [node name="WaterTile" parent="water" instance=ExtResource( 2 )]
-light_mask = 524289
+light_mask = 524288
 position = Vector2( 26083.9, 173.189 )
 scale = Vector2( 8, 2 )
 
 [node name="WaterTile2" parent="water" instance=ExtResource( 2 )]
-light_mask = 524289
+light_mask = 524288
 position = Vector2( 894, 694.276 )
 scale = Vector2( 12, 2 )
 
 [node name="WaterTile3" parent="water" instance=ExtResource( 2 )]
-light_mask = 524289
+light_mask = 524288
 position = Vector2( -2042.47, 915.696 )
 scale = Vector2( 5, 2 )
 
 [node name="WaterTile4" parent="water" instance=ExtResource( 2 )]
-light_mask = 524289
+light_mask = 524288
 position = Vector2( -8180.65, 1076.13 )
 scale = Vector2( 20, 2 )
-
-[node name="light" type="Light2D" parent="water"]
-position = Vector2( 912.252, 704.748 )
-scale = Vector2( 29.7766, 17.9879 )
-texture = ExtResource( 3 )
-mode = 3
-range_z_min = 1000
 

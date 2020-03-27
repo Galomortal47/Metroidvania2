@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://externallibs/WaterRipple/example_3.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Alpha.png" type="Texture" id=3]
 
 [sub_resource type="Shader" id=1]
 resource_local_to_scene = true
@@ -81,7 +82,6 @@ resource_local_to_scene = true
 code = "shader_type canvas_item;
 
 // create uniform with the texture to be distorted (GODOT icon)
-uniform sampler2D image;
 
 // Gonkee's water shader for Godot 3 - full tutorial https://youtu.be/uhMAHpV_cDg
 // If you use this shader, I would prefer if you gave credit to me and my channel
@@ -112,8 +112,6 @@ float noise(vec2 coord){
 	return mix(a, b, cubic.x) + (c - a) * cubic.y * (1.0 - cubic.x) + (d - b) * cubic.x * cubic.y;
 }
 
-uniform vec2 input;
-uniform sampler2D sprite;
 uniform sampler2D alpha;
 
 void fragment(){
@@ -164,6 +162,8 @@ void fragment(){
 		color.a = 0.0;
 	}
 	
+	color.a -= texture(alpha,UV).a;
+	
 	COLOR = color;
 //	COLOR.rg = UV;
 }"
@@ -176,8 +176,7 @@ shader_param/sprite_scale = Vector2( 30, 1 )
 shader_param/player_position = null
 shader_param/own_position = null
 shader_param/scale_x = 0.3
-shader_param/input = null
-shader_param/image = ExtResource( 2 )
+shader_param/alpha = ExtResource( 3 )
 
 [sub_resource type="ViewportTexture" id=7]
 viewport_path = NodePath("hv_viewport")
