@@ -17025,13 +17025,13 @@ position = Vector2( -1473.07, 637.329 )
 position = Vector2( 0, 0 )
 
 [node name="Pick Up2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -36.47, 514.889 )
+position = Vector2( -220.752, 502.059 )
 
 [node name="Ammo Pick Up" parent="." instance=ExtResource( 4 )]
-position = Vector2( 27.9698, 521.463 )
+position = Vector2( -276.984, 508.993 )
 
 [node name="Bolts2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 86.887, 555.155 )
+position = Vector2( -318.957, 502.837 )
 
 [node name="Hooks" type="Node2D" parent="."]
 editor/display_folded = true
@@ -18559,7 +18559,7 @@ emission_sphere_radius = 33.0
 gravity = Vector2( 0, -100 )
 
 [node name="Test" parent="." instance=ExtResource( 43 )]
-position = Vector2( -1.43195, 0 )
+position = Vector2( 2.06707, 0 )
 
 [connection signal="body_entered" from="rocket/Area2D" to="rocket" method="_on_Area2D_body_entered"]
 [connection signal="animation_finished" from="rocket/Scientist anim/Death" to="rocket/Scientist anim/Animation" method="_on_Death_animation_finished"]

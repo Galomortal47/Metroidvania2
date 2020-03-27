@@ -1,5 +1,5 @@
 extends Node
 
-var pos
-var pos_glob
-var player_path
+var pos = Vector2(0,0)
+var pos_glob = Vector2(0,0)
+var player_path = ""
