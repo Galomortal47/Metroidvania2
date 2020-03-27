@@ -553,8 +553,8 @@ polygon = PoolVector2Array( -11.2924, 14.9614, 10.5254, -44.7829, -18.0213, -43.
 "player",
 ]]
 z_index = 1
-collision_layer = 524288
-collision_mask = 524288
+collision_layer = 524294
+collision_mask = 524294
 script = ExtResource( 1 )
 
 [node name="Groud_Middle" type="RayCast2D" parent="."]
@@ -877,7 +877,7 @@ position = Vector2( -392.769, -186.805 )
 points = PoolVector2Array( 360, 150, 360, 220, 420, 220, 420, 150, 360, 150 )
 width = 5.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1415753728
+texture_mode = 524289536
 
 [node name="icon6" type="Sprite" parent="Menu Items/Menu"]
 editor/display_folded = true
@@ -974,7 +974,7 @@ position = Vector2( 3.95837, -61.2451 )
 points = PoolVector2Array( 0, 0, 0, 20 )
 width = 3.0
 default_color = Color( 1, 1, 1, 1 )
-texture_mode = 1415753728
+texture_mode = 824
 
 [node name="Minigame" type="AnimationPlayer" parent="Load_Minigame"]
 anims/Failure = SubResource( 12 )

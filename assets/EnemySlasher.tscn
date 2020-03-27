@@ -2249,8 +2249,8 @@ tracks/44/keys = {
 "enemy",
 ]]
 position = Vector2( 0, 542.642 )
-collision_layer = 7
-collision_mask = 7
+collision_layer = 5
+collision_mask = 5
 script = ExtResource( 1 )
 damage = 1
 health = 3
@@ -2267,6 +2267,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 shape = SubResource( 2 )
 
 [node name="Vision" type="RayCast2D" parent="."]

@@ -13,7 +13,7 @@ export var health = 20
 var stun = false
 var attack = Vector2(60,0)
 export var stun2 = 500
-export var timer = 3
+export var timer = 3.0
 var time_aux = 3
 export var type = "melee"
 export var target = "player"
@@ -50,6 +50,8 @@ func damage():
 		 $Scale/Body/AnimationPlayer2.play("attack")
 
 func shot_player():
+	angle = get_angle_to(get_node("/root/Test/Player").get_global_position()) -1.57
+	$Vision.rotate(angle - $Vision.get_rotation())
 	motion.x *= 0.9
 	if $Vision.is_colliding():
 		if $Vision.get_collider().is_in_group(target) and timer-followtrough < 0:
@@ -60,10 +62,10 @@ func shot_player():
 			$Vision.rotate(get_angle_to($Vision.get_collider().get_position()) - $Vision.get_rotation() -1.57)
 			var bullet = load("res://assets/Bullet.tscn")
 			var bullet_instance = bullet.instance()
-			bullet_instance.set_rotation(get_angle_to($Vision.get_collider().get_position()))
+			bullet_instance.set_rotation(angle+ 1.57)
 			bullet_instance.ignore = ignore
 			bullet_instance.target = target
-			bullet_instance.speed = 225
+			bullet_instance.speed = 250
 			bullet_instance.lifespan = 10
 			bullet_instance.get_node("CPUParticles2D").set_color(Color(1,0,0))
 			bullet_instance.set_position(get_global_position())
@@ -74,6 +76,8 @@ func shot_player():
 
 var dir = "right"
 func hunt_player(var distance):
+	angle = get_angle_to(get_node("/root/Test/Player").get_global_position()) -1.57
+	$Vision.rotate(angle - $Vision.get_rotation())
 	$Damage.set_cast_to(attack)
 	if $Vision.is_colliding():
 		if $Vision.get_collider().is_in_group(target):

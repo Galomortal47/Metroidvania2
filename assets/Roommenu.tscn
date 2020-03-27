@@ -16927,7 +16927,7 @@ tracks/20/keys = {
 }
 
 [node name="Test" type="Node2D"]
-position = Vector2( 11.1067, -38.08 )
+position = Vector2( -265, 75 )
 
 [node name="room" parent="." instance=ExtResource( 1 )]
 

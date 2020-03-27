@@ -17,12 +17,13 @@ radius = 350.0
 "enemy",
 ]]
 position = Vector2( 0, 542.642 )
-collision_layer = 7
-collision_mask = 7
+collision_layer = 5
+collision_mask = 5
 script = ExtResource( 1 )
 damage = 1
 health = 3
 stun2 = 75
+timer = 2.5
 type = "shooter"
 bolts_spwned_upon_death = 25
 
@@ -46,7 +47,7 @@ shape = SubResource( 2 )
 [node name="Vision" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 0, 1000 )
-collision_mask = 8
+collision_mask = 4
 
 [node name="Ground_Detect" type="RayCast2D" parent="."]
 position = Vector2( -1.05264, 0 )

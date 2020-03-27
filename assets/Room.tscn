@@ -16860,14 +16860,12 @@ tracks/1/keys = {
 }
 
 [node name="Test" type="Node2D"]
+position = Vector2( -265, 75 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-editor/display_folded = true
 position = Vector2( 655.069, 565.054 )
 
 [node name="CamShake" parent="Player" instance=ExtResource( 2 )]
-limit_left = 0
-limit_right = 1000
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 0, 190.206 )
