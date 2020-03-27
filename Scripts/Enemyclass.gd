@@ -50,7 +50,7 @@ func damage():
 		 $Scale/Body/AnimationPlayer2.play("attack")
 
 func shot_player():
-	angle = get_angle_to(get_node("/root/Test/Player").get_global_position()) -1.57
+	angle = get_angle_to(get_node("/root/singleton_player").pos_glob) -1.57
 	$Vision.rotate(angle - $Vision.get_rotation())
 	motion.x *= 0.9
 	if $Vision.is_colliding():
@@ -76,7 +76,7 @@ func shot_player():
 
 var dir = "right"
 func hunt_player(var distance):
-	angle = get_angle_to(get_node("/root/Test/Player").get_global_position()) -1.57
+	angle = get_angle_to(get_node("/root/singleton_player").pos_glob) -1.57
 	$Vision.rotate(angle - $Vision.get_rotation())
 	$Damage.set_cast_to(attack)
 	if $Vision.is_colliding():
@@ -119,8 +119,8 @@ func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
 # verifica a vida do inimigo e o destruir caso ela seja igual ou menor que 0
 func die():
 	if int(get_node("Health").health) <= 0:
-		bolt_spawn(bolts_spwned_upon_death,get_tree().get_root(),get_position())
-		particle_spawn(get_tree().get_root(),get_position())
+		bolt_spawn(bolts_spwned_upon_death,get_tree().get_root(),get_global_position())
+		particle_spawn(get_tree().get_root(),get_global_position())
 		queue_free()
 		
 

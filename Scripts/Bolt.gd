@@ -26,14 +26,15 @@ func _ready():
 		sprite.texture = load("res://sprites/boltsprite.png")
 	add_child(sprite)
 
-var player = "/root/Test/Player"
+var player
 
 func _physics_process(delta):
+	player = get_node("/root/singleton_player").player_path
 	if has_node(player):
-		if get_position().distance_to(get_node(player).get_position()) < 300:
+		if get_position().distance_to(get_node(player).get_global_position()) < 300:
 			collect = true
 			gravity = 0
-		if get_position().distance_to(get_node(player).get_position()) < 30:
+		if get_position().distance_to(get_node(player).get_global_position()) < 30:
 			get_node(player).get_node("Coins/Number").set_text(str(int(get_node(player).get_node("Coins/Number").get_text())+value))
 			get_node(player).get_node("Coins/AnimationPlayer").play("bolts")
 			queue_free()
@@ -43,7 +44,7 @@ func _physics_process(delta):
 			set_position(get_position() + Vector2(rand_range(-ramdom_pos,ramdom_pos)*delta,rand_range(-ramdom_pos,0)*delta))
 			ramdom_pos *= falloff
 		if collect:
-			var rotation = get_angle_to(get_node(player).get_position())
+			var rotation = get_angle_to(get_node(player).get_global_position())
 			var dir = Vector2(cos(rotation), sin(rotation))
 			set_position(get_position() + dir * (speed * delta))
 			if speed < max_speed:

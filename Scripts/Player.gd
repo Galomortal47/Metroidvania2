@@ -50,6 +50,7 @@ func jetpack_checker():
 
 func _physics_process(delta):
 	get_node("/root/singleton_player").pos_glob = get_global_position()
+	get_node("/root/singleton_player").player_path = get_path()
 	jetpack_checker()
 	match state:
 		"walk":
