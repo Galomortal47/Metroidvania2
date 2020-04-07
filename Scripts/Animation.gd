@@ -86,9 +86,9 @@ func animations():
 		animator.set_speed_scale(1) 
 	else:
 		if player.motion.x > 0:
-			animator.set_speed_scale(player.motion.x/500)  
+			animator.set_speed_scale(player.motion.x/650)  
 		else:
-			animator.set_speed_scale(player.motion.x/500 * -1)  
+			animator.set_speed_scale(player.motion.x/650 * -1)  
 #	pass
 
 func shoot_dir(var hide):
