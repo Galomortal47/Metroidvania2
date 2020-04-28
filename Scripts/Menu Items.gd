@@ -48,16 +48,20 @@ var open = false
 func controls():
 	if Input.is_action_pressed("ui_select"):
 		$"Menu Anim".set_current_animation("open")
-		Engine.set_time_scale(0.25) 
+		Engine.set_time_scale(0.01) 
+		get_parent().get_node('CamShake/vignete').set_modulate(Color(1,1,1,1))
+		if get_parent().motion.y == 0:
+			get_parent().motion.x = 0
 		open = true
 	elif open:
 		$"Menu Anim".set_current_animation("close")
+		get_parent().get_node('CamShake/vignete').set_modulate(Color(1,1,1,0.3))
 #		$Menu.set_scale(Vector2(0,0))
 		Engine.set_time_scale(1) 
 	menu_select()
-	if Input.is_action_just_pressed("trigger_l"):
+	if Input.is_action_just_pressed("ui_left"):
 		a -= 1
-	if Input.is_action_just_pressed("trigger_r"):
+	if Input.is_action_just_pressed("ui_right"):
 		a += 1
 	if a < 0:
 		a =  menu_size-1

@@ -122,6 +122,7 @@ text = "A"
 
 [node name="R1" type="TouchScreenButton" parent="Controls"]
 editor/display_folded = true
+visible = false
 position = Vector2( 241.085, 271.965 )
 rotation = 1.5708
 normal = ExtResource( 1 )
@@ -139,6 +140,7 @@ text = "R1"
 
 [node name="L1" type="TouchScreenButton" parent="Controls"]
 editor/display_folded = true
+visible = false
 position = Vector2( 135.968, 248.442 )
 rotation = 1.5708
 normal = ExtResource( 1 )

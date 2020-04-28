@@ -74,10 +74,10 @@ func animations():
 			get_node('/root').add_child(gameoverscene)
 		"carring":
 			get_parent().get_node("Carrying").set_current_animation("carry")
-	if int(player.motion.x) > 0:
+	if int(player.motion.x) > 0 and not Input.is_action_pressed("ui_select"):
 		get_parent().set_scale(Vector2(-1,get_parent().get_scale().y))
 		particles_func()
-	if int(player.motion.x) < 0:
+	if int(player.motion.x) < 0 and not Input.is_action_pressed("ui_select"):
 		get_parent().set_scale(Vector2(1,get_parent().get_scale().y))
 		particles_func()
 	elif int(player.motion.x) == 0:

@@ -17018,7 +17018,6 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-editor/display_folded = true
 position = Vector2( -1473.07, 637.329 )
 
 [node name="CamShake" parent="Player" instance=ExtResource( 2 )]

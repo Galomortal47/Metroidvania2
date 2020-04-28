@@ -268,7 +268,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=9]
 length = 99999.0
-step = 0.0
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Menu:scale")
 tracks/0/interp = 1
@@ -276,7 +276,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.01 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1e-005, 1e-005 ), Vector2( 1, 1 ) ]
@@ -611,6 +611,7 @@ texture_mode = 524289648
 script = ExtResource( 4 )
 
 [node name="air meter" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -485.568, -405.432 )
 scale = Vector2( 0.6, 0.6 )
 z_index = 4000
@@ -774,7 +775,6 @@ next/close = "closed"
 next/open = "opened"
 
 [node name="Menu" type="Node2D" parent="Menu Items"]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 512, 165 )
 scale = Vector2( 1e-005, 1e-005 )
 
